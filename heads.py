@@ -111,6 +111,7 @@ def train(arm, X, leaf_ids, seed, epochs=40, patience=6, lr=1e-3, batch=512,
     par = {d: np.array([parent_label(l, d) for l in leaf_ids]) for d in levels}
 
     net = Net(arm, levels)
+    head_pos = {d: i for i, d in enumerate(levels)}
     opt = torch.optim.Adam(net.parameters(), lr=lr)
     ce = nn.CrossEntropyLoss()
     Xt = _t(X)
@@ -125,7 +126,7 @@ def train(arm, X, leaf_ids, seed, epochs=40, patience=6, lr=1e-3, batch=512,
             for d in levels:
                 oh = torch.from_numpy(onehot_matrix(par[d][b], len(b)))
                 logits = net.embed(Xt[b], oh)
-                loss = loss + ce(net.heads[d - 1](logits),
+                loss = loss + ce(net.heads[head_pos[d]](logits),
                                  _t(labs[d][b], torch.long))
             opt.zero_grad()
             loss.backward()
@@ -137,7 +138,7 @@ def train(arm, X, leaf_ids, seed, epochs=40, patience=6, lr=1e-3, batch=512,
             for d in levels:
                 ohv = torch.from_numpy(onehot_matrix(par[d][va], int(va.sum())))
                 vlogits = net.embed(Xt[va], ohv)
-                vce += float(ce(net.heads[d - 1](vlogits),
+                vce += float(ce(net.heads[head_pos[d]](vlogits),
                                 _t(labs[d][va], torch.long)))
             vce /= max(len(levels), 1)
         if log:
