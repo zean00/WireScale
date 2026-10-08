@@ -129,3 +129,77 @@ added: every leaf must have ≥1024 unique train texts (actual min 1152).
 P1–P4, arms, sweeps, metrics, and decision rules are unchanged; only
 the surface the dial acts on grew. Pool counts now mean
 distinct-example capacity.
+
+## RESULTS (2026-10-07, all six configs at commit 8b9c13a, seed 0 primary)
+
+Runner summaries (path / leaf acc, predicted parents, oracle in parens):
+
+- pool 16: d2 A=.902 B=.950 C=.926 C′=.893 E=.956 | d3 A=.886 B=.929
+  C=.905 C′=.855 E=.940 | d4 A=.919 B=.784 C=.808 C′=.650 E=.795
+- pool 64: d4 A=.942 B=.901 C=.909 C′=.812 E=.920 (d2/d3 similar shape)
+- pool 256: d3 A=.991 B=.980 C=.972 C′=.953 E=.994 | d4 A=.952 B=.957
+  C=.927 C′=.848 E=.970
+- pool 1024: d2 A=.990 B=.982 C=.984 E=.991 | d3 A=.990 B=.982 C=.982
+  E=.996 | d4 A=.959 B=.965 C=.972(orc=.972) C′=.831 E=.978
+- m=.5, d3, pool 256: B=.932 C=.882(orc=.882) E=.950
+- m=0.0, d3, pool 256: B=.923 C=.896(orc=.896) E=.952
+
+Verdicts against the registered rules (adjudicate.py, mechanical):
+
+- **P1: FAIL.** B never beats the flat head at d3 — A is ahead by
+  0.7–1.5 points at every pool ≥ 64. In this generator a fully-marked
+  leaf is so separable that restriction-only hierarchy adds nothing
+  over flat supervision.
+- **P2: FAIL.** The C−B gap SHRANK with pool: +2.4 pts at pool 16 →
+  +0.7 at pool 1024 (registered direction was growth ≥ +3). The only
+  positive conditioning signal is at the smallest pool, and it fades.
+- **P3: FAIL as registered; substance confirmed post-hoc.** The
+  registered metric (deepest-level conditional acc of the depth-3 tree)
+  reads L3, which the dial does not mark (B=.981, C=.992 ≠ 50±5) — a
+  pre-data design error, disclosed here. POST-HOC (deterministic rerun,
+  posthoc_p3.py, labeled post-hoc) at the leaf level L4, m=0.0:
+  B=.517, C=.517 — both on the 50% sibling floor; m=0.5: B=.705,
+  C=.754, bracketing the ~75% information midpoint. Conditioning moves
+  sample efficiency, never the ceiling — as claimed but at the level
+  the dial actually acts on.
+- **P4 (primary): PARTIAL by the letter — null in substance.**
+  (C−B) gap grows d2→d4 by only +0.52 pts at pool 1024 (< the +5 bar;
+  > 0 so not FAIL). Oracle == predicted exactly (no teacher-forcing
+  gap anywhere — the walk almost never leaves the gold path), and the
+  seed spread (B d4: .950–.965; C d4: .949–.972 over seeds 0–2) dwarfs
+  the delta. At m=1.0 the depth-slope for B is just 1.8 pts: a
+  fully-marked leaf leaves no depth-slope for conditioning to flatten.
+
+Unregistered findings (measured, reported for completeness):
+
+- **C′ FiLM is reliably harmful**: −13.4 pts vs B at d4/pool 1024,
+  −10.9 at d4/pool 256, −8.9 at d4/pool 64. Zero-init did not save it.
+  Do not FiLM frozen-encoder router embeddings.
+- **Beam-2 (E) is the consistent small winner**: +1.4 pts over B at
+  d4/1024, +1.8 at m=.5, +2.9 at m=0.0 — the cheapest lever, and it
+  composes with the bare shared head (wiresense's registered beam-2
+  recommendation replicates here).
+- **Conditioning decomposes**: it helps the level it conditions on
+  (+4.9 pts leaf-conditional at m=.5) but taxes the same shared trunk's
+  other levels (d3 path C−B = −5.0 at m=.5), netting ≈ 0 end-to-end.
+- **Small pools flip the hierarchy's sign**: at pool 16 the tree beats
+  flat at d3 (B .929 vs A .886, the registered-P1 direction) but
+  collapses at d4 (B .784 vs A .919) — with scarce data the walk
+  amplifies L1 errors multiplicatively (B's L1 at pool 16 is only
+  .953, so ~14% of evals die before L4) while flat supervision pools
+  everything into one readout. Seed noise at pool 16 is unmeasured;
+  report as observed.
+
+## Conclusion
+
+The multi-level decision tree is bounded by utterance information
+(markedness), not by readout conditioning: when the leaf is marked,
+even a flat head scales to 24 classes at depth 4 (95.9%); when it is
+not, every arm sits on the sibling floor (≈50%) regardless of
+conditioning. Parent-one-hot conditioning neither rescues depth nor
+hurts the ceiling; its one positive blip is low-data (+2.4 pts at pool
+16, fading with pool). The scalable levers measured here are beam-2
+and markedness itself — consistent with the wiresense diagnosis that
+the think-level collapse is an information problem, not head capacity.
+Per the registered rule, P4 is not PASS: no escalation of concat
+conditioning; recorded and stopped.
