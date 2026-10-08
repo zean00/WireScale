@@ -297,3 +297,10 @@ there. Two findings transfer-relevant to this lab:
   goldfish": root ranks think #2, the think.tool child wins on the
   mean) — the same "beam keeps two first-level candidates" effect
   seen at L1 here.
+
+Scope note (2026-10-07, user decision): extending this routing into a
+multi-agent router (spawning specialized sub-agents per intent, of the
+kind orchestrator LLMs do by generation) stays LAB-ONLY CURIOSITY —
+wiresense deliberately stays simple. The measured production transfer
+of the beam-2 mechanism is tool selection instead (wiresense
+PROTOCOL-mcp-selection.md MS-20).
