@@ -278,3 +278,22 @@ afford to multiply. Deployment shape implied: use the walk for
 interpretability with beam-2, or go flat when the class count gets
 large and the coarsest level is the weak link; in both cases the
 binding constraint remains per-level information, not depth.
+
+## Transfer note (2026-10-07, post-study)
+
+The beam-2 recommendation was deployed in wiresense's production
+router (2-level walk, frozen evals) — `tools/eval_router_beam.py`
+there. Two findings transfer-relevant to this lab:
+
+- The gain replicated (root 57/62 vs greedy 56/62, live-path
+  composite 13/26 vs 12/26), but ONLY with length-normalized mean
+  path scores. This lab's walks were equal-depth everywhere, so the
+  cumulative-sum formulation never met the pitfall: with paths of
+  different depth, raw sums let the deeper path structurally outbid
+  the shallower one (wiresense measured 43/62 vs greedy 56/62 — a
+  13-point crash from scoring, not from the mechanism).
+- The rescue pattern matched lab E: the win case was a coarse-level
+  runner-up whose deeper evidence was strong ("Choose a name for my
+  goldfish": root ranks think #2, the think.tool child wins on the
+  mean) — the same "beam keeps two first-level candidates" effect
+  seen at L1 here.
