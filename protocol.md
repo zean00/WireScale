@@ -304,3 +304,48 @@ kind orchestrator LLMs do by generation) stays LAB-ONLY CURIOSITY —
 wiresense deliberately stays simple. The measured production transfer
 of the beam-2 mechanism is tool selection instead (wiresense
 PROTOCOL-mcp-selection.md MS-20).
+
+## S-series (registered pre-data): sub-agent routing
+
+Question (2026-10-07, user-directed): modern agent frameworks spawn
+many specialized sub-agents; could a decision tree route user requests
+to them — and where do beam-2 and flat readouts sit in that shape?
+Scope: LAB-ONLY curiosity (see scope note above); the substrate is the
+production mechanism (raw slot-7 embeddings + centroid cosine, no
+trained heads), which is what wiresense's router and MCP gate actually
+run.
+
+Shape: 8 domains × 8 agents = 64 sub-agents. Each agent owns unique
+specialty phrase pairs; each domain owns shared flavor vocabulary;
+utterances are prefix + phrase + qualifier. Specialization dial m =
+P(utterance carries the agent's specialty pair); 1−m draws a
+domain-flavored generic request (domain visible, agent NOT nameable).
+Refs: 32/agent (same m-distribution as eval) + 32 dedicated
+domain-generic refs/domain (domain readout stays strong at every m —
+production-faithful: coarse nodes have their own pools). Eval: 64
+held-out per agent per m. Seeds fixed; per-agent uniqueness ≥ 448.
+
+Arms (all centroid-cosine, L2 norm):
+- A_flat — argmax over all 64 agent centroids
+- B_walk — greedy two-level: domain top-1 → agent top-1 inside it
+- B_oracle — gold domain → agent top-1 (two-level's ceiling)
+- E_beam2 — domain top-2 → agent top-1 per path, mean(cos_dom, cos_agent)
+  picks (mean, never sum — the router-walk length-bias lesson)
+
+m ∈ {1.0, 0.5, 0.0}. No adoption bar (lab): this is mechanism
+cartography for the parked sub-agent idea.
+
+Registered hypotheses:
+- S1 (beam replication at agent scale): E_beam2 − B_walk ≥ +1 pt at
+  m=1.0 AND m=0.5.
+- S2 (coarse-first vs flat at 64 agents): OPEN — measured, no bar. The
+  depth-6 wall said a 6-level walk loses to flat at 96 classes; a
+  2-level walk compounds ONE coarse decision, so the shape may survive
+  agent counts. Either verdict is informative.
+- S3 (specialization floor): at m=0, agent accuracy ≈ 1/A (12.5%) for
+  EVERY arm including B_oracle, while domain accuracy stays ≥ 90% —
+  requests that never name the specialty are unroutable at the agent
+  level regardless of structure (the m=0 sibling floor, one level up).
+
+Runner: subagents.py (self-contained; embed_client slot 7, cached).
+This section + runner committed before any scored run.
