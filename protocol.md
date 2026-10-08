@@ -234,3 +234,47 @@ are internally comparable but not byte-identical to SWEEP-1 (the
 extra trailing tokens are distractor surface for shallow readouts);
 shallow defaults are preserved so the frozen SWEEP-1/2 results remain
 reproducible from the committed code.
+
+## RESULTS 2 — depth extension (2026-10-07, commit 9e792c2)
+
+Walk accuracy by depth (m=1.0, pool 256/leaf, seed 0; classes are
+3/6/12/24/48/96; A = flat at that depth, B = hard walk, E = beam-2):
+
+- d2: B .903 E .914
+- d3: B .894 E .921
+- d4: A .813 B .826 E .856
+- d5: B .825 E .859
+- d6: A .899 B .825 E .859
+
+B per-level conditional accuracies in the d6 walk: L1 .918, L2 .984,
+L3 .990, L4 .924, L5 .9997, L6 1.0000. Product .825 ✓ matches the
+measured path accuracy. B seed spread at d6: .825 / .831 / .844.
+
+Findings:
+
+- **Depth stopped costing anything after level 4.** The two new
+  binary levels (48 → 96 leaves) were free: per-level conditional
+  accuracy .9997 and 1.0000 — lexicalized questions are trivially
+  readable, exactly as designed for best-case marking.
+- **The cost concentrates in the COARSEST and the sibling-pair
+  levels**, not with depth: L1 (3-way) .918 and L4 (24-way sibling
+  discrimination) .924 account for the entire ~17-point loss.
+- **The walk, not depth, became the wall.** Compounding L1's 91.8%
+  caps the walk at .825 no matter how perfect the deeper levels are,
+  and at 96 classes the flat readout overtakes it (A_d6 .899 vs
+  B .825; at 24 classes they were tied, .813 vs .826). Beam-2
+  recovers +3.4 pts (.859) by keeping two first-level candidates.
+- Distractor note (disclosed above): the trailing axis tokens also
+  depress shallow readouts in this run (d2 B .903 vs .980 in
+  SWEEP-1), so cross-run comparisons are invalid; within-run
+  comparisons are the evidence.
+
+Answer to the registered question, in the best-case marking regime:
+there is **no depth wall through 6 levels / 96 leaves** — marginal
+depth cost after level 4 is ~0. The wall that appears at 96 classes
+is structural: sequential walks lose to direct 96-way readouts once
+the first-level error rate (8%) exceeds what the deeper levels can
+afford to multiply. Deployment shape implied: use the walk for
+interpretability with beam-2, or go flat when the class count gets
+large and the coarsest level is the weak link; in both cases the
+binding constraint remains per-level information, not depth.
