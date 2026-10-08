@@ -24,15 +24,12 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 RESULTS = os.path.join(HERE, "results")
 
 PREFIXES = ["hey", "ok", "please", "could you", "i need you to", "can you"]
-QUALIFIERS = ["today", "this week", "for me", "asap", "quietly",
-              "in the morning", "if you can", "before lunch", "later",
-              "when you get a chance", "tonight", "first thing",
-              "some time", "right away"]
 
 DOMAINS = {
     "calendar": {
         "dom": ("tidy up", "the schedule", "look over", "my week",
-                "check", "the calendar", "sort out", "the agenda"),
+                "check", "the calendar", "sort out", "the agenda",
+                "go over", "the events", "sort", "the invites"),
         "agents": {
             "meeting-scheduler": [("book", "a standup"), ("set up", "the sync"),
                                   ("schedule", "the review"), ("arrange", "a call"),
@@ -77,7 +74,8 @@ DOMAINS = {
     },
     "code": {
         "dom": ("fix", "the codebase", "work on", "the repo",
-                "clean up", "the project", "look at", "the build"),
+                "clean up", "the project", "look at", "the build",
+                "look over", "the tests", "check on", "the pipeline"),
         "agents": {
             "bug-hunter": [("debug", "the login crash"), ("trace", "the null error"),
                            ("chase", "the race condition"), ("diagnose", "the 500s"),
@@ -118,7 +116,8 @@ DOMAINS = {
     },
     "home": {
         "dom": ("around", "the house", "for", "the flat",
-                "check on", "the place", "handle", "the chores"),
+                "check on", "the place", "handle", "the chores",
+                "walk through", "the rooms", "sort out", "the storage"),
         "agents": {
             "light-controller": [("dim", "the living room lamps"),
                                  ("brighten", "the kitchen lights"),
@@ -166,7 +165,8 @@ DOMAINS = {
     },
     "finance": {
         "dom": ("look at", "my money", "go over", "the budget",
-                "check", "the accounts", "handle", "the bills"),
+                "check", "the accounts", "handle", "the bills",
+                "go over", "the spending", "check on", "the savings"),
         "agents": {
             "budget-planner": [("set", "a food budget"), ("plan", "the monthly spend"),
                                ("cap", "the fun money"), ("split", "the paycheck"),
@@ -218,7 +218,8 @@ DOMAINS = {
     },
     "health": {
         "dom": ("with", "my health", "about", "my routine",
-                "keep", "my habits", "watch", "my wellbeing"),
+                "keep", "my habits", "watch", "my wellbeing",
+                "look at", "my sleep", "check on", "my steps"),
         "agents": {
             "habit-coach": [("track", "my water intake"),
                             ("streak", "my meditation"),
@@ -268,7 +269,8 @@ DOMAINS = {
     },
     "media": {
         "dom": ("with", "the music", "sort", "the playlists",
-                "find", "something to watch", "play", "the album"),
+                "find", "something to watch", "play", "the album",
+                "go over", "the queue", "look for", "a film"),
         "agents": {
             "playlist-curator": [("build", "a running playlist"),
                                  ("mix", "the focus queue"),
@@ -322,7 +324,8 @@ DOMAINS = {
     },
     "travel": {
         "dom": ("plan", "the trip", "sort", "the journey",
-                "look at", "the getaway", "prep", "the travel"),
+                "look at", "the getaway", "prep", "the travel",
+                "look over", "the options", "check on", "the itinerary"),
         "agents": {
             "flight-scout": [("find", "cheap flights"), ("watch", "the fares"),
                              ("compare", "the connections"),
@@ -375,7 +378,8 @@ DOMAINS = {
     },
     "writing": {
         "dom": ("with", "my writing", "work on", "the draft",
-                "look at", "the text", "help with", "the words"),
+                "look at", "the text", "help with", "the words",
+                "go over", "the notes", "sort out", "the outline"),
         "agents": {
             "draft-kicker": [("start", "the blog post"),
                              ("outline", "the newsletter"),
@@ -437,28 +441,43 @@ def build(m, seed=0, n_refs=32, n_eval=64):
     refs, evals = {"agent": {}, "domain": {}}, []
     for dname in dom_names:
         d = DOMAINS[dname]
+        # Amendment 1: domain pools draw from the domain's FULL vocabulary
+        # (dom pairs + every member agent's specialty pairs) — production
+        # coarse nodes own subclass utterances; generic-only pools collapsed
+        # (domain_acc 0.39 @ m=1.0, pass 1 archived). Amendment 2: texts are
+        # prefix + TWO pairs (probe series: shared filler swamped the signal;
+        # two content pairs lifted A_flat 0.35 -> 0.91 @ m=1.0).
+        gen = [(d["dom"][2 * k], d["dom"][2 * k + 1])
+               for k in range(len(d["dom"]) // 2)]
+        vocab = list(gen)
+        for apairs in d["agents"].values():
+            vocab.extend(apairs)
         dpool, dseen = [], set()
         while len(dpool) < n_refs:
-            t = (f"{rng.choice(PREFIXES)} {d['dom'][2*(rng.randrange(4))]} "
-                 f"{d['dom'][2*(rng.randrange(4)) + 1]} "
-                 f"{rng.choice(QUALIFIERS)}")
+            p1 = vocab[rng.randrange(len(vocab))]
+            p2 = vocab[rng.randrange(len(vocab))]
+            t = (f"{rng.choice(PREFIXES)} {p1[0]} {p1[1]} "
+                 f"{p2[0]} {p2[1]}")
             if t not in dseen:
                 dseen.add(t)
                 dpool.append(t)
         refs["domain"][dname] = dpool
         for aname, pairs in d["agents"].items():
             def marked():
-                v, o = pairs[rng.randrange(len(pairs))]
-                return (f"{rng.choice(PREFIXES)} {v} {o} "
-                        f"{rng.choice(QUALIFIERS)}")
+                p1 = pairs[rng.randrange(len(pairs))]
+                p2 = pairs[rng.randrange(len(pairs))]
+                return (f"{rng.choice(PREFIXES)} {p1[0]} {p1[1]} "
+                        f"{p2[0]} {p2[1]}")
 
             def unmarked():
-                k = rng.randrange(4)
-                return (f"{rng.choice(PREFIXES)} {d['dom'][2*k]} "
-                        f"{d['dom'][2*k+1]} {rng.choice(QUALIFIERS)}")
+                p1 = gen[rng.randrange(len(gen))]
+                p2 = gen[rng.randrange(len(gen))]
+                return (f"{rng.choice(PREFIXES)} {p1[0]} {p1[1]} "
+                        f"{p2[0]} {p2[1]}")
 
-            # draw with dedup: the combo space (>= 448/agent, registered)
-            # dwarfs the draw count, so retries are rare and bounded
+            # draw with dedup. Amendment 2 universe re-derivation: per agent
+            # 6 prefixes x 6^2 combos = 216 >= 2x the 96-draw pool (the old
+            # 448 clause assumed the retired single-pair template)
             pool, seen = [], set()
             while len(pool) < n_refs + n_eval:
                 t = marked() if rng.random() < m else unmarked()
@@ -517,11 +536,11 @@ def run_m(m, cache, n_refs=32, n_eval=64, seed=0):
         gold_d = e["gold_domain"]
         # B_walk
         d0 = dnames[d_order[0]]
-        pick = members[d0][int(np.argmax(asims[members[d0]]))]
+        pick = anames[members[d0][int(np.argmax(asims[members[d0]]))]]
         stat["B_walk"]["n"] += 1
         stat["B_walk"]["ok"] += int(pick == e["gold_agent"])
         # B_oracle
-        pick = members[gold_d][int(np.argmax(asims[members[gold_d]]))]
+        pick = anames[members[gold_d][int(np.argmax(asims[members[gold_d]]))]]
         stat["B_oracle"]["n"] += 1
         stat["B_oracle"]["ok"] += int(pick == e["gold_agent"])
         # E_beam2: top-2 domains, agent top-1 per path, mean path picks
@@ -529,8 +548,9 @@ def run_m(m, cache, n_refs=32, n_eval=64, seed=0):
         for ci in d_order[:2]:
             dname = dnames[ci]
             mem = members[dname]
-            pick = mem[int(np.argmax(asims[mem]))]
-            score = 0.5 * (float(dsims[ci]) + float(asims[pick]))
+            j = int(np.argmax(asims[mem]))
+            pick = anames[mem[j]]
+            score = 0.5 * (float(dsims[ci]) + float(asims[mem[j]]))
             if best is None or score > best[0]:
                 best = (score, pick)
         stat["E_beam2"]["n"] += 1

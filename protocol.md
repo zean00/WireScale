@@ -349,3 +349,44 @@ Registered hypotheses:
 
 Runner: subagents.py (self-contained; embed_client slot 7, cached).
 This section + runner committed before any scored run.
+
+Amendment 1 (2026-10-08, pre-data — no valid scored run exists):
+pass 1 (archived as results/subagents_pass1_invalid.json) is
+discarded for two independent reasons, both fixed before the rerun.
+(a) Scoring bug: the three walk arms compared the pick's global index
+against the gold agent NAME — always false, so B_walk/B_oracle/E_beam2
+recorded exactly 0.0 (impossible as a measurement; A_flat and
+domain_acc are unaffected and were real). (b) Substrate flaw vs this
+section's own premise ("domain readout stays strong at every m"):
+domain pools were built from generic dom-pair texts only, so the
+domain level could not see specialty vocabulary — domain_acc 0.3879 at
+m=1.0 (0.5217/0.6655 at m=0.5/0.0), domain-centroid cross-cos 0.9582.
+Fix: domain pools now draw from the domain's FULL vocabulary (dom
+pairs + every member agent's specialty pairs), mirroring production
+coarse nodes whose refs include subclass utterances. Bars and
+hypotheses unchanged. The A_flat/domain numbers of pass 1 stand as the
+record of the rejected substrate.
+
+Amendment 2 (2026-10-08, still pre-data): the template itself was the
+remaining flaw. Pass-1's shared filler (prefix + qualifier identical
+across ALL classes) swamped the signal: domain-centroid cross-cos
+0.958, A_flat 0.35 at m=1.0 despite globally unique specialty pairs.
+Probe series on frozen cache (no scored run): pure pair texts classify
+domain at 1.000 (lexicons inherently separable); prefix + TWO pairs
+lifts m=1.0 to domain 0.820 / A_flat 0.906 / B_oracle 0.926 (single
+pair: 0.43/0.35/0.51). Template therefore becomes prefix + pair +
+pair; the qualifier slot is dropped. Composition probes that did NOT
+help are recorded as rejected: dom vocab 4->8 pairs (m=0 generic
+regime 0.844 -> 0.781), dom-weighted pools 50/75% (0.844/0.805, and
+m=1.0 domain drops to 0.799/0.648) — m=0 sits at 0.78-0.84 under every
+composition, a held-out generalization ceiling of short synthetic
+generic texts, not a composition artifact. dom widens only 4->6 pairs
+(the minimum that keeps the m=0 draw universe above the pool: 6
+prefixes x 36 two-pair combos = 216 >= 2x96 draws; at 4 pairs the
+universe EQUALS the pool and the dedup loop starves). The registered
+"uniqueness >= 448" clause is re-derived on its original purpose for
+the new template: per-agent universe 6 x 6^2 = 216 >= 192. Arms,
+sizes, seeds, hypotheses, and bars are all unchanged. Honest
+prediction on record: S3's domain >= 0.90 half will likely FAIL at
+~0.84 (ceiling above); its agent-floor half (every arm ~ 12.5%) is the
+primary claim.
