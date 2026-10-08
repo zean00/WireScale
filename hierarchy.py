@@ -282,34 +282,63 @@ DATA_SEED = 0
 POOL_PER_LEAF = 1024
 EVAL_PER_LEAF = 40
 
+# Amendment 2 (depth extension): every depth-4 leaf splits on two further
+# binary axes, appended as trailing modifier tokens. Axis words are shared
+# across all branches (lexicalized questions, best-case marking) and are
+# train-only (no held-out variant). Depth-6 tree = 96 leaves.
+SUB_AXES = {
+    5: (("full", "with full detail"), ("brief", "in brief")),
+    6: (("urgent", "urgently"), ("eventual", "eventually")),
+}
+GENERIC_DEEP = "as usual"  # shared m-dial fallback beyond L4
 
-def leaf_paths():
-    """24 leaf paths in tree order, e.g. ['smart_home','lighting','fixtures','brightness']."""
+
+def leaf_paths(depth=4):
+    """Leaf paths of length `depth` (4..6), tree order."""
     out = []
     for l1, subs in TREE.items():
         for l2, l3s in subs.items():
             for l3, node in l3s.items():
                 for leaf in node["leaves"]:
-                    out.append([l1, l2, l3, leaf])
+                    base = [l1, l2, l3, leaf]
+                    if depth == 4:
+                        out.append(base)
+                    elif depth == 6:
+                        for (a5, _), (a6, _) in ((SUB_AXES[5][0], SUB_AXES[6][0]),
+                                                 (SUB_AXES[5][0], SUB_AXES[6][1]),
+                                                 (SUB_AXES[5][1], SUB_AXES[6][0]),
+                                                 (SUB_AXES[5][1], SUB_AXES[6][1])):
+                            out.append(base + [a5, a6])
+                    else:
+                        raise ValueError(depth)
     return out
 
 
-def node_table():
+def node_table(depth=4):
     """Ordered node registry (tree order): {name: (depth, parent, children)}.
-    Depth-1..4 names are tuples; index = position in this list (one-hot basis)."""
+    Depth-d names are path tuples; index = position in this list."""
     nodes, order = {}, []
 
-    def rec(name, depth, parent, children_map):
+    def rec(name, depth_, parent, children_map):
         order.append(name)
-        nodes[name] = {"depth": depth, "parent": parent, "children": []}
+        nodes[name] = {"depth": depth_, "parent": parent, "children": []}
         for ch_name, ch_kids in children_map:
             ch_path = name + (ch_name,) if name != ("root",) else (ch_name,)
             nodes[name]["children"].append(ch_path)
-            rec(ch_path, depth + 1, name, ch_kids)
+            rec(ch_path, depth_ + 1, name, ch_kids)
 
     top = [(l1, [(l2, [(l3, [(lf, []) for lf in TREE[l1][l2][l3]["leaves"]])
                      for l3 in TREE[l1][l2]])
              for l2 in TREE[l1]]) for l1 in TREE]
+    if depth >= 6:
+        (n5a, _), (n5b, _) = SUB_AXES[5]
+        (n6a, _), (n6b, _) = SUB_AXES[6]
+        for l1, subs in top:
+            for l2, l3s in subs:
+                for l3, leaves in l3s:
+                    leaves[:] = [(lf, [(n5a, [(n6a, []), (n6b, [])]),
+                                       (n5b, [(n6a, []), (n6b, [])])])
+                                 for lf, _ in leaves]
     rec(("root",), 0, None, top)
     return nodes
 
@@ -325,7 +354,7 @@ def _fill(template, rng, heldout):
 
 
 def make_utterance(path, rng, m, heldout):
-    l1, l2, l3, leaf = path
+    l1, l2, l3, leaf = path[0], path[1], path[2], path[3]
     node = TREE[l1][l2][l3]
     verb = rng.choice(VERBS_HELD if heldout else VERBS_TRAIN)
     pre = rng.choice(PREFIXES_HELD if heldout else PREFIXES_TRAIN)
@@ -334,13 +363,28 @@ def make_utterance(path, rng, m, heldout):
         mod = rng.choice(node["leaves"][leaf])
     else:
         mod = rng.choice(node["generic"])
-    return f"{pre} {verb} {obj} {_fill(mod, rng, heldout)}"
+    tail = []
+    for d in (5, 6):
+        if len(path) >= d:
+            if rng.random() < m:
+                tail.append(_word_of(SUB_AXES[d], path[d - 1]))
+            else:
+                tail.append(GENERIC_DEEP)
+    return f"{pre} {verb} {obj} {_fill(mod, rng, heldout)} " + " ".join(tail) \
+        if tail else f"{pre} {verb} {obj} {_fill(mod, rng, heldout)}"
 
 
-def build_masters(m):
+def _word_of(axis, name):
+    for word, mod in axis:
+        if word == name:
+            return mod
+    raise KeyError(name)
+
+
+def build_masters(m, depth=4):
     """{'train': [(text, leaf_idx)], 'eval': [(text, leaf_idx)]} for one m.
     Pool/depth variants are subsamples/relabelings of these."""
-    paths = leaf_paths()
+    paths = leaf_paths(depth)
     train, ev = [], []
     for i, p in enumerate(paths):
         rng_t = np.random.default_rng(DATA_SEED * 100003 + 7 * i + int(m * 100))
@@ -352,6 +396,16 @@ def build_masters(m):
     return {"train": train, "eval": ev}
 
 
+_REG = None  # active leaf-path registry (set via set_depth)
+
+
+def set_depth(depth):
+    global _REG
+    _REG = leaf_paths(depth)
+
+
 def class_at(depth, leaf_idx):
-    """Depth-d class tuple for a leaf index (d in 1..4)."""
-    return tuple(leaf_paths()[leaf_idx][:depth])
+    """Depth-d class tuple for a leaf index, in the ACTIVE registry
+    (default shallow 24-leaf; set_depth(6) switches to 96-leaf)."""
+    reg = _REG if _REG is not None else leaf_paths(4)
+    return tuple(reg[leaf_idx][:depth])

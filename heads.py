@@ -16,12 +16,21 @@ import hierarchy as H
 HIDDEN, OUT = 2048, 1024
 N_NODES = 45
 
-_NODES = H.node_table()
+_NODES = H.node_table(6)
 _ORDER = list(_NODES)
 _IDX = {n: i for i, n in enumerate(_ORDER)}
-_BY_DEPTH = {d: [n for n in _ORDER if _NODES[n]["depth"] == d] for d in (1, 2, 3, 4)}
-_PATHS = [tuple(p) for p in H.leaf_paths()]
-_LOCAL = {d: {n: j for j, n in enumerate(_BY_DEPTH[d])} for d in (1, 2, 3, 4)}
+_BY_DEPTH = {d: [n for n in _ORDER if _NODES[n]["depth"] == d]
+             for d in (1, 2, 3, 4, 5, 6)}
+_PATHS = [tuple(p) for p in H.leaf_paths(4)]
+_LOCAL = {d: {n: j for j, n in enumerate(_BY_DEPTH[d])} for d in _BY_DEPTH}
+N_NODES = len(_ORDER) - 1
+
+
+def set_depth(tree_depth):
+    """Switch label registries to the run's tree depth (4 or 6)."""
+    global _PATHS
+    _PATHS = [tuple(p) for p in H.leaf_paths(tree_depth)]
+    H.set_depth(tree_depth)
 
 
 def level_label(leaf_idx, depth):
@@ -40,7 +49,7 @@ def depth_node_order(depth):
 
 
 class Net(nn.Module):
-    def __init__(self, arm):
+    def __init__(self, arm, levels=(1, 2, 3, 4)):
         super().__init__()
         self.arm = arm
         d = 2560 + (N_NODES if arm == "C" else 0)
@@ -53,7 +62,7 @@ class Net(nn.Module):
             nn.init.zeros_(self.film.weight)
             nn.init.zeros_(self.film.bias)
         self.heads = nn.ModuleList(nn.Linear(OUT, len(_BY_DEPTH[d]))
-                                   for d in (1, 2, 3, 4))
+                                   for d in levels)
 
     def embed(self, x, onehot):
         if self.arm == "C":
@@ -78,14 +87,18 @@ def onehot_matrix(node_idxs, n):
 
 
 def train(arm, X, leaf_ids, seed, epochs=40, patience=6, lr=1e-3, batch=512,
-          target_depth=None, log=None):
+          target_depth=None, levels=None, log=None):
     """X: (n,2560) fp32 train embeddings; leaf_ids: (n,). target_depth=None
     trains the full multi-task tree (B/C/C'); an int trains a flat head at
-    that depth only (A). Returns model dict."""
+    that depth only (A). levels: which tree levels to train (default 1-4).
+    Returns model dict."""
     torch.manual_seed(seed)
     torch.set_num_threads(os.cpu_count() or 4)
     rng = np.random.default_rng(1000 + seed)
-    levels = ((target_depth,) if target_depth else (1, 2, 3, 4))
+    if target_depth:
+        levels = (target_depth,)
+    elif levels is None:
+        levels = (1, 2, 3, 4)
 
     # stratified 10% val carve by leaf class
     val_mask = np.zeros(len(X), dtype=bool)
@@ -97,7 +110,7 @@ def train(arm, X, leaf_ids, seed, epochs=40, patience=6, lr=1e-3, batch=512,
     labs = {d: np.array([level_label(l, d) for l in leaf_ids]) for d in levels}
     par = {d: np.array([parent_label(l, d) for l in leaf_ids]) for d in levels}
 
-    net = Net(arm)
+    net = Net(arm, levels)
     opt = torch.optim.Adam(net.parameters(), lr=lr)
     ce = nn.CrossEntropyLoss()
     Xt = _t(X)

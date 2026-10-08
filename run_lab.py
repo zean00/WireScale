@@ -30,9 +30,9 @@ def git_commit():
         return "unknown"
 
 
-def prep(m):
+def prep(m, depth=4):
     """Embed masters for one markedness config; returns (Xtr, ytr, Xev, yev)."""
-    masters = H.build_masters(m)
+    masters = H.build_masters(m, depth)
     cache = embed_client.load_cache()
     texts = [t for t, _ in masters["train"]] + [t for t, _ in masters["eval"]]
     log(f"m={m}: embedding {len(set(texts) - set(cache))} new / "
@@ -78,10 +78,12 @@ def eval_all(models, Xev, yev, depths, oracle_arms=("C", "C'"), beam_from="B"):
 
 
 def run_config(tag, m, pool, depths, arms, extra_seeds=(), epochs=40,
-               target_depths_A=()):
-    Xtr, ytr, Xev, yev = prep(m)
+               target_depths_A=(), tree_depth=4):
+    heads.set_depth(tree_depth)
+    Xtr, ytr, Xev, yev = prep(m, tree_depth)
     Xp, yp = subsample(Xtr, ytr, pool, seed=0)
     log(f"{tag}: pool={pool} train={len(yp)} eval={len(yev)} arms={arms}")
+    levels = tuple(range(1, tree_depth + 1))
 
     def log_train(msg):
         log(msg)
@@ -100,11 +102,12 @@ def run_config(tag, m, pool, depths, arms, extra_seeds=(), epochs=40,
         else:
             t0 = time.time()
             models[arm] = heads.train(arm, Xp, yp, seed=0, epochs=epochs,
-                                      log=log_train)
+                                      levels=levels, log=log_train)
             log(f"{tag}: {arm} trained valCE={models[arm]['val_ce']:.4f} "
                 f"({time.time() - t0:.0f}s)")
 
     results = {"tag": tag, "m": m, "pool": pool, "depths": depths,
+               "tree_depth": tree_depth,
                "extra_seeds": list(extra_seeds), "commit": git_commit(),
                "model_fp": embed_client.fingerprint(),
                "n_train": int(len(yp)), "n_eval": int(len(yev)),
@@ -117,7 +120,8 @@ def run_config(tag, m, pool, depths, arms, extra_seeds=(), epochs=40,
             for arm in ("B", "C"):
                 if arm not in arms:
                     continue
-                mdl = heads.train(arm, Xp, yp, seed=s, epochs=epochs)
+                mdl = heads.train(arm, Xp, yp, seed=s, epochs=epochs,
+                                  levels=levels)
                 results["seed_runs"][f"{arm}_seed{s}"] = {
                     f"d{d}": walks.hard_walk(mdl, Xev, yev, d)
                     for d in depths}
@@ -155,6 +159,7 @@ def summary(tag, r):
 
 if __name__ == "__main__":
     smoke = "--smoke" in sys.argv
+    deep = "--deep" in sys.argv
     t0 = time.time()
     if smoke:
         r = run_config("smoke", m=1.0, pool=16, depths=(2,), arms=("A", "B",
@@ -162,6 +167,14 @@ if __name__ == "__main__":
                        epochs=3, target_depths_A=(2,))
         save("smoke", r)
         summary("smoke", r)
+    elif deep:
+        # Amendment 2: depth 6 = 96 leaves, m=1.0 (best-case marking),
+        # pool 256, arms A(d4,d6 flats) + B + E; B seeds 1,2.
+        r = run_config("deep_pool256", m=1.0, pool=256, depths=(2, 3, 4, 5, 6),
+                       arms=("A", "B"), extra_seeds=(1, 2),
+                       target_depths_A=(4, 6), tree_depth=6)
+        save("deep_pool256", r)
+        summary("deep_pool256", r)
     else:
         # SWEEP-1: m=1.0, depth 2/3/4, pool {16,64,256,1024}, all arms
         for pool in (16, 64, 256, 1024):

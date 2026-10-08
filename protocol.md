@@ -203,3 +203,34 @@ and markedness itself — consistent with the wiresense diagnosis that
 the think-level collapse is an information problem, not head capacity.
 Per the registered rule, P4 is not PASS: no escalation of concat
 conditioning; recorded and stopped.
+
+## Amendment 2 (2026-10-07, registered before any deep-tree data)
+
+Question: what is the maximum depth that still holds acceptable
+end-to-end accuracy? The 4-level tree could not answer it, so the
+generator extends mechanically: every depth-4 leaf splits on two
+further binary axes appended as trailing modifier tokens — L5
+"with full detail" / "in brief", L6 "urgently" / "eventually".
+Axis words are lexicalized and shared across all branches (the
+question each level asks is literally in the text — best-case
+marking, same spirit as the pct markers at L4), are train-only (no
+held-out variant), and the m-dial's fallback beyond L4 is the shared
+generic "as usual". Result: 96 leaves, 190 nodes, 80,067 unique
+training texts.
+
+Registered config: m=1.0 only; pool 256 per leaf-class (per-class
+parity with the depth-4 evidence, where pool 256 was within 0.8 pts
+of pool 1024); arms: B (one shared trunk, per-level heads at levels
+1–6, hard walk), A flats at d4 and d6, E beam-2 on B; B head seeds
+1,2 for spread. Metrics: path accuracy at d = 2..6 and per-level
+conditional accuracies; "maximum acceptable depth" is read off the
+curve at the 95% and 90% bars. No hypothesis bar is registered —
+this is a measurement sweep.
+
+Disclosures: (1) the conditioning one-hot basis is now the deep
+registry (189 nodes); C/C′ are not run (dead per RESULTS), and B/A/E
+are unaffected by the basis. (2) Depth-2..4 numbers inside this run
+are internally comparable but not byte-identical to SWEEP-1 (the
+extra trailing tokens are distractor surface for shallow readouts);
+shallow defaults are preserved so the frozen SWEEP-1/2 results remain
+reproducible from the committed code.
