@@ -114,3 +114,18 @@ accuracy (all levels correct); chance floors: L1 33.3%, deeper levels
 
 Amendments after data start require a dated section disclosing what and
 why, before the affected results are committed.
+
+## Amendment 1 (2026-10-07, before any sweep results were recorded)
+
+The first launch was killed during pool-16 training when the embed log
+revealed only 2,961 unique texts across all 25,536 generated — the
+phrase/slot space was too small for "pool 1024" to mean 1024 distinct
+examples, which would gut P2 (the pool threshold). Actions, in order:
+the two sweep JSONs the aborted run had already written (pool 16 and 64)
+were deleted UNEXAMINED; no sweep number was ever read. The generator
+was widened (objs 2→6 per branch, leaf mods 3→8, generics 3→6, wider
+slot values, 8 train / 2 held-out non-informative prefixes) and a guard
+added: every leaf must have ≥1024 unique train texts (actual min 1152).
+P1–P4, arms, sweeps, metrics, and decision rules are unchanged; only
+the surface the dial acts on grew. Pool counts now mean
+distinct-example capacity.
