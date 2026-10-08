@@ -390,3 +390,54 @@ sizes, seeds, hypotheses, and bars are all unchanged. Honest
 prediction on record: S3's domain >= 0.90 half will likely FAIL at
 ~0.84 (ceiling above); its agent-floor half (every arm ~ 12.5%) is the
 primary claim.
+
+### S-series results (2026-10-08, scored run; runner d571ce8, data results/subagents.json)
+
+64 agents x 4096 evals per m, slot-7 raw embeddings, centroid cosine.
+
+| m | A_flat | B_walk | B_oracle | E_beam2 | domain_acc |
+|------|--------|--------|----------|---------|------------|
+| 1.0 | 0.9287 | 0.7961 | 0.9534 | 0.8730 | 0.8364 |
+| 0.5 | 0.4800 | 0.4172 | 0.5017 | 0.4497 | 0.8440 |
+| 0.0 | 0.1169 | 0.1021 | 0.1182 | 0.1116 | 0.8555 |
+
+Verdicts (mechanical, per registered bars):
+- S1 @m10: beam2-greedy = +0.0769 (PASS bar +0.01)
+- S1 @m05: beam2-greedy = +0.0325 (PASS bar +0.01)
+- S3 @m00: arms [0.1169, 0.1021, 0.1182] vs 1/A = 0.125 (PASS — every
+  arm lands at the floor, oracle included); domain_acc = 0.8555
+  (FAIL bar 0.90 — as predicted in Amendment 2, the generalization
+  ceiling of short synthetic generic texts; measured slightly above
+  the probed ~0.84)
+
+S2 (open, flat vs coarse-first at 64 agents): A_flat beats B_walk at
+EVERY m (0.929 vs 0.796 fully nameable; 0.480 vs 0.417 at m=0.5; both
+at floor at m=0). The depth-6 wall replicates one level up: the walk
+pays its coarse decision's full error rate, B_walk ≈ domain_acc x
+agent_acc|domain (m=1.0: 0.836 x 0.952 = 0.796, exact), and no amount
+of agent-level skill recovers a lost coarse decision. E_beam2 claws
+back roughly half the coarse-level gap (+0.077 of 0.157 at m=1.0) but
+never overtakes flat.
+
+Mechanism reading for the parked sub-agent idea:
+- Nameability is the whole game: at m=1.0 flat routing hits 0.93 at
+  64-way (chance 0.016); at m=0 NOTHING routes (every arm ~ 0.11-0.12
+  ≈ 1/8) including the oracle — a router cannot pick an agent the
+  utterance never names. Any real sub-agent router needs utterances
+  that carry agent-identifying content, or it must fall back to
+  domain-level service.
+- Coarse-first is a liability, not an engine, at this scale: it caps
+  accuracy at the coarse level's error rate and compounds errors
+  downstream. Beam-2 measurably repairs a two-level walk (S1, 3-for-3
+  with the wiresense router and MS-20), but "flat when embeddings are
+  strong, walk only when the coarse level is near-ceiling" is the
+  measured shape. Production note: wiresense's root level runs 0.919
+  (57/62) on real utterances — above this substrate's 0.84-0.86
+  synthetic ceiling — so the flat-vs-walk gap narrows with a better
+  coarse level but the direction held at every measured m.
+- The substrate verdict is part of the result: pass 1 (archived) shows
+  shared template filler dominates raw slot-7 embeddings of short
+  texts (centroid cross-cos 0.958, domain_acc 0.39); content-token
+  mass, not vocabulary size or pool weighting, is what makes centroid
+  readouts work — consistent with production refs being full natural
+  utterances.

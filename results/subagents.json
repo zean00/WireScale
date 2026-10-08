@@ -1,0 +1,38 @@
+{
+ "m10": {
+  "m": 1.0,
+  "n_agents": 64,
+  "n_eval": 4096,
+  "arms": {
+   "A_flat": 0.9287,
+   "B_walk": 0.7961,
+   "B_oracle": 0.9534,
+   "E_beam2": 0.873
+  },
+  "domain_acc": 0.8364
+ },
+ "m05": {
+  "m": 0.5,
+  "n_agents": 64,
+  "n_eval": 4096,
+  "arms": {
+   "A_flat": 0.48,
+   "B_walk": 0.4172,
+   "B_oracle": 0.5017,
+   "E_beam2": 0.4497
+  },
+  "domain_acc": 0.844
+ },
+ "m00": {
+  "m": 0.0,
+  "n_agents": 64,
+  "n_eval": 4096,
+  "arms": {
+   "A_flat": 0.1169,
+   "B_walk": 0.1021,
+   "B_oracle": 0.1182,
+   "E_beam2": 0.1116
+  },
+  "domain_acc": 0.8555
+ }
+}
