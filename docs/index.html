@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tree-lab — how should a machine decide? trees, routers, and tool benches</title>
+<meta name="description" content="tree-lab: a pre-registered laboratory for decision structure. Three experiments — hierarchical decision trees, sub-agent routing, tool-selection filtering. Every prediction committed before the data; every failure published.">
+<meta property="og:title" content="tree-lab — how should a machine decide?">
+<meta property="og:description" content="Three pre-registered experiments on decision structure: step-by-step trees vs all-at-once readouts, agent routing, and tool filtering. Registered first, measured honestly, failures published.">
+<meta name="theme-color" content="#06090f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2306090f'/%3E%3Cpath d='M16 27V14M16 14L8 6M16 14l8-8M16 20l-5-5M16 20l5-5' stroke='%232dd4bf' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='27' r='2.2' fill='%232dd4bf'/%3E%3Ccircle cx='8' cy='6' r='2' fill='%23fbbf24'/%3E%3Ccircle cx='24' cy='6' r='2' fill='%23a78bfa'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#06090f; --bg2:#0a0f1a; --panel:rgba(255,255,255,.032); --panel2:rgba(255,255,255,.055);
+    --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.16);
+    --text:#e9eef7; --dim:#9aa4b8; --faint:#5d6779;
+    --teal:#2dd4bf; --teal-dim:rgba(45,212,191,.13);
+    --amber:#fbbf24; --amber-dim:rgba(251,191,36,.12);
+    --violet:#a78bfa; --violet-dim:rgba(167,139,250,.13);
+    --red:#f87171; --red-dim:rgba(248,113,113,.11);
+    --font:'Space Grotesk',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;
+    --max:1140px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:16.5px;line-height:1.65;
+       overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  ::selection{background:rgba(45,212,191,.25)}
+  body::before{content:"";position:fixed;inset:0;z-index:-2;background:
+    radial-gradient(1000px 560px at 78% -8%, rgba(167,139,250,.09), transparent 62%),
+    radial-gradient(900px 620px at 10% 6%, rgba(45,212,191,.08), transparent 60%),
+    radial-gradient(1100px 700px at 50% 118%, rgba(251,191,36,.05), transparent 60%)}
+  body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size:56px 56px;mask-image:radial-gradient(900px 600px at 50% 0%, #000 0%, transparent 75%)}
+  a{color:var(--teal);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  .mono{font-family:var(--mono)}
+  .eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--teal);margin-bottom:18px}
+  section{padding:96px 0}
+  h2{font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:-.02em;line-height:1.12}
+  h2 .accent{color:var(--teal)}
+  h3{font-size:19px;font-weight:600;letter-spacing:-.01em}
+  .lede{color:var(--dim);font-size:18.5px;max-width:820px;margin-top:18px}
+  .lede b, p b{color:var(--text);font-weight:600}
+
+  /* reveal */
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+
+  /* ============ hero ============ */
+  header{min-height:100svh;display:flex;flex-direction:column;position:relative;overflow:hidden}
+  .hero{flex:1;display:flex;flex-direction:column;justify-content:center;padding:120px 0 40px;position:relative}
+  .hero .eyebrow{color:var(--amber)}
+  .hero h1{font-size:clamp(46px,7.4vw,92px);font-weight:700;letter-spacing:-.035em;line-height:1.0}
+  .hero h1 .tl{color:var(--teal)}
+  .hero .sub{margin-top:26px;font-size:clamp(18px,2.2vw,23px);color:var(--dim);max-width:780px;line-height:1.5}
+  .hero .sub b{color:var(--text)}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:38px}
+  .chip{font-family:var(--mono);font-size:12.5px;letter-spacing:.02em;padding:8px 14px;border:1px solid var(--line);
+        border-radius:999px;color:var(--dim);background:var(--panel)}
+  .chip b{color:var(--text);font-weight:600}
+  .chip.t{border-color:rgba(45,212,191,.35)} .chip.t b{color:var(--teal)}
+  .chip.a{border-color:rgba(251,191,36,.35)} .chip.a b{color:var(--amber)}
+  .chip.v{border-color:rgba(167,139,250,.35)} .chip.v b{color:var(--violet)}
+  #treeArt{position:absolute;right:-40px;top:50%;transform:translateY(-54%);width:min(52vw,700px);opacity:.9;pointer-events:none}
+  .scrollcue{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--faint);text-transform:uppercase;
+             padding:26px 0 34px;display:flex;align-items:center;gap:12px}
+  .scrollcue::after{content:"";width:1px;height:34px;background:linear-gradient(var(--teal),transparent);animation:drip 2.2s infinite}
+  @keyframes drip{0%{transform:scaleY(.2);transform-origin:top}55%{transform:scaleY(1);transform-origin:top}56%{transform-origin:bottom}100%{transform:scaleY(.2);transform-origin:bottom}}
+
+  /* ============ cards / grids ============ */
+  .grid{display:grid;gap:16px;margin-top:40px}
+  .g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px 26px 24px;position:relative;overflow:hidden}
+  .card:hover{border-color:var(--line2)}
+  .card .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin-bottom:12px}
+  .card h3{margin-bottom:10px}
+  .card p{color:var(--dim);font-size:15.5px}
+  .card p + p{margin-top:10px}
+  .card.teal{border-top:2px solid var(--teal)} .card.amber{border-top:2px solid var(--amber)}
+  .card.violet{border-top:2px solid var(--violet)} .card.red{border-top:2px solid var(--red)}
+  .big{font-family:var(--mono);font-size:34px;font-weight:600;letter-spacing:-.02em}
+  .big small{font-size:15px;color:var(--faint);font-weight:400}
+
+  /* plain-terms callout */
+  .plain{display:flex;gap:18px;background:linear-gradient(135deg, var(--teal-dim), rgba(167,139,250,.07));
+         border:1px solid rgba(45,212,191,.25);border-radius:16px;padding:24px 26px;margin-top:36px}
+  .plain .ic{flex:0 0 auto;width:42px;height:42px;border-radius:12px;background:rgba(45,212,191,.14);
+             display:flex;align-items:center;justify-content:center;font-size:20px}
+  .plain p{color:var(--dim);font-size:16.5px}
+  .plain p b{color:var(--text)}
+
+  /* verdict badges */
+  .badge{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11.5px;font-weight:600;
+         letter-spacing:.08em;padding:5px 11px;border-radius:999px;text-transform:uppercase}
+  .badge::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+  .b-pass{color:var(--teal);background:var(--teal-dim);border:1px solid rgba(45,212,191,.35)}
+  .b-fail{color:var(--red);background:var(--red-dim);border:1px solid rgba(248,113,113,.35)}
+  .b-part{color:var(--amber);background:var(--amber-dim);border:1px solid rgba(251,191,36,.35)}
+  .b-note{color:var(--violet);background:var(--violet-dim);border:1px solid rgba(167,139,250,.35)}
+
+  /* tables */
+  .tblwrap{overflow-x:auto;margin-top:26px;border:1px solid var(--line);border-radius:14px}
+  table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:640px}
+  th{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);
+     text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}
+  td{padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.05);color:var(--dim)}
+  tr:last-child td{border-bottom:none}
+  td.num{font-family:var(--mono);color:var(--text)}
+  td .hero-cell{color:var(--teal);font-weight:600}
+  tr.hl td{background:rgba(45,212,191,.05)}
+  th.num,td.num{text-align:right}
+  .tblcap{font-family:var(--mono);font-size:12px;color:var(--faint);margin-top:10px}
+
+  /* chart */
+  .chart{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;margin-top:36px}
+  .chart .ct{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+  .chart .ct h3{font-size:16px}
+  .chart .ct .cs{font-family:var(--mono);font-size:11.5px;color:var(--faint)}
+  .legend{display:flex;flex-wrap:wrap;gap:16px;font-family:var(--mono);font-size:12px;color:var(--dim);margin:4px 0 2px}
+  .legend i{display:inline-block;width:18px;height:3px;border-radius:2px;margin-right:7px;vertical-align:middle}
+  svg text{font-family:var(--mono)}
+  .axis{stroke:rgba(255,255,255,.14);stroke-width:1}
+  .gridl{stroke:rgba(255,255,255,.06);stroke-width:1}
+  .lbl{fill:var(--faint);font-size:11px}
+  .sv{font-size:11.5px;font-weight:600}
+
+  /* ledger */
+  .ledger{display:grid;gap:16px;margin-top:40px}
+  .lentry{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+  .lentry .date{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:8px}
+  .lentry h3{font-size:16.5px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+  .lentry p{color:var(--dim);font-size:15px}
+  .lentry.retract{border-color:rgba(248,113,113,.28);background:rgba(248,113,113,.04)}
+  .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;padding:3px 8px;border-radius:6px;
+       background:var(--panel2);color:var(--dim);border:1px solid var(--line);text-transform:uppercase}
+
+  /* number strips */
+  .nrow{display:flex;flex-wrap:wrap;gap:16px;margin-top:36px}
+  .nitem{flex:1 1 180px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+  .nitem .n{font-family:var(--mono);font-size:29px;font-weight:600;letter-spacing:-.02em}
+  .nitem .l{color:var(--faint);font-size:13px;margin-top:6px;line-height:1.45}
+  .nitem.t .n{color:var(--teal)} .nitem.a .n{color:var(--amber)} .nitem.v .n{color:var(--violet)} .nitem.r .n{color:var(--red)}
+
+  /* two-col explainer */
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
+  .duo .card p{font-size:15px}
+  ul.list{margin:14px 0 0 2px;list-style:none}
+  ul.list li{color:var(--dim);font-size:15.5px;padding-left:26px;position:relative;margin-bottom:9px}
+  ul.list li::before{content:"";position:absolute;left:0;top:.62em;width:12px;height:2px;background:var(--teal);border-radius:2px}
+  ul.list li b{color:var(--text)}
+  ul.list.amber li::before{background:var(--amber)}
+  ul.list.violet li::before{background:var(--violet)}
+  ul.list.red li::before{background:var(--red)}
+
+  .divider{height:1px;background:linear-gradient(90deg,transparent,var(--line2),transparent);margin:20px 0}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);padding:56px 0 64px;margin-top:40px}
+  footer .fine{color:var(--faint);font-size:13.5px;max-width:820px;margin-top:14px}
+  footer .links{display:flex;gap:22px;flex-wrap:wrap;font-family:var(--mono);font-size:13px;margin-top:18px}
+
+  @media (max-width:960px){
+    .g4{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(2,1fr)}
+    #treeArt{opacity:.35;right:-120px}
+    .duo{grid-template-columns:1fr}
+  }
+  @media (max-width:640px){
+    section{padding:64px 0}
+    .g2,.g3,.g4{grid-template-columns:1fr}
+    .hero{padding-top:90px}
+    .wrap{padding:0 20px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header>
+  <div class="wrap hero">
+    <svg id="treeArt" viewBox="0 0 760 560" fill="none" aria-hidden="true">
+      <g stroke="rgba(255,255,255,.13)" stroke-width="1.4">
+        <path d="M380 70 L210 190 M380 70 L550 190"/>
+        <path d="M210 190 L120 310 M210 190 L300 310 M550 190 L460 310 M550 190 L640 310"/>
+        <path d="M120 310 L75 430 M120 310 L165 430 M300 310 L255 430 M300 310 L345 430 M460 310 L415 430 M460 310 L505 430 M640 310 L595 430 M640 310 L685 430"/>
+      </g>
+      <g class="beam" stroke="#2dd4bf" stroke-width="2.6" stroke-linecap="round" opacity=".95">
+        <path d="M380 70 L210 190 L120 310 L75 430"/>
+      </g>
+      <g class="beam2" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 9" opacity=".8">
+        <path d="M380 70 L550 190"/>
+      </g>
+      <g>
+        <circle cx="380" cy="70" r="10" fill="#06090f" stroke="#e9eef7" stroke-width="2"/>
+        <circle cx="210" cy="190" r="8" fill="#06090f" stroke="#2dd4bf" stroke-width="2"/>
+        <circle cx="550" cy="190" r="8" fill="#06090f" stroke="#fbbf24" stroke-width="2"/>
+        <circle cx="120" cy="310" r="7" fill="#06090f" stroke="#2dd4bf" stroke-width="2"/>
+        <circle cx="300" cy="310" r="6" fill="#06090f" stroke="rgba(255,255,255,.4)" stroke-width="1.6"/>
+        <circle cx="460" cy="310" r="6" fill="#06090f" stroke="rgba(255,255,255,.4)" stroke-width="1.6"/>
+        <circle cx="640" cy="310" r="6" fill="#06090f" stroke="rgba(255,255,255,.4)" stroke-width="1.6"/>
+        <g fill="rgba(255,255,255,.34)">
+          <circle cx="75" cy="430" r="5.5" fill="#2dd4bf"/>
+          <circle cx="165" cy="430" r="5"/><circle cx="255" cy="430" r="5"/><circle cx="345" cy="430" r="5"/>
+          <circle cx="415" cy="430" r="5"/><circle cx="505" cy="430" r="5"/><circle cx="595" cy="430" r="5"/><circle cx="685" cy="430" r="5"/>
+        </g>
+      </g>
+      <g class="mono" fill="#5d6779" font-size="12">
+        <text x="380" y="46" text-anchor="middle">root</text>
+        <text x="75" y="462" text-anchor="middle" fill="#2dd4bf">leaf ✓</text>
+        <text x="685" y="462" text-anchor="middle">leaf</text>
+      </g>
+    </svg>
+    <div class="eyebrow rv in">a pre-registered laboratory for decision structure</div>
+    <h1 class="rv in">how should a<br>machine <span class="tl">decide?</span></h1>
+    <p class="sub rv in">Step by step down a tree like <b>twenty questions</b> — or all at once, like <b>reading the whole menu</b>?
+       tree-lab measures where each strategy wins, across three uses: <b>hierarchical decisions</b>,
+       <b>routing users to specialist agents</b>, and <b>filtering a toolbox down to the useful tools</b>.</p>
+    <div class="chips rv in">
+      <span class="chip t"><b>96</b>-leaf trees, 6 levels deep</span>
+      <span class="chip v"><b>64</b> specialist agents routed</span>
+      <span class="chip a"><b>121</b> real tools filtered to ~65</span>
+      <span class="chip"><b>0</b>/4 headline predictions passed as registered — the failures are the finding</span>
+    </div>
+  </div>
+  <div class="wrap scrollcue">the experiments</div>
+</header>
+
+<!-- ================= PREMISE ================= -->
+<section id="idea">
+  <div class="wrap">
+    <div class="eyebrow rv">the premise</div>
+    <h2 class="rv">One frozen brain, many tiny <span class="accent">ways to decide</span>.</h2>
+    <p class="lede rv">tree-lab never trains the big model. A language model turns sentences into
+       <b>points in space</b> (embeddings) and stays completely frozen — the way a thermometer doesn't
+       change when you read it. All the experimenting happens in the <b>tiny readout</b> attached on top:
+       a few thousand parameters that look at the point and make a choice. That makes every experiment
+       cheap, fast, and ruthlessly comparable.</p>
+    <div class="grid g3">
+      <div class="card teal rv">
+        <div class="k">the substrate</div>
+        <h3>Embed + measure</h3>
+        <p>Every sentence becomes a 2,560-dimension vector from a frozen Qwen3.5-4B encoder. A "readout"
+           is just distances: which class's reference point is closest to the sentence?</p>
+      </div>
+      <div class="card violet rv">
+        <div class="k">the discipline</div>
+        <h3>Register before data</h3>
+        <p>Predictions, arms, and pass/fail bars are committed to the repo <b>before any experiment
+           runs</b>. Verdicts are computed mechanically by a script, not argued afterwards.</p>
+      </div>
+      <div class="card amber rv">
+        <div class="k">the honesty</div>
+        <h3>Failures are results</h3>
+        <p>In the first experiment, <b>all four</b> registered predictions failed or flatlined — and that
+           was published as the headline. A botched first run was deleted <i>unexamined</i> and disclosed.</p>
+      </div>
+    </div>
+
+    <div class="plain rv">
+      <div class="ic">🌿</div>
+      <p><b>Why trees at all?</b> A tree decides like twenty questions: <i>Is this about the house? → About
+         lights? → About brightness?</i> Each step is easy to inspect and trust. The alternative reads the
+         whole menu in one glance. Trees cost you if an early step is wrong — every later step then inherits
+         the mistake. Everything tree-lab measures is a variation on that one trade-off:
+         <b>easy steps that compound vs one glance that doesn't.</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= USE CASE 1 ================= -->
+<section id="trees" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow rv" style="color:var(--teal)">use case 1 — hierarchical decisions</div>
+    <h2 class="rv">The decision tree: does the parent's answer <span class="accent">help the child</span>?</h2>
+    <p class="lede rv">Build a tree of commands — <i>smart home → lights → brightness</i> — up to
+       <b>6 levels and 96 final answers</b>, from synthetic sentences whose true answer is known by
+       construction. Then ask the registered question: if each level's little readout is <b>told what its
+       parent decided</b> ("conditioning"), does the tree stop getting worse as it grows?</p>
+
+    <div class="duo">
+      <div class="card teal rv">
+        <div class="k">in plain terms</div>
+        <h3>Twenty questions, with a cheat sheet</h3>
+        <p>Imagine the twenty-questions player writes down each answer and hands it to the next questioner —
+           that's <b>parent conditioning</b>. Intuition says it must help. The lab found it barely matters:
+           what matters is whether <b>the words themselves say which final answer is meant</b>.</p>
+        <p>The lab controls that with a dial called <b>markedness</b>: at <span class="mono">m=1</span> every
+           sentence names its leaf; at <span class="mono">m=0</span> two sibling leaves get <i>identical</i>
+           sentences — no method on earth can split them.</p>
+      </div>
+      <div class="card amber rv">
+        <div class="k">the contenders</div>
+        <h3>Five ways to walk down</h3>
+        <p><b>A — flat:</b> one glance at all leaf labels. <b>B — walk:</b> greedy, one level at a time.
+           <b>C — walk + parent hint:</b> the conditioning hypothesis. <b>C′ — a fancier hint</b> (FiLM).
+           <b>E — beam-2:</b> like the walk, but keeps <i>two</i> candidates alive at each level.</p>
+        <p>All share the same frozen encoder; readouts are linear trunks scored by centroid cosine;
+           accuracies are template- and vocabulary-transfer (eval sentences use held-out words).</p>
+      </div>
+    </div>
+
+    <div class="chart rv">
+      <div class="ct"><h3>Data bought back what structure promised</h3>
+        <span class="cs">deepest-level accuracy vs training examples per answer · depth 4 (24 leaves)</span></div>
+      <div class="legend">
+        <span><i style="background:#9aa4b8"></i>A flat</span>
+        <span><i style="background:#2dd4bf"></i>B walk</span>
+        <span><i style="background:#a78bfa"></i>C walk + parent hint</span>
+        <span><i style="background:#fbbf24"></i>E beam-2 walk</span>
+      </div>
+      <div id="chartPool"></div>
+      <div class="tblcap">Exact measured values (path accuracy, predicted parents, seed 0): A .919/.942/.952/.959 ·
+        B .784/.901/.957/.965 · C .808/.909/.927/.972 · E .795/.920/.970/.978 at pools 16/64/256/1024.</div>
+    </div>
+
+    <div class="grid g4">
+      <div class="card rv"><div class="k">registered prediction P1</div>
+        <span class="badge b-fail">fail</span>
+        <p style="margin-top:12px">"The walk beats flat by ≥3 pts." It never did once data was adequate —
+           a fully-named leaf is so separable that hierarchy adds nothing.</p></div>
+      <div class="card rv"><div class="k">P2 — conditioning is data-hungry</div>
+        <span class="badge b-fail">fail</span>
+        <p style="margin-top:12px">The parent-hint gap <b>shrank</b> with data (+2.4 pts at pool 16 →
+           +0.7 at pool 1024). Its only win is the low-data corner.</p></div>
+      <div class="card rv"><div class="k">P3 — the information ceiling</div>
+        <span class="badge b-part">fail as registered · substance confirmed</span>
+        <p style="margin-top:12px">Registered against the wrong level (disclosed). Post-hoc at the true level:
+           at <span class="mono">m=0</span> every arm sits at <b>.517 ≈ coin flip</b>; at <span class="mono">m=.5</span>
+           they bracket the .75 midpoint. Structure never beats information.</p></div>
+      <div class="card rv"><div class="k">P4 — the headline hypothesis</div>
+        <span class="badge b-part">partial · null in substance</span>
+        <p style="margin-top:12px">The conditioning gap grew <b>+0.5 pts</b> with depth (bar: +5). Per the
+           registered rule: recorded and <b>stopped</b> — no escalation of parent conditioning.</p></div>
+    </div>
+
+    <div class="chart rv">
+      <div class="ct"><h3>How deep can it go?</h3>
+        <span class="cs">walk accuracy by depth · 6 → 96 leaves · m=1, pool 256</span></div>
+      <div class="legend">
+        <span><i style="background:#9aa4b8"></i>A flat (measured at 24 &amp; 96 leaves)</span>
+        <span><i style="background:#2dd4bf"></i>B walk</span>
+        <span><i style="background:#fbbf24"></i>E beam-2</span>
+      </div>
+      <div id="chartDepth"></div>
+      <div class="tblcap">B .903/.894/.826/.825/.825 · E .914/.921/.856/.859/.859 at depths 2–6 ·
+        A .813 (24 leaves) and .899 (96 leaves). Per-level conditionals in the 6-level walk:
+        L1 .918 · L2 .984 · L3 .990 · L4 .924 · L5 .9997 · L6 1.0000.</div>
+    </div>
+
+    <div class="nrow">
+      <div class="nitem t rv"><div class="n">no wall</div><div class="l">Depth stopped costing anything after level 4 —
+        levels 5–6 were <b>free</b> (per-level .9997 and 1.0000) through 96 leaves.</div></div>
+      <div class="nitem a rv"><div class="n">+3.4 pts</div><div class="l">Beam-2's recovery at 96 leaves, by keeping
+        two first-level candidates alive — the cheapest lever in the lab.</div></div>
+      <div class="nitem r rv"><div class="n">−13.4 pts</div><div class="l">The fancy hint (FiLM) was reliably
+        <b>harmful</b> at every pool. Rejected with numbers, not taste.</div></div>
+      <div class="nitem v rv"><div class="n">L1 .918</div><div class="l">The wall is the <b>coarsest</b> step, not depth:
+        a 3-way choice at 91.8% caps the whole walk at .825, and flat overtakes at 96 classes (.899).</div></div>
+    </div>
+
+    <div class="plain rv">
+      <div class="ic">🌳</div>
+      <p><b>Verdict for trees:</b> the tree is bounded by <b>what the words say</b>, not by the wiring between
+         levels. When leaves are named, even a single glance scales to 96 answers (95.9%). When they aren't,
+         every architecture sits at a coin flip. Conditioning neither rescues depth nor breaks the ceiling;
+         the transferable lever is <b>beam-2</b> — and per the registered rule, the conditioning line of
+         research was <b>stopped</b>, not quietly buried.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= USE CASE 2 ================= -->
+<section id="router" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow rv" style="color:var(--violet)">use case 2 — agent routing</div>
+    <h2 class="rv">The concierge: which <span class="accent">specialist</span> gets the request?</h2>
+    <p class="lede rv">Modern agent frameworks keep a bench of specialists — a git agent, a calendar agent, a
+       shopping agent — and something must route each user message to one of them. tree-lab built
+       <b>8 departments × 8 specialists = 64 sub-agents</b> and asked: is the two-step concierge
+       (department → specialist) better than one flat glance at all 64?</p>
+
+    <div class="plain rv">
+      <div class="ic">🛎️</div>
+      <p><b>In plain terms:</b> a hotel concierge first picks the department ("engineering"), then the
+         specialist inside it. If the guest <b>names the specialist's specialty</b>, one flat glance at the
+         staff directory routes 93% of guests correctly (random chance: 1.6%). But if the guest only says
+         "something with the projector, please" — <b>never naming a specialist</b> — <i>no</i> concierge on
+         earth can do better than chance at the specialist level, even one who secretly knows the right
+         department. That's not a routing failure; it's the sentence carrying no routing information.</p>
+    </div>
+
+    <div class="tblwrap rv">
+      <table>
+        <thead><tr>
+          <th>specialization dial m</th><th class="num">flat (all 64)</th><th class="num">walk dept→agent</th>
+          <th class="num">walk + true dept (ceiling)</th><th class="num">beam-2 walk</th><th class="num">dept accuracy</th>
+        </tr></thead>
+        <tbody>
+          <tr class="hl"><td><b>m=1.0</b> — requests name their specialist</td>
+            <td class="num hero-cell">.9287</td><td class="num">.7961</td><td class="num">.9534</td>
+            <td class="num">.8730</td><td class="num">.8364</td></tr>
+          <tr><td><b>m=0.5</b> — half do</td>
+            <td class="num hero-cell">.4800</td><td class="num">.4172</td><td class="num">.5017</td>
+            <td class="num">.4497</td><td class="num">.8440</td></tr>
+          <tr><td><b>m=0.0</b> — none do</td>
+            <td class="num">.1169</td><td class="num">.1021</td><td class="num">.1182</td>
+            <td class="num">.1116</td><td class="num">.8555</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tblcap rv">4,096 held-out evaluations per arm per m · raw frozen embeddings, centroid cosine ·
+      the m=0 floor is exactly 1/8 = .125: routing degenerates to guessing the department (which it still does at .86).</div>
+
+    <div class="grid g3">
+      <div class="card teal rv"><div class="k">registered S1</div>
+        <span class="badge b-pass">pass · both dials</span>
+        <p style="margin-top:12px">Beam-2 beats the greedy walk by <b>+7.7 pts</b> (m=1) and <b>+3.3 pts</b>
+           (m=.5) — its third consecutive replication across labs.</p></div>
+      <div class="card amber rv"><div class="k">registered S2 (open question)</div>
+        <span class="badge b-note">flat wins at every m</span>
+        <p style="margin-top:12px">The concierge <b>pays the department's full error rate</b> before choosing a
+           specialist (walk ≈ dept × specialist, exactly: .836 × .952 = .796). Beam-2 claws back about half;
+           it never overtakes the flat glance.</p></div>
+      <div class="card red rv"><div class="k">registered S3 — the floor</div>
+        <span class="badge b-pass">floor pass</span>
+        <p style="margin-top:12px">At m=0 every arm lands at the 1/8 floor — <b>including the cheating oracle</b> —
+           while departments stay at .856 against the .90 bar: the domain half failed exactly as
+           predicted pre-data (a ceiling of short synthetic sentences).</p></div>
+    </div>
+
+    <div class="lentry retract rv" style="margin-top:36px">
+      <div class="date">registered honesty · S-series amendment 1</div>
+      <h3>The first run was thrown away — unexamined <span class="tag">archived, published</span></h3>
+      <p>Pass 1 contained a scoring bug (the walk arms compared a number to a string — always false, so they
+         recorded exactly 0.0, impossible as a measurement) <b>and</b> a substrate flaw: departments were built
+         from generic vocabulary only, so they scored .39 on sentences that visibly named their department.
+         Both were fixed and disclosed <i>before</i> the real run; the invalid file ships in the repo as the
+         record. A follow-up probe found the real culprit — shared template filler drowning the signal — and
+         fixed it with a two-pair template, with the composition probes that <b>didn't</b> help also recorded.</p>
+    </div>
+
+    <div class="plain rv">
+      <div class="ic">🧭</div>
+      <p><b>Verdict for routing:</b> <b>nameability is the whole game.</b> A router cannot pick a specialist the
+         utterance never names — so real sub-agent systems need requests that carry identifying content, or a
+         graceful fallback to department-level service. And at this scale, <b>coarse-first routing is a
+         liability, not an engine</b>: it caps you at the coarse level's error rate. The lab-parked conclusion:
+         flat when embeddings are strong; walk only when the coarse level is near-perfect; beam-2 either way.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= USE CASE 3 ================= -->
+<section id="tools" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow rv" style="color:var(--amber)">use case 3 — tool selection (filtering)</div>
+    <h2 class="rv">The workbench: 121 tools on the wall, <span class="accent">only the useful ones on the bench</span>.</h2>
+    <p class="lede rv">This is where the lab met production. A voice assistant has <b>121 real tools</b>
+       (GitHub, filesystem, git, smart home…). Showing all of them to a small model every turn costs tokens
+       and accuracy. The measured alternative: embed the request, keep only the tools whose reference points
+       are close — then let the model choose from the short menu.</p>
+
+    <div class="duo">
+      <div class="card amber rv">
+        <div class="k">in plain terms</div>
+        <h3>The librarian and the sticky note</h3>
+        <p>A <b>librarian</b> grabs the two most likely shelves (~65 of 121 tools) — reliable, 88% of the time
+           the right tool is on the bench. A <b>sticky note</b> ("this looks like git work") turned out to be
+           the single biggest picking boost ever measured in the program… and it <b>broke refusals</b>: shown
+           the note, the model grabs a tool even for "what's 15% of 240?"</p>
+        <p>A separate quick question — <i>"does this even need a tool?"</i> — is the best refusal-detector ever
+           measured, and worthless as a gatekeeper: used as one, it turns away a quarter of real requests.</p>
+      </div>
+      <div class="card teal rv">
+        <div class="k">the composition that worked</div>
+        <h3>Let the guard control only the note</h3>
+        <p>Chat-detected → normal workbench, no note (never turned away). Tool-detected → workbench <i>plus</i>
+           the note. Each helper's weakness is absorbed by the other's strength. Then the recall fix from
+           tree-lab's own walk playbook (keep two first-level candidates — beam-2) widened the bench coverage
+           from 88% to <b>96%</b>.</p>
+        <p>Every step was pre-registered; three popular ideas were <b>rejected on measurement</b> first
+           (search-as-a-tool, no-tool-as-a-menu-item, the hard two-step gate).</p>
+      </div>
+    </div>
+
+    <div class="chart rv">
+      <div class="ct"><h3>The frontier: accuracy vs prompt cost</h3>
+        <span class="cs">frozen 278-case eval · production 4B planner · lower-left is cheap, upper-right is good</span></div>
+      <div class="legend">
+        <span><i style="background:#9aa4b8"></i>rejected / reference</span>
+        <span><i style="background:#2dd4bf"></i>shipped or adopted</span>
+        <span><i style="background:#fbbf24"></i>wiring target</span>
+      </div>
+      <div id="chartFrontier"></div>
+      <div class="tblcap">flat-121 .6835 @ 3739 tok · shipped gate (top-2 cluster union) .6727 @ 2265 ·
+        band-08 .6619 @ 1210 · beam16 .5971 @ 608 · window∪cluster .6942 @ 2636 (blocked by one refusal case) ·
+        softhint .7194 @ 2405 · <b>winhint .7338 @ 2776 — wiring target</b>.</div>
+    </div>
+
+    <div class="nrow">
+      <div class="nitem t rv"><div class="n">.7338</div><div class="l">Final measured accuracy — <b>+17 cases</b> out of
+        278 vs the shipped gate, and the first design to clear both the accuracy bar <i>and</i> the refusal bar.</div></div>
+      <div class="nitem a rv"><div class="n">.9567</div><div class="l">Bench coverage: the right tool is present 96%
+        of the time (was 87.8%) — recall transferred exactly from pre-check to scored run, five times in a row.</div></div>
+      <div class="nitem v rv"><div class="n">+8 pts</div><div class="l">The sticky note's picking lift (per-hit
+        .744 → .821) — the largest single-sentence effect measured anywhere in the program.</div></div>
+      <div class="nitem r rv"><div class="n">1/24</div><div class="l">Refusal damage after the guard was added:
+        the note's harm shrank from −7 refusal cases to −1. Thin margin, honestly recorded (20/24 vs a 20 bar).</div></div>
+    </div>
+
+    <div class="lentry retract rv" style="margin-top:36px">
+      <div class="date">the ledger of rejected ideas · all pre-registered</div>
+      <h3>What didn't work <span class="tag">measured, not vibes</span></h3>
+      <p><b>Search-as-a-tool</b> (let the model query a tool directory): 49% — its short queries surfaced the
+         target only 51% vs 88% for embedding the utterance itself. <b>Sliding windows</b> over the tool list:
+         positional, so they lose the right tool half the time. <b>no_tool as a menu item</b>: rescued the
+         tricky refusal cases but siphoned 54 real requests into "no tool". <b>The hard two-step gate</b>:
+         best refusals ever (23/24), turned away 62 genuine requests. <b>The bare hint</b>: record accuracy,
+         wrecked refusals (15/24). Every one of these failures is load-bearing — the final design is what's
+         left after they're subtracted.</p>
+    </div>
+
+    <div class="plain rv">
+      <div class="ic">🔧</div>
+      <p><b>Verdict for tool filtering:</b> the production design is now <b>recall-first filtering + a
+         refusal-guarded hint</b> — 73.4% vs 67.3% for the shipped gate, registered as the wiring target with
+         costs priced (one extra local model call per request, ~a tenth of a second). And a transfer lesson
+         travelled the other way too: this lab's beam-2 deploy in the assistant's router only worked after
+         discovering that paths of different depth must be scored with <b>mean, never sum</b> — a 13-point
+         crash lived entirely in that choice.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LAWS ================= -->
+<section id="laws" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow rv" style="color:var(--amber)">what transfers</div>
+    <h2 class="rv">Four laws, paid for <span class="accent">in full</span>.</h2>
+    <div class="grid g4">
+      <div class="card teal rv"><div class="k">law 01</div><h3>Information bounds; structure spends</h3>
+        <p>When the text names its answer, every architecture works (96 leaves at 95.9%). When it doesn't,
+           nothing does — coin flips at the leaf (m=0) and chance at the specialist (1/8), oracle included.
+           Diagnose the sentence before redesigning the tree.</p></div>
+      <div class="card amber rv"><div class="k">law 02</div><h3>Early steps tax everything after</h3>
+        <p>A walk inherits its first mistake: 91.8% at the root caps a 6-level walk at .825 no matter how
+           perfect the deeper levels (.9997, 1.0). Flat overtakes the walk once the class count grows —
+           at 96 classes, .899 vs .825.</p></div>
+      <div class="card violet rv"><div class="k">law 03</div><h3>Beam-2 is the universal repair</h3>
+        <p>Keep two candidates alive at the coarse level: +3.4 pts at 96 leaves, +7.7 pts on agent routing,
+           +1.1 in the production router — three replications, one caveat: score paths by <b>mean, never
+           sum</b> (a 13-point crash hid in that choice).</p></div>
+      <div class="card red rv"><div class="k">law 04</div><h3>Register, then obey the verdict</h3>
+        <p>0 of 4 headline predictions passed as registered — so conditioning was <b>stopped by rule</b>.
+           A flawed run was deleted unexamined; a registered metric error was disclosed; the composition
+           shipped only after clearing both pre-committed bars. The ledger is the product.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="eyebrow rv">tree-lab</div>
+    <h2 class="rv" style="font-size:clamp(24px,3vw,32px)">Every number on this page is a <span class="accent">committed artifact</span>.</h2>
+    <p class="fine rv">Hypotheses, arms, bars, and amendments live in <a href="protocol.md">protocol.md</a>;
+       raw scored runs in <a href="https://github.com/zean00/tree-lab/tree/main/results">results/*.json</a>.
+       Verdicts are computed mechanically (<span class="mono">adjudicate.py</span>), not argued. The frozen
+       encoder is never fine-tuned; embeddings are served on a dedicated slot so the production system is
+       never touched. Local commits only — published as-is, in the spirit of the ledger:
+       <b style="color:var(--text)">register first, measure, admit when wrong.</b></p>
+    <div class="links rv">
+      <a href="https://github.com/zean00/tree-lab">github.com/zean00/tree-lab</a>
+      <a href="protocol.md">protocol.md — the decision record</a>
+      <a href="https://github.com/zean00/rewire">sister program: rewire</a>
+    </div>
+    <p class="fine rv" style="margin-top:26px">Experiments run 2026-10-07 → 2026-10-09 · frozen encoder
+      Qwen3.5-4B (local llama.cpp server) · synthetic corpora generated deterministically from committed seeds ·
+      production transfer measured in the wiresense program (MS-1..29).</p>
+  </div>
+</footer>
+
+<script>
+/* reveal on scroll */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+}), {threshold:.12});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* hero tree draw-in */
+document.querySelectorAll('#treeArt .beam path, #treeArt .beam2 path').forEach((p,i)=>{
+  const L = p.getTotalLength();
+  p.style.strokeDasharray = (i===1) ? `3 9` : L;
+  p.style.strokeDashoffset = L;
+  p.style.transition = `stroke-dashoffset 1.6s ${.3+i*.4}s ease`;
+  p.getBoundingClientRect(); // flush
+  p.style.strokeDashoffset = 0;
+});
+
+/* ---------- chart helpers (inline SVG, no deps) ---------- */
+const NS = 'http://www.w3.org/2000/svg';
+function mk(tag, attrs){ const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]); return e; }
+function txt(x,y,s,cls,anchor){ const t = mk('text',{x,y,'text-anchor':anchor||'start','class':cls||'lbl'});
+  t.textContent = s; return t; }
+
+function lineChart(id, cfg){
+  const W = cfg.w||920, H = cfg.h||300, L = 58, R = 118, T = 18, B = 46;
+  const svg = mk('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%',style:'display:block'});
+  const iw = W-L-R, ih = H-T-B;
+  const X = i => L + iw * (cfg.xVals.length===1 ? 0 : i/(cfg.xVals.length-1));
+  const Y = v => T + ih * (1 - (v-cfg.ymin)/(cfg.ymax-cfg.ymin));
+  for (let g=0; g<=4; g++){
+    const v = cfg.ymin + (cfg.ymax-cfg.ymin)*g/4, y = Y(v);
+    svg.appendChild(mk('line',{x1:L,y1:y,x2:W-R,y2:y,class:'gridl'}));
+    svg.appendChild(txt(L-10,y+4,v.toFixed(2),'lbl','end'));
+  }
+  cfg.xVals.forEach((xv,i)=>{
+    svg.appendChild(mk('line',{x1:X(i),y1:T,x2:X(i),y2:T+ih,class:'gridl'}));
+    svg.appendChild(txt(X(i),H-B+22,String(xv),'lbl','middle'));
+  });
+  svg.appendChild(mk('line',{x1:L,y1:T+ih,x2:W-R,y2:T+ih,class:'axis'}));
+  svg.appendChild(txt(L+iw/2, H-6, cfg.xTitle||'', 'lbl','middle'));
+  /* nudge labels apart so converging series stay readable */
+  const MIN = 13.5;
+  function spread(items, lo, hi){
+    items.sort((a,b)=>a.y-b.y);
+    for (let k=1;k<items.length;k++)
+      if (items[k].y < items[k-1].y + MIN) items[k].y = items[k-1].y + MIN;
+    if (items.length && items[items.length-1].y > hi){
+      items[items.length-1].y = hi;
+      for (let k=items.length-2;k>=0;k--)
+        if (items[k].y > items[k+1].y - MIN) items[k].y = items[k+1].y - MIN;
+    }
+    return items;
+  }
+  const colLabels = {}, rightLabels = [];
+  cfg.series.forEach(s=>{
+    const pts = [];
+    s.values.forEach((v,i)=>{ if(v!=null) pts.push([X(i),Y(v)]); });
+    svg.appendChild(mk('polyline',{points:pts.map(p=>p.join(',')).join(' '),
+      fill:'none',stroke:s.color,'stroke-width':2.4,'stroke-linejoin':'round','stroke-linecap':'round',
+      'stroke-dasharray':s.dash||'none',opacity:.95}));
+    const lastIdx = (()=>{ for(let i=s.values.length-1;i>=0;i--) if(s.values[i]!=null) return i; return 0; })();
+    s.values.forEach((v,i)=>{ if(v==null) return;
+      svg.appendChild(mk('circle',{cx:X(i),cy:Y(v),r:3.6,fill:'#06090f',stroke:s.color,'stroke-width':2}));
+      if (s.labels && s.labels[i] && i!==lastIdx)
+        (colLabels[i] = colLabels[i]||[]).push(
+          {y:Y(v)-8, text:s.labels[i], color:s.color, dx:s.labelDx??8});
+    });
+    const num = (s.labels && s.labels[lastIdx]) ? s.labels[lastIdx]+' ' : '';
+    rightLabels.push({y:Y(s.values[lastIdx])+4, text:num+s.name, color:s.color, x:X(lastIdx)+9});
+  });
+  for (const i in colLabels)
+    spread(colLabels[i], T+10, T+ih-4).forEach(o=>
+      svg.appendChild(txt(X(i)+o.dx, o.y, o.text, 'sv', 'start'))
+        .setAttribute('fill', o.color));
+  spread(rightLabels, T+10, T+ih+2).forEach(o=>
+    svg.appendChild(txt(o.x, o.y, o.text, 'sv', 'start')).setAttribute('fill', o.color));
+  document.getElementById(id).appendChild(svg);
+}
+
+lineChart('chartPool', {
+  xVals:[16,64,256,1024], xTitle:'training examples per answer', ymin:.72, ymax:1.0,
+  series:[
+    {name:'A flat', color:'#9aa4b8', values:[.919,.942,.952,.959], labels:['.919',null,null,'.959']},
+    {name:'B walk', color:'#2dd4bf', values:[.784,.901,.957,.965], labels:['.784',null,null,'.965']},
+    {name:'C walk+hint', color:'#a78bfa', values:[.808,.909,.927,.972], labels:['.808',null,null,'.972']},
+    {name:'E beam-2', color:'#fbbf24', values:[.795,.920,.970,.978], labels:['.795',null,null,'.978']},
+  ]});
+
+lineChart('chartDepth', {
+  xVals:['6 leaves','12','24','48','96'], xTitle:'tree size (depth 2 → 6)', ymin:.78, ymax:0.96,
+  series:[
+    {name:'A flat', color:'#9aa4b8', values:[null,null,.813,null,.899],
+     labels:[null,null,'.813',null,'.899'], labelDx:-38},
+    {name:'B walk', color:'#2dd4bf', values:[.903,.894,.826,.825,.825],
+     labels:['.903',null,null,null,'.825']},
+    {name:'E beam-2', color:'#fbbf24', values:[.914,.921,.856,.859,.859],
+     labels:['.914','.921','.856',null,'.859']},
+  ]});
+
+/* frontier scatter */
+(function(){
+  const W=920,H=340,L=58,R=150,T=18,B=48,iw=W-L-R,ih=H-T-B;
+  const svg = mk('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%',style:'display:block'});
+  const xmin=400,xmax=4000,ymin=.55,ymax=.78;
+  const X=t=>L+iw*(t-xmin)/(xmax-xmin), Y=a=>T+ih*(1-(a-ymin)/(ymax-ymin));
+  for(let g=0;g<=4;g++){ const a=ymin+(ymax-ymin)*g/4,y=Y(a);
+    svg.appendChild(mk('line',{x1:L,y1:y,x2:W-R,y2:y,class:'gridl'}));
+    svg.appendChild(txt(L-10,y+4,a.toFixed(2),'lbl','end')); }
+  [500,1000,2000,4000].forEach(t=>{ const x=X(t);
+    svg.appendChild(mk('line',{x1:x,y1:T,x2:x,y2:T+ih,class:'gridl'}));
+    svg.appendChild(txt(x,H-B+24,t,'lbl','middle')); });
+  svg.appendChild(mk('line',{x1:L,y1:T+ih,x2:W-R,y2:T+ih,class:'axis'}));
+  svg.appendChild(txt(L+iw/2,H-8,'prompt tokens per request (lower = cheaper)','lbl','middle'));
+  const pts=[
+    {n:'beam16',        t:608, a:.5971, c:'#9aa4b8'},
+    {n:'band-08',       t:1210,a:.6619, c:'#9aa4b8'},
+    {n:'shipped gate',  t:2265,a:.6727, c:'#2dd4bf'},
+    {n:'window∪cluster',t:2636,a:.6942, c:'#9aa4b8'},
+    {n:'flat-121',      t:3739,a:.6835, c:'#9aa4b8'},
+    {n:'softhint (adopted)', t:2405,a:.7194, c:'#2dd4bf'},
+    {n:'winhint (target)',   t:2776,a:.7338, c:'#fbbf24'},
+  ];
+  pts.forEach(p=>{
+    svg.appendChild(mk('circle',{cx:X(p.t),cy:Y(p.a),r:7,fill:'#06090f',stroke:p.c,'stroke-width':2.6}));
+    svg.appendChild(txt(X(p.t)+13,Y(p.a)+4,p.n,'sv','start')).setAttribute('fill',p.c);
+  });
+  document.getElementById('chartFrontier').appendChild(svg);
+})();
+</script>
+</body>
+</html>
