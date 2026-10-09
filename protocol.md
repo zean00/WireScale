@@ -1,4 +1,4 @@
-# Tree-lab: does parent-conditioning make multi-level decision trees scale?
+# WireScale: does parent-conditioning make multi-level decision trees scale?
 
 Registered 2026-10-07, before any data. Standalone testbed (deliberately
 beyond wiresense): synthetic utterance-marked hierarchy, frozen real

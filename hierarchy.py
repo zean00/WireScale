@@ -1,4 +1,4 @@
-"""Synthetic utterance-marked hierarchy for tree-lab (protocol.md machinery).
+"""Synthetic utterance-marked hierarchy for WireScale (protocol.md machinery).
 
 Deterministic: numpy default_rng, data seed 0. An utterance belongs to a
 leaf path [L1, L2, L3, L4]; depth-d classes are prefixes. Sibling leaves

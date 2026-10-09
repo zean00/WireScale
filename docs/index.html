@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>tree-lab — how should a machine decide? trees, routers, and tool benches</title>
-<meta name="description" content="tree-lab: a pre-registered laboratory for decision structure. Three experiments — hierarchical decision trees, sub-agent routing, tool-selection filtering. Every prediction committed before the data; every failure published.">
-<meta property="og:title" content="tree-lab — how should a machine decide?">
+<title>WireScale — how should a machine decide? trees, routers, and tool benches</title>
+<meta name="description" content="WireScale: a pre-registered laboratory for decision structure. Three experiments — hierarchical decision trees, sub-agent routing, tool-selection filtering. Every prediction committed before the data; every failure published.">
+<meta property="og:title" content="WireScale — how should a machine decide?">
 <meta property="og:description" content="Three pre-registered experiments on decision structure: step-by-step trees vs all-at-once readouts, agent routing, and tool filtering. Registered first, measured honestly, failures published.">
 <meta name="theme-color" content="#06090f">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2306090f'/%3E%3Cpath d='M16 27V14M16 14L8 6M16 14l8-8M16 20l-5-5M16 20l5-5' stroke='%232dd4bf' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='27' r='2.2' fill='%232dd4bf'/%3E%3Ccircle cx='8' cy='6' r='2' fill='%23fbbf24'/%3E%3Ccircle cx='24' cy='6' r='2' fill='%23a78bfa'/%3E%3C/svg%3E">
@@ -220,7 +220,7 @@
     <div class="eyebrow rv in">a pre-registered laboratory for decision structure</div>
     <h1 class="rv in">how should a<br>machine <span class="tl">decide?</span></h1>
     <p class="sub rv in">Step by step down a tree like <b>twenty questions</b> — or all at once, like <b>reading the whole menu</b>?
-       tree-lab measures where each strategy wins, across three uses: <b>hierarchical decisions</b>,
+       WireScale measures where each strategy wins, across three uses: <b>hierarchical decisions</b>,
        <b>routing users to specialist agents</b>, and <b>filtering a toolbox down to the useful tools</b>.</p>
     <div class="chips rv in">
       <span class="chip t"><b>96</b>-leaf trees, 6 levels deep</span>
@@ -237,7 +237,7 @@
   <div class="wrap">
     <div class="eyebrow rv">the premise</div>
     <h2 class="rv">One frozen brain, many tiny <span class="accent">ways to decide</span>.</h2>
-    <p class="lede rv">tree-lab never trains the big model. A language model turns sentences into
+    <p class="lede rv">WireScale never trains the big model. A language model turns sentences into
        <b>points in space</b> (embeddings) and stays completely frozen — the way a thermometer doesn't
        change when you read it. All the experimenting happens in the <b>tiny readout</b> attached on top:
        a few thousand parameters that look at the point and make a choice. That makes every experiment
@@ -268,7 +268,7 @@
       <p><b>Why trees at all?</b> A tree decides like twenty questions: <i>Is this about the house? → About
          lights? → About brightness?</i> Each step is easy to inspect and trust. The alternative reads the
          whole menu in one glance. Trees cost you if an early step is wrong — every later step then inherits
-         the mistake. Everything tree-lab measures is a variation on that one trade-off:
+         the mistake. Everything WireScale measures is a variation on that one trade-off:
          <b>easy steps that compound vs one glance that doesn't.</b></p>
     </div>
   </div>
@@ -382,7 +382,7 @@
     <div class="eyebrow rv" style="color:var(--violet)">use case 2 — agent routing</div>
     <h2 class="rv">The concierge: which <span class="accent">specialist</span> gets the request?</h2>
     <p class="lede rv">Modern agent frameworks keep a bench of specialists — a git agent, a calendar agent, a
-       shopping agent — and something must route each user message to one of them. tree-lab built
+       shopping agent — and something must route each user message to one of them. WireScale built
        <b>8 departments × 8 specialists = 64 sub-agents</b> and asked: is the two-step concierge
        (department → specialist) better than one flat glance at all 64?</p>
 
@@ -483,7 +483,7 @@
         <h3>Let the guard control only the note</h3>
         <p>Chat-detected → normal workbench, no note (never turned away). Tool-detected → workbench <i>plus</i>
            the note. Each helper's weakness is absorbed by the other's strength. Then the recall fix from
-           tree-lab's own walk playbook (keep two first-level candidates — beam-2) widened the bench coverage
+           WireScale's own walk playbook (keep two first-level candidates — beam-2) widened the bench coverage
            from 88% to <b>96%</b>.</p>
         <p>Every step was pre-registered; three popular ideas were <b>rejected on measurement</b> first
            (search-as-a-tool, no-tool-as-a-menu-item, the hard two-step gate).</p>
@@ -568,16 +568,16 @@
 <!-- ================= FOOTER ================= -->
 <footer>
   <div class="wrap">
-    <div class="eyebrow rv">tree-lab</div>
+    <div class="eyebrow rv">WireScale</div>
     <h2 class="rv" style="font-size:clamp(24px,3vw,32px)">Every number on this page is a <span class="accent">committed artifact</span>.</h2>
     <p class="fine rv">Hypotheses, arms, bars, and amendments live in <a href="protocol.md">protocol.md</a>;
-       raw scored runs in <a href="https://github.com/zean00/tree-lab/tree/main/results">results/*.json</a>.
+       raw scored runs in <a href="https://github.com/zean00/WireScale/tree/main/results">results/*.json</a>.
        Verdicts are computed mechanically (<span class="mono">adjudicate.py</span>), not argued. The frozen
        encoder is never fine-tuned; embeddings are served on a dedicated slot so the production system is
        never touched. Local commits only — published as-is, in the spirit of the ledger:
        <b style="color:var(--text)">register first, measure, admit when wrong.</b></p>
     <div class="links rv">
-      <a href="https://github.com/zean00/tree-lab">github.com/zean00/tree-lab</a>
+      <a href="https://github.com/zean00/WireScale">github.com/zean00/WireScale</a>
       <a href="protocol.md">protocol.md — the decision record</a>
       <a href="https://github.com/zean00/rewire">sister program: rewire</a>
     </div>
