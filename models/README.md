@@ -1,10 +1,10 @@
 # Tracked CLM head artifacts
 
 The production frozen-encoder readout stack, tracked here so the ledger is
-self-contained. Copied byte-identical (sha256-verified) from the wiresense
+self-contained. Copied byte-identical (sha256-verified) from the WireSense
 repo, where they were first committed (`8a8e59e`, "track the decision-tree
 heads/refs in-repo"); trained in the rewire program (entry U, seed
-2026-10-03). Production loaders: wiresense `web/server.py` (router walk),
+2026-10-03). Production loaders: WireSense `web/server.py` (router walk),
 `tools/tree_probe.py`, `tools/eval_router.py`.
 
 | file | size | what |
@@ -18,7 +18,7 @@ weight-identical — it drops the residual and adds the arm-C conditioning
 variants (parent one-hot concat / FiLM). The production artifact above is
 self-describing via `cfg_json`.
 
-**Model-bound (mirrors the wiresense disclaimer).** These weights and refs
+**Model-bound (mirrors the WireSense disclaimer).** These weights and refs
 are valid ONLY against the encoder they were recorded from: Qwen3.5-4B
 UD-Q4_K_XL served with `--embedding --pooling last` (2560-dim readouts).
 Any change of LLM, quantization, or pooling invalidates them silently —

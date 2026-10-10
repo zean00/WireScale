@@ -1,7 +1,7 @@
 # WireScale: does parent-conditioning make multi-level decision trees scale?
 
 Registered 2026-10-07, before any data. Standalone testbed (deliberately
-beyond wiresense): synthetic utterance-marked hierarchy, frozen real
+beyond WireSense): synthetic utterance-marked hierarchy, frozen real
 encoder, controlled pool size / depth / markedness. Local commits only,
 never pushed.
 
@@ -57,7 +57,7 @@ shared by every depth, arm, and sweep.
 - **B** — hard tree, one shared trunk trained multi-task (CE summed
   along the gold path), bare 2560-d input, per-node centroids recorded
   from trunk outputs, cosine argmax. Restriction-only conditioning
-  (wiresense design).
+  (WireSense design).
 - **C** — identical to B but trunk input = concat[emb, one-hot(parent
   node)] (45-dim over all nodes; root level gets zeros, i.e.
   unconditioned exactly like B). Trained with gold parents
@@ -73,7 +73,7 @@ shared by every depth, arm, and sweep.
 Trunk (all arms): Linear(D→2048) → GELU(tanh) → LayerNorm → Linear(→1024),
 D = 2560 (B/A) or 2605 (C). Trained with per-level linear classifiers
 (CE), which are then discarded; inference is centroid-cosine (mirrors
-the wiresense arm-C contract). Adam lr 1e-3, batch 512, ≤40 epochs,
+the WireSense arm-C contract). Adam lr 1e-3, batch 512, ≤40 epochs,
 early stop patience 6 on val CE (10% of pool carved stratified, disjoint
 from eval). Head-init seeds {0,1,2}; data seed fixed at 0.
 
@@ -177,7 +177,7 @@ Unregistered findings (measured, reported for completeness):
   Do not FiLM frozen-encoder router embeddings.
 - **Beam-2 (E) is the consistent small winner**: +1.4 pts over B at
   d4/1024, +1.8 at m=.5, +2.9 at m=0.0 — the cheapest lever, and it
-  composes with the bare shared head (wiresense's registered beam-2
+  composes with the bare shared head (WireSense's registered beam-2
   recommendation replicates here).
 - **Conditioning decomposes**: it helps the level it conditions on
   (+4.9 pts leaf-conditional at m=.5) but taxes the same shared trunk's
@@ -199,7 +199,7 @@ not, every arm sits on the sibling floor (≈50%) regardless of
 conditioning. Parent-one-hot conditioning neither rescues depth nor
 hurts the ceiling; its one positive blip is low-data (+2.4 pts at pool
 16, fading with pool). The scalable levers measured here are beam-2
-and markedness itself — consistent with the wiresense diagnosis that
+and markedness itself — consistent with the WireSense diagnosis that
 the think-level collapse is an information problem, not head capacity.
 Per the registered rule, P4 is not PASS: no escalation of concat
 conditioning; recorded and stopped.
@@ -281,7 +281,7 @@ binding constraint remains per-level information, not depth.
 
 ## Transfer note (2026-10-07, post-study)
 
-The beam-2 recommendation was deployed in wiresense's production
+The beam-2 recommendation was deployed in WireSense's production
 router (2-level walk, frozen evals) — `tools/eval_router_beam.py`
 there. Two findings transfer-relevant to this lab:
 
@@ -290,7 +290,7 @@ there. Two findings transfer-relevant to this lab:
   path scores. This lab's walks were equal-depth everywhere, so the
   cumulative-sum formulation never met the pitfall: with paths of
   different depth, raw sums let the deeper path structurally outbid
-  the shallower one (wiresense measured 43/62 vs greedy 56/62 — a
+  the shallower one (WireSense measured 43/62 vs greedy 56/62 — a
   13-point crash from scoring, not from the mechanism).
 - The rescue pattern matched lab E: the win case was a coarse-level
   runner-up whose deeper evidence was strong ("Choose a name for my
@@ -301,8 +301,8 @@ there. Two findings transfer-relevant to this lab:
 Scope note (2026-10-07, user decision): extending this routing into a
 multi-agent router (spawning specialized sub-agents per intent, of the
 kind orchestrator LLMs do by generation) stays LAB-ONLY CURIOSITY —
-wiresense deliberately stays simple. The measured production transfer
-of the beam-2 mechanism is tool selection instead (wiresense
+WireSense deliberately stays simple. The measured production transfer
+of the beam-2 mechanism is tool selection instead (WireSense
 PROTOCOL-mcp-selection.md MS-20).
 
 ## S-series (registered pre-data): sub-agent routing
@@ -312,7 +312,7 @@ many specialized sub-agents; could a decision tree route user requests
 to them — and where do beam-2 and flat readouts sit in that shape?
 Scope: LAB-ONLY curiosity (see scope note above); the substrate is the
 production mechanism (raw slot-7 embeddings + centroid cosine, no
-trained heads), which is what wiresense's router and MCP gate actually
+trained heads), which is what WireSense's router and MCP gate actually
 run.
 
 Shape: 8 domains × 8 agents = 64 sub-agents. Each agent owns unique
@@ -429,9 +429,9 @@ Mechanism reading for the parked sub-agent idea:
 - Coarse-first is a liability, not an engine, at this scale: it caps
   accuracy at the coarse level's error rate and compounds errors
   downstream. Beam-2 measurably repairs a two-level walk (S1, 3-for-3
-  with the wiresense router and MS-20), but "flat when embeddings are
+  with the WireSense router and MS-20), but "flat when embeddings are
   strong, walk only when the coarse level is near-ceiling" is the
-  measured shape. Production note: wiresense's root level runs 0.919
+  measured shape. Production note: WireSense's root level runs 0.919
   (57/62) on real utterances — above this substrate's 0.84-0.86
   synthetic ceiling — so the flat-vs-walk gap narrows with a better
   coarse level but the direction held at every measured m.
