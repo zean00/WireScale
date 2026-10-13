@@ -1,0 +1,80 @@
+121 tools, 278 cases, arms=['union', 'band08nt', 'uwinthrnt']
+space built in 0s
+  union: 25 new cases, 0.5 min elapsed
+  union: 50 new cases, 1.1 min elapsed
+  union: 75 new cases, 1.6 min elapsed
+  union: 100 new cases, 2.3 min elapsed
+  union: 125 new cases, 2.9 min elapsed
+  union: 150 new cases, 3.5 min elapsed
+  union: 175 new cases, 4.2 min elapsed
+  union: 200 new cases, 4.7 min elapsed
+  union: 225 new cases, 5.3 min elapsed
+  union: 250 new cases, 5.7 min elapsed
+  union: 275 new cases, 6.0 min elapsed
+arm union done (+278 cases)
+sanity union: acc=0.6727 (registered 0.6763 ±0.005), neg=21
+  band08nt: 25 new cases, 6.4 min elapsed
+  band08nt: 50 new cases, 6.7 min elapsed
+  band08nt: 75 new cases, 7.0 min elapsed
+  band08nt: 100 new cases, 7.4 min elapsed
+  band08nt: 125 new cases, 7.8 min elapsed
+  band08nt: 150 new cases, 8.1 min elapsed
+  band08nt: 175 new cases, 8.4 min elapsed
+  band08nt: 200 new cases, 8.8 min elapsed
+  band08nt: 225 new cases, 9.1 min elapsed
+  band08nt: 250 new cases, 9.4 min elapsed
+  band08nt: 275 new cases, 9.7 min elapsed
+arm band08nt done (+278 cases)
+  uwinthrnt: 25 new cases, 10.3 min elapsed
+  uwinthrnt: 50 new cases, 10.9 min elapsed
+  uwinthrnt: 75 new cases, 11.6 min elapsed
+  uwinthrnt: 100 new cases, 12.3 min elapsed
+  uwinthrnt: 125 new cases, 13.0 min elapsed
+  uwinthrnt: 150 new cases, 13.6 min elapsed
+  uwinthrnt: 175 new cases, 14.3 min elapsed
+  uwinthrnt: 200 new cases, 15.0 min elapsed
+  uwinthrnt: 225 new cases, 15.6 min elapsed
+  uwinthrnt: 250 new cases, 16.1 min elapsed
+  uwinthrnt: 275 new cases, 16.5 min elapsed
+arm uwinthrnt done (+278 cases)
+{
+ "union": {
+  "n": 278,
+  "acc": 0.6727,
+  "pos_acc": 0.6535,
+  "neg": "21/24",
+  "schema_ok": 1.0,
+  "hit_rate": 0.878,
+  "pos_acc_given_hit": 0.7444,
+  "no_tool_picks": "0/278",
+  "mean_prompt_tokens": 2264.7,
+  "mean_ms": 1284.1
+ },
+ "band08nt": {
+  "n": 278,
+  "acc": 0.6115,
+  "pos_acc": 0.5866,
+  "neg": "21/24",
+  "schema_ok": 0.9664,
+  "hit_rate": 0.8307,
+  "pos_acc_given_hit": 0.7062,
+  "no_tool_picks": "36/278",
+  "mean_prompt_tokens": 977.2,
+  "mean_ms": 745.6
+ },
+ "uwinthrnt": {
+  "n": 278,
+  "acc": 0.6295,
+  "pos_acc": 0.6063,
+  "neg": "21/24",
+  "schema_ok": 0.9805,
+  "hit_rate": 0.9567,
+  "pos_acc_given_hit": 0.6337,
+  "no_tool_picks": "19/278",
+  "mean_prompt_tokens": 2672.2,
+  "mean_ms": 1459.7
+ }
+}
+MS-26a band08nt: neg 21/24 (>= 20/24: True), acc 0.6115 vs union-0.02 0.6527 -> menu hypothesis NOT rescued
+MS-26c band08nt: acc 0.6115 vs union-0.01 0.6627, tokens 977.2 <= 1585 -> no budget win
+MS-26b uwinthrnt: acc 0.6295 vs union+0.02 0.6927, neg 21/24 -> KEEP UNION

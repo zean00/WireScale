@@ -1,0 +1,24 @@
+{
+ "union": {
+  "n": 278,
+  "acc": 0.6727,
+  "pos_acc": 0.6535,
+  "neg": "21/24",
+  "schema_ok": 1.0,
+  "hit_rate": 0.878,
+  "pos_acc_given_hit": 0.7444,
+  "mean_prompt_tokens": 2264.7,
+  "mean_ms": 1280.9
+ },
+ "softhint": {
+  "n": 278,
+  "acc": 0.7194,
+  "pos_acc": 0.7047,
+  "neg": "21/24",
+  "schema_ok": 1.0,
+  "hit_rate": 0.878,
+  "pos_acc_given_hit": 0.8027,
+  "mean_prompt_tokens": 2405.0,
+  "mean_ms": 1307.3
+ }
+}

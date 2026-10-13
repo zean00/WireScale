@@ -1,0 +1,68 @@
+{
+ "union": {
+  "n": 278,
+  "acc": 0.6727,
+  "pos_acc": 0.6535,
+  "neg": "21/24",
+  "schema_ok": 1.0,
+  "hit_rate": 0.878,
+  "pos_acc_given_hit": 0.7444,
+  "mean_prompt_tokens": 2264.7,
+  "mean_ms": 1267.6
+ },
+ "bwalk-max": {
+  "n": 278,
+  "acc": 0.4784,
+  "pos_acc": 0.4567,
+  "neg": "17/24",
+  "schema_ok": 0.9569,
+  "hit_rate": 0.5197,
+  "pos_acc_given_hit": 0.8788,
+  "mean_prompt_tokens": 332.1,
+  "mean_ms": 435.8
+ },
+ "bwalk-cent": {
+  "n": 278,
+  "acc": 0.3957,
+  "pos_acc": 0.3622,
+  "neg": "18/24",
+  "schema_ok": 0.9674,
+  "hit_rate": 0.4055,
+  "pos_acc_given_hit": 0.8932,
+  "mean_prompt_tokens": 329.5,
+  "mean_ms": 382.9
+ },
+ "bbeam2-max": {
+  "n": 278,
+  "acc": 0.5432,
+  "pos_acc": 0.5276,
+  "neg": "17/24",
+  "schema_ok": 0.9478,
+  "hit_rate": 0.626,
+  "pos_acc_given_hit": 0.8428,
+  "mean_prompt_tokens": 574.1,
+  "mean_ms": 569.3
+ },
+ "bbeam2-cent": {
+  "n": 278,
+  "acc": 0.4892,
+  "pos_acc": 0.4685,
+  "neg": "17/24",
+  "schema_ok": 0.958,
+  "hit_rate": 0.563,
+  "pos_acc_given_hit": 0.8322,
+  "mean_prompt_tokens": 572.6,
+  "mean_ms": 545.9
+ },
+ "bbeam4-max": {
+  "n": 278,
+  "acc": 0.6007,
+  "pos_acc": 0.5827,
+  "neg": "19/24",
+  "schema_ok": 0.973,
+  "hit_rate": 0.7362,
+  "pos_acc_given_hit": 0.7914,
+  "mean_prompt_tokens": 1069.7,
+  "mean_ms": 773.4
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "union": {
+  "n": 278,
+  "acc": 0.6727,
+  "pos_acc": 0.6535,
+  "neg": "21/24",
+  "schema_ok": 1.0,
+  "hit_rate": 0.878,
+  "pos_acc_given_hit": 0.7444,
+  "mean_prompt_tokens": 2264.7,
+  "mean_ms": 1283.7
+ },
+ "beam-union": {
+  "n": 278,
+  "acc": 0.6727,
+  "pos_acc": 0.6535,
+  "neg": "21/24",
+  "schema_ok": 1.0,
+  "hit_rate": 0.878,
+  "pos_acc_given_hit": 0.7444,
+  "mean_prompt_tokens": 2264.7,
+  "mean_ms": 1282.2
+ },
+ "greedy16": {
+  "n": 278,
+  "acc": 0.5324,
+  "pos_acc": 0.5,
+  "neg": "21/24",
+  "schema_ok": 1.0,
+  "hit_rate": 0.6063,
+  "pos_acc_given_hit": 0.8247,
+  "mean_prompt_tokens": 567.1,
+  "mean_ms": 541.6
+ },
+ "beam16": {
+  "n": 278,
+  "acc": 0.5971,
+  "pos_acc": 0.5748,
+  "neg": "20/24",
+  "schema_ok": 1.0,
+  "hit_rate": 0.7205,
+  "pos_acc_given_hit": 0.7978,
+  "mean_prompt_tokens": 608.2,
+  "mean_ms": 573.9
+ },
+ "beam32": {
+  "n": 278,
+  "acc": 0.6259,
+  "pos_acc": 0.5984,
+  "neg": "22/24",
+  "schema_ok": 1.0,
+  "hit_rate": 0.7756,
+  "pos_acc_given_hit": 0.7716,
+  "mean_prompt_tokens": 1087.8,
+  "mean_ms": 776.8
+ }
+}

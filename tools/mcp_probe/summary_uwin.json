@@ -1,0 +1,35 @@
+{
+ "union": {
+  "n": 278,
+  "acc": 0.6727,
+  "pos_acc": 0.6535,
+  "neg": "21/24",
+  "schema_ok": 1.0,
+  "hit_rate": 0.878,
+  "pos_acc_given_hit": 0.7444,
+  "mean_prompt_tokens": 2264.7,
+  "mean_ms": 1285.0
+ },
+ "uwin2": {
+  "n": 278,
+  "acc": 0.6906,
+  "pos_acc": 0.6772,
+  "neg": "20/24",
+  "schema_ok": 0.9767,
+  "hit_rate": 0.9173,
+  "pos_acc_given_hit": 0.7382,
+  "mean_prompt_tokens": 2420.5,
+  "mean_ms": 1393.2
+ },
+ "uwinthr": {
+  "n": 278,
+  "acc": 0.6942,
+  "pos_acc": 0.685,
+  "neg": "19/24",
+  "schema_ok": 0.9828,
+  "hit_rate": 0.9567,
+  "pos_acc_given_hit": 0.716,
+  "mean_prompt_tokens": 2636.2,
+  "mean_ms": 1480.8
+ }
+}

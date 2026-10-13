@@ -1,0 +1,35 @@
+{
+ "union": {
+  "n": 278,
+  "acc": 0.6727,
+  "pos_acc": 0.6535,
+  "neg": "21/24",
+  "schema_ok": 1.0,
+  "hit_rate": 0.878,
+  "pos_acc_given_hit": 0.7444,
+  "mean_prompt_tokens": 2264.7,
+  "mean_ms": 1285.8
+ },
+ "band08": {
+  "n": 278,
+  "acc": 0.6619,
+  "pos_acc": 0.6575,
+  "neg": "17/24",
+  "schema_ok": 0.976,
+  "hit_rate": 0.8661,
+  "pos_acc_given_hit": 0.7591,
+  "mean_prompt_tokens": 1209.5,
+  "mean_ms": 874.5
+ },
+ "band08cap40": {
+  "n": 278,
+  "acc": 0.6439,
+  "pos_acc": 0.6417,
+  "neg": "16/24",
+  "schema_ok": 0.9632,
+  "hit_rate": 0.8307,
+  "pos_acc_given_hit": 0.7678,
+  "mean_prompt_tokens": 941.2,
+  "mean_ms": 751.7
+ }
+}

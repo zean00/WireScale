@@ -1,0 +1,35 @@
+{
+ "union": {
+  "n": 278,
+  "acc": 0.6727,
+  "pos_acc": 0.6535,
+  "neg": "21/24",
+  "schema_ok": 1.0,
+  "hit_rate": 0.878,
+  "pos_acc_given_hit": 0.7444,
+  "mean_prompt_tokens": 2264.7,
+  "mean_ms": 1280.5
+ },
+ "hintname": {
+  "n": 278,
+  "acc": 0.6978,
+  "pos_acc": 0.7087,
+  "neg": "14/24",
+  "schema_ok": 0.9944,
+  "hit_rate": 0.878,
+  "pos_acc_given_hit": 0.8072,
+  "mean_prompt_tokens": 2318.8,
+  "mean_ms": 1375.9
+ },
+ "hintfam": {
+  "n": 278,
+  "acc": 0.7122,
+  "pos_acc": 0.7205,
+  "neg": "15/24",
+  "schema_ok": 1.0,
+  "hit_rate": 0.878,
+  "pos_acc_given_hit": 0.8206,
+  "mean_prompt_tokens": 2302.3,
+  "mean_ms": 1348.9
+ }
+}

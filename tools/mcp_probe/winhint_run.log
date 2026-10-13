@@ -1,0 +1,55 @@
+121 tools, 278 cases, arms=['union', 'winhint']
+space built
+  union: 25 new cases, 0.5 min elapsed
+  union: 50 new cases, 1.1 min elapsed
+  union: 75 new cases, 1.6 min elapsed
+  union: 100 new cases, 2.3 min elapsed
+  union: 125 new cases, 2.9 min elapsed
+  union: 150 new cases, 3.5 min elapsed
+  union: 175 new cases, 4.2 min elapsed
+  union: 200 new cases, 4.7 min elapsed
+  union: 225 new cases, 5.3 min elapsed
+  union: 250 new cases, 5.7 min elapsed
+  union: 275 new cases, 6.0 min elapsed
+arm union done (+278 cases)
+sanity union: acc=0.6727 (registered 0.6763 ±0.005), neg=21
+  winhint: 25 new cases, 6.7 min elapsed
+  winhint: 50 new cases, 7.5 min elapsed
+  winhint: 75 new cases, 8.1 min elapsed
+  winhint: 100 new cases, 8.9 min elapsed
+  winhint: 125 new cases, 9.7 min elapsed
+  winhint: 150 new cases, 10.4 min elapsed
+  winhint: 175 new cases, 11.2 min elapsed
+  winhint: 200 new cases, 11.9 min elapsed
+  winhint: 225 new cases, 12.7 min elapsed
+  winhint: 250 new cases, 13.2 min elapsed
+  winhint: 275 new cases, 13.7 min elapsed
+arm winhint done (+278 cases)
+{
+ "union": {
+  "n": 278,
+  "acc": 0.6727,
+  "pos_acc": 0.6535,
+  "neg": "21/24",
+  "schema_ok": 1.0,
+  "hit_rate": 0.878,
+  "pos_acc_given_hit": 0.7444,
+  "mean_prompt_tokens": 2264.7,
+  "mean_ms": 1284.8
+ },
+ "winhint": {
+  "n": 278,
+  "acc": 0.7338,
+  "pos_acc": 0.7244,
+  "neg": "20/24",
+  "schema_ok": 0.9837,
+  "hit_rate": 0.9567,
+  "pos_acc_given_hit": 0.7572,
+  "mean_prompt_tokens": 2776.0,
+  "mean_ms": 1513.1
+ }
+}
+intent flags: should-call CHAT 66/254, neg CHAT 20/24
+MS-29 mechanism: negs flagged TOOL 4/24 (hint broke 1); paired vs union gained 39 / lost 22; pos|hit 0.7572 vs 0.7444; presence 0.9567 (registered 0.950-0.960)
+MS-29a winhint: acc 0.7338 vs union+0.02 0.6927, neg 20/24 (guardrail >=20/24: True) -> BEATS GATE
+MS-29b winhint vs softhint incumbent (0.7194, neg 21/24): acc 0.7338, neg 20/24 -> WIRING TARGET

@@ -3,3 +3,5 @@ __pycache__/
 results/cache/
 results/heads/
 *.log
+# MS-series copied record: the four canary/run logs are part of the ledger
+!tools/mcp_probe/*.log

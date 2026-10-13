@@ -1,0 +1,26 @@
+{
+ "union": {
+  "n": 278,
+  "acc": 0.6727,
+  "pos_acc": 0.6535,
+  "neg": "21/24",
+  "schema_ok": 1.0,
+  "hit_rate": 0.0,
+  "pos_acc_given_hit": null,
+  "chat_exits": "0/0",
+  "mean_prompt_tokens": 2264.7,
+  "mean_ms": 1282.9
+ },
+ "step1-band08": {
+  "n": 278,
+  "acc": 0.5468,
+  "pos_acc": 0.5079,
+  "neg": "23/24",
+  "schema_ok": 0.9767,
+  "hit_rate": 0.622,
+  "pos_acc_given_hit": 0.8165,
+  "chat_exits": "20/82",
+  "mean_prompt_tokens": 785.9,
+  "mean_ms": 800.3
+ }
+}

@@ -12,10 +12,13 @@ the verdict.** Three experiments live here:
    level what its parent answered help?
 2. **Agent routing** (S-series) — a message must reach one of 64 specialist
    sub-agents behind 8 domains. What actually decides routing accuracy?
-3. **Tool selection / filtering** — 121 real tools on the wall, only ~65
-   useful per request. Measured in the sister program
-   [WireSense](https://github.com/zean00/WireSense) (the MS-series); this repo
-   supplies the machinery it transferred.
+3. **Tool selection / filtering** (MS-series) — 121 real MCP tools on the
+   wall, only ~65 useful per request. Run in the sister program
+   [WireSense](https://github.com/zean00/WireSense); the complete
+   experimental record — protocol (MS-1..MS-29), corpus, runners, scored
+   results, run logs — is copied verbatim into this repo:
+   [PROTOCOL-mcp-selection.md](PROTOCOL-mcp-selection.md) +
+   `tools/mcp_probe|eval|loop/`.
 
 **Every number in this repo is a committed artifact.** Hypotheses, arms, bars,
 and amendments live in [protocol.md](protocol.md) — committed before any
@@ -73,6 +76,10 @@ current wiring target 73.4% vs 67.3% for the shipped gate).
 | `embed_client.py` | embedding client for the frozen encoder |
 | `results/` | scored runs, append-only; `subagents_pass1_invalid.json` ships as the disclosed record of the deleted run |
 | `models/`, `tools/decision_tree.json` | the production CLM readout stack (head trunk, per-node reference banks, tree spec) — copied from WireSense, **model-bound**, see `models/README.md` |
+| `PROTOCOL-mcp-selection.md` | the MS-series decision record (tool selection, MS-1..MS-29) — copied verbatim from WireSense |
+| `tools/mcp_probe/` | MS-series runners, MCP corpus (10 real servers, dumped verbatim), eval cases, synth pools, scored results + run logs — copied verbatim |
+| `tools/mcp_eval/`, `tools/mcp_loop/` | per-server implementation evals (MS-16 era) and mid-loop gate probes (MS-17a/b) — copied verbatim |
+| `tools/mcp_gate.py`, `tools/mcp_client.py` | the shipped production coarse gate + MCP transports (WireSense `web/`) — use case 3's production artifact, copied verbatim |
 | `docs/index.html` | the GitHub Pages page (single file, no dependencies) |
 
 ## Running it
@@ -93,6 +100,19 @@ All scored runs are already recorded and committed under `results/` — reruns
 append, they never overwrite. Changing the encoder, quantization, or pooling
 invalidates every embedding-derived artifact in the repo (see the disclaimer
 in `models/README.md`).
+
+The MS-series files (`PROTOCOL-mcp-selection.md`, `tools/mcp_*`,
+`tools/mcp_gate.py`, `tools/mcp_client.py`) are a **verbatim copy** of the
+sister repo's tool-filtering experiment (WireSense @ `876e1e8`; diff-clean,
+including the four `.log` files, which the root `.gitignore` exempts
+explicitly). Its runners `import server` — the production planner at
+`web/server.py` relative to WireSense's root — so in this copy they are the
+**frozen record** of scored runs: re-running them requires a WireSense
+checkout; the committed JSONLs, summaries, and run logs are the results.
+Final MS-series state: MS-29 `winhint` (window-union shortlist +
+intent-gated hint) is the registered production wiring target — 0.7338 vs
+0.6727 for the shipped gate, 0.6835 for flat — with production integration
+still pending in WireSense.
 
 ---
 
