@@ -593,3 +593,86 @@ miscalibration is already adjudicated — production tree-probe).
 Runner: `chunkrel.py` (self-contained; `--smoke` marked and never
 scored; `--gen-questions` writes the freeze candidates; default requires
 the frozen files). This section + runner committed before any scored run.
+
+## R-series RESULTS (2026-10-13, scored — run 2, pinned corpus)
+
+Run: `chunkrel.py` default at commit f183496 (corpus pinned to 5146e2d
+per the incident above; run 1 INVALID, kept as record). Questions
+frozen at 657d89b. p_yes coverage 1.0 (first-token logprobs served on
+every judgment). Wall ~17.5 min. File: results/chunkrel.json.
+
+| arm | presence@1 | presence@3 | direct | indirect | abstain (8 negs) | prompt tokens | ms/q |
+|---|---|---|---|---|---|---|---|
+| V bi-embed cosine | .069 | .172 | .207 | .138 | 0/8 | — (cached) | — |
+| J-combo pair head | .000 | .069 | .069 | .069 | 8/8 | — | — |
+| J-llm exhaustive judge | — | .517 (recall) | .793 | .241 | 8/8 | 1.70 M | 17100 |
+| J-menu pick-from-20 | .328 | — | .345 | .310 | 8/8 | 71 k | 555 |
+
+Mean yes-set size: 3.4 (direct) / 5.9 (indirect); on the 137-chunk
+doc 9.6, max 42. τ(V) = 0.204 (train pair acc .556 — the tune itself
+flagged the comparator); J-combo valBCE .641 ≈ ln 2.
+
+POST-HOC context: random within-doc baselines for this eval mix
+(8 README / 24 protocol / 24 MS / 2 models questions over 9/32/137/2
+chunks) are @1 ≈ .048 and @3 ≈ .128. V sits at 1.3–1.4× random at
+both recipes; J-combo at ~0.5× random.
+
+Verdicts (mechanical, as coded and committed pre-data):
+
+- **R1: PARTIAL.** Indirect gap J-llm − V@3 = **+10.3 pts** (clears
+  the +10 bar by 0.3); guardrail 8/8 (≥ 4/8); the direct-parity
+  clause (|J-llm − V@3| ≤ 3 pts) broke at **+58.6 pts — in J-llm's
+  favor**. Design note (P3 precedent, disclosed): the parity clause
+  presumed V competent at high markedness; measured V is random-level
+  at BOTH recipes, so "within ±3 of V" had no competence to anchor
+  to. The registered PARTIAL gloss ("direction real, magnitude
+  small") does not describe this PARTIAL — the gap cleared the bar;
+  the conjunct failed. Substance: J-llm strictly dominates V on
+  every recipe, doc, and metric.
+- **R2: FAIL.** J-combo keeps **−67%** of the indirect gap (p3 .069
+  vs V's .138 — worse than the comparator it was meant to cheaply
+  replace). Registered reading applies in substance: the cacheable
+  pair head is NOT the deployable readout at this train size (230
+  pairs, valBCE ≈ chance); joint LLM read required; J-combo demoted
+  to pre-filter at best. Its one clean behavior: abstains 8/8
+  off-corpus.
+- **R3: PASS** (menu does not beat exhaustive): .328 ≤ .517 + .02.
+  Isolation loses to exhaustive reading. Post-hoc nuance: menu
+  scores 0.0 on the two small docs (nothing to pick from at 9 and 2
+  chunks) and .375/.417 on the big ones — at 24× fewer tokens.
+- **R4: PASS** (miscalibration real): ECE .098 (J-llm), .137
+  (J-combo) — both ≥ .05; neither arm's probabilities are usable as
+  confidence without recalibration.
+
+Readings (post-hoc, labeled):
+
+- The registered frame "pairing repairs markedness" is confounded by
+  comparator collapse: slot-7 bi-embedding cosine ranks question→chunk
+  at random within-doc on this corpus at BOTH markedness levels —
+  consistent with the S-series substrate verdict (template filler
+  dominates raw slot-7 embeddings) and the adjudicated cosine
+  miscalibration. What R1 measured is dominance, not repair.
+- Markedness still taxes the judge itself: J-llm recall .793 → .241
+  direct → indirect. The information story survives — inside the
+  joint reader, not between architectures.
+- Per-doc inversion (the deployment cut): J-llm does best exactly
+  where V collapses (MS doc .625 vs .000; protocol .458 vs .208) and
+  worst where V is tolerable (README .25 vs .375). Exhaustive joint
+  reading buys its 17 s/q precisely at scale.
+- Over-collection is the judge's failure mode: mean yes-set 9.6 of
+  137 chunks on the MS doc (max 42) — precision, not recall, is the
+  next target if this line continues.
+- Audit cross-check: the 9 pre-data-rewritten indirect questions went
+  3/9 for J-llm vs 4/20 for the untouched indirects — the rewrites
+  did not inflate the arm they might have favored.
+
+Run 1 (invalid) vs run 2: identical verdict letters; the drifted run's
+indirect gap read +13.8 (drift inflated it) — +10.3 is the number of
+record.
+
+Close-out: no registered adoption bar was met (R1 PARTIAL, R2 FAIL);
+nothing is adopted and nothing further is registered in this series.
+The narrow measured statement: exhaustive joint judgment is the only
+readout on this stack that retrieves above chance — at exhaustive
+cost (1.70 M prompt tokens over 58 questions), with miscalibrated
+confidence and scale-driven over-collection.

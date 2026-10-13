@@ -4,8 +4,7 @@
 
 A pre-registered laboratory for decision structure. One frozen encoder, many
 readouts — and one rule: **register the prediction before the data, then obey
-the verdict.** Three scored experiments live here, plus one registered and
-awaiting its data:
+the verdict.** Four scored experiments live here:
 
 1. **Decision trees** (P-series) — when an answer space is a hierarchy, is it
    cheaper to walk it level by level (asking a smaller question at each step)
@@ -20,12 +19,16 @@ awaiting its data:
    results, run logs — is copied verbatim into this repo:
    [PROTOCOL-mcp-selection.md](PROTOCOL-mcp-selection.md) +
    `tools/mcp_probe|eval|loop/`.
-4. **Chunk relevance** (R-series) — *registered 2026-10-13 pre-data, no
-   scored run yet*: within-document chunk selection. Does pointwise
-   (question, chunk) joint judgment beat bi-embedding cosine when the
-   question does not share the chunk's vocabulary? Registered in
-   [protocol.md](protocol.md); runner `chunkrel.py`; question files must be
-   hand-audited and frozen before the scored run.
+4. **Chunk relevance** (R-series) — *scored 2026-10-13*: within-document
+   chunk selection. Pointwise (question, chunk) joint judgment by the LLM
+   vs bi-embedding cosine vs a trained pair head vs a listwise menu.
+   **R1 PARTIAL** (the judge dominates cosine everywhere — but cosine
+   itself sat at random-chance ranking, so the registered "repair" frame
+   is confounded), **R2 FAIL** (the cacheable pair head keeps −67% of the
+   gap), **R3 PASS** (the menu shortcut loses to exhaustive), **R4 PASS**
+   (every confidence score is miscalibrated). Full record incl. one
+   invalid run kept as disclosed record (corpus drift) in
+   [protocol.md](protocol.md); runner `chunkrel.py`.
 
 **Every number in this repo is a committed artifact.** Hypotheses, arms, bars,
 and amendments live in [protocol.md](protocol.md) — committed before any
@@ -42,6 +45,10 @@ not argued. A rendered, non-technical version of the whole story is at
 | P2 | parent-conditioning needs less data | **FAIL** — data buys back what structure promised (+2.4 pts at pool 16 → +0.7 at 1024) |
 | P3 | conditioning helps most at low markedness | **FAIL as registered, substance confirmed** — at m=0 every arm sits at .517 ≈ coin flip; structure never beats information |
 | P4 | the conditioning gap grows with depth (bar: +5) | **PARTIAL / null** — +0.5 pts; stopped by the registered rule |
+| R1 | LLM judge repairs indirect retrieval (gap ≥ +10 pts) | **PARTIAL** — gap +10.3, but cosine sat at random at both recipes: dominance, not repair |
+| R2 | trained pair head keeps ≥50% of the gap | **FAIL** — keeps −67% (below the comparator, below random) |
+| R3 | the menu shortcut does not beat exhaustive reading | **PASS** — 0.33 vs 0.52 |
+| R4 | some arm's confidence is miscalibrated (ECE ≥ .05) | **PASS** — ECE 0.10–0.14, both probabilistic arms |
 
 Depth extension to 6 levels / 96 leaves: **no depth wall** (levels 5–6 are
 free, .9997 and 1.0000), but the walk is capped by its first step (.918 at
@@ -59,8 +66,21 @@ nameability level (.929 vs .796 at m=1). S3 — at m=0 every arm lands at the
 S-series was invalid (scoring bug + substrate flaw) — deleted unexamined and
 disclosed in protocol.md.
 
-**0 of 4 headline predictions passed as registered. The failures are the
-finding.**
+Chunk relevance (R-series, 4 docs / 180 chunks / 58 frozen eval questions):
+**the judge dominates, the comparator collapses.** Bi-embedding cosine
+(slot 7) ranks question→chunk at random within-doc at BOTH markedness
+levels; the exhaustive LLM judge collects the gold chunk 0.79 (direct) /
+0.24 (indirect) vs cosine 0.21 / 0.14 — and gains land exactly where
+cosine dies (the 137-chunk doc: 0.63 vs 0.00). The trained pair head
+failed outright (worse than cosine), the 20-preview menu loses to
+exhaustive reading at 24× fewer tokens, and every confidence score is
+miscalibrated (ECE 0.10–0.14). One invalid run kept as record: the
+operator's edit to protocol.md (a corpus doc) shifted chunking under the
+frozen questions — caught post-run, disclosed, corpus pinned, rerun.
+
+**2 of 8 headline predictions passed as registered — both by confirming a
+negative (the menu shortcut loses; confidence scores are miscalibrated).
+The failures are the finding.**
 
 What transferred to production: beam-2 path scoring in the WireSense router —
 which only worked after discovering paths of different depth must be scored by
@@ -78,7 +98,7 @@ current wiring target 73.4% vs 67.3% for the shipped gate).
 | `walks.py` | hard walk, beam-2, flat; oracle-parent teacher forcing; metrics |
 | `run_lab.py` | registered P-series sweeps → append-only JSON in `results/` |
 | `subagents.py` | S-series runner (raw-embedding centroids, no trained heads) |
-| `chunkrel.py` | R-series runner (chunk relevance: bi-embed cosine V vs pointwise judge J-llm vs pair head J-combo vs listwise J-menu) — **registered pre-data, no scored run yet** |
+| `chunkrel.py` | R-series runner (chunk relevance: bi-embed cosine V vs pointwise judge J-llm vs pair head J-combo vs listwise J-menu) — **scored 2026-10-13 (R1 PARTIAL, R2 FAIL, R3/R4 PASS), corpus pinned to the freeze-audit commit** |
 | `adjudicate.py` | mechanical P1–P4 verdicts against the registered bars |
 | `posthoc_p3.py` | the post-hoc m=0 probe behind P3's verdict |
 | `embed_client.py` | embedding client for the frozen encoder |
