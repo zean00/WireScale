@@ -4,7 +4,8 @@
 
 A pre-registered laboratory for decision structure. One frozen encoder, many
 readouts — and one rule: **register the prediction before the data, then obey
-the verdict.** Three experiments live here:
+the verdict.** Three scored experiments live here, plus one registered and
+awaiting its data:
 
 1. **Decision trees** (P-series) — when an answer space is a hierarchy, is it
    cheaper to walk it level by level (asking a smaller question at each step)
@@ -19,6 +20,12 @@ the verdict.** Three experiments live here:
    results, run logs — is copied verbatim into this repo:
    [PROTOCOL-mcp-selection.md](PROTOCOL-mcp-selection.md) +
    `tools/mcp_probe|eval|loop/`.
+4. **Chunk relevance** (R-series) — *registered 2026-10-13 pre-data, no
+   scored run yet*: within-document chunk selection. Does pointwise
+   (question, chunk) joint judgment beat bi-embedding cosine when the
+   question does not share the chunk's vocabulary? Registered in
+   [protocol.md](protocol.md); runner `chunkrel.py`; question files must be
+   hand-audited and frozen before the scored run.
 
 **Every number in this repo is a committed artifact.** Hypotheses, arms, bars,
 and amendments live in [protocol.md](protocol.md) — committed before any
@@ -71,6 +78,7 @@ current wiring target 73.4% vs 67.3% for the shipped gate).
 | `walks.py` | hard walk, beam-2, flat; oracle-parent teacher forcing; metrics |
 | `run_lab.py` | registered P-series sweeps → append-only JSON in `results/` |
 | `subagents.py` | S-series runner (raw-embedding centroids, no trained heads) |
+| `chunkrel.py` | R-series runner (chunk relevance: bi-embed cosine V vs pointwise judge J-llm vs pair head J-combo vs listwise J-menu) — **registered pre-data, no scored run yet** |
 | `adjudicate.py` | mechanical P1–P4 verdicts against the registered bars |
 | `posthoc_p3.py` | the post-hoc m=0 probe behind P3's verdict |
 | `embed_client.py` | embedding client for the frozen encoder |
@@ -93,6 +101,7 @@ is never touched by lab runs.
 python -m venv .venv && .venv/bin/pip install numpy torch   # already present here
 .venv/bin/python run_lab.py --smoke     # plumbing check (marked smoke, never scored)
 .venv/bin/python subagents.py --smoke   # tiny routing check
+.venv/bin/python chunkrel.py --smoke    # R-series plumbing check (never scored)
 .venv/bin/python adjudicate.py          # recompute P1–P4 verdicts from results/
 ```
 

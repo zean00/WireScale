@@ -1,0 +1,714 @@
+{
+ "commit": "9b6cb48",
+ "eval": [
+  {
+   "chunk": 0,
+   "doc": "README.md",
+   "q": "Does telling each level its parent's answer help in decision trees?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 0,
+   "doc": "README.md",
+   "q": "How can I quickly decide which specialist to contact based on the message type?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 2,
+   "doc": "README.md",
+   "q": "What was the outcome of the FiLM conditioning layer in the S-series experiments?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 2,
+   "doc": "README.md",
+   "q": "Which method consistently improves decision accuracy across multiple complex domains?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 4,
+   "doc": "README.md",
+   "q": "What is the MS-series decision record contained in PROTOCOL-mcp-selection.md?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 4,
+   "doc": "README.md",
+   "q": "How can I automate the selection of software tools using a fixed decision-making protocol?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 6,
+   "doc": "README.md",
+   "q": "Which files constitute the frozen record of scored runs in the MS-series state?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 6,
+   "doc": "README.md",
+   "q": "How do I safely update my model components without losing my existing scoring results?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 1,
+   "doc": "protocol.md",
+   "q": "What does the markedness dial value 1-m draw from?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 1,
+   "doc": "protocol.md",
+   "q": "How can I automate the creation of diverse audio commands for my smart home system?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 3,
+   "doc": "protocol.md",
+   "q": "What vocabulary was used in the FiLM variant description?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 3,
+   "doc": "protocol.md",
+   "q": "What specific problem does this research aim to solve?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 8,
+   "doc": "protocol.md",
+   "q": "What is the answer regarding the gap SHRANK with pool at pool 1024?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 8,
+   "doc": "protocol.md",
+   "q": "Can I confirm the failure and the exact performance ceiling for the next step?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 12,
+   "doc": "protocol.md",
+   "q": "What are the path accuracy metrics by depth for m=1.0, pool 256/leaf, seed 0?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 12,
+   "doc": "protocol.md",
+   "q": "How can I get a quick answer from this tool without it taking too long?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 15,
+   "doc": "protocol.md",
+   "q": "What was the gain replicated only with?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 15,
+   "doc": "protocol.md",
+   "q": "How do I apply this scoring method to my router when path lengths vary?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 17,
+   "doc": "protocol.md",
+   "q": "What is the production mechanism of WireSense's router and MCP gate?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 17,
+   "doc": "protocol.md",
+   "q": "What should I do next to get my specific work done?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 21,
+   "doc": "protocol.md",
+   "q": "What is the held-out generalization ceiling for short synthetic generic texts?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 21,
+   "doc": "protocol.md",
+   "q": "What is the expected performance range if I cannot use short synthetic texts?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 24,
+   "doc": "protocol.md",
+   "q": "Does pointwise joint judgment beat bi-embedding cosine?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 24,
+   "doc": "protocol.md",
+   "q": "How can I find the most relevant information to answer my specific questions quickly?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 26,
+   "doc": "protocol.md",
+   "q": "What is the number of train and eval chunks per document?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 26,
+   "doc": "protocol.md",
+   "q": "What specific information does this text provide that I am currently searching for?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 27,
+   "doc": "protocol.md",
+   "q": "What are the exact input features used by the J-combo model?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 27,
+   "doc": "protocol.md",
+   "q": "What is the best way to quickly verify if a document supports a question?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 29,
+   "doc": "protocol.md",
+   "q": "What are the probabilistic scores over all evaluated pairs?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 29,
+   "doc": "protocol.md",
+   "q": "Do these results tell me if a specific cached item will always work for my users?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 31,
+   "doc": "protocol.md",
+   "q": "What tool is used to generate the freeze candidates?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 31,
+   "doc": "protocol.md",
+   "q": "Where can I find the specific frozen files required to run this tool?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 1,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How many tools are targeted across how many servers in the stdio MCP client?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 1,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How do I verify that all my requested tools are working exactly as I need them?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 32,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How many servers are dead when the supervisor task is 60 seconds?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 32,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What is the fastest way to keep my tools running without restarting them?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 56,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How many rows were written and flushed before the TypeError occurred?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 56,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How do I verify the accuracy metrics and ensure the results meet performance thresholds?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 62,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "Which native tool should replace the deprecated read_file?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 62,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What specific real-world task can this document help me accomplish?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 69,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What causes the gate flapping when spawned tool sets produce different cached hashes?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 69,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What guarantees that the gate won't flip its state unexpectedly during the next deployment run?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 72,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What is the ground difference identified by comparing per-case prompt_tokens and the registered run log?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 72,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What tool configuration changes caused the evaluation results to change?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 90,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What are the expected recall results for pc1 windows compared to the k-means union's recall at comparable budgets?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 90,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How can I improve my tool selection accuracy using this new sorting method?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 94,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "Why does the sliding window lose entirely on coverage compared to the union?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 94,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How can I improve the system's ability to find and select the correct answer?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 117,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What is the false-abstention magnet on real requests according to the menu hypothesis?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 117,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How can I make my AI tools stop ignoring real requests and only giving up answers?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 122,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "Which arm had the highest accuracy ever measured here?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 122,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What is the fastest way to run a high-accuracy query in this system?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 127,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What is the effect of intent calls on tokens according to the passage?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 127,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What specific outcome will my new system produce if I use it to fix my current software problem?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 128,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What accuracy did the softhint method achieve in the MS-28 results?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 128,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How can I improve my results' accuracy by adopting a conditional hint?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 1,
+   "doc": "models/README.md",
+   "q": "What encoder and pooling settings are required to use these weights?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 1,
+   "doc": "models/README.md",
+   "q": "How do I ensure my custom weights work correctly with this specific model version?",
+   "recipe": "indirect"
+  }
+ ],
+ "hand_negs": [
+  "What is seventeen times twenty-three?",
+  "Can you tell me a joke?",
+  "What's the weather like in Jakarta right now?",
+  "Who won the most recent World Cup?",
+  "Remind me to water the plants tomorrow morning.",
+  "What is the capital of Australia?",
+  "Thanks, that's everything for today.",
+  "How do I bake sourdough bread at home?"
+ ],
+ "model_fp": "7cfe33f65c1c",
+ "train": [
+  {
+   "chunk": 1,
+   "doc": "README.md",
+   "q": "What is the verdict for prediction P1?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 1,
+   "doc": "README.md",
+   "q": "What are the definitive results of the hypothesis tests and predictions?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 3,
+   "doc": "README.md",
+   "q": "What transferred to production was the beam-2 path scoring in the WireSense router.",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 3,
+   "doc": "README.md",
+   "q": "How do I systematically debug and deploy a failing software prediction model?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 5,
+   "doc": "README.md",
+   "q": "What embedding dimensionality is used for Qwen3.5-4B in this lab?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 5,
+   "doc": "README.md",
+   "q": "Where can I find the production deployment configuration files for this system?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 7,
+   "doc": "README.md",
+   "q": "What is the registered production wiring target for the final MS-series state?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 7,
+   "doc": "README.md",
+   "q": "Where can I find the official production deployment status and documentation for this new voice assistant?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 0,
+   "doc": "protocol.md",
+   "q": "Does parent-conditioning flatten the depth-slope of end-to-end path accuracy relative to restriction-only hard trees?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 0,
+   "doc": "protocol.md",
+   "q": "Can using parent information in a decision router improve accuracy over using only hard restrictions?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 2,
+   "doc": "protocol.md",
+   "q": "What is the restriction-only conditioning design like in Arm B?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 2,
+   "doc": "protocol.md",
+   "q": "Can a single document explain how to build a classification model with multiple configuration settings?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 4,
+   "doc": "protocol.md",
+   "q": "What is the deepest-level conditional accuracy at m=0.0?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 4,
+   "doc": "protocol.md",
+   "q": "What is the best pool size for the C path to improve accuracy?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 5,
+   "doc": "protocol.md",
+   "q": "What is the reason given for killing the first launch?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 5,
+   "doc": "protocol.md",
+   "q": "Do you want to know if scaling data pools helps your model outperform its teacher?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 6,
+   "doc": "protocol.md",
+   "q": "What were the actual minimum unique train texts for every leaf after the generator was widened?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 6,
+   "doc": "protocol.md",
+   "q": "What concrete outcome will my new generation system actually produce?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 9,
+   "doc": "protocol.md",
+   "q": "What small, cheap lever consistently wins and composes with the bare shared head?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 9,
+   "doc": "protocol.md",
+   "q": "What small change consistently improves performance without harming other levels?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 11,
+   "doc": "protocol.md",
+   "q": "What is the maximum depth that still holds acceptable end-to-end accuracy?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 11,
+   "doc": "protocol.md",
+   "q": "How can I get the most accurate answer quickly without waiting for deep reasoning?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 18,
+   "doc": "protocol.md",
+   "q": "Does a 2-level walk compound one coarse decision and potentially survive agent counts?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 18,
+   "doc": "protocol.md",
+   "q": "How do I confirm my hypothesis about the specialized accuracy floor is correct?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 22,
+   "doc": "protocol.md",
+   "q": "What is the domain_acc value for S3 @m00?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 22,
+   "doc": "protocol.md",
+   "q": "How can I improve my model's generalization to reach that 90% performance ceiling?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 23,
+   "doc": "protocol.md",
+   "q": "What accuracy does flat routing hit at 64-way when m=1.0?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 23,
+   "doc": "protocol.md",
+   "q": "How can I reliably route to the correct agent when a user never names it?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 25,
+   "doc": "protocol.md",
+   "q": "Does pointwise joint judgment beat bi-embedding cosine, especially when the question does NOT share the chunk's vocabulary?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 25,
+   "doc": "protocol.md",
+   "q": "What can I find in these specific files to solve my problem?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 28,
+   "doc": "protocol.md",
+   "q": "How does J-menu measure picking rather than pruning?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 28,
+   "doc": "protocol.md",
+   "q": "Which specific document subset should I review first to resolve my current issue?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 15,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "Why did composition, not size, drive the hierarchy's win at 78?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 15,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How can I ensure the model consistently performs reliably across different configurations?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 43,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "Can the tool's documented stop (speed=None) be reached through MCP?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 43,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How can I safely test my camera controls without causing damage or breaking rules?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 47,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What is the gate's shortlist keyed on?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 47,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "Can this document help me decide what tool to use next in my workflow?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 60,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "Which routing or planner selection issue caused MS-16b failure?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 60,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How can I ensure my project's deployment succeeds if I follow this guide?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 64,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What are the two rules for writing user utterances to a voice assistant?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 64,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What specific details must a user provide to ensure a voice assistant executes a task without needing a follow-up question?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 73,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What are the options for filesystem on the production ground?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 73,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What specific changes must I make to get my production tools to pass compliance?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 79,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "Do truncating and sim hold accuracy at a fraction of the shortlist budget?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 79,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How can I generate an answer faster than the current fastest tool?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 97,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "Why do gold's best windows fail to score the highest despite containing the answer?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 97,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How can I ensure my system consistently selects the correct tool over similar but incorrect ones?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 102,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How does a serving-variance rerun re-open the adoption question?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 102,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How do I select the best tools from a list without using clusters or fixed thresholds?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 120,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What percentage of should-call cases does the automated tag get wrong?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 120,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "Do you have any tools to handle this request's classification or should I call you?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 131,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What was the registered manipulation for the experiment?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 131,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How do I know this specific technical document directly solves my immediate problem?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 136,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What is the next implementation step after winhint is registered as the wiring target?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 136,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How do I know which of my options is the best choice?",
+   "recipe": "indirect"
+  },
+  {
+   "chunk": 0,
+   "doc": "models/README.md",
+   "q": "What files constitute the production frozen-encoder readout stack?",
+   "recipe": "direct"
+  },
+  {
+   "chunk": 0,
+   "doc": "models/README.md",
+   "q": "What are the exact training parameters and seed values for this model?",
+   "recipe": "indirect"
+  }
+ ]
+}

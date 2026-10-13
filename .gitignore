@@ -5,3 +5,5 @@ results/heads/
 *.log
 # MS-series copied record: the four canary/run logs are part of the ledger
 !tools/mcp_probe/*.log
+# R-series smoke artifact: marked, never scored, never committed
+results/chunkrel_smoke.json
