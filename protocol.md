@@ -676,3 +676,126 @@ The narrow measured statement: exhaustive joint judgment is the only
 readout on this stack that retrieves above chance — at exhaustive
 cost (1.70 M prompt tokens over 58 questions), with miscalibrated
 confidence and scale-driven over-collection.
+
+## V-series (registered 2026-10-13, pre-data): the comparator autopsy
+
+R-series measured V (bi-embed cosine, slot 7, last-pool) at
+random-chance within-doc ranking (p3 .172 vs random ≈ .128),
+confounding R1's frame. Before any markedness claim is re-asked:
+WHY is the vector readout dead — pooling, input format, or length
+asymmetry?
+
+Questions: the R-series frozen eval set (58), unchanged.
+
+Substrate note (disclosed): same model file and quant as the frozen
+encoder. The MEAN-pooled arms are served by a second llama-server
+instance (127.0.0.1:8999, `--pooling mean`, CPU-only — the GPU is
+fully occupied by the production server, which is untouched). This is
+a readout change, not a model change. Mean-pooled vectors use a
+SEPARATE cache file and are never written to the shared slot-7 cache.
+
+Arms (all bi-embed + cosine; presence@1/@3 by recipe; no τ/abstention
+— ranking only):
+- **V0** — last-pool, no prefix (R-series V replicated; sanity: p3
+  within ±.03 of R run 2's .172, else flag).
+- **V1** — last-pool + prefixes: question embedded as `query: {q}`,
+  chunk as `passage: {chunk}` (chosen a priori, generic).
+- **V2** — mean-pool, no prefix.
+- **V3** — mean-pool + prefixes.
+- **V4** — last-pool, length fix: question vs the chunk's first
+  300 chars (word-snapped).
+
+Predictions (mechanical):
+- **VA (primary)**: best non-V0 arm's indirect p3 − V0 indirect p3
+  ≥ +10 pts PASS (comparator rescuable → R1 re-askable);
+  +3..+10 PARTIAL; < +3 FAIL → bi-embedding retrieval dead on this
+  substrate at any pooling/format; R1 stands as dominance-only.
+- **VB (driver)**: mean-effect = mean(V2,V3) − mean(V0,V1) on
+  indirect p3; prefix-effect = mean(V1,V3) − mean(V0,V2). The larger
+  is the named driver; both < +3 pts → neither dial moves it.
+- **VC (length)**: V4 direct p3 − V0 direct p3 ≥ +5 pts PASS, else
+  FAIL.
+
+Disclosures: prefixes are generic, not tuned to this model family;
+the 300-char cut is arbitrary but registered; no training anywhere in
+V-series; mean arms depend on a second server (if it cannot run, the
+amendment drops V2/V3 with disclosure, VA/VB adjudicated on the
+remaining arms).
+
+## W-series (registered 2026-10-13, pre-data): retrieval walk vs flat
+
+The founding question (P/S verdict: information beats structure when
+reads are equally cheap) re-asked in the one regime where the read is
+EXPENSIVE: exhaustive J-llm judging costs ~29k prompt tokens / ~17 s
+per question. Does a two-level walk (cheap window pick → judge
+inside) buy acceptable recall at a fraction of the cost?
+
+Corpus/questions: the R-series pinned corpus (5146e2d) and frozen 58,
+unchanged. Windows: consecutive non-overlapping groups of 20 chunks
+in doc order (README 9 → 1; protocol 32 → 2 [20+12]; MS 137 → 7
+[6×20+17]; models 2 → 1). Where a doc has one window the walk
+degenerates to flat (recorded per doc).
+
+Arms:
+- **FLAT** — exhaustive J-llm over all chunks (fresh same-session
+  rerun; cross-run sanity: per-question recall agreement with R run 2
+  ≥ 75%, else flag before adjudication).
+- **WALK** — level 1: menu call over window previews (label "chunks
+  a–b" + first 200 chars of the window's first chunk; pick 1..m or
+  0); level 2: exhaustive J-llm inside the picked window. k=0 counts
+  as recall 0 with abstention recorded.
+
+Metrics: recall direct/indirect/all; P(gold's window picked) (first
+step); P(gold in yes-set | window picked) (conditional); prompt
+tokens; ms/q. Post-hoc descriptive from persisted per-pair p_yes:
+yes-set size vs threshold sweep (t ∈ .5–.9). Per-pair scores are
+PERSISTED (R's runner discarded them; this one stores them — new
+runner, frozen chunkrel.py untouched).
+
+Predictions (mechanical):
+- **W1 (accuracy)**: FLAT − WALK ≥ 0 on all-recall → PASS (flat does
+  not lose); |diff| ≤ 2 pts PARTIAL; WALK > FLAT by > 2 pts FAIL
+  (structure wins accuracy too — would be a first on this stack).
+- **W2 (economics)**: WALK recall ≥ 0.8 × FLAT recall AND WALK
+  tokens ≤ 0.35 × FLAT tokens → PASS (structure's first economics
+  win); else FAIL (record: structure loses even when reads are
+  expensive).
+- **W3 (mechanism)**: P(yes | window picked) ≥ 0.9 × FLAT recall →
+  PASS (the walk is capped by its first step, not diluted inside —
+  the P-series shape); else FAIL.
+
+Disclosures: window previews are deliberately crude (first 200 chars
+of the window's first chunk) — a weak walk is part of the test; FLAT
+rerun burns ~1.7 M tokens for same-session comparability; judge temp
+0 is not bit-deterministic across sessions (MS softhint precedent).
+
+## J-series (registered 2026-10-13, pre-data): pair-head scaling
+
+R2's FAIL came at 230 train pairs (58 questions). Sample size or
+mechanism? Generate 8 questions per (train chunk, recipe) with the
+R-series generator machinery (temp .8, seeded — new seed base, slot
+7) → 29 train chunks × 2 recipes × 8 = 464 train questions → ~1.9k
+pairs (R-series recipe: gold=1; 2 same-doc non-gold + 1 wrong-doc =
+0). Retrain J-combo (identical architecture/optimizer, seed 0).
+Evaluate on the SAME frozen 58 eval (never trained on).
+
+Train questions are generator output, UNAUDITED (R-series train
+policy: train-only, no adjudicated metric reads train; similar filler
+rate — disclosed).
+
+Arms: **V0** (cosine, replicated), **J1** (1× train — the R-series
+pairing, retrained same-session for comparability), **J8** (8× train).
+Per-chunk scores persisted per question.
+
+Predictions (mechanical):
+- **JA (primary)**: J8 p3 (all) − V0 p3 (all) ≥ +5 pts PASS (the
+  head learns the task with data; R2 was sample size); ≥ 0 PARTIAL;
+  < 0 FAIL (mechanism dead at any tested scale).
+- **JB (markedness generalization)**: J8 indirect p3 ≥ 0.5 × J8
+  direct p3 PASS, else FAIL.
+
+Cost: ~464 generations (~20 min sequential), embeddings cached,
+training ~1–2 min, no judge calls. Disclosures: 8× is one point on
+the curve, not a sweep; architecture untouched (capacity binding
+would conflate — noted, not tested); eval frozen → no selection on
+eval.
