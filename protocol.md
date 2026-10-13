@@ -947,3 +947,50 @@ different arms, not tested here. The remote box runs shared
 staging workloads; latency varies and is not a recorded metric.
 Embedding content is the repo's own docs — no external data
 leaves the lab beyond the tunnel to the operator's own host.
+
+## E-series RESULTS (2026-10-14, scored — commits 5fa087b/registration, runner @ HEAD)
+
+Run: extembed.py over an SSH tunnel to the container (fp fdf52bc3c7ec,
+1024-dim, unit-norm). Sanity: V0 all p3 .1724 = V/R reference exactly.
+
+Arms (presence@1/@3; judge column = R run 2 yes-set recall, a LOOSER
+criterion than top-3 ranking — it counts over-collected yes-sets):
+
+| arm                 | direct p3 | indirect p3 | all p3 (p1)   |
+|---------------------|-----------|-------------|---------------|
+| V0 (parasitic 4B)   | .207      | .138        | .172 (.069)   |
+| E0 (qwen3-emb plain)| .724      | .552        | .638 (.448)   |
+| E1 (instructed q)   | .724      | .517        | .621 (.414)   |
+| J-llm flat judge    | .793      | .241        | .517 (—)      |
+
+Per-doc p3 (E0): README .625, protocol .708, MS-137 .542, models 1.0 —
+the 137-chunk doc where V0 scored .000 and the judge .625 is no longer
+an inversion case.
+
+Verdicts (mechanical):
+- **EA: PASS** — best E-arm indirect p3 gap +41.4 pts (bar: ≥ +10).
+  The dedicated embedder rescues the comparator outright; R1's repair
+  frame is re-askable — and on the re-ask, the embedder beats the
+  judge overall (.638 top-3 vs .517 yes-set recall) at ~zero
+  marginal cost per query (cached corpus embeddings vs ~29k prompt
+  tokens / ~19 s).
+- **EB: instruct hurts** — E1 − E0 indirect p3 = −3.45 pts (direct
+  unchanged). The model card's prescribed query-instruction format
+  is a net negative on this corpus; registered a priori as a driver
+  question, answered mechanically.
+- **EC: PASS** — best E-arm all p3 .638 ≥ .256 (2 × random @3).
+  Top-1 .448 ≈ 9× random @1 (.048).
+
+Post-hoc readings (not verdicts): the judge keeps exactly one crown —
+direct-question yes-set recall (.793 vs E0's .724 top-3). Everywhere
+else the 0.6B embedder dominates, and the markedness story inverts:
+the judge collapses on indirect questions (.241) while the embedder
+holds .552 — the cheap readout is the ROBUST one. Every prior negative
+about "the comparator" was a fact about the parasitic 4B encoder, not
+about dense retrieval: V-series' close-out ("the encoder's geometry is
+the ceiling") was correct, and the ceiling was the substrate, not the
+method. Production implication for the sister repo (WireSense): dense
+retrieval with this container is the obvious cheap-first stage, with
+the judge reserved for high-precision direct confirmation — but any
+such wiring is a new registered decision there, not a transfer made
+here.

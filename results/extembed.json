@@ -1,0 +1,1123 @@
+{
+ "by_arm": {
+  "E0": {
+   "all": {
+    "p1": 0.4482758620689655,
+    "p3": 0.6379310344827587
+   },
+   "direct": {
+    "p1": 0.5862068965517241,
+    "p3": 0.7241379310344828
+   },
+   "indirect": {
+    "p1": 0.3103448275862069,
+    "p3": 0.5517241379310345
+   }
+  },
+  "E1": {
+   "all": {
+    "p1": 0.41379310344827586,
+    "p3": 0.6206896551724138
+   },
+   "direct": {
+    "p1": 0.4827586206896552,
+    "p3": 0.7241379310344828
+   },
+   "indirect": {
+    "p1": 0.3448275862068966,
+    "p3": 0.5172413793103449
+   }
+  },
+  "V0": {
+   "all": {
+    "p1": 0.06896551724137931,
+    "p3": 0.1724137931034483
+   },
+   "direct": {
+    "p1": 0.06896551724137931,
+    "p3": 0.20689655172413793
+   },
+   "indirect": {
+    "p1": 0.06896551724137931,
+    "p3": 0.13793103448275862
+   }
+  }
+ },
+ "commit": "d09012a",
+ "ext_dim": 1024,
+ "ext_fp": "fdf52bc3c7ec",
+ "ext_model": "qwen3-embedding-0.6b",
+ "model_fp": "7cfe33f65c1c",
+ "records": {
+  "E0": [
+   {
+    "doc": "README.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "README.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "README.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "models/README.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "models/README.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   }
+  ],
+  "E1": [
+   {
+    "doc": "README.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "README.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "README.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "models/README.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "models/README.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   }
+  ],
+  "V0": [
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "README.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "protocol.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "direct"
+   },
+   {
+    "doc": "PROTOCOL-mcp-selection.md",
+    "p1": 0,
+    "p3": 0,
+    "recipe": "indirect"
+   },
+   {
+    "doc": "models/README.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "direct"
+   },
+   {
+    "doc": "models/README.md",
+    "p1": 1,
+    "p3": 1,
+    "recipe": "indirect"
+   }
+  ]
+ },
+ "sanity": {
+  "ok": true,
+  "ref": 0.1724137931034483,
+  "v0_p3": 0.1724137931034483
+ },
+ "smoke": false,
+ "tag": "extembed",
+ "verdicts": {
+  "EA": "PASS",
+  "EB": [
+   "instruct hurts",
+   -0.0345
+  ],
+  "EC": [
+   "PASS",
+   0.6379
+  ],
+  "best_e_arm": "E0",
+  "ea_gap": 0.4138
+ }
+}

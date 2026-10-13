@@ -4,7 +4,7 @@
 
 A pre-registered laboratory for decision structure. One frozen encoder, many
 readouts — and one rule: **register the prediction before the data, then obey
-the verdict.** Seven scored experiments live here:
+the verdict.** Eight scored experiments live here:
 
 1. **Decision trees** (P-series) — when an answer space is a hierarchy, is it
    cheaper to walk it level by level (asking a smaller question at each step)
@@ -45,6 +45,13 @@ the verdict.** Seven scored experiments live here:
    sample size or mechanism? 8× training pairs (230 → 1840). **JA FAIL**
    (val loss nearly halves, eval recall unchanged at floor — mechanism,
    not sample size), **JB PASS (degenerate)**.
+8. **A real RAG embedder** (E-series) — *scored 2026-10-14*: swap the
+   parasitic 4B comparator for a dedicated Qwen3-Embedding-0.6B (remote
+   container) on the same frozen 58. **EA PASS** (+41.4 pts — the embedder
+   beats even the exhaustive judge overall, .638 top-3 vs .517 yes-set
+   recall, at ~zero marginal cost), **EB "instruct hurts"** (the model
+   card's query format is a net negative here), **EC PASS** (5× random
+   @3, 9× random @1). The lab's first decisive positive.
 
 **Every number in this repo is a committed artifact.** Hypotheses, arms, bars,
 and amendments live in [protocol.md](protocol.md) — committed before any
@@ -71,6 +78,8 @@ not argued. A rendered, non-technical version of the whole story is at
 | W2 | walk keeps ≥80% of flat recall at ≤35% tokens | **FAIL** — 17% of recall at 5.8% of tokens |
 | W3 | the walk is capped by its first step, not diluted inside | **FAIL** — diluted inside too (.294 given the right window) |
 | JA | the pair head learns with 8× data (gap ≥ +5 over cosine) | **FAIL** — −10.3 pts; val loss halves, eval unchanged at floor |
+| EA | a dedicated embedder rescues the comparator (indirect gap ≥ +10) | **PASS** — +41.4 pts; beats the judge overall (.638 vs .517) |
+| EC | the dedicated embedder clears 2× random @3 | **PASS** — .638 ≈ 5× random; top-1 9× random |
 
 Depth extension to 6 levels / 96 leaves: **no depth wall** (levels 5–6 are
 free, .9997 and 1.0000), but the walk is capped by its first step (.918 at
@@ -117,10 +126,25 @@ mechanism, not sample size — 8× training pairs halve validation loss
 while eval recall stays exactly at floor; the [q;c;|q−c|;q·c] features
 cannot separate gold from same-doc distractors at any tested scale.
 
-**3 of 14 headline predictions passed as registered — every one by
-confirming a negative (the menu shortcut loses; confidence scores are
-miscalibrated; flat does not lose to the walk). The failures are the
-finding.**
+Then the last escape hatch gave way (E-series, 2026-10-14): swap the
+parasitic encoder for a **dedicated Qwen3-Embedding-0.6B** — the kind
+of model real RAG stacks use — and the whole picture flips. Top-3
+.638 overall vs the judge's .517 yes-set recall (a looser criterion),
+indirect .552 vs the judge's .241, top-1 9× random, the 137-chunk doc
+solved (.542 where the parasitic encoder scored .000). Cost per query:
+one cached-embedding lookup vs 29k tokens / 19 s of judging. Every
+prior "the comparator is dead" verdict was a fact about the 4B model
+doing embeddings as a side job — dense retrieval itself was never on
+trial. The judge keeps one crown: direct-question yes-set recall
+(.793 vs .724). And one anti-lesson: the model card's prescribed
+instruct-wrapped query format *hurt* here (−3.5 pts) — measured, not
+assumed.
+
+**5 of 16 headline predictions passed as registered** — R3/R4/W1 by
+confirming negatives (the menu shortcut loses; confidence scores are
+miscalibrated; flat does not lose to the walk), and EA/EC by confirming
+the lab's first clear positive: the dedicated embedder works. The
+failures are findings; so is this.
 
 What transferred to production: beam-2 path scoring in the WireSense router —
 which only worked after discovering paths of different depth must be scored by
@@ -142,6 +166,7 @@ current wiring target 73.4% vs 67.3% for the shipped gate).
 | `vautopsy.py` | V-series runner (pooling/format/length autopsy of the cosine comparator) — **scored 2026-10-14 (VA PARTIAL, VB pooling, VC FAIL)** |
 | `walkret.py` | W-series runner (window walk vs exhaustive judge) — **scored 2026-10-14 (W1 PASS, W2/W3 FAIL)** |
 | `pairscale.py` | J-series runner (8× pair-head scaling; `--gen` writes the unaudited train set) — **scored 2026-10-14 (JA FAIL, JB degenerate PASS)** |
+| `extembed.py` | E-series runner (dedicated Qwen3-Embedding-0.6B via SSH tunnel; own cache) — **scored 2026-10-14 (EA/EC PASS, EB instruct hurts)** |
 | `adjudicate.py` | mechanical P1–P4 verdicts against the registered bars |
 | `posthoc_p3.py` | the post-hoc m=0 probe behind P3's verdict |
 | `embed_client.py` | embedding client for the frozen encoder |
@@ -168,13 +193,15 @@ python -m venv .venv && .venv/bin/pip install numpy torch   # already present he
 .venv/bin/python vautopsy.py --smoke    # V-series plumbing check (never scored)
 .venv/bin/python walkret.py --smoke     # W-series plumbing check (never scored)
 .venv/bin/python pairscale.py --smoke   # J-series plumbing check (never scored)
+.venv/bin/python extembed.py --smoke    # E-series plumbing check (never scored)
 .venv/bin/python adjudicate.py          # recompute P1–P4 verdicts from results/
 ```
 
 V-series' mean-pool arms need a second, CPU-only llama-server on
 127.0.0.1:8999 (`--pooling mean`, same model file, GPU hidden via
 `CUDA_VISIBLE_DEVICES=`); without it the runner reports the mean arms
-unavailable.
+unavailable. E-series needs the remote embedding container (operator's
+host) plus an SSH tunnel: `ssh -N -L 8124:127.0.0.1:8124 <host>`.
 
 All scored runs are already recorded and committed under `results/` — reruns
 append, they never overwrite. Changing the encoder, quantization, or pooling
