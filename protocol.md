@@ -498,6 +498,22 @@ remain, which only weaken J-combo training and τ tuning (conservative
 for R2); no adjudicated metric reads train. The question file is
 frozen at the commit carrying this note.
 
+Incident + Amendment (2026-10-13, disclosed before any valid data).
+Run 1 (19:15–19:33, exit 0) is **INVALID**: the audit note above was
+added to `protocol.md` — a corpus document — after question
+generation, shifting its chunking 32 → 33 chunks. Measured drift: 8
+eval gold chunks and 2 train golds (protocol.md indices ≥ 26) pointed
+at shifted text, so those questions were judged against the wrong
+passages. Root cause is operator edit-ordering, not the runner; the
+drift was caught during post-run adjudication, before any result was
+committed or recorded. Run 1's output is kept as
+`results/chunkrel_run1_invalid.json` and is never scored. Amendment:
+`chunkrel.py` now pins the corpus to commit `5146e2d` — the exact
+chunking the freeze audit verified — via `CORPUS_COMMIT` /
+`_pinned_corpus` (working-file divergence logs and uses the pinned
+blob). Questions remain frozen and untouched. Run 2 against the
+pinned corpus is the scored record.
+
 ### Arms (R-3)
 
 All arms see the question and the chunks of its OWN document only.

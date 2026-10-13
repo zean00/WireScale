@@ -100,12 +100,34 @@ def build_chunkmap():
     cm = {}
     for d in DOCS:
         with open(os.path.join(HERE, d), encoding="utf-8") as f:
-            ch = chunk_doc(f.read())
+            ch = chunk_doc(_pinned_corpus(d, f.read()))
         if len(ch) >= 2:
             cm[d] = ch
         else:
             log(f"  dropping {d} (<2 chunks)")
     return cm
+
+
+# R-series amendment (2026-10-13, disclosed before the valid scored run):
+# the corpus is PINNED to the commit whose chunking the question freeze was
+# hand-audited against. Run 1 was invalid because an edit to protocol.md (a
+# corpus doc) landed between generation and scoring, shifting chunk indices
+# (32 -> 33 chunks; 8 eval golds drifted) — results/chunkrel_run1_invalid.json.
+CORPUS_COMMIT = "5146e2d"
+
+
+def _pinned_corpus(doc, live_text):
+    """Return the doc text pinned to CORPUS_COMMIT if it differs from live."""
+    try:
+        r = subprocess.run(["git", "show", f"{CORPUS_COMMIT}:{doc}"],
+                           capture_output=True, text=True, cwd=HERE,
+                           check=True)
+    except (subprocess.CalledProcessError, OSError):
+        return live_text
+    if r.stdout != live_text:
+        log(f"  {doc}: working file differs from pinned {CORPUS_COMMIT}; "
+            f"using PINNED corpus")
+    return r.stdout
 
 
 def split_indices(n_chunks):
