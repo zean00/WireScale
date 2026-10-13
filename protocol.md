@@ -896,6 +896,54 @@ Post-hoc readings (not verdicts): 8× training data moved val BCE
 eval p3 stayed EXACTLY .069 and p1 exactly 0 — improved fit, zero
 transfer. R2's FAIL was mechanism, not sample size: on [q; c; |q−c|;
 q·c] features over this encoder, gold and same-doc distractors are
-not separable at any tested training scale. The cheap-head path on
-this substrate is closed; the readout that works is the judge
+not separable at any tested scale. The cheap-head path on this
+substrate is closed; the readout that works is the judge
 itself.
+
+## E-series (registered 2026-10-14, pre-data): a real RAG embedder
+
+V-series closed every dial on the parasitic encoder (pooling,
+prefixes, length — best +3.5 pts, no rescue). One escape hatch
+remains, explicitly flagged in the V close-out: a DEDICATED
+embedding model. Available substrate: Qwen3-Embedding-0.6B served
+in a container (zean720, aksara-qwen3-embedding-1, gguf on GPU,
+llama.cpp server, 1024-dim, L2-normalized, ctx 2048) — the model
+family standard RAG stacks actually use.
+
+Questions: the R-series frozen eval set (58), unchanged. Corpus:
+pinned 5146e2d, unchanged. No judge calls, no training.
+
+Arms (bi-embed + cosine; presence@1/@3 by recipe; ranking only):
+- **V0** — the parasitic comparator, replicated from the slot-7
+  cache (sanity: all-p3 within ±.03 of .172).
+- **E0** — qwen3-embedding-0.6b, plain text both sides (query
+  as-is, chunk as-is).
+- **E1** — same model, query side wrapped in the model card's
+  prescribed format: `Instruct: Given a question, retrieve
+  passages that answer it\nQuery: {q}` (task string chosen a
+  priori, generic); chunk side plain.
+
+Predictions (mechanical):
+- **EA (primary)**: best E-arm indirect p3 − V0 indirect p3
+  ≥ +10 pts PASS (dedicated embedding rescues the comparator —
+  R1's repair frame becomes re-askable); +3..+10 PARTIAL;
+  < +3 FAIL (the task's geometry defeats small dedicated
+  embedders too).
+- **EB (instruct driver)**: E1 − E0 on indirect p3 ≥ +3 named
+  "instruct helps"; ≤ −3 named "instruct hurts"; between →
+  "neutral".
+- **EC (chance separation)**: best E-arm all p3 ≥ 2 × random @3
+  (= .256) PASS, else FAIL — the separation bar V0 never cleared
+  robustly (.172).
+
+Disclosures: substrate change for the retrieval arm only —
+generation, judging, and every prior frozen artifact are
+untouched (prior results remain model-bound to the 4B encoder;
+E-series is a new column, not a re-scoring). Embeddings are
+fetched from the REMOTE container over an SSH tunnel; a separate
+cache file (embext_*.pkl) is never mixed with the slot-7 cache.
+0.6B is the small sibling of the family — 4B/8B variants are
+different arms, not tested here. The remote box runs shared
+staging workloads; latency varies and is not a recorded metric.
+Embedding content is the repo's own docs — no external data
+leaves the lab beyond the tunnel to the operator's own host.
