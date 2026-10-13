@@ -799,3 +799,103 @@ training ~1–2 min, no judge calls. Disclosures: 8× is one point on
 the curve, not a sweep; architecture untouched (capacity binding
 would conflate — noted, not tested); eval frozen → no selection on
 eval.
+
+## V-series RESULTS (2026-10-14, scored — commit 19fe2a3, pinned corpus)
+
+Run: vautopsy.py, single scored pass, no reruns. Sanity: V0 all p3
+.1724 = R run 2 exactly (in tolerance). Mean arms served by the
+8999 CPU instance (verified: same text, cos(last-pool, mean-pool)
+= .61 → the poolings genuinely differ).
+
+Arms (p3 by recipe; p1 all in parens):
+
+| arm | direct | indirect | all (p1)  |
+|-----|--------|----------|-----------|
+| V0  | .207   | .138     | .172 (.069) |
+| V1  | .172   | .103     | .138 (.086) |
+| V2  | .207   | .172     | .190 (.155) |
+| V3  | .207   | .138     | .172 (.103) |
+| V4  | .138   | .138     | .138 (.103) |
+
+Verdicts (mechanical):
+- **VA: PARTIAL** — best non-V0 arm on indirect p3 is V2 (.172);
+  gap +3.45 pts → the +3..+10 band. The comparator moves, but not
+  enough to re-ask R1.
+- **VB: driver = pooling** — mean-effect +3.45, prefix-effect
+  −3.45. MAGNITUDE TIE (disclosed): pooling gains exactly what
+  prefixes lose; the sign is the only difference. Registered rule
+  names the larger; the positive dial is pooling.
+- **VC: FAIL** — V4 direct .138 vs V0 .207 (−6.9 pts). Cutting the
+  chunk to its first 300 chars destroys direct recall.
+
+Post-hoc readings (not verdicts): V2's gain is mostly top-1 (p1
+.069 → .155, ×2.2); @3 barely moves. Even the best embedding
+configuration (.190 all p3) sits barely above the @3 random
+baseline (.128) and at ~37% of the flat judge (.517). The autopsy
+answer: no pooling/format/length dial rescues bi-embedding on this
+substrate — the encoder's question-vs-passage geometry is the
+ceiling, confirming R1 as dominance-only.
+
+## W-series RESULTS (2026-10-14, scored — commit 19fe2a3, pinned corpus)
+
+Run: walkret.py, single scored pass. Sanity: FLAT per-question
+recall agreement with R run 2 = 1.0 (bar: ≥ .75) — the judge is
+stable across sessions at temp 0 on this corpus.
+
+| arm    | direct | indirect | all   |
+|--------|--------|----------|-------|
+| FLAT   | .793   | .241     | .517  |
+| WALK   | .138   | .034     | .086  |
+
+Economics: WALK tokens 1.7k vs FLAT 29.2k per question (×.058);
+ms 1.1k vs 19.0k (×.057). Mechanism: P(gold's window picked) =
+.429; P(yes | window picked) = .294.
+
+Verdicts (mechanical):
+- **W1: PASS** — FLAT − WALK = +43.1 pts (flat does not lose).
+- **W2: FAIL** — recall clause: WALK = 0.17 × FLAT (bar: ≥ 0.8).
+  Token clause alone passed (×.058 ≤ ×.35); the AND fails.
+- **W3: FAIL** — P(yes | window) .294 < 0.9 × FLAT recall = .466.
+  The walk is diluted INSIDE the window as well as capped by its
+  first step — not the P-series shape.
+
+Post-hoc readings (not verdicts): the window selector is the
+bottleneck — previews of one chunk's first 200 chars pick the right
+window 43% of the time, and even with gold in scope the judge fires
+at half its flat rate (window boundaries cut context; the menu's
+0-option steals picks). The registered threshold sweep over the
+persisted per-pair p_yes found an UNREGISTERED gem: early-stop over
+the FLAT scan (judge chunks in doc order, stop when p_yes first
+crosses t) reaches flat-parity recall (.517) at t=.5 judging a mean
+4.7 chunks (≈ 1/10 of flat), and .50 at t=.6 with 3.2 chunks. This
+is post-hoc — it was not registered as an arm and must be
+re-registered before any use. Structure lost even where reads are
+expensive; but an exit rule on the exhaustive scan buys most of
+what the walk promised.
+
+## J-series RESULTS (2026-10-14, scored — commit 19fe2a3, pinned corpus)
+
+Run: pairscale.py --gen (464 unaudited train questions, seed base
+20261013) then scored. Sanity: J1 all p3 .0690 = R run 2's c_p3
+exactly. Pairs: J1 230 (58 questions), J8 1840 (464 questions).
+
+| arm | direct | indirect | all (p1)  |
+|-----|--------|----------|-----------|
+| V0  | .207   | .138     | .172 (.069) |
+| J1  | .069   | .069     | .069 (.000) |
+| J8  | .069   | .069     | .069 (.000) |
+
+Verdicts (mechanical):
+- **JA: FAIL** — J8 − V0 = −10.3 pts (bar: ≥ +5 PASS, ≥ 0 PARTIAL).
+- **JB: PASS (degenerate)** — J8 indirect .069 = J8 direct .069;
+  the ratio holds at 1.0 because the head is uniformly at floor.
+  Recorded as registered, read as no signal.
+
+Post-hoc readings (not verdicts): 8× training data moved val BCE
+.641 → .338 (the head fits the training distribution better) while
+eval p3 stayed EXACTLY .069 and p1 exactly 0 — improved fit, zero
+transfer. R2's FAIL was mechanism, not sample size: on [q; c; |q−c|;
+q·c] features over this encoder, gold and same-doc distractors are
+not separable at any tested training scale. The cheap-head path on
+this substrate is closed; the readout that works is the judge
+itself.
