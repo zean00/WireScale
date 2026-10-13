@@ -1,4 +1,84 @@
 {
+ "audit": {
+  "date": "2026-10-13",
+  "direct_eval_policy": "no corrections; several awkward phrasings are verbatim-anchored in their gold chunks, left as generated",
+  "eval_rewrites": [
+   {
+    "chunk": 3,
+    "doc": "protocol.md",
+    "i": 11,
+    "new": "How can each later stage of my pipeline take into account what the earlier stages already decided?",
+    "old": "What specific problem does this research aim to solve?",
+    "why": "generator filler; chunk is the conditioning-arms spec, not the research problem"
+   },
+   {
+    "chunk": 12,
+    "doc": "protocol.md",
+    "i": 15,
+    "new": "How far down my category ladder can I keep going before quality drops too much?",
+    "old": "How can I get a quick answer from this tool without it taking too long?",
+    "why": "need not served: chunk registers the depth sweep (max acceptable depth at 95/90 bars); no latency content"
+   },
+   {
+    "chunk": 17,
+    "doc": "protocol.md",
+    "i": 19,
+    "new": "How can one fixed representation decide which of dozens of near-identical helpers an incoming message belongs to?",
+    "old": "What should I do next to get my specific work done?",
+    "why": "filler; chunk specifies the 64 sub-agent substrate the question must target"
+   },
+   {
+    "chunk": 26,
+    "doc": "protocol.md",
+    "i": 25,
+    "new": "How do I look something up when I can't name what I'm looking for?",
+    "old": "What specific information does this text provide that I am currently searching for?",
+    "why": "filler; chunk defines the direct/indirect question recipes \u2014 their natural indirect need"
+   },
+   {
+    "chunk": 29,
+    "doc": "protocol.md",
+    "i": 29,
+    "new": "How much should I trust the confidence numbers my matcher gives me?",
+    "old": "Do these results tell me if a specific cached item will always work for my users?",
+    "why": "filler; chunk defines the ECE/calibration metrics"
+   },
+   {
+    "chunk": 31,
+    "doc": "protocol.md",
+    "i": 31,
+    "new": "Roughly how long should the full checking pass over every passage take?",
+    "old": "Where can I find the specific frozen files required to run this tool?",
+    "why": "where-question the chunk does not answer; its served need is the cost/duration disclosure"
+   },
+   {
+    "chunk": 1,
+    "doc": "PROTOCOL-mcp-selection.md",
+    "i": 33,
+    "new": "How can I build a faithful catalogue of what every connected plugin actually exposes?",
+    "old": "How do I verify that all my requested tools are working exactly as I need them?",
+    "why": "verify-function need not served; chunk is the tools/list verbatim inventory"
+   },
+   {
+    "chunk": 62,
+    "doc": "PROTOCOL-mcp-selection.md",
+    "i": 39,
+    "new": "When is picking something other than the officially recommended option still the correct call?",
+    "old": "What specific real-world task can this document help me accomplish?",
+    "why": "filler; chunk is the deprecated-wants / defensible-siblings adjudication"
+   },
+   {
+    "chunk": 127,
+    "doc": "PROTOCOL-mcp-selection.md",
+    "i": 53,
+    "new": "What should I expect to change if I add a quick screening step ahead of the main decision?",
+    "old": "What specific outcome will my new system produce if I use it to fix my current software problem?",
+    "why": "filler; chunk is the intent-call prediction list"
+   }
+  ],
+  "pre_data": true,
+  "train_policy": "kept as generated: similar filler rate and a few plausible wrong-chunk assignments remain; train only feeds tau tuning and J-combo training (weakens J-combo = conservative for R2); no adjudicated metric reads train"
+ },
  "commit": "9b6cb48",
  "eval": [
   {
@@ -70,7 +150,7 @@
   {
    "chunk": 3,
    "doc": "protocol.md",
-   "q": "What specific problem does this research aim to solve?",
+   "q": "How can each later stage of my pipeline take into account what the earlier stages already decided?",
    "recipe": "indirect"
   },
   {
@@ -94,7 +174,7 @@
   {
    "chunk": 12,
    "doc": "protocol.md",
-   "q": "How can I get a quick answer from this tool without it taking too long?",
+   "q": "How far down my category ladder can I keep going before quality drops too much?",
    "recipe": "indirect"
   },
   {
@@ -118,7 +198,7 @@
   {
    "chunk": 17,
    "doc": "protocol.md",
-   "q": "What should I do next to get my specific work done?",
+   "q": "How can one fixed representation decide which of dozens of near-identical helpers an incoming message belongs to?",
    "recipe": "indirect"
   },
   {
@@ -154,7 +234,7 @@
   {
    "chunk": 26,
    "doc": "protocol.md",
-   "q": "What specific information does this text provide that I am currently searching for?",
+   "q": "How do I look something up when I can't name what I'm looking for?",
    "recipe": "indirect"
   },
   {
@@ -178,7 +258,7 @@
   {
    "chunk": 29,
    "doc": "protocol.md",
-   "q": "Do these results tell me if a specific cached item will always work for my users?",
+   "q": "How much should I trust the confidence numbers my matcher gives me?",
    "recipe": "indirect"
   },
   {
@@ -190,7 +270,7 @@
   {
    "chunk": 31,
    "doc": "protocol.md",
-   "q": "Where can I find the specific frozen files required to run this tool?",
+   "q": "Roughly how long should the full checking pass over every passage take?",
    "recipe": "indirect"
   },
   {
@@ -202,7 +282,7 @@
   {
    "chunk": 1,
    "doc": "PROTOCOL-mcp-selection.md",
-   "q": "How do I verify that all my requested tools are working exactly as I need them?",
+   "q": "How can I build a faithful catalogue of what every connected plugin actually exposes?",
    "recipe": "indirect"
   },
   {
@@ -238,7 +318,7 @@
   {
    "chunk": 62,
    "doc": "PROTOCOL-mcp-selection.md",
-   "q": "What specific real-world task can this document help me accomplish?",
+   "q": "When is picking something other than the officially recommended option still the correct call?",
    "recipe": "indirect"
   },
   {
@@ -322,7 +402,7 @@
   {
    "chunk": 127,
    "doc": "PROTOCOL-mcp-selection.md",
-   "q": "What specific outcome will my new system produce if I use it to fix my current software problem?",
+   "q": "What should I expect to change if I add a quick screening step ahead of the main decision?",
    "recipe": "indirect"
   },
   {
