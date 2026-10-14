@@ -1,0 +1,9031 @@
+{
+ "commit": "7dd3d0d",
+ "degree": {
+  "+0.52 pts at pool 1024": 1,
+  "+1.4 pts": 1,
+  "+2.4 pts at pool 16": 1,
+  "+4.9 pts": 1,
+  "0": 2,
+  "0 to 7": 1,
+  "0.219": 1,
+  "0.3957": 1,
+  "0.4317": 1,
+  "0.4784": 1,
+  "0.4892": 2,
+  "0.5 fixed": 1,
+  "0.514 vs 0.446": 1,
+  "0.5144": 1,
+  "0.520": 1,
+  "0.5432": 2,
+  "0.5647": 1,
+  "0.571": 1,
+  "0.60": 1,
+  "0.60 jaccard": 1,
+  "0.6007": 1,
+  "0.619 vs 0.568": 1,
+  "0.622 vs 0.518": 1,
+  "0.6439": 2,
+  "0.6619": 2,
+  "0.6727": 6,
+  "0.6763": 1,
+  "0.681": 1,
+  "0.6835": 2,
+  "0.6906": 1,
+  "0.6942": 1,
+  "0.6978": 1,
+  "0.7122": 1,
+  "0.7194": 2,
+  "0.7338": 2,
+  "0.736": 1,
+  "0.759": 1,
+  "0.760": 1,
+  "0.78-0.84": 1,
+  "0.796": 1,
+  "0.799/0.648": 1,
+  "0.8 s": 1,
+  "0.81 recall": 1,
+  "0.84": 1,
+  "0.8555": 1,
+  "0.866": 2,
+  "0.8661": 1,
+  "0.878": 3,
+  "0.878 to 0.9567": 1,
+  "0.90": 1,
+  "0.914": 1,
+  "0.929": 1,
+  "0.949": 1,
+  "0/186 verdicts differ": 1,
+  "1 neg": 1,
+  "1 of 4 tool-flagged negs": 1,
+  "1-d semantic bands": 1,
+  "1.91": 1,
+  "10 equal-width bins": 1,
+  "1100 chars": 1,
+  "121": 1,
+  "121 corpus tools": 1,
+  "1210": 1,
+  "13": 1,
+  "13 points": 1,
+  "14.2 percent": 1,
+  "140": 1,
+  "17/24": 1,
+  "17b": 1,
+  "17\u201321 / 19\u201322": 1,
+  "1818 chars": 1,
+  "184/278": 1,
+  "185": 1,
+  "19.3 percent": 1,
+  "19/24": 1,
+  "1e-3": 1,
+  "2": 1,
+  "2 streams": 1,
+  "2,961 unique texts": 1,
+  "20 misses": 1,
+  "20/24": 2,
+  "2026-10-06": 1,
+  "2026-10-07": 4,
+  "2026-10-09": 4,
+  "21/24": 2,
+  "2265": 1,
+  "236 cases": 1,
+  "24 classes": 1,
+  "24 windows": 1,
+  "242 frozen positives": 1,
+  "26": 1,
+  "26 ms": 1,
+  "2700\u20132900": 1,
+  "2776 tok": 1,
+  "278 cases": 1,
+  "278 runs": 1,
+  "278 search-primary records": 1,
+  "28": 2,
+  "3 negs": 1,
+  "3 replayed cases": 1,
+  "3.4 pts": 1,
+  "30\u2013100+ tools": 1,
+  "32": 1,
+  "34-64": 1,
+  "350\u2013400 mean": 1,
+  "36% should-call cases": 1,
+  "40": 1,
+  "40-vector probe": 1,
+  "4096 evals": 1,
+  "42": 1,
+  "44 wrong picks": 1,
+  "44-64": 1,
+  "45-dim over all nodes": 1,
+  "4b model": 1,
+  "5 and 7": 1,
+  "50\u201375": 1,
+  "56 tools": 2,
+  "6 levels": 1,
+  "63.8% presence": 1,
+  "64": 1,
+  "64 agents": 1,
+  "64 sub-agents": 1,
+  "66 of 254": 1,
+  "669": 1,
+  "673 tokens": 1,
+  "8.3 percent": 1,
+  "8/8 results": 1,
+  "8192": 1,
+  "85/254 misses": 1,
+  "88% coverage": 1,
+  "928": 1,
+  "928 ms": 1,
+  "93.8 percent": 1,
+  "a": 1,
+  "a_flat": 2,
+  "a_flat numbers": 1,
+  "abstain": 1,
+  "abstention": 1,
+  "acc": 2,
+  "acc 0.6115": 1,
+  "acc 0.6295": 1,
+  "acc 0.7338": 1,
+  "acc below 0.7194": 1,
+  "acc clause": 1,
+  "acc projection band": 1,
+  "acc \u2265 0.7194": 1,
+  "accuracy": 4,
+  "accuracy clause": 1,
+  "accuracy gap growth": 1,
+  "accuracy points": 1,
+  "accuracy, token count and route clusters": 1,
+  "across all branches": 1,
+  "adam": 1,
+  "adjudicate.py": 2,
+  "adjudication": 1,
+  "adopt conditional hint": 1,
+  "adoption": 1,
+  "adoption rule": 1,
+  "after freeze": 2,
+  "against encoder": 1,
+  "agent": 1,
+  "agent-floor half": 1,
+  "all n tools": 1,
+  "all three pass": 1,
+  "amendment 1": 4,
+  "anything": 1,
+  "anything after level 4": 1,
+  "append-only json results": 1,
+  "arm": 11,
+  "arm differences": 1,
+  "arm_c_heads.npz": 1,
+  "arms": 3,
+  "arms a/b/c/c": 1,
+  "artifact of k": 1,
+  "artifacts": 2,
+  "as committed": 1,
+  "as gate": 1,
+  "as registered": 1,
+  "assistant": 1,
+  "at 28": 1,
+  "at any budget": 1,
+  "at least 5": 1,
+  "at registered k=10": 1,
+  "auth": 2,
+  "automated pre-classification": 1,
+  "automatic classifier": 1,
+  "axis words": 1,
+  "b4a re-runs": 1,
+  "b8": 1,
+  "b8 failures": 1,
+  "b_walk": 3,
+  "back": 1,
+  "back to flat": 1,
+  "background run": 1,
+  "badly": 1,
+  "balanced binary tree": 1,
+  "band": 1,
+  "band sizes": 1,
+  "band08": 9,
+  "band08cap40": 3,
+  "band08nt": 2,
+  "bands": 1,
+  "bar": 4,
+  "bars": 2,
+  "baseline": 1,
+  "batch": 2,
+  "bbeam2-cent": 2,
+  "bbeam2-max": 3,
+  "bbeam4-max": 1,
+  "beam replication": 1,
+  "beam-2": 3,
+  "beam-2 flat oracle-parent": 1,
+  "beam-2 path scoring": 1,
+  "beam-union": 4,
+  "beam16": 4,
+  "beam2-greedy": 2,
+  "beam32": 3,
+  "beat dose curve": 1,
+  "because": 1,
+  "become the wiring target": 1,
+  "before": 1,
+  "before data exists": 1,
+  "before run": 1,
+  "before scored case": 1,
+  "before scored run": 1,
+  "best arm": 1,
+  "best band arm acc": 1,
+  "better coarse level": 1,
+  "better than hier-desc": 1,
+  "beyond hope": 1,
+  "bi-embed": 1,
+  "bigger list": 1,
+  "binary-split walk": 1,
+  "binding": 1,
+  "blind intent call": 1,
+  "blind ms-25 intent call": 1,
+  "blocking reads": 1,
+  "borderline pos picks": 1,
+  "both arms": 1,
+  "both branches instead of union": 1,
+  "both sub-metrics": 1,
+  "branch": 1,
+  "bug": 1,
+  "build_prompt": 1,
+  "bwalk-cent": 1,
+  "bwalk-max": 1,
+  "by 0.10": 1,
+  "by flat": 1,
+  "by points": 1,
+  "byte-copied": 1,
+  "byte-identical": 2,
+  "c-b gap": 2,
+  "cache": 1,
+  "cached hash": 1,
+  "cached index": 1,
+  "call": 2,
+  "call ability": 1,
+  "calls": 1,
+  "camera": 13,
+  "camera answer": 1,
+  "canary timings": 1,
+  "candidate": 2,
+  "candidate remedy": 1,
+  "candidates": 1,
+  "capability suite": 2,
+  "carry full descriptions": 1,
+  "cases": 1,
+  "cc": 1,
+  "cfg_json": 1,
+  "chance floors": 1,
+  "change": 2,
+  "change pick": 1,
+  "chat exits": 1,
+  "cheapest": 1,
+  "check": 1,
+  "chunk carries information": 1,
+  "chunking": 1,
+  "chunkrel.py": 2,
+  "client": 2,
+  "clm head": 2,
+  "clm head trunk": 1,
+  "cluster assignment": 1,
+  "cluster filter": 2,
+  "cluster granularity": 1,
+  "cluster-assignment accuracy": 1,
+  "clustering": 1,
+  "clustering k only": 1,
+  "coarse gate": 1,
+  "coarse level": 1,
+  "coarse-first vs flat": 1,
+  "coarse-level runner-up": 1,
+  "coarsest and sibling-pair levels": 1,
+  "code": 1,
+  "committed recall": 1,
+  "committed run-2 state": 1,
+  "committed untouched": 1,
+  "compliance": 1,
+  "composition": 2,
+  "concat[emb, one-hot(parent node)]": 1,
+  "conditional hint": 1,
+  "conditioning": 3,
+  "conditioning gap grows with depth": 1,
+  "conditioning helps most at low markedness": 1,
+  "confusion": 2,
+  "consistent with diagnosis": 1,
+  "constraint": 1,
+  "content hash": 1,
+  "content-defined groups": 1,
+  "content-token mass": 1,
+  "continuation keying": 1,
+  "continuation text": 1,
+  "continuations": 3,
+  "continue": 1,
+  "contract_prime": 1,
+  "control": 1,
+  "corpus": 3,
+  "correct": 1,
+  "correct tool": 1,
+  "correctly": 1,
+  "cos values": 1,
+  "cosine argmax": 1,
+  "cost": 2,
+  "creds-as-args": 1,
+  "current evidence": 1,
+  "c\u2032 film": 1,
+  "d3": 1,
+  "data": 1,
+  "data exists": 1,
+  "dead constant": 1,
+  "dead mass": 2,
+  "dead servers": 1,
+  "dead-mass positives": 1,
+  "deciders": 1,
+  "decision": 1,
+  "decision layer": 1,
+  "decision only no-auth servers allowed": 1,
+  "decision rule": 1,
+  "decision tree": 1,
+  "decision_tree.json": 1,
+  "decisive replication": 1,
+  "deep_turn": 1,
+  "deep_turn loop": 1,
+  "deepwiki": 1,
+  "default": 1,
+  "delegate picks": 1,
+  "deliberate kill": 1,
+  "deliberately": 2,
+  "delta_pooled": 1,
+  "demo tools": 1,
+  "demo-fixture": 2,
+  "demo-tool": 1,
+  "deployed tree": 1,
+  "deployment gate": 4,
+  "deployment state": 1,
+  "depth": 3,
+  "depth 3": 1,
+  "depth extension": 2,
+  "depth-4 leaf": 1,
+  "depth-4 tree": 1,
+  "descriptive evidence": 1,
+  "deterministic seed 0": 1,
+  "device does not support ptz control": 1,
+  "device local keys": 1,
+  "different scheme": 1,
+  "direct question": 1,
+  "directive": 1,
+  "disabled if failing": 1,
+  "disclosed": 1,
+  "disclosed explicitly": 1,
+  "distinct user": 1,
+  "doc shorter": 1,
+  "document": 1,
+  "dom vocab": 1,
+  "dom-weighted pools": 1,
+  "domain": 1,
+  "domain boundary": 1,
+  "domain pools": 1,
+  "domain_acc": 3,
+  "domains": 1,
+  "done": 1,
+  "dummy service": 1,
+  "during pool-16 training": 1,
+  "e_beam2": 1,
+  "ece": 1,
+  "ed server-set": 1,
+  "emb": 4,
+  "embed log": 1,
+  "embed_client.py": 1,
+  "embedding": 1,
+  "embedding client": 1,
+  "embedding pools": 2,
+  "embeddings": 3,
+  "enablement": 1,
+  "encoder": 1,
+  "epochs": 1,
+  "equal budget": 1,
+  "escape arm": 1,
+  "escape hatch": 1,
+  "escape variant": 2,
+  "eval": 7,
+  "eval generation": 1,
+  "eval questions": 1,
+  "eval set": 3,
+  "eval split": 1,
+  "evals": 3,
+  "evals/_invalid_gen/": 1,
+  "everything": 2,
+  "everything server": 1,
+  "everything tools": 1,
+  "everything verdict": 1,
+  "everywhere": 1,
+  "excellent": 1,
+  "existing path": 1,
+  "existing results": 1,
+  "exonerated": 1,
+  "experiment": 1,
+  "experimental record": 2,
+  "external stream": 1,
+  "extreme-budget data point": 1,
+  "fail to pass": 2,
+  "fails both": 1,
+  "failure decomposition": 1,
+  "failures": 2,
+  "fallback": 3,
+  "false-chat": 1,
+  "false-tool fails": 1,
+  "false-tool rate 0.2012": 1,
+  "families": 1,
+  "families-tag doesn't cover": 1,
+  "family": 1,
+  "fatal to mild": 1,
+  "few domains": 1,
+  "fewer than 10": 1,
+  "fewer tokens": 1,
+  "files": 2,
+  "filesystem": 5,
+  "filesystem 2026.8.31": 1,
+  "filesystem edit": 1,
+  "filesystem fails": 1,
+  "filesystem pos": 2,
+  "filesystem re-run": 1,
+  "filesystem verdict": 1,
+  "film conditioning": 1,
+  "final pick": 1,
+  "finding 1": 1,
+  "first classifier": 1,
+  "first launch": 2,
+  "fix": 2,
+  "fixed unit": 1,
+  "flat": 4,
+  "flat (ref": 1,
+  "flat 0.6835": 1,
+  "flat arm": 3,
+  "flat carried": 1,
+  "flat head": 1,
+  "flat manifest": 1,
+  "flat manifests": 1,
+  "flat mean prompt_tokens": 1,
+  "flat runs": 1,
+  "flat selection": 2,
+  "flat selector": 1,
+  "flat supervision": 1,
+  "flat vs hier-synth": 1,
+  "flat-28": 1,
+  "flat-vs-walk gap": 1,
+  "flat@78": 1,
+  "focus": 1,
+  "focus_move": 2,
+  "for both arms": 1,
+  "for false-tool fail": 1,
+  "four servers": 1,
+  "four-server manifest": 1,
+  "freeze candidates": 1,
+  "fresh rebuild": 1,
+  "from pools": 1,
+  "frozen .b9 evals": 1,
+  "frozen cases": 1,
+  "frozen continuation text": 1,
+  "frozen data": 1,
+  "frozen pool": 1,
+  "frozen recipe": 1,
+  "frozen recipe_c": 1,
+  "full sweep": 1,
+  "full vocabulary": 1,
+  "fully-marked leaf": 1,
+  "gains concentrated": 1,
+  "gap": 2,
+  "gate": 5,
+  "gate cache": 1,
+  "gate data": 2,
+  "gate k=5": 1,
+  "gate shortlist": 1,
+  "gate synth/top2 k5": 1,
+  "gelu(tanh": 1,
+  "generation": 2,
+  "generator": 2,
+  "generator and judge": 1,
+  "generic texts": 2,
+  "genuinely": 1,
+  "geometry": 1,
+  "get_camera_list": 2,
+  "get_camera_live": 1,
+  "get_current_time": 1,
+  "get_deviceinfo": 1,
+  "get_rtsp": 3,
+  "git": 4,
+  "git commit": 1,
+  "git fails": 1,
+  "git pos": 1,
+  "git re-run": 1,
+  "git server": 1,
+  "git verdict": 1,
+  "git_log": 1,
+  "git_show": 1,
+  "github 62 tools": 1,
+  "github server": 1,
+  "github-class": 1,
+  "gitignored": 1,
+  "goal": 1,
+  "gold in-list cases": 1,
+  "gold window": 4,
+  "gold's best window": 1,
+  "gold-in-yes-set recall": 1,
+  "gold-tool membership": 1,
+  "gold=1; negatives=0": 1,
+  "greedy16": 2,
+  "ground": 2,
+  "ground change": 1,
+  "ground difference": 1,
+  "group": 1,
+  "guard": 1,
+  "guardrail edge": 1,
+  "h1": 2,
+  "h2": 1,
+  "h3": 1,
+  "h4": 1,
+  "h4 gradient": 1,
+  "handle_discover_devices": 2,
+  "handle_ptz_control": 2,
+  "harness call": 1,
+  "hash differences": 2,
+  "headers": 1,
+  "heads": 1,
+  "heads.py": 2,
+  "heavy server": 1,
+  "held-out": 1,
+  "held-out halves": 1,
+  "hier arms": 1,
+  "hier gradient runs": 1,
+  "hier shortlists": 1,
+  "hier-desc/top1": 2,
+  "hier-desc/top2": 1,
+  "hier-synth": 2,
+  "hier-synth-esc/top2@k5": 1,
+  "hier-synth-esc/top2@k5 arm": 1,
+  "hier-synth/top1": 1,
+  "hier-synth/top2": 3,
+  "hierarchy": 2,
+  "hierarchy adoption": 1,
+  "hierarchy loses": 1,
+  "hierarchy's win": 1,
+  "hierarchy.py": 1,
+  "highest": 1,
+  "hint": 2,
+  "hint damage": 1,
+  "hint's picking gain": 1,
+  "hintfam": 7,
+  "hintfam record": 1,
+  "hintfam sentence with often wrong clause": 1,
+  "hintname": 5,
+  "history-free planning": 1,
+  "hit rate": 1,
+  "hit_rate": 2,
+  "host and credentials": 1,
+  "house rules": 1,
+  "hypotheses": 1,
+  "id_slot 5": 1,
+  "id_slot 7": 2,
+  "identically": 1,
+  "if acc and neg conditions met": 1,
+  "imaging service": 1,
+  "implementation": 1,
+  "implementation spec": 1,
+  "in config": 1,
+  "in this corpus": 1,
+  "incident entry": 2,
+  "incomplete freeze files": 1,
+  "index": 2,
+  "indirect": 1,
+  "indirect phrasings": 1,
+  "indirect question": 1,
+  "infra-failure class": 1,
+  "infra-failure stop": 1,
+  "intent": 2,
+  "intent call": 2,
+  "intent call confining hint damage": 1,
+  "intent flags": 2,
+  "intent tokens": 1,
+  "intent-as-hint": 2,
+  "interpretability": 1,
+  "introduced": 1,
+  "invalid": 3,
+  "invalid files": 1,
+  "invoked mcp_search": 1,
+  "ir_research": 1,
+  "j-combo": 3,
+  "j-combo seed": 1,
+  "j-llm": 5,
+  "j-llm cost": 1,
+  "j-llm gold-in-set recall": 1,
+  "j-menu": 1,
+  "j-menu presence": 1,
+  "jargon-heavy tools": 1,
+  "join causes": 1,
+  "json": 1,
+  "json tools": 1,
+  "jsons": 1,
+  "k constant": 1,
+  "k in set": 1,
+  "k-means": 1,
+  "k-sweep": 1,
+  "k=10": 3,
+  "k=5": 1,
+  "k=5 decomposition": 1,
+  "k=5 gate": 1,
+  "k=5 space": 1,
+  "k=5 yields 5 centroids": 1,
+  "k=5/top-2 shortlist": 1,
+  "k=5/top2": 1,
+  "kill(": 1,
+  "k\u22484\u20136": 1,
+  "k\u22658": 1,
+  "l2-normalized": 1,
+  "l3": 1,
+  "lab runs": 1,
+  "lab trunk": 1,
+  "lab walks": 1,
+  "lan-wide": 1,
+  "latency": 1,
+  "launch": 1,
+  "layernorm": 1,
+  "leaf \u22651024 texts": 1,
+  "leaves": 3,
+  "ledger": 4,
+  "legitimate search": 1,
+  "les": 1,
+  "less than 2 chunks": 1,
+  "less than 20": 1,
+  "lever": 1,
+  "like vector index": 1,
+  "linear(one-hot": 1,
+  "linear(one-hot) applied": 1,
+  "list size": 1,
+  "list_directory": 1,
+  "list_directory_with_sizes": 1,
+  "llama.cpp server": 1,
+  "llm read": 1,
+  "llm server": 1,
+  "load-bearing design": 1,
+  "locally without credentials": 1,
+  "log": 1,
+  "loop": 1,
+  "lower": 1,
+  "lowercase": 1,
+  "m config": 1,
+  "m=0": 2,
+  "m=0.0": 1,
+  "m=1.0": 1,
+  "main arms": 2,
+  "manifest": 2,
+  "manifest gets harder": 1,
+  "margin": 1,
+  "marginal": 1,
+  "markedness": 2,
+  "markedness dial": 1,
+  "marker legs": 1,
+  "max": 1,
+  "max cosine": 1,
+  "max_tokens 120": 1,
+  "maximum depth": 1,
+  "mcnemar test": 1,
+  "mcp gate": 1,
+  "mcp sdk": 1,
+  "mcp support": 2,
+  "mcp tools": 1,
+  "mcp_eval_suffix": 1,
+  "mcp_eval_suffix=b9": 1,
+  "mcp_flat_max": 2,
+  "mcp_flat_max override": 1,
+  "mcp_flat_max=28": 1,
+  "mcp_probe_k": 1,
+  "mcp_search": 2,
+  "mcp_search branch": 1,
+  "mcp_topm": 1,
+  "mcperror": 1,
+  "mcpserver": 1,
+  "mean": 1,
+  "mean 67 tools": 1,
+  "mean per case": 1,
+  "mean-path desc": 1,
+  "measured": 2,
+  "measured ground": 1,
+  "measured shape": 1,
+  "member centroids": 1,
+  "menu rescue": 1,
+  "menu unchanged": 1,
+  "method": 1,
+  "metrics": 1,
+  "mid-session 404": 1,
+  "minio.py": 1,
+  "minio_endpoint": 1,
+  "model": 5,
+  "model changes": 1,
+  "model never emits": 1,
+  "model scale": 1,
+  "model's retrieval": 1,
+  "model-driven markers": 2,
+  "models/": 1,
+  "modifier": 1,
+  "more answers": 1,
+  "most resembling tool families": 1,
+  "ms eval split": 1,
+  "ms-11": 1,
+  "ms-12": 1,
+  "ms-12's text": 1,
+  "ms-12/15 verdicts": 1,
+  "ms-15": 1,
+  "ms-15 clause": 2,
+  "ms-16b failure": 1,
+  "ms-17a": 1,
+  "ms-17b": 4,
+  "ms-17c": 1,
+  "ms-18": 1,
+  "ms-19": 2,
+  "ms-22": 1,
+  "ms-22 follow-up diagnostic 2": 3,
+  "ms-22 follow-up diagnostic 3": 1,
+  "ms-22a": 1,
+  "ms-23 uwinthr": 1,
+  "ms-23a": 1,
+  "ms-24 band08": 1,
+  "ms-24a": 1,
+  "ms-24b": 1,
+  "ms-25": 1,
+  "ms-25 exactly": 1,
+  "ms-25 results": 4,
+  "ms-25a": 2,
+  "ms-25b": 1,
+  "ms-26a": 3,
+  "ms-26b": 3,
+  "ms-26c": 1,
+  "ms-27": 2,
+  "ms-27 results": 1,
+  "ms-27a": 1,
+  "ms-27b": 1,
+  "ms-28": 1,
+  "ms-28 results": 1,
+  "ms-28a": 10,
+  "ms-29": 1,
+  "ms-29 registration": 11,
+  "ms-29 results": 1,
+  "ms-29a verdict": 1,
+  "ms-29b": 3,
+  "ms-29b verdict": 1,
+  "ms-3 heuristic": 1,
+  "ms-3 pools": 1,
+  "ms-series decision record": 1,
+  "ms-series files": 1,
+  "ms-series runners": 1,
+  "multi-level tree": 1,
+  "multi-task": 1,
+  "n_ctx": 1,
+  "name plus desc": 1,
+  "named alternates": 1,
+  "narrow bands": 1,
+  "narrowness": 1,
+  "native": 1,
+  "native research": 1,
+  "near-duplicate-heavy server": 1,
+  "near-duplicate-rich servers": 1,
+  "need-check is dead": 1,
+  "need-check readout": 1,
+  "need-check readout is dead": 1,
+  "neg": 3,
+  "neg 19/24": 1,
+  "neg 21/24": 1,
+  "neg < 20": 1,
+  "neg >= 20/24": 1,
+  "neg clause passed": 1,
+  "neg predictions": 2,
+  "neg threshold": 1,
+  "neg \u2265 20/24": 1,
+  "negatives": 2,
+  "negatives 6/24": 1,
+  "negs and traps": 2,
+  "never the ceiling": 1,
+  "new binary levels": 1,
+  "new protocol amendment for regeneration": 1,
+  "next call": 1,
+  "no": 2,
+  "no auth required": 1,
+  "no cases": 1,
+  "no data affected": 1,
+  "no escalation": 1,
+  "no pan tilt": 1,
+  "no ptz": 1,
+  "no ptz node": 1,
+  "no zoom": 1,
+  "no-tool": 1,
+  "no-tool cases": 1,
+  "no_tool": 2,
+  "node scorer": 1,
+  "node scorers": 1,
+  "node structure": 1,
+  "noise": 1,
+  "non-binding context": 1,
+  "non-inferiority": 1,
+  "none": 2,
+  "nonexistent directory": 1,
+  "norm_router_text": 2,
+  "not depth": 1,
+  "not filter": 1,
+  "not head capacity": 1,
+  "not needle-finder": 1,
+  "not picking": 1,
+  "not search-primary": 1,
+  "not size": 2,
+  "nowhere": 1,
+  "npm cache": 1,
+  "null bias": 2,
+  "null fields": 1,
+  "null half": 1,
+  "null in substance": 1,
+  "null on 6 cases": 1,
+  "null-breaker ever measured": 1,
+  "null-gating": 1,
+  "nulls": 1,
+  "number": 1,
+  "objs 2\u21926": 1,
+  "of the manifest": 1,
+  "ok = false": 1,
+  "on coverage": 1,
+  "on no-tool queries": 1,
+  "on same curve": 1,
+  "on this server": 1,
+  "once per m config": 1,
+  "one awaiting data": 1,
+  "one case": 2,
+  "one master set": 1,
+  "one neg case": 1,
+  "one search per case": 1,
+  "one sentence": 1,
+  "one-server-dominated": 1,
+  "only +3": 1,
+  "only reasonable": 1,
+  "onvif-mcp": 1,
+  "onvif-mcp as-is": 1,
+  "onvif_host": 1,
+  "onvif_pass": 1,
+  "onvif_user": 1,
+  "option-tax": 1,
+  "our client": 1,
+  "outbid shallower one": 1,
+  "outside the repo": 1,
+  "overall": 1,
+  "overall accuracy": 2,
+  "overwriting": 1,
+  "own document": 2,
+  "own process group": 1,
+  "p1": 4,
+  "p1 verdict": 1,
+  "p2": 3,
+  "p2 verdict": 1,
+  "p2/p4": 1,
+  "p3": 2,
+  "p3 verdict": 1,
+  "p3's verdict": 1,
+  "p4": 2,
+  "p4 verdict": 1,
+  "parent-conditioning needs less data": 1,
+  "parent-one-hot": 1,
+  "parse_tool_json": 1,
+  "partition": 1,
+  "pass 1": 1,
+  "pass to fail": 1,
+  "passage": 1,
+  "path": 1,
+  "paths": 1,
+  "pattern matched lab e": 1,
+  "pc1": 1,
+  "pc1 bands": 1,
+  "pc1 projection": 1,
+  "pc1 variant": 1,
+  "pc1 windows": 1,
+  "per chunk": 1,
+  "per doc": 1,
+  "per tool": 1,
+  "per-hit": 2,
+  "per-level conditional accuracy": 1,
+  "per-server implementation evals": 1,
+  "per-tool fields": 1,
+  "per-tool shape": 1,
+  "phrase/slot space": 1,
+  "phrases": 1,
+  "picked windows": 1,
+  "picking": 1,
+  "picking + intent-guarded nulls": 1,
+  "picking aid ever measured": 1,
+  "pipeline": 4,
+  "plain k5": 1,
+  "plan-twice": 1,
+  "planner": 3,
+  "planner tokens": 1,
+  "planner's call": 1,
+  "pool": 1,
+  "pool 1024": 2,
+  "pool 16": 1,
+  "pool-16 training": 1,
+  "pools": 1,
+  "port of frozen probe": 1,
+  "pos clause": 1,
+  "pos threshold": 1,
+  "pos-effect prediction": 1,
+  "pos-level effect": 1,
+  "pos_acc": 1,
+  "posthoc_p3.py": 1,
+  "pre-check": 1,
+  "pre-data": 2,
+  "pre-filter": 2,
+  "prefix + pair + pair": 1,
+  "prefix + phrase + qualifier": 1,
+  "prefixed names": 1,
+  "premise dead": 1,
+  "presence": 2,
+  "presence 0.878": 1,
+  "presence 0.9567": 1,
+  "presence@1/@3": 1,
+  "primary": 1,
+  "primary claim": 1,
+  "primary numbers": 1,
+  "probe harness": 1,
+  "production": 2,
+  "production artifact": 1,
+  "production clm readout stack": 1,
+  "production config": 1,
+  "production manifests": 1,
+  "production router": 1,
+  "production router-walk": 1,
+  "program": 1,
+  "projected": 1,
+  "prompt_tokens": 1,
+  "protocol-mcp-selection.md": 2,
+  "protocol.md": 2,
+  "proven strengths": 1,
+  "ptz control": 1,
+  "ptz xaddr": 1,
+  "query": 1,
+  "question and chunks": 1,
+  "question and text": 1,
+  "question files": 1,
+  "question generation": 1,
+  "questions": 2,
+  "questions, arms, predictions, results": 1,
+  "qwen3.5-4b": 2,
+  "qwen3.5-4b-ud-q4_k_xl": 1,
+  "r": 1,
+  "r1": 1,
+  "r2": 1,
+  "r3": 1,
+  "raw slot-7 embeddings + centroid cosine": 1,
+  "raw sums": 1,
+  "raw-embedding centroids": 1,
+  "re-init retry": 1,
+  "read_file": 1,
+  "read_notes": 1,
+  "read_text_file": 1,
+  "read_wiki_structure": 1,
+  "reading rule": 1,
+  "readme.md": 1,
+  "readme.md chunks": 1,
+  "readout": 1,
+  "readouts": 3,
+  "readouts work": 1,
+  "real": 1,
+  "real camera": 2,
+  "real tools": 1,
+  "real-tool pick": 1,
+  "recall bet": 1,
+  "recall loss": 1,
+  "recall windfall": 1,
+  "recall_a": 1,
+  "recall_b": 2,
+  "recipe change": 1,
+  "recipe_b9": 1,
+  "recipe_c": 2,
+  "recipe_c-augmented pools": 1,
+  "recipe_d": 1,
+  "recipe_d/e": 3,
+  "recipe_e": 1,
+  "recorded as main result": 1,
+  "recovered mass": 1,
+  "recovery": 1,
+  "recursive split": 1,
+  "reference banks": 1,
+  "refrozen": 1,
+  "reg variant": 1,
+  "regardless of acc": 2,
+  "registered 19\u201322": 1,
+  "registered as wiring target": 1,
+  "registered bars": 2,
+  "registered list": 1,
+  "registered metric": 1,
+  "registered ms-16b-2": 1,
+  "registered pass": 1,
+  "registered rules": 2,
+  "registered run": 1,
+  "registered text": 1,
+  "registered wrapper": 1,
+  "registration": 2,
+  "registry bands": 1,
+  "registry order": 2,
+  "registry windows": 2,
+  "regression check": 2,
+  "reminder": 1,
+  "remote transport": 1,
+  "replicated": 1,
+  "repo": 1,
+  "repo markdown": 1,
+  "reruns": 1,
+  "rescue": 1,
+  "rescues depth": 1,
+  "respawn cooldown": 1,
+  "result": 1,
+  "results": 7,
+  "results file": 1,
+  "results path": 1,
+  "results.jsonl": 1,
+  "results/": 3,
+  "retrieval recall": 1,
+  "retrieval-only": 1,
+  "rev g spirit": 1,
+  "rewire program": 1,
+  "right granularity": 1,
+  "risk": 1,
+  "rivals": 1,
+  "root level": 1,
+  "round boundary": 1,
+  "route clusters": 1,
+  "router": 2,
+  "router embeddings": 1,
+  "router_embeddings.npz": 1,
+  "routing": 2,
+  "routing recall": 1,
+  "rows": 1,
+  "rule": 1,
+  "rule changes": 1,
+  "run": 1,
+  "run-1 hier": 1,
+  "run-2 baseline": 1,
+  "run_eval.py": 1,
+  "run_lab.py": 1,
+  "runner": 1,
+  "runner gains": 1,
+  "runners": 1,
+  "s, 190 nodes": 1,
+  "s1": 1,
+  "s2": 1,
+  "s3": 3,
+  "same": 1,
+  "same 78-tool prefix": 1,
+  "same planner": 1,
+  "same recipe": 1,
+  "same selector mode": 1,
+  "same-prompt temp 0": 2,
+  "same-run": 1,
+  "sanity": 1,
+  "sanity arm": 1,
+  "says keep two candidates": 1,
+  "scalable levers": 1,
+  "schema discipline": 1,
+  "scope": 1,
+  "scored results": 1,
+  "scored run": 1,
+  "scored runs": 2,
+  "scoring": 1,
+  "scoring bug": 2,
+  "search arm": 1,
+  "search mechanics": 3,
+  "search result": 1,
+  "search-execution branch": 1,
+  "search-primary": 3,
+  "search-primary arm": 1,
+  "search-primary contract": 1,
+  "search-primary decomposition": 1,
+  "search-trigger stats": 1,
+  "second call": 1,
+  "secret key": 1,
+  "seed-0 server order": 1,
+  "seen server": 1,
+  "selection and null escape": 1,
+  "selection and routing": 2,
+  "selection only": 1,
+  "selection surface": 1,
+  "selector": 1,
+  "self-contained": 2,
+  "separately": 1,
+  "separation": 1,
+  "server": 7,
+  "server and tool": 1,
+  "server subsets": 1,
+  "server's stdio entry": 1,
+  "servers": 6,
+  "serving variance": 1,
+  "set a": 1,
+  "set b": 1,
+  "shape": 1,
+  "shared flavor vocabulary": 1,
+  "shared template filler": 1,
+  "shipped gate": 1,
+  "shipped union": 1,
+  "shipped union gate": 1,
+  "shortlist": 2,
+  "shortlist planner": 1,
+  "shortlist's recall": 1,
+  "shortlists differ": 1,
+  "should-call": 1,
+  "siblings": 2,
+  "sigmoid rank": 1,
+  "sign": 1,
+  "significant": 1,
+  "significantly": 1,
+  "simulate-research-query": 1,
+  "single line": 1,
+  "single weakness": 1,
+  "siphons": 1,
+  "sister program": 1,
+  "sits above": 1,
+  "sits under": 1,
+  "sliding-window shortlist": 1,
+  "slots": 1,
+  "small pools": 1,
+  "snap_image_to_minio": 1,
+  "snapshot.json": 2,
+  "softhint": 3,
+  "softhint error budget": 1,
+  "softhint or winhint": 1,
+  "somewhere on negs": 1,
+  "space as run 2": 2,
+  "spawn sets": 2,
+  "specialization floor": 1,
+  "specific-name hint": 1,
+  "speed 0.0": 1,
+  "split to <10": 1,
+  "sse-response": 1,
+  "statistical bar": 1,
+  "status": 1,
+  "stdio mcp client": 1,
+  "stdio smoke": 1,
+  "step-1": 1,
+  "step1-band08": 4,
+  "streams": 1,
+  "structural miss": 1,
+  "subagents.py": 2,
+  "subsets": 1,
+  "substantial": 1,
+  "substrate": 3,
+  "substrate verdict": 1,
+  "suffix": 2,
+  "suite": 1,
+  "summary data": 1,
+  "summary.json": 2,
+  "summary_prefix.json": 1,
+  "sweep arms": 1,
+  "sweep files": 1,
+  "sweep-1": 1,
+  "sweep-2": 1,
+  "synth-pool centroid space": 1,
+  "synth_pools.json": 1,
+  "synthetic ceiling": 1,
+  "system-1 loop": 1,
+  "tag": 2,
+  "tally": 1,
+  "target": 1,
+  "task smells": 1,
+  "tax": 1,
+  "temp-0 planner": 1,
+  "temperature 0": 1,
+  "template": 1,
+  "text file": 1,
+  "than flat's planner": 1,
+  "that branch": 1,
+  "thin wrapper server": 3,
+  "think-level collapse": 1,
+  "third party": 2,
+  "thr": 1,
+  "three best-measured ingredients": 1,
+  "three experiments": 1,
+  "tiling": 1,
+  "time": 2,
+  "time fails": 1,
+  "time pos": 1,
+  "time re-run": 1,
+  "time/git 2026.8.18": 1,
+  "to c chars": 1,
+  "to pools": 1,
+  "to_thread": 1,
+  "tokens": 1,
+  "tool": 2,
+  "tool and continue": 1,
+  "tool choice": 1,
+  "tool name": 1,
+  "tool population": 1,
+  "tool recall": 2,
+  "tool-class recall": 1,
+  "tool-cosine": 1,
+  "tools": 6,
+  "tools json": 1,
+  "tools/call": 1,
+  "tools/list": 2,
+  "tools/mcp_eval/": 1,
+  "tools/mcp_eval/run_flat28.py": 2,
+  "tools/mcp_http_smoke.py": 1,
+  "tools/mcp_probe/": 1,
+  "tools/mcp_smoke.py": 1,
+  "top scorer": 1,
+  "top-1 63.8%": 1,
+  "top-1 cluster's tools": 2,
+  "top-1 clusters": 1,
+  "top-2 clusters": 3,
+  "top-2 reg": 1,
+  "top-2 union": 2,
+  "top-4 reg": 1,
+  "top-40": 1,
+  "toxic": 1,
+  "train chunks": 1,
+  "train pairs": 1,
+  "train split only": 1,
+  "train/eval text": 1,
+  "trained": 1,
+  "trained readout head": 1,
+  "training texts": 1,
+  "trajectory": 1,
+  "transfer": 1,
+  "tree": 1,
+  "tree-lab": 1,
+  "true domain": 1,
+  "true routing": 1,
+  "truncation": 1,
+  "trunk": 3,
+  "trunk input": 1,
+  "two": 1,
+  "two binary axes": 1,
+  "two independent temp-0 flat runs": 1,
+  "two reasons": 1,
+  "two recipes": 1,
+  "two sweep jsons": 1,
+  "two variants": 1,
+  "two-option choices": 1,
+  "unchanged": 1,
+  "under nominal k=5": 1,
+  "under references": 1,
+  "unexamined": 1,
+  "union": 18,
+  "union (sanity": 1,
+  "union 0.6727": 1,
+  "union 21/24": 1,
+  "union acc": 1,
+  "union of top-2 clusters' tools": 2,
+  "union rerun": 1,
+  "union's": 1,
+  "unique specialty phrase pairs": 1,
+  "unless mcp_probe_summary set": 1,
+  "unordered union": 1,
+  "unprefixed reference": 1,
+  "unroutable requests": 1,
+  "untouched": 1,
+  "untracked": 1,
+  "up to 20 tools": 1,
+  "user:pass uri": 1,
+  "utterance": 4,
+  "utterance embedding": 1,
+  "utterance information": 1,
+  "utterance verbatim": 1,
+  "utterance-keyed": 1,
+  "utterance-side retriever": 1,
+  "utterances": 4,
+  "uv cache": 1,
+  "uwin2": 1,
+  "uwinthr": 4,
+  "uwinthrnt": 3,
+  "v": 1,
+  "v1": 1,
+  "validation": 1,
+  "variant": 1,
+  "verbatim": 2,
+  "verbatim to file": 1,
+  "verbs": 1,
+  "verdict": 1,
+  "verdicts": 2,
+  "voice planner": 1,
+  "vs union 0.673": 1,
+  "vs union 0.7444": 1,
+  "walk": 6,
+  "walk recall": 1,
+  "walking beats flat": 1,
+  "walks.py": 1,
+  "web/mcp_gate.py": 7,
+  "web/mcp_index.json": 1,
+  "web/server.py": 1,
+  "week": 1,
+  "weights": 2,
+  "what": 1,
+  "when < 20": 1,
+  "when neg >= 20/24": 1,
+  "why": 1,
+  "wide-band negs": 1,
+  "win2": 1,
+  "win2-pc1": 1,
+  "win2-reg": 3,
+  "win4": 1,
+  "win4-reg": 1,
+  "window order": 1,
+  "window score": 1,
+  "window-added tools": 1,
+  "window-union recall": 1,
+  "windows": 2,
+  "winhint": 4,
+  "wirescale": 5,
+  "wiresense": 5,
+  "wiresense experiment": 1,
+  "wiresense repo": 1,
+  "wiring": 1,
+  "wiring target": 2,
+  "with pool": 1,
+  "with pooling": 1,
+  "wrapper": 1,
+  "wrong half dominates": 1,
+  "wrong tool": 1,
+  "wrong turns": 1,
+  "ws-discovery xaddrs": 1,
+  "yes": 1,
+  "yes or no": 1,
+  "yet": 1,
+  "zero": 1,
+  "zero scores": 1,
+  "zero-initialized": 1,
+  "~0.84": 1,
+  "~7\u00d7 registered band": 1,
+  "\u00b10.01": 1,
+  "\u03c4 (v abstain": 1,
+  "\u221213.4 pts": 2,
+  "\u22125.0 pts": 1
+ },
+ "entities": [
+  "+0.52 pts at pool 1024",
+  "+1.4 pts",
+  "+2.4 pts at pool 16",
+  "+4.9 pts",
+  "0",
+  "0 to 7",
+  "0.219",
+  "0.3957",
+  "0.4317",
+  "0.4784",
+  "0.4892",
+  "0.5 fixed",
+  "0.514 vs 0.446",
+  "0.5144",
+  "0.520",
+  "0.5432",
+  "0.5647",
+  "0.571",
+  "0.60",
+  "0.60 Jaccard",
+  "0.6007",
+  "0.619 vs 0.568",
+  "0.622 vs 0.518",
+  "0.6439",
+  "0.6619",
+  "0.6727",
+  "0.6763",
+  "0.681",
+  "0.6835",
+  "0.6906",
+  "0.6942",
+  "0.6978",
+  "0.7122",
+  "0.7194",
+  "0.7338",
+  "0.736",
+  "0.759",
+  "0.760",
+  "0.78-0.84",
+  "0.796",
+  "0.799/0.648",
+  "0.8 s",
+  "0.81 recall",
+  "0.84",
+  "0.8555",
+  "0.866",
+  "0.8661",
+  "0.878",
+  "0.878 to 0.9567",
+  "0.90",
+  "0.914",
+  "0.929",
+  "0.949",
+  "0/186 verdicts differ",
+  "1 neg",
+  "1 of 4 TOOL-flagged negs",
+  "1-D semantic bands",
+  "1.91",
+  "10 equal-width bins",
+  "1100 chars",
+  "121",
+  "121 corpus tools",
+  "1210",
+  "13",
+  "13 points",
+  "14.2 percent",
+  "140",
+  "17/24",
+  "17b",
+  "17\u201321 / 19\u201322",
+  "1818 chars",
+  "184/278",
+  "185",
+  "19.3 percent",
+  "19/24",
+  "1e-3",
+  "2",
+  "2 streams",
+  "2,961 unique texts",
+  "20 misses",
+  "20/24",
+  "2026-10-06",
+  "2026-10-07",
+  "2026-10-09",
+  "21/24",
+  "2265",
+  "236 cases",
+  "24 classes",
+  "24 windows",
+  "242 frozen positives",
+  "26",
+  "26 ms",
+  "2700\u20132900",
+  "2776 tok",
+  "278 cases",
+  "278 runs",
+  "278 search-primary records",
+  "28",
+  "3 negs",
+  "3 replayed cases",
+  "3.4 pts",
+  "30\u2013100+ tools",
+  "32",
+  "34-64",
+  "350\u2013400 mean",
+  "36% should-call cases",
+  "40",
+  "40-vector probe",
+  "4096 evals",
+  "42",
+  "44 wrong picks",
+  "44-64",
+  "45-dim over all nodes",
+  "4B model",
+  "5 and 7",
+  "50\u201375",
+  "56 tools",
+  "6 levels",
+  "63.8% presence",
+  "64",
+  "64 agents",
+  "64 sub-agents",
+  "66 of 254",
+  "669",
+  "673 tokens",
+  "8.3 percent",
+  "8/8 results",
+  "8192",
+  "85/254 misses",
+  "88% coverage",
+  "928",
+  "928 ms",
+  "93.8 percent",
+  "A",
+  "ADOPT CONDITIONAL HINT",
+  "A_flat",
+  "A_flat numbers",
+  "Adam",
+  "Amendment 1",
+  "Automated pre-classification",
+  "Axis words",
+  "B4a re-runs",
+  "B8",
+  "B8 failures",
+  "BOTH branches instead of union",
+  "BOTH sub-metrics",
+  "B_walk",
+  "Bars",
+  "Batch",
+  "C-B gap",
+  "CHAT exits",
+  "CLM head",
+  "CLM head trunk",
+  "CONTRACT_PRIME",
+  "Cache",
+  "Cluster granularity",
+  "Clustering",
+  "Conditioning",
+  "C\u2032 FiLM",
+  "DEPLOYED tree",
+  "ECE",
+  "EVAL GENERATION",
+  "E_beam2",
+  "Encoder",
+  "Eval set",
+  "FAIL to PASS",
+  "FEW domains",
+  "Failure decomposition",
+  "FiLM conditioning",
+  "Filesystem fails",
+  "Finding 1",
+  "Fix",
+  "GELU(tanh)",
+  "Git fails",
+  "GitHub-class",
+  "H1",
+  "H2",
+  "H3",
+  "H4",
+  "H4 gradient",
+  "Hypotheses",
+  "Index",
+  "J-combo",
+  "J-combo seed",
+  "J-llm",
+  "J-llm cost",
+  "J-llm gold-in-set recall",
+  "J-menu",
+  "J-menu presence",
+  "JSON",
+  "JSON tools",
+  "JSONs",
+  "K constant",
+  "K=5 yields 5 centroids",
+  "L2-normalized",
+  "L3",
+  "LAN-wide",
+  "LLM read",
+  "LLM server",
+  "LayerNorm",
+  "Linear(one-hot)",
+  "Linear(one-hot) applied",
+  "MCP SDK",
+  "MCP gate",
+  "MCP support",
+  "MCP tools",
+  "MCPError",
+  "MCPServer",
+  "MCP_EVAL_SUFFIX",
+  "MCP_EVAL_SUFFIX=b9",
+  "MCP_FLAT_MAX",
+  "MCP_FLAT_MAX override",
+  "MCP_FLAT_MAX=28",
+  "MCP_PROBE_K",
+  "MCP_TOPM",
+  "MINIO_ENDPOINT",
+  "MS eval split",
+  "MS-11",
+  "MS-12",
+  "MS-12's text",
+  "MS-12/15 verdicts",
+  "MS-15",
+  "MS-15 clause",
+  "MS-16b failure",
+  "MS-17a",
+  "MS-17b",
+  "MS-17c",
+  "MS-18",
+  "MS-19",
+  "MS-22",
+  "MS-22 follow-up diagnostic 2",
+  "MS-22 follow-up diagnostic 3",
+  "MS-22a",
+  "MS-23 uwinthr",
+  "MS-23a",
+  "MS-24 band08",
+  "MS-24a",
+  "MS-24b",
+  "MS-25",
+  "MS-25 exactly",
+  "MS-25 results",
+  "MS-25a",
+  "MS-25b",
+  "MS-26a",
+  "MS-26b",
+  "MS-26c",
+  "MS-27",
+  "MS-27 results",
+  "MS-27a",
+  "MS-27b",
+  "MS-28",
+  "MS-28 results",
+  "MS-28a",
+  "MS-29",
+  "MS-29 registration",
+  "MS-29 results",
+  "MS-29a verdict",
+  "MS-29b",
+  "MS-29b verdict",
+  "MS-3 heuristic",
+  "MS-3 pools",
+  "MS-series decision record",
+  "MS-series files",
+  "MS-series runners",
+  "McNemar test",
+  "NON-BINDING context",
+  "NULL fields",
+  "Node scorers",
+  "ONE sentence",
+  "ONVIF_HOST",
+  "ONVIF_PASS",
+  "ONVIF_USER",
+  "OUR CLIENT",
+  "P1",
+  "P1 verdict",
+  "P2",
+  "P2 verdict",
+  "P2/P4",
+  "P3",
+  "P3 verdict",
+  "P3's verdict",
+  "P4",
+  "P4 verdict",
+  "PASS to FAIL",
+  "PC1 bands",
+  "PC1 projection",
+  "PROTOCOL-mcp-selection.md",
+  "PTZ XAddr",
+  "PTZ control",
+  "Per-tool shape",
+  "Pools",
+  "Qwen3.5-4B",
+  "Qwen3.5-4B-UD-Q4_K_XL",
+  "R",
+  "R1",
+  "R2",
+  "R3",
+  "README.md",
+  "README.md chunks",
+  "RECIPE_B9",
+  "RECIPE_C",
+  "RECIPE_C-augmented pools",
+  "RECIPE_D",
+  "RECIPE_D/E",
+  "RECIPE_E",
+  "Reading rule",
+  "Readout",
+  "Rev G spirit",
+  "Routing recall",
+  "S1",
+  "S2",
+  "S3",
+  "SAME planner",
+  "SAME selector mode",
+  "SSE-response",
+  "SUFFIX",
+  "SWEEP-1",
+  "SWEEP-2",
+  "Scoring",
+  "Scoring bug",
+  "Search-primary decomposition",
+  "Search-trigger stats",
+  "Set A",
+  "Set B",
+  "Shape",
+  "Small pools",
+  "Step-1",
+  "Sweep files",
+  "System-1 loop",
+  "THE SERVER'S stdio entry",
+  "TRAIN split only",
+  "The wrong half dominates",
+  "Time fails",
+  "Tokens",
+  "Trunk",
+  "UNEXAMINED",
+  "UNORDERED union",
+  "V",
+  "VERBATIM to file",
+  "Verdicts",
+  "WireScale",
+  "WireSense",
+  "WireSense experiment",
+  "WireSense repo",
+  "abstain",
+  "abstention",
+  "acc",
+  "acc 0.6115",
+  "acc 0.6295",
+  "acc 0.7338",
+  "acc below 0.7194",
+  "acc clause",
+  "acc projection band",
+  "acc \u2265 0.7194",
+  "accuracy",
+  "accuracy clause",
+  "accuracy gap growth",
+  "accuracy points",
+  "accuracy, token count AND route clusters",
+  "across all branches",
+  "adjudicate.py",
+  "adjudication",
+  "adoption",
+  "adoption rule",
+  "after freeze",
+  "against encoder",
+  "agent",
+  "agent-floor half",
+  "all N tools",
+  "all three pass",
+  "anything",
+  "anything after level 4",
+  "append-only JSON results",
+  "arm",
+  "arm differences",
+  "arm_C_heads.npz",
+  "arms",
+  "arms A/B/C/C'",
+  "artifact of k",
+  "artifacts",
+  "as committed",
+  "as gate",
+  "as registered",
+  "assistant",
+  "at 28",
+  "at any budget",
+  "at least 5",
+  "at registered k=10",
+  "auth",
+  "automatic classifier",
+  "back",
+  "back to flat",
+  "background run",
+  "badly",
+  "balanced binary tree",
+  "band",
+  "band sizes",
+  "band08",
+  "band08cap40",
+  "band08nt",
+  "bands",
+  "bar",
+  "baseline",
+  "bbeam2-cent",
+  "bbeam2-max",
+  "bbeam4-max",
+  "beam replication",
+  "beam-2",
+  "beam-2 flat oracle-parent",
+  "beam-2 path scoring",
+  "beam-union",
+  "beam16",
+  "beam2-greedy",
+  "beam32",
+  "beat dose curve",
+  "because",
+  "become the wiring target",
+  "before",
+  "before data exists",
+  "before run",
+  "before scored case",
+  "before scored run",
+  "best arm",
+  "best band arm acc",
+  "better coarse level",
+  "better than hier-desc",
+  "beyond hope",
+  "bi-embed",
+  "bigger list",
+  "binary-split walk",
+  "binding",
+  "blind MS-25 intent call",
+  "blind intent call",
+  "blocking reads",
+  "borderline pos picks",
+  "both arms",
+  "branch",
+  "bug",
+  "build_prompt",
+  "bwalk-cent",
+  "bwalk-max",
+  "by 0.10",
+  "by flat",
+  "by points",
+  "byte-copied",
+  "byte-identical",
+  "cached hash",
+  "cached index",
+  "call",
+  "call ability",
+  "calls",
+  "camera",
+  "camera answer",
+  "canary timings",
+  "candidate",
+  "candidate remedy",
+  "candidates",
+  "capability suite",
+  "carry full descriptions",
+  "cases",
+  "cc",
+  "cfg_json",
+  "chance floors",
+  "change",
+  "change pick",
+  "cheapest",
+  "check",
+  "chunk carries information",
+  "chunking",
+  "chunkrel.py",
+  "client",
+  "cluster assignment",
+  "cluster filter",
+  "cluster-assignment accuracy",
+  "clustering k only",
+  "coarse gate",
+  "coarse level",
+  "coarse-first vs flat",
+  "coarse-level runner-up",
+  "coarsest and sibling-pair levels",
+  "code",
+  "committed recall",
+  "committed run-2 state",
+  "committed untouched",
+  "compliance",
+  "composition",
+  "concat[emb, one-hot(parent node)]",
+  "conditional hint",
+  "conditioning gap grows with depth",
+  "conditioning helps most at low markedness",
+  "confusion",
+  "consistent with diagnosis",
+  "constraint",
+  "content hash",
+  "content-defined groups",
+  "content-token mass",
+  "continuation keying",
+  "continuation text",
+  "continuations",
+  "continue",
+  "control",
+  "corpus",
+  "correct",
+  "correct tool",
+  "correctly",
+  "cos values",
+  "cosine argmax",
+  "cost",
+  "creds-as-args",
+  "current evidence",
+  "d3",
+  "data",
+  "data exists",
+  "dead constant",
+  "dead mass",
+  "dead servers",
+  "dead-mass positives",
+  "deciders",
+  "decision",
+  "decision layer",
+  "decision only no-auth servers allowed",
+  "decision rule",
+  "decision tree",
+  "decision_tree.json",
+  "decisive replication",
+  "deep_turn",
+  "deep_turn loop",
+  "deepwiki",
+  "default",
+  "delegate picks",
+  "deliberate kill",
+  "deliberately",
+  "delta_pooled",
+  "demo tools",
+  "demo-fixture",
+  "demo-tool",
+  "deployment gate",
+  "deployment state",
+  "depth",
+  "depth 3",
+  "depth extension",
+  "depth-4 leaf",
+  "depth-4 tree",
+  "descriptive evidence",
+  "deterministic seed 0",
+  "device does not support PTZ control",
+  "device local keys",
+  "different scheme",
+  "direct question",
+  "directive",
+  "disabled if failing",
+  "disclosed",
+  "disclosed explicitly",
+  "distinct user",
+  "doc shorter",
+  "document",
+  "dom vocab",
+  "dom-weighted pools",
+  "domain",
+  "domain boundary",
+  "domain pools",
+  "domain_acc",
+  "domains",
+  "done",
+  "dummy service",
+  "during pool-16 training",
+  "ed server-set",
+  "emb",
+  "embed log",
+  "embed_client.py",
+  "embedding",
+  "embedding client",
+  "embedding pools",
+  "embeddings",
+  "enablement",
+  "epochs",
+  "equal budget",
+  "escape arm",
+  "escape hatch",
+  "escape variant",
+  "eval",
+  "eval questions",
+  "eval split",
+  "evals",
+  "evals/_invalid_gen/",
+  "everything",
+  "everything server",
+  "everything tools",
+  "everything verdict",
+  "everywhere",
+  "excellent",
+  "existing path",
+  "existing results",
+  "exonerated",
+  "experiment",
+  "experimental record",
+  "external stream",
+  "extreme-budget data point",
+  "fails both",
+  "failures",
+  "fallback",
+  "false-CHAT",
+  "false-tool fails",
+  "false-tool rate 0.2012",
+  "families",
+  "families-tag doesn't cover",
+  "family",
+  "fatal to mild",
+  "fewer than 10",
+  "fewer tokens",
+  "files",
+  "filesystem",
+  "filesystem 2026.8.31",
+  "filesystem edit",
+  "filesystem pos",
+  "filesystem re-run",
+  "filesystem verdict",
+  "final pick",
+  "first classifier",
+  "first launch",
+  "fixed unit",
+  "flat",
+  "flat (ref)",
+  "flat 0.6835",
+  "flat arm",
+  "flat carried",
+  "flat head",
+  "flat manifest",
+  "flat manifests",
+  "flat mean prompt_tokens",
+  "flat runs",
+  "flat selection",
+  "flat selector",
+  "flat supervision",
+  "flat vs hier-synth",
+  "flat-28",
+  "flat-vs-walk gap",
+  "flat@78",
+  "focus",
+  "focus_move",
+  "for both arms",
+  "for false-tool fail",
+  "four servers",
+  "four-server manifest",
+  "freeze candidates",
+  "fresh rebuild",
+  "from pools",
+  "frozen .b9 evals",
+  "frozen RECIPE_C",
+  "frozen cases",
+  "frozen continuation text",
+  "frozen data",
+  "frozen pool",
+  "frozen recipe",
+  "full sweep",
+  "full vocabulary",
+  "fully-marked leaf",
+  "gains concentrated",
+  "gap",
+  "gate",
+  "gate cache",
+  "gate data",
+  "gate k=5",
+  "gate shortlist",
+  "gate synth/top2 k5",
+  "generation",
+  "generator",
+  "generator and judge",
+  "generic texts",
+  "genuinely",
+  "geometry",
+  "get_camera_list",
+  "get_camera_live",
+  "get_current_time",
+  "get_deviceInfo",
+  "get_rtsp",
+  "git",
+  "git commit",
+  "git pos",
+  "git re-run",
+  "git server",
+  "git verdict",
+  "git_log",
+  "git_show",
+  "github 62 tools",
+  "github server",
+  "gitignored",
+  "goal",
+  "gold in-list cases",
+  "gold window",
+  "gold's best window",
+  "gold-in-yes-set recall",
+  "gold-tool membership",
+  "gold=1; negatives=0",
+  "greedy16",
+  "ground",
+  "ground change",
+  "ground difference",
+  "group",
+  "guard",
+  "guardrail edge",
+  "handle_discover_devices",
+  "handle_ptz_control",
+  "harness call",
+  "hash differences",
+  "headers",
+  "heads",
+  "heads.py",
+  "heavy server",
+  "held-out",
+  "held-out halves",
+  "hier arms",
+  "hier gradient runs",
+  "hier shortlists",
+  "hier-desc/top1",
+  "hier-desc/top2",
+  "hier-synth",
+  "hier-synth-esc/top2@k5",
+  "hier-synth-esc/top2@k5 arm",
+  "hier-synth/top1",
+  "hier-synth/top2",
+  "hierarchy",
+  "hierarchy adoption",
+  "hierarchy loses",
+  "hierarchy's win",
+  "hierarchy.py",
+  "highest",
+  "hint",
+  "hint damage",
+  "hint's picking gain",
+  "hintfam",
+  "hintfam record",
+  "hintfam sentence with often wrong clause",
+  "hintname",
+  "history-free planning",
+  "hit rate",
+  "hit_rate",
+  "host and credentials",
+  "house rules",
+  "id_slot 5",
+  "id_slot 7",
+  "identically",
+  "if acc and neg conditions met",
+  "imaging service",
+  "implementation",
+  "implementation spec",
+  "in config",
+  "in this corpus",
+  "incident entry",
+  "incomplete freeze files",
+  "indirect",
+  "indirect phrasings",
+  "indirect question",
+  "infra-failure class",
+  "infra-failure stop",
+  "intent",
+  "intent call",
+  "intent call confining hint damage",
+  "intent flags",
+  "intent tokens",
+  "intent-as-hint",
+  "interpretability",
+  "introduced",
+  "invalid",
+  "invalid files",
+  "invoked mcp_search",
+  "ir_research",
+  "jargon-heavy tools",
+  "join causes",
+  "k in set",
+  "k-means",
+  "k-sweep",
+  "k=10",
+  "k=5",
+  "k=5 decomposition",
+  "k=5 gate",
+  "k=5 space",
+  "k=5/top-2 shortlist",
+  "k=5/top2",
+  "kill()",
+  "k\u22484\u20136",
+  "k\u22658",
+  "lab runs",
+  "lab trunk",
+  "lab walks",
+  "latency",
+  "launch",
+  "leaf \u22651024 texts",
+  "leaves",
+  "ledger",
+  "legitimate search",
+  "les",
+  "less than 2 chunks",
+  "less than 20",
+  "lever",
+  "like vector index",
+  "list size",
+  "list_directory",
+  "list_directory_with_sizes",
+  "llama.cpp server",
+  "load-bearing design",
+  "locally without credentials",
+  "log",
+  "loop",
+  "lower",
+  "lowercase",
+  "m config",
+  "m=0",
+  "m=0.0",
+  "m=1.0",
+  "main arms",
+  "manifest",
+  "manifest gets harder",
+  "margin",
+  "marginal",
+  "markedness",
+  "markedness dial",
+  "marker legs",
+  "max",
+  "max cosine",
+  "max_tokens 120",
+  "maximum depth",
+  "mcp_search",
+  "mcp_search branch",
+  "mean",
+  "mean 67 tools",
+  "mean per case",
+  "mean-path desc",
+  "measured",
+  "measured ground",
+  "measured shape",
+  "member centroids",
+  "menu rescue",
+  "menu unchanged",
+  "method",
+  "metrics",
+  "mid-session 404",
+  "minio.py",
+  "model",
+  "model changes",
+  "model never emits",
+  "model scale",
+  "model's retrieval",
+  "model-driven markers",
+  "models/",
+  "modifier",
+  "more answers",
+  "most resembling tool families",
+  "multi-level tree",
+  "multi-task",
+  "n_ctx",
+  "name plus desc",
+  "named alternates",
+  "narrow bands",
+  "narrowness",
+  "native",
+  "native research",
+  "near-duplicate-heavy server",
+  "near-duplicate-rich servers",
+  "need-check is dead",
+  "need-check readout",
+  "need-check readout is DEAD",
+  "neg",
+  "neg 19/24",
+  "neg 21/24",
+  "neg < 20",
+  "neg >= 20/24",
+  "neg clause PASSED",
+  "neg predictions",
+  "neg threshold",
+  "neg \u2265 20/24",
+  "negatives",
+  "negatives 6/24",
+  "negs and traps",
+  "never the ceiling",
+  "new binary levels",
+  "new protocol amendment for regeneration",
+  "next call",
+  "no",
+  "no PTZ",
+  "no PTZ node",
+  "no auth required",
+  "no cases",
+  "no data affected",
+  "no escalation",
+  "no pan tilt",
+  "no zoom",
+  "no-tool",
+  "no-tool cases",
+  "no_tool",
+  "node scorer",
+  "node structure",
+  "noise",
+  "non-inferiority",
+  "none",
+  "nonexistent directory",
+  "norm_router_text",
+  "not depth",
+  "not filter",
+  "not head capacity",
+  "not needle-finder",
+  "not picking",
+  "not search-primary",
+  "not size",
+  "nowhere",
+  "npm cache",
+  "null bias",
+  "null half",
+  "null in substance",
+  "null on 6 cases",
+  "null-breaker ever measured",
+  "null-gating",
+  "nulls",
+  "number",
+  "objs 2\u21926",
+  "of the manifest",
+  "ok = False",
+  "on coverage",
+  "on no-tool queries",
+  "on same curve",
+  "on this server",
+  "once per m config",
+  "one awaiting data",
+  "one case",
+  "one master set",
+  "one neg case",
+  "one search per case",
+  "one-server-dominated",
+  "only +3",
+  "only reasonable",
+  "onvif-mcp",
+  "onvif-mcp AS-IS",
+  "option-tax",
+  "outbid shallower one",
+  "outside the repo",
+  "overall",
+  "overall accuracy",
+  "overwriting",
+  "own document",
+  "own process group",
+  "parent-conditioning needs less data",
+  "parent-one-hot",
+  "parse_tool_json",
+  "partition",
+  "pass 1",
+  "passage",
+  "path",
+  "paths",
+  "pattern matched lab E",
+  "pc1",
+  "pc1 variant",
+  "pc1 windows",
+  "per chunk",
+  "per doc",
+  "per tool",
+  "per-hit",
+  "per-level conditional accuracy",
+  "per-server implementation evals",
+  "per-tool fields",
+  "phrase/slot space",
+  "phrases",
+  "picked windows",
+  "picking",
+  "picking + intent-guarded nulls",
+  "picking aid ever measured",
+  "pipeline",
+  "plain k5",
+  "plan-twice",
+  "planner",
+  "planner tokens",
+  "planner's call",
+  "pool",
+  "pool 1024",
+  "pool 16",
+  "pool-16 training",
+  "port of frozen probe",
+  "pos clause",
+  "pos threshold",
+  "pos-effect prediction",
+  "pos-level effect",
+  "pos_acc",
+  "posthoc_p3.py",
+  "pre-check",
+  "pre-data",
+  "pre-filter",
+  "prefix + pair + pair",
+  "prefix + phrase + qualifier",
+  "prefixed names",
+  "premise dead",
+  "presence",
+  "presence 0.878",
+  "presence 0.9567",
+  "presence@1/@3",
+  "primary",
+  "primary claim",
+  "primary numbers",
+  "probe harness",
+  "production",
+  "production CLM readout stack",
+  "production artifact",
+  "production config",
+  "production manifests",
+  "production router",
+  "production router-walk",
+  "program",
+  "projected",
+  "prompt_tokens",
+  "protocol.md",
+  "proven strengths",
+  "query",
+  "question and chunks",
+  "question and text",
+  "question files",
+  "question generation",
+  "questions",
+  "questions, arms, predictions, results",
+  "raw slot-7 embeddings + centroid cosine",
+  "raw sums",
+  "raw-embedding centroids",
+  "re-init retry",
+  "read_file",
+  "read_notes",
+  "read_text_file",
+  "read_wiki_structure",
+  "readouts",
+  "readouts work",
+  "real",
+  "real camera",
+  "real tools",
+  "real-tool pick",
+  "recall bet",
+  "recall loss",
+  "recall windfall",
+  "recall_A",
+  "recall_B",
+  "recipe change",
+  "recorded as main result",
+  "recovered mass",
+  "recovery",
+  "recursive split",
+  "reference banks",
+  "refrozen",
+  "reg variant",
+  "regardless of acc",
+  "registered 19\u201322",
+  "registered MS-16b-2",
+  "registered PASS",
+  "registered as wiring target",
+  "registered bars",
+  "registered list",
+  "registered metric",
+  "registered rules",
+  "registered run",
+  "registered text",
+  "registered wrapper",
+  "registration",
+  "registry bands",
+  "registry order",
+  "registry windows",
+  "regression check",
+  "reminder",
+  "remote transport",
+  "replicated",
+  "repo",
+  "repo markdown",
+  "reruns",
+  "rescue",
+  "rescues depth",
+  "respawn cooldown",
+  "result",
+  "results",
+  "results file",
+  "results path",
+  "results.jsonl",
+  "results/",
+  "retrieval recall",
+  "retrieval-only",
+  "rewire program",
+  "right granularity",
+  "risk",
+  "rivals",
+  "root level",
+  "round boundary",
+  "route clusters",
+  "router",
+  "router embeddings",
+  "router_embeddings.npz",
+  "routing",
+  "rows",
+  "rule",
+  "rule changes",
+  "run",
+  "run-1 hier",
+  "run-2 baseline",
+  "run_eval.py",
+  "run_lab.py",
+  "runner",
+  "runner gains",
+  "runners",
+  "s, 190 nodes",
+  "same",
+  "same 78-tool prefix",
+  "same recipe",
+  "same-prompt temp 0",
+  "same-run",
+  "sanity",
+  "sanity arm",
+  "says keep two candidates",
+  "scalable levers",
+  "schema discipline",
+  "scope",
+  "scored results",
+  "scored run",
+  "scored runs",
+  "search arm",
+  "search mechanics",
+  "search result",
+  "search-execution branch",
+  "search-primary",
+  "search-primary arm",
+  "search-primary contract",
+  "second call",
+  "secret key",
+  "seed-0 server order",
+  "seen server",
+  "selection and null escape",
+  "selection and routing",
+  "selection only",
+  "selection surface",
+  "selector",
+  "self-contained",
+  "separately",
+  "separation",
+  "server",
+  "server and tool",
+  "server subsets",
+  "servers",
+  "serving variance",
+  "shared flavor vocabulary",
+  "shared template filler",
+  "shipped gate",
+  "shipped union",
+  "shipped union gate",
+  "shortlist",
+  "shortlist planner",
+  "shortlist's recall",
+  "shortlists differ",
+  "should-call",
+  "siblings",
+  "sigmoid rank",
+  "sign",
+  "significant",
+  "significantly",
+  "simulate-research-query",
+  "single line",
+  "single weakness",
+  "siphons",
+  "sister program",
+  "sits above",
+  "sits under",
+  "sliding-window shortlist",
+  "slots",
+  "snap_image_to_minio",
+  "snapshot.json",
+  "softhint",
+  "softhint error budget",
+  "softhint or winhint",
+  "somewhere on negs",
+  "space as run 2",
+  "spawn sets",
+  "specialization floor",
+  "specific-name hint",
+  "speed 0.0",
+  "split to <10",
+  "statistical bar",
+  "status",
+  "stdio MCP client",
+  "stdio smoke",
+  "step1-band08",
+  "streams",
+  "structural miss",
+  "subagents.py",
+  "subsets",
+  "substantial",
+  "substrate",
+  "substrate verdict",
+  "suite",
+  "summary data",
+  "summary.json",
+  "summary_prefix.json",
+  "sweep arms",
+  "synth-pool centroid space",
+  "synth_pools.json",
+  "synthetic ceiling",
+  "tag",
+  "tally",
+  "target",
+  "task smells",
+  "tax",
+  "temp-0 planner",
+  "temperature 0",
+  "template",
+  "text file",
+  "than flat's planner",
+  "that branch",
+  "the verdict",
+  "thin wrapper server",
+  "think-level collapse",
+  "third party",
+  "thr",
+  "three best-measured ingredients",
+  "three experiments",
+  "tiling",
+  "time",
+  "time pos",
+  "time re-run",
+  "time/git 2026.8.18",
+  "to C chars",
+  "to pools",
+  "to_thread",
+  "tool",
+  "tool and continue",
+  "tool choice",
+  "tool name",
+  "tool population",
+  "tool recall",
+  "tool-class recall",
+  "tool-cosine",
+  "tools",
+  "tools JSON",
+  "tools/call",
+  "tools/list",
+  "tools/mcp_eval/",
+  "tools/mcp_eval/run_flat28.py",
+  "tools/mcp_http_smoke.py",
+  "tools/mcp_probe/",
+  "tools/mcp_smoke.py",
+  "top scorer",
+  "top-1 63.8%",
+  "top-1 cluster's tools",
+  "top-1 clusters",
+  "top-2 clusters",
+  "top-2 reg",
+  "top-2 union",
+  "top-4 reg",
+  "top-40",
+  "toxic",
+  "train chunks",
+  "train pairs",
+  "train/eval text",
+  "trained",
+  "trained readout head",
+  "training texts",
+  "trajectory",
+  "transfer",
+  "tree",
+  "tree-lab",
+  "true domain",
+  "true routing",
+  "truncation",
+  "trunk input",
+  "two",
+  "two binary axes",
+  "two independent temp-0 flat runs",
+  "two reasons",
+  "two recipes",
+  "two sweep JSONs",
+  "two variants",
+  "two-option choices",
+  "unchanged",
+  "under nominal k=5",
+  "under references",
+  "union",
+  "union (sanity)",
+  "union 0.6727",
+  "union 21/24",
+  "union acc",
+  "union of top-2 clusters' tools",
+  "union rerun",
+  "union's",
+  "unique specialty phrase pairs",
+  "unless MCP_PROBE_SUMMARY set",
+  "unprefixed reference",
+  "unroutable requests",
+  "untouched",
+  "untracked",
+  "up to 20 tools",
+  "user:pass URI",
+  "utterance",
+  "utterance embedding",
+  "utterance information",
+  "utterance verbatim",
+  "utterance-keyed",
+  "utterance-side retriever",
+  "utterances",
+  "uv cache",
+  "uwin2",
+  "uwinthr",
+  "uwinthrnt",
+  "v1",
+  "validation",
+  "variant",
+  "verbatim",
+  "verbs",
+  "voice planner",
+  "vs union 0.673",
+  "vs union 0.7444",
+  "walk",
+  "walk recall",
+  "walking beats flat",
+  "walks.py",
+  "web/mcp_gate.py",
+  "web/mcp_index.json",
+  "web/server.py",
+  "week",
+  "weights",
+  "what",
+  "when < 20",
+  "when neg >= 20/24",
+  "why",
+  "wide-band negs",
+  "win2",
+  "win2-pc1",
+  "win2-reg",
+  "win4",
+  "win4-reg",
+  "window order",
+  "window score",
+  "window-added tools",
+  "window-union recall",
+  "windows",
+  "winhint",
+  "wiring",
+  "wiring target",
+  "with pool",
+  "with pooling",
+  "wrapper",
+  "wrong tool",
+  "wrong turns",
+  "ws-discovery XAddrs",
+  "yes",
+  "yes or no",
+  "yet",
+  "zero",
+  "zero scores",
+  "zero-initialized",
+  "~0.84",
+  "~7\u00d7 registered band",
+  "\u00b10.01",
+  "\u03c4 (V abstain)",
+  "\u221213.4 pts",
+  "\u22125.0 pts"
+ ],
+ "model_fp": "7cfe33f65c1c",
+ "n_chunks": 180,
+ "n_entities": 1352,
+ "n_triples": 902,
+ "triples": [
+  {
+   "chunk": 0,
+   "doc": "README.md",
+   "o": "tree-lab",
+   "r": "formerly",
+   "s": "WireScale"
+  },
+  {
+   "chunk": 0,
+   "doc": "README.md",
+   "o": "three experiments",
+   "r": "contains",
+   "s": "WireScale"
+  },
+  {
+   "chunk": 0,
+   "doc": "README.md",
+   "o": "one awaiting data",
+   "r": "contains",
+   "s": "WireScale"
+  },
+  {
+   "chunk": 0,
+   "doc": "README.md",
+   "o": "WireSense",
+   "r": "hosts",
+   "s": "WireScale"
+  },
+  {
+   "chunk": 0,
+   "doc": "README.md",
+   "o": "sister program",
+   "r": "is",
+   "s": "WireSense"
+  },
+  {
+   "chunk": 0,
+   "doc": "README.md",
+   "o": "experimental record",
+   "r": "stores",
+   "s": "WireScale"
+  },
+  {
+   "chunk": 1,
+   "doc": "README.md",
+   "o": "repo",
+   "r": "copied into",
+   "s": "experimental record"
+  },
+  {
+   "chunk": 1,
+   "doc": "README.md",
+   "o": "protocol.md",
+   "r": "live in",
+   "s": "Hypotheses"
+  },
+  {
+   "chunk": 1,
+   "doc": "README.md",
+   "o": "adjudicate.py",
+   "r": "computed by",
+   "s": "Verdicts"
+  },
+  {
+   "chunk": 2,
+   "doc": "README.md",
+   "o": "walking beats flat",
+   "r": "failed prediction",
+   "s": "P1 verdict"
+  },
+  {
+   "chunk": 2,
+   "doc": "README.md",
+   "o": "parent-conditioning needs less data",
+   "r": "failed prediction",
+   "s": "P2 verdict"
+  },
+  {
+   "chunk": 2,
+   "doc": "README.md",
+   "o": "conditioning helps most at low markedness",
+   "r": "failed prediction",
+   "s": "P3 verdict"
+  },
+  {
+   "chunk": 2,
+   "doc": "README.md",
+   "o": "conditioning gap grows with depth",
+   "r": "partial result",
+   "s": "P4 verdict"
+  },
+  {
+   "chunk": 2,
+   "doc": "README.md",
+   "o": "6 levels",
+   "r": "no depth wall",
+   "s": "depth extension"
+  },
+  {
+   "chunk": 2,
+   "doc": "README.md",
+   "o": "\u221213.4 pts",
+   "r": "harmful layer",
+   "s": "FiLM conditioning"
+  },
+  {
+   "chunk": 4,
+   "doc": "README.md",
+   "o": "questions, arms, predictions, results",
+   "r": "decision record",
+   "s": "protocol.md"
+  },
+  {
+   "chunk": 4,
+   "doc": "README.md",
+   "o": "deterministic seed 0",
+   "r": "synthetic hierarchy",
+   "s": "hierarchy.py"
+  },
+  {
+   "chunk": 4,
+   "doc": "README.md",
+   "o": "arms A/B/C/C'",
+   "r": "trunk classifiers",
+   "s": "heads.py"
+  },
+  {
+   "chunk": 4,
+   "doc": "README.md",
+   "o": "beam-2 flat oracle-parent",
+   "r": "hard walk",
+   "s": "walks.py"
+  },
+  {
+   "chunk": 4,
+   "doc": "README.md",
+   "o": "append-only JSON results",
+   "r": "p-series sweeps",
+   "s": "run_lab.py"
+  },
+  {
+   "chunk": 4,
+   "doc": "README.md",
+   "o": "raw-embedding centroids",
+   "r": "s-series runner",
+   "s": "subagents.py"
+  },
+  {
+   "chunk": 5,
+   "doc": "README.md",
+   "o": "registered bars",
+   "r": "makes verdicts",
+   "s": "adjudicate.py"
+  },
+  {
+   "chunk": 5,
+   "doc": "README.md",
+   "o": "P3's verdict",
+   "r": "probes",
+   "s": "posthoc_p3.py"
+  },
+  {
+   "chunk": 5,
+   "doc": "README.md",
+   "o": "embedding client",
+   "r": "serves as",
+   "s": "embed_client.py"
+  },
+  {
+   "chunk": 5,
+   "doc": "README.md",
+   "o": "scored runs",
+   "r": "stores",
+   "s": "results/"
+  },
+  {
+   "chunk": 5,
+   "doc": "README.md",
+   "o": "production CLM readout stack",
+   "r": "contains",
+   "s": "models/"
+  },
+  {
+   "chunk": 5,
+   "doc": "README.md",
+   "o": "MS-series decision record",
+   "r": "records",
+   "s": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 5,
+   "doc": "README.md",
+   "o": "MS-series runners",
+   "r": "contains",
+   "s": "tools/mcp_probe/"
+  },
+  {
+   "chunk": 5,
+   "doc": "README.md",
+   "o": "per-server implementation evals",
+   "r": "performs",
+   "s": "tools/mcp_eval/"
+  },
+  {
+   "chunk": 6,
+   "doc": "README.md",
+   "o": "llama.cpp server",
+   "r": "served by",
+   "s": "Qwen3.5-4B"
+  },
+  {
+   "chunk": 6,
+   "doc": "README.md",
+   "o": "id_slot 7",
+   "r": "reads from",
+   "s": "lab runs"
+  },
+  {
+   "chunk": 6,
+   "doc": "README.md",
+   "o": "results/",
+   "r": "recorded under",
+   "s": "results"
+  },
+  {
+   "chunk": 7,
+   "doc": "README.md",
+   "o": "WireSense experiment",
+   "r": "are copy of",
+   "s": "MS-series files"
+  },
+  {
+   "chunk": 7,
+   "doc": "README.md",
+   "o": "winhint",
+   "r": "is target of",
+   "s": "MS-29"
+  },
+  {
+   "chunk": 7,
+   "doc": "README.md",
+   "o": "0.7338",
+   "r": "scored at",
+   "s": "winhint"
+  },
+  {
+   "chunk": 7,
+   "doc": "README.md",
+   "o": "0.6727",
+   "r": "scored at",
+   "s": "shipped gate"
+  },
+  {
+   "chunk": 7,
+   "doc": "README.md",
+   "o": "0.6835",
+   "r": "scored at",
+   "s": "flat"
+  },
+  {
+   "chunk": 7,
+   "doc": "README.md",
+   "o": "results/",
+   "r": "append to",
+   "s": "reruns"
+  },
+  {
+   "chunk": 0,
+   "doc": "protocol.md",
+   "o": "Qwen3.5-4B-UD-Q4_K_XL",
+   "r": "uses",
+   "s": "Encoder"
+  },
+  {
+   "chunk": 0,
+   "doc": "protocol.md",
+   "o": "id_slot 7",
+   "r": "use",
+   "s": "embeddings"
+  },
+  {
+   "chunk": 0,
+   "doc": "protocol.md",
+   "o": "lowercase",
+   "r": "are",
+   "s": "utterances"
+  },
+  {
+   "chunk": 0,
+   "doc": "protocol.md",
+   "o": "32",
+   "r": "size",
+   "s": "Batch"
+  },
+  {
+   "chunk": 0,
+   "doc": "protocol.md",
+   "o": "gitignored",
+   "r": "is",
+   "s": "Cache"
+  },
+  {
+   "chunk": 1,
+   "doc": "protocol.md",
+   "o": "model changes",
+   "r": "must be deleted",
+   "s": "artifacts"
+  },
+  {
+   "chunk": 1,
+   "doc": "protocol.md",
+   "o": "trained",
+   "r": "not committed",
+   "s": "heads"
+  },
+  {
+   "chunk": 1,
+   "doc": "protocol.md",
+   "o": "JSONs",
+   "r": "are committed",
+   "s": "results"
+  },
+  {
+   "chunk": 1,
+   "doc": "protocol.md",
+   "o": "phrases",
+   "r": "share",
+   "s": "leaves"
+  },
+  {
+   "chunk": 1,
+   "doc": "protocol.md",
+   "o": "families",
+   "r": "share",
+   "s": "leaves"
+  },
+  {
+   "chunk": 1,
+   "doc": "protocol.md",
+   "o": "leaves",
+   "r": "distinguishes",
+   "s": "modifier"
+  },
+  {
+   "chunk": 1,
+   "doc": "protocol.md",
+   "o": "verbs",
+   "r": "uses",
+   "s": "utterance"
+  },
+  {
+   "chunk": 1,
+   "doc": "protocol.md",
+   "o": "slots",
+   "r": "uses",
+   "s": "utterance"
+  },
+  {
+   "chunk": 1,
+   "doc": "protocol.md",
+   "o": "transfer",
+   "r": "uses",
+   "s": "eval"
+  },
+  {
+   "chunk": 1,
+   "doc": "protocol.md",
+   "o": "pool",
+   "r": "draw",
+   "s": "siblings"
+  },
+  {
+   "chunk": 1,
+   "doc": "protocol.md",
+   "o": "identically",
+   "r": "distributed",
+   "s": "siblings"
+  },
+  {
+   "chunk": 2,
+   "doc": "protocol.md",
+   "o": "one master set",
+   "r": "are relabelings",
+   "s": "Pools"
+  },
+  {
+   "chunk": 2,
+   "doc": "protocol.md",
+   "o": "train/eval text",
+   "r": "regenerates",
+   "s": "m config"
+  },
+  {
+   "chunk": 2,
+   "doc": "protocol.md",
+   "o": "once per m config",
+   "r": "are computed",
+   "s": "embeddings"
+  },
+  {
+   "chunk": 2,
+   "doc": "protocol.md",
+   "o": "multi-task",
+   "r": "trained",
+   "s": "Trunk"
+  },
+  {
+   "chunk": 2,
+   "doc": "protocol.md",
+   "o": "concat[emb, one-hot(parent node)]",
+   "r": "equals",
+   "s": "trunk input"
+  },
+  {
+   "chunk": 3,
+   "doc": "protocol.md",
+   "o": "45-dim over all nodes",
+   "r": "one-hot(parent node)",
+   "s": "emb"
+  },
+  {
+   "chunk": 3,
+   "doc": "protocol.md",
+   "o": "Linear(one-hot)",
+   "r": "gamma/beta",
+   "s": "emb"
+  },
+  {
+   "chunk": 3,
+   "doc": "protocol.md",
+   "o": "Linear(one-hot) applied",
+   "r": "gamma/beta",
+   "s": "emb"
+  },
+  {
+   "chunk": 3,
+   "doc": "protocol.md",
+   "o": "zero-initialized",
+   "r": "gamma/beta",
+   "s": "emb"
+  },
+  {
+   "chunk": 3,
+   "doc": "protocol.md",
+   "o": "GELU(tanh)",
+   "r": "linear(d\u21922048)",
+   "s": "Trunk"
+  },
+  {
+   "chunk": 3,
+   "doc": "protocol.md",
+   "o": "LayerNorm",
+   "r": "linear(d\u21922048)",
+   "s": "Trunk"
+  },
+  {
+   "chunk": 4,
+   "doc": "protocol.md",
+   "o": "P2/P4",
+   "r": "primary",
+   "s": "SWEEP-1"
+  },
+  {
+   "chunk": 4,
+   "doc": "protocol.md",
+   "o": "depth 3",
+   "r": "p3",
+   "s": "SWEEP-2"
+  },
+  {
+   "chunk": 4,
+   "doc": "protocol.md",
+   "o": "m=1.0",
+   "r": "replication guard",
+   "s": "P1"
+  },
+  {
+   "chunk": 4,
+   "doc": "protocol.md",
+   "o": "C-B gap",
+   "r": "threshold",
+   "s": "P2"
+  },
+  {
+   "chunk": 4,
+   "doc": "protocol.md",
+   "o": "m=0.0",
+   "r": "ceiling",
+   "s": "P3"
+  },
+  {
+   "chunk": 4,
+   "doc": "protocol.md",
+   "o": "chance floors",
+   "r": "l1 accuracy",
+   "s": "metrics"
+  },
+  {
+   "chunk": 5,
+   "doc": "protocol.md",
+   "o": "2026-10-07",
+   "r": "dated section",
+   "s": "Amendment 1"
+  },
+  {
+   "chunk": 5,
+   "doc": "protocol.md",
+   "o": "why",
+   "r": "discloses",
+   "s": "Amendment 1"
+  },
+  {
+   "chunk": 5,
+   "doc": "protocol.md",
+   "o": "what",
+   "r": "discloses",
+   "s": "Amendment 1"
+  },
+  {
+   "chunk": 5,
+   "doc": "protocol.md",
+   "o": "during pool-16 training",
+   "r": "killed",
+   "s": "first launch"
+  },
+  {
+   "chunk": 6,
+   "doc": "protocol.md",
+   "o": "2026-10-07",
+   "r": "are committed",
+   "s": "results"
+  },
+  {
+   "chunk": 6,
+   "doc": "protocol.md",
+   "o": "2026-10-07",
+   "r": "was made",
+   "s": "Amendment 1"
+  },
+  {
+   "chunk": 6,
+   "doc": "protocol.md",
+   "o": "pool-16 training",
+   "r": "was killed",
+   "s": "first launch"
+  },
+  {
+   "chunk": 6,
+   "doc": "protocol.md",
+   "o": "2,961 unique texts",
+   "r": "revealed",
+   "s": "embed log"
+  },
+  {
+   "chunk": 6,
+   "doc": "protocol.md",
+   "o": "pool 1024",
+   "r": "was too small",
+   "s": "phrase/slot space"
+  },
+  {
+   "chunk": 6,
+   "doc": "protocol.md",
+   "o": "UNEXAMINED",
+   "r": "were deleted",
+   "s": "two sweep JSONs"
+  },
+  {
+   "chunk": 6,
+   "doc": "protocol.md",
+   "o": "objs 2\u21926",
+   "r": "was widened",
+   "s": "generator"
+  },
+  {
+   "chunk": 6,
+   "doc": "protocol.md",
+   "o": "leaf \u22651024 texts",
+   "r": "was added",
+   "s": "guard"
+  },
+  {
+   "chunk": 7,
+   "doc": "protocol.md",
+   "o": "registered rules",
+   "r": "fail",
+   "s": "P1"
+  },
+  {
+   "chunk": 7,
+   "doc": "protocol.md",
+   "o": "registered rules",
+   "r": "fail",
+   "s": "P2"
+  },
+  {
+   "chunk": 7,
+   "doc": "protocol.md",
+   "o": "with pool",
+   "r": "shrank",
+   "s": "C-B gap"
+  },
+  {
+   "chunk": 7,
+   "doc": "protocol.md",
+   "o": "pool 1024",
+   "r": "to",
+   "s": "pool 16"
+  },
+  {
+   "chunk": 7,
+   "doc": "protocol.md",
+   "o": "by points",
+   "r": "ahead",
+   "s": "A"
+  },
+  {
+   "chunk": 7,
+   "doc": "protocol.md",
+   "o": "generator",
+   "r": "separable",
+   "s": "fully-marked leaf"
+  },
+  {
+   "chunk": 8,
+   "doc": "protocol.md",
+   "o": "+2.4 pts at pool 16",
+   "r": "shrank with pool",
+   "s": "gap"
+  },
+  {
+   "chunk": 8,
+   "doc": "protocol.md",
+   "o": "+0.52 pts at pool 1024",
+   "r": "grows d2 to d4",
+   "s": "gap"
+  },
+  {
+   "chunk": 8,
+   "doc": "protocol.md",
+   "o": "L3",
+   "r": "reads",
+   "s": "registered metric"
+  },
+  {
+   "chunk": 8,
+   "doc": "protocol.md",
+   "o": "as registered",
+   "r": "fails",
+   "s": "P3"
+  },
+  {
+   "chunk": 8,
+   "doc": "protocol.md",
+   "o": "null in substance",
+   "r": "partial by letter",
+   "s": "P4"
+  },
+  {
+   "chunk": 8,
+   "doc": "protocol.md",
+   "o": "never the ceiling",
+   "r": "moves sample efficiency",
+   "s": "Conditioning"
+  },
+  {
+   "chunk": 9,
+   "doc": "protocol.md",
+   "o": "\u221213.4 pts",
+   "r": "is harmful",
+   "s": "C\u2032 FiLM"
+  },
+  {
+   "chunk": 9,
+   "doc": "protocol.md",
+   "o": "+1.4 pts",
+   "r": "is winner",
+   "s": "beam-2"
+  },
+  {
+   "chunk": 9,
+   "doc": "protocol.md",
+   "o": "+4.9 pts",
+   "r": "helps level",
+   "s": "Conditioning"
+  },
+  {
+   "chunk": 9,
+   "doc": "protocol.md",
+   "o": "\u22125.0 pts",
+   "r": "taxes trunk",
+   "s": "Conditioning"
+  },
+  {
+   "chunk": 9,
+   "doc": "protocol.md",
+   "o": "sign",
+   "r": "flip hierarchy",
+   "s": "Small pools"
+  },
+  {
+   "chunk": 9,
+   "doc": "protocol.md",
+   "o": "d3",
+   "r": "beats flat",
+   "s": "tree"
+  },
+  {
+   "chunk": 10,
+   "doc": "protocol.md",
+   "o": "utterance information",
+   "r": "bounded by",
+   "s": "multi-level tree"
+  },
+  {
+   "chunk": 10,
+   "doc": "protocol.md",
+   "o": "24 classes",
+   "r": "scales to",
+   "s": "flat head"
+  },
+  {
+   "chunk": 10,
+   "doc": "protocol.md",
+   "o": "everything",
+   "r": "pools",
+   "s": "flat supervision"
+  },
+  {
+   "chunk": 10,
+   "doc": "protocol.md",
+   "o": "rescues depth",
+   "r": "neither",
+   "s": "parent-one-hot"
+  },
+  {
+   "chunk": 10,
+   "doc": "protocol.md",
+   "o": "beam-2",
+   "r": "measured",
+   "s": "scalable levers"
+  },
+  {
+   "chunk": 11,
+   "doc": "protocol.md",
+   "o": "consistent with diagnosis",
+   "r": "markedness",
+   "s": "beam-2"
+  },
+  {
+   "chunk": 11,
+   "doc": "protocol.md",
+   "o": "not head capacity",
+   "r": "information problem",
+   "s": "think-level collapse"
+  },
+  {
+   "chunk": 11,
+   "doc": "protocol.md",
+   "o": "no escalation",
+   "r": "not pass",
+   "s": "P4"
+  },
+  {
+   "chunk": 11,
+   "doc": "protocol.md",
+   "o": "maximum depth",
+   "r": "could not answer",
+   "s": "depth-4 tree"
+  },
+  {
+   "chunk": 11,
+   "doc": "protocol.md",
+   "o": "two binary axes",
+   "r": "splits on",
+   "s": "depth-4 leaf"
+  },
+  {
+   "chunk": 11,
+   "doc": "protocol.md",
+   "o": "across all branches",
+   "r": "lexicalized and shared",
+   "s": "Axis words"
+  },
+  {
+   "chunk": 12,
+   "doc": "protocol.md",
+   "o": "s, 190 nodes",
+   "r": "counted 80,067 unique",
+   "s": "training texts"
+  },
+  {
+   "chunk": 13,
+   "doc": "protocol.md",
+   "o": "anything after level 4",
+   "r": "stopped costing",
+   "s": "depth extension"
+  },
+  {
+   "chunk": 13,
+   "doc": "protocol.md",
+   "o": "per-level conditional accuracy",
+   "r": "were free",
+   "s": "new binary levels"
+  },
+  {
+   "chunk": 13,
+   "doc": "protocol.md",
+   "o": "coarsest and sibling-pair levels",
+   "r": "concentrates in",
+   "s": "cost"
+  },
+  {
+   "chunk": 13,
+   "doc": "protocol.md",
+   "o": "not depth",
+   "r": "became the wall",
+   "s": "walk"
+  },
+  {
+   "chunk": 14,
+   "doc": "protocol.md",
+   "o": "depth",
+   "r": "became the wall",
+   "s": "walk"
+  },
+  {
+   "chunk": 14,
+   "doc": "protocol.md",
+   "o": "3.4 pts",
+   "r": "recovers",
+   "s": "walk"
+  },
+  {
+   "chunk": 14,
+   "doc": "protocol.md",
+   "o": "walk",
+   "r": "overtakes",
+   "s": "readouts"
+  },
+  {
+   "chunk": 14,
+   "doc": "protocol.md",
+   "o": "readouts",
+   "r": "loses to",
+   "s": "walk"
+  },
+  {
+   "chunk": 14,
+   "doc": "protocol.md",
+   "o": "marginal",
+   "r": "cost",
+   "s": "depth"
+  },
+  {
+   "chunk": 14,
+   "doc": "protocol.md",
+   "o": "interpretability",
+   "r": "used for",
+   "s": "walk"
+  },
+  {
+   "chunk": 15,
+   "doc": "protocol.md",
+   "o": "production router",
+   "r": "deployed beam-2",
+   "s": "WireSense"
+  },
+  {
+   "chunk": 15,
+   "doc": "protocol.md",
+   "o": "13 points",
+   "r": "measured crash",
+   "s": "WireSense"
+  },
+  {
+   "chunk": 15,
+   "doc": "protocol.md",
+   "o": "replicated",
+   "r": "measured gain",
+   "s": "WireSense"
+  },
+  {
+   "chunk": 15,
+   "doc": "protocol.md",
+   "o": "everywhere",
+   "r": "were equal-depth",
+   "s": "lab walks"
+  },
+  {
+   "chunk": 15,
+   "doc": "protocol.md",
+   "o": "outbid shallower one",
+   "r": "let deeper path",
+   "s": "raw sums"
+  },
+  {
+   "chunk": 16,
+   "doc": "protocol.md",
+   "o": "coarse-level runner-up",
+   "r": "win case",
+   "s": "pattern matched lab E"
+  },
+  {
+   "chunk": 17,
+   "doc": "protocol.md",
+   "o": "raw slot-7 embeddings + centroid cosine",
+   "r": "is production mechanism",
+   "s": "substrate"
+  },
+  {
+   "chunk": 17,
+   "doc": "protocol.md",
+   "o": "substrate",
+   "r": "runs",
+   "s": "router"
+  },
+  {
+   "chunk": 17,
+   "doc": "protocol.md",
+   "o": "substrate",
+   "r": "runs",
+   "s": "MCP gate"
+  },
+  {
+   "chunk": 17,
+   "doc": "protocol.md",
+   "o": "64 sub-agents",
+   "r": "equals",
+   "s": "Shape"
+  },
+  {
+   "chunk": 17,
+   "doc": "protocol.md",
+   "o": "unique specialty phrase pairs",
+   "r": "owns",
+   "s": "agent"
+  },
+  {
+   "chunk": 17,
+   "doc": "protocol.md",
+   "o": "shared flavor vocabulary",
+   "r": "owns",
+   "s": "domain"
+  },
+  {
+   "chunk": 17,
+   "doc": "protocol.md",
+   "o": "prefix + phrase + qualifier",
+   "r": "are",
+   "s": "utterances"
+  },
+  {
+   "chunk": 18,
+   "doc": "protocol.md",
+   "o": "cos values",
+   "r": "picks mean",
+   "s": "E_beam2"
+  },
+  {
+   "chunk": 18,
+   "doc": "protocol.md",
+   "o": "beam replication",
+   "r": "hypothesizes",
+   "s": "S1"
+  },
+  {
+   "chunk": 18,
+   "doc": "protocol.md",
+   "o": "coarse-first vs flat",
+   "r": "hypothesizes",
+   "s": "S2"
+  },
+  {
+   "chunk": 18,
+   "doc": "protocol.md",
+   "o": "specialization floor",
+   "r": "hypothesizes",
+   "s": "S3"
+  },
+  {
+   "chunk": 18,
+   "doc": "protocol.md",
+   "o": "self-contained",
+   "r": "is runner",
+   "s": "subagents.py"
+  },
+  {
+   "chunk": 18,
+   "doc": "protocol.md",
+   "o": "unroutable requests",
+   "r": "causes",
+   "s": "m=0"
+  },
+  {
+   "chunk": 19,
+   "doc": "protocol.md",
+   "o": "two reasons",
+   "r": "discarded for",
+   "s": "pass 1"
+  },
+  {
+   "chunk": 19,
+   "doc": "protocol.md",
+   "o": "zero scores",
+   "r": "caused",
+   "s": "Scoring bug"
+  },
+  {
+   "chunk": 19,
+   "doc": "protocol.md",
+   "o": "generic texts",
+   "r": "built from",
+   "s": "domain pools"
+  },
+  {
+   "chunk": 19,
+   "doc": "protocol.md",
+   "o": "full vocabulary",
+   "r": "draws from",
+   "s": "Fix"
+  },
+  {
+   "chunk": 19,
+   "doc": "protocol.md",
+   "o": "real",
+   "r": "stand as",
+   "s": "A_flat numbers"
+  },
+  {
+   "chunk": 20,
+   "doc": "protocol.md",
+   "o": "prefix + pair + pair",
+   "r": "becomes",
+   "s": "template"
+  },
+  {
+   "chunk": 20,
+   "doc": "protocol.md",
+   "o": "no",
+   "r": "helps",
+   "s": "dom vocab"
+  },
+  {
+   "chunk": 20,
+   "doc": "protocol.md",
+   "o": "no",
+   "r": "helps",
+   "s": "dom-weighted pools"
+  },
+  {
+   "chunk": 20,
+   "doc": "protocol.md",
+   "o": "held-out",
+   "r": "ceiling",
+   "s": "generic texts"
+  },
+  {
+   "chunk": 21,
+   "doc": "protocol.md",
+   "o": "0.799/0.648",
+   "r": "drops to",
+   "s": "domain_acc"
+  },
+  {
+   "chunk": 21,
+   "doc": "protocol.md",
+   "o": "0.78-0.84",
+   "r": "sits at",
+   "s": "m=0"
+  },
+  {
+   "chunk": 21,
+   "doc": "protocol.md",
+   "o": "0.84",
+   "r": "ceiling at",
+   "s": "domain_acc"
+  },
+  {
+   "chunk": 21,
+   "doc": "protocol.md",
+   "o": "0.90",
+   "r": "domain >=",
+   "s": "S3"
+  },
+  {
+   "chunk": 21,
+   "doc": "protocol.md",
+   "o": "~0.84",
+   "r": "will fail at",
+   "s": "S3"
+  },
+  {
+   "chunk": 21,
+   "doc": "protocol.md",
+   "o": "primary claim",
+   "r": "is",
+   "s": "agent-floor half"
+  },
+  {
+   "chunk": 21,
+   "doc": "protocol.md",
+   "o": "4096 evals",
+   "r": "x",
+   "s": "64 agents"
+  },
+  {
+   "chunk": 22,
+   "doc": "protocol.md",
+   "o": "B_walk",
+   "r": "beats",
+   "s": "beam2-greedy"
+  },
+  {
+   "chunk": 22,
+   "doc": "protocol.md",
+   "o": "B_walk",
+   "r": "beats",
+   "s": "A_flat"
+  },
+  {
+   "chunk": 22,
+   "doc": "protocol.md",
+   "o": "0.8555",
+   "r": "equals",
+   "s": "domain_acc"
+  },
+  {
+   "chunk": 22,
+   "doc": "protocol.md",
+   "o": "0.796",
+   "r": "equals",
+   "s": "B_walk"
+  },
+  {
+   "chunk": 22,
+   "doc": "protocol.md",
+   "o": "0.929",
+   "r": "equals",
+   "s": "A_flat"
+  },
+  {
+   "chunk": 22,
+   "doc": "protocol.md",
+   "o": "back",
+   "r": "claws",
+   "s": "beam2-greedy"
+  },
+  {
+   "chunk": 24,
+   "doc": "protocol.md",
+   "o": "coarse level",
+   "r": "is near-ceiling",
+   "s": "measured shape"
+  },
+  {
+   "chunk": 24,
+   "doc": "protocol.md",
+   "o": "synthetic ceiling",
+   "r": "runs above",
+   "s": "root level"
+  },
+  {
+   "chunk": 24,
+   "doc": "protocol.md",
+   "o": "better coarse level",
+   "r": "narrows with",
+   "s": "flat-vs-walk gap"
+  },
+  {
+   "chunk": 24,
+   "doc": "protocol.md",
+   "o": "result",
+   "r": "is part of",
+   "s": "substrate verdict"
+  },
+  {
+   "chunk": 24,
+   "doc": "protocol.md",
+   "o": "embeddings",
+   "r": "dominates raw slot-7",
+   "s": "shared template filler"
+  },
+  {
+   "chunk": 24,
+   "doc": "protocol.md",
+   "o": "readouts work",
+   "r": "makes centroid",
+   "s": "content-token mass"
+  },
+  {
+   "chunk": 24,
+   "doc": "protocol.md",
+   "o": "chunk carries information",
+   "r": "judges if",
+   "s": "decision layer"
+  },
+  {
+   "chunk": 25,
+   "doc": "protocol.md",
+   "o": "README.md",
+   "r": "stored verbatim",
+   "s": "repo markdown"
+  },
+  {
+   "chunk": 25,
+   "doc": "protocol.md",
+   "o": "1100 chars",
+   "r": "deterministic",
+   "s": "chunking"
+  },
+  {
+   "chunk": 25,
+   "doc": "protocol.md",
+   "o": "less than 2 chunks",
+   "r": "dropped",
+   "s": "doc shorter"
+  },
+  {
+   "chunk": 25,
+   "doc": "protocol.md",
+   "o": "LLM server",
+   "r": "generated",
+   "s": "questions"
+  },
+  {
+   "chunk": 25,
+   "doc": "protocol.md",
+   "o": "per chunk",
+   "r": "two recipes",
+   "s": "questions"
+  },
+  {
+   "chunk": 25,
+   "doc": "protocol.md",
+   "o": "markedness dial",
+   "r": "used",
+   "s": "eval split"
+  },
+  {
+   "chunk": 26,
+   "doc": "protocol.md",
+   "o": "MS eval split",
+   "r": "per chunk",
+   "s": "two recipes"
+  },
+  {
+   "chunk": 26,
+   "doc": "protocol.md",
+   "o": "passage",
+   "r": "states answer",
+   "s": "direct question"
+  },
+  {
+   "chunk": 26,
+   "doc": "protocol.md",
+   "o": "goal",
+   "r": "describes need",
+   "s": "indirect question"
+  },
+  {
+   "chunk": 26,
+   "doc": "protocol.md",
+   "o": "per doc",
+   "r": "plus eval",
+   "s": "train chunks"
+  },
+  {
+   "chunk": 26,
+   "doc": "protocol.md",
+   "o": "README.md chunks",
+   "r": "judged against",
+   "s": "negatives"
+  },
+  {
+   "chunk": 26,
+   "doc": "protocol.md",
+   "o": "chunkrel.py",
+   "r": "generated by",
+   "s": "question files"
+  },
+  {
+   "chunk": 26,
+   "doc": "protocol.md",
+   "o": "own document",
+   "r": "see question",
+   "s": "arms"
+  },
+  {
+   "chunk": 27,
+   "doc": "protocol.md",
+   "o": "question and chunks",
+   "r": "see",
+   "s": "arms"
+  },
+  {
+   "chunk": 27,
+   "doc": "protocol.md",
+   "o": "own document",
+   "r": "see",
+   "s": "arms"
+  },
+  {
+   "chunk": 27,
+   "doc": "protocol.md",
+   "o": "bi-embed",
+   "r": "uses",
+   "s": "V"
+  },
+  {
+   "chunk": 27,
+   "doc": "protocol.md",
+   "o": "question and text",
+   "r": "reads",
+   "s": "J-llm"
+  },
+  {
+   "chunk": 27,
+   "doc": "protocol.md",
+   "o": "yes or no",
+   "r": "answers",
+   "s": "J-llm"
+  },
+  {
+   "chunk": 27,
+   "doc": "protocol.md",
+   "o": "like vector index",
+   "r": "scales",
+   "s": "J-combo"
+  },
+  {
+   "chunk": 28,
+   "doc": "protocol.md",
+   "o": "gold=1; negatives=0",
+   "r": "trained on",
+   "s": "train pairs"
+  },
+  {
+   "chunk": 28,
+   "doc": "protocol.md",
+   "o": "1e-3",
+   "r": "learning rate",
+   "s": "Adam"
+  },
+  {
+   "chunk": 28,
+   "doc": "protocol.md",
+   "o": "64",
+   "r": "size",
+   "s": "Batch"
+  },
+  {
+   "chunk": 28,
+   "doc": "protocol.md",
+   "o": "40",
+   "r": "limit",
+   "s": "epochs"
+  },
+  {
+   "chunk": 28,
+   "doc": "protocol.md",
+   "o": "sigmoid rank",
+   "r": "measured by",
+   "s": "presence@1/@3"
+  },
+  {
+   "chunk": 28,
+   "doc": "protocol.md",
+   "o": "0.5 fixed",
+   "r": "triggered at",
+   "s": "abstain"
+  },
+  {
+   "chunk": 28,
+   "doc": "protocol.md",
+   "o": "gold-in-yes-set recall",
+   "r": "reports",
+   "s": "J-menu"
+  },
+  {
+   "chunk": 28,
+   "doc": "protocol.md",
+   "o": "10 equal-width bins",
+   "r": "uses",
+   "s": "ECE"
+  },
+  {
+   "chunk": 29,
+   "doc": "protocol.md",
+   "o": "markedness",
+   "r": "pairs repairs",
+   "s": "R1"
+  },
+  {
+   "chunk": 29,
+   "doc": "protocol.md",
+   "o": "indirect",
+   "r": "keeps gap",
+   "s": "R2"
+  },
+  {
+   "chunk": 29,
+   "doc": "protocol.md",
+   "o": "J-llm",
+   "r": "exceeds",
+   "s": "R3"
+  },
+  {
+   "chunk": 29,
+   "doc": "protocol.md",
+   "o": "correct",
+   "r": "abstains",
+   "s": "J-llm"
+  },
+  {
+   "chunk": 29,
+   "doc": "protocol.md",
+   "o": "pre-filter",
+   "r": "demoted",
+   "s": "J-combo"
+  },
+  {
+   "chunk": 29,
+   "doc": "protocol.md",
+   "o": "calls",
+   "r": "sums",
+   "s": "J-llm"
+  },
+  {
+   "chunk": 30,
+   "doc": "protocol.md",
+   "o": "markedness",
+   "r": "required at low",
+   "s": "LLM read"
+  },
+  {
+   "chunk": 30,
+   "doc": "protocol.md",
+   "o": "pre-filter",
+   "r": "demoted to",
+   "s": "J-combo"
+  },
+  {
+   "chunk": 30,
+   "doc": "protocol.md",
+   "o": "J-llm gold-in-set recall",
+   "r": "does not exceed",
+   "s": "J-menu presence"
+  },
+  {
+   "chunk": 30,
+   "doc": "protocol.md",
+   "o": "4B model",
+   "r": "uses same",
+   "s": "question generation"
+  },
+  {
+   "chunk": 30,
+   "doc": "protocol.md",
+   "o": "family",
+   "r": "are one",
+   "s": "generator and judge"
+  },
+  {
+   "chunk": 30,
+   "doc": "protocol.md",
+   "o": "PROTOCOL-mcp-selection.md",
+   "r": "dominated by",
+   "s": "J-llm cost"
+  },
+  {
+   "chunk": 31,
+   "doc": "protocol.md",
+   "o": "v1",
+   "r": "spread unmeasured at",
+   "s": "J-combo seed"
+  },
+  {
+   "chunk": 31,
+   "doc": "protocol.md",
+   "o": "TRAIN split only",
+   "r": "use",
+   "s": "\u03c4 (V abstain)"
+  },
+  {
+   "chunk": 31,
+   "doc": "protocol.md",
+   "o": "anything",
+   "r": "never train",
+   "s": "eval questions"
+  },
+  {
+   "chunk": 31,
+   "doc": "protocol.md",
+   "o": "freeze candidates",
+   "r": "writes",
+   "s": "chunkrel.py"
+  },
+  {
+   "chunk": 0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "selection surface",
+   "r": "measures",
+   "s": "experiment"
+  },
+  {
+   "chunk": 0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "30\u2013100+ tools",
+   "r": "means",
+   "s": "MCP support"
+  },
+  {
+   "chunk": 0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "8192",
+   "r": "equals",
+   "s": "n_ctx"
+  },
+  {
+   "chunk": 0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "carry full descriptions",
+   "r": "cannot",
+   "s": "flat manifest"
+  },
+  {
+   "chunk": 0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "VERBATIM to file",
+   "r": "dumped",
+   "s": "corpus"
+  },
+  {
+   "chunk": 0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "locally without credentials",
+   "r": "runnable",
+   "s": "servers"
+  },
+  {
+   "chunk": 1,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "tools/list",
+   "r": "initializes",
+   "s": "stdio MCP client"
+  },
+  {
+   "chunk": 1,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "verbatim",
+   "r": "dumped",
+   "s": "tools JSON"
+  },
+  {
+   "chunk": 1,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "near-duplicate-rich servers",
+   "r": "includes",
+   "s": "target"
+  },
+  {
+   "chunk": 1,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "deliberately",
+   "r": "included",
+   "s": "github server"
+  },
+  {
+   "chunk": 1,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "deliberately",
+   "r": "included",
+   "s": "git server"
+  },
+  {
+   "chunk": 1,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "named alternates",
+   "r": "contains",
+   "s": "registered list"
+  },
+  {
+   "chunk": 2,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "build_prompt",
+   "r": "shares",
+   "s": "arm"
+  },
+  {
+   "chunk": 2,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "parse_tool_json",
+   "r": "shares",
+   "s": "arm"
+  },
+  {
+   "chunk": 2,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "temperature 0",
+   "r": "shares",
+   "s": "arm"
+  },
+  {
+   "chunk": 2,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "id_slot 5",
+   "r": "shares",
+   "s": "arm"
+  },
+  {
+   "chunk": 2,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "max_tokens 120",
+   "r": "shares",
+   "s": "arm"
+  },
+  {
+   "chunk": 2,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "history-free planning",
+   "r": "uses",
+   "s": "arm"
+  },
+  {
+   "chunk": 3,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "all N tools",
+   "r": "sees",
+   "s": "flat"
+  },
+  {
+   "chunk": 3,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "top-1 cluster's tools",
+   "r": "sees",
+   "s": "hier-desc/top1"
+  },
+  {
+   "chunk": 3,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "union of top-2 clusters' tools",
+   "r": "sees",
+   "s": "hier-desc/top2"
+  },
+  {
+   "chunk": 3,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "top-1 cluster's tools",
+   "r": "sees",
+   "s": "hier-synth/top1"
+  },
+  {
+   "chunk": 3,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "union of top-2 clusters' tools",
+   "r": "sees",
+   "s": "hier-synth/top2"
+  },
+  {
+   "chunk": 3,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "to C chars",
+   "r": "truncated",
+   "s": "per-tool fields"
+  },
+  {
+   "chunk": 4,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "routing",
+   "r": "use full description",
+   "s": "embedding pools"
+  },
+  {
+   "chunk": 4,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "shortlist",
+   "r": "use full description",
+   "s": "embedding pools"
+  },
+  {
+   "chunk": 4,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "eval",
+   "r": "has known bias",
+   "s": "hier-synth"
+  },
+  {
+   "chunk": 4,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "k=10",
+   "r": "uses k-means",
+   "s": "Clustering"
+  },
+  {
+   "chunk": 4,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "per tool",
+   "r": "has 2 positives",
+   "s": "Eval set"
+  },
+  {
+   "chunk": 4,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "tool name",
+   "r": "uses ground truth",
+   "s": "Eval set"
+  },
+  {
+   "chunk": 5,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "236 cases",
+   "r": "contains",
+   "s": "Eval set"
+  },
+  {
+   "chunk": 6,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "overall accuracy",
+   "r": "holds",
+   "s": "H1"
+  },
+  {
+   "chunk": 6,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "better than hier-desc",
+   "r": "routes",
+   "s": "hier-synth"
+  },
+  {
+   "chunk": 6,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "flat mean prompt_tokens",
+   "r": "states",
+   "s": "H2"
+  },
+  {
+   "chunk": 6,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "cluster-assignment accuracy",
+   "r": "compares",
+   "s": "H3"
+  },
+  {
+   "chunk": 6,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "accuracy gap growth",
+   "r": "tests",
+   "s": "H4"
+  },
+  {
+   "chunk": 6,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "hierarchy adoption",
+   "r": "requires",
+   "s": "rule"
+  },
+  {
+   "chunk": 7,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "before data exists",
+   "r": "require commit",
+   "s": "rule changes"
+  },
+  {
+   "chunk": 7,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "after freeze",
+   "r": "are immutable",
+   "s": "corpus"
+  },
+  {
+   "chunk": 7,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "after freeze",
+   "r": "are immutable",
+   "s": "eval"
+  },
+  {
+   "chunk": 7,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "scored results",
+   "r": "equals",
+   "s": "gate data"
+  },
+  {
+   "chunk": 7,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "gate data",
+   "r": "are not",
+   "s": "canary timings"
+  },
+  {
+   "chunk": 7,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "scored runs",
+   "r": "committed before",
+   "s": "runners"
+  },
+  {
+   "chunk": 7,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "document",
+   "r": "appended to",
+   "s": "results"
+  },
+  {
+   "chunk": 8,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "tools",
+   "r": "are invalid",
+   "s": "hier arms"
+  },
+  {
+   "chunk": 8,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "cluster assignment",
+   "r": "indexed",
+   "s": "run_eval.py"
+  },
+  {
+   "chunk": 8,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "tools",
+   "r": "were arbitrary",
+   "s": "hier shortlists"
+  },
+  {
+   "chunk": 8,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "bug",
+   "r": "unaffected",
+   "s": "flat arm"
+  },
+  {
+   "chunk": 8,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "byte-identical",
+   "r": "carried over",
+   "s": "flat arm"
+  },
+  {
+   "chunk": 8,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "union",
+   "r": "fix",
+   "s": "decision"
+  },
+  {
+   "chunk": 8,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "verbatim",
+   "r": "archived",
+   "s": "run-1 hier"
+  },
+  {
+   "chunk": 9,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "load-bearing design",
+   "r": "is parameter",
+   "s": "Cluster granularity"
+  },
+  {
+   "chunk": 9,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "MS-3 heuristic",
+   "r": "fixed by",
+   "s": "k=10"
+  },
+  {
+   "chunk": 9,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "artifact of k",
+   "r": "could be",
+   "s": "hierarchy loses"
+  },
+  {
+   "chunk": 9,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "k in set",
+   "r": "re-run with",
+   "s": "k-sweep"
+  },
+  {
+   "chunk": 9,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "clustering k only",
+   "r": "env mcp_probe_k",
+   "s": "runner gains"
+  },
+  {
+   "chunk": 9,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "flat vs hier-synth",
+   "r": "runnable",
+   "s": "H4 gradient"
+  },
+  {
+   "chunk": 10,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "invalid",
+   "r": "first sweep",
+   "s": "MS-12"
+  },
+  {
+   "chunk": 10,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "MCP_PROBE_K",
+   "r": "overwrote",
+   "s": "K constant"
+  },
+  {
+   "chunk": 10,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "k=10",
+   "r": "ran",
+   "s": "sweep arms"
+  },
+  {
+   "chunk": 10,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "accuracy",
+   "r": "byte-identical",
+   "s": "files"
+  },
+  {
+   "chunk": 11,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "accuracy, token count AND route clusters",
+   "r": "were byte-identical",
+   "s": "les"
+  },
+  {
+   "chunk": 11,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "under nominal k=5",
+   "r": "reached 9",
+   "s": "route clusters"
+  },
+  {
+   "chunk": 11,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "outside the repo",
+   "r": "kept on disk",
+   "s": "Sweep files"
+  },
+  {
+   "chunk": 11,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "the verdict",
+   "r": "entered",
+   "s": "invalid files"
+  },
+  {
+   "chunk": 11,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "single line",
+   "r": "was deleted",
+   "s": "dead constant"
+  },
+  {
+   "chunk": 11,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "K=5 yields 5 centroids",
+   "r": "verified",
+   "s": "40-vector probe"
+  },
+  {
+   "chunk": 11,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "MS-12's text",
+   "r": "rerun per",
+   "s": "full sweep"
+  },
+  {
+   "chunk": 11,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "infra-failure stop",
+   "r": "counted as",
+   "s": "background run"
+  },
+  {
+   "chunk": 11,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "in this corpus",
+   "r": "are unreachable",
+   "s": "server subsets"
+  },
+  {
+   "chunk": 11,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "github 62 tools",
+   "r": "starts with",
+   "s": "seed-0 server order"
+  },
+  {
+   "chunk": 11,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "same 78-tool prefix",
+   "r": "resolved to",
+   "s": "subsets"
+  },
+  {
+   "chunk": 12,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "same-prompt temp 0",
+   "r": "deterministic",
+   "s": "pipeline"
+  },
+  {
+   "chunk": 12,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "eval",
+   "r": "configuration properties",
+   "s": "arm differences"
+  },
+  {
+   "chunk": 12,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "before scored case",
+   "r": "crashed",
+   "s": "hier gradient runs"
+  },
+  {
+   "chunk": 12,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "nonexistent directory",
+   "r": "pointing at",
+   "s": "results path"
+  },
+  {
+   "chunk": 12,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "infra-failure class",
+   "r": "completed",
+   "s": "flat runs"
+  },
+  {
+   "chunk": 12,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "selection and null escape",
+   "r": "collapsed",
+   "s": "main arms"
+  },
+  {
+   "chunk": 12,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "recorded as main result",
+   "r": "flat manifest",
+   "s": "one-server-dominated"
+  },
+  {
+   "chunk": 13,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "278 cases",
+   "r": "had cases",
+   "s": "main arms"
+  },
+  {
+   "chunk": 13,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.6835",
+   "r": "had acc",
+   "s": "flat arm"
+  },
+  {
+   "chunk": 13,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.4317",
+   "r": "had acc",
+   "s": "hier-desc/top1"
+  },
+  {
+   "chunk": 13,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.5647",
+   "r": "had acc",
+   "s": "hier-synth/top2"
+  },
+  {
+   "chunk": 13,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "than flat's planner",
+   "r": "is stronger",
+   "s": "shortlist planner"
+  },
+  {
+   "chunk": 14,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.681",
+   "r": "equals observed",
+   "s": "k=5 decomposition"
+  },
+  {
+   "chunk": 14,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "BOTH sub-metrics",
+   "r": "beats flat",
+   "s": "k=5/top2"
+  },
+  {
+   "chunk": 14,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "McNemar test",
+   "r": "vs k5@78",
+   "s": "flat@78"
+  },
+  {
+   "chunk": 14,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "significantly",
+   "r": "wins at 78",
+   "s": "hierarchy"
+  },
+  {
+   "chunk": 14,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "not size",
+   "r": "is driver",
+   "s": "composition"
+  },
+  {
+   "chunk": 14,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "heavy server",
+   "r": "uses near-duplicate",
+   "s": "flat selection"
+  },
+  {
+   "chunk": 15,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "significant",
+   "r": "at 78",
+   "s": "hierarchy's win"
+  },
+  {
+   "chunk": 15,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "not size",
+   "r": "is the driver",
+   "s": "composition"
+  },
+  {
+   "chunk": 15,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "of the manifest",
+   "r": "at 80%",
+   "s": "near-duplicate-heavy server"
+  },
+  {
+   "chunk": 15,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "negatives 6/24",
+   "r": "collapses",
+   "s": "flat selection"
+  },
+  {
+   "chunk": 15,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "domain boundary",
+   "r": "holds",
+   "s": "coarse gate"
+  },
+  {
+   "chunk": 15,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0/186 verdicts differ",
+   "r": "on byte-identical prompts",
+   "s": "two independent temp-0 flat runs"
+  },
+  {
+   "chunk": 15,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "on this server",
+   "r": "is deterministic",
+   "s": "same-prompt temp 0"
+  },
+  {
+   "chunk": 15,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "42",
+   "r": "from github's near-duplicate block",
+   "s": "85/254 misses"
+  },
+  {
+   "chunk": 15,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "at registered k=10",
+   "r": "fails",
+   "s": "H1"
+  },
+  {
+   "chunk": 16,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "manifest gets harder",
+   "r": "pays as",
+   "s": "hierarchy"
+  },
+  {
+   "chunk": 16,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "toxic",
+   "r": "are",
+   "s": "flat manifests"
+  },
+  {
+   "chunk": 16,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "adoption rule",
+   "r": "satisfied by",
+   "s": "hier-synth/top2"
+  },
+  {
+   "chunk": 16,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "FEW domains",
+   "r": "won",
+   "s": "k=5"
+  },
+  {
+   "chunk": 16,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "flat",
+   "r": "lost to",
+   "s": "k\u22658"
+  },
+  {
+   "chunk": 16,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "mean 67 tools",
+   "r": "shortlist",
+   "s": "top-2 union"
+  },
+  {
+   "chunk": 17,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "not needle-finder",
+   "r": "is boundary",
+   "s": "gate"
+  },
+  {
+   "chunk": 18,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "k\u22484\u20136",
+   "r": "with rule",
+   "s": "ed server-set"
+  },
+  {
+   "chunk": 18,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "change",
+   "r": "make cheap",
+   "s": "MS-3 pools"
+  },
+  {
+   "chunk": 18,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "delegate picks",
+   "r": "kept on",
+   "s": "plan-twice"
+  },
+  {
+   "chunk": 18,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "existing path",
+   "r": "hang under",
+   "s": "MCP tools"
+  },
+  {
+   "chunk": 18,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "flat carried",
+   "r": "run 2",
+   "s": "results.jsonl"
+  },
+  {
+   "chunk": 18,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "invalid",
+   "r": "archived",
+   "s": "MS-11"
+  },
+  {
+   "chunk": 18,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "pre-data",
+   "r": "registered",
+   "s": "MS-15"
+  },
+  {
+   "chunk": 18,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "task smells",
+   "r": "called when",
+   "s": "mcp_search"
+  },
+  {
+   "chunk": 19,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "space as run 2",
+   "r": "newly created",
+   "s": "results file"
+  },
+  {
+   "chunk": 19,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "space as run 2",
+   "r": "untouched",
+   "s": "existing results"
+  },
+  {
+   "chunk": 19,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "norm_router_text",
+   "r": "use production path",
+   "s": "search mechanics"
+  },
+  {
+   "chunk": 19,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "name plus desc",
+   "r": "return tools verbatim",
+   "s": "search mechanics"
+  },
+  {
+   "chunk": 19,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "Rev G spirit",
+   "r": "plan history-free",
+   "s": "search mechanics"
+  },
+  {
+   "chunk": 19,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "final pick",
+   "r": "uses mcp_search",
+   "s": "search-primary arm"
+  },
+  {
+   "chunk": 20,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "null on 6 cases",
+   "r": "produced",
+   "s": "search-primary contract"
+  },
+  {
+   "chunk": 20,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "mcp_search",
+   "r": "invoked",
+   "s": "model"
+  },
+  {
+   "chunk": 20,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "null bias",
+   "r": "measure",
+   "s": "arm"
+  },
+  {
+   "chunk": 20,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "dead mass",
+   "r": "recover",
+   "s": "escape arm"
+  },
+  {
+   "chunk": 20,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "overall",
+   "r": "finishes",
+   "s": "gate k=5"
+  },
+  {
+   "chunk": 20,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "implementation spec",
+   "r": "holds",
+   "s": "P2"
+  },
+  {
+   "chunk": 21,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "invoked mcp_search",
+   "r": "never",
+   "s": "model"
+  },
+  {
+   "chunk": 21,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "null bias",
+   "r": "measured",
+   "s": "arm"
+  },
+  {
+   "chunk": 21,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "CONTRACT_PRIME",
+   "r": "replaces",
+   "s": "Fix"
+  },
+  {
+   "chunk": 21,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "utterance verbatim",
+   "r": "falls back",
+   "s": "call"
+  },
+  {
+   "chunk": 21,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "one search per case",
+   "r": "not executed",
+   "s": "second call"
+  },
+  {
+   "chunk": 22,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "not search-primary",
+   "r": "gated on arm",
+   "s": "search-execution branch"
+  },
+  {
+   "chunk": 22,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "for both arms",
+   "r": "now runs",
+   "s": "mcp_search branch"
+  },
+  {
+   "chunk": 22,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "Scoring bug",
+   "r": "implemented as",
+   "s": "MS-15 clause"
+  },
+  {
+   "chunk": 23,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "ok = False",
+   "r": "implemented as",
+   "s": "MS-15 clause"
+  },
+  {
+   "chunk": 23,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "legitimate search",
+   "r": "made after",
+   "s": "real-tool pick"
+  },
+  {
+   "chunk": 23,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "correct tool",
+   "r": "re-picked",
+   "s": "3 replayed cases"
+  },
+  {
+   "chunk": 23,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "invalid",
+   "r": "are",
+   "s": "278 search-primary records"
+  },
+  {
+   "chunk": 23,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "that branch",
+   "r": "never enters",
+   "s": "hier-synth-esc/top2@k5 arm"
+  },
+  {
+   "chunk": 23,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "descriptive evidence",
+   "r": "remain",
+   "s": "Search-trigger stats"
+  },
+  {
+   "chunk": 24,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.914",
+   "r": "search rate",
+   "s": "search-primary"
+  },
+  {
+   "chunk": 24,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "1.91",
+   "r": "calls",
+   "s": "search-primary"
+  },
+  {
+   "chunk": 24,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "928",
+   "r": "ms",
+   "s": "search-primary"
+  },
+  {
+   "chunk": 24,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0",
+   "r": "search rate",
+   "s": "gate synth/top2 k5"
+  },
+  {
+   "chunk": 24,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0",
+   "r": "search rate",
+   "s": "flat (ref)"
+  },
+  {
+   "chunk": 24,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.219",
+   "r": "search rate",
+   "s": "hier-synth-esc/top2@k5"
+  },
+  {
+   "chunk": 25,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "not picking",
+   "r": "loss is retrieval",
+   "s": "Search-primary decomposition"
+  },
+  {
+   "chunk": 26,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "dead mass",
+   "r": "misses 48%",
+   "s": "true routing"
+  },
+  {
+   "chunk": 26,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "run-2 baseline",
+   "r": "recovery 5/31",
+   "s": "dead-mass positives"
+  },
+  {
+   "chunk": 26,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "unchanged",
+   "r": "pick quality",
+   "s": "search result"
+  },
+  {
+   "chunk": 26,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "escape variant",
+   "r": "lost 3",
+   "s": "plain k5"
+  },
+  {
+   "chunk": 26,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "accuracy points",
+   "r": "costs 4",
+   "s": "escape variant"
+  },
+  {
+   "chunk": 26,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "gate",
+   "r": "worse than",
+   "s": "P1"
+  },
+  {
+   "chunk": 26,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "928 ms",
+   "r": "fastest arm",
+   "s": "P1"
+  },
+  {
+   "chunk": 27,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "model scale",
+   "r": "rejected",
+   "s": "search arm"
+  },
+  {
+   "chunk": 27,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "default",
+   "r": "rejected",
+   "s": "escape hatch"
+  },
+  {
+   "chunk": 27,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "utterance embedding",
+   "r": "delivers",
+   "s": "retrieval recall"
+  },
+  {
+   "chunk": 27,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "wrong turns",
+   "r": "fires",
+   "s": "recovery"
+  },
+  {
+   "chunk": 27,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "recovered mass",
+   "r": "outweighs",
+   "s": "tax"
+  },
+  {
+   "chunk": 27,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "utterance-side retriever",
+   "r": "is",
+   "s": "lever"
+  },
+  {
+   "chunk": 28,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "MS-12/15 verdicts",
+   "r": "implemented per",
+   "s": "MCP support"
+  },
+  {
+   "chunk": 28,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "data exists",
+   "r": "registered before",
+   "s": "measured ground"
+  },
+  {
+   "chunk": 28,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "prefixed names",
+   "r": "show mcp tools",
+   "s": "production manifests"
+  },
+  {
+   "chunk": 28,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "utterance-keyed",
+   "r": "untouched by",
+   "s": "routing"
+  },
+  {
+   "chunk": 28,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "production config",
+   "r": "enabled in",
+   "s": "server"
+  },
+  {
+   "chunk": 29,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "disabled if failing",
+   "r": "stays",
+   "s": "server"
+  },
+  {
+   "chunk": 29,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "SAME planner",
+   "r": "run on",
+   "s": "eval"
+  },
+  {
+   "chunk": 29,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "SAME selector mode",
+   "r": "run on",
+   "s": "eval"
+  },
+  {
+   "chunk": 29,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "new protocol amendment for regeneration",
+   "r": "requires",
+   "s": "server"
+  },
+  {
+   "chunk": 31,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "evals/_invalid_gen/",
+   "r": "archived to",
+   "s": "incomplete freeze files"
+  },
+  {
+   "chunk": 31,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "refrozen",
+   "r": "regenerated and",
+   "s": "servers"
+  },
+  {
+   "chunk": 31,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "own process group",
+   "r": "spawned with",
+   "s": "MCPServer"
+  },
+  {
+   "chunk": 31,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "to_thread",
+   "r": "run under",
+   "s": "blocking reads"
+  },
+  {
+   "chunk": 31,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "next call",
+   "r": "reconnect on",
+   "s": "dead servers"
+  },
+  {
+   "chunk": 31,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "respawn cooldown",
+   "r": "clears",
+   "s": "deliberate kill"
+  },
+  {
+   "chunk": 32,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "port of frozen probe",
+   "r": "is coarse gate",
+   "s": "web/mcp_gate.py"
+  },
+  {
+   "chunk": 32,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "norm_router_text",
+   "r": "uses",
+   "s": "web/mcp_gate.py"
+  },
+  {
+   "chunk": 32,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "k-means",
+   "r": "uses",
+   "s": "web/mcp_gate.py"
+  },
+  {
+   "chunk": 32,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "top-2 union",
+   "r": "uses",
+   "s": "web/mcp_gate.py"
+  },
+  {
+   "chunk": 32,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "server and tool",
+   "r": "namespaces",
+   "s": "web/mcp_gate.py"
+  },
+  {
+   "chunk": 32,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "cached index",
+   "r": "is",
+   "s": "web/mcp_index.json"
+  },
+  {
+   "chunk": 33,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "results",
+   "r": "results",
+   "s": "web/server.py"
+  },
+  {
+   "chunk": 35,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "unless MCP_PROBE_SUMMARY set",
+   "r": "writes default path",
+   "s": "summary.json"
+  },
+  {
+   "chunk": 35,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "no data affected",
+   "r": "reads results_prefix.jsonl",
+   "s": "adjudication"
+  },
+  {
+   "chunk": 35,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "summary data",
+   "r": "preserves prefixed",
+   "s": "summary_prefix.json"
+  },
+  {
+   "chunk": 35,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "committed run-2 state",
+   "r": "restored to",
+   "s": "summary.json"
+  },
+  {
+   "chunk": 35,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "no auth required",
+   "r": "uses streamable http",
+   "s": "remote transport"
+  },
+  {
+   "chunk": 35,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "decision only no-auth servers allowed",
+   "r": "deferred to user",
+   "s": "auth"
+  },
+  {
+   "chunk": 37,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "8/8 results",
+   "r": "passed smoke test",
+   "s": "tools/mcp_http_smoke.py"
+  },
+  {
+   "chunk": 37,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "stdio smoke",
+   "r": "re-run unchanged",
+   "s": "tools/mcp_smoke.py"
+  },
+  {
+   "chunk": 37,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "re-init retry",
+   "r": "caused transparent",
+   "s": "mid-session 404"
+  },
+  {
+   "chunk": 37,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "seen server",
+   "r": "triggered delete",
+   "s": "kill()"
+  },
+  {
+   "chunk": 37,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "JSON tools",
+   "r": "completed round-trip",
+   "s": "tools/call"
+  },
+  {
+   "chunk": 37,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "call",
+   "r": "parsed successfully",
+   "s": "SSE-response"
+  },
+  {
+   "chunk": 38,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "nowhere",
+   "r": "enabled",
+   "s": "deepwiki"
+  },
+  {
+   "chunk": 38,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "1818 chars",
+   "r": "returned",
+   "s": "tools/list"
+  },
+  {
+   "chunk": 38,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.8 s",
+   "r": "took",
+   "s": "read_wiki_structure"
+  },
+  {
+   "chunk": 38,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "because",
+   "r": "untouched",
+   "s": "gate"
+  },
+  {
+   "chunk": 38,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "yet",
+   "r": "deferred",
+   "s": "auth"
+  },
+  {
+   "chunk": 38,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "in config",
+   "r": "missing",
+   "s": "headers"
+  },
+  {
+   "chunk": 39,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "harness call",
+   "r": "passes creds",
+   "s": "probe harness"
+  },
+  {
+   "chunk": 39,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "MINIO_ENDPOINT",
+   "r": "uploads frames",
+   "s": "snap_image_to_minio"
+  },
+  {
+   "chunk": 39,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "third party",
+   "r": "hardcodes creds",
+   "s": "get_camera_list"
+  },
+  {
+   "chunk": 39,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "external stream",
+   "r": "hardcodes creds",
+   "s": "get_camera_live"
+  },
+  {
+   "chunk": 40,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "third party",
+   "r": "hardcode creds",
+   "s": "get_camera_list"
+  },
+  {
+   "chunk": 40,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "camera",
+   "r": "physically moves",
+   "s": "handle_ptz_control"
+  },
+  {
+   "chunk": 40,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "focus",
+   "r": "moves",
+   "s": "focus_move"
+  },
+  {
+   "chunk": 40,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "secret key",
+   "r": "prints",
+   "s": "minio.py"
+  },
+  {
+   "chunk": 40,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "dummy service",
+   "r": "publishes",
+   "s": "handle_discover_devices"
+  },
+  {
+   "chunk": 40,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "LAN-wide",
+   "r": "allowed",
+   "s": "handle_discover_devices"
+  },
+  {
+   "chunk": 41,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "OUR CLIENT",
+   "r": "clean pass",
+   "s": "client"
+  },
+  {
+   "chunk": 41,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "THE SERVER'S stdio entry",
+   "r": "broken entry",
+   "s": "server"
+  },
+  {
+   "chunk": 41,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "real tools",
+   "r": "orphaned",
+   "s": "tools"
+  },
+  {
+   "chunk": 41,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "ws-discovery XAddrs",
+   "r": "confirmed",
+   "s": "camera"
+  },
+  {
+   "chunk": 41,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "get_rtsp",
+   "r": "returned",
+   "s": "streams"
+  },
+  {
+   "chunk": 42,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "camera answer",
+   "r": "relay",
+   "s": "pipeline"
+  },
+  {
+   "chunk": 42,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "NULL fields",
+   "r": "returned",
+   "s": "get_deviceInfo"
+  },
+  {
+   "chunk": 42,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "2 streams",
+   "r": "returned",
+   "s": "get_rtsp"
+  },
+  {
+   "chunk": 42,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "measured",
+   "r": "design",
+   "s": "creds-as-args"
+  },
+  {
+   "chunk": 42,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "host and credentials",
+   "r": "pass",
+   "s": "voice planner"
+  },
+  {
+   "chunk": 42,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "user:pass URI",
+   "r": "embeds",
+   "s": "get_rtsp"
+  },
+  {
+   "chunk": 42,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "real camera",
+   "r": "verified",
+   "s": "onvif-mcp"
+  },
+  {
+   "chunk": 43,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "real camera",
+   "r": "verified against",
+   "s": "implementation"
+  },
+  {
+   "chunk": 43,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "house rules",
+   "r": "not shippable",
+   "s": "onvif-mcp AS-IS"
+  },
+  {
+   "chunk": 43,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "ONVIF_HOST",
+   "r": "reads",
+   "s": "thin wrapper server"
+  },
+  {
+   "chunk": 43,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "ONVIF_USER",
+   "r": "reads",
+   "s": "thin wrapper server"
+  },
+  {
+   "chunk": 43,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "ONVIF_PASS",
+   "r": "reads",
+   "s": "thin wrapper server"
+  },
+  {
+   "chunk": 43,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "device does not support PTZ control",
+   "r": "raises",
+   "s": "handle_ptz_control"
+  },
+  {
+   "chunk": 43,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "speed 0.0",
+   "r": "halts",
+   "s": "focus_move"
+  },
+  {
+   "chunk": 44,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "imaging service",
+   "r": "lacks",
+   "s": "camera"
+  },
+  {
+   "chunk": 44,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "PTZ control",
+   "r": "supports",
+   "s": "camera"
+  },
+  {
+   "chunk": 44,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "fixed unit",
+   "r": "is",
+   "s": "camera"
+  },
+  {
+   "chunk": 44,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "no pan tilt",
+   "r": "has",
+   "s": "camera"
+  },
+  {
+   "chunk": 44,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "no PTZ node",
+   "r": "has",
+   "s": "camera"
+  },
+  {
+   "chunk": 44,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "validation",
+   "r": "failed",
+   "s": "camera"
+  },
+  {
+   "chunk": 45,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "MCPError",
+   "r": "surfaced error",
+   "s": "client"
+  },
+  {
+   "chunk": 45,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "no PTZ",
+   "r": "is fixed unit",
+   "s": "camera"
+  },
+  {
+   "chunk": 45,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "no zoom",
+   "r": "has motorized focus",
+   "s": "camera"
+  },
+  {
+   "chunk": 45,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "PTZ XAddr",
+   "r": "advertises",
+   "s": "camera"
+  },
+  {
+   "chunk": 45,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "none",
+   "r": "has ptz nodes",
+   "s": "camera"
+  },
+  {
+   "chunk": 45,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "none",
+   "r": "has ptz configs",
+   "s": "camera"
+  },
+  {
+   "chunk": 48,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "utterances",
+   "r": "generates",
+   "s": "RECIPE_C"
+  },
+  {
+   "chunk": 48,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "frozen pool",
+   "r": "mirror",
+   "s": "continuations"
+  },
+  {
+   "chunk": 48,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "MS-17b",
+   "r": "uses",
+   "s": "generation"
+  },
+  {
+   "chunk": 48,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "overwriting",
+   "r": "refuses",
+   "s": "generation"
+  },
+  {
+   "chunk": 48,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "at least 5",
+   "r": "require",
+   "s": "continuations"
+  },
+  {
+   "chunk": 48,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "JSON",
+   "r": "output",
+   "s": "continuations"
+  },
+  {
+   "chunk": 49,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "synth_pools.json",
+   "r": "rebuilt from",
+   "s": "Index"
+  },
+  {
+   "chunk": 49,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "continuation text",
+   "r": "excludes",
+   "s": "Index"
+  },
+  {
+   "chunk": 49,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "242 frozen positives",
+   "r": "contains",
+   "s": "Set A"
+  },
+  {
+   "chunk": 49,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "frozen continuation text",
+   "r": "contains",
+   "s": "Set B"
+  },
+  {
+   "chunk": 49,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "retrieval-only",
+   "r": "uses",
+   "s": "Scoring"
+  },
+  {
+   "chunk": 49,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "data",
+   "r": "set before",
+   "s": "Bars"
+  },
+  {
+   "chunk": 50,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "yes",
+   "r": "worth registering",
+   "s": "17b"
+  },
+  {
+   "chunk": 50,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "by 0.10",
+   "r": "collapses",
+   "s": "recall_B"
+  },
+  {
+   "chunk": 50,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "marker legs",
+   "r": "keeps",
+   "s": "loop"
+  },
+  {
+   "chunk": 50,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "RECIPE_C-augmented pools",
+   "r": "is",
+   "s": "candidate"
+  },
+  {
+   "chunk": 50,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "separately",
+   "r": "registered",
+   "s": "MS-18"
+  },
+  {
+   "chunk": 50,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "2026-10-06",
+   "r": "results",
+   "s": "MS-17a"
+  },
+  {
+   "chunk": 51,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "untouched",
+   "r": "untouched",
+   "s": "rows"
+  },
+  {
+   "chunk": 51,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "from pools",
+   "r": "rebuilt",
+   "s": "primary numbers"
+  },
+  {
+   "chunk": 51,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "committed recall",
+   "r": "reproduces",
+   "s": "recall_A"
+  },
+  {
+   "chunk": 51,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "statistical bar",
+   "r": "passes",
+   "s": "recall_B"
+  },
+  {
+   "chunk": 51,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "non-inferiority",
+   "r": "fails",
+   "s": "delta_pooled"
+  },
+  {
+   "chunk": 51,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "to pools",
+   "r": "not applied",
+   "s": "candidate remedy"
+  },
+  {
+   "chunk": 51,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "56 tools",
+   "r": "degrade",
+   "s": "tools"
+  },
+  {
+   "chunk": 52,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "Per-tool shape",
+   "r": "degrade",
+   "s": "56 tools"
+  },
+  {
+   "chunk": 52,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "GitHub-class",
+   "r": "worst",
+   "s": "jargon-heavy tools"
+  },
+  {
+   "chunk": 52,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "continuation keying",
+   "r": "works",
+   "s": "System-1 loop"
+  },
+  {
+   "chunk": 52,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "model's retrieval",
+   "r": "above",
+   "s": "0.81 recall"
+  },
+  {
+   "chunk": 52,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "shortlists differ",
+   "r": "confirms",
+   "s": "0.60 Jaccard"
+  },
+  {
+   "chunk": 52,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "need-check readout",
+   "r": "measures",
+   "s": "MS-17b"
+  },
+  {
+   "chunk": 52,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "round boundary",
+   "r": "decides",
+   "s": "first classifier"
+  },
+  {
+   "chunk": 53,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "call ability",
+   "r": "measures",
+   "s": "DEPLOYED tree"
+  },
+  {
+   "chunk": 53,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "frozen RECIPE_C",
+   "r": "is",
+   "s": "tool"
+  },
+  {
+   "chunk": 53,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "RECIPE_D",
+   "r": "is",
+   "s": "continue"
+  },
+  {
+   "chunk": 53,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "RECIPE_E",
+   "r": "is",
+   "s": "done"
+  },
+  {
+   "chunk": 54,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "121 corpus tools",
+   "r": "uses tools",
+   "s": "RECIPE_D/E"
+  },
+  {
+   "chunk": 54,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "5 and 7",
+   "r": "sets seeds",
+   "s": "RECIPE_D/E"
+  },
+  {
+   "chunk": 54,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "utterances",
+   "r": "generates",
+   "s": "RECIPE_D/E"
+  },
+  {
+   "chunk": 54,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0 to 7",
+   "r": "uses texts",
+   "s": "RECIPE_C"
+  },
+  {
+   "chunk": 54,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "held-out halves",
+   "r": "splits",
+   "s": "eval"
+  },
+  {
+   "chunk": 54,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "cosine argmax",
+   "r": "classifies",
+   "s": "Readout"
+  },
+  {
+   "chunk": 55,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "all three pass",
+   "r": "justified by",
+   "s": "MS-19"
+  },
+  {
+   "chunk": 55,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "false-tool fails",
+   "r": "passes but",
+   "s": "tool recall"
+  },
+  {
+   "chunk": 55,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "need-check is dead",
+   "r": "fails and",
+   "s": "tool recall"
+  },
+  {
+   "chunk": 55,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "for false-tool fail",
+   "r": "is candidate remedy",
+   "s": "MS-17c"
+  },
+  {
+   "chunk": 55,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "disclosed explicitly",
+   "r": "has two crashes",
+   "s": "MS-17b"
+  },
+  {
+   "chunk": 57,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "need-check readout is DEAD",
+   "r": "fails",
+   "s": "tool-class recall"
+  },
+  {
+   "chunk": 57,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "model-driven markers",
+   "r": "uses",
+   "s": "deep_turn loop"
+  },
+  {
+   "chunk": 57,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "tool and continue",
+   "r": "is symmetric",
+   "s": "confusion"
+  },
+  {
+   "chunk": 57,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "false-tool rate 0.2012",
+   "r": "is 0.5704",
+   "s": "overall accuracy"
+  },
+  {
+   "chunk": 57,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "trained readout head",
+   "r": "would be",
+   "s": "rescue"
+  },
+  {
+   "chunk": 57,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "current evidence",
+   "r": "not justified",
+   "s": "structural miss"
+  },
+  {
+   "chunk": 58,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "premise dead",
+   "r": "closed",
+   "s": "MS-19"
+  },
+  {
+   "chunk": 58,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "registered bars",
+   "r": "failed",
+   "s": "MS-17b"
+  },
+  {
+   "chunk": 58,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "model-driven markers",
+   "r": "keeps",
+   "s": "deep_turn"
+  },
+  {
+   "chunk": 58,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "untracked",
+   "r": "sits",
+   "s": "snapshot.json"
+  },
+  {
+   "chunk": 58,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "device local keys",
+   "r": "holds",
+   "s": "snapshot.json"
+  },
+  {
+   "chunk": 60,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "frozen data",
+   "r": "post-hoc analysis",
+   "s": "MS-16b failure"
+  },
+  {
+   "chunk": 60,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "deployment gate",
+   "r": "fail",
+   "s": "filesystem"
+  },
+  {
+   "chunk": 60,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "deployment gate",
+   "r": "fail",
+   "s": "git"
+  },
+  {
+   "chunk": 60,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "deployment gate",
+   "r": "pass",
+   "s": "time"
+  },
+  {
+   "chunk": 60,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "deployment gate",
+   "r": "pass",
+   "s": "everything"
+  },
+  {
+   "chunk": 60,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "four servers",
+   "r": "read-only replay",
+   "s": "method"
+  },
+  {
+   "chunk": 61,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "93.8 percent",
+   "r": "achieved overall",
+   "s": "Routing recall"
+  },
+  {
+   "chunk": 61,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "join causes",
+   "r": "found mechanical",
+   "s": "Failure decomposition"
+  },
+  {
+   "chunk": 61,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "selection and routing",
+   "r": "caused by",
+   "s": "Filesystem fails"
+  },
+  {
+   "chunk": 61,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "selection and routing",
+   "r": "caused by",
+   "s": "Git fails"
+  },
+  {
+   "chunk": 61,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "selection only",
+   "r": "caused by",
+   "s": "Time fails"
+  },
+  {
+   "chunk": 61,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "exonerated",
+   "r": "states gate",
+   "s": "Finding 1"
+  },
+  {
+   "chunk": 62,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "read_text_file",
+   "r": "deprecated",
+   "s": "read_file"
+  },
+  {
+   "chunk": 62,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "git_log",
+   "r": "defensible",
+   "s": "git_show"
+  },
+  {
+   "chunk": 62,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "list_directory_with_sizes",
+   "r": "defensible",
+   "s": "list_directory"
+  },
+  {
+   "chunk": 62,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "get_current_time",
+   "r": "defensible",
+   "s": "reminder"
+  },
+  {
+   "chunk": 62,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "simulate-research-query",
+   "r": "defensible",
+   "s": "ir_research"
+  },
+  {
+   "chunk": 62,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "path",
+   "r": "null",
+   "s": "read_notes"
+  },
+  {
+   "chunk": 63,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "everything server",
+   "r": "wants",
+   "s": "demo-tool"
+  },
+  {
+   "chunk": 63,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "failures",
+   "r": "eval-borne",
+   "s": "tally"
+  },
+  {
+   "chunk": 63,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "failures",
+   "r": "fixed",
+   "s": "planner"
+  },
+  {
+   "chunk": 63,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "34-64",
+   "r": "scored",
+   "s": "filesystem"
+  },
+  {
+   "chunk": 63,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "44-64",
+   "r": "scored",
+   "s": "git"
+  },
+  {
+   "chunk": 63,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "schema discipline",
+   "r": "picked",
+   "s": "planner"
+  },
+  {
+   "chunk": 64,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "scope",
+   "r": "change only",
+   "s": "EVAL GENERATION"
+  },
+  {
+   "chunk": 64,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.60",
+   "r": "set to",
+   "s": "pos threshold"
+  },
+  {
+   "chunk": 64,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "20/24",
+   "r": "set to",
+   "s": "neg threshold"
+  },
+  {
+   "chunk": 64,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "B8",
+   "r": "amends",
+   "s": "RECIPE_B9"
+  },
+  {
+   "chunk": 64,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "self-contained",
+   "r": "must be",
+   "s": "utterance"
+  },
+  {
+   "chunk": 64,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "only reasonable",
+   "r": "must be",
+   "s": "tool choice"
+  },
+  {
+   "chunk": 66,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "MCP_EVAL_SUFFIX",
+   "r": "take suffix",
+   "s": "paths"
+  },
+  {
+   "chunk": 66,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "recipe change",
+   "r": "regenerate",
+   "s": "evals"
+  },
+  {
+   "chunk": 66,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "same recipe",
+   "r": "face",
+   "s": "servers"
+  },
+  {
+   "chunk": 66,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "committed untouched",
+   "r": "stay",
+   "s": "evals"
+  },
+  {
+   "chunk": 66,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "MCP_EVAL_SUFFIX=b9",
+   "r": "passed",
+   "s": "launch"
+  },
+  {
+   "chunk": 66,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "no cases",
+   "r": "scored",
+   "s": "cases"
+  },
+  {
+   "chunk": 66,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "four-server manifest",
+   "r": "combined",
+   "s": "results"
+  },
+  {
+   "chunk": 67,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "PASS to FAIL",
+   "r": "flipped",
+   "s": "everything verdict"
+  },
+  {
+   "chunk": 67,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "FAIL to PASS",
+   "r": "flipped",
+   "s": "filesystem verdict"
+  },
+  {
+   "chunk": 67,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "FAIL to PASS",
+   "r": "flipped",
+   "s": "git verdict"
+  },
+  {
+   "chunk": 67,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "substantial",
+   "r": "eval-borne",
+   "s": "B8 failures"
+  },
+  {
+   "chunk": 67,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "MCP SDK",
+   "r": "demo fixtures",
+   "s": "everything tools"
+  },
+  {
+   "chunk": 67,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "assistant",
+   "r": "correct",
+   "s": "model"
+  },
+  {
+   "chunk": 68,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "demo-fixture",
+   "r": "demand precision",
+   "s": "frozen cases"
+  },
+  {
+   "chunk": 68,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "native research",
+   "r": "picks tool",
+   "s": "model"
+  },
+  {
+   "chunk": 68,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "demo-fixture",
+   "r": "refuses utterances",
+   "s": "model"
+  },
+  {
+   "chunk": 68,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "distinct user",
+   "r": "map to intents",
+   "s": "demo tools"
+  },
+  {
+   "chunk": 68,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "native",
+   "r": "maps to note",
+   "s": "git commit"
+  },
+  {
+   "chunk": 68,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "text file",
+   "r": "maps to read",
+   "s": "filesystem edit"
+  },
+  {
+   "chunk": 68,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "enablement",
+   "r": "cleared for",
+   "s": "deployment state"
+  },
+  {
+   "chunk": 69,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "registered PASS",
+   "r": "failed against",
+   "s": "filesystem re-run"
+  },
+  {
+   "chunk": 69,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "registration",
+   "r": "ran identical to",
+   "s": "git re-run"
+  },
+  {
+   "chunk": 69,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "registration",
+   "r": "ran identical to",
+   "s": "time re-run"
+  },
+  {
+   "chunk": 69,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "content hash",
+   "r": "keyed on",
+   "s": "gate cache"
+  },
+  {
+   "chunk": 69,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "cached hash",
+   "r": "produced",
+   "s": "spawn sets"
+  },
+  {
+   "chunk": 69,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "fresh rebuild",
+   "r": "produced",
+   "s": "spawn sets"
+  },
+  {
+   "chunk": 71,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "filesystem 2026.8.31",
+   "r": "holds version",
+   "s": "npm cache"
+  },
+  {
+   "chunk": 71,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "time/git 2026.8.18",
+   "r": "holds version",
+   "s": "uv cache"
+  },
+  {
+   "chunk": 71,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "hash differences",
+   "r": "was motivated by",
+   "s": "incident entry"
+  },
+  {
+   "chunk": 71,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "different scheme",
+   "r": "were artifacts of",
+   "s": "hash differences"
+  },
+  {
+   "chunk": 72,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "artifacts",
+   "r": "motivated by",
+   "s": "incident entry"
+  },
+  {
+   "chunk": 72,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "prompt_tokens",
+   "r": "found by",
+   "s": "ground difference"
+  },
+  {
+   "chunk": 72,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "log",
+   "r": "confirmed by",
+   "s": "registered run"
+  },
+  {
+   "chunk": 72,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "servers",
+   "r": "connected",
+   "s": "registered MS-16b-2"
+  },
+  {
+   "chunk": 72,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "servers",
+   "r": "connected",
+   "s": "B4a re-runs"
+  },
+  {
+   "chunk": 72,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "byte-copied",
+   "r": "results",
+   "s": "decisive replication"
+  },
+  {
+   "chunk": 72,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "tools",
+   "r": "versus",
+   "s": "filesystem pos"
+  },
+  {
+   "chunk": 74,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "ground",
+   "r": "runs in",
+   "s": "filesystem"
+  },
+  {
+   "chunk": 74,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "up to 20 tools",
+   "r": "measured flat",
+   "s": "frozen recipe"
+  },
+  {
+   "chunk": 74,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "at 28",
+   "r": "fails gate",
+   "s": "filesystem"
+  },
+  {
+   "chunk": 74,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "flat",
+   "r": "is",
+   "s": "candidate"
+  },
+  {
+   "chunk": 74,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "28",
+   "r": "treated as",
+   "s": "MCP_FLAT_MAX"
+  },
+  {
+   "chunk": 75,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "MCP_FLAT_MAX=28",
+   "r": "adopts",
+   "s": "decision rule"
+  },
+  {
+   "chunk": 75,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "bar",
+   "r": "fails",
+   "s": "filesystem pos"
+  },
+  {
+   "chunk": 75,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "bar",
+   "r": "passes",
+   "s": "git pos"
+  },
+  {
+   "chunk": 75,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "bar",
+   "r": "passes",
+   "s": "time pos"
+  },
+  {
+   "chunk": 75,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "production",
+   "r": "restarted",
+   "s": "server"
+  },
+  {
+   "chunk": 75,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "regression check",
+   "r": "re-run",
+   "s": "capability suite"
+  },
+  {
+   "chunk": 76,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "code",
+   "r": "adopted",
+   "s": "flat-28"
+  },
+  {
+   "chunk": 76,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "28",
+   "r": "set to",
+   "s": "MCP_FLAT_MAX"
+  },
+  {
+   "chunk": 76,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "flat selector",
+   "r": "restarted on",
+   "s": "production"
+  },
+  {
+   "chunk": 76,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "regression check",
+   "r": "re-run as",
+   "s": "capability suite"
+  },
+  {
+   "chunk": 76,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "one case",
+   "r": "clears by",
+   "s": "filesystem"
+  },
+  {
+   "chunk": 76,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "back to flat",
+   "r": "gives one case",
+   "s": "git"
+  },
+  {
+   "chunk": 76,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "by flat",
+   "r": "untouched",
+   "s": "time"
+  },
+  {
+   "chunk": 77,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "ground",
+   "r": "is fragile",
+   "s": "compliance"
+  },
+  {
+   "chunk": 77,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "week",
+   "r": "was +-1 case",
+   "s": "noise"
+  },
+  {
+   "chunk": 77,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "manifest",
+   "r": "gave case",
+   "s": "git"
+  },
+  {
+   "chunk": 77,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "ground change",
+   "r": "is parking",
+   "s": "fallback"
+  },
+  {
+   "chunk": 77,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "results",
+   "r": "adjudicated",
+   "s": "wrapper"
+  },
+  {
+   "chunk": 77,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "files",
+   "r": "unset meant",
+   "s": "SUFFIX"
+  },
+  {
+   "chunk": 77,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "arm",
+   "r": "is genuine",
+   "s": "run"
+  },
+  {
+   "chunk": 77,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "number",
+   "r": "manufactured",
+   "s": "SUFFIX"
+  },
+  {
+   "chunk": 77,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "check",
+   "r": "passed",
+   "s": "suite"
+  },
+  {
+   "chunk": 77,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "manifest",
+   "r": "restarted",
+   "s": "server"
+  },
+  {
+   "chunk": 78,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "frozen .b9 evals",
+   "r": "are byte-copies",
+   "s": "evals"
+  },
+  {
+   "chunk": 78,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "registered wrapper",
+   "r": "is the",
+   "s": "tools/mcp_eval/run_flat28.py"
+  },
+  {
+   "chunk": 78,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "MCP_FLAT_MAX override",
+   "r": "uses",
+   "s": "tools/mcp_eval/run_flat28.py"
+  },
+  {
+   "chunk": 78,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "gate shortlist",
+   "r": "is for",
+   "s": "beam-2 path scoring"
+  },
+  {
+   "chunk": 78,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "UNORDERED union",
+   "r": "is an",
+   "s": "k=5/top-2 shortlist"
+  },
+  {
+   "chunk": 78,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "says keep two candidates",
+   "r": "adoption",
+   "s": "production router-walk"
+  },
+  {
+   "chunk": 79,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "top-2 clusters",
+   "r": "uses",
+   "s": "beam-union"
+  },
+  {
+   "chunk": 79,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "top-1 clusters",
+   "r": "uses",
+   "s": "greedy16"
+  },
+  {
+   "chunk": 79,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "top-2 clusters",
+   "r": "uses",
+   "s": "beam16"
+  },
+  {
+   "chunk": 79,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "top-2 clusters",
+   "r": "uses",
+   "s": "beam32"
+  },
+  {
+   "chunk": 79,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "registry order",
+   "r": "uses",
+   "s": "union"
+  },
+  {
+   "chunk": 79,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "mean-path desc",
+   "r": "uses",
+   "s": "beam-union"
+  },
+  {
+   "chunk": 80,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "router",
+   "r": "measured on",
+   "s": "mean"
+  },
+  {
+   "chunk": 80,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "arm",
+   "r": "decomposes per",
+   "s": "hit_rate"
+  },
+  {
+   "chunk": 80,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "arm",
+   "r": "decomposes per",
+   "s": "pos_acc"
+  },
+  {
+   "chunk": 80,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "scored run",
+   "r": "registered before",
+   "s": "Bars"
+  },
+  {
+   "chunk": 80,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "baseline",
+   "r": "requires",
+   "s": "sanity"
+  },
+  {
+   "chunk": 80,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "web/mcp_gate.py",
+   "r": "adopts",
+   "s": "primary"
+  },
+  {
+   "chunk": 80,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "beam32",
+   "r": "adopts",
+   "s": "fallback"
+  },
+  {
+   "chunk": 82,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "acc clause",
+   "r": "fails",
+   "s": "beam-union"
+  },
+  {
+   "chunk": 82,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "greedy16",
+   "r": "beats",
+   "s": "beam16"
+  },
+  {
+   "chunk": 82,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "fallback",
+   "r": "short",
+   "s": "beam32"
+  },
+  {
+   "chunk": 82,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "introduced",
+   "r": "not",
+   "s": "MCP_TOPM"
+  },
+  {
+   "chunk": 82,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "pos clause",
+   "r": "passes",
+   "s": "beam16"
+  },
+  {
+   "chunk": 83,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "right granularity",
+   "r": "passed",
+   "s": "k=5 gate"
+  },
+  {
+   "chunk": 83,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "recall loss",
+   "r": "caused",
+   "s": "truncation"
+  },
+  {
+   "chunk": 83,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "option-tax",
+   "r": "gained",
+   "s": "planner"
+  },
+  {
+   "chunk": 83,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "byte-identical",
+   "r": "is",
+   "s": "beam-union"
+  },
+  {
+   "chunk": 83,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "change pick",
+   "r": "did not",
+   "s": "temp-0 planner"
+  },
+  {
+   "chunk": 83,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "fewer tokens",
+   "r": "bought",
+   "s": "beam16"
+  },
+  {
+   "chunk": 84,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "split to <10",
+   "r": "shortlist",
+   "s": "binary-split walk"
+  },
+  {
+   "chunk": 84,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "two",
+   "r": "split",
+   "s": "tool population"
+  },
+  {
+   "chunk": 84,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "fewer than 10",
+   "r": "holds",
+   "s": "group"
+  },
+  {
+   "chunk": 84,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "synth-pool centroid space",
+   "r": "constructed",
+   "s": "balanced binary tree"
+  },
+  {
+   "chunk": 84,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "member centroids",
+   "r": "projects",
+   "s": "recursive split"
+  },
+  {
+   "chunk": 84,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "query",
+   "r": "score",
+   "s": "Node scorers"
+  },
+  {
+   "chunk": 86,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.6727",
+   "r": "reproduced",
+   "s": "union"
+  },
+  {
+   "chunk": 86,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.4784",
+   "r": "scored",
+   "s": "bwalk-max"
+  },
+  {
+   "chunk": 86,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.3957",
+   "r": "scored",
+   "s": "bwalk-cent"
+  },
+  {
+   "chunk": 86,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.5432",
+   "r": "scored",
+   "s": "bbeam2-max"
+  },
+  {
+   "chunk": 86,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.4892",
+   "r": "scored",
+   "s": "bbeam2-cent"
+  },
+  {
+   "chunk": 86,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "before",
+   "r": "committed",
+   "s": "runner"
+  },
+  {
+   "chunk": 87,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.6007",
+   "r": "has score",
+   "s": "bbeam4-max"
+  },
+  {
+   "chunk": 87,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.5432",
+   "r": "has score",
+   "s": "bbeam2-max"
+  },
+  {
+   "chunk": 87,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.4892",
+   "r": "has score",
+   "s": "bbeam2-cent"
+  },
+  {
+   "chunk": 87,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.736",
+   "r": "has hit",
+   "s": "bbeam2-max"
+  },
+  {
+   "chunk": 87,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.520",
+   "r": "equals",
+   "s": "walk recall"
+  },
+  {
+   "chunk": 87,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.878",
+   "r": "has score",
+   "s": "union"
+  },
+  {
+   "chunk": 88,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "node scorer",
+   "r": "beats centroid",
+   "s": "max"
+  },
+  {
+   "chunk": 88,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "equal budget",
+   "r": "loses to breadth",
+   "s": "depth"
+  },
+  {
+   "chunk": 88,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "narrowness",
+   "r": "degrade with",
+   "s": "negatives"
+  },
+  {
+   "chunk": 88,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "shortlist",
+   "r": "remains",
+   "s": "cheapest"
+  },
+  {
+   "chunk": 88,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "web/mcp_gate.py",
+   "r": "unchanged",
+   "s": "gate"
+  },
+  {
+   "chunk": 89,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "sliding-window shortlist",
+   "r": "uses",
+   "s": "MS-22"
+  },
+  {
+   "chunk": 89,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "max cosine",
+   "r": "equals",
+   "s": "window score"
+  },
+  {
+   "chunk": 89,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "two variants",
+   "r": "has",
+   "s": "window order"
+  },
+  {
+   "chunk": 89,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "registry order",
+   "r": "uses",
+   "s": "reg variant"
+  },
+  {
+   "chunk": 89,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "PC1 projection",
+   "r": "uses",
+   "s": "pc1 variant"
+  },
+  {
+   "chunk": 90,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "1-D semantic bands",
+   "r": "are bands",
+   "s": "pc1 windows"
+  },
+  {
+   "chunk": 90,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "geometry",
+   "r": "ignore",
+   "s": "registry windows"
+  },
+  {
+   "chunk": 90,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "same-run",
+   "r": "compared",
+   "s": "union acc"
+  },
+  {
+   "chunk": 90,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.878",
+   "r": "measured",
+   "s": "hit_rate"
+  },
+  {
+   "chunk": 90,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "picked windows",
+   "r": "union",
+   "s": "candidates"
+  },
+  {
+   "chunk": 90,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "121",
+   "r": "covered",
+   "s": "tools"
+  },
+  {
+   "chunk": 91,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.6727",
+   "r": "achieved acc",
+   "s": "union"
+  },
+  {
+   "chunk": 91,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.5144",
+   "r": "achieved acc",
+   "s": "win2-reg"
+  },
+  {
+   "chunk": 91,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "21/24",
+   "r": "had neg",
+   "s": "union"
+  },
+  {
+   "chunk": 91,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "20/24",
+   "r": "had neg",
+   "s": "win2-reg"
+  },
+  {
+   "chunk": 91,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "2265",
+   "r": "used tokens",
+   "s": "union"
+  },
+  {
+   "chunk": 91,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "669",
+   "r": "used tokens",
+   "s": "win2-reg"
+  },
+  {
+   "chunk": 92,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "union",
+   "r": "kept union",
+   "s": "MS-22a"
+  },
+  {
+   "chunk": 92,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "fails both",
+   "r": "failed clauses",
+   "s": "win4-reg"
+  },
+  {
+   "chunk": 92,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "673 tokens",
+   "r": "missed bar",
+   "s": "win2-pc1"
+  },
+  {
+   "chunk": 92,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.514 vs 0.446",
+   "r": "vs pc1",
+   "s": "win2"
+  },
+  {
+   "chunk": 92,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.622 vs 0.518",
+   "r": "vs pc1",
+   "s": "win4"
+  },
+  {
+   "chunk": 92,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.619 vs 0.568",
+   "r": "vs pc1",
+   "s": "thr"
+  },
+  {
+   "chunk": 93,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "windows",
+   "r": "called registry",
+   "s": "registry windows"
+  },
+  {
+   "chunk": 93,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "server",
+   "r": "sorted by",
+   "s": "corpus"
+  },
+  {
+   "chunk": 93,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "domains",
+   "r": "are coherent",
+   "s": "servers"
+  },
+  {
+   "chunk": 93,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "bands",
+   "r": "are server",
+   "s": "registry bands"
+  },
+  {
+   "chunk": 93,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "genuinely",
+   "r": "are geometric",
+   "s": "PC1 bands"
+  },
+  {
+   "chunk": 93,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "content-defined groups",
+   "r": "comes from",
+   "s": "shortlist's recall"
+  },
+  {
+   "chunk": 94,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "at any budget",
+   "r": "recalls",
+   "s": "union"
+  },
+  {
+   "chunk": 94,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "88% coverage",
+   "r": "has",
+   "s": "union"
+  },
+  {
+   "chunk": 94,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "more answers",
+   "r": "misses",
+   "s": "union"
+  },
+  {
+   "chunk": 94,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "on same curve",
+   "r": "sits",
+   "s": "union"
+  },
+  {
+   "chunk": 94,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "best arm",
+   "r": "is",
+   "s": "union"
+  },
+  {
+   "chunk": 94,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "on coverage",
+   "r": "loses",
+   "s": "union"
+  },
+  {
+   "chunk": 95,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.949",
+   "r": "jumps to",
+   "s": "gold-tool membership"
+  },
+  {
+   "chunk": 95,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.571",
+   "r": "drops to",
+   "s": "top-2 reg"
+  },
+  {
+   "chunk": 95,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.760",
+   "r": "drops to",
+   "s": "top-4 reg"
+  },
+  {
+   "chunk": 95,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "lower",
+   "r": "stays",
+   "s": "pc1"
+  },
+  {
+   "chunk": 95,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "24 windows",
+   "r": "multiply to",
+   "s": "rivals"
+  },
+  {
+   "chunk": 95,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "same",
+   "r": "scores",
+   "s": "gold's best window"
+  },
+  {
+   "chunk": 96,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "MS-22 follow-up diagnostic 3",
+   "r": "follow-up diagnostic 3",
+   "s": "MS-22 follow-up diagnostic 2"
+  },
+  {
+   "chunk": 96,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "MS-22 follow-up diagnostic 2",
+   "r": "follow-up diagnostic 3",
+   "s": "MS-22 follow-up diagnostic 2"
+  },
+  {
+   "chunk": 97,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "binding",
+   "r": "is constraint",
+   "s": "partition"
+  },
+  {
+   "chunk": 97,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "constraint",
+   "r": "is not",
+   "s": "tiling"
+  },
+  {
+   "chunk": 97,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "2",
+   "r": "ranks top",
+   "s": "gold window"
+  },
+  {
+   "chunk": 97,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "19.3 percent",
+   "r": "ranks 3-4",
+   "s": "gold window"
+  },
+  {
+   "chunk": 97,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "14.2 percent",
+   "r": "ranks 5-8",
+   "s": "gold window"
+  },
+  {
+   "chunk": 97,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "8.3 percent",
+   "r": "ranks 9+",
+   "s": "gold window"
+  },
+  {
+   "chunk": 97,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "wrong tool",
+   "r": "prefers",
+   "s": "embedding"
+  },
+  {
+   "chunk": 99,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "list size",
+   "r": "degrades with",
+   "s": "per-hit"
+  },
+  {
+   "chunk": 100,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "both arms",
+   "r": "kept union",
+   "s": "MS-23a"
+  },
+  {
+   "chunk": 100,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.6906",
+   "r": "acc",
+   "s": "uwin2"
+  },
+  {
+   "chunk": 100,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.6942",
+   "r": "acc",
+   "s": "uwinthr"
+  },
+  {
+   "chunk": 100,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.6727",
+   "r": "acc",
+   "s": "union"
+  },
+  {
+   "chunk": 100,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "21/24",
+   "r": "ratio",
+   "s": "neg"
+  },
+  {
+   "chunk": 100,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "19/24",
+   "r": "ratio",
+   "s": "neg"
+  },
+  {
+   "chunk": 101,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "accuracy clause",
+   "r": "passes",
+   "s": "uwinthr"
+  },
+  {
+   "chunk": 103,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "gate",
+   "r": "adopted as",
+   "s": "MS-24a"
+  },
+  {
+   "chunk": 103,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "tool-cosine",
+   "r": "uses",
+   "s": "band08"
+  },
+  {
+   "chunk": 103,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "top-40",
+   "r": "keeps",
+   "s": "band08cap40"
+  },
+  {
+   "chunk": 103,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.866",
+   "r": "is",
+   "s": "presence"
+  },
+  {
+   "chunk": 103,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.878",
+   "r": "acc",
+   "s": "union's"
+  },
+  {
+   "chunk": 103,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "band",
+   "r": "projection",
+   "s": "acc"
+  },
+  {
+   "chunk": 104,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "beat dose curve",
+   "r": "requires per-hit",
+   "s": "adoption"
+  },
+  {
+   "chunk": 104,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "vs union 0.673",
+   "r": "0.66\u20130.70",
+   "s": "acc projection band"
+  },
+  {
+   "chunk": 104,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "best band arm acc",
+   "r": "budget pareto",
+   "s": "MS-24b"
+  },
+  {
+   "chunk": 104,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.6727",
+   "r": "acc",
+   "s": "union (sanity)"
+  },
+  {
+   "chunk": 104,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.6619",
+   "r": "acc",
+   "s": "band08"
+  },
+  {
+   "chunk": 104,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.6439",
+   "r": "acc",
+   "s": "band08cap40"
+  },
+  {
+   "chunk": 105,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.6619",
+   "r": "acc 0.6619",
+   "s": "band08"
+  },
+  {
+   "chunk": 105,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.6439",
+   "r": "acc 0.6439",
+   "s": "band08cap40"
+  },
+  {
+   "chunk": 105,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "17/24",
+   "r": "neg 17/24",
+   "s": "band08"
+  },
+  {
+   "chunk": 105,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "1210",
+   "r": "tokens 1210",
+   "s": "band08"
+  },
+  {
+   "chunk": 105,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.866",
+   "r": "0.866",
+   "s": "pre-check"
+  },
+  {
+   "chunk": 105,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.8661",
+   "r": "0.8661",
+   "s": "measured"
+  },
+  {
+   "chunk": 105,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.759",
+   "r": "0.759",
+   "s": "per-hit"
+  },
+  {
+   "chunk": 106,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "extreme-budget data point",
+   "r": "is recorded as",
+   "s": "band08"
+  },
+  {
+   "chunk": 106,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "separation",
+   "r": "have no",
+   "s": "band sizes"
+  },
+  {
+   "chunk": 106,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "less than 20",
+   "r": "have band",
+   "s": "no-tool cases"
+  },
+  {
+   "chunk": 106,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "correctly",
+   "r": "return null",
+   "s": "wide-band negs"
+  },
+  {
+   "chunk": 106,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "on no-tool queries",
+   "r": "anchors the list",
+   "s": "top scorer"
+  },
+  {
+   "chunk": 107,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "single weakness",
+   "r": "targets",
+   "s": "band08"
+  },
+  {
+   "chunk": 107,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "proven strengths",
+   "r": "keeps",
+   "s": "band08"
+  },
+  {
+   "chunk": 107,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "pre-data",
+   "r": "rejected",
+   "s": "Step-1"
+  },
+  {
+   "chunk": 107,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "only +3",
+   "r": "nets",
+   "s": "null-gating"
+  },
+  {
+   "chunk": 107,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "sits under",
+   "r": "median",
+   "s": "no-tool"
+  },
+  {
+   "chunk": 107,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "sits above",
+   "r": "median",
+   "s": "should-call"
+  },
+  {
+   "chunk": 108,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "utterance",
+   "r": "build_prompt",
+   "s": "blind intent call"
+  },
+  {
+   "chunk": 108,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "intent tokens",
+   "r": "recorded",
+   "s": "step1-band08"
+  },
+  {
+   "chunk": 108,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "planner tokens",
+   "r": "recorded",
+   "s": "step1-band08"
+  },
+  {
+   "chunk": 108,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "confusion",
+   "r": "recorded",
+   "s": "step1-band08"
+  },
+  {
+   "chunk": 108,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "as gate",
+   "r": "adopted",
+   "s": "MS-25a"
+  },
+  {
+   "chunk": 108,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "R",
+   "r": "are",
+   "s": "deciders"
+  },
+  {
+   "chunk": 109,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "2026-10-07",
+   "r": "scored on",
+   "s": "MS-25 results"
+  },
+  {
+   "chunk": 109,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "278 runs",
+   "r": "used",
+   "s": "MS-25 results"
+  },
+  {
+   "chunk": 109,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "neg 21/24",
+   "r": "showed",
+   "s": "MS-25 results"
+  },
+  {
+   "chunk": 109,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "union 0.6727",
+   "r": "showed",
+   "s": "MS-25 results"
+  },
+  {
+   "chunk": 109,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "184/278",
+   "r": "scored",
+   "s": "band08"
+  },
+  {
+   "chunk": 109,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "185",
+   "r": "needs",
+   "s": "bar"
+  },
+  {
+   "chunk": 110,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "ledger",
+   "r": "deleted",
+   "s": "union"
+  },
+  {
+   "chunk": 110,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "ledger",
+   "r": "deleted",
+   "s": "step1-band08"
+  },
+  {
+   "chunk": 110,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "union",
+   "r": "kept",
+   "s": "MS-25a"
+  },
+  {
+   "chunk": 110,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "acc",
+   "r": "failed",
+   "s": "MS-25b"
+  },
+  {
+   "chunk": 110,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "beyond hope",
+   "r": "worked",
+   "s": "null half"
+  },
+  {
+   "chunk": 110,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "latency",
+   "r": "cut",
+   "s": "CHAT exits"
+  },
+  {
+   "chunk": 111,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "union 21/24",
+   "r": "measured in",
+   "s": "program"
+  },
+  {
+   "chunk": 111,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "excellent",
+   "r": "is",
+   "s": "pipeline"
+  },
+  {
+   "chunk": 111,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "picking",
+   "r": "sharpens",
+   "s": "pipeline"
+  },
+  {
+   "chunk": 111,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "planner's call",
+   "r": "is",
+   "s": "abstention"
+  },
+  {
+   "chunk": 113,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "MS-24 band08",
+   "r": "has selector",
+   "s": "band08nt"
+  },
+  {
+   "chunk": 113,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "MS-23 uwinthr",
+   "r": "has selector",
+   "s": "uwinthrnt"
+  },
+  {
+   "chunk": 113,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "no_tool",
+   "r": "has line",
+   "s": "band08nt"
+  },
+  {
+   "chunk": 113,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "no_tool",
+   "r": "has line",
+   "s": "uwinthrnt"
+  },
+  {
+   "chunk": 113,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "menu rescue",
+   "r": "is budget arm",
+   "s": "MS-26a"
+  },
+  {
+   "chunk": 113,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "uwinthrnt",
+   "r": "is adoption",
+   "s": "MS-26b"
+  },
+  {
+   "chunk": 114,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "one neg case",
+   "r": "failed by",
+   "s": "MS-26b"
+  },
+  {
+   "chunk": 114,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "one case",
+   "r": "missed by",
+   "s": "MS-26c"
+  },
+  {
+   "chunk": 114,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "two-option choices",
+   "r": "become",
+   "s": "narrow bands"
+  },
+  {
+   "chunk": 114,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "borderline pos picks",
+   "r": "siphon",
+   "s": "pos-level effect"
+  },
+  {
+   "chunk": 114,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "mean per case",
+   "r": "increase",
+   "s": "Tokens"
+  },
+  {
+   "chunk": 114,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "before scored run",
+   "r": "deleted",
+   "s": "ledger"
+  },
+  {
+   "chunk": 115,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "before run",
+   "r": "deleted",
+   "s": "ledger"
+  },
+  {
+   "chunk": 115,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "as committed",
+   "r": "kept",
+   "s": "registered text"
+  },
+  {
+   "chunk": 115,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "variant",
+   "r": "equals",
+   "s": "hit rate"
+  },
+  {
+   "chunk": 115,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "under references",
+   "r": "unchanged",
+   "s": "Verdicts"
+  },
+  {
+   "chunk": 115,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "model never emits",
+   "r": "confirms",
+   "s": "control"
+  },
+  {
+   "chunk": 116,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "neg clause PASSED",
+   "r": "not rescued",
+   "s": "MS-26a"
+  },
+  {
+   "chunk": 116,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "acc 0.6115",
+   "r": "fails",
+   "s": "MS-26a"
+  },
+  {
+   "chunk": 116,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "acc 0.6295",
+   "r": "keep union",
+   "s": "MS-26b"
+  },
+  {
+   "chunk": 116,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "registered 19\u201322",
+   "r": "passed",
+   "s": "neg predictions"
+  },
+  {
+   "chunk": 116,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "disclosed",
+   "r": "wrong",
+   "s": "pos-effect prediction"
+  },
+  {
+   "chunk": 116,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "~7\u00d7 registered band",
+   "r": "materialized",
+   "s": "risk"
+  },
+  {
+   "chunk": 117,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "The wrong half dominates",
+   "r": "dominate",
+   "s": "siphons"
+  },
+  {
+   "chunk": 118,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "63.8% presence",
+   "r": "measured",
+   "s": "cluster filter"
+  },
+  {
+   "chunk": 118,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "2026-10-09",
+   "r": "registration",
+   "s": "MS-27"
+  },
+  {
+   "chunk": 118,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "not filter",
+   "r": "hint",
+   "s": "intent"
+  },
+  {
+   "chunk": 118,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "badly",
+   "r": "convergence",
+   "s": "MS-25"
+  },
+  {
+   "chunk": 119,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "top-1 63.8%",
+   "r": "top-2 87.8%",
+   "s": "cluster filter"
+  },
+  {
+   "chunk": 119,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "NON-BINDING context",
+   "r": "never tried",
+   "s": "intent"
+  },
+  {
+   "chunk": 119,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "menu unchanged",
+   "r": "guessed",
+   "s": "automatic classifier"
+  },
+  {
+   "chunk": 119,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "k=5 space",
+   "r": "comes from",
+   "s": "hint"
+  },
+  {
+   "chunk": 119,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "shipped union",
+   "r": "frozen",
+   "s": "selector"
+  },
+  {
+   "chunk": 119,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "ONE sentence",
+   "r": "inserts",
+   "s": "directive"
+  },
+  {
+   "chunk": 120,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "most resembling tool families",
+   "r": "tags request",
+   "s": "Automated pre-classification"
+  },
+  {
+   "chunk": 120,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "36% should-call cases",
+   "r": "wrong",
+   "s": "tag"
+  },
+  {
+   "chunk": 120,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "somewhere on negs",
+   "r": "points",
+   "s": "tag"
+  },
+  {
+   "chunk": 120,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.6763",
+   "r": "acc",
+   "s": "union rerun"
+  },
+  {
+   "chunk": 120,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "if acc and neg conditions met",
+   "r": "adopt",
+   "s": "MS-27a"
+  },
+  {
+   "chunk": 121,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "when neg >= 20/24",
+   "r": "gains hint line",
+   "s": "cc"
+  },
+  {
+   "chunk": 121,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "when < 20",
+   "r": "rejects production",
+   "s": "neg"
+  },
+  {
+   "chunk": 121,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "vs union 0.7444",
+   "r": "records per-hit",
+   "s": "MS-27b"
+  },
+  {
+   "chunk": 121,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "gold in-list cases",
+   "r": "focuses on",
+   "s": "hintname"
+  },
+  {
+   "chunk": 121,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "negs and traps",
+   "r": "loses on",
+   "s": "hintname"
+  },
+  {
+   "chunk": 121,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "negs and traps",
+   "r": "loses on",
+   "s": "hintfam"
+  },
+  {
+   "chunk": 121,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "indirect phrasings",
+   "r": "gains on",
+   "s": "Reading rule"
+  },
+  {
+   "chunk": 122,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "2026-10-09",
+   "r": "scored",
+   "s": "MS-27 results"
+  },
+  {
+   "chunk": 122,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.6727",
+   "r": "accuracy",
+   "s": "union"
+  },
+  {
+   "chunk": 122,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.6978",
+   "r": "accuracy",
+   "s": "hintname"
+  },
+  {
+   "chunk": 122,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.7122",
+   "r": "accuracy",
+   "s": "hintfam"
+  },
+  {
+   "chunk": 122,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "highest",
+   "r": "accuracy",
+   "s": "hintfam"
+  },
+  {
+   "chunk": 123,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "picking aid ever measured",
+   "r": "is the strongest",
+   "s": "intent-as-hint"
+  },
+  {
+   "chunk": 123,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "null-breaker ever measured",
+   "r": "is the strongest",
+   "s": "intent-as-hint"
+  },
+  {
+   "chunk": 123,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "specific-name hint",
+   "r": "beats",
+   "s": "hintfam"
+  },
+  {
+   "chunk": 123,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "\u00b10.01",
+   "r": "registered",
+   "s": "hintfam"
+  },
+  {
+   "chunk": 123,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "17\u201321 / 19\u201322",
+   "r": "registered",
+   "s": "neg predictions"
+  },
+  {
+   "chunk": 123,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "gains concentrated",
+   "r": "registered",
+   "s": "hintname"
+  },
+  {
+   "chunk": 126,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "hintfam",
+   "r": "measured",
+   "s": "MS-27"
+  },
+  {
+   "chunk": 126,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "hintname",
+   "r": "exceeded",
+   "s": "hintfam"
+  },
+  {
+   "chunk": 126,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "conditional hint",
+   "r": "gains",
+   "s": "MS-28a"
+  },
+  {
+   "chunk": 126,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "intent call",
+   "r": "gains",
+   "s": "MS-28a"
+  },
+  {
+   "chunk": 126,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "branch",
+   "r": "gains",
+   "s": "MS-28a"
+  },
+  {
+   "chunk": 126,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "regardless of acc",
+   "r": "rejects",
+   "s": "MS-28a"
+  },
+  {
+   "chunk": 126,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "neg >= 20/24",
+   "r": "requires",
+   "s": "MS-28a"
+  },
+  {
+   "chunk": 128,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "2026-10-09",
+   "r": "scored",
+   "s": "MS-28 results"
+  },
+  {
+   "chunk": 128,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "ADOPT CONDITIONAL HINT",
+   "r": "verdict",
+   "s": "MS-28a"
+  },
+  {
+   "chunk": 128,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.7194",
+   "r": "accuracy",
+   "s": "MS-28a"
+  },
+  {
+   "chunk": 128,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "13",
+   "r": "correct cases",
+   "s": "MS-28a"
+  },
+  {
+   "chunk": 128,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "140",
+   "r": "tokens",
+   "s": "MS-28a"
+  },
+  {
+   "chunk": 128,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "26",
+   "r": "ms",
+   "s": "MS-28a"
+  },
+  {
+   "chunk": 129,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "26 ms",
+   "r": "costs",
+   "s": "intent call"
+  },
+  {
+   "chunk": 129,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.7194",
+   "r": "measured",
+   "s": "accuracy"
+  },
+  {
+   "chunk": 129,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "unprefixed reference",
+   "r": "exceeds",
+   "s": "accuracy"
+  },
+  {
+   "chunk": 129,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "hintfam record",
+   "r": "exceeds",
+   "s": "accuracy"
+  },
+  {
+   "chunk": 129,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "MS-25 exactly",
+   "r": "reproduced",
+   "s": "intent flags"
+  },
+  {
+   "chunk": 129,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "true domain",
+   "r": "confined",
+   "s": "hint damage"
+  },
+  {
+   "chunk": 129,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "fatal to mild",
+   "r": "demoted",
+   "s": "false-CHAT"
+  },
+  {
+   "chunk": 131,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "window-union recall",
+   "r": "includes",
+   "s": "MS-29 registration"
+  },
+  {
+   "chunk": 131,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "softhint error budget",
+   "r": "uses",
+   "s": "MS-29 registration"
+  },
+  {
+   "chunk": 131,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "presence 0.878",
+   "r": "measures",
+   "s": "MS-29 registration"
+  },
+  {
+   "chunk": 131,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "44 wrong picks",
+   "r": "measures",
+   "s": "MS-29 registration"
+  },
+  {
+   "chunk": 131,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "3 negs",
+   "r": "measures",
+   "s": "MS-29 registration"
+  },
+  {
+   "chunk": 131,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "presence 0.9567",
+   "r": "measures",
+   "s": "MS-29 registration"
+  },
+  {
+   "chunk": 131,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "20 misses",
+   "r": "recovers",
+   "s": "MS-29 registration"
+  },
+  {
+   "chunk": 131,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "neg 19/24",
+   "r": "rejects",
+   "s": "MS-29 registration"
+  },
+  {
+   "chunk": 131,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "intent call confining hint damage",
+   "r": "measures",
+   "s": "MS-29 registration"
+  },
+  {
+   "chunk": 131,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "1 neg",
+   "r": "measures",
+   "s": "MS-29 registration"
+  },
+  {
+   "chunk": 131,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "three best-measured ingredients",
+   "r": "stacks",
+   "s": "MS-29 registration"
+  },
+  {
+   "chunk": 132,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "picking + intent-guarded nulls",
+   "r": "recall + hintfam",
+   "s": "uwinthr"
+  },
+  {
+   "chunk": 132,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "blind MS-25 intent call",
+   "r": "softhint",
+   "s": "MS-28"
+  },
+  {
+   "chunk": 132,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "hintfam sentence with often wrong clause",
+   "r": "directive + ms-27",
+   "s": "tool"
+  },
+  {
+   "chunk": 132,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "BOTH branches instead of union",
+   "r": "shortlist",
+   "s": "uwinthr"
+  },
+  {
+   "chunk": 132,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "shipped union gate",
+   "r": "stays",
+   "s": "sanity arm"
+  },
+  {
+   "chunk": 132,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "become the wiring target",
+   "r": "beat incumbent",
+   "s": "MS-29b"
+  },
+  {
+   "chunk": 133,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "acc \u2265 0.7194",
+   "r": "beat incumbent",
+   "s": "MS-29b"
+  },
+  {
+   "chunk": 133,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "neg \u2265 20/24",
+   "r": "become wiring target",
+   "s": "MS-29b"
+  },
+  {
+   "chunk": 133,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "350\u2013400 mean",
+   "r": "add tokens",
+   "s": "windows"
+  },
+  {
+   "chunk": 133,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "2700\u20132900",
+   "r": "expected tokens",
+   "s": "softhint"
+  },
+  {
+   "chunk": 133,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "softhint or winhint",
+   "r": "passes higher acc",
+   "s": "wiring target"
+  },
+  {
+   "chunk": 133,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "regardless of acc",
+   "r": "not wireable",
+   "s": "neg < 20"
+  },
+  {
+   "chunk": 133,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "wiring target",
+   "r": "softhint remains",
+   "s": "acc below 0.7194"
+  },
+  {
+   "chunk": 134,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "2026-10-09",
+   "r": "scored",
+   "s": "MS-29 results"
+  },
+  {
+   "chunk": 134,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.7338",
+   "r": "beats gate",
+   "s": "MS-29a verdict"
+  },
+  {
+   "chunk": 134,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "acc 0.7338",
+   "r": "wiring target",
+   "s": "MS-29b verdict"
+  },
+  {
+   "chunk": 134,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "softhint",
+   "r": "replaces",
+   "s": "winhint"
+  },
+  {
+   "chunk": 134,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "wiring",
+   "r": "production design",
+   "s": "winhint"
+  },
+  {
+   "chunk": 135,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "projected",
+   "r": "paid exactly",
+   "s": "recall bet"
+  },
+  {
+   "chunk": 135,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "0.878 to 0.9567",
+   "r": "score increased",
+   "s": "presence"
+  },
+  {
+   "chunk": 135,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "bigger list",
+   "r": "diluted on",
+   "s": "hint's picking gain"
+  },
+  {
+   "chunk": 135,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "families-tag doesn't cover",
+   "r": "are noise",
+   "s": "window-added tools"
+  },
+  {
+   "chunk": 135,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "softhint",
+   "r": "dominates",
+   "s": "recall windfall"
+  },
+  {
+   "chunk": 135,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "guardrail edge",
+   "r": "held at",
+   "s": "nulls"
+  },
+  {
+   "chunk": 135,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "66 of 254",
+   "r": "should-call chat",
+   "s": "intent flags"
+  },
+  {
+   "chunk": 136,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "50\u201375",
+   "r": "inside band",
+   "s": "serving variance"
+  },
+  {
+   "chunk": 136,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "1 of 4 TOOL-flagged negs",
+   "r": "broke",
+   "s": "hint"
+  },
+  {
+   "chunk": 136,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "2776 tok",
+   "r": "of record",
+   "s": "cost"
+  },
+  {
+   "chunk": 136,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "zero",
+   "r": "on guardrail",
+   "s": "margin"
+  },
+  {
+   "chunk": 136,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "flat 0.6835",
+   "r": "on eval",
+   "s": "trajectory"
+  },
+  {
+   "chunk": 136,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "o": "registered as wiring target",
+   "r": "of winhint",
+   "s": "status"
+  },
+  {
+   "chunk": 0,
+   "doc": "models/README.md",
+   "o": "WireSense repo",
+   "r": "copied from",
+   "s": "CLM head"
+  },
+  {
+   "chunk": 0,
+   "doc": "models/README.md",
+   "o": "rewire program",
+   "r": "trained in",
+   "s": "CLM head"
+  },
+  {
+   "chunk": 0,
+   "doc": "models/README.md",
+   "o": "L2-normalized",
+   "r": "are",
+   "s": "router embeddings"
+  },
+  {
+   "chunk": 0,
+   "doc": "models/README.md",
+   "o": "readouts",
+   "r": "walks",
+   "s": "decision tree"
+  },
+  {
+   "chunk": 0,
+   "doc": "models/README.md",
+   "o": "CLM head trunk",
+   "r": "contains",
+   "s": "arm_C_heads.npz"
+  },
+  {
+   "chunk": 0,
+   "doc": "models/README.md",
+   "o": "reference banks",
+   "r": "contains",
+   "s": "router_embeddings.npz"
+  },
+  {
+   "chunk": 1,
+   "doc": "models/README.md",
+   "o": "node structure",
+   "r": "contains",
+   "s": "decision_tree.json"
+  },
+  {
+   "chunk": 1,
+   "doc": "models/README.md",
+   "o": "lab trunk",
+   "r": "is",
+   "s": "heads.py"
+  },
+  {
+   "chunk": 1,
+   "doc": "models/README.md",
+   "o": "cfg_json",
+   "r": "uses",
+   "s": "production artifact"
+  },
+  {
+   "chunk": 1,
+   "doc": "models/README.md",
+   "o": "against encoder",
+   "r": "valid",
+   "s": "weights"
+  },
+  {
+   "chunk": 1,
+   "doc": "models/README.md",
+   "o": "with pooling",
+   "r": "served",
+   "s": "Qwen3.5-4B"
+  },
+  {
+   "chunk": 1,
+   "doc": "models/README.md",
+   "o": "weights",
+   "r": "invalidates",
+   "s": "change"
+  }
+ ]
+}
