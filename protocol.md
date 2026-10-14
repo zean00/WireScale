@@ -1411,3 +1411,74 @@ data (Z), and skip query rewriting (Y).** On graphs: hedge, never
 commit (K + Amendment 2), score what the walker actually visits
 (Amd 3), and expect the flat anchor to win whenever the graph
 fits (K3).
+
+## A-series registration: end-to-end assembly (2026-10-14, registered pre-data)
+
+Every component of the endorsed recipe has passed separately —
+embedder ranking (E), embedder-ordered scan-and-stop (X), calibrated
+bar (Z) — but the assembled machine has never been scored as one
+piece. This closes the loop: one frozen question set, three arms,
+answers generated and graded end-to-end.
+
+**Procedure** (per frozen eval question, n=58, r_questions.json;
+corpus pinned 5146e2d; frozen model slot 7, temp 0; ext-embedder
+cache fp fdf52bc3c7ec, verified complete pre-run — no tunnel):
+
+1. Rank the document's chunks by ext-embedder cosine to the question.
+2. Scan in that order, judging each chunk (CR.judge instrument).
+   Stop bar: first calibrated p ≥ .5, with p' = σ(logit p / 0.66)
+   (T committed in calib.json). **Disclosed**: at τ = .5 the
+   calibrated bar equals the raw bar (σ fixed point) — calibration
+   is carried as recorded procedure (Z), not re-tested here; a lower
+   calibrated operating point is future work.
+3. **Fallback**: if no chunk crosses the bar, answer from the
+   embedder top-1 chunk (the librarian's pick) rather than returning
+   nothing. This is the deployment answer to X's stop-vs-prefix gap.
+4. Generate: system "Answer using only the excerpt. One sentence,
+   no preamble."; user "Question: {q}
+
+Excerpt:
+{chunk}";
+   temp 0, max_tokens 128, seed 20261014 + 17·i (i = question index).
+5. Grade: system "You are a strict grader. Answer with exactly one
+   word: yes or no."; user "Reference passage:
+{gold chunk}
+
+   Question: {q}
+
+Proposed answer: {ans}
+
+Does the proposed
+   answer correctly answer the question, as supported by the
+   reference passage?"; first-token yes/no mass, correct ≡ p ≥ .5.
+   **Disclosed**: the grader is the same frozen model that generates —
+   judge-graded answers are the lab's instrument style throughout,
+   not human verification.
+
+**Arms** (all in-run, same 58 questions):
+- TOP1 — pure RAG: answer from the embedder top-1 chunk. No
+  decision layer.
+- FLATPOL — the X-DS policy at answer level: scan in document order,
+  stop at first raw p ≥ .5, fallback chunk 0, answer from the
+  stopped chunk.
+- ASM — the machine: steps 1–5 (embedder order + fallback).
+
+**Predictions (registered bars)**:
+- **A1 (headline)**: ASM answer accuracy ≥ TOP1 + .03 → PASS;
+  |Δ| ≤ .03 → PARTIAL; else FAIL. The machine must beat pure
+  vector RAG, not tie it.
+- **A2 (ordering earns its keep at answer level)**: ASM ≥ FLATPOL →
+  PASS; within −.02 → PARTIAL; else FAIL.
+- **A3 (stop-chunk quality)**: ASM stopped-chunk-hit (gold equals
+  the answered chunk, fallback hits counting) ≥ committed X-DS
+  stop-recall .3103 → PASS; else FAIL.
+- **A4 (budget)**: ASM total tokens/question (scan + generate +
+  grade) ≤ .35 × committed FLAT_TOK 29,236 = 10,233 → PASS-budget;
+  else FAIL-budget.
+- Sanity (disclosed field, not a verdict): per-judged-chunk p_yes
+  agreement with committed walkret.json flat scores ≥ .90 (X's
+  instrument). Smoke runs marked and never scored.
+
+Descriptive (registered, no bar): per-recipe answer accuracy per
+arm, fallback trigger rate, judge/generator agreement (does the
+grader say yes exactly when the scanner stopped yes).
