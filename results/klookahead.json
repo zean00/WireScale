@@ -1,0 +1,1217 @@
+{
+ "baselines": {
+  "beam": {
+   "all": 0.2833333333333333,
+   "direct": 0.4666666666666667,
+   "indirect": 0.1,
+   "onehop": 0.36666666666666664,
+   "tok": 705.4833333333333,
+   "twohop": 0.2
+  },
+  "flat": {
+   "all": 0.31666666666666665,
+   "direct": 0.43333333333333335,
+   "indirect": 0.2,
+   "onehop": 0.26666666666666666,
+   "tok": 10932.05,
+   "twohop": 0.36666666666666664
+  },
+  "read": {
+   "all": 0.23333333333333334,
+   "direct": 0.4,
+   "indirect": 0.06666666666666667,
+   "onehop": 0.3333333333333333,
+   "tok": 110.76666666666667,
+   "twohop": 0.13333333333333333
+  },
+  "walk": {
+   "all": 0.15,
+   "direct": 0.26666666666666666,
+   "indirect": 0.03333333333333333,
+   "onehop": 0.2,
+   "tok": 412.1,
+   "twohop": 0.1
+  }
+ },
+ "by_arm": {
+  "look1": {
+   "all": 0.1,
+   "direct": 0.13333333333333333,
+   "indirect": 0.06666666666666667,
+   "onehop": 0.13333333333333333,
+   "tok": 405.8666666666667,
+   "twohop": 0.06666666666666667
+  },
+  "look2": {
+   "all": 0.03333333333333333,
+   "direct": 0.03333333333333333,
+   "indirect": 0.03333333333333333,
+   "onehop": 0.03333333333333333,
+   "tok": 825.3166666666667,
+   "twohop": 0.03333333333333333
+  }
+ },
+ "commit": "26f62f7",
+ "ext_fp": "fdf52bc3c7ec",
+ "limit": 0,
+ "model_fp": "7cfe33f65c1c",
+ "records": [
+  {
+   "gold": "log",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "2026-10-07",
+    707,
+    4
+   ],
+   "look2": [
+    0,
+    "results",
+    1417,
+    3
+   ],
+   "q": "What is the confirmation result for a registered run?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "yes",
+   "gold_on_route2": 1,
+   "hops": 1,
+   "look1": [
+    0,
+    "registration",
+    306,
+    2
+   ],
+   "look2": [
+    0,
+    "17b",
+    490,
+    2
+   ],
+   "q": "Is 17b worth registering?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "R",
+   "gold_on_route2": 1,
+   "hops": 1,
+   "look1": [
+    0,
+    "deciders",
+    253,
+    2
+   ],
+   "look2": [
+    0,
+    "deciders",
+    435,
+    2
+   ],
+   "q": "What are the deciders?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "content-defined groups",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "shortlist's recall",
+    279,
+    2
+   ],
+   "look2": [
+    0,
+    "hier shortlists",
+    863,
+    4
+   ],
+   "q": "What do shortlists' recalls come from?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "prefixed names",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "house rules",
+    300,
+    1
+   ],
+   "look2": [
+    0,
+    "mcp tools",
+    386,
+    2
+   ],
+   "q": "What are the prefixed names for the MCP tools in production manifests?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "highest",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "hintfam record",
+    810,
+    4
+   ],
+   "look2": [
+    0,
+    "hintfam record",
+    1705,
+    4
+   ],
+   "q": "What was the accuracy of hintfam?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "gold=1; negatives=0",
+   "gold_on_route2": 1,
+   "hops": 1,
+   "look1": [
+    0,
+    "gold window",
+    418,
+    2
+   ],
+   "look2": [
+    0,
+    "train pairs",
+    493,
+    2
+   ],
+   "q": "What is the value of train pairs in the gold label?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "tools/list",
+   "gold_on_route2": 1,
+   "hops": 1,
+   "look1": [
+    0,
+    "server's stdio entry",
+    420,
+    0
+   ],
+   "look2": [
+    0,
+    "stdio mcp client",
+    759,
+    2
+   ],
+   "q": "What does the stdio MCP client initialize with?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "domain boundary",
+   "gold_on_route2": 1,
+   "hops": 1,
+   "look1": [
+    0,
+    "coarse gate",
+    267,
+    2
+   ],
+   "look2": [
+    0,
+    "coarse gate",
+    487,
+    2
+   ],
+   "q": "What does the coarse gate hold in the hierarchy?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "freeze candidates",
+   "gold_on_route2": 1,
+   "hops": 1,
+   "look1": [
+    1,
+    "freeze candidates",
+    292,
+    1
+   ],
+   "look2": [
+    0,
+    "question files",
+    492,
+    3
+   ],
+   "q": "What does chunkrel.py write?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "k in set",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "clustering k only",
+    292,
+    2
+   ],
+   "look2": [
+    0,
+    "clustering k only",
+    494,
+    2
+   ],
+   "q": "What parameter was in set when re-running the k-sweep?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "0.929",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "flat 0.6835",
+    276,
+    2
+   ],
+   "look2": [
+    0,
+    "a_flat numbers",
+    454,
+    2
+   ],
+   "q": "What does A_flat equal?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "simulate-research-query",
+   "gold_on_route2": 1,
+   "hops": 1,
+   "look1": [
+    1,
+    "simulate-research-query",
+    289,
+    2
+   ],
+   "look2": [
+    0,
+    "ir_research",
+    487,
+    2
+   ],
+   "q": "What is the query generated when ir_research is defensible?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "focus",
+   "gold_on_route2": 1,
+   "hops": 1,
+   "look1": [
+    0,
+    "focus_move",
+    295,
+    2
+   ],
+   "look2": [
+    0,
+    "focus_move",
+    758,
+    2
+   ],
+   "q": "What does the focus_move action do?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "registered 19\u201322",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    1,
+    "registered 19\u201322",
+    337,
+    3
+   ],
+   "look2": [
+    1,
+    "registered 19\u201322",
+    673,
+    3
+   ],
+   "q": "What were the registered results for neg predictions?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "chunk carries information",
+   "gold_on_route2": 1,
+   "hops": 1,
+   "look1": [
+    1,
+    "chunk carries information",
+    296,
+    2
+   ],
+   "look2": [
+    0,
+    "decision layer",
+    500,
+    2
+   ],
+   "q": "Can I trust a decision layer if the chunk lacks the information it needs to judge?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "content-defined groups",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "seed-0 server order",
+    306,
+    2
+   ],
+   "look2": [
+    0,
+    "union",
+    2849,
+    3
+   ],
+   "q": "How can I reliably locate specific content groups using the registry's server-based sorting system?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "log",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "hash differences",
+    388,
+    6
+   ],
+   "look2": [
+    0,
+    "fresh rebuild",
+    590,
+    2
+   ],
+   "q": "How do I verify that the cache file was not overwritten between the two signature checks?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "domain boundary",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "j-combo",
+    389,
+    3
+   ],
+   "look2": [
+    0,
+    "j-combo",
+    635,
+    3
+   ],
+   "q": "How can a team ensure only relevant content enters their system without wasting resources on irrelevant data?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "focus",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "camera answer",
+    439,
+    4
+   ],
+   "look2": [
+    0,
+    "camera answer",
+    851,
+    2
+   ],
+   "q": "How do I manually adjust the camera's focus when the automated system isn't responding?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "tools/list",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "tools json",
+    342,
+    4
+   ],
+   "look2": [
+    0,
+    "121 corpus tools",
+    913,
+    2
+   ],
+   "q": "How do I locate a specific server's complete JSON tool list from the corpus folder without editing?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "yes",
+   "gold_on_route2": 1,
+   "hops": 1,
+   "look1": [
+    0,
+    "928 ms",
+    730,
+    2
+   ],
+   "look2": [
+    0,
+    "17b",
+    1062,
+    2
+   ],
+   "q": "Is 17b worth registering because the current system no longer allows silent edits?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "presence 0.878",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "ms-29 registration",
+    773,
+    2
+   ],
+   "look2": [
+    0,
+    "ms-29 registration",
+    1397,
+    2
+   ],
+   "q": "What is the presence value of MS-29 registration measures?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "registry order",
+   "gold_on_route2": 1,
+   "hops": 2,
+   "look1": [
+    0,
+    "union",
+    1658,
+    2
+   ],
+   "look2": [
+    0,
+    "union",
+    3046,
+    4
+   ],
+   "q": "What order does the union use?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "WireSense repo",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "cfg_json",
+    288,
+    1
+   ],
+   "look2": [
+    0,
+    "change",
+    540,
+    2
+   ],
+   "q": "Where were the production frozen-encoder readout stack artifacts first committed?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "MS-3 pools",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "small pools",
+    257,
+    2
+   ],
+   "look2": [
+    0,
+    "pools",
+    441,
+    2
+   ],
+   "q": "Which pools make changes cheap?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "19/24",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "when neg >= 20/24",
+    215,
+    0
+   ],
+   "look2": [
+    0,
+    "when neg >= 20/24",
+    569,
+    2
+   ],
+   "q": "What is the neg ratio when the production directive gains the hint line?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "presence 0.9567",
+   "gold_on_route2": 1,
+   "hops": 2,
+   "look1": [
+    0,
+    "ms-29 registration",
+    773,
+    2
+   ],
+   "look2": [
+    0,
+    "ms-29 registration",
+    1397,
+    2
+   ],
+   "q": "What is the value of presence in MS-29 registration?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "families",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "tree",
+    176,
+    0
+   ],
+   "look2": [
+    0,
+    "leaves",
+    521,
+    2
+   ],
+   "q": "Which entities do leaves share?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "id_slot 5",
+   "gold_on_route2": 1,
+   "hops": 2,
+   "look1": [
+    0,
+    "search-primary arm",
+    192,
+    0
+   ],
+   "look2": [
+    0,
+    "arm",
+    1088,
+    2
+   ],
+   "q": "What is the id_slot shared by the arm?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "neg >= 20/24",
+   "gold_on_route2": 1,
+   "hops": 2,
+   "look1": [
+    0,
+    "neg < 20",
+    963,
+    4
+   ],
+   "look2": [
+    0,
+    "ms-28a",
+    1626,
+    2
+   ],
+   "q": "What is the minimum negative count required for MS-28a?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "beam2-greedy",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "walking beats flat",
+    279,
+    2
+   ],
+   "look2": [
+    0,
+    "walking beats flat",
+    382,
+    2
+   ],
+   "q": "Which method beats B_walk according to the provided facts?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "question and text",
+   "gold_on_route2": 1,
+   "hops": 2,
+   "look1": [
+    0,
+    "j-llm gold-in-set recall",
+    292,
+    2
+   ],
+   "look2": [
+    0,
+    "j-llm",
+    689,
+    2
+   ],
+   "q": "What does J-llm read?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "LLM server",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    1,
+    "llm server",
+    290,
+    2
+   ],
+   "look2": [
+    0,
+    "question generation",
+    478,
+    2
+   ],
+   "q": "Which server generates the questions in this system?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "no zoom",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "camera answer",
+    248,
+    0
+   ],
+   "look2": [
+    0,
+    "camera answer",
+    897,
+    2
+   ],
+   "q": "Does the camera support zoom functionality?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "list size",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "hint damage",
+    261,
+    2
+   ],
+   "look2": [
+    0,
+    "variant",
+    350,
+    1
+   ],
+   "q": "What does per-hit degrade with?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "arms A/B/C/C'",
+   "gold_on_route2": 1,
+   "hops": 2,
+   "look1": [
+    0,
+    "heads.py",
+    323,
+    2
+   ],
+   "look2": [
+    0,
+    "heads.py",
+    559,
+    2
+   ],
+   "q": "What arms are used in the classifiers in heads.py?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "union",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "sliding-window shortlist",
+    299,
+    2
+   ],
+   "look2": [
+    0,
+    "sliding-window shortlist",
+    507,
+    2
+   ],
+   "q": "How can I maintain sufficient accuracy when sliding a limited tool window across a large population?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "MS-3 pools",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "flat selector",
+    642,
+    3
+   ],
+   "look2": [
+    0,
+    "server",
+    1102,
+    3
+   ],
+   "q": "How do I keep the production server stable while adding new tool variants?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "raw-embedding centroids",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "64 sub-agents",
+    217,
+    0
+   ],
+   "look2": [
+    0,
+    "selection and routing",
+    651,
+    2
+   ],
+   "q": "How do I implement a routing system that uses mean comparison to prevent the performance crash caused by summing domain and agent similarity?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "WireSense repo",
+   "gold_on_route2": 1,
+   "hops": 2,
+   "look1": [
+    1,
+    "wiresense repo",
+    323,
+    2
+   ],
+   "look2": [
+    1,
+    "wiresense repo",
+    431,
+    4
+   ],
+   "q": "Which source repository contains the WireSense frozen-encoder readout stack?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "beam2-greedy",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "per-level conditional accuracy",
+    211,
+    0
+   ],
+   "look2": [
+    0,
+    "model",
+    1213,
+    2
+   ],
+   "q": "Which model is superior when my task requires a model with a domain accuracy of approximately 0.796?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "no zoom",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "ptz control",
+    808,
+    4
+   ],
+   "look2": [
+    0,
+    "ptz control",
+    1662,
+    4
+   ],
+   "q": "Is there a way to control the camera's viewing angle or zoom in remotely?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "prefixed names",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "tools/mcp_probe/",
+    313,
+    2
+   ],
+   "look2": [
+    0,
+    "tools/mcp_probe/",
+    519,
+    2
+   ],
+   "q": "When I read a production manifest, how are the MCP tools identified so I can tell them apart?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "freeze candidates",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "run_eval.py",
+    305,
+    2
+   ],
+   "look2": [
+    0,
+    "run_eval.py",
+    579,
+    2
+   ],
+   "q": "Before the eval set is locked, what does the R-series runner leave on disk for review?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "0.929",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "depth extension",
+    333,
+    2
+   ],
+   "look2": [
+    0,
+    "depth extension",
+    561,
+    2
+   ],
+   "q": "What presence did the all-leaves-at-once read reach in the depth extension?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "0.6906",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "vs union 0.7444",
+    216,
+    0
+   ],
+   "look2": [
+    0,
+    "presence 0.878",
+    1333,
+    4
+   ],
+   "q": "What accuracy did the second window-union variant register?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "highest",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "overall accuracy",
+    417,
+    2
+   ],
+   "look2": [
+    0,
+    "overall accuracy",
+    659,
+    2
+   ],
+   "q": "Across the hint-family variants, how did the best one rank on accuracy?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "tools/list",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "remote transport",
+    294,
+    2
+   ],
+   "look2": [
+    0,
+    "remote transport",
+    398,
+    2
+   ],
+   "q": "What does the stdio transport call first to discover a server's capabilities?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "focus",
+   "gold_on_route2": 1,
+   "hops": 1,
+   "look1": [
+    0,
+    "focus_move",
+    301,
+    2
+   ],
+   "look2": [
+    0,
+    "focus_move",
+    668,
+    2
+   ],
+   "q": "What does the focus_move action change on the camera?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "everything server",
+   "gold_on_route2": 0,
+   "hops": 1,
+   "look1": [
+    0,
+    "dummy service",
+    326,
+    4
+   ],
+   "look2": [
+    0,
+    "dummy service",
+    536,
+    4
+   ],
+   "q": "What kind of backing service does the demo tool expect to demonstrate message annotations?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "beam2-greedy",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "hierarchy's win",
+    290,
+    2
+   ],
+   "look2": [
+    0,
+    "ms-series decision record",
+    549,
+    4
+   ],
+   "q": "In the S-series matchup against B_walk, who came out ahead?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "question and text",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "node scorers",
+    292,
+    2
+   ],
+   "look2": [
+    0,
+    "node scorers",
+    396,
+    2
+   ],
+   "q": "When the pointwise judge scores a chunk, what two things does it look at together?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "LLM server",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "frozen data",
+    189,
+    0
+   ],
+   "look2": [
+    0,
+    "chunkrel.py",
+    510,
+    3
+   ],
+   "q": "Which piece of infrastructure produced the frozen question set?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "arms A/B/C/C'",
+   "gold_on_route2": 1,
+   "hops": 2,
+   "look1": [
+    0,
+    "lab trunk",
+    338,
+    4
+   ],
+   "look2": [
+    0,
+    "heads.py",
+    553,
+    3
+   ],
+   "q": "If I open the trunk module in this repo, which classifier configurations will I find?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "MS-28 results",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "2026-10-09",
+    588,
+    3
+   ],
+   "look2": [
+    0,
+    "ms-27 results",
+    1242,
+    2
+   ],
+   "q": "Besides MS-29, which other results block was scored the same day?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "neg >= 20/24",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "presence 0.9567",
+    759,
+    3
+   ],
+   "look2": [
+    0,
+    "1 neg",
+    1237,
+    3
+   ],
+   "q": "How many negative cases did the registration bar insist on before MS-28a could count?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "list size",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "k=10",
+    397,
+    3
+   ],
+   "look2": [
+    0,
+    "sweep arms",
+    643,
+    2
+   ],
+   "q": "What grows when each additional candidate drags the score down by 0.759?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "presence 0.9567",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "neg 19/24",
+    746,
+    3
+   ],
+   "look2": [
+    0,
+    "ms-29 registration",
+    1232,
+    2
+   ],
+   "q": "Once its three best ingredients were stacked, what number did the registration come to?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "families",
+   "gold_on_route2": 0,
+   "hops": 2,
+   "look1": [
+    0,
+    "fully-marked leaf",
+    329,
+    2
+   ],
+   "look2": [
+    0,
+    "fully-marked leaf",
+    565,
+    4
+   ],
+   "q": "Beyond their distinguishing modifier, what do all the leaves of this hierarchy have in common?",
+   "recipe": "indirect"
+  }
+ ],
+ "smoke": false,
+ "tag": "klookahead",
+ "verdicts": {
+  "KL1": [
+   "FAIL",
+   -0.25,
+   true
+  ],
+  "KL2": [
+   "FAIL",
+   -0.05
+  ],
+  "KL3_descriptive": {
+   "gold_on_route2": 0.3167,
+   "on_route_but_terminal_wrong": 0.3
+  }
+ }
+}

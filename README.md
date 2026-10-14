@@ -59,7 +59,10 @@ the verdict.** Nine scored experiments live here:
    −8.3 pts at 3.7× the tokens), **K2 PASS** (beam-2 beats the greedy
    walk +13.3 — its fourth consecutive replication and largest margin,
    keeping 89% of flat's accuracy at 6.5% of its tokens), **K3 PASS**
-   (the flat anchor holds).
+   (the flat anchor holds). *Amendment 2* (same day): 3-hop route
+   lookahead — **KL1/KL2 FAIL** (route commitment collapses below
+   edge hedging; the walker overshoots the answer, measured via the
+   on-route diagnostic).
 
 **Every number in this repo is a committed artifact.** Hypotheses, arms, bars,
 and amendments live in [protocol.md](protocol.md) — committed before any
@@ -91,6 +94,8 @@ not argued. A rendered, non-technical version of the whole story is at
 | K1 | traversal beats retrieve-then-read at matched budget | **FAIL** — −8.3 pts at 3.7× the tokens |
 | K2 | beam-2 beats the greedy walk by ≥ +3 on graphs | **PASS** — +13.3, fourth replication, largest margin |
 | K3 | flat anchor: whole-graph read not beaten by a budgeted arm | **PASS** — +3.3 over beam |
+| KL1 | 3-hop route lookahead beats edge-hedging beam | **FAIL** — −25 pts; collapses to 2/60 |
+| KL2 | route lookahead rescues the greedy walk | **FAIL** — −5 pts (deeper commitment, not less) |
 
 Depth extension to 6 levels / 96 leaves: **no depth wall** (levels 5–6 are
 free, .9997 and 1.0000), but the walk is capped by its first step (.918 at
@@ -166,7 +171,20 @@ crashed on question 1 — the whole-graph prompt exceeded the production
 slot's 8192-token ceiling — amended pre-data to FLAT-2HALF, a deterministic
 two-half read.)
 
-**7 of 19 headline predictions passed as registered** — R3/R4/W1/K3 by
+The lookahead follow-up (K-series Amendment 2, 2026-10-14): the operator
+proposed fixing the greedy walk's myopia by choosing a whole 3-hop route at
+a time instead of one edge. Registered pre-data, scored against the
+committed baselines. **Both verdicts FAIL, decisively** — route-level
+commitment is still commitment: LOOK-1 (single route, the proposal as
+stated) landed *below* the plain greedy walk (−5 pts), and LOOK-2 (frontier
+of 2 routes) collapsed to 2/60, −25 pts vs beam. The diagnostic explains
+it: the gold node sat on the chosen route 32% of the time, and in
+practically every one of those cases the walker walked PAST it — a 3-hop
+route overshoots a 2-hop answer. The design instinct was half right (myopia
+was the correct diagnosis); the fix that survives measurement is wider
+hedging, not longer committed routes.
+
+**7 of 21 headline predictions passed as registered** — R3/R4/W1/K3 by
 confirming negatives (shortcuts lose; scores are miscalibrated; flat does
 not lose), EA/EC by confirming the embedder works, and K2 by confirming the
 lab's only structural win replicates on a new shape. The failures are

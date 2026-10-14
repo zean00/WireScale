@@ -1187,3 +1187,42 @@ baselines are reused cross-run, not re-measured (they are
 deterministic-temp records of the same frozen questions and
 graph; W-series precedent is a same-session rerun for the judge —
 not needed here, no new judging of baselines).
+
+## K-series Amendment 2 RESULTS (2026-10-14, scored — klookahead.json, baselines read from committed kgraphqa.json)
+
+| arm    | all  | 1-hop | 2-hop | direct | indirect | tok/q |
+|--------|------|-------|-------|--------|----------|-------|
+| LOOK-1 | .100 | .133  | .067  | .133   | .067     |   406 |
+| LOOK-2 | .033 | .033  | .033  | .033   | .033     |   825 |
+| (WALK) | .150 | .200  | .100  | .267   | .033     |   412 |
+| (BEAM) | .283 | .367  | .200  | .467   | .100     |   705 |
+
+Verdicts (mechanical):
+- **KL1: FAIL** — LOOK-2 − BEAM = −25.0 pts (bar: ≥ +3). Route-level
+  choice does not add to the hedge law; at a frontier of 2 it
+  collapses below everything (2/60).
+- **KL2: FAIL** — LOOK-1 − WALK = −5.0 pts (bar: ≥ 0). Lookahead
+  does not rescue greedy walking — it deepens it (the walker now
+  commits to THREE edges at once instead of one).
+- **KL3 (descriptive)**: gold sits ON the chosen route 31.7% of
+  the time, and in essentially all of those cases the terminal is
+  wrong (on-route-but-terminal-wrong = 30.0%). The walker reaches
+  the answer's neighborhood and then walks PAST it: a 2-hop gold
+  forces a 3-hop route whose endpoint is one hop beyond the gold.
+
+Post-hoc readings (not verdicts): the design's fate was sealed by
+two compounding mechanisms. (1) Committing at the ROUTE level is
+still committing — Amendment 2's registered alternative (frontier
+of 2) inherited the law's benefit in no measure, because route
+commitment multiplies the overshoot instead of hedging it: more
+route = more terminal-past-gold. (2) The scoring contract (terminal
+entity, chosen for comparability with WALK/BEAM) punishes exactly
+the success mode lookahead produces — passing THROUGH the answer.
+A mid-route scoring arm (any node on the traversed route counts)
+is the obvious re-registration; it would need to apply to WALK and
+BEAM as well for fairness, and until then no claim transfers about
+lookahead being worse than beam "at answering" — only at this
+endpoint contract, where it is much worse. The operator's design
+instinct was half right: the diagnosis (myopia) was the correct
+failure mode; the fix that survives measurement is not longer
+committed routes but wider hedges.
