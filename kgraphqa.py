@@ -266,8 +266,27 @@ def menu_at(node_norm, adj, g):
 
 
 def arm_flat(q, g):
-    ans, u = ask_answer(q, triples_prompt(g["triples"]))
-    return ans, u.get("prompt_tokens", 0)
+    """FLAT-2HALF (amended, protocol.md): whole graph exceeds the
+    production slot's 8192-token ceiling, so read two deterministic
+    index-halves and tie-break conflicts. No selection, no ranking."""
+    tris = g["triples"]
+    mid = (len(tris) + 1) // 2
+    a1, u1 = ask_answer(q, triples_prompt(tris[:mid]))
+    a2, u2 = ask_answer(q, triples_prompt(tris[mid:]))
+    tok = u1.get("prompt_tokens", 0) + u2.get("prompt_tokens", 0)
+    if a1 == a2 or a2.upper() == "UNKNOWN":
+        return a1, tok
+    if a1.upper() == "UNKNOWN":
+        return a2, tok
+    r = CR.llm_chat(
+        [{"role": "system", "content": ANSWER_SYS},
+         {"role": "user", "content":
+          f"Question: {q}\n\nCandidate answers:\nA. {a1}\nB. {a2}\n\n"
+          "Reply with only the better candidate (A or B)."}],
+        temp=0, max_tokens=8)
+    pick = r["choices"][0]["message"]["content"].strip().upper()[:1]
+    return (a1 if pick == "A" else a2), tok + \
+        r.get("usage", {}).get("prompt_tokens", 0)
 
 
 def arm_read(q, g, adj, cache):

@@ -1070,3 +1070,17 @@ over an SSH tunnel; WALK/BEAM menus are the same menu machinery as
 R's J-menu (first-200-char previews not used — neighbor labels
 only); temp-0 traversal is session-stable but not bit-deterministic
 (W precedent).
+
+Incident + Amendment (2026-10-14, before any K-series data): the
+first scored attempt crashed on question 1 — FLAT's whole-graph
+prompt measures ≈ 8.1k tokens of graph text alone, exceeding the
+production server's per-slot context ceiling (65536 total across 8
+slots → 8192 per slot); HTTP 400; the run wrote no output and no
+metric was computed (only cache-only embeddings, kept). Amendment:
+**FLAT = FLAT-2HALF** — the triple list is split deterministically
+into two halves by index; each half is read flat with the same
+question in one call; if the two answers conflict (both non-UNKNOWN
+and different), one tie-break call picks between them; every read
+counts toward FLAT's tokens. The arm still reads every triple with
+no selection or ranking — the split is mechanical, disclosed here
+before the rerun.
