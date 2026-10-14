@@ -1131,3 +1131,59 @@ embed far worse than full chunks did (.638 top-3 in E-series).
 The lab's through-line holds: greedy structure loses (K1), the
 one structural pattern that pays is keeping candidates alive (K2),
 and flat still wins when it fits (K3).
+
+## K-series Amendment 2 (2026-10-14, pre-data): LOOKAHEAD arms
+
+K1's diagnosis: greedy walkers are myopic — they pick one edge and
+discover too late where it led. The operator proposes the fix:
+choose a whole ROUTE at a time. Registered here before any data:
+
+- **LOOK-1** (the proposal, as stated): entry = same top-5 entity
+  menu as WALK/BEAM (held constant across traversal arms). From
+  the current anchor, enumerate simple paths (no repeated
+  entities) up to 3 hops; the LLM sees the numbered path list and
+  picks ONE (or 0 = stop → answer is the current anchor). The
+  chosen path's far endpoint becomes the new anchor; repeat for
+  at most 2 segments (the walker cannot see the destination, so
+  "until reached" is operationalized as a stop option + segment
+  cap). Answer = the final chosen path's terminal node — the same
+  endpoint scoring as WALK/BEAM for comparability.
+- **LOOK-2**: identical, but the entry menu keeps TWO starting
+  entities (weights 1.0/0.5, K2 precedent) and each segment keeps
+  a frontier of 2 best-scoring routes; answer = the best-weight
+  route's terminal.
+- Baselines FLAT/READ/WALK/BEAM are NOT rerun — their per-question
+  records are committed (kgraphqa.json, same frozen eval, same
+  graph); the comparison reads them. New results go to a NEW file
+  (klookahead.json); nothing is overwritten.
+
+Anti-explosion mechanism (registered — "all paths" is exponential,
+hubs in this graph touch dozens of triples): at each hop extension
+keep only the top-12 incident triples by embedder cosine of the
+TRIPLE TEXT to the question (all triple embeddings are already
+cached from K; ranking adds zero new embeds); intermediate pools
+capped at 300 (2-hop) / 800 (3-hop); the LLM menu shows the top
+60 paths ranked by mean triple cosine. Entry procedure, stop
+option, weights, and endpoint scoring are identical to the K
+traversal arms.
+
+Predictions (mechanical):
+- **KL1 (primary)**: LOOK-2 all-accuracy − BEAM all-accuracy
+  ≥ +3 pts AND LOOK-2 tokens ≤ 2 × BEAM tokens → PASS (lookahead
+  adds to the law); ≥ +3 with budget blown → PASS-budget; 0..+3 →
+  PARTIAL; < 0 → FAIL (route-level choice adds nothing over edge
+  hedging).
+- **KL2**: LOOK-1 − WALK ≥ 0 → PASS (lookahead rescues greedy at
+  the route level); else FAIL.
+- **KL3 (descriptive, no verdict)**: rate of questions where gold
+  sits ON the chosen route but is not its terminal (mid-path
+  answers the endpoint scoring misses).
+
+Disclosures: the 60-path menu cap and 2-segment cap are the
+registered budget; enumeration ranking is embedder-based (the
+graph-label embedding weakness measured in K applies); entry
+top-5 hit rate is .533 (K-measured ceiling on any traversal);
+baselines are reused cross-run, not re-measured (they are
+deterministic-temp records of the same frozen questions and
+graph; W-series precedent is a same-session rerun for the judge —
+not needed here, no new judging of baselines).
