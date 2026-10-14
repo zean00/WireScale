@@ -73,6 +73,18 @@ the verdict.** Ten scored experiments live here:
    registered fallback-to-top1 policy converts part of X's
    stop-vs-prefix gap), **A4 PASS-budget** (5.4k tok/q vs the 10.2k
    ceiling). Every registered prediction of the batch passed.
+11. **The fair fight** (B-series) — *scored 2026-10-15*: A-series' RAG
+   baseline was the strictest variant (top-1). Production stacks feed
+   top-k excerpts; registered bets predicted top-k wins (context hit
+   .638 at k=3 > machine's .466). **Both bars PASS anyway — the bets
+   were wrong**: TOPK-3 scored exactly TOP1's .345 and the best
+   affordable k (top-2, .397) still loses (B1 +.086, B2 +.034).
+   Mechanism: synthesis given gold-in-context collapses .77 → .625 →
+   .514 → .432 → .425 across k=1→8, cancelling the context-hit gain
+   .448 → .810 — answer accuracy flatlines at .33–.40 across the whole
+   sweep. The machine reads ONE judge-verified chunk and synthesizes
+   .852. Disclosed: RAG keeps the per-token crown (top-2 holds 92% of
+   the machine's accuracy at 21% of its cost).
 
 **Every number in this repo is a committed artifact.** Hypotheses, arms, bars,
 and amendments live in [protocol.md](protocol.md) — committed before any
@@ -236,14 +248,20 @@ committed .310 anchor (A3), cashing in part of X's stop-vs-prefix gap.
 Cost: 5.4k tok/q, 18.6% of the exhaustive scan (A4). Remaining losses,
 disclosed in the RESULTS: answer synthesis drops ~3.4 pts even with the
 right chunk in hand, and the indirect cell is still the frontier (.207).
+The fair fight (B-series, 2026-10-15) then held the machine against
+production-style top-k RAG — the registered bets said the machine loses,
+the bars said otherwise: multi-excerpt RAG flatlines at .33–.40 no matter
+how many pages you stuff in (dilution eats the recall gain), while
+verified-single-chunk synthesis holds .852.
 
-**16 of 32 headline predictions passed as registered.** The failures
+**18 of 34 headline predictions passed as registered.** The failures
 keep mapping the dead ends (rewriting, route commitment, pooling dials,
-trained heads); the passes now form a recipe — and the recipe is now a
-scored machine: **embed with the dedicated model, scan in its order,
-stop when the calibrated judge is confident, fall back to the rank-1
-pick when nothing crosses, hedge on graphs, and read flat when flat
-fits.**
+trained heads — and the operator's own bet that plain top-k RAG would
+beat the machine); the passes now form a recipe — and the recipe is now
+a scored machine that survived its fair fight: **embed with the
+dedicated model, scan in its order, stop when the calibrated judge is
+confident, fall back to the rank-1 pick when nothing crosses, hedge on
+graphs, and read flat when flat fits.**
 
 What transferred to production: beam-2 path scoring in the WireSense router —
 which only worked after discovering paths of different depth must be scored by
@@ -274,6 +292,7 @@ current wiring target 73.4% vs 67.3% for the shipped gate).
 | `qrewrite.py`, `qrewrite.json` | Y-series (query rewriting) — **scored 2026-10-14 (YA/YB FAIL)** |
 | `calib.py`, `calib.json` | Z-series (temperature calibration, committed data only) — **scored 2026-10-14 (ZA/ZB PASS)** |
 | `asm.py`, `assembly.json` | A-series (end-to-end assembly: TOP1 vs FLATPOL vs ASM, fallback-to-top1, judge-graded answers) — **scored 2026-10-14 (A1–A4 all PASS)** |
+| `topk.py`, `topk.json` | B-series (the fair fight: TOPK-k k∈{2,3,5,8} vs committed ASM, budget-dominance bars) — **scored 2026-10-15 (B1/B2 PASS; registered bets wrong)** |
 | `adjudicate.py` | mechanical P1–P4 verdicts against the registered bars |
 | `posthoc_p3.py` | the post-hoc m=0 probe behind P3's verdict |
 | `embed_client.py` | embedding client for the frozen encoder |
@@ -302,6 +321,7 @@ python -m venv .venv && .venv/bin/pip install numpy torch   # already present he
 .venv/bin/python pairscale.py --smoke   # J-series plumbing check (never scored)
 .venv/bin/python extembed.py --smoke    # E-series plumbing check (never scored)
 .venv/bin/python asm.py --smoke         # A-series plumbing check (never scored)
+.venv/bin/python topk.py --smoke        # B-series plumbing check (never scored)
 .venv/bin/python adjudicate.py          # recompute P1–P4 verdicts from results/
 ```
 

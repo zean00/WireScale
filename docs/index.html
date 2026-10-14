@@ -229,7 +229,7 @@
       <span class="chip a"><b>121</b> real tools filtered to ~65</span>
       <span class="chip t"><b>58</b> frozen questions over a <b>180</b>-page corpus</span>
       <span class="chip v"><b>902</b>-triple knowledge graph</span>
-      <span class="chip"><b>16</b>/32 headline predictions passed as registered — the failures map the dead ends</span>
+      <span class="chip"><b>18</b>/34 headline predictions passed as registered — the failures map the dead ends</span>
     </div>
   </div>
   <div class="wrap scrollcue">the experiments</div>
@@ -603,15 +603,19 @@
               <td>ZA/ZB PASS — one temperature fixes it; the stop-bar transfers across the split</td></tr>
           <tr class="hl"><td><b>A</b> — the assembly</td><td>does the whole recipe survive as one machine?</td>
               <td>A1–A4 ALL PASS — .431 vs .345 (vector RAG) at 18.6% of the exhaustive cost</td></tr>
+          <tr class="hl"><td><b>B</b> — the fair fight</td><td>does the machine still win when RAG gets its real production form (top-k excerpts, no handicaps)?</td>
+              <td>B1/B2 PASS — top-k RAG flatlines at .33–.40 for every k; registered bets said the machine loses, and they were wrong</td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="chart rv">
       <div class="ct"><h3>The machine: more right answers, a sixth of the cost</h3>
-        <span class="cs">answer accuracy over the frozen 58 vs judge prompt cost · A-series (assembly.json)</span></div>
+        <span class="cs">answer accuracy over the frozen 58 vs judge prompt cost · A + B series (assembly.json, topk.json)</span></div>
       <div id="chartRetrieval"></div>
-      <div class="tblcap">vector top-1 .345 @ 798 tok · same policy in document order .379 @ 13,640 ·
+      <div class="tblcap">vector top-1 .345 @ 798 tok · top-k RAG k=2/3/5/8: .397/.345/.328/.345 @ 1,146–3,045 —
+        the grey flatline (context hit climbs .45→.81, synthesis collapses .77→.43, net zero) ·
+        same policy in document order .379 @ 13,640 ·
         the machine .431 @ 5,428 (18.6% of reading everything, dashed) · judge-graded answers, registered
         fallback fired on 21% of questions.</div>
     </div>
@@ -620,9 +624,12 @@
       <div class="ic">🔍</div>
       <p><b>Verdict for retrieval:</b> pure vector search is a <b>librarian, not a reader</b> — and the reader is worth it.
          Rank with the dedicated embedder, verify with the judge in that order, stop when the calibrated confidence crosses
-         the bar, fall back to rank-1 when nothing does. Honest losses, disclosed in the ledger: even holding the right page
-         the answer sometimes comes out wrong (−3.4 pts from synthesis), and questions asked in roundabout ways stay hard
-         (.207) — the machine's edge is almost all where the words match the need.</p>
+         the bar, fall back to rank-1 when nothing does. And it survived the fair fight: when RAG got its real production
+         form — top-k excerpts in one prompt — stuffing in more pages raised context hit (.45→.81) but answer accuracy
+         flatlined (.33–.40), because synthesis collapses as context grows (.77→.43). One judge-verified page beats eight
+         candidates. Honest losses, disclosed in the ledger: even holding the right page the answer sometimes comes out
+         wrong (−3.4 pts from synthesis), questions asked in roundabout ways stay hard (.207), and plain top-2 RAG keeps
+         the per-token crown (92% of the machine's accuracy at 21% of its cost).</p>
     </div>
   </div>
 </section>
@@ -724,19 +731,23 @@
            paths by <b>mean, never sum</b> (a 13-point crash hid in that choice).</p></div>
       <div class="card red rv"><div class="k">law 04</div><h3>Register, then obey the verdict</h3>
         <p>The first experiment went 0 for 4 — so conditioning was <b>stopped by rule</b>. Since then:
-           16 of 32 headline predictions passed as registered, and every failure is kept as a mapped
-           dead end. Runs botched or invalidated are deleted unexamined and disclosed. The ledger is
-           the product.</p></div>
+           18 of 34 headline predictions passed as registered, and every failure is kept as a mapped
+           dead end — including the operator's own pre-registered bet that plain top-k RAG would beat
+           the machine (it didn't). Runs botched or invalidated are deleted unexamined and disclosed.
+           The ledger is the product.</p></div>
       <div class="card teal rv"><div class="k">law 05</div><h3>Sort, verify, stop — then fall back</h3>
         <p>A ranking is not an answer. Let the cheap model order the pages, let the careful model check
            them one at a time until confident, and keep a safe fallback for when it never is: <b>.431 vs
-           .345</b> for plain vector RAG, at 18.6% of the read-everything cost. The verifier beats both
-           the guesser and the brute.</p></div>
+           .345</b> for plain vector RAG, at 18.6% of the read-everything cost — and still <b>.431 vs
+           .397</b> when RAG got its production form (best top-k), at any budget the machine can afford.
+           The verifier beats the guesser, the brute, and the pile.</p></div>
       <div class="card amber rv"><div class="k">law 06</div><h3>Helping the input hurts</h3>
-        <p>Twice measured: the embedder's official instruct prefix (−3.5 pts) and LLM query rewriting
-           (−6.9 indirect, −3.5 direct) both made retrieval <b>worse</b>. The raw question wins. If
+        <p>Three times measured: the embedder's official instruct prefix (−3.5 pts), LLM query rewriting
+           (−6.9 indirect, −3.5 direct), and now <b>context stuffing</b> — top-k RAG's synthesis given
+           gold-in-context collapses .77 → .43 from k=1 to k=8 while context hit climbs .45 → .81, so
+           accuracy flatlines. The raw question wins and one verified page beats eight candidates. If
            confidence is the problem, calibrate the judge (T=0.66; ECE .105→.081) — don't edit the
-           question.</p></div>
+           question or pad the context.</p></div>
     </div>
   </div>
 </section>
@@ -757,7 +768,7 @@
       <a href="protocol.md">protocol.md — the decision record</a>
       <a href="https://github.com/zean00/WireSense">sister program: WireSense</a>
     </div>
-    <p class="fine rv" style="margin-top:26px">Experiments run 2026-10-07 → 2026-10-14 · frozen encoder
+    <p class="fine rv" style="margin-top:26px">Experiments run 2026-10-07 → 2026-10-15 · frozen encoder
       Qwen3.5-4B (local llama.cpp server, dedicated slot 7) + dedicated Qwen3-Embedding-0.6B for retrieval ·
       synthetic corpora generated deterministically from committed seeds ·
       production transfer measured in the WireSense program (MS-1..29).</p>
@@ -916,6 +927,13 @@ lineChart('chartDepth', {
     {n:'same policy, doc order .379', t:13640, a:.3793, c:'#9aa4b8'},
     {n:'the machine .431', t:5428, a:.431, c:'#2dd4bf'},
   ];
+  const ks=[[798,.3448],[1146,.3966],[1467,.3448],[2089,.3276],[3045,.3448]];
+  svg.appendChild(mk('polyline',{points:ks.map(p=>X(p[0])+','+Y(p[1])).join(' '),
+    fill:'none',stroke:'#9aa4b8','stroke-width':1.8,opacity:.9}));
+  ks.forEach(p=>{
+    svg.appendChild(mk('circle',{cx:X(p[0]),cy:Y(p[1]),r:4.5,fill:'#06090f',stroke:'#9aa4b8','stroke-width':2}));
+  });
+  svg.appendChild(txt(X(1146)-6,Y(.3966)-10,'top-k RAG, k=1\u20268 (flatline)','sv','start')).setAttribute('fill','#9aa4b8');
   pts.forEach(p=>{
     svg.appendChild(mk('circle',{cx:X(p.t),cy:Y(p.a),r:7,fill:'#06090f',stroke:p.c,'stroke-width':2.6}));
     svg.appendChild(txt(X(p.t)+13,Y(p.a)+4,p.n,'sv','start')).setAttribute('fill',p.c);

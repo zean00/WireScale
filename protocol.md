@@ -1587,3 +1587,58 @@ so B2 below is expected to demand the machine beat even top-8.
   from raw accuracy to verified provenance — it answers only from
   a chunk the judge confirmed above bar, vs RAG's unconditional
   answer.
+
+## B-series RESULTS (topk.json, 2026-10-15 — scored)
+
+Sanity: the TOP1 re-run reproduced committed assembly.json on all
+58 questions — answer strings AND picked chunks, agreement 1.000,
+headline drift 0.000 (fourth consecutive session of temp-0
+determinism).
+
+| arm | ctx hit | answer acc | synthesis (acc given hit) | tok/q |
+|-----|---------|-----------|---------------------------|-------|
+| TOP1 (k=1, committed)       | .448 | .345 | .77  | 798 |
+| TOPK-2                      | .552 | **.397** | .625 | 1,146 |
+| TOPK-3 (production default) | .638 | .345 | .514 | 1,467 |
+| TOPK-5                      | .759 | .328 | .432 | 2,089 |
+| TOPK-8                      | .810 | .345 | .425 | 3,045 |
+| ASM (the machine, committed)| .466 (answered) | **.431** | **.852** | 5,428 |
+
+Verdicts: **B1 PASS** (+.086 over production-default top-3 RAG —
+which scored exactly TOP1's .345: +19 pts of context hit bought
+zero end-to-end accuracy, and the A1/B1 margins coincide to four
+decimals for that reason). **B2 PASS** (+.034): as predicted, ALL
+swept k came in under the machine's budget, and the machine beat
+the best of them (top-2, .397) — paired record 8 wins / 6 losses /
+44 ties.
+
+The registered bets FAILED in direction, and the failure is the
+finding. PB1/PB2 predicted top-k RAG wins (Δ +.03..+.15); the
+machine passed both bars instead. The mechanism bet was right —
+dilution — but its magnitude was underestimated: synthesis given
+gold-in-context falls monotonically .770 → .625 → .514 → .432 →
+.425 across k = 1→8 (mean grade_p falls in lockstep .425 → .392 →
+.361 → .384), almost exactly cancelling the context-hit gain
+.448 → .810. Answer accuracy is a flatline (.33–.40) across the
+entire sweep: every excerpt the retriever adds is worth as much
+dilution as recall. Law 06 (helping-the-input-hurts), now measured
+at answer level with a full dose–response curve.
+
+Where the machine's edge lives: it synthesizes from ONE
+judge-verified chunk (.852 of answered hits) vs .43–.63 for any
+multi-excerpt dump. In the direct cell the gap is stark: at k=8
+gold is in the context for 96.6% of direct questions and RAG still
+answers only .552 — the machine's .655 comes from reading one
+confirmed page, not eight candidates. The indirect cell flips to
+RAG, as betted descriptively (.241 at k=2 vs .207) — the frontier
+is unchanged.
+
+Honest cost note (disclosed, not a bar): the machine did NOT win
+on price. It spent 5,428 tok/q; top-2 RAG spent 1,146 and kept 92%
+of the machine's accuracy. The registered claim was accuracy
+dominance over everything at-or-under its budget — that holds. The
+per-token efficiency crown stays with plain top-k RAG; the
+machine's crown is the most accuracy this lab knows how to buy
+without the 29,236-token exhaustive read.
+
+Tally: 18 of 34 headline predictions passed.
