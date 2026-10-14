@@ -1,0 +1,1254 @@
+{
+ "audit": {
+  "date": "2026-10-14",
+  "dropped": 77,
+  "frozen": true,
+  "kept_from_preaudit": [
+   4,
+   5,
+   6,
+   7,
+   9,
+   15,
+   18,
+   19,
+   22,
+   23,
+   24,
+   27,
+   28,
+   30,
+   32,
+   33,
+   37,
+   38,
+   43,
+   47,
+   48,
+   49,
+   51,
+   52,
+   54,
+   57,
+   61,
+   69,
+   70,
+   71,
+   73,
+   75,
+   77,
+   80,
+   84,
+   85,
+   92,
+   93,
+   95,
+   96,
+   100,
+   104,
+   111
+  ],
+  "policy": "R-series policy: hand audit pre-freeze. Broken chains (inverted gold, circular or yes/no questions, answer mismatches \u2014 extraction noise anticipated in the registration) dropped; indirect cells short on keeps were filled by REWRITES against kept direct twins' paths (same path, two recipes \u2014 R precedent).",
+  "pre_data": true,
+  "rewrites": [
+   {
+    "cell": "h1-indirect",
+    "new_q": "When I read a production manifest, how are the MCP tools identified so I can tell them apart?",
+    "src_path_of": 30
+   },
+   {
+    "cell": "h1-indirect",
+    "new_q": "Before the eval set is locked, what does the R-series runner leave on disk for review?",
+    "src_path_of": 77
+   },
+   {
+    "cell": "h1-indirect",
+    "new_q": "What presence did the all-leaves-at-once read reach in the depth extension?",
+    "src_path_of": 92
+   },
+   {
+    "cell": "h1-indirect",
+    "new_q": "What accuracy did the second window-union variant register?",
+    "src_path_of": 101
+   },
+   {
+    "cell": "h1-indirect",
+    "new_q": "Across the hint-family variants, how did the best one rank on accuracy?",
+    "src_path_of": 37
+   },
+   {
+    "cell": "h1-indirect",
+    "new_q": "What does the stdio transport call first to discover a server's capabilities?",
+    "src_path_of": 49
+   },
+   {
+    "cell": "h1-indirect",
+    "new_q": "What does the focus_move action change on the camera?",
+    "src_path_of": 95
+   },
+   {
+    "cell": "h1-indirect",
+    "new_q": "What kind of backing service does the demo tool expect to demonstrate message annotations?",
+    "src_path_of": 113
+   },
+   {
+    "cell": "h2-indirect",
+    "new_q": "In the S-series matchup against B_walk, who came out ahead?",
+    "src_path_of": 61
+   },
+   {
+    "cell": "h2-indirect",
+    "new_q": "When the pointwise judge scores a chunk, what two things does it look at together?",
+    "src_path_of": 69
+   },
+   {
+    "cell": "h2-indirect",
+    "new_q": "Which piece of infrastructure produced the frozen question set?",
+    "src_path_of": 75
+   },
+   {
+    "cell": "h2-indirect",
+    "new_q": "If I open the trunk module in this repo, which classifier configurations will I find?",
+    "src_path_of": 111
+   },
+   {
+    "cell": "h2-indirect",
+    "new_q": "Besides MS-29, which other results block was scored the same day?",
+    "src_path_of": 118
+   },
+   {
+    "cell": "h2-indirect",
+    "new_q": "How many negative cases did the registration bar insist on before MS-28a could count?",
+    "src_path_of": 57
+   },
+   {
+    "cell": "h2-indirect",
+    "new_q": "What grows when each additional candidate drags the score down by 0.759?",
+    "src_path_of": 85
+   },
+   {
+    "cell": "h2-indirect",
+    "new_q": "Once its three best ingredients were stacked, what number did the registration come to?",
+    "src_path_of": 33
+   },
+   {
+    "cell": "h2-indirect",
+    "new_q": "Beyond their distinguishing modifier, what do all the leaves of this hierarchy have in common?",
+    "src_path_of": 47
+   }
+  ]
+ },
+ "eval": [
+  {
+   "gold": "log",
+   "hops": 1,
+   "path": [
+    [
+     "registered run",
+     "confirmed by",
+     "log",
+     "PROTOCOL-mcp-selection.md",
+     72
+    ]
+   ],
+   "q": "What is the confirmation result for a registered run?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "yes",
+   "hops": 1,
+   "path": [
+    [
+     "17b",
+     "worth registering",
+     "yes",
+     "PROTOCOL-mcp-selection.md",
+     50
+    ]
+   ],
+   "q": "Is 17b worth registering?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "R",
+   "hops": 1,
+   "path": [
+    [
+     "deciders",
+     "are",
+     "R",
+     "PROTOCOL-mcp-selection.md",
+     108
+    ]
+   ],
+   "q": "What are the deciders?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "content-defined groups",
+   "hops": 1,
+   "path": [
+    [
+     "shortlist's recall",
+     "comes from",
+     "content-defined groups",
+     "PROTOCOL-mcp-selection.md",
+     93
+    ]
+   ],
+   "q": "What do shortlists' recalls come from?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "prefixed names",
+   "hops": 1,
+   "path": [
+    [
+     "production manifests",
+     "show mcp tools",
+     "prefixed names",
+     "PROTOCOL-mcp-selection.md",
+     28
+    ]
+   ],
+   "q": "What are the prefixed names for the MCP tools in production manifests?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "highest",
+   "hops": 1,
+   "path": [
+    [
+     "hintfam",
+     "accuracy",
+     "highest",
+     "PROTOCOL-mcp-selection.md",
+     122
+    ]
+   ],
+   "q": "What was the accuracy of hintfam?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "gold=1; negatives=0",
+   "hops": 1,
+   "path": [
+    [
+     "train pairs",
+     "trained on",
+     "gold=1; negatives=0",
+     "protocol.md",
+     28
+    ]
+   ],
+   "q": "What is the value of train pairs in the gold label?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "tools/list",
+   "hops": 1,
+   "path": [
+    [
+     "stdio MCP client",
+     "initializes",
+     "tools/list",
+     "PROTOCOL-mcp-selection.md",
+     1
+    ]
+   ],
+   "q": "What does the stdio MCP client initialize with?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "domain boundary",
+   "hops": 1,
+   "path": [
+    [
+     "coarse gate",
+     "holds",
+     "domain boundary",
+     "PROTOCOL-mcp-selection.md",
+     15
+    ]
+   ],
+   "q": "What does the coarse gate hold in the hierarchy?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "freeze candidates",
+   "hops": 1,
+   "path": [
+    [
+     "chunkrel.py",
+     "writes",
+     "freeze candidates",
+     "protocol.md",
+     31
+    ]
+   ],
+   "q": "What does chunkrel.py write?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "k in set",
+   "hops": 1,
+   "path": [
+    [
+     "k-sweep",
+     "re-run with",
+     "k in set",
+     "PROTOCOL-mcp-selection.md",
+     9
+    ]
+   ],
+   "q": "What parameter was in set when re-running the k-sweep?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "0.929",
+   "hops": 1,
+   "path": [
+    [
+     "A_flat",
+     "equals",
+     "0.929",
+     "protocol.md",
+     22
+    ]
+   ],
+   "q": "What does A_flat equal?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "simulate-research-query",
+   "hops": 1,
+   "path": [
+    [
+     "ir_research",
+     "defensible",
+     "simulate-research-query",
+     "PROTOCOL-mcp-selection.md",
+     62
+    ]
+   ],
+   "q": "What is the query generated when ir_research is defensible?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "focus",
+   "hops": 1,
+   "path": [
+    [
+     "focus_move",
+     "moves",
+     "focus",
+     "PROTOCOL-mcp-selection.md",
+     40
+    ]
+   ],
+   "q": "What does the focus_move action do?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "registered 19\u201322",
+   "hops": 1,
+   "path": [
+    [
+     "neg predictions",
+     "passed",
+     "registered 19\u201322",
+     "PROTOCOL-mcp-selection.md",
+     116
+    ]
+   ],
+   "q": "What were the registered results for neg predictions?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "chunk carries information",
+   "hops": 1,
+   "path": [
+    [
+     "decision layer",
+     "judges if",
+     "chunk carries information",
+     "protocol.md",
+     24
+    ]
+   ],
+   "q": "Can I trust a decision layer if the chunk lacks the information it needs to judge?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "content-defined groups",
+   "hops": 1,
+   "path": [
+    [
+     "shortlist's recall",
+     "comes from",
+     "content-defined groups",
+     "PROTOCOL-mcp-selection.md",
+     93
+    ]
+   ],
+   "q": "How can I reliably locate specific content groups using the registry's server-based sorting system?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "log",
+   "hops": 1,
+   "path": [
+    [
+     "registered run",
+     "confirmed by",
+     "log",
+     "PROTOCOL-mcp-selection.md",
+     72
+    ]
+   ],
+   "q": "How do I verify that the cache file was not overwritten between the two signature checks?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "domain boundary",
+   "hops": 1,
+   "path": [
+    [
+     "coarse gate",
+     "holds",
+     "domain boundary",
+     "PROTOCOL-mcp-selection.md",
+     15
+    ]
+   ],
+   "q": "How can a team ensure only relevant content enters their system without wasting resources on irrelevant data?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "focus",
+   "hops": 1,
+   "path": [
+    [
+     "focus_move",
+     "moves",
+     "focus",
+     "PROTOCOL-mcp-selection.md",
+     40
+    ]
+   ],
+   "q": "How do I manually adjust the camera's focus when the automated system isn't responding?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "tools/list",
+   "hops": 1,
+   "path": [
+    [
+     "stdio MCP client",
+     "initializes",
+     "tools/list",
+     "PROTOCOL-mcp-selection.md",
+     1
+    ]
+   ],
+   "q": "How do I locate a specific server's complete JSON tool list from the corpus folder without editing?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "yes",
+   "hops": 1,
+   "path": [
+    [
+     "17b",
+     "worth registering",
+     "yes",
+     "PROTOCOL-mcp-selection.md",
+     50
+    ]
+   ],
+   "q": "Is 17b worth registering because the current system no longer allows silent edits?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "presence 0.878",
+   "hops": 2,
+   "path": [
+    [
+     "MS-29 registration",
+     "measures",
+     "3 negs",
+     "PROTOCOL-mcp-selection.md",
+     131
+    ],
+    [
+     "MS-29 registration",
+     "measures",
+     "presence 0.878",
+     "PROTOCOL-mcp-selection.md",
+     131
+    ]
+   ],
+   "q": "What is the presence value of MS-29 registration measures?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "registry order",
+   "hops": 2,
+   "path": [
+    [
+     "union",
+     "is",
+     "best arm",
+     "PROTOCOL-mcp-selection.md",
+     94
+    ],
+    [
+     "union",
+     "uses",
+     "registry order",
+     "PROTOCOL-mcp-selection.md",
+     79
+    ]
+   ],
+   "q": "What order does the union use?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "WireSense repo",
+   "hops": 2,
+   "path": [
+    [
+     "CLM head",
+     "trained in",
+     "rewire program",
+     "models/README.md",
+     0
+    ],
+    [
+     "CLM head",
+     "copied from",
+     "WireSense repo",
+     "models/README.md",
+     0
+    ]
+   ],
+   "q": "Where were the production frozen-encoder readout stack artifacts first committed?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "MS-3 pools",
+   "hops": 2,
+   "path": [
+    [
+     "change",
+     "invalidates",
+     "weights",
+     "models/README.md",
+     1
+    ],
+    [
+     "MS-3 pools",
+     "make cheap",
+     "change",
+     "PROTOCOL-mcp-selection.md",
+     18
+    ]
+   ],
+   "q": "Which pools make changes cheap?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "19/24",
+   "hops": 2,
+   "path": [
+    [
+     "neg",
+     "rejects production",
+     "when < 20",
+     "PROTOCOL-mcp-selection.md",
+     121
+    ],
+    [
+     "neg",
+     "ratio",
+     "19/24",
+     "PROTOCOL-mcp-selection.md",
+     100
+    ]
+   ],
+   "q": "What is the neg ratio when the production directive gains the hint line?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "presence 0.9567",
+   "hops": 2,
+   "path": [
+    [
+     "MS-29 registration",
+     "stacks",
+     "three best-measured ingredients",
+     "PROTOCOL-mcp-selection.md",
+     131
+    ],
+    [
+     "MS-29 registration",
+     "measures",
+     "presence 0.9567",
+     "PROTOCOL-mcp-selection.md",
+     131
+    ]
+   ],
+   "q": "What is the value of presence in MS-29 registration?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "families",
+   "hops": 2,
+   "path": [
+    [
+     "modifier",
+     "distinguishes",
+     "leaves",
+     "protocol.md",
+     1
+    ],
+    [
+     "leaves",
+     "share",
+     "families",
+     "protocol.md",
+     1
+    ]
+   ],
+   "q": "Which entities do leaves share?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "id_slot 5",
+   "hops": 2,
+   "path": [
+    [
+     "arm",
+     "measured",
+     "null bias",
+     "PROTOCOL-mcp-selection.md",
+     21
+    ],
+    [
+     "arm",
+     "shares",
+     "id_slot 5",
+     "PROTOCOL-mcp-selection.md",
+     2
+    ]
+   ],
+   "q": "What is the id_slot shared by the arm?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "neg >= 20/24",
+   "hops": 2,
+   "path": [
+    [
+     "MS-28a",
+     "ms",
+     "26",
+     "PROTOCOL-mcp-selection.md",
+     128
+    ],
+    [
+     "MS-28a",
+     "requires",
+     "neg >= 20/24",
+     "PROTOCOL-mcp-selection.md",
+     126
+    ]
+   ],
+   "q": "What is the minimum negative count required for MS-28a?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "beam2-greedy",
+   "hops": 2,
+   "path": [
+    [
+     "B_walk",
+     "equals",
+     "0.796",
+     "protocol.md",
+     22
+    ],
+    [
+     "beam2-greedy",
+     "beats",
+     "B_walk",
+     "protocol.md",
+     22
+    ]
+   ],
+   "q": "Which method beats B_walk according to the provided facts?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "question and text",
+   "hops": 2,
+   "path": [
+    [
+     "J-llm",
+     "sums",
+     "calls",
+     "protocol.md",
+     29
+    ],
+    [
+     "J-llm",
+     "reads",
+     "question and text",
+     "protocol.md",
+     27
+    ]
+   ],
+   "q": "What does J-llm read?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "LLM server",
+   "hops": 2,
+   "path": [
+    [
+     "questions",
+     "two recipes",
+     "per chunk",
+     "protocol.md",
+     25
+    ],
+    [
+     "questions",
+     "generated",
+     "LLM server",
+     "protocol.md",
+     25
+    ]
+   ],
+   "q": "Which server generates the questions in this system?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "no zoom",
+   "hops": 2,
+   "path": [
+    [
+     "camera",
+     "has ptz configs",
+     "none",
+     "PROTOCOL-mcp-selection.md",
+     45
+    ],
+    [
+     "camera",
+     "has motorized focus",
+     "no zoom",
+     "PROTOCOL-mcp-selection.md",
+     45
+    ]
+   ],
+   "q": "Does the camera support zoom functionality?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "list size",
+   "hops": 2,
+   "path": [
+    [
+     "per-hit",
+     "0.759",
+     "0.759",
+     "PROTOCOL-mcp-selection.md",
+     105
+    ],
+    [
+     "per-hit",
+     "degrades with",
+     "list size",
+     "PROTOCOL-mcp-selection.md",
+     99
+    ]
+   ],
+   "q": "What does per-hit degrade with?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "arms A/B/C/C'",
+   "hops": 2,
+   "path": [
+    [
+     "heads.py",
+     "is",
+     "lab trunk",
+     "models/README.md",
+     1
+    ],
+    [
+     "heads.py",
+     "trunk classifiers",
+     "arms A/B/C/C'",
+     "README.md",
+     4
+    ]
+   ],
+   "q": "What arms are used in the classifiers in heads.py?",
+   "recipe": "direct"
+  },
+  {
+   "gold": "union",
+   "hops": 2,
+   "path": [
+    [
+     "reg variant",
+     "uses",
+     "registry order",
+     "PROTOCOL-mcp-selection.md",
+     89
+    ],
+    [
+     "union",
+     "uses",
+     "registry order",
+     "PROTOCOL-mcp-selection.md",
+     79
+    ]
+   ],
+   "q": "How can I maintain sufficient accuracy when sliding a limited tool window across a large population?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "MS-3 pools",
+   "hops": 2,
+   "path": [
+    [
+     "change",
+     "invalidates",
+     "weights",
+     "models/README.md",
+     1
+    ],
+    [
+     "MS-3 pools",
+     "make cheap",
+     "change",
+     "PROTOCOL-mcp-selection.md",
+     18
+    ]
+   ],
+   "q": "How do I keep the production server stable while adding new tool variants?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "raw-embedding centroids",
+   "hops": 2,
+   "path": [
+    [
+     "subagents.py",
+     "is runner",
+     "self-contained",
+     "protocol.md",
+     18
+    ],
+    [
+     "subagents.py",
+     "s-series runner",
+     "raw-embedding centroids",
+     "README.md",
+     4
+    ]
+   ],
+   "q": "How do I implement a routing system that uses mean comparison to prevent the performance crash caused by summing domain and agent similarity?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "WireSense repo",
+   "hops": 2,
+   "path": [
+    [
+     "CLM head",
+     "trained in",
+     "rewire program",
+     "models/README.md",
+     0
+    ],
+    [
+     "CLM head",
+     "copied from",
+     "WireSense repo",
+     "models/README.md",
+     0
+    ]
+   ],
+   "q": "Which source repository contains the WireSense frozen-encoder readout stack?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "beam2-greedy",
+   "hops": 2,
+   "path": [
+    [
+     "B_walk",
+     "equals",
+     "0.796",
+     "protocol.md",
+     22
+    ],
+    [
+     "beam2-greedy",
+     "beats",
+     "B_walk",
+     "protocol.md",
+     22
+    ]
+   ],
+   "q": "Which model is superior when my task requires a model with a domain accuracy of approximately 0.796?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "no zoom",
+   "hops": 2,
+   "path": [
+    [
+     "camera",
+     "has ptz configs",
+     "none",
+     "PROTOCOL-mcp-selection.md",
+     45
+    ],
+    [
+     "camera",
+     "has motorized focus",
+     "no zoom",
+     "PROTOCOL-mcp-selection.md",
+     45
+    ]
+   ],
+   "q": "Is there a way to control the camera's viewing angle or zoom in remotely?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "prefixed names",
+   "hops": 1,
+   "path": [
+    [
+     "production manifests",
+     "show mcp tools",
+     "prefixed names",
+     "PROTOCOL-mcp-selection.md",
+     28
+    ]
+   ],
+   "q": "When I read a production manifest, how are the MCP tools identified so I can tell them apart?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "freeze candidates",
+   "hops": 1,
+   "path": [
+    [
+     "chunkrel.py",
+     "writes",
+     "freeze candidates",
+     "protocol.md",
+     31
+    ]
+   ],
+   "q": "Before the eval set is locked, what does the R-series runner leave on disk for review?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "0.929",
+   "hops": 1,
+   "path": [
+    [
+     "A_flat",
+     "equals",
+     "0.929",
+     "protocol.md",
+     22
+    ]
+   ],
+   "q": "What presence did the all-leaves-at-once read reach in the depth extension?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "0.6906",
+   "hops": 1,
+   "path": [
+    [
+     "uwin2",
+     "acc",
+     "0.6906",
+     "PROTOCOL-mcp-selection.md",
+     100
+    ]
+   ],
+   "q": "What accuracy did the second window-union variant register?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "highest",
+   "hops": 1,
+   "path": [
+    [
+     "hintfam",
+     "accuracy",
+     "highest",
+     "PROTOCOL-mcp-selection.md",
+     122
+    ]
+   ],
+   "q": "Across the hint-family variants, how did the best one rank on accuracy?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "tools/list",
+   "hops": 1,
+   "path": [
+    [
+     "stdio MCP client",
+     "initializes",
+     "tools/list",
+     "PROTOCOL-mcp-selection.md",
+     1
+    ]
+   ],
+   "q": "What does the stdio transport call first to discover a server's capabilities?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "focus",
+   "hops": 1,
+   "path": [
+    [
+     "focus_move",
+     "moves",
+     "focus",
+     "PROTOCOL-mcp-selection.md",
+     40
+    ]
+   ],
+   "q": "What does the focus_move action change on the camera?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "everything server",
+   "hops": 1,
+   "path": [
+    [
+     "demo-tool",
+     "wants",
+     "everything server",
+     "PROTOCOL-mcp-selection.md",
+     63
+    ]
+   ],
+   "q": "What kind of backing service does the demo tool expect to demonstrate message annotations?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "beam2-greedy",
+   "hops": 2,
+   "path": [
+    [
+     "B_walk",
+     "equals",
+     "0.796",
+     "protocol.md",
+     22
+    ],
+    [
+     "beam2-greedy",
+     "beats",
+     "B_walk",
+     "protocol.md",
+     22
+    ]
+   ],
+   "q": "In the S-series matchup against B_walk, who came out ahead?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "question and text",
+   "hops": 2,
+   "path": [
+    [
+     "J-llm",
+     "sums",
+     "calls",
+     "protocol.md",
+     29
+    ],
+    [
+     "J-llm",
+     "reads",
+     "question and text",
+     "protocol.md",
+     27
+    ]
+   ],
+   "q": "When the pointwise judge scores a chunk, what two things does it look at together?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "LLM server",
+   "hops": 2,
+   "path": [
+    [
+     "questions",
+     "two recipes",
+     "per chunk",
+     "protocol.md",
+     25
+    ],
+    [
+     "questions",
+     "generated",
+     "LLM server",
+     "protocol.md",
+     25
+    ]
+   ],
+   "q": "Which piece of infrastructure produced the frozen question set?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "arms A/B/C/C'",
+   "hops": 2,
+   "path": [
+    [
+     "heads.py",
+     "is",
+     "lab trunk",
+     "models/README.md",
+     1
+    ],
+    [
+     "heads.py",
+     "trunk classifiers",
+     "arms A/B/C/C'",
+     "README.md",
+     4
+    ]
+   ],
+   "q": "If I open the trunk module in this repo, which classifier configurations will I find?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "MS-28 results",
+   "hops": 2,
+   "path": [
+    [
+     "MS-29 results",
+     "scored",
+     "2026-10-09",
+     "PROTOCOL-mcp-selection.md",
+     134
+    ],
+    [
+     "MS-28 results",
+     "scored",
+     "2026-10-09",
+     "PROTOCOL-mcp-selection.md",
+     128
+    ]
+   ],
+   "q": "Besides MS-29, which other results block was scored the same day?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "neg >= 20/24",
+   "hops": 2,
+   "path": [
+    [
+     "MS-28a",
+     "ms",
+     "26",
+     "PROTOCOL-mcp-selection.md",
+     128
+    ],
+    [
+     "MS-28a",
+     "requires",
+     "neg >= 20/24",
+     "PROTOCOL-mcp-selection.md",
+     126
+    ]
+   ],
+   "q": "How many negative cases did the registration bar insist on before MS-28a could count?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "list size",
+   "hops": 2,
+   "path": [
+    [
+     "per-hit",
+     "0.759",
+     "0.759",
+     "PROTOCOL-mcp-selection.md",
+     105
+    ],
+    [
+     "per-hit",
+     "degrades with",
+     "list size",
+     "PROTOCOL-mcp-selection.md",
+     99
+    ]
+   ],
+   "q": "What grows when each additional candidate drags the score down by 0.759?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "presence 0.9567",
+   "hops": 2,
+   "path": [
+    [
+     "MS-29 registration",
+     "stacks",
+     "three best-measured ingredients",
+     "PROTOCOL-mcp-selection.md",
+     131
+    ],
+    [
+     "MS-29 registration",
+     "measures",
+     "presence 0.9567",
+     "PROTOCOL-mcp-selection.md",
+     131
+    ]
+   ],
+   "q": "Once its three best ingredients were stacked, what number did the registration come to?",
+   "recipe": "indirect"
+  },
+  {
+   "gold": "families",
+   "hops": 2,
+   "path": [
+    [
+     "modifier",
+     "distinguishes",
+     "leaves",
+     "protocol.md",
+     1
+    ],
+    [
+     "leaves",
+     "share",
+     "families",
+     "protocol.md",
+     1
+    ]
+   ],
+   "q": "Beyond their distinguishing modifier, what do all the leaves of this hierarchy have in common?",
+   "recipe": "indirect"
+  }
+ ],
+ "note": "K-series eval, path-grounded; UNAUDITED until the audit key is added (R-series policy)"
+}
