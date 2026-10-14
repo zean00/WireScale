@@ -1,0 +1,30 @@
+{
+ "T": 0.66,
+ "ece": {
+  "fit": [
+   0.0918,
+   0.0649
+  ],
+  "holdout": [
+   0.1049,
+   0.0813
+  ]
+ },
+ "n_pairs": {
+  "fit": 2322,
+  "holdout": 1810
+ },
+ "smoke": false,
+ "tag": "calib",
+ "tau90_descriptive": {
+  "fit": 0.05,
+  "holdout": 0.05
+ },
+ "verdicts": {
+  "ZA": [
+   "PASS",
+   0.0236
+  ],
+  "ZB": "PASS"
+ }
+}

@@ -96,6 +96,13 @@ not argued. A rendered, non-technical version of the whole story is at
 | K3 | flat anchor: whole-graph read not beaten by a budgeted arm | **PASS** — +3.3 over beam |
 | KL1 | 3-hop route lookahead beats edge-hedging beam | **FAIL** — −25 pts; collapses to 2/60 |
 | KL2 | route lookahead rescues the greedy walk | **FAIL** — −5 pts (deeper commitment, not less) |
+| XA | embedder-ordered early-stop keeps ≥95% of flat recall at ≤25% tokens | **PASS** — .690 prefix (> flat's .517) at 15.8% of tokens |
+| XB | embedder order beats doc order at deployment (stop-recall) | **PASS** — .397 vs .310 |
+| YA | rewriting the query helps indirect retrieval (≥ +5) | **FAIL** — −6.9 pts; the raw question wins |
+| YB | rewriting doesn't damage direct retrieval (≥ −3) | **FAIL** — −3.45 pts |
+| KM1 | under mid-route scoring, beam traversal beats retrieve-then-read | **PASS** — .300 vs .233 |
+| ZA | temperature calibration improves held-out ECE by ≥ .01 | **PASS** — .105 → .081 (T = 0.66) |
+| ZB | the calibration is stable across the split | **PASS** — direction agrees; stop-bar τ transfers identically |
 
 Depth extension to 6 levels / 96 leaves: **no depth wall** (levels 5–6 are
 free, .9997 and 1.0000), but the walk is capped by its first step (.918 at
@@ -184,11 +191,31 @@ route overshoots a 2-hop answer. The design instinct was half right (myopia
 was the correct diagnosis); the fix that survives measurement is wider
 hedging, not longer committed routes.
 
-**7 of 21 headline predictions passed as registered** — R3/R4/W1/K3 by
-confirming negatives (shortcuts lose; scores are miscalibrated; flat does
-not lose), EA/EC by confirming the embedder works, and K2 by confirming the
-lab's only structural win replicates on a new shape. The failures are
-findings; the one replication is the rule.
+The follow-up batch (X/Y/K3/Z, 2026-10-14) turned the diagnostics into the
+production recipe. **X-series (early-stop judging on embedder order) — both
+PASS**, and the batch's headline: scanning chunks in embedder rank order
+and stopping at the first confident yes reaches .690 prefix-recall —
+*above* the exhaustive judge's .517 — while reading a mean 11.5 of 180
+chunks at 15.8% of the tokens; judge decisions reproduced committed scores
+with agreement 1.000. (Registration also corrected the record: W-series'
+"early-stop" post-hoc was order-free — the sequential scan had never
+actually been run until now.) **Y-series (query rewriting) — both FAIL**:
+the rewriter genuinely rewrote (96.6% changed) and retrieval got worse on
+both cells — second anti-lesson about "helping" the query, after instruct
+prefixes. **K-series Amendment 3 (mid-route scoring) — KM1 PASS**: when
+walkers get credit for any node they visit, beam beats retrieve-then-read
+(.300 vs .233), and the LOOKAHEAD twist lands — its routes pass gold a
+third of the time, so its mid-score (.333) is the best graph number in the
+lab, validating the overshoot diagnosis. Endpoint drift of the fresh run:
+exactly 0.000. **Z-series (calibration) — both PASS**: one temperature
+(T = 0.66 — the judge is overconfident) cuts held-out ECE .105 → .081, and
+the 90%-of-flat stop-bar (τ = .05) transfers identically across the split.
+
+**12 of 28 headline predictions passed as registered.** The failures
+keep mapping the dead ends (rewriting, route commitment, pooling dials,
+trained heads); the passes now form a recipe: **embed with the dedicated
+model, scan in its order, stop when the calibrated judge is confident,
+hedge on graphs, and read flat when flat fits.**
 
 What transferred to production: beam-2 path scoring in the WireSense router —
 which only worked after discovering paths of different depth must be scored by
@@ -213,6 +240,11 @@ current wiring target 73.4% vs 67.3% for the shipped gate).
 | `extembed.py` | E-series runner (dedicated Qwen3-Embedding-0.6B via SSH tunnel; own cache) — **scored 2026-10-14 (EA/EC PASS, EB instruct hurts)** |
 | `kgraphqa.py` | K-series runner (graph build from pinned corpus, path-grounded questions, FLAT/READ/WALK/BEAM) — **scored 2026-10-14 (K1 FAIL, K2/K3 PASS)** |
 | `results/kgraph.json`, `results/k_questions.json` | the K-series substrate: 902-triple extracted graph + the audited frozen 60 |
+| `kgraphqa.py --look`, `klookahead.json` | K-Amd 2 (route lookahead) — **scored 2026-10-14 (KL1/KL2 FAIL)** |
+| `kmid.py`, `kmid.json` | K-Amd 3 (mid-route rescoring) — **scored 2026-10-14 (KM1 PASS)** |
+| `xstop.py`, `xstop.json` | X-series (sequential early-stop scan) — **scored 2026-10-14 (XA/XB PASS)** |
+| `qrewrite.py`, `qrewrite.json` | Y-series (query rewriting) — **scored 2026-10-14 (YA/YB FAIL)** |
+| `calib.py`, `calib.json` | Z-series (temperature calibration, committed data only) — **scored 2026-10-14 (ZA/ZB PASS)** |
 | `adjudicate.py` | mechanical P1–P4 verdicts against the registered bars |
 | `posthoc_p3.py` | the post-hoc m=0 probe behind P3's verdict |
 | `embed_client.py` | embedding client for the frozen encoder |

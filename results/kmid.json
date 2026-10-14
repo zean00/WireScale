@@ -1,0 +1,1615 @@
+{
+ "by_arm": {
+  "beam": {
+   "end_committed": 0.2833333333333333,
+   "end_fresh": 0.2833333333333333,
+   "mid": 0.3,
+   "tok": 705.4833333333333
+  },
+  "look1": {
+   "end_committed": null,
+   "end_fresh": 0.1,
+   "mid": 0.2833333333333333,
+   "tok": 405.8666666666667
+  },
+  "look2": {
+   "end_committed": null,
+   "end_fresh": 0.03333333333333333,
+   "mid": 0.3333333333333333,
+   "tok": 825.3166666666667
+  },
+  "walk": {
+   "end_committed": 0.15,
+   "end_fresh": 0.15,
+   "mid": 0.25,
+   "tok": 412.1
+  }
+ },
+ "commit": "c931e78",
+ "endpoint_drift": {
+  "beam": 0.0,
+  "look1": null,
+  "look2": null,
+  "walk": 0.0
+ },
+ "ext_fp": "fdf52bc3c7ec",
+ "limit": 0,
+ "model_fp": "7cfe33f65c1c",
+ "read_committed": 0.23333333333333334,
+ "records": [
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 682
+   },
+   "gold": "log",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 707
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 1417
+   },
+   "q": "What is the confirmation result for a registered run?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 406
+   }
+  },
+  {
+   "beam": {
+    "end": 1,
+    "mid": 1,
+    "tok": 660
+   },
+   "gold": "yes",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 306
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 490
+   },
+   "q": "Is 17b worth registering?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 385
+   }
+  },
+  {
+   "beam": {
+    "end": 1,
+    "mid": 1,
+    "tok": 604
+   },
+   "gold": "R",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 1,
+    "tok": 253
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 435
+   },
+   "q": "What are the deciders?",
+   "recipe": "direct",
+   "walk": {
+    "end": 1,
+    "mid": 1,
+    "tok": 335
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 694
+   },
+   "gold": "content-defined groups",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 1,
+    "tok": 279
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 863
+   },
+   "q": "What do shortlists' recalls come from?",
+   "recipe": "direct",
+   "walk": {
+    "end": 1,
+    "mid": 1,
+    "tok": 369
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 479
+   },
+   "gold": "prefixed names",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 300
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 386
+   },
+   "q": "What are the prefixed names for the MCP tools in production manifests?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 202
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 755
+   },
+   "gold": "highest",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 810
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 1705
+   },
+   "q": "What was the accuracy of hintfam?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 408
+   }
+  },
+  {
+   "beam": {
+    "end": 1,
+    "mid": 1,
+    "tok": 685
+   },
+   "gold": "gold=1; negatives=0",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 418
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 493
+   },
+   "q": "What is the value of train pairs in the gold label?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 488
+   }
+  },
+  {
+   "beam": {
+    "end": 1,
+    "mid": 1,
+    "tok": 727
+   },
+   "gold": "tools/list",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 420
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 759
+   },
+   "q": "What does the stdio MCP client initialize with?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 432
+   }
+  },
+  {
+   "beam": {
+    "end": 1,
+    "mid": 1,
+    "tok": 657
+   },
+   "gold": "domain boundary",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 1,
+    "tok": 267
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 487
+   },
+   "q": "What does the coarse gate hold in the hierarchy?",
+   "recipe": "direct",
+   "walk": {
+    "end": 1,
+    "mid": 1,
+    "tok": 354
+   }
+  },
+  {
+   "beam": {
+    "end": 1,
+    "mid": 1,
+    "tok": 655
+   },
+   "gold": "freeze candidates",
+   "hops": 1,
+   "look1": {
+    "end": 1,
+    "mid": 1,
+    "tok": 292
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 492
+   },
+   "q": "What does chunkrel.py write?",
+   "recipe": "direct",
+   "walk": {
+    "end": 1,
+    "mid": 1,
+    "tok": 372
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 689
+   },
+   "gold": "k in set",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 292
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 494
+   },
+   "q": "What parameter was in set when re-running the k-sweep?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 387
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 631
+   },
+   "gold": "0.929",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 276
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 454
+   },
+   "q": "What does A_flat equal?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 365
+   }
+  },
+  {
+   "beam": {
+    "end": 1,
+    "mid": 1,
+    "tok": 679
+   },
+   "gold": "simulate-research-query",
+   "hops": 1,
+   "look1": {
+    "end": 1,
+    "mid": 1,
+    "tok": 289
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 487
+   },
+   "q": "What is the query generated when ir_research is defensible?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 1,
+    "tok": 383
+   }
+  },
+  {
+   "beam": {
+    "end": 1,
+    "mid": 1,
+    "tok": 682
+   },
+   "gold": "focus",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 1,
+    "tok": 295
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 758
+   },
+   "q": "What does the focus_move action do?",
+   "recipe": "direct",
+   "walk": {
+    "end": 1,
+    "mid": 1,
+    "tok": 377
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 726
+   },
+   "gold": "registered 19\u201322",
+   "hops": 1,
+   "look1": {
+    "end": 1,
+    "mid": 1,
+    "tok": 337
+   },
+   "look2": {
+    "end": 1,
+    "mid": 1,
+    "tok": 673
+   },
+   "q": "What were the registered results for neg predictions?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 418
+   }
+  },
+  {
+   "beam": {
+    "end": 1,
+    "mid": 1,
+    "tok": 692
+   },
+   "gold": "chunk carries information",
+   "hops": 1,
+   "look1": {
+    "end": 1,
+    "mid": 1,
+    "tok": 296
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 500
+   },
+   "q": "Can I trust a decision layer if the chunk lacks the information it needs to judge?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 1,
+    "tok": 390
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 911
+   },
+   "gold": "content-defined groups",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 306
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 2849
+   },
+   "q": "How can I reliably locate specific content groups using the registry's server-based sorting system?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 407
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 733
+   },
+   "gold": "log",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 388
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 590
+   },
+   "q": "How do I verify that the cache file was not overwritten between the two signature checks?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 303
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 790
+   },
+   "gold": "domain boundary",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 389
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 635
+   },
+   "q": "How can a team ensure only relevant content enters their system without wasting resources on irrelevant data?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 445
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 845
+   },
+   "gold": "focus",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 439
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 851
+   },
+   "q": "How do I manually adjust the camera's focus when the automated system isn't responding?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 414
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 801
+   },
+   "gold": "tools/list",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 342
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 913
+   },
+   "q": "How do I locate a specific server's complete JSON tool list from the corpus folder without editing?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 408
+   }
+  },
+  {
+   "beam": {
+    "end": 1,
+    "mid": 1,
+    "tok": 513
+   },
+   "gold": "yes",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 730
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 1062
+   },
+   "q": "Is 17b worth registering because the current system no longer allows silent edits?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 215
+   }
+  },
+  {
+   "beam": {
+    "end": 1,
+    "mid": 1,
+    "tok": 1210
+   },
+   "gold": "presence 0.878",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 773
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 1397
+   },
+   "q": "What is the presence value of MS-29 registration measures?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 734
+   }
+  },
+  {
+   "beam": {
+    "end": 1,
+    "mid": 1,
+    "tok": 1078
+   },
+   "gold": "registry order",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 1,
+    "tok": 1658
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 3046
+   },
+   "q": "What order does the union use?",
+   "recipe": "direct",
+   "walk": {
+    "end": 1,
+    "mid": 1,
+    "tok": 772
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 684
+   },
+   "gold": "WireSense repo",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 288
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 540
+   },
+   "q": "Where were the production frozen-encoder readout stack artifacts first committed?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 379
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 615
+   },
+   "gold": "MS-3 pools",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 257
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 441
+   },
+   "q": "Which pools make changes cheap?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 340
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 520
+   },
+   "gold": "19/24",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 215
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 569
+   },
+   "q": "What is the neg ratio when the production directive gains the hint line?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 412
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 1210
+   },
+   "gold": "presence 0.9567",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 1,
+    "tok": 773
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 1397
+   },
+   "q": "What is the value of presence in MS-29 registration?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 733
+   }
+  },
+  {
+   "beam": {
+    "end": 1,
+    "mid": 1,
+    "tok": 647
+   },
+   "gold": "families",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 176
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 521
+   },
+   "q": "Which entities do leaves share?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 175
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 858
+   },
+   "gold": "id_slot 5",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 192
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 1088
+   },
+   "q": "What is the id_slot shared by the arm?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 374
+   }
+  },
+  {
+   "beam": {
+    "end": 1,
+    "mid": 1,
+    "tok": 1002
+   },
+   "gold": "neg >= 20/24",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 1,
+    "tok": 963
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 1626
+   },
+   "q": "What is the minimum negative count required for MS-28a?",
+   "recipe": "direct",
+   "walk": {
+    "end": 1,
+    "mid": 1,
+    "tok": 677
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 474
+   },
+   "gold": "beam2-greedy",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 279
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 382
+   },
+   "q": "Which method beats B_walk according to the provided facts?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 370
+   }
+  },
+  {
+   "beam": {
+    "end": 1,
+    "mid": 1,
+    "tok": 790
+   },
+   "gold": "question and text",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 292
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 689
+   },
+   "q": "What does J-llm read?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 386
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 641
+   },
+   "gold": "LLM server",
+   "hops": 2,
+   "look1": {
+    "end": 1,
+    "mid": 1,
+    "tok": 290
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 478
+   },
+   "q": "Which server generates the questions in this system?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 1,
+    "tok": 360
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 770
+   },
+   "gold": "no zoom",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 248
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 897
+   },
+   "q": "Does the camera support zoom functionality?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 370
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 606
+   },
+   "gold": "list size",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 261
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 350
+   },
+   "q": "What does per-hit degrade with?",
+   "recipe": "direct",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 343
+   }
+  },
+  {
+   "beam": {
+    "end": 1,
+    "mid": 1,
+    "tok": 597
+   },
+   "gold": "arms A/B/C/C'",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 1,
+    "tok": 323
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 559
+   },
+   "q": "What arms are used in the classifiers in heads.py?",
+   "recipe": "direct",
+   "walk": {
+    "end": 1,
+    "mid": 1,
+    "tok": 403
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 508
+   },
+   "gold": "union",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 299
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 507
+   },
+   "q": "How can I maintain sufficient accuracy when sliding a limited tool window across a large population?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 397
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 637
+   },
+   "gold": "MS-3 pools",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 642
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 1102
+   },
+   "q": "How do I keep the production server stable while adding new tool variants?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 439
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 805
+   },
+   "gold": "raw-embedding centroids",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 217
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 651
+   },
+   "q": "How do I implement a routing system that uses mean comparison to prevent the performance crash caused by summing domain and agent similarity?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 427
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 1,
+    "tok": 593
+   },
+   "gold": "WireSense repo",
+   "hops": 2,
+   "look1": {
+    "end": 1,
+    "mid": 1,
+    "tok": 323
+   },
+   "look2": {
+    "end": 1,
+    "mid": 1,
+    "tok": 431
+   },
+   "q": "Which source repository contains the WireSense frozen-encoder readout stack?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 1,
+    "tok": 394
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 878
+   },
+   "gold": "beam2-greedy",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 211
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 1213
+   },
+   "q": "Which model is superior when my task requires a model with a domain accuracy of approximately 0.796?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 419
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 725
+   },
+   "gold": "no zoom",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 808
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 1662
+   },
+   "q": "Is there a way to control the camera's viewing angle or zoom in remotely?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 530
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 516
+   },
+   "gold": "prefixed names",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 313
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 519
+   },
+   "q": "When I read a production manifest, how are the MCP tools identified so I can tell them apart?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 212
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 637
+   },
+   "gold": "freeze candidates",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 305
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 579
+   },
+   "q": "Before the eval set is locked, what does the R-series runner leave on disk for review?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 402
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 743
+   },
+   "gold": "0.929",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 333
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 561
+   },
+   "q": "What presence did the all-leaves-at-once read reach in the depth extension?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 422
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 519
+   },
+   "gold": "0.6906",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 216
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 1333
+   },
+   "q": "What accuracy did the second window-union variant register?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 216
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 758
+   },
+   "gold": "highest",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 417
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 659
+   },
+   "q": "Across the hint-family variants, how did the best one rank on accuracy?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 446
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 495
+   },
+   "gold": "tools/list",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 294
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 398
+   },
+   "q": "What does the stdio transport call first to discover a server's capabilities?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 390
+   }
+  },
+  {
+   "beam": {
+    "end": 1,
+    "mid": 1,
+    "tok": 815
+   },
+   "gold": "focus",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 1,
+    "tok": 301
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 668
+   },
+   "q": "What does the focus_move action change on the camera?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 1,
+    "mid": 1,
+    "tok": 386
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 687
+   },
+   "gold": "everything server",
+   "hops": 1,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 326
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 536
+   },
+   "q": "What kind of backing service does the demo tool expect to demonstrate message annotations?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 395
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 712
+   },
+   "gold": "beam2-greedy",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 290
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 549
+   },
+   "q": "In the S-series matchup against B_walk, who came out ahead?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 384
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 493
+   },
+   "gold": "question and text",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 292
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 396
+   },
+   "q": "When the pointwise judge scores a chunk, what two things does it look at together?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 387
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 663
+   },
+   "gold": "LLM server",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 189
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 510
+   },
+   "q": "Which piece of infrastructure produced the frozen question set?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 377
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 604
+   },
+   "gold": "arms A/B/C/C'",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 1,
+    "tok": 338
+   },
+   "look2": {
+    "end": 0,
+    "mid": 1,
+    "tok": 553
+   },
+   "q": "If I open the trunk module in this repo, which classifier configurations will I find?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 1,
+    "tok": 404
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 332
+   },
+   "gold": "MS-28 results",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 1,
+    "tok": 588
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 1242
+   },
+   "q": "Besides MS-29, which other results block was scored the same day?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 1,
+    "tok": 496
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 1247
+   },
+   "gold": "neg >= 20/24",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 759
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 1237
+   },
+   "q": "How many negative cases did the registration bar insist on before MS-28a could count?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 761
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 313
+   },
+   "gold": "list size",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 397
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 643
+   },
+   "q": "What grows when each additional candidate drags the score down by 0.759?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 210
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 939
+   },
+   "gold": "presence 0.9567",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 746
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 1232
+   },
+   "q": "Once its three best ingredients were stacked, what number did the registration come to?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 737
+   }
+  },
+  {
+   "beam": {
+    "end": 0,
+    "mid": 0,
+    "tok": 718
+   },
+   "gold": "families",
+   "hops": 2,
+   "look1": {
+    "end": 0,
+    "mid": 0,
+    "tok": 329
+   },
+   "look2": {
+    "end": 0,
+    "mid": 0,
+    "tok": 565
+   },
+   "q": "Beyond their distinguishing modifier, what do all the leaves of this hierarchy have in common?",
+   "recipe": "indirect",
+   "walk": {
+    "end": 0,
+    "mid": 0,
+    "tok": 404
+   }
+  }
+ ],
+ "smoke": false,
+ "tag": "kmid",
+ "verdicts": {
+  "KM1": [
+   "PASS",
+   0.0667
+  ],
+  "KM2_descriptive": {
+   "beam": 0.0167,
+   "look1": 0.1833,
+   "look2": 0.3,
+   "walk": 0.1
+  }
+ }
+}

@@ -1323,3 +1323,91 @@ Predictions (mechanical):
   FAIL.
 - Descriptive: the τ that achieves ≥ 90% of flat recall on fit
   vs holdout (does the stop-bar transfer).
+
+## X/Y/K3/Z RESULTS (2026-10-14, scored — one batch, all registered pre-data)
+
+### X-series RESULTS (xstop.json)
+
+Sanity: per-judged-chunk p_yes agreement with committed flat
+scores = 1.000 (temp-0 judge reproduced every decision). Gold's
+mean embedder rank: 6.5.
+
+| arm | prefix | stop | chunks judged | tok/q |
+|-----|--------|------|---------------|-------|
+| X-ES (embedder order) | **.690** | .397 | 11.5 | 4,615 (×.158) |
+| X-DS (doc order)      | .621 | .310 | 32.0 | 12,805 (×.438) |
+| (flat committed)      | .517* | .517* | 180 | 29,236 |
+
+*flat's .517 is yes-set recall (a different answer-set contract —
+see below).
+
+Verdicts: **XA PASS** (prefix .690 ≥ .491 bar; tokens ×.158 ≤ ×.25)
+— the sequential scan BEATS the exhaustive yes-set baseline at 16%
+of the cost. **XB PASS** (stop-recall .397 vs .310, +8.6 pts):
+embedder order beats doc order where deployment lives.
+
+Post-hoc (not verdicts): prefix (.690) > flat yes-set (.517)
+because the contracts differ — the scan counts gold anywhere it
+reads, flat only when the judge says yes. The deployment-honest
+number is stop-recall .397: one answer, 4.6k tokens, vs flat's
+3.4-average-size yes-set at 29.2k. The embedder order is doing
+real work: gold sits at mean rank 6.5, so the scan reaches the
+answer's neighborhood in the first dozen reads.
+
+### Y-series RESULTS (qrewrite.json)
+
+Rewriting happened (only 3.4% of rewrites identical to the
+original) and it HURT: Y-RW indirect p3 .483 vs E0 .552 (−6.9),
+direct .690 vs .724 (−3.45). Verdicts: **YA FAIL, YB FAIL** (the
+direct guard also tripped). The 0.6B embedder prefers the user's
+raw question; rewriting is the second measured anti-lesson about
+"helping" the query (after E-series' instruct prefixes).
+
+### K-series Amendment 3 RESULTS (kmid.json)
+
+Endpoint drift of the fresh run vs committed records: walk 0.000,
+beam 0.000 (session-perfect).
+
+| arm (mid-route scoring) | mid  | end (fresh) | end (committed) | tok/q |
+|--------------------------|------|-------------|-----------------|-------|
+| LOOK-2                   | **.333** | .033 | —     |   825 |
+| BEAM                     | .300 | .283        | .283            |   705 |
+| LOOK-1                   | .283 | .100        | —               |   406 |
+| WALK                     | .250 | .150        | .150            |   412 |
+| (READ, endpoint)         | —    | —           | .233            |   111 |
+
+Verdicts: **KM1 PASS** — BEAM-mid .300 ≥ READ-endpoint .233
+(+6.7 pts): under the fair contract, hedged traversal beats
+retrieve-then-read on this graph. **KM2 (descriptive)**: the
+mid-vs-endpoint delta is the LOOKAHEAD diagnosis quantified —
+LOOK-2 gains +30 pts when routes get credit (.033 → .333): its
+routes pass through the gold a third of the time and its endpoint
+contract threw that away. Under mid scoring the operator's
+route-lookahead design is the best graph number in the lab
+(.333), ahead of beam (.300) — at 825 tok/q with two frontiers.
+
+Caveat (disclosed): mid-route scoring credits a walk that merely
+brushes the gold node en route to somewhere else; with 2-hop gold
+paths and 3-hop routes, partial credit is real information but not
+answer-graded. The registered claim stands as KM1; LOOK-2's .333
+is the headline descriptive.
+
+### Z-series RESULTS (calib.json)
+
+T = 0.66 (the judge is overconfident; sharpening was needed, not
+softening — p' = σ(logit p / 0.66)). ECE: fit .092 → .065,
+holdout **.105 → .081**. Verdicts: **ZA PASS** (−.024, bar −.01),
+**ZB PASS** (T in range, direction consistent). Descriptive: the
+τ that achieves ≥ 90% of flat recall is .05 on BOTH slices — the
+stop-bar transfers perfectly, so X-series' τ = .5 was a
+conservative choice, not a tuned one.
+
+### Batch verdict (the through-line, updated)
+
+The production shape this lab now endorses, all measured: **rank
+with the dedicated embedder (E), scan-and-stop in that order with
+the judge as verifier (X), calibrate the stop bar on held-out
+data (Z), and skip query rewriting (Y).** On graphs: hedge, never
+commit (K + Amendment 2), score what the walker actually visits
+(Amd 3), and expect the flat anchor to win whenever the graph
+fits (K3).
