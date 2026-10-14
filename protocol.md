@@ -1516,3 +1516,74 @@ scanner's decision, as it should. Answer synthesis still loses
 graded-correct). And the indirect cell remains the frontier: .207,
 with nearly all of the machine's edge over TOP1 coming from the
 direct cell (+13.8 vs +3.5).
+
+## B-series (registered 2026-10-15, pre-data): the fair fight — machine vs production-style top-k RAG
+
+A-series closed with a declared loophole: its pure-RAG arm (TOP1,
+.345) is the strictest variant — one chunk, no k. Production RAG
+stacks feed top-k (3–5) excerpts in a single context. The committed
+E-series numbers say this fight is live and unwon: E0 top-3 context
+presence is .638 — ABOVE the machine's answered-chunk hit .466 — so
+any answer-synthesis loss under ~.19 on the extra context hits and
+the plain baseline wins on paper. The A-series endorsement ("the
+machine beats its own components") has never been scored against
+the real competitor. This series scores that fight.
+
+Questions: frozen 58, unchanged. Corpus: pinned 5146e2d,
+unchanged. Ranking: E0 (qwen3-embedding-0.6B, plain query, fp
+fdf52bc3c7ec, cache complete — no tunnel; identical ranking code
+path to A-series TOP1). Generator and grader: frozen slot-7 model,
+prompts/seeds identical to A-series (disclosed there: grader =
+generator; temp 0; answer seed 20261014+17·i per question index).
+
+Arms (per frozen eval question):
+- **TOPK-k, k ∈ {2, 3, 5, 8}** (k_eff = min(k, n_chunks)) —
+  context = top-k chunks in E0 order, concatenated in ONE prompt:
+  `Question: {q}\n\nExcerpt 1:\n{c1}\n\nExcerpt 2:\n{c2} ...`
+  system = A-series GEN_SYS verbatim; generate (temp 0, max 128,
+  A-series seed); grade vs the gold chunk with the A-series grader
+  verbatim. No fallback, no verification — production RAG answers
+  from whatever the retriever returns.
+- **ASM — not re-scored**: per-question records load from
+  committed assembly.json (same seeds, same prompts → exact
+  pairing). Its committed budget anchor for this series:
+  5,427.7 tok/q.
+- **TOP1 re-run** — the A-series TOP1 arm re-executed in this
+  session as the determinism sanity (below).
+
+Cost accounting: answer prompt + grade prompt tokens (the
+A-series counter). Embedding marginal cost ≈ 0 for every arm
+(cache). Expected TOPK tokens: single-excerpt answer+grade ≈ 800
+⇒ k=8 ≈ 3–4k — ALL swept k expected under the machine's budget,
+so B2 below is expected to demand the machine beat even top-8.
+
+**Bars (mechanical)**:
+- **B1 (production-default RAG)**: ASM answer accuracy ≥ TOPK-3 →
+  PASS; −.02 ≤ Δ < 0 → PARTIAL; else FAIL. The machine must beat
+  RAG as actually deployed, not RAG handicapped to k=1.
+- **B2 (budget dominance)**: let S = {swept k : mean tok(TOPK-k) ≤
+  committed ASM 5,427.7}. If S ≠ ∅: Δ = ASM − max(TOPK-k accuracy
+  over k ∈ S) — the machine must beat the BEST affordable top-k.
+  PASS Δ ≥ 0; PARTIAL ≥ −.02; else FAIL. (S is selected by a rule
+  fixed here, evaluated on measured tokens.)
+- Sanity (disclosed field, not a verdict): TOP1 re-run per-question
+  answer-string AND picked-chunk agreement vs committed
+  assembly.json ≥ .95 (temp-0 determinism, fourth consecutive
+  session). Smoke runs marked and never scored.
+
+**Registered bets (direction, pre-data)**:
+- **PB1: B1 expected FAIL** — TOPK-3 > ASM, predicted Δ +.03..+.15
+  (context ceiling .638 vs .466; k=1 synthesis loss only −3.4 pts;
+  dilution would have to exceed −.19 on the extra hits to save the
+  machine).
+- **PB2: B2 expected FAIL** — the best affordable k (likely 5)
+  beats the machine; accuracy non-monotone in k (rises to k=3,
+  sags by k=8 as dilution grows — Helping-Hurts, law 06, at answer
+  level).
+- **PB3: sanity PASS** (determinism).
+- Descriptive bets (no bar): the indirect cell flips to RAG (E0
+  indirect p3 .552 vs machine indirect answer .207); tokens grow
+  ≈ linearly in k; the machine's surviving claim, if any, shifts
+  from raw accuracy to verified provenance — it answers only from
+  a chunk the judge confirmed above bar, vs RAG's unconditional
+  answer.
