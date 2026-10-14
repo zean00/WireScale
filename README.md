@@ -4,7 +4,7 @@
 
 A pre-registered laboratory for decision structure. One frozen encoder, many
 readouts — and one rule: **register the prediction before the data, then obey
-the verdict.** Eight scored experiments live here:
+the verdict.** Nine scored experiments live here:
 
 1. **Decision trees** (P-series) — when an answer space is a hierarchy, is it
    cheaper to walk it level by level (asking a smaller question at each step)
@@ -52,6 +52,14 @@ the verdict.** Eight scored experiments live here:
    recall, at ~zero marginal cost), **EB "instruct hurts"** (the model
    card's query format is a net negative here), **EC PASS** (5× random
    @3, 9× random @1). The lab's first decisive positive.
+9. **Knowledge-graph QA** (K-series) — *scored 2026-10-14*: decision
+   layers on graph traversal. A 902-triple graph extracted from the
+   pinned corpus, 60 path-grounded audited questions, four arms.
+   **K1 FAIL** (greedy hop-by-hop traversal loses to retrieve-then-read,
+   −8.3 pts at 3.7× the tokens), **K2 PASS** (beam-2 beats the greedy
+   walk +13.3 — its fourth consecutive replication and largest margin,
+   keeping 89% of flat's accuracy at 6.5% of its tokens), **K3 PASS**
+   (the flat anchor holds).
 
 **Every number in this repo is a committed artifact.** Hypotheses, arms, bars,
 and amendments live in [protocol.md](protocol.md) — committed before any
@@ -80,6 +88,9 @@ not argued. A rendered, non-technical version of the whole story is at
 | JA | the pair head learns with 8× data (gap ≥ +5 over cosine) | **FAIL** — −10.3 pts; val loss halves, eval unchanged at floor |
 | EA | a dedicated embedder rescues the comparator (indirect gap ≥ +10) | **PASS** — +41.4 pts; beats the judge overall (.638 vs .517) |
 | EC | the dedicated embedder clears 2× random @3 | **PASS** — .638 ≈ 5× random; top-1 9× random |
+| K1 | traversal beats retrieve-then-read at matched budget | **FAIL** — −8.3 pts at 3.7× the tokens |
+| K2 | beam-2 beats the greedy walk by ≥ +3 on graphs | **PASS** — +13.3, fourth replication, largest margin |
+| K3 | flat anchor: whole-graph read not beaten by a budgeted arm | **PASS** — +3.3 over beam |
 
 Depth extension to 6 levels / 96 leaves: **no depth wall** (levels 5–6 are
 free, .9997 and 1.0000), but the walk is capped by its first step (.918 at
@@ -140,11 +151,26 @@ trial. The judge keeps one crown: direct-question yes-set recall
 instruct-wrapped query format *hurt* here (−3.5 pts) — measured, not
 assumed.
 
-**5 of 16 headline predictions passed as registered** — R3/R4/W1 by
-confirming negatives (the menu shortcut loses; confidence scores are
-miscalibrated; flat does not lose to the walk), and EA/EC by confirming
-the lab's first clear positive: the dedicated embedder works. The
-failures are findings; so is this.
+Then the graph question (K-series, 2026-10-14): a 902-triple knowledge graph
+extracted from the pinned corpus, 60 audited path-grounded questions, and
+decision-layer traversal put to its first fair test with a good cheap
+selector. **Greedy traversal lost again** (K1 FAIL: −8.3 pts to
+retrieve-then-read, at 3.7× the token budget) — the sixth consecutive
+verdict that committing to one path early is the wrong shape. **But beam-2
+replicated a fourth time and by its largest margin** (+13.3 over the greedy
+walk), landing within 3.3 pts of reading the whole graph flat while spending
+6.5% of its tokens. The one structural pattern this lab has ever found
+paying — keep two candidates alive instead of one — now holds on trees,
+routing, and graphs. (One incident kept as record: the first scored attempt
+crashed on question 1 — the whole-graph prompt exceeded the production
+slot's 8192-token ceiling — amended pre-data to FLAT-2HALF, a deterministic
+two-half read.)
+
+**7 of 19 headline predictions passed as registered** — R3/R4/W1/K3 by
+confirming negatives (shortcuts lose; scores are miscalibrated; flat does
+not lose), EA/EC by confirming the embedder works, and K2 by confirming the
+lab's only structural win replicates on a new shape. The failures are
+findings; the one replication is the rule.
 
 What transferred to production: beam-2 path scoring in the WireSense router —
 which only worked after discovering paths of different depth must be scored by
@@ -167,6 +193,8 @@ current wiring target 73.4% vs 67.3% for the shipped gate).
 | `walkret.py` | W-series runner (window walk vs exhaustive judge) — **scored 2026-10-14 (W1 PASS, W2/W3 FAIL)** |
 | `pairscale.py` | J-series runner (8× pair-head scaling; `--gen` writes the unaudited train set) — **scored 2026-10-14 (JA FAIL, JB degenerate PASS)** |
 | `extembed.py` | E-series runner (dedicated Qwen3-Embedding-0.6B via SSH tunnel; own cache) — **scored 2026-10-14 (EA/EC PASS, EB instruct hurts)** |
+| `kgraphqa.py` | K-series runner (graph build from pinned corpus, path-grounded questions, FLAT/READ/WALK/BEAM) — **scored 2026-10-14 (K1 FAIL, K2/K3 PASS)** |
+| `results/kgraph.json`, `results/k_questions.json` | the K-series substrate: 902-triple extracted graph + the audited frozen 60 |
 | `adjudicate.py` | mechanical P1–P4 verdicts against the registered bars |
 | `posthoc_p3.py` | the post-hoc m=0 probe behind P3's verdict |
 | `embed_client.py` | embedding client for the frozen encoder |

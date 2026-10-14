@@ -1084,3 +1084,50 @@ and different), one tie-break call picks between them; every read
 counts toward FLAT's tokens. The arm still reads every triple with
 no selection or ranking — the split is mechanical, disclosed here
 before the rerun.
+
+## K-series RESULTS (2026-10-14, scored — graph, frozen eval, and FLAT-2HALF amendment all pre-data)
+
+Graph: 902 triples / 1352 entities extracted from the 180 pinned
+chunks (frozen model, temp 0). Eval: 60 questions, 15 per
+(hops × recipe) cell, hand-audited pre-freeze (43 generator keeps,
+17 indirect rewrites against kept twin paths, 77 broken chains
+dropped — the extraction noise the registration anticipated).
+Entry-hit (gold path's start in the embedder's top-5 entities):
+.533.
+
+| arm        | all  | 1-hop | 2-hop | direct | indirect | tok/q |
+|------------|------|-------|-------|--------|----------|-------|
+| FLAT-2HALF | .317 | .267  | .367  | .433   | .200     | 10932 |
+| READ       | .233 | .333  | .133  | .400   | .067     |   111 |
+| WALK       | .150 | .200  | .100  | .267   | .033     |   412 |
+| BEAM       | .283 | .367  | .200  | .467   | .100     |   705 |
+
+Verdicts (mechanical):
+- **K1: FAIL** — WALK − READ = −8.3 pts (bar: ≥ 0), and the budget
+  guard also fails (WALK 412 tok vs READ 111, 3.7× the 1.1× cap):
+  the greedy traversal decision layer loses to retrieve-then-read
+  on both axes.
+- **K2: PASS** — BEAM − WALK = +13.3 pts (bar: ≥ +3), tokens 705 ≤
+  2.2 × 412 ✓. Beam-2's FOURTH consecutive replication (P depth
+  extension, S routing, S replication, now graphs) and its largest
+  margin yet.
+- **K3: PASS** — FLAT − best budgeted = +3.3 pts (FLAT .317 vs
+  BEAM .283). The flat anchor holds.
+
+Post-hoc readings (not verdicts): the economics story this series
+adds — BEAM keeps 89% of FLAT's accuracy at 6.5% of its tokens
+(705 vs 10,932), the closest any budgeted arm has come to flat on
+any substrate; on a graph too big to read (unlike this lab-size
+one), beam-with-a-cheap-compass is the shape that survives. FLAT's
+odd inversion (2-hop .367 > 1-hop .267) contradicts every other
+arm and is likely the half-split + tie-break interacting with
+1-hop golds that include degenerate entity labels (the audit kept
+some terse ones deliberately). READ's indirect collapse (.067)
+echoes R: graph labels do not paraphrase — indirect needs the
+original chunk text, which extraction destroys. Absolute
+accuracies are low across all arms (.15–.32): the extracted graph
+is lossy substrate, and entry-hit .533 says short entity labels
+embed far worse than full chunks did (.638 top-3 in E-series).
+The lab's through-line holds: greedy structure loses (K1), the
+one structural pattern that pays is keeping candidates alive (K2),
+and flat still wins when it fits (K3).

@@ -1,0 +1,1804 @@
+{
+ "by_arm": {
+  "beam": {
+   "all": 0.2833333333333333,
+   "direct": 0.4666666666666667,
+   "indirect": 0.1,
+   "onehop": 0.36666666666666664,
+   "tok": 705.4833333333333,
+   "twohop": 0.2
+  },
+  "flat": {
+   "all": 0.31666666666666665,
+   "direct": 0.43333333333333335,
+   "indirect": 0.2,
+   "onehop": 0.26666666666666666,
+   "tok": 10932.05,
+   "twohop": 0.36666666666666664
+  },
+  "read": {
+   "all": 0.23333333333333334,
+   "direct": 0.4,
+   "indirect": 0.06666666666666667,
+   "onehop": 0.3333333333333333,
+   "tok": 110.76666666666667,
+   "twohop": 0.13333333333333333
+  },
+  "walk": {
+   "all": 0.15,
+   "direct": 0.26666666666666666,
+   "indirect": 0.03333333333333333,
+   "onehop": 0.2,
+   "tok": 412.1,
+   "twohop": 0.1
+  }
+ },
+ "commit": "33c3723",
+ "entry_hit": 0.5333333333333333,
+ "ext_fp": "fdf52bc3c7ec",
+ "graph": {
+  "entities": 1352,
+  "triples": 902
+ },
+ "model_fp": "7cfe33f65c1c",
+ "records": [
+  {
+   "beam": [
+    0,
+    "reruns",
+    682,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "registered run",
+    10911
+   ],
+   "gold": "log",
+   "hops": 1,
+   "q": "What is the confirmation result for a registered run?",
+   "read": [
+    1,
+    "log",
+    74
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "scored runs",
+    406,
+    3
+   ]
+  },
+  {
+   "beam": [
+    1,
+    "yes",
+    660,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "17b",
+    10907
+   ],
+   "gold": "yes",
+   "hops": 1,
+   "q": "Is 17b worth registering?",
+   "read": [
+    1,
+    "yes",
+    74
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "git re-run",
+    385,
+    3
+   ]
+  },
+  {
+   "beam": [
+    1,
+    "r",
+    604,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "adjudicate.py",
+    10982
+   ],
+   "gold": "R",
+   "hops": 1,
+   "q": "What are the deciders?",
+   "read": [
+    1,
+    "R",
+    69
+   ],
+   "recipe": "direct",
+   "walk": [
+    1,
+    "r",
+    335,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "tools",
+    694,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    1,
+    "content-defined groups",
+    10909
+   ],
+   "gold": "content-defined groups",
+   "hops": 1,
+   "q": "What do shortlists' recalls come from?",
+   "read": [
+    1,
+    "content-defined groups",
+    77
+   ],
+   "recipe": "direct",
+   "walk": [
+    1,
+    "content-defined groups",
+    369,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "existing path",
+    479,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "MCP_EVAL_SUFFIX",
+    11004
+   ],
+   "gold": "prefixed names",
+   "hops": 1,
+   "q": "What are the prefixed names for the MCP tools in production manifests?",
+   "read": [
+    0,
+    "MCP tools",
+    78
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "onvif-mcp as-is",
+    202,
+    0
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "ms-28a",
+    755,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "0.7122",
+    10907
+   ],
+   "gold": "highest",
+   "hops": 1,
+   "q": "What was the accuracy of hintfam?",
+   "read": [
+    0,
+    "0.7122",
+    206
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "ms-28a",
+    408,
+    3
+   ]
+  },
+  {
+   "beam": [
+    1,
+    "gold=1; negatives=0",
+    685,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "1",
+    10915
+   ],
+   "gold": "gold=1; negatives=0",
+   "hops": 1,
+   "q": "What is the value of train pairs in the gold label?",
+   "read": [
+    0,
+    "1",
+    82
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "19.3 percent",
+    488,
+    3
+   ]
+  },
+  {
+   "beam": [
+    1,
+    "tools/list",
+    727,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    1,
+    "tools/list",
+    10911
+   ],
+   "gold": "tools/list",
+   "hops": 1,
+   "q": "What does the stdio MCP client initialize with?",
+   "read": [
+    1,
+    "tools/list",
+    89
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "server",
+    432,
+    3
+   ]
+  },
+  {
+   "beam": [
+    1,
+    "domain boundary",
+    657,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    1,
+    "domain boundary",
+    10911
+   ],
+   "gold": "domain boundary",
+   "hops": 1,
+   "q": "What does the coarse gate hold in the hierarchy?",
+   "read": [
+    1,
+    "domain boundary",
+    74
+   ],
+   "recipe": "direct",
+   "walk": [
+    1,
+    "domain boundary",
+    354,
+    3
+   ]
+  },
+  {
+   "beam": [
+    1,
+    "freeze candidates",
+    655,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    1,
+    "freeze candidates",
+    10905
+   ],
+   "gold": "freeze candidates",
+   "hops": 1,
+   "q": "What does chunkrel.py write?",
+   "read": [
+    1,
+    "freeze candidates",
+    83
+   ],
+   "recipe": "direct",
+   "walk": [
+    1,
+    "freeze candidates",
+    372,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "runner gains",
+    689,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "k",
+    11004
+   ],
+   "gold": "k in set",
+   "hops": 1,
+   "q": "What parameter was in set when re-running the k-sweep?",
+   "read": [
+    0,
+    "k",
+    81
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "runner gains",
+    387,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "real",
+    631,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    1,
+    "0.929",
+    10903
+   ],
+   "gold": "0.929",
+   "hops": 1,
+   "q": "What does A_flat equal?",
+   "read": [
+    1,
+    "0.929",
+    108
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "trajectory",
+    365,
+    3
+   ]
+  },
+  {
+   "beam": [
+    1,
+    "simulate-research-query",
+    679,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "UNKNOWN",
+    10917
+   ],
+   "gold": "simulate-research-query",
+   "hops": 1,
+   "q": "What is the query generated when ir_research is defensible?",
+   "read": [
+    1,
+    "simulate-research-query",
+    81
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "ir_research",
+    383,
+    3
+   ]
+  },
+  {
+   "beam": [
+    1,
+    "focus",
+    682,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "focus_move \u2014 moves \u2014 focus",
+    10907
+   ],
+   "gold": "focus",
+   "hops": 1,
+   "q": "What does the focus_move action do?",
+   "read": [
+    0,
+    "focus_move",
+    84
+   ],
+   "recipe": "direct",
+   "walk": [
+    1,
+    "focus",
+    377,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "17\u201321 / 19\u201322",
+    726,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "neg predictions \u2014 registered \u2014 17\u201321 / 19\u201322",
+    10909
+   ],
+   "gold": "registered 19\u201322",
+   "hops": 1,
+   "q": "What were the registered results for neg predictions?",
+   "read": [
+    0,
+    "registered 17\u201321 / 19\u201322",
+    98
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "17\u201321 / 19\u201322",
+    418,
+    3
+   ]
+  },
+  {
+   "beam": [
+    1,
+    "chunk carries information",
+    692,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "decision layer",
+    10925
+   ],
+   "gold": "chunk carries information",
+   "hops": 1,
+   "q": "Can I trust a decision layer if the chunk lacks the information it needs to judge?",
+   "read": [
+    0,
+    "UNKNOWN",
+    83
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "decision layer",
+    390,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "reg variant",
+    911,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "registry windows",
+    10925
+   ],
+   "gold": "content-defined groups",
+   "hops": 1,
+   "q": "How can I reliably locate specific content groups using the registry's server-based sorting system?",
+   "read": [
+    0,
+    "UNKNOWN",
+    85
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "github 62 tools",
+    407,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "different scheme",
+    733,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "UNKNOWN",
+    10925
+   ],
+   "gold": "log",
+   "hops": 1,
+   "q": "How do I verify that the cache file was not overwritten between the two signature checks?",
+   "read": [
+    0,
+    "UNKNOWN",
+    90
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "different scheme",
+    303,
+    1
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "j-combo",
+    790,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "Coarse gate",
+    10927
+   ],
+   "gold": "domain boundary",
+   "hops": 1,
+   "q": "How can a team ensure only relevant content enters their system without wasting resources on irrelevant data?",
+   "read": [
+    0,
+    "cluster filter",
+    111
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "j-combo",
+    445,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "pipeline",
+    845,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "focus_move",
+    10925
+   ],
+   "gold": "focus",
+   "hops": 1,
+   "q": "How do I manually adjust the camera's focus when the automated system isn't responding?",
+   "read": [
+    0,
+    "motorized focus",
+    187
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "pipeline",
+    414,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "recipe_d/e",
+    801,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "UNKNOWN",
+    10929
+   ],
+   "gold": "tools/list",
+   "hops": 1,
+   "q": "How do I locate a specific server's complete JSON tool list from the corpus folder without editing?",
+   "read": [
+    0,
+    "UNKNOWN",
+    175
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "verbatim",
+    408,
+    3
+   ]
+  },
+  {
+   "beam": [
+    1,
+    "yes",
+    513,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "UNKNOWN",
+    10925
+   ],
+   "gold": "yes",
+   "hops": 1,
+   "q": "Is 17b worth registering because the current system no longer allows silent edits?",
+   "read": [
+    0,
+    "UNKNOWN",
+    83
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "registered rules",
+    215,
+    0
+   ]
+  },
+  {
+   "beam": [
+    1,
+    "presence 0.878",
+    1210,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "0.9567",
+    10917
+   ],
+   "gold": "presence 0.878",
+   "hops": 2,
+   "q": "What is the presence value of MS-29 registration measures?",
+   "read": [
+    0,
+    "UNKNOWN",
+    151
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "presence 0.9567",
+    734,
+    3
+   ]
+  },
+  {
+   "beam": [
+    1,
+    "registry order",
+    1078,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    1,
+    "registry order",
+    10987
+   ],
+   "gold": "registry order",
+   "hops": 2,
+   "q": "What order does the union use?",
+   "read": [
+    0,
+    "UNORDERED",
+    80
+   ],
+   "recipe": "direct",
+   "walk": [
+    1,
+    "registry order",
+    772,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "cfg_json",
+    684,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "models/",
+    10919
+   ],
+   "gold": "WireSense repo",
+   "hops": 2,
+   "q": "Where were the production frozen-encoder readout stack artifacts first committed?",
+   "read": [
+    0,
+    "UNKNOWN",
+    82
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "cfg_json",
+    379,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "one master set",
+    615,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    1,
+    "MS-3 pools",
+    10903
+   ],
+   "gold": "MS-3 pools",
+   "hops": 2,
+   "q": "Which pools make changes cheap?",
+   "read": [
+    0,
+    "UNKNOWN",
+    71
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "sign",
+    340,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "cc",
+    520,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "20/24",
+    10919
+   ],
+   "gold": "19/24",
+   "hops": 2,
+   "q": "What is the neg ratio when the production directive gains the hint line?",
+   "read": [
+    0,
+    "20/24",
+    98
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "cc",
+    412,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "presence 0.878",
+    1210,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "0.9567",
+    10917
+   ],
+   "gold": "presence 0.9567",
+   "hops": 2,
+   "q": "What is the value of presence in MS-29 registration?",
+   "read": [
+    0,
+    "0.9567",
+    237
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "presence 0.878",
+    733,
+    3
+   ]
+  },
+  {
+   "beam": [
+    1,
+    "families",
+    647,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    1,
+    "families",
+    10903
+   ],
+   "gold": "families",
+   "hops": 2,
+   "q": "Which entities do leaves share?",
+   "read": [
+    0,
+    "phrases\nfamilies",
+    83
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "tree",
+    175,
+    0
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "final pick",
+    858,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    1,
+    "id_slot 5",
+    10911
+   ],
+   "gold": "id_slot 5",
+   "hops": 2,
+   "q": "What is the id_slot shared by the arm?",
+   "read": [
+    0,
+    "UNKNOWN",
+    111
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "final pick",
+    374,
+    3
+   ]
+  },
+  {
+   "beam": [
+    1,
+    "neg >= 20/24",
+    1002,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "20/24",
+    10919
+   ],
+   "gold": "neg >= 20/24",
+   "hops": 2,
+   "q": "What is the minimum negative count required for MS-28a?",
+   "read": [
+    0,
+    "UNKNOWN",
+    152
+   ],
+   "recipe": "direct",
+   "walk": [
+    1,
+    "neg >= 20/24",
+    677,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "p1 verdict",
+    474,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "A_flat",
+    10996
+   ],
+   "gold": "beam2-greedy",
+   "hops": 2,
+   "q": "Which method beats B_walk according to the provided facts?",
+   "read": [
+    0,
+    "beam2-greedy\nA_flat",
+    124
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "p1 verdict",
+    370,
+    3
+   ]
+  },
+  {
+   "beam": [
+    1,
+    "question and text",
+    790,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    1,
+    "question and text",
+    10907
+   ],
+   "gold": "question and text",
+   "hops": 2,
+   "q": "What does J-llm read?",
+   "read": [
+    1,
+    "question and text",
+    119
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "j-menu presence",
+    386,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "4b model",
+    641,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    1,
+    "LLM server",
+    10909
+   ],
+   "gold": "LLM server",
+   "hops": 2,
+   "q": "Which server generates the questions in this system?",
+   "read": [
+    1,
+    "LLM server",
+    82
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "questions",
+    360,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "pipeline",
+    770,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "camera",
+    10905
+   ],
+   "gold": "no zoom",
+   "hops": 2,
+   "q": "Does the camera support zoom functionality?",
+   "read": [
+    0,
+    "UNKNOWN",
+    177
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "pipeline",
+    370,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "true domain",
+    606,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    1,
+    "list size",
+    10905
+   ],
+   "gold": "list size",
+   "hops": 2,
+   "q": "What does per-hit degrade with?",
+   "read": [
+    1,
+    "list size",
+    91
+   ],
+   "recipe": "direct",
+   "walk": [
+    0,
+    "true domain",
+    343,
+    3
+   ]
+  },
+  {
+   "beam": [
+    1,
+    "arms a/b/c/c",
+    597,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    1,
+    "arms A/B/C/C'",
+    10913
+   ],
+   "gold": "arms A/B/C/C'",
+   "hops": 2,
+   "q": "What arms are used in the classifiers in heads.py?",
+   "read": [
+    0,
+    "CLM",
+    80
+   ],
+   "recipe": "direct",
+   "walk": [
+    1,
+    "arms a/b/c/c",
+    403,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "3 replayed cases",
+    508,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "MS-22",
+    10925
+   ],
+   "gold": "union",
+   "hops": 2,
+   "q": "How can I maintain sufficient accuracy when sliding a limited tool window across a large population?",
+   "read": [
+    0,
+    "sliding-window shortlist",
+    85
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "ms-22",
+    397,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "server",
+    637,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "UNKNOWN",
+    10919
+   ],
+   "gold": "MS-3 pools",
+   "hops": 2,
+   "q": "How do I keep the production server stable while adding new tool variants?",
+   "read": [
+    0,
+    "web/mcp_gate.py",
+    160
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "server",
+    439,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "cheapest",
+    805,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "E_beam2",
+    11041
+   ],
+   "gold": "raw-embedding centroids",
+   "hops": 2,
+   "q": "How do I implement a routing system that uses mean comparison to prevent the performance crash caused by summing domain and agent similarity?",
+   "read": [
+    0,
+    "UNKNOWN",
+    102
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "shape",
+    427,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "clm head",
+    593,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    1,
+    "WireSense repo",
+    10919
+   ],
+   "gold": "WireSense repo",
+   "hops": 2,
+   "q": "Which source repository contains the WireSense frozen-encoder readout stack?",
+   "read": [
+    0,
+    "UNKNOWN",
+    93
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "clm head",
+    394,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "assistant",
+    878,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "B_walk",
+    10937
+   ],
+   "gold": "beam2-greedy",
+   "hops": 2,
+   "q": "Which model is superior when my task requires a model with a domain accuracy of approximately 0.796?",
+   "read": [
+    0,
+    "UNKNOWN",
+    124
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "new binary levels",
+    419,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "camera",
+    725,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "UNKNOWN",
+    10923
+   ],
+   "gold": "no zoom",
+   "hops": 2,
+   "q": "Is there a way to control the camera's viewing angle or zoom in remotely?",
+   "read": [
+    0,
+    "UNKNOWN",
+    186
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "camera",
+    530,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "existing path",
+    516,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "production manifests",
+    11026
+   ],
+   "gold": "prefixed names",
+   "hops": 1,
+   "q": "When I read a production manifest, how are the MCP tools identified so I can tell them apart?",
+   "read": [
+    0,
+    "UNKNOWN",
+    85
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "tools/mcp_probe/",
+    212,
+    0
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "cluster assignment",
+    637,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "ledger",
+    10929
+   ],
+   "gold": "freeze candidates",
+   "hops": 1,
+   "q": "Before the eval set is locked, what does the R-series runner leave on disk for review?",
+   "read": [
+    0,
+    "UNKNOWN",
+    109
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "cluster assignment",
+    402,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "anything after level 4",
+    743,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "UNKNOWN",
+    10925
+   ],
+   "gold": "0.929",
+   "hops": 1,
+   "q": "What presence did the all-leaves-at-once read reach in the depth extension?",
+   "read": [
+    0,
+    "UNKNOWN",
+    85
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "6 levels",
+    422,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "ms-27b",
+    519,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "0.6727",
+    10913
+   ],
+   "gold": "0.6906",
+   "hops": 1,
+   "q": "What accuracy did the second window-union variant register?",
+   "read": [
+    0,
+    "0.6727",
+    138
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "vs union 0.7444",
+    216,
+    0
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "h1",
+    758,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "hintfam",
+    11009
+   ],
+   "gold": "highest",
+   "hops": 1,
+   "q": "Across the hint-family variants, how did the best one rank on accuracy?",
+   "read": [
+    0,
+    "UNKNOWN",
+    82
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "false-tool rate 0.2012",
+    446,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "no auth required",
+    495,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    1,
+    "tools/list",
+    10921
+   ],
+   "gold": "tools/list",
+   "hops": 1,
+   "q": "What does the stdio transport call first to discover a server's capabilities?",
+   "read": [
+    0,
+    "UNKNOWN",
+    134
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "no auth required",
+    390,
+    3
+   ]
+  },
+  {
+   "beam": [
+    1,
+    "focus",
+    815,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    1,
+    "focus",
+    10913
+   ],
+   "gold": "focus",
+   "hops": 1,
+   "q": "What does the focus_move action change on the camera?",
+   "read": [
+    0,
+    "speed",
+    87
+   ],
+   "recipe": "indirect",
+   "walk": [
+    1,
+    "focus",
+    386,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "handle_discover_devices",
+    687,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    1,
+    "everything server",
+    10921
+   ],
+   "gold": "everything server",
+   "hops": 1,
+   "q": "What kind of backing service does the demo tool expect to demonstrate message annotations?",
+   "read": [
+    1,
+    "everything server",
+    79
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "handle_discover_devices",
+    395,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "protocol-mcp-selection.md",
+    712,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "A_flat",
+    11005
+   ],
+   "gold": "beam2-greedy",
+   "hops": 2,
+   "q": "In the S-series matchup against B_walk, who came out ahead?",
+   "read": [
+    0,
+    "A_flat",
+    127
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "significant",
+    384,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "query",
+    493,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    1,
+    "question and text",
+    10927
+   ],
+   "gold": "question and text",
+   "hops": 2,
+   "q": "When the pointwise judge scores a chunk, what two things does it look at together?",
+   "read": [
+    0,
+    "relevance",
+    82
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "query",
+    387,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "chunkrel.py",
+    663,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "chunkrel.py",
+    10911
+   ],
+   "gold": "LLM server",
+   "hops": 2,
+   "q": "Which piece of infrastructure produced the frozen question set?",
+   "read": [
+    0,
+    "UNKNOWN",
+    156
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "ms-16b failure",
+    377,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "heads.py",
+    604,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "heads.py",
+    10925
+   ],
+   "gold": "arms A/B/C/C'",
+   "hops": 2,
+   "q": "If I open the trunk module in this repo, which classifier configurations will I find?",
+   "read": [
+    1,
+    "arms A/B/C/C'",
+    95
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "heads.py",
+    404,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "ms-27 results",
+    332,
+    0
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "MS-28",
+    11015
+   ],
+   "gold": "MS-28 results",
+   "hops": 2,
+   "q": "Besides MS-29, which other results block was scored the same day?",
+   "read": [
+    0,
+    "MS-27",
+    154
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "2026-10-09",
+    496,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "1 neg",
+    1247,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "20/24",
+    10929
+   ],
+   "gold": "neg >= 20/24",
+   "hops": 2,
+   "q": "How many negative cases did the registration bar insist on before MS-28a could count?",
+   "read": [
+    0,
+    "UNKNOWN",
+    157
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "1 neg",
+    761,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "ms-3 heuristic",
+    313,
+    0
+   ],
+   "entry_hit": 0,
+   "flat": [
+    0,
+    "per-hit",
+    10929
+   ],
+   "gold": "list size",
+   "hops": 2,
+   "q": "What grows when each additional candidate drags the score down by 0.759?",
+   "read": [
+    0,
+    "UNKNOWN",
+    83
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "ms-3 heuristic",
+    210,
+    0
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "three best-measured ingredients",
+    939,
+    3
+   ],
+   "entry_hit": 1,
+   "flat": [
+    0,
+    "UNKNOWN",
+    10923
+   ],
+   "gold": "presence 0.9567",
+   "hops": 2,
+   "q": "Once its three best ingredients were stacked, what number did the registration come to?",
+   "read": [
+    0,
+    "UNKNOWN",
+    240
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "three best-measured ingredients",
+    737,
+    3
+   ]
+  },
+  {
+   "beam": [
+    0,
+    "generator",
+    718,
+    3
+   ],
+   "entry_hit": 0,
+   "flat": [
+    1,
+    "families",
+    10925
+   ],
+   "gold": "families",
+   "hops": 2,
+   "q": "Beyond their distinguishing modifier, what do all the leaves of this hierarchy have in common?",
+   "read": [
+    0,
+    "wins at 78",
+    93
+   ],
+   "recipe": "indirect",
+   "walk": [
+    0,
+    "generator",
+    404,
+    3
+   ]
+  }
+ ],
+ "smoke": false,
+ "tag": "kgraphqa",
+ "verdicts": {
+  "K1": [
+   "FAIL",
+   -0.0833,
+   false
+  ],
+  "K2": [
+   "PASS",
+   0.1333,
+   true
+  ],
+  "K3": [
+   "PASS",
+   0.0333
+  ]
+ }
+}
