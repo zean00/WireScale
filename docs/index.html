@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WireScale — how should a machine decide? trees, routers, and tool benches</title>
-<meta name="description" content="WireScale: a pre-registered laboratory for decision structure. Three experiments — hierarchical decision trees, sub-agent routing, tool-selection filtering. Every prediction committed before the data; every failure published.">
+<title>WireScale — how should a machine decide? trees, routers, tools, retrieval</title>
+<meta name="description" content="WireScale: a pre-registered laboratory for decision structure. Five experiment families — hierarchical decision trees, sub-agent routing, tool-selection filtering, retrieval for RAG, and knowledge-graph traversal. Every prediction committed before the data; every failure published.">
 <meta property="og:title" content="WireScale — how should a machine decide?">
-<meta property="og:description" content="Three pre-registered experiments on decision structure: step-by-step trees vs all-at-once readouts, agent routing, and tool filtering. Registered first, measured honestly, failures published.">
+<meta property="og:description" content="Five pre-registered experiment families: step-by-step trees vs all-at-once readouts, agent routing, tool filtering, retrieval (who finds the right page — and should anyone verify it?), and knowledge-graph traversal. Registered first, measured honestly, failures published.">
 <meta name="theme-color" content="#06090f">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2306090f'/%3E%3Cpath d='M16 27V14M16 14L8 6M16 14l8-8M16 20l-5-5M16 20l5-5' stroke='%232dd4bf' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='27' r='2.2' fill='%232dd4bf'/%3E%3Ccircle cx='8' cy='6' r='2' fill='%23fbbf24'/%3E%3Ccircle cx='24' cy='6' r='2' fill='%23a78bfa'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -220,13 +220,16 @@
     <div class="eyebrow rv in">a pre-registered laboratory for decision structure</div>
     <h1 class="rv in">how should a<br>machine <span class="tl">decide?</span></h1>
     <p class="sub rv in">Step by step down a tree like <b>twenty questions</b> — or all at once, like <b>reading the whole menu</b>?
-       WireScale measures where each strategy wins, across three uses: <b>hierarchical decisions</b>,
-       <b>routing users to specialist agents</b>, and <b>filtering a toolbox down to the useful tools</b>.</p>
+       WireScale measures where each strategy wins, across five uses: <b>hierarchical decisions</b>,
+       <b>routing users to specialist agents</b>, <b>filtering a toolbox down to the useful tools</b>,
+       <b>finding the right page in a corpus</b>, and <b>traversing a map of facts</b>.</p>
     <div class="chips rv in">
       <span class="chip t"><b>96</b>-leaf trees, 6 levels deep</span>
       <span class="chip v"><b>64</b> specialist agents routed</span>
       <span class="chip a"><b>121</b> real tools filtered to ~65</span>
-      <span class="chip"><b>0</b>/4 headline predictions passed as registered — the failures are the finding</span>
+      <span class="chip t"><b>58</b> frozen questions over a <b>180</b>-page corpus</span>
+      <span class="chip v"><b>902</b>-triple knowledge graph</span>
+      <span class="chip"><b>16</b>/32 headline predictions passed as registered — the failures map the dead ends</span>
     </div>
   </div>
   <div class="wrap scrollcue">the experiments</div>
@@ -246,8 +249,9 @@
       <div class="card teal rv">
         <div class="k">the substrate</div>
         <h3>Embed + measure</h3>
-        <p>Every sentence becomes a 2,560-dimension vector from a frozen Qwen3.5-4B encoder. A "readout"
-           is just distances: which class's reference point is closest to the sentence?</p>
+        <p>Every sentence becomes a vector from a frozen model — the Qwen3.5-4B encoder (2,560-dim) for
+           decisions, later joined by a dedicated 0.6B embedding model for retrieval. A "readout"
+           is just distances and ranks: which reference point is closest?</p>
       </div>
       <div class="card violet rv">
         <div class="k">the discipline</div>
@@ -539,12 +543,173 @@
   </div>
 </section>
 
+<!-- ================= USE CASE 4: RETRIEVAL ================= -->
+<section id="retrieval" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow rv" style="color:var(--teal)">use case 4 — retrieval (the RAG season)</div>
+    <h2 class="rv">The librarian and the fact-checker: <span class="accent">find the page, then verify it</span>.</h2>
+    <p class="lede rv">Everything above decides among <b>fixed labels</b>. The second season asks the everyday question behind
+       every chatbot that "reads the documentation": <b>who finds the right page — and should anyone check it before answering?</b>
+       The corpus is the lab's own docs: 180 pinned chunks and <b>58 frozen, hand-audited questions</b> (half asked in the page's
+       own words, half asked as a human need would be). Nine scored experiment groups later, the answer is a machine.</p>
+
+    <div class="plain rv">
+      <div class="ic">📚</div>
+      <p><b>In plain terms:</b> two workers. A fast <b>librarian</b> (a small dedicated embedding model) glances at every page
+         and ranks them by "probably relevant" — nearly free, and it never actually reads. A careful <b>fact-checker</b> (the
+         frozen 4B, asked a strict yes/no per page) is rarely fooled but must read to judge. The measured recipe: let the
+         librarian set the order, let the fact-checker read pages <b>one at a time in that order</b>, stop at the first
+         confident yes, and if nothing convinces it, fall back to the librarian's top pick. Every ingredient was registered
+         and scored separately — then the assembled machine was registered and scored too, and <b>all four of its predictions
+         passed</b>, the first clean sweep in the lab.</p>
+    </div>
+
+    <div class="duo">
+      <div class="card teal rv">
+        <div class="k">what worked</div>
+        <h3>Sort, verify, stop, fall back</h3>
+        <p>Scanning pages in the librarian's order and stopping at the first confident yes reaches <b>.690 prefix-recall —
+           above the exhaustive reader's .517</b> — while judging a mean <b>11.5 of 180 chunks</b> at 15.8% of the tokens.
+           One temperature (T=0.66) makes the checker's confidence honest (held-out ECE .105 → .081), and the assembled
+           machine turns that into answers: <b>.431 vs .345 for plain vector RAG</b>, at 18.6% of the read-everything cost.</p>
+      </div>
+      <div class="card red rv">
+        <div class="k">what didn't — the measured dead ends</div>
+        <h3>Every "help" hurt</h3>
+        <p>The frozen 4B doing embeddings <i>as a side job</i> ranked at random, and no rescue dial fixed it (pooling, prefixes,
+           truncation, a trained pair head at 8× data). Rewriting the user's question made retrieval <b>worse</b> (−6.9 indirect),
+           and so did the embedder's own official instruct prefix (−3.5). The raw question, verbatim, beat every attempt to
+           improve it.</p>
+      </div>
+    </div>
+
+    <div class="tblwrap rv">
+      <table>
+        <thead><tr><th>series</th><th>the registered question</th><th>verdict</th></tr></thead>
+        <tbody>
+          <tr><td><b>R</b> — judge vs cosine</td><td>does careful pointwise judgment beat embedding similarity?</td>
+              <td>R1 PARTIAL · R2 FAIL · R3/R4 PASS — the judge dominates, the side-job cosine ranks at random</td></tr>
+          <tr><td><b>V</b> + <b>J</b> — the autopsy</td><td>can pooling, format, length, or 8× training data rescue it?</td>
+              <td>VA PARTIAL · VC FAIL · JA FAIL — no dial, no data size; mechanism, not sample</td></tr>
+          <tr class="hl"><td><b>E</b> — the real embedder</td><td>what if retrieval gets a dedicated 0.6B model?</td>
+              <td>EA/EC PASS — top-3 .638 beats even the exhaustive judge (.517); indirect .552 vs .241</td></tr>
+          <tr><td><b>W</b> — walk vs flat, expensive reads</td><td>can a cheap menu pick the right 20-chunk window?</td>
+              <td>W1 PASS · W2/W3 FAIL — the window walk keeps 17% of flat recall at 5.8% of tokens</td></tr>
+          <tr class="hl"><td><b>X</b> — scan-and-stop</td><td>read in embedder order, stop at the first confident yes?</td>
+              <td>XA/XB PASS — .690 prefix at 15.8% of tokens; beats doc order where deployment lives</td></tr>
+          <tr><td><b>Y</b> — query rewriting</td><td>does rephrasing the question into doc-speak help?</td>
+              <td>YA/YB FAIL — it genuinely rewrote (96.6%) and hurt both cells</td></tr>
+          <tr><td><b>Z</b> — calibration</td><td>is the checker's "yes" believable?</td>
+              <td>ZA/ZB PASS — one temperature fixes it; the stop-bar transfers across the split</td></tr>
+          <tr class="hl"><td><b>A</b> — the assembly</td><td>does the whole recipe survive as one machine?</td>
+              <td>A1–A4 ALL PASS — .431 vs .345 (vector RAG) at 18.6% of the exhaustive cost</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart rv">
+      <div class="ct"><h3>The machine: more right answers, a sixth of the cost</h3>
+        <span class="cs">answer accuracy over the frozen 58 vs judge prompt cost · A-series (assembly.json)</span></div>
+      <div id="chartRetrieval"></div>
+      <div class="tblcap">vector top-1 .345 @ 798 tok · same policy in document order .379 @ 13,640 ·
+        the machine .431 @ 5,428 (18.6% of reading everything, dashed) · judge-graded answers, registered
+        fallback fired on 21% of questions.</div>
+    </div>
+
+    <div class="plain rv">
+      <div class="ic">🔍</div>
+      <p><b>Verdict for retrieval:</b> pure vector search is a <b>librarian, not a reader</b> — and the reader is worth it.
+         Rank with the dedicated embedder, verify with the judge in that order, stop when the calibrated confidence crosses
+         the bar, fall back to rank-1 when nothing does. Honest losses, disclosed in the ledger: even holding the right page
+         the answer sometimes comes out wrong (−3.4 pts from synthesis), and questions asked in roundabout ways stay hard
+         (.207) — the machine's edge is almost all where the words match the need.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= USE CASE 5: GRAPHS ================= -->
+<section id="graphs" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow rv" style="color:var(--violet)">use case 5 — knowledge graphs</div>
+    <h2 class="rv">The map of facts: walk it, hedge it, or <span class="accent">read it flat</span>?</h2>
+    <p class="lede rv">A knowledge graph answers questions by <b>traversal</b>: start at an entity, follow relations, arrive at
+       the answer. The lab extracted a <b>902-triple graph</b> from the same pinned corpus, wrote <b>60 path-grounded questions</b>
+       with known gold paths (audited before freezing), and registered the decision-layer question: is a guided walk smarter
+       than just reading?</p>
+
+    <div class="tblwrap rv">
+      <table>
+        <thead><tr><th>arm (60 questions)</th><th class="num">endpoint answer</th><th class="num">gold anywhere on the visited path</th><th class="num">tokens / question</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td><b>FLAT</b> — read every triple in context</td>
+            <td class="num hero-cell">.317</td><td class="num">—</td><td class="num">10,932</td></tr>
+          <tr class="hl"><td><b>BEAM-2</b> — hedge two edges per hop</td>
+            <td class="num">.283</td><td class="num">.300</td><td class="num">705</td></tr>
+          <tr><td><b>LOOK-2</b> — hedge two whole routes (operator's design)</td>
+            <td class="num">.033</td><td class="num hero-cell">.333</td><td class="num">825</td></tr>
+          <tr><td><b>LOOK-1</b> — commit to one 3-hop route</td>
+            <td class="num">.100</td><td class="num">.283</td><td class="num">406</td></tr>
+          <tr><td><b>READ</b> — retrieve entries, read their triples</td>
+            <td class="num">.233</td><td class="num">—</td><td class="num">111</td></tr>
+          <tr><td><b>WALK</b> — greedy, one edge at a time</td>
+            <td class="num">.150</td><td class="num">.250</td><td class="num">412</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tblcap rv">Endpoint = the walk's final destination is the gold node. "Visited path" = the gold node appears
+      anywhere along the route the walker actually took (the mid-route rescoring, K-Amd 3) — endpoint drift of the fresh run
+      vs committed records: exactly 0.000.</div>
+
+    <div class="grid g3">
+      <div class="card red rv"><div class="k">registered K1</div>
+        <span class="badge b-fail">fail</span>
+        <p style="margin-top:12px">The greedy walk loses to retrieve-then-read by <b>−8.3 pts at 3.7× the tokens</b> —
+           the sixth consecutive verdict against committing to one path early.</p></div>
+      <div class="card teal rv"><div class="k">registered K2</div>
+        <span class="badge b-pass">pass · 4th replication</span>
+        <p style="margin-top:12px">Beam-2 beats the greedy walk by <b>+13.3 — its largest margin anywhere</b> — keeping 89%
+           of flat's accuracy at 6.5% of its tokens. Hedging is now the lab's most replicated finding.</p></div>
+      <div class="card amber rv"><div class="k">registered K3</div>
+        <span class="badge b-pass">pass · the anchor holds</span>
+        <p style="margin-top:12px">When the whole map fits in context, <b>reading it flat wins</b> (+3.3 over beam-2).
+           Structure has to earn its keep against a full read, and here it doesn't.</p></div>
+    </div>
+
+    <div class="duo">
+      <div class="card violet rv">
+        <div class="k">amendment 2 — the operator's design, registered</div>
+        <h3>Route lookahead: right instinct, wrong commitment</h3>
+        <p>The proposal: pick a starting node, enumerate all routes up to 3 hops, have the model choose the most promising
+           whole route, re-anchor at its destination, repeat. <b>Both verdicts FAIL</b> — LOOK-1 landed below the plain
+           greedy walk, LOOK-2 collapsed to 2/60. The diagnostic explains it: the gold node sat on the chosen route <b>32%
+           of the time, and the walker walked past it nearly every time</b> — a 3-hop route overshoots a 2-hop answer.</p>
+      </div>
+      <div class="card teal rv">
+        <div class="k">amendment 3 — score the path, not just the destination</div>
+        <h3>The vindication hiding in the failure</h3>
+        <p>Re-scored fairly — credit for reaching the right <i>neighborhood</i> — the story flips: beam-2's visited paths
+           contain the gold <b>.300, beating retrieve-then-read's .233</b> (registered KM1 PASS), and the operator's LOOK-2
+           posts <b>.333, the best graph number in the lab</b>. The design navigates well and then overshoots the final
+           step. On graphs: hedge, never commit — and score what the walker actually visits.</p>
+      </div>
+    </div>
+
+    <div class="plain rv">
+      <div class="ic">🗺️</div>
+      <p><b>Verdict for graphs:</b> the map itself is the ceiling — machine-extracted triples cap entry-point visibility at
+         <b>.53</b>, so no traversal policy can answer what the map doesn't reach. Given that substrate, hedged walkers are
+         the best <i>navigators</i> ever measured here, flat reading still wins when it fits, and committing to one route —
+         however cleverly chosen — loses twice over.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ================= LAWS ================= -->
 <section id="laws" style="padding-top:40px">
   <div class="wrap">
     <div class="eyebrow rv" style="color:var(--amber)">what transfers</div>
-    <h2 class="rv">Four laws, paid for <span class="accent">in full</span>.</h2>
-    <div class="grid g4">
+    <h2 class="rv">Six laws, paid for <span class="accent">in full</span>.</h2>
+    <div class="grid g3">
       <div class="card teal rv"><div class="k">law 01</div><h3>Information bounds; structure spends</h3>
         <p>When the text names its answer, every architecture works (96 leaves at 95.9%). When it doesn't,
            nothing does — coin flips at the leaf (m=0) and chance at the specialist (1/8), oracle included.
@@ -552,15 +717,26 @@
       <div class="card amber rv"><div class="k">law 02</div><h3>Early steps tax everything after</h3>
         <p>A walk inherits its first mistake: 91.8% at the root caps a 6-level walk at .825 no matter how
            perfect the deeper levels (.9997, 1.0). Flat overtakes the walk once the class count grows —
-           at 96 classes, .899 vs .825.</p></div>
-      <div class="card violet rv"><div class="k">law 03</div><h3>Beam-2 is the universal repair</h3>
+           at 96 classes, .899 vs .825 — and on graphs, flat wins whenever the map fits (K3).</p></div>
+      <div class="card violet rv"><div class="k">law 03</div><h3>Hedge; never commit</h3>
         <p>Keep two candidates alive at the coarse level: +3.4 pts at 96 leaves, +7.7 pts on agent routing,
-           +1.1 in the production router — three replications, one caveat: score paths by <b>mean, never
-           sum</b> (a 13-point crash hid in that choice).</p></div>
+           +13.3 on graph traversal — four replications, the largest margins in the lab. One caveat: score
+           paths by <b>mean, never sum</b> (a 13-point crash hid in that choice).</p></div>
       <div class="card red rv"><div class="k">law 04</div><h3>Register, then obey the verdict</h3>
-        <p>0 of 4 headline predictions passed as registered — so conditioning was <b>stopped by rule</b>.
-           A flawed run was deleted unexamined; a registered metric error was disclosed; the composition
-           shipped only after clearing both pre-committed bars. The ledger is the product.</p></div>
+        <p>The first experiment went 0 for 4 — so conditioning was <b>stopped by rule</b>. Since then:
+           16 of 32 headline predictions passed as registered, and every failure is kept as a mapped
+           dead end. Runs botched or invalidated are deleted unexamined and disclosed. The ledger is
+           the product.</p></div>
+      <div class="card teal rv"><div class="k">law 05</div><h3>Sort, verify, stop — then fall back</h3>
+        <p>A ranking is not an answer. Let the cheap model order the pages, let the careful model check
+           them one at a time until confident, and keep a safe fallback for when it never is: <b>.431 vs
+           .345</b> for plain vector RAG, at 18.6% of the read-everything cost. The verifier beats both
+           the guesser and the brute.</p></div>
+      <div class="card amber rv"><div class="k">law 06</div><h3>Helping the input hurts</h3>
+        <p>Twice measured: the embedder's official instruct prefix (−3.5 pts) and LLM query rewriting
+           (−6.9 indirect, −3.5 direct) both made retrieval <b>worse</b>. The raw question wins. If
+           confidence is the problem, calibrate the judge (T=0.66; ECE .105→.081) — don't edit the
+           question.</p></div>
     </div>
   </div>
 </section>
@@ -579,10 +755,11 @@
     <div class="links rv">
       <a href="https://github.com/zean00/WireScale">github.com/zean00/WireScale</a>
       <a href="protocol.md">protocol.md — the decision record</a>
-      <a href="https://github.com/zean00/rewire">sister program: rewire</a>
+      <a href="https://github.com/zean00/WireSense">sister program: WireSense</a>
     </div>
-    <p class="fine rv" style="margin-top:26px">Experiments run 2026-10-07 → 2026-10-09 · frozen encoder
-      Qwen3.5-4B (local llama.cpp server) · synthetic corpora generated deterministically from committed seeds ·
+    <p class="fine rv" style="margin-top:26px">Experiments run 2026-10-07 → 2026-10-14 · frozen encoder
+      Qwen3.5-4B (local llama.cpp server, dedicated slot 7) + dedicated Qwen3-Embedding-0.6B for retrieval ·
+      synthetic corpora generated deterministically from committed seeds ·
       production transfer measured in the WireSense program (MS-1..29).</p>
   </div>
 </footer>
@@ -715,6 +892,35 @@ lineChart('chartDepth', {
     svg.appendChild(txt(X(p.t)+13,Y(p.a)+4,p.n,'sv','start')).setAttribute('fill',p.c);
   });
   document.getElementById('chartFrontier').appendChild(svg);
+})();
+
+/* retrieval: answer accuracy vs judge cost */
+(function(){
+  const W=920,H=340,L=58,R=200,T=18,B=48,iw=W-L-R,ih=H-T-B;
+  const svg = mk('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%',style:'display:block'});
+  const xmin=0,xmax=31000,ymin=.30,ymax=.47;
+  const X=t=>L+iw*(t-xmin)/(xmax-xmin), Y=a=>T+ih*(1-(a-ymin)/(ymax-ymin));
+  for(let g=0;g<=4;g++){ const a=ymin+(ymax-ymin)*g/4,y=Y(a);
+    svg.appendChild(mk('line',{x1:L,y1:y,x2:W-R,y2:y,class:'gridl'}));
+    svg.appendChild(txt(L-10,y+4,a.toFixed(2),'lbl','end')); }
+  [5000,10000,15000,20000,25000,30000].forEach(t=>{ const x=X(t);
+    svg.appendChild(mk('line',{x1:x,y1:T,x2:x,y2:T+ih,class:'gridl'}));
+    svg.appendChild(txt(x,H-B+24,(t/1000)+'k','lbl','middle')); });
+  svg.appendChild(mk('line',{x1:L,y1:T+ih,x2:W-R,y2:T+ih,class:'axis'}));
+  svg.appendChild(txt(L+iw/2,H-8,'judge prompt tokens per question (lower = cheaper)','lbl','middle'));
+  const ref = X(29236);
+  svg.appendChild(mk('line',{x1:ref,y1:T,x2:ref,y2:T+ih,stroke:'#fbbf24','stroke-width':1.6,'stroke-dasharray':'5 7',opacity:.85}));
+  svg.appendChild(txt(ref-8,T+16,'read everything \u00b7 29,236 tok','sv','end')).setAttribute('fill','#fbbf24');
+  const pts=[
+    {n:'vector top-1 .345', t:798, a:.3448, c:'#9aa4b8'},
+    {n:'same policy, doc order .379', t:13640, a:.3793, c:'#9aa4b8'},
+    {n:'the machine .431', t:5428, a:.431, c:'#2dd4bf'},
+  ];
+  pts.forEach(p=>{
+    svg.appendChild(mk('circle',{cx:X(p.t),cy:Y(p.a),r:7,fill:'#06090f',stroke:p.c,'stroke-width':2.6}));
+    svg.appendChild(txt(X(p.t)+13,Y(p.a)+4,p.n,'sv','start')).setAttribute('fill',p.c);
+  });
+  document.getElementById('chartRetrieval').appendChild(svg);
 })();
 </script>
 </body>
