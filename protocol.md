@@ -994,3 +994,79 @@ retrieval with this container is the obvious cheap-first stage, with
 the judge reserved for high-precision direct confirmation — but any
 such wiring is a new registered decision there, not a transfer made
 here.
+
+## K-series (registered 2026-10-14, pre-data): decision layers on knowledge-graph QA
+
+The one regime the lab never gave a fair shot: a structure too big
+to read flat, with a GOOD cheap selector (E-series) instead of W's
+text-preview garbage. Build a knowledge graph from the pinned
+corpus, generate path-grounded questions, and ask whether a
+decision layer traversing the graph beats retrieve-then-read at
+matched token budget.
+
+Substrate (built by registered procedure, committed before any
+question is generated):
+- **Graph**: for each of the 180 pinned chunks, the frozen model
+  (slot 7, temp 0) extracts up to 6 triples {s, r, o} as JSON —
+  entities as short noun phrases (≤ 4 words), relations as short
+  verb phrases (≤ 3 words), explicit facts only. Deduped
+  case-insensitively → results/kgraph.json (entities, triples,
+  per-triple source chunk). Extraction noise is part of the
+  substrate, disclosed, never hand-repaired.
+- **Questions**: 60 eval, half 1-hop (a single triple), half 2-hop
+  (a chain A–r1→B–r2→C present in the graph), each half split
+  direct/indirect (R-series markedness recipes; temp .8, seeded).
+  The generator sees the triples + their source snippets; gold =
+  the terminal entity (canonical graph label). Eval is
+  hand-audited BEFORE freeze (R-series policy; corrections
+  recorded in an audit key). No train split — nothing trains.
+
+Arms (all answer with an entity label; accuracy = normalized
+match to gold; normalize = lowercase, collapse whitespace, strip
+surrounding punctuation):
+- **FLAT** — one call: the whole graph's triples + the question
+  (anchor; expected to fit context on a lab-size graph).
+- **READ** — embedder retrieval (E-series container via tunnel):
+  rank entities by cosine to the query; expand 2 hops from the
+  top-3 entries with per-hop breadth cap 12 (neighbors ranked by
+  embedding); collect triples, re-rank by triple-text cosine,
+  keep top 30; one LLM call over that subgraph.
+- **WALK** — pure traversal: menu 1 picks among the top-5
+  embedder-ranked entry entities; each later menu lists the
+  current node's neighbors as `relation → object` (plus a stop
+  option); the LLM picks; max 3 hops; the terminal node IS the
+  answer. Entry asymmetry vs READ (top-5 menu vs top-3 expand)
+  disclosed.
+- **BEAM** — WALK keeping a frontier of 2: at each menu the top-2
+  picks extend paths; path score = Σ (1st pick = 1.0, 2nd = 0.5);
+  answer = best-scoring terminal (the lab's three-time replicated
+  structural win, re-asked on graphs).
+
+Metrics: accuracy by hops (1/2) and recipe (direct/indirect) and
+all; prompt tokens per question per arm; hops taken; entry-hit
+(gold path's start entity in the top-5 embedder entries).
+
+Predictions (mechanical):
+- **K1 (primary)**: WALK − READ on all-accuracy: ≥ 0 PASS (the
+  decision layer beats retrieve-then-read at matched budget);
+  within −2 pts PARTIAL; < −2 pts FAIL. A PASS/PARTIAL counts
+  only if WALK tokens ≤ 1.1 × READ tokens (budget guard), else
+  recorded FAIL-budget.
+- **K2 (beam replication)**: BEAM − WALK ≥ +3 pts PASS, else
+  FAIL; guard BEAM tokens ≤ 2.2 × WALK.
+- **K3 (flat anchor)**: FLAT − best budgeted arm ≥ 0 PASS (flat
+  stays supreme while the graph fits in context — the lab prior);
+  a budgeted arm > FLAT + 2 pts FAIL (a first on this stack);
+  else PARTIAL.
+
+Disclosures: the graph is model-extracted from 180 chunks of the
+operator's own docs — small (est. hundreds of triples), so FLAT
+fitting in context is likely and K3's PASS would be the expected
+null-anchor, not a finding about production-scale graphs; 2-hop
+chains are sampled where the graph admits them (odd chains may
+produce odd questions — the audit culls, pre-freeze); the embedder
+is again the remote 0.6B container (E-series substrate) reached
+over an SSH tunnel; WALK/BEAM menus are the same menu machinery as
+R's J-menu (first-200-char previews not used — neighbor labels
+only); temp-0 traversal is session-stable but not bit-deterministic
+(W precedent).
