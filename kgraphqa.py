@@ -34,6 +34,10 @@ KQFILE = os.path.join(RES, "k_questions.json")
 K_SEED, N_Q, MAXHOPS = 20261014, 60, 3
 READ_ENTRIES, READ_BREADTH, READ_TOP = 3, 12, 30
 WALK_MENU_MAX, BEAM_GUARD, K1_GUARD = 20, 2.2, 1.1
+# LOOKAHEAD (Amendment 2, registered caps)
+LOOK_L1_CAP, LOOK_EXT_CAP = 24, 12
+LOOK_POOL2, LOOK_POOL3, LOOK_MENU = 300, 800, 60
+LOOK_SEGS, LOOK_PATH_HOPS = 2, 3
 
 EXTRACT_SYS = ("You extract knowledge-graph triples from text. Reply with "
                "ONLY a JSON array like [{\"s\":\"...\",\"r\":\"...\","
@@ -380,6 +384,190 @@ def arm_walk(q, g, adj, cache, beam=False):
     return ans, usage, len(best[0]) - 1
 
 
+# ------------------------------------------------------------- lookahead
+
+def far_node(g, ti, from_norm):
+    t = g["triples"][ti]
+    return norm_ent(t["o"]) if norm_ent(t["s"]) == from_norm \
+        else norm_ent(t["s"])
+
+
+def enumerate_paths(g, adj, tvecs, anchor, qv):
+    """Simple paths up to LOOK_PATH_HOPS from anchor, registered caps.
+    Ranking is embedder cosine of TRIPLE texts (cached) — no new embeds."""
+    def score(tis):
+        return float(np.mean([tvecs[ti] @ qv for ti in tis]))
+    l1 = sorted(adj[anchor],
+                key=lambda ti: -float(tvecs[ti] @ qv))[:LOOK_L1_CAP]
+    cur = [{"nodes": [anchor, far_node(g, ti, anchor)], "tis": [ti]}
+           for ti in l1]
+    allp = list(cur)
+    for pool in (LOOK_POOL2, LOOK_POOL3):
+        nxt = []
+        for p in cur:
+            end = p["nodes"][-1]
+            for ti in adj[end]:
+                if ti in p["tis"]:
+                    continue
+                fn = far_node(g, ti, end)
+                if fn in p["nodes"]:
+                    continue
+                nxt.append({"nodes": p["nodes"] + [fn],
+                            "tis": p["tis"] + [ti]})
+        nxt.sort(key=lambda p: -score(p["tis"]))
+        cur = nxt[:pool]
+        allp += cur
+    allp.sort(key=lambda p: -score(p["tis"]))
+    return allp[:LOOK_MENU]
+
+
+def path_label(g, p, canon):
+    parts = [canon.get(p["nodes"][0], p["nodes"][0])]
+    for i, ti in enumerate(p["tis"]):
+        parts.append(f"-{g['triples'][ti]['r']}-")
+        parts.append(canon.get(p["nodes"][i + 1], p["nodes"][i + 1]))
+    return " ".join(parts)
+
+
+def arm_look(q, g, adj, canon, cache, tvecs, ents, beam2):
+    usage = 0
+    ranked, _ = rank_entries(cache, q, ents)
+    top5 = ranked[:5]
+    sysmsg = PICK2_SYS if beam2 else PICK_SYS
+    numbered = "\n".join(f"{i + 1}. {e}" for i, e in enumerate(top5))
+    r = CR.llm_chat(
+        [{"role": "system", "content": sysmsg},
+         {"role": "user", "content":
+          f"Question: {q}\n\nStarting points:\n{numbered}\n\n"
+          "Reply with only the number(s)."}],
+        temp=0, max_tokens=16)
+    usage += r.get("usage", {}).get("prompt_tokens", 0)
+    picks = parse_picks(r["choices"][0]["message"]["content"], len(top5))
+    picks = picks or [1]
+    frontiers = [{"nodes": [norm_ent(top5[p - 1])],
+                  "w": 1.0 if j == 0 else 0.5}
+                 for j, p in enumerate(picks[:2] if beam2 else picks[:1])]
+    done = []
+    for _seg in range(LOOK_SEGS):
+        nxt = []
+        for f in frontiers:
+            anchor = f["nodes"][-1]
+            paths = enumerate_paths(g, adj, tvecs, anchor, cache[q])
+            if not paths:
+                done.append(f)
+                continue
+            labels = [path_label(g, p, canon) for p in paths]
+            numbered = "\n".join(f"{i + 1}. {l}"
+                                 for i, l in enumerate(labels))
+            r = CR.llm_chat(
+                [{"role": "system", "content": sysmsg},
+                 {"role": "user", "content":
+                  f"Question: {q}\n\nRoutes from here "
+                  f"({len(labels)}):\n{numbered}\n\n"
+                  "Reply with only the number(s) (0 to stop here)."}],
+                temp=0, max_tokens=16)
+            usage += r.get("usage", {}).get("prompt_tokens", 0)
+            pk = parse_picks(r["choices"][0]["message"]["content"],
+                             len(paths))
+            if not pk or pk[0] == 0:
+                done.append(f)
+                continue
+            for j, p in enumerate(pk[:2] if beam2 else pk[:1]):
+                if p > 0:
+                    nxt.append({"nodes": f["nodes"]
+                                + paths[p - 1]["nodes"][1:],
+                                "w": f["w"] + (1.0 if j == 0 else 0.5)})
+        if beam2:
+            nxt.sort(key=lambda x: -x["w"])
+            frontiers = nxt[:2]
+        else:
+            frontiers = nxt[:1]
+        if not frontiers:
+            break
+    done.extend(frontiers)
+    best = max(done, key=lambda x: x["w"]) if done \
+        else {"nodes": ["UNKNOWN"], "w": 0.0}
+    return best["nodes"][-1], usage, len(best["nodes"]) - 1, best["nodes"]
+
+
+def run_look(limit=0):
+    g, adj = load_graph()
+    with open(KQFILE) as f:
+        qd = json.load(f)
+    if "audit" not in qd:
+        raise SystemExit("question file lacks audit key — freeze first")
+    with open(os.path.join(RES, "kgraphqa.json")) as f:
+        base = json.load(f)
+    assert not base.get("smoke"), "baseline file is a smoke artifact"
+    qs = qd["eval"][:limit] if limit else qd["eval"]
+    canon = {norm_ent(e): e for e in g["entities"]}
+    cache, efp = embed_side(g, qs)
+    tvecs = [cache[f"{t['s']} {t['r']} {t['o']}"] for t in g["triples"]]
+    ents = [e for e in g["entities"] if adj[norm_ent(e)]]
+    log(f"lookahead: {len(qs)} questions, graph {g['n_triples']} triples")
+
+    recs = []
+    for i, e in enumerate(qs):
+        gold_n = norm_ent(e["gold"])
+        a1, t1, h1, n1 = arm_look(e["q"], g, adj, canon, cache, tvecs,
+                                  ents, beam2=False)
+        a2, t2, h2, n2 = arm_look(e["q"], g, adj, canon, cache, tvecs,
+                                  ents, beam2=True)
+        recs.append({
+            "q": e["q"], "gold": e["gold"], "hops": e["hops"],
+            "recipe": e["recipe"],
+            "look1": [int(norm_ent(a1) == gold_n), a1, t1, h1],
+            "look2": [int(norm_ent(a2) == gold_n), a2, t2, h2],
+            "gold_on_route2": int(gold_n in n2[:-1])})
+        log(f"  q{i + 1}/{len(qs)} h{e['hops']} {e['recipe']:8s} "
+            f"look1={recs[-1]['look1'][0]} look2={recs[-1]['look2'][0]} "
+            f"onroute={recs[-1]['gold_on_route2']}")
+
+    def acc(arm, key=None, val=None):
+        v = [r[arm][0] for r in recs if key is None or r[key] == val]
+        return float(np.mean(v)) if v else None
+
+    def toks(arm):
+        return float(np.mean([r[arm][2] for r in recs]))
+
+    by = {a: {"all": acc(a), "onehop": acc(a, "hops", 1),
+              "twohop": acc(a, "hops", 2),
+              "direct": acc(a, "recipe", "direct"),
+              "indirect": acc(a, "recipe", "indirect"),
+              "tok": toks(a)}
+          for a in ("look1", "look2")}
+    kl1d = by["look2"]["all"] - base["by_arm"]["beam"]["all"]
+    kl1b = by["look2"]["tok"] <= 2 * base["by_arm"]["beam"]["tok"]
+    kl1 = ("PARTIAL" if 0 <= kl1d < 0.03 else
+           "PASS-budget" if not kl1b else
+           "PASS" if kl1d >= 0.03 else "FAIL")
+    kl2d = by["look1"]["all"] - base["by_arm"]["walk"]["all"]
+    onroute = float(np.mean([r["gold_on_route2"] for r in recs]))
+    midonly = float(np.mean([
+        r["gold_on_route2"] and r["look2"][0] == 0 for r in recs]))
+    out = {"tag": "klookahead", "smoke": bool(limit),
+           "limit": limit, "commit": CR.git_commit(),
+           "model_fp": EC.fingerprint(), "ext_fp": efp,
+           "baselines": {k: base["by_arm"][k]
+                         for k in ("beam", "walk", "read", "flat")},
+           "by_arm": by,
+           "verdicts": {"KL1": [kl1, round(kl1d, 4), kl1b],
+                        "KL2": [("PASS" if kl2d >= 0 else "FAIL"),
+                                round(kl2d, 4)],
+                        "KL3_descriptive":
+                            {"gold_on_route2": round(onroute, 4),
+                             "on_route_but_terminal_wrong":
+                                 round(midonly, 4)}},
+           "records": recs}
+    name = "klook_smoke.json" if limit else "klookahead.json"
+    path = os.path.join(RES, name)
+    with open(path, "w") as f:
+        json.dump(out, f, indent=1, sort_keys=True)
+    log(f"wrote {path}")
+    print(json.dumps({"by_arm": by, "verdicts": out["verdicts"]},
+                     indent=1))
+
+
 # ------------------------------------------------------------------ score
 
 def run_scored():
@@ -512,6 +700,8 @@ if __name__ == "__main__":
     ap.add_argument("--smoke", action="store_true")
     ap.add_argument("--build", action="store_true")
     ap.add_argument("--gen", action="store_true")
+    ap.add_argument("--look", action="store_true")
+    ap.add_argument("--limit", type=int, default=0)
     a = ap.parse_args()
     if a.smoke:
         run_smoke()
@@ -519,5 +709,7 @@ if __name__ == "__main__":
         build_graph(CR.build_chunkmap())
     elif a.gen:
         gen_questions()
+    elif a.look:
+        run_look(a.limit)
     else:
         run_scored()
