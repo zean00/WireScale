@@ -1226,3 +1226,100 @@ endpoint contract, where it is much worse. The operator's design
 instinct was half right: the diagnosis (myopia) was the correct
 failure mode; the fix that survives measurement is not longer
 committed routes but wider hedges.
+
+## X/Y/K3/Z series (registered 2026-10-14, pre-data): the follow-up batch
+
+Four registrations, committed before any of their data exists.
+
+**Correction (disclosed here first):** the W-series RESULTS prose
+described its post-hoc sweep as "judge chunks in doc order, stop
+when p_yes first crosses t". The committed walkret.py sweep
+actually computed an ORDER-FREE quantity — P(p_yes(gold) ≥ t) plus
+the mean yes-set size at t. The "1/10 of the cost" reading
+therefore assumed a scan that was never simulated. X-series runs
+the real sequential procedure.
+
+### X-series: early-stop judging on embedder order
+
+Questions: the frozen 58 (R/E/W eval set). Corpus: pinned chunks.
+Judge: CR.judge (same prompt, temp 0, slot 7). Chunk order for the
+embedder arms: E0 cosine (committed cache; zero new embeds).
+
+Arms (per question):
+- **X-ES** — scan chunks in EMBEDDER rank order; judge each; stop
+  at the first chunk with p_yes ≥ τ (τ = .5, chosen a priori from
+  the W sweep, disclosed); scanned set = judged prefix incl. stop
+  chunk.
+- **X-DS** — identical with DOC order (the naive baseline).
+- Baselines (committed, not rerun): flat yes-set recall .5172 and
+  flat tokens 29,236/q (walkret.json; its r2 agreement was 1.0).
+
+Metrics: **stop-recall** (gold IS the stop chunk — the deployment
+answer set), **prefix-recall** (gold anywhere in the scanned
+prefix), chunks judged, prompt tokens. Sanity: per-judged-chunk
+p_yes agreement with the committed flat p_yes (flag < .90;
+temp-0 cross-session precedent is 1.0).
+
+Predictions (mechanical):
+- **XA**: X-ES prefix-recall ≥ 0.95 × .5172 AND mean tokens ≤
+  0.25 × 29,236 → PASS; else FAIL.
+- **XB**: X-ES stop-recall ≥ X-DS stop-recall → PASS (embedder
+  order beats doc order where it matters); else FAIL.
+- **XC (descriptive)**: mean chunks judged (both arms), gold's
+  mean embedder rank, prefix-vs-stop gap.
+
+### Y-series: query rewriting for indirect questions
+
+The indirect collapse is the lab's most repeated gap (judge .241,
+graph-READ .067, embedder .552 vs direct .724). Arm **Y-RW**: one
+LLM call (temp 0, seeded, slot 7) rewrites each frozen question
+into documentation vocabulary; the E0 embedder ranks chunks
+against the REWRITTEN query. Rewriter sees ONLY the question —
+no corpus content (no leakage; prompt registered in the runner).
+Baseline: committed extembed.json E0 per-question records
+(index-aligned, same frozen order).
+
+Predictions (mechanical):
+- **YA**: Y-RW indirect p3 − E0 indirect p3 (.552) ≥ +5 pts PASS;
+  0..+5 PARTIAL; < 0 FAIL (rewriting hurts).
+- **YB (direct guard)**: Y-RW direct p3 − E0 direct p3 (.724)
+  ≥ −3 pts PASS, else FAIL.
+- Descriptive: fraction of rewrites identical to the original.
+
+### K-series Amendment 3: mid-route scoring
+
+KL3 showed traversal routes reach the gold's neighborhood and the
+endpoint contract punishes it. Re-run ALL FOUR traversal arms
+(WALK, BEAM, LOOK-1, LOOK-2) on the frozen 60 with persisted
+routes; score **mid-route**: correct iff gold ∈ route nodes (any
+position). FLAT/READ have no routes — their committed endpoint
+numbers stand as the comparator. Sanity: fresh endpoint scoring
+vs committed endpoint per arm (flag |Δ| > .03, session-stability
+note, not verdict-gating).
+
+Prediction (mechanical):
+- **KM1**: BEAM-mid(all) − READ-endpoint(all) (.2333 committed)
+  ≥ 0 → PASS (under the fair contract, hedged traversal matches
+  retrieve-then-read); else FAIL.
+- **KM2 (descriptive)**: per-arm mid-vs-endpoint deltas; the
+  LOOK overshoot share under mid scoring.
+
+### Z-series: temperature calibration of judge confidence
+
+Data disclosure: the underlying per-pair scores ARE committed
+(walkret.json flat p_yes for all 58 × their chunks). The NEW data
+is the calibration fit and its held-out evaluation, which does
+not exist yet. Split: seeded 29 fit / 29 holdout questions.
+Fit: one temperature T on the logit (p' = σ(logit(p)/T))
+minimizing NLL on fit-slice pairs (label = chunk is gold).
+Evaluate on holdout: ECE (10 bins) raw vs calibrated.
+
+Predictions (mechanical):
+- **ZA**: holdout ECE_calibrated < holdout ECE_raw − 0.01 →
+  PASS; |Δ| ≤ 0.01 PARTIAL; else FAIL (calibration is not the
+  missing piece).
+- **ZB (stability)**: T ∈ [0.5, 2.0] and the ECE improvement
+  direction agrees between fit and holdout slices → PASS, else
+  FAIL.
+- Descriptive: the τ that achieves ≥ 90% of flat recall on fit
+  vs holdout (does the stop-bar transfer).
