@@ -1482,3 +1482,37 @@ Does the proposed
 Descriptive (registered, no bar): per-recipe answer accuracy per
 arm, fallback trigger rate, judge/generator agreement (does the
 grader say yes exactly when the scanner stopped yes).
+
+## A-series RESULTS (assembly.json, 2026-10-14 — scored)
+
+Sanity: per-judged-chunk p_yes agreement with committed flat
+scores = 1.000 (temp-0 judge reproduced every committed decision,
+third consecutive session).
+
+| arm | answer acc | direct | indirect | answered-chunk hit | tok/q |
+|-----|-----------|--------|----------|--------------------|-------|
+| ASM (the machine)   | **.431** | .655 | .207 | **.466** | 5,428 |
+| FLATPOL (doc order) | .379 | .621 | .138 | — | 13,640 |
+| TOP1 (pure RAG)     | .345 | .517 | .172 | — | 798 |
+
+Verdicts: **A1 PASS** (+.086 over pure vector RAG, bar +.03) —
+the assembled machine beats its own strongest single component at
+answer level. **A2 PASS** (+.052): embedder ordering earns its keep
+under an identical policy — the ordering is the active ingredient,
+not the scan-and-stop shape. **A3 PASS** (+.155): answered-chunk
+hit .466 vs the committed X-DS anchor .310 — and +6.9 pts over
+X-ES's own .397 stop-recall, the fallback converting part of X's
+stop-vs-prefix gap into actually-answered chunks. **A4
+PASS-budget**: 5,428 tok/q = 18.6% of the exhaustive scan's 29,236
+(half of FLATPOL's 13,640). With this, every registered prediction
+of the batch passed: the recipe is a scored machine, not a parts
+list.
+
+Descriptives (registered): the fallback fired on 12/58 questions
+(20.7%); its answers grade lower (mean grade_p .348) than
+scan-confirmed answers (.472) — grader confidence tracks the
+scanner's decision, as it should. Answer synthesis still loses
+~3.4 pts with the right chunk in hand (.466 hit vs .431
+graded-correct). And the indirect cell remains the frontier: .207,
+with nearly all of the machine's edge over TOP1 coming from the
+direct cell (+13.8 vs +3.5).

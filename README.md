@@ -4,7 +4,7 @@
 
 A pre-registered laboratory for decision structure. One frozen encoder, many
 readouts — and one rule: **register the prediction before the data, then obey
-the verdict.** Nine scored experiments live here:
+the verdict.** Ten scored experiments live here:
 
 1. **Decision trees** (P-series) — when an answer space is a hierarchy, is it
    cheaper to walk it level by level (asking a smaller question at each step)
@@ -63,6 +63,16 @@ the verdict.** Nine scored experiments live here:
    lookahead — **KL1/KL2 FAIL** (route commitment collapses below
    edge hedging; the walker overshoots the answer, measured via the
    on-route diagnostic).
+10. **End-to-end assembly** (A-series) — *scored 2026-10-14*: the recipe
+   (embedder rank → scan-and-stop → calibrated bar → answer) scored as
+   ONE machine on the frozen 58, answers generated and judge-graded
+   end-to-end. **A1 PASS** (beats pure vector RAG +8.6 pts, .431 vs
+   .345, at 18.6% of exhaustive-flat tokens), **A2 PASS** (embedder
+   order beats doc order under the identical policy, +5.2), **A3 PASS**
+   (answered-chunk hit .466 vs the committed .310 anchor — the
+   registered fallback-to-top1 policy converts part of X's
+   stop-vs-prefix gap), **A4 PASS-budget** (5.4k tok/q vs the 10.2k
+   ceiling). Every registered prediction of the batch passed.
 
 **Every number in this repo is a committed artifact.** Hypotheses, arms, bars,
 and amendments live in [protocol.md](protocol.md) — committed before any
@@ -103,6 +113,10 @@ not argued. A rendered, non-technical version of the whole story is at
 | KM1 | under mid-route scoring, beam traversal beats retrieve-then-read | **PASS** — .300 vs .233 |
 | ZA | temperature calibration improves held-out ECE by ≥ .01 | **PASS** — .105 → .081 (T = 0.66) |
 | ZB | the calibration is stable across the split | **PASS** — direction agrees; stop-bar τ transfers identically |
+| A1 | the assembled machine beats pure vector RAG by ≥ +3 pts | **PASS** — .431 vs .345 (+8.6) at 18.6% of flat's tokens |
+| A2 | embedder ordering beats doc order at answer level (same policy) | **PASS** — .431 vs .379 (+5.2) |
+| A3 | fallback policy: answered-chunk hit ≥ committed X-DS .310 | **PASS** — .466 (+15.5 over the anchor) |
+| A4 | the machine fits the budget (≤ 10,233 tok/q) | **PASS-budget** — 5,428 tok/q |
 
 Depth extension to 6 levels / 96 leaves: **no depth wall** (levels 5–6 are
 free, .9997 and 1.0000), but the walk is capped by its first step (.918 at
@@ -211,11 +225,25 @@ exactly 0.000. **Z-series (calibration) — both PASS**: one temperature
 (T = 0.66 — the judge is overconfident) cuts held-out ECE .105 → .081, and
 the 90%-of-flat stop-bar (τ = .05) transfers identically across the split.
 
-**12 of 28 headline predictions passed as registered.** The failures
+The assembly (A-series, 2026-10-14) closed the loop: the recipe scored as
+one machine on the frozen 58, answers generated and judge-graded
+end-to-end. **All four PASS.** The machine answers .431 vs pure vector
+RAG's .345 (A1) and vs the same policy run in document order .379 (A2) —
+every component's contribution survives composition. The registered
+fallback (nothing crosses the bar → take the embedder's top pick; it
+fired on 21% of questions) lifts answered-chunk hit to .466 vs the
+committed .310 anchor (A3), cashing in part of X's stop-vs-prefix gap.
+Cost: 5.4k tok/q, 18.6% of the exhaustive scan (A4). Remaining losses,
+disclosed in the RESULTS: answer synthesis drops ~3.4 pts even with the
+right chunk in hand, and the indirect cell is still the frontier (.207).
+
+**16 of 32 headline predictions passed as registered.** The failures
 keep mapping the dead ends (rewriting, route commitment, pooling dials,
-trained heads); the passes now form a recipe: **embed with the dedicated
-model, scan in its order, stop when the calibrated judge is confident,
-hedge on graphs, and read flat when flat fits.**
+trained heads); the passes now form a recipe — and the recipe is now a
+scored machine: **embed with the dedicated model, scan in its order,
+stop when the calibrated judge is confident, fall back to the rank-1
+pick when nothing crosses, hedge on graphs, and read flat when flat
+fits.**
 
 What transferred to production: beam-2 path scoring in the WireSense router —
 which only worked after discovering paths of different depth must be scored by
@@ -245,6 +273,7 @@ current wiring target 73.4% vs 67.3% for the shipped gate).
 | `xstop.py`, `xstop.json` | X-series (sequential early-stop scan) — **scored 2026-10-14 (XA/XB PASS)** |
 | `qrewrite.py`, `qrewrite.json` | Y-series (query rewriting) — **scored 2026-10-14 (YA/YB FAIL)** |
 | `calib.py`, `calib.json` | Z-series (temperature calibration, committed data only) — **scored 2026-10-14 (ZA/ZB PASS)** |
+| `asm.py`, `assembly.json` | A-series (end-to-end assembly: TOP1 vs FLATPOL vs ASM, fallback-to-top1, judge-graded answers) — **scored 2026-10-14 (A1–A4 all PASS)** |
 | `adjudicate.py` | mechanical P1–P4 verdicts against the registered bars |
 | `posthoc_p3.py` | the post-hoc m=0 probe behind P3's verdict |
 | `embed_client.py` | embedding client for the frozen encoder |
@@ -272,6 +301,7 @@ python -m venv .venv && .venv/bin/pip install numpy torch   # already present he
 .venv/bin/python walkret.py --smoke     # W-series plumbing check (never scored)
 .venv/bin/python pairscale.py --smoke   # J-series plumbing check (never scored)
 .venv/bin/python extembed.py --smoke    # E-series plumbing check (never scored)
+.venv/bin/python asm.py --smoke         # A-series plumbing check (never scored)
 .venv/bin/python adjudicate.py          # recompute P1–P4 verdicts from results/
 ```
 
