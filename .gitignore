@@ -19,3 +19,5 @@ results/kmid_smoke.json
 assembly_smoke.json
 results/topk_smoke.json
 results/poolstop_smoke.json
+results/regrade_smoke.json
+results/pooljudge_smoke.json
