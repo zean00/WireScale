@@ -4,7 +4,7 @@
 
 A pre-registered laboratory for decision structure. One frozen encoder, many
 readouts — and one rule: **register the prediction before the data, then obey
-the verdict.** Ten scored experiments live here:
+the verdict.** Fifteen scored entries live here:
 
 1. **Decision trees** (P-series) — when an answer space is a hierarchy, is it
    cheaper to walk it level by level (asking a smaller question at each step)
@@ -95,6 +95,37 @@ the verdict.** Ten scored experiments live here:
    question, where gold lives beyond the pool), **C2 PASS-budget**
    (2,206 tok/q = 40.6% of the machine's cost), **C3 PASS** (still
    ahead of the best RAG, .397). All registered bets landed.
+13. **Paired-significance amendment** (S-amendment) — *computed 2026-10-15*:
+    every answer-level margin this season re-adjudicated under exact McNemar +
+    10k-resample paired bootstrap, registered pre-computation. **All six
+    comparisons NOT ESTABLISHED at n=58** (p .125–1.0; CIs straddle 0) — the
+    direction is unanimous (the machine wins every discordant count) but no
+    margin clears the bar. Annotates, never re-adjudicates. Registered
+    implication: the question set, not the stats, is the fix.
+14. **Strengthening the verifier** (D-series) — *scored 2026-10-15*: the
+    C-series named the judge as the binding constraint (pool holds gold .810,
+    verifier captures .466); the disclosed diagnostic said the judge misses
+    gold *confidently* (9/11 judged misses below .20 cal). Registered bets
+    predicted sampling won't rescue. **D1 FAIL / D2 PARTIAL as bet** — the
+    3-sample self-consistency judge produced the SAME stop page on 58/58
+    questions (zero movement, 3× judge tokens; the judge is saturated). But
+    **D4 PASS against its bet**: the high bar (τ=.70) converts confident-wrong
+    stops into recoverable fallbacks and lands **.448 answers-correct at
+    1,423 tok/q — the season's best answer-level arm** (26% of the machine's
+    cost; paired 2–0 over committed ASM-8). Descriptive τ sweep: capture flat
+    .38–.40 for τ .30–.70, sweet spot exactly at the pre-registered .70.
+15. **The grader audit** (G-series) — *scored 2026-10-15*: every answer-level
+    number rests on one grader prompt; re-grade the committed answer strings
+    under a reworded grader (G1) and a 3-sample faithful-prompt grader (G2).
+    **GA PASS ×2** — the ordering claim (machine ≥ every RAG form) survives
+    both audits mechanically. **GB FAIL ×2** — G1 drifts TOP1 +.241 (it
+    rescues weak arms wholesale; the machine's overall margin collapses to an
+    exact tie, and only the direct cell still separates them), G2 breaches the
+    .05 bar by .0017. Per the registration's own clause: answer-level numbers
+    now carry a disclosed instrument-sensitivity caveat — chunk-level results
+    are untouched. Margins at the ±.02–.09 scale are prompt-dependent; the
+    same scale S-amendment already found within noise. Both audits point at
+    the same fix: more questions.
 
 **Every number in this repo is a committed artifact.** Hypotheses, arms, bars,
 and amendments live in [protocol.md](protocol.md) — committed before any
@@ -264,15 +295,33 @@ the bars said otherwise: multi-excerpt RAG flatlines at .33–.40 no matter
 how many pages you stuff in (dilution eats the recall gain), while
 verified-single-chunk synthesis holds .852.
 
-**21 of 37 headline predictions passed as registered.** The failures
+The merger (C-series, 2026-10-15) made RAG the machine's librarian: scan the
+top-8 pool with the calibrated judge, stop at the first verified page, answer
+from that page alone — the live run reproduced the registered simulation
+exactly, kept .414 (one question short of the full machine, where gold sits
+beyond the pool) at 40.6% of its cost, still ahead of the best RAG. Then the
+audit batch (2026-10-15) stress-tested the scoreboard itself. The
+**S-amendment** found every answer-level margin within noise at n=58
+(direction unanimous, p .125–1.0). The **D-series** confirmed the judge is
+saturated — self-consistency changed zero stop decisions — but found the real
+lever: raising the judge's bar to .70 yields the season's best arm, .448 at
+1,423 tok/q. The **G-series** re-graded every committed answer under two
+altered grader instruments: orderings survive both, margins do not (the
+rewrite rescues pure RAG +.24 and ties the machine) — the instrument
+sensitivity is disclosed on every answer-level number, and both audits
+converge on the same registered fix: grow the question set.
+
+**25 of 45 headline predictions passed as registered.** The failures
 keep mapping the dead ends (rewriting, route commitment, pooling dials,
 trained heads — and the operator's own bet that plain top-k RAG would
-beat the machine); the passes now form a recipe — and the recipe is now
-a scored machine that survived its fair fight, then got 2.5× cheaper by
-letting RAG draw its reading list: **embed with the dedicated model,
-scan its top-8 pool, stop when the calibrated judge is confident, fall
-back to the rank-1 pick when nothing crosses, hedge on graphs, and
-read flat when flat fits.**
+beat the machine, and the bet that the high judge bar would trade into
+the weak fallback link); the passes now form a recipe — and the recipe
+is now a scored machine that survived its fair fight, got 2.5× cheaper
+by letting RAG draw its reading list, and got 3× cheaper again by
+stiffening the judge's bar: **embed with the dedicated model, scan the
+top-8 pool, stop only when the calibrated judge is confident (τ=.70 is
+the scored sweet spot), fall back to the rank-1 pick when nothing
+crosses, hedge on graphs, and read flat when flat fits.**
 
 What transferred to production: beam-2 path scoring in the WireSense router —
 which only worked after discovering paths of different depth must be scored by
@@ -305,6 +354,9 @@ current wiring target 73.4% vs 67.3% for the shipped gate).
 | `asm.py`, `assembly.json` | A-series (end-to-end assembly: TOP1 vs FLATPOL vs ASM, fallback-to-top1, judge-graded answers) — **scored 2026-10-14 (A1–A4 all PASS)** |
 | `topk.py`, `topk.json` | B-series (the fair fight: TOPK-k k∈{2,3,5,8} vs committed ASM, budget-dominance bars) — **scored 2026-10-15 (B1/B2 PASS; registered bets wrong)** |
 | `poolstop.py`, `poolstop.json` | C-series (pool-confined machine: scan the top-8 pool, stop-and-verify, fallback rank-1; ASM-8 + ASM-4) — **scored 2026-10-15 (C1–C3 all PASS; simulation reproduced exactly)** |
+| `stats.py`, `results/stats_amendment.json` | S-amendment (exact McNemar + paired bootstrap over six answer-level comparisons) — **computed 2026-10-15 (all six NOT ESTABLISHED)** |
+| `pooljudge.py`, `results/pooljudge.json` | D-series (S vs M verifier instruments, D-M/D-H arms, τ sweep) — **scored 2026-10-15 (D1 FAIL, D2 PARTIAL, D3 PASS-budget, D4 PASS — season-best arm)** |
+| `regrade.py`, `results/regrade.json` | G-series (grader audit: reworded + sampled graders on committed answer strings) — **scored 2026-10-15 (GA PASS ×2, GB FAIL ×2)** |
 | `adjudicate.py` | mechanical P1–P4 verdicts against the registered bars |
 | `posthoc_p3.py` | the post-hoc m=0 probe behind P3's verdict |
 | `embed_client.py` | embedding client for the frozen encoder |
@@ -335,6 +387,9 @@ python -m venv .venv && .venv/bin/pip install numpy torch   # already present he
 .venv/bin/python asm.py --smoke         # A-series plumbing check (never scored)
 .venv/bin/python topk.py --smoke        # B-series plumbing check (never scored)
 .venv/bin/python poolstop.py --smoke    # C-series plumbing check (never scored)
+.venv/bin/python pooljudge.py --smoke   # D-series plumbing check (never scored)
+.venv/bin/python regrade.py --smoke     # G-series plumbing check (never scored)
+.venv/bin/python stats.py               # S-amendment (committed data only)
 .venv/bin/python adjudicate.py          # recompute P1–P4 verdicts from results/
 ```
 

@@ -229,7 +229,7 @@
       <span class="chip a"><b>121</b> real tools filtered to ~65</span>
       <span class="chip t"><b>58</b> frozen questions over a <b>180</b>-page corpus</span>
       <span class="chip v"><b>902</b>-triple knowledge graph</span>
-      <span class="chip"><b>21</b>/37 headline predictions passed as registered — the failures map the dead ends</span>
+      <span class="chip"><b>25</b>/45 headline predictions passed as registered — the failures map the dead ends</span>
     </div>
   </div>
   <div class="wrap scrollcue">the experiments</div>
@@ -607,19 +607,27 @@
               <td>B1/B2 PASS — top-k RAG flatlines at .33–.40 for every k; registered bets said the machine loses, and they were wrong</td></tr>
           <tr class="hl"><td><b>C</b> — the pool-confined machine</td><td>can RAG's top-8 pool host the machine's scan — same accuracy, a fraction of the cost?</td>
               <td>C1–C3 ALL PASS — .414 vs the full machine's .431 (one question, where gold lives beyond the pool) at 40.6% of the cost; the disclosed simulation reproduced exactly</td></tr>
+          <tr><td><b>S</b> — the significance amendment</td><td>do the season's answer-level margins survive paired statistics?</td>
+              <td>all six comparisons NOT ESTABLISHED at n=58 — direction unanimous, every margin within noise; the registered fix is more questions</td></tr>
+          <tr class="hl"><td><b>D</b> — strengthening the verifier</td><td>the judge misses gold confidently — can a better instrument or a stiffer bar capture more of it?</td>
+              <td>D1 FAIL · D2 PARTIAL · D3 PASS · D4 PASS — self-consistency changed zero decisions (58/58 identical); the high bar (τ=.70) is the season's best arm: .448 at 26% of the machine's cost</td></tr>
+          <tr><td><b>G</b> — the grader audit</td><td>every answer-level number rests on one grader prompt — does the season's ordering survive two altered graders?</td>
+              <td>GA PASS ×2 · GB FAIL ×2 — orderings survive both audits; the rewrite rescues pure RAG +.24 and ties the machine, so margins carry a disclosed prompt-sensitivity caveat</td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="chart rv">
       <div class="ct"><h3>The machine: more right answers, a sixth of the cost</h3>
-        <span class="cs">answer accuracy over the frozen 58 vs judge prompt cost · A + B + C series (assembly.json, topk.json, poolstop.json)</span></div>
+        <span class="cs">answer accuracy over the frozen 58 vs judge prompt cost · A + B + C + D series (assembly.json, topk.json, poolstop.json, pooljudge.json)</span></div>
       <div id="chartRetrieval"></div>
       <div class="tblcap">vector top-1 .345 @ 798 tok · top-k RAG k=2/3/5/8: .397/.345/.328/.345 @ 1,146–3,045 —
         the grey flatline (context hit climbs .45→.81, synthesis collapses .77→.43, net zero) ·
         same policy in document order .379 @ 13,640 ·
         the machine .431 @ 5,428 (18.6% of reading everything, dashed) · pool-confined machine .414 @ 2,206 —
-        the same verifier reading RAG's shortlist at 40.6% of the cost · judge-graded answers, registered
+        the same verifier reading RAG's shortlist at 40.6% of the cost · high-bar machine .448 @ 1,423 —
+        the same shortlist with the judge's bar raised to .70, the season's best answer-level arm at 26% of the cost ·
+        judge-graded answers (audited under two altered graders, G-series), registered
         fallback fired on 21% of questions.</div>
     </div>
 
@@ -631,11 +639,17 @@
          form — top-k excerpts in one prompt — stuffing in more pages raised context hit (.45→.81) but answer accuracy
          flatlined (.33–.40), because synthesis collapses as context grows (.77→.43). One judge-verified page beats eight
          candidates. The ending is a merger, not a winner: the machine now reads <b>RAG's own shortlist</b> — scan the
-         top-8, stop at the first verified page, answer from that page alone — keeping .414 of the full machine's .431
-         at 40.6% of its cost. Honest losses, disclosed in the ledger: even holding the right page the answer sometimes
+         top-8, stop at the first verified page, answer from that page alone. The final audit batch then tuned the one
+         dial that matters, the judge's bar: raising it to .70 trades a few confident-wrong stops for recoverable
+         fallbacks and lands <b>.448 — the season's best answer number, at 26% of the machine's cost</b> — while
+         self-consistency sampling changed literally zero stop decisions (the judge is saturated: its misses are
+         confident rejections). Honest losses, disclosed in the ledger: even holding the right page the answer sometimes
          comes out wrong (−3.4 pts from synthesis), questions asked in roundabout ways stay hard (.207), the pool's gold
-         is captured only .466 of the time (the verifier is the binding constraint), and plain top-2 RAG keeps
-         the per-token crown (92% of the machine's accuracy at 21% of its cost).</p>
+         is still captured only .534 of the time, and plain top-2 RAG keeps the per-token crown (92% of the machine's
+         accuracy at 21% of its cost). And the scoreboard itself was audited: every answer-level margin sits inside
+         statistical noise at n=58, and under a reworded grader the machine's margin over pure RAG collapses to a tie —
+         the orderings survive every audit, the margins carry a disclosed caveat, and both audits register the same fix:
+         more questions.</p>
     </div>
   </div>
 </section>
@@ -737,16 +751,22 @@
            paths by <b>mean, never sum</b> (a 13-point crash hid in that choice).</p></div>
       <div class="card red rv"><div class="k">law 04</div><h3>Register, then obey the verdict</h3>
         <p>The first experiment went 0 for 4 — so conditioning was <b>stopped by rule</b>. Since then:
-           18 of 34 headline predictions passed as registered, and every failure is kept as a mapped
-           dead end — including the operator's own pre-registered bet that plain top-k RAG would beat
-           the machine (it didn't). Runs botched or invalidated are deleted unexamined and disclosed.
+           25 of 45 headline predictions passed as registered, and every failure is kept as a mapped
+           dead end — including the operator's own pre-registered bets that plain top-k RAG would beat
+           the machine (it didn't) and that the stiffer judge bar would trade into the weak fallback
+           link (it won instead). The scoreboard gets audited by its own rules too: re-grade the same
+           answers under altered grader prompts and the orderings hold while the margins wobble —
+           disclosed, not hidden. Runs botched or invalidated are deleted unexamined and disclosed.
            The ledger is the product.</p></div>
       <div class="card teal rv"><div class="k">law 05</div><h3>Sort, verify, stop — then fall back</h3>
         <p>A ranking is not an answer. Let the cheap model order the pages, let the careful model check
            them one at a time until confident, and keep a safe fallback for when it never is: <b>.431 vs
-           .345</b> for plain vector RAG at 18.6% of the read-everything cost — still <b>.414 vs .397</b>
-           confined to RAG's own top-8 shortlist at 40.6% of the cost (the pool costs one question,
-           where gold hides beyond rank 8). The verifier beats the guesser, the brute, and the pile.</p></div>
+           .345</b> for plain vector RAG at 18.6% of the read-everything cost — <b>.414</b> confined to
+           RAG's own top-8 shortlist at 40.6% of the cost — and with the confidence bar raised to .70,
+           <b>.448 at 26% of the cost</b>, the season's best arm: the stiffer bar turns confident-wrong
+           stops into recoverable fallbacks, while making the judge sample three times changed nothing
+           at all (its misses are confident rejections — saturate the bar, don't double-check it).
+           The verifier beats the guesser, the brute, and the pile.</p></div>
       <div class="card amber rv"><div class="k">law 06</div><h3>Helping the input hurts</h3>
         <p>Three times measured: the embedder's official instruct prefix (−3.5 pts), LLM query rewriting
            (−6.9 indirect, −3.5 direct), and now <b>context stuffing</b> — top-k RAG's synthesis given
@@ -765,7 +785,9 @@
     <h2 class="rv" style="font-size:clamp(24px,3vw,32px)">Every number on this page is a <span class="accent">committed artifact</span>.</h2>
     <p class="fine rv">Hypotheses, arms, bars, and amendments live in <a href="protocol.md">protocol.md</a>;
        raw scored runs in <a href="https://github.com/zean00/WireScale/tree/main/results">results/*.json</a>.
-       Verdicts are computed mechanically (<span class="mono">adjudicate.py</span>), not argued. The frozen
+       Verdicts are computed mechanically (<span class="mono">adjudicate.py</span>), not argued. Answers are
+       graded by a disclosed judge — the same frozen model as the generator — and audited under altered
+       grading instruments (G-series). The frozen
        encoder is never fine-tuned; embeddings are served on a dedicated slot so the production system is
        never touched. Local commits only — published as-is, in the spirit of the ledger:
        <b style="color:var(--text)">register first, measure, admit when wrong.</b></p>
@@ -932,7 +954,8 @@ lineChart('chartDepth', {
     {n:'vector top-1 .345', t:798, a:.3448, c:'#9aa4b8'},
     {n:'same policy, doc order .379', t:13640, a:.3793, c:'#9aa4b8'},
     {n:'the machine .431', t:5428, a:.431, c:'#2dd4bf'},
-    {n:'pool-confined machine .414', t:2206, a:.4138, c:'#2dd4bf'},
+    {n:'pool-confined .414', t:2206, a:.4138, c:'#2dd4bf'},
+    {n:'high-bar machine .448', t:1423, a:.4483, c:'#fbbf24'},
   ];
   const ks=[[798,.3448],[1146,.3966],[1467,.3448],[2089,.3276],[3045,.3448]];
   svg.appendChild(mk('polyline',{points:ks.map(p=>X(p[0])+','+Y(p[1])).join(' '),
