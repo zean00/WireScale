@@ -1790,3 +1790,30 @@ otherwise. For S-C1 specifically: **SOLID-NI** = the CI's lower
 bound ≥ −.02 (even the pessimistic end stays inside the
 registered band). This amendment ANNOTATES, never re-adjudicates:
 no prior verdict changes either way.
+
+## S-amendment RESULTS (stats_amendment.json, 2026-10-15 — computed)
+
+No model calls; committed per-question records only.
+
+| comparison | diff | discordant a/b | McNemar p | 95% CI | read |
+|---|---|---|---|---|---|
+| S-A1 ASM vs TOP1      | +.086 | 6/1 | .125 | [−.086, +.259] | NOT ESTABLISHED |
+| S-A2 ASM vs FLATPOL   | +.052 | 7/4 | .549 | [−.121, +.224] | NOT ESTABLISHED |
+| S-B1 ASM vs TOPK-3    | +.086 | 8/3 | .227 | [−.086, +.259] | NOT ESTABLISHED |
+| S-B2 ASM vs TOPK-2    | +.034 | 8/6 | .791 | [−.155, +.207] | NOT ESTABLISHED |
+| S-C1 ASM-8 vs ASM     | −.017 | 0/1 | 1.0  | [−.190, +.155] | NOT ESTABLISHED (NI not established) |
+| S-C3 ASM-8 vs TOPK-2  | +.017 | 7/6 | 1.0  | [−.155, +.190] | NOT ESTABLISHED |
+
+Read (registered interpretation; no verdict changes): at n=58 with
+single-digit discordant counts, no answer-level margin in the
+season reaches conventional significance. The machine-vs-RAG story
+is directionally UNANIMOUS — the machine wins the discordant count
+in all four pairings (6v1, 8v3, 8v6, 7v6), and the ordering arm
+7v4 — but each margin individually sits within noise. C1's
+non-inferiority likewise: the point estimate (−.017) sits at the
+band's center, yet the CI cannot exclude losses beyond −.02.
+Registered implication: the season's rankings are hypothesis-
+generating, not confirmed at this n; the mechanical fix is more
+frozen questions — a pre-registered question-set extension scoring
+the SAME arms on fresh questions — recorded as a candidate next
+series.

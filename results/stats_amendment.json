@@ -1,0 +1,104 @@
+{
+ "nboot": 10000,
+ "results": [
+  {
+   "acc_a": 0.431,
+   "acc_b": 0.3448,
+   "boot_ci95": [
+    -0.0862,
+    0.2586
+   ],
+   "comparison": "S-A1  ASM vs TOP1",
+   "diff": 0.0862,
+   "discordant": {
+    "a_only": 6,
+    "b_only": 1
+   },
+   "mcnemar_p": 0.125,
+   "n": 58
+  },
+  {
+   "acc_a": 0.431,
+   "acc_b": 0.3793,
+   "boot_ci95": [
+    -0.1207,
+    0.2241
+   ],
+   "comparison": "S-A2  ASM vs FLATPOL",
+   "diff": 0.0517,
+   "discordant": {
+    "a_only": 7,
+    "b_only": 4
+   },
+   "mcnemar_p": 0.5488,
+   "n": 58
+  },
+  {
+   "acc_a": 0.431,
+   "acc_b": 0.3448,
+   "boot_ci95": [
+    -0.0862,
+    0.2586
+   ],
+   "comparison": "S-B1  ASM vs TOPK-3",
+   "diff": 0.0862,
+   "discordant": {
+    "a_only": 8,
+    "b_only": 3
+   },
+   "mcnemar_p": 0.2266,
+   "n": 58
+  },
+  {
+   "acc_a": 0.431,
+   "acc_b": 0.3966,
+   "boot_ci95": [
+    -0.1552,
+    0.2069
+   ],
+   "comparison": "S-B2  ASM vs TOPK-2",
+   "diff": 0.0345,
+   "discordant": {
+    "a_only": 8,
+    "b_only": 6
+   },
+   "mcnemar_p": 0.7905,
+   "n": 58
+  },
+  {
+   "acc_a": 0.4138,
+   "acc_b": 0.431,
+   "boot_ci95": [
+    -0.1897,
+    0.1552
+   ],
+   "comparison": "S-C1  ASM-8 vs ASM",
+   "diff": -0.0172,
+   "discordant": {
+    "a_only": 0,
+    "b_only": 1
+   },
+   "mcnemar_p": 1.0,
+   "n": 58,
+   "solid_ni": "NOT ESTABLISHED"
+  },
+  {
+   "acc_a": 0.4138,
+   "acc_b": 0.3966,
+   "boot_ci95": [
+    -0.1552,
+    0.1897
+   ],
+   "comparison": "S-C3  ASM-8 vs TOPK-2",
+   "diff": 0.0172,
+   "discordant": {
+    "a_only": 7,
+    "b_only": 6
+   },
+   "mcnemar_p": 1.0,
+   "n": 58
+  }
+ ],
+ "seed": 0,
+ "tag": "stats_amendment"
+}
