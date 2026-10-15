@@ -85,6 +85,16 @@ the verdict.** Ten scored experiments live here:
    sweep. The machine reads ONE judge-verified chunk and synthesizes
    .852. Disclosed: RAG keeps the per-token crown (top-2 holds 92% of
    the machine's accuracy at 21% of its cost).
+12. **The pool-confined machine** (C-series) — *scored 2026-10-15*: the
+   combination — RAG retrieves, the machine reads — registered with a
+   disclosed post-hoc simulation as the pre-registered prediction, and
+   the live run reproduced it exactly (stop-hit 27/58, fallback 16/58,
+   sanity 1.000). Scan the top-8 pool with the calibrated judge, stop
+   at the first verified page, answer from that page alone, fallback
+   rank-1. **C1 PASS** (answer .414 vs the full machine's .431 — one
+   question, where gold lives beyond the pool), **C2 PASS-budget**
+   (2,206 tok/q = 40.6% of the machine's cost), **C3 PASS** (still
+   ahead of the best RAG, .397). All registered bets landed.
 
 **Every number in this repo is a committed artifact.** Hypotheses, arms, bars,
 and amendments live in [protocol.md](protocol.md) — committed before any
@@ -254,14 +264,15 @@ the bars said otherwise: multi-excerpt RAG flatlines at .33–.40 no matter
 how many pages you stuff in (dilution eats the recall gain), while
 verified-single-chunk synthesis holds .852.
 
-**18 of 34 headline predictions passed as registered.** The failures
+**21 of 37 headline predictions passed as registered.** The failures
 keep mapping the dead ends (rewriting, route commitment, pooling dials,
 trained heads — and the operator's own bet that plain top-k RAG would
 beat the machine); the passes now form a recipe — and the recipe is now
-a scored machine that survived its fair fight: **embed with the
-dedicated model, scan in its order, stop when the calibrated judge is
-confident, fall back to the rank-1 pick when nothing crosses, hedge on
-graphs, and read flat when flat fits.**
+a scored machine that survived its fair fight, then got 2.5× cheaper by
+letting RAG draw its reading list: **embed with the dedicated model,
+scan its top-8 pool, stop when the calibrated judge is confident, fall
+back to the rank-1 pick when nothing crosses, hedge on graphs, and
+read flat when flat fits.**
 
 What transferred to production: beam-2 path scoring in the WireSense router —
 which only worked after discovering paths of different depth must be scored by
@@ -293,6 +304,7 @@ current wiring target 73.4% vs 67.3% for the shipped gate).
 | `calib.py`, `calib.json` | Z-series (temperature calibration, committed data only) — **scored 2026-10-14 (ZA/ZB PASS)** |
 | `asm.py`, `assembly.json` | A-series (end-to-end assembly: TOP1 vs FLATPOL vs ASM, fallback-to-top1, judge-graded answers) — **scored 2026-10-14 (A1–A4 all PASS)** |
 | `topk.py`, `topk.json` | B-series (the fair fight: TOPK-k k∈{2,3,5,8} vs committed ASM, budget-dominance bars) — **scored 2026-10-15 (B1/B2 PASS; registered bets wrong)** |
+| `poolstop.py`, `poolstop.json` | C-series (pool-confined machine: scan the top-8 pool, stop-and-verify, fallback rank-1; ASM-8 + ASM-4) — **scored 2026-10-15 (C1–C3 all PASS; simulation reproduced exactly)** |
 | `adjudicate.py` | mechanical P1–P4 verdicts against the registered bars |
 | `posthoc_p3.py` | the post-hoc m=0 probe behind P3's verdict |
 | `embed_client.py` | embedding client for the frozen encoder |
@@ -322,6 +334,7 @@ python -m venv .venv && .venv/bin/pip install numpy torch   # already present he
 .venv/bin/python extembed.py --smoke    # E-series plumbing check (never scored)
 .venv/bin/python asm.py --smoke         # A-series plumbing check (never scored)
 .venv/bin/python topk.py --smoke        # B-series plumbing check (never scored)
+.venv/bin/python poolstop.py --smoke    # C-series plumbing check (never scored)
 .venv/bin/python adjudicate.py          # recompute P1–P4 verdicts from results/
 ```
 

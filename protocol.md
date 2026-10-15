@@ -1712,3 +1712,54 @@ Arms (per frozen eval question):
   of ASM-8 at the chunk level; the capture gap (pool has gold
   .810, machine lands .466) persists — the verifier, not the
   retriever, remains the binding constraint.
+
+## C-series RESULTS (poolstop.json, 2026-10-15 — scored)
+
+Sanity: per-judged-chunk stop-decision agreement with committed
+walkret.json p_yes = 1.000 (fifth consecutive session of temp-0
+determinism), and the live run reproduced the disclosed simulation
+EXACTLY — answered-chunk agreement 1.000 on both arms. Every
+registered bet landed: stop-hit 27/58 = .4655 (simulated .4655),
+fallback 16/58 (simulated 16), mean judged 3.672 (simulated 3.6),
+answer level .4138 ≥ .38 with C1 PASS.
+
+| arm | answered hit | answer acc | direct | indirect | judged/q | tok/q |
+|-----|--------------|-----------|--------|----------|----------|-------|
+| ASM (committed, full doc) | .466 | **.431** | .655 | .207 | 11.5 | 5,428 |
+| **ASM-8 (pool-confined)** | .466 | .414 | .621 | .207 | 3.67 | **2,206** |
+| ASM-4 (pool-confined)     | .466 | .379 | .552 | .207 | 2.41 | 1,732 |
+| TOPK-2 (best RAG, committed) | — | .397 | .552 | .241 | 0 | 1,146 |
+
+Verdicts: **C1 PASS** (−.0172, inside the ±.02 non-inferiority
+band), **C2 PASS-budget** (2,206.2 tok/q = 40.6% of the machine's
+cost, vs the 2,713.8 ceiling), **C3 PASS** (+.0172 over the best
+RAG). The pool-confined machine is scored: same answered-chunk
+hit (.466), same indirect cell (.207), one direct answer fewer,
+at 2.5× less money — and still ahead of every RAG arm.
+
+The one lost question, dissected (it is the entire −.0172): the
+question's gold page sits at embedder rank ~13, OUTSIDE the top-8
+pool, and the judge crosses the bar only there — the committed
+machine found it after 14 judgments; the confined machine
+exhausted the pool (max cal p .249) and fell back to rank-1,
+answering wrong. The chunk-level ledger balances (−1 deep hit, +1
+extra rank-1 fallback hit — both arms land 27/58), but fallback
+answers are the weak link (ans_ok .125 vs .524 for stopped
+answers; grade_p .312 vs .486 — the A-series pattern, louder), so
+the trade shows at answer level. Paired against the committed
+machine, this is the ONLY question either way.
+
+ASM-4 ties ASM-8 at the chunk level (.466, as simulated) but pays
+at answer level: five extra fallbacks cost two answers
+(.379 vs .414) — the dose–response lives in fallback quality, not
+in hits. The capture gap is untouched, as registered: the pool
+holds gold .810 of the time and the verifier still lands .466 —
+the judge, not the retriever, is now the binding constraint.
+
+Deployment shape after three series: rank with the dedicated
+embedder, scan the top-8 with the calibrated judge, stop at the
+first confirmed page, answer from that page alone, fall back to
+rank-1 — .414 at 2,206 tok/q (7.5% of the exhaustive read), vs
+.345–.397 for any form of pile RAG.
+
+Tally: 21 of 37 headline predictions passed.

@@ -1,0 +1,4133 @@
+{
+ "asm8_descriptives": {
+  "fb_ans_ok": 0.125,
+  "fb_grade_p": 0.31184375000000003,
+  "fb_n": 16,
+  "stopped_ans_ok": 0.5238095238095238,
+  "stopped_grade_p": 0.48603571428571424
+ },
+ "by_arm": {
+  "asm4": {
+   "ans_acc": 0.3793103448275862,
+   "fallback_rate": 0.3620689655172414,
+   "grade_p": 0.4223224137931035,
+   "n_judged": 2.413793103448276,
+   "per_recipe": {
+    "direct": 0.5517241379310345,
+    "indirect": 0.20689655172413793
+   },
+   "stop_hit": 0.46551724137931033,
+   "tok_per_q": 1732.2586206896551
+  },
+  "asm8": {
+   "ans_acc": 0.41379310344827586,
+   "fallback_rate": 0.27586206896551724,
+   "grade_p": 0.43798275862068964,
+   "n_judged": 3.6724137931034484,
+   "per_recipe": {
+    "direct": 0.6206896551724138,
+    "indirect": 0.20689655172413793
+   },
+   "stop_hit": 0.46551724137931033,
+   "tok_per_q": 2206.206896551724
+  }
+ },
+ "commit": "c8d6161",
+ "committed_anchors": {
+  "asm_acc": 0.43103448275862066,
+  "asm_tok": 5427.672413793103,
+  "c2_ceiling_tok": 2713.8362068965516,
+  "topk2_acc": 0.39655172413793105
+ },
+ "limit": 0,
+ "model_fp": "7cfe33f65c1c",
+ "records": [
+  {
+   "asm4": {
+    "ans": "The excerpt poses the question of whether telling each level its parent's answer helps in decision trees but does not provide an answer.",
+    "ans_ok": 0,
+    "ci": 0,
+    "fallback": 0,
+    "grade_p": 0.1984,
+    "hit": 1,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 0,
+    "stop_ci": 0,
+    "tok": 686,
+    "total_tok": 1020
+   },
+   "asm8": {
+    "ans": "The excerpt poses the question of whether telling each level its parent's answer helps in decision trees but does not provide an answer.",
+    "ans_ok": 0,
+    "ci": 0,
+    "fallback": 0,
+    "grade_p": 0.1984,
+    "hit": 1,
+    "judge_tok": 334,
+    "judged": [
+     {
+      "ci": 0,
+      "p": 0.7252,
+      "tok": 334,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 0,
+    "stop_ci": 0,
+    "tok": 686,
+    "total_tok": 1020
+   },
+   "chunk": 0,
+   "chunk_agree": 1.0,
+   "doc": "README.md",
+   "pool": [
+    0,
+    4,
+    2,
+    5,
+    3,
+    1,
+    7,
+    8
+   ],
+   "q": "Does telling each level its parent's answer help in decision trees?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "The excerpt does not provide a method for quickly deciding which specialist to contact based on message type.",
+    "ans_ok": 0,
+    "ci": 0,
+    "fallback": 1,
+    "grade_p": 0.3746,
+    "hit": 1,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 0,
+    "stop_ci": null,
+    "tok": 684,
+    "total_tok": 2018
+   },
+   "asm8": {
+    "ans": "The excerpt does not provide a method for quickly deciding which specialist to contact based on message type.",
+    "ans_ok": 0,
+    "ci": 0,
+    "fallback": 1,
+    "grade_p": 0.3746,
+    "hit": 1,
+    "judge_tok": 2806,
+    "judged": [
+     {
+      "ci": 0,
+      "p": 0.185,
+      "tok": 336,
+      "yes": false
+     },
+     {
+      "ci": 4,
+      "p": 0.0031,
+      "tok": 388,
+      "yes": false
+     },
+     {
+      "ci": 8,
+      "p": 0.0002,
+      "tok": 196,
+      "yes": false
+     },
+     {
+      "ci": 2,
+      "p": 0.0036,
+      "tok": 414,
+      "yes": false
+     },
+     {
+      "ci": 5,
+      "p": 0.0049,
+      "tok": 376,
+      "yes": false
+     },
+     {
+      "ci": 3,
+      "p": 0.0016,
+      "tok": 374,
+      "yes": false
+     },
+     {
+      "ci": 1,
+      "p": 0.0026,
+      "tok": 363,
+      "yes": false
+     },
+     {
+      "ci": 7,
+      "p": 0.0009,
+      "tok": 359,
+      "yes": false
+     }
+    ],
+    "n_judged": 8,
+    "sim_agree": 1,
+    "sim_ci": 0,
+    "stop_ci": null,
+    "tok": 684,
+    "total_tok": 3490
+   },
+   "chunk": 0,
+   "chunk_agree": 1.0,
+   "doc": "README.md",
+   "pool": [
+    0,
+    4,
+    8,
+    2,
+    5,
+    3,
+    1,
+    7
+   ],
+   "q": "How can I quickly decide which specialist to contact based on the message type?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The FiLM conditioning layer was reliably harmful, resulting in a loss of 13.4 points and leading to its rejection.",
+    "ans_ok": 1,
+    "ci": 3,
+    "fallback": 0,
+    "grade_p": 0.9066,
+    "hit": 0,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 3,
+    "stop_ci": 3,
+    "tok": 809,
+    "total_tok": 1184
+   },
+   "asm8": {
+    "ans": "The FiLM conditioning layer was reliably harmful, resulting in a loss of 13.4 points and leading to its rejection.",
+    "ans_ok": 1,
+    "ci": 3,
+    "fallback": 0,
+    "grade_p": 0.9066,
+    "hit": 0,
+    "judge_tok": 375,
+    "judged": [
+     {
+      "ci": 3,
+      "p": 0.8237,
+      "tok": 375,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 3,
+    "stop_ci": 3,
+    "tok": 809,
+    "total_tok": 1184
+   },
+   "chunk": 2,
+   "chunk_agree": 1.0,
+   "doc": "README.md",
+   "pool": [
+    3,
+    2,
+    0,
+    4,
+    7,
+    1,
+    5,
+    6
+   ],
+   "q": "What was the outcome of the FiLM conditioning layer in the S-series experiments?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "The provided excerpt does not identify a specific method that consistently improves decision accuracy across multiple complex domains.",
+    "ans_ok": 0,
+    "ci": 0,
+    "fallback": 1,
+    "grade_p": 0.4533,
+    "hit": 0,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 0,
+    "stop_ci": null,
+    "tok": 754,
+    "total_tok": 2250
+   },
+   "asm8": {
+    "ans": "The provided excerpt does not identify a specific method that consistently improves decision accuracy across multiple complex domains.",
+    "ans_ok": 0,
+    "ci": 0,
+    "fallback": 1,
+    "grade_p": 0.4533,
+    "hit": 0,
+    "judge_tok": 2948,
+    "judged": [
+     {
+      "ci": 0,
+      "p": 0.0798,
+      "tok": 332,
+      "yes": false
+     },
+     {
+      "ci": 4,
+      "p": 0.026,
+      "tok": 384,
+      "yes": false
+     },
+     {
+      "ci": 2,
+      "p": 0.068,
+      "tok": 410,
+      "yes": false
+     },
+     {
+      "ci": 3,
+      "p": 0.2383,
+      "tok": 370,
+      "yes": false
+     },
+     {
+      "ci": 5,
+      "p": 0.009,
+      "tok": 372,
+      "yes": false
+     },
+     {
+      "ci": 1,
+      "p": 0.0214,
+      "tok": 359,
+      "yes": false
+     },
+     {
+      "ci": 7,
+      "p": 0.0134,
+      "tok": 355,
+      "yes": false
+     },
+     {
+      "ci": 6,
+      "p": 0.0022,
+      "tok": 366,
+      "yes": false
+     }
+    ],
+    "n_judged": 8,
+    "sim_agree": 1,
+    "sim_ci": 0,
+    "stop_ci": null,
+    "tok": 754,
+    "total_tok": 3702
+   },
+   "chunk": 2,
+   "chunk_agree": 1.0,
+   "doc": "README.md",
+   "pool": [
+    0,
+    4,
+    2,
+    3,
+    5,
+    1,
+    7,
+    6
+   ],
+   "q": "Which method consistently improves decision accuracy across multiple complex domains?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The MS-series decision record contained in PROTOCOL-mcp-selection.md is the tool selection and MS-1..MS-29 data, which was copied verbatim from WireSense.",
+    "ans_ok": 0,
+    "ci": 5,
+    "fallback": 0,
+    "grade_p": 0.0083,
+    "hit": 0,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 5,
+    "stop_ci": 5,
+    "tok": 796,
+    "total_tok": 1173
+   },
+   "asm8": {
+    "ans": "The MS-series decision record contained in PROTOCOL-mcp-selection.md is the tool selection and MS-1..MS-29 data, which was copied verbatim from WireSense.",
+    "ans_ok": 0,
+    "ci": 5,
+    "fallback": 0,
+    "grade_p": 0.0083,
+    "hit": 0,
+    "judge_tok": 377,
+    "judged": [
+     {
+      "ci": 5,
+      "p": 0.8017,
+      "tok": 377,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 5,
+    "stop_ci": 5,
+    "tok": 796,
+    "total_tok": 1173
+   },
+   "chunk": 4,
+   "chunk_agree": 1.0,
+   "doc": "README.md",
+   "pool": [
+    5,
+    1,
+    0,
+    7,
+    4,
+    3,
+    6,
+    8
+   ],
+   "q": "What is the MS-series decision record contained in PROTOCOL-mcp-selection.md?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "You can automate the selection of software tools by registering the prediction before the data and then obeying the verdict, as demonstrated in the WireScale repository's MS-series experiments which u",
+    "ans_ok": 0,
+    "ci": 0,
+    "fallback": 0,
+    "grade_p": 0.2639,
+    "hit": 0,
+    "n_judged": 2,
+    "sim_agree": 1,
+    "sim_ci": 0,
+    "stop_ci": 0,
+    "tok": 774,
+    "total_tok": 1500
+   },
+   "asm8": {
+    "ans": "You can automate the selection of software tools by registering the prediction before the data and then obeying the verdict, as demonstrated in the WireScale repository's MS-series experiments which u",
+    "ans_ok": 0,
+    "ci": 0,
+    "fallback": 0,
+    "grade_p": 0.2639,
+    "hit": 0,
+    "judge_tok": 726,
+    "judged": [
+     {
+      "ci": 4,
+      "p": 0.1467,
+      "tok": 389,
+      "yes": false
+     },
+     {
+      "ci": 0,
+      "p": 0.5165,
+      "tok": 337,
+      "yes": true
+     }
+    ],
+    "n_judged": 2,
+    "sim_agree": 1,
+    "sim_ci": 0,
+    "stop_ci": 0,
+    "tok": 774,
+    "total_tok": 1500
+   },
+   "chunk": 4,
+   "chunk_agree": 1.0,
+   "doc": "README.md",
+   "pool": [
+    4,
+    0,
+    5,
+    1,
+    3,
+    8,
+    2,
+    7
+   ],
+   "q": "How can I automate the selection of software tools using a fixed decision-making protocol?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The frozen record of scored runs in the MS-series state consists of the committed JSONLs, summaries, and run logs.",
+    "ans_ok": 0,
+    "ci": 7,
+    "fallback": 0,
+    "grade_p": 0.0124,
+    "hit": 0,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 7,
+    "stop_ci": 7,
+    "tok": 747,
+    "total_tok": 1106
+   },
+   "asm8": {
+    "ans": "The frozen record of scored runs in the MS-series state consists of the committed JSONLs, summaries, and run logs.",
+    "ans_ok": 0,
+    "ci": 7,
+    "fallback": 0,
+    "grade_p": 0.0124,
+    "hit": 0,
+    "judge_tok": 359,
+    "judged": [
+     {
+      "ci": 7,
+      "p": 0.7922,
+      "tok": 359,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 7,
+    "stop_ci": 7,
+    "tok": 747,
+    "total_tok": 1106
+   },
+   "chunk": 6,
+   "chunk_agree": 1.0,
+   "doc": "README.md",
+   "pool": [
+    7,
+    5,
+    1,
+    4,
+    0,
+    3,
+    6,
+    2
+   ],
+   "q": "Which files constitute the frozen record of scored runs in the MS-series state?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "You cannot safely update your model components without losing your existing scoring results because changing the encoder, quantization, or pooling invalidates every embedding-derived artifact in the r",
+    "ans_ok": 0,
+    "ci": 7,
+    "fallback": 1,
+    "grade_p": 0.1557,
+    "hit": 0,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 7,
+    "stop_ci": null,
+    "tok": 755,
+    "total_tok": 2214
+   },
+   "asm8": {
+    "ans": "You cannot safely update your model components without losing your existing scoring results because changing the encoder, quantization, or pooling invalidates every embedding-derived artifact in the r",
+    "ans_ok": 0,
+    "ci": 7,
+    "fallback": 1,
+    "grade_p": 0.1557,
+    "hit": 0,
+    "judge_tok": 2980,
+    "judged": [
+     {
+      "ci": 7,
+      "p": 0.1576,
+      "tok": 359,
+      "yes": false
+     },
+     {
+      "ci": 5,
+      "p": 0.0143,
+      "tok": 376,
+      "yes": false
+     },
+     {
+      "ci": 0,
+      "p": 0.0031,
+      "tok": 336,
+      "yes": false
+     },
+     {
+      "ci": 4,
+      "p": 0.0091,
+      "tok": 388,
+      "yes": false
+     },
+     {
+      "ci": 6,
+      "p": 0.0791,
+      "tok": 370,
+      "yes": false
+     },
+     {
+      "ci": 3,
+      "p": 0.0037,
+      "tok": 374,
+      "yes": false
+     },
+     {
+      "ci": 2,
+      "p": 0.0082,
+      "tok": 414,
+      "yes": false
+     },
+     {
+      "ci": 1,
+      "p": 0.0061,
+      "tok": 363,
+      "yes": false
+     }
+    ],
+    "n_judged": 8,
+    "sim_agree": 1,
+    "sim_ci": 7,
+    "stop_ci": null,
+    "tok": 755,
+    "total_tok": 3735
+   },
+   "chunk": 6,
+   "chunk_agree": 1.0,
+   "doc": "README.md",
+   "pool": [
+    7,
+    5,
+    0,
+    4,
+    6,
+    3,
+    2,
+    1
+   ],
+   "q": "How do I safely update my model components without losing my existing scoring results?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The excerpt does not state what the markedness dial value 1-m draws from.",
+    "ans_ok": 0,
+    "ci": 8,
+    "fallback": 1,
+    "grade_p": 0.176,
+    "hit": 0,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 8,
+    "stop_ci": null,
+    "tok": 825,
+    "total_tok": 2426
+   },
+   "asm8": {
+    "ans": "The markedness dial value 1-m draws from the L3 parent's generic pool.",
+    "ans_ok": 1,
+    "ci": 1,
+    "fallback": 0,
+    "grade_p": 0.9626,
+    "hit": 1,
+    "judge_tok": 2708,
+    "judged": [
+     {
+      "ci": 8,
+      "p": 0.0851,
+      "tok": 440,
+      "yes": false
+     },
+     {
+      "ci": 14,
+      "p": 0.0378,
+      "tok": 383,
+      "yes": false
+     },
+     {
+      "ci": 29,
+      "p": 0.1429,
+      "tok": 399,
+      "yes": false
+     },
+     {
+      "ci": 10,
+      "p": 0.0851,
+      "tok": 379,
+      "yes": false
+     },
+     {
+      "ci": 11,
+      "p": 0.1927,
+      "tok": 351,
+      "yes": false
+     },
+     {
+      "ci": 30,
+      "p": 0.0667,
+      "tok": 381,
+      "yes": false
+     },
+     {
+      "ci": 1,
+      "p": 0.8325,
+      "tok": 375,
+      "yes": true
+     }
+    ],
+    "n_judged": 7,
+    "sim_agree": 1,
+    "sim_ci": 1,
+    "stop_ci": 1,
+    "tok": 761,
+    "total_tok": 3469
+   },
+   "chunk": 1,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    8,
+    14,
+    29,
+    10,
+    11,
+    30,
+    1,
+    26
+   ],
+   "q": "What does the markedness dial value 1-m draw from?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "You can automate diverse audio commands by using a deterministic generator that combines held-out verbs and slots with a markedness dial to vary modifiers between sibling leaves in the smart home bran",
+    "ans_ok": 1,
+    "ci": 1,
+    "fallback": 1,
+    "grade_p": 0.6262,
+    "hit": 1,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 1,
+    "stop_ci": null,
+    "tok": 784,
+    "total_tok": 2400
+   },
+   "asm8": {
+    "ans": "You can automate diverse audio commands by using a deterministic generator that combines held-out verbs and slots with a markedness dial to vary modifiers between sibling leaves in the smart home bran",
+    "ans_ok": 1,
+    "ci": 1,
+    "fallback": 1,
+    "grade_p": 0.6262,
+    "hit": 1,
+    "judge_tok": 3314,
+    "judged": [
+     {
+      "ci": 1,
+      "p": 0.2738,
+      "tok": 378,
+      "yes": false
+     },
+     {
+      "ci": 21,
+      "p": 0.0002,
+      "tok": 464,
+      "yes": false
+     },
+     {
+      "ci": 17,
+      "p": 0.0056,
+      "tok": 371,
+      "yes": false
+     },
+     {
+      "ci": 27,
+      "p": 0.0014,
+      "tok": 403,
+      "yes": false
+     },
+     {
+      "ci": 2,
+      "p": 0.001,
+      "tok": 350,
+      "yes": false
+     },
+     {
+      "ci": 22,
+      "p": 0.0006,
+      "tok": 576,
+      "yes": false
+     },
+     {
+      "ci": 6,
+      "p": 0.0004,
+      "tok": 423,
+      "yes": false
+     },
+     {
+      "ci": 26,
+      "p": 0.034,
+      "tok": 349,
+      "yes": false
+     }
+    ],
+    "n_judged": 8,
+    "sim_agree": 1,
+    "sim_ci": 1,
+    "stop_ci": null,
+    "tok": 784,
+    "total_tok": 4098
+   },
+   "chunk": 1,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    1,
+    21,
+    17,
+    27,
+    2,
+    22,
+    6,
+    26
+   ],
+   "q": "How can I automate the creation of diverse audio commands for my smart home system?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The FiLM variant description uses the vocabulary \"emb,\" \"one-hot,\" \"parent,\" \"node,\" \"root,\" \"level,\" \"zeros,\" \"unconditioned,\" \"B,\" \"Trained,\" \"gold,\" \"parents,\" \"teacher,\" \"forcing,\" \"evaluated,\" \"p",
+    "ans_ok": 0,
+    "ci": 3,
+    "fallback": 0,
+    "grade_p": 0.0507,
+    "hit": 1,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 3,
+    "stop_ci": 3,
+    "tok": 925,
+    "total_tok": 2485
+   },
+   "asm8": {
+    "ans": "The FiLM variant description uses the vocabulary \"emb,\" \"one-hot,\" \"parent,\" \"node,\" \"root,\" \"level,\" \"zeros,\" \"unconditioned,\" \"B,\" \"Trained,\" \"gold,\" \"parents,\" \"teacher,\" \"forcing,\" \"evaluated,\" \"p",
+    "ans_ok": 0,
+    "ci": 3,
+    "fallback": 0,
+    "grade_p": 0.0507,
+    "hit": 1,
+    "judge_tok": 1560,
+    "judged": [
+     {
+      "ci": 1,
+      "p": 0.1343,
+      "tok": 373,
+      "yes": false
+     },
+     {
+      "ci": 19,
+      "p": 0.314,
+      "tok": 367,
+      "yes": false
+     },
+     {
+      "ci": 6,
+      "p": 0.0675,
+      "tok": 418,
+      "yes": false
+     },
+     {
+      "ci": 3,
+      "p": 0.5686,
+      "tok": 402,
+      "yes": true
+     }
+    ],
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 3,
+    "stop_ci": 3,
+    "tok": 925,
+    "total_tok": 2485
+   },
+   "chunk": 3,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    1,
+    19,
+    6,
+    3,
+    9,
+    26,
+    20,
+    17
+   ],
+   "q": "What vocabulary was used in the FiLM variant description?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "Each later stage takes into account earlier decisions by using the verdicts from previous stages as guardrails or conditions for its own logic, such as R2 requiring R1 to pass before determining if a ",
+    "ans_ok": 0,
+    "ci": 29,
+    "fallback": 0,
+    "grade_p": 0.0145,
+    "hit": 0,
+    "n_judged": 3,
+    "sim_agree": 1,
+    "sim_ci": 29,
+    "stop_ci": 29,
+    "tok": 852,
+    "total_tok": 2012
+   },
+   "asm8": {
+    "ans": "Each later stage takes into account earlier decisions by using the verdicts from previous stages as guardrails or conditions for its own logic, such as R2 requiring R1 to pass before determining if a ",
+    "ans_ok": 0,
+    "ci": 29,
+    "fallback": 0,
+    "grade_p": 0.0145,
+    "hit": 0,
+    "judge_tok": 1160,
+    "judged": [
+     {
+      "ci": 0,
+      "p": 0.2958,
+      "tok": 365,
+      "yes": false
+     },
+     {
+      "ci": 5,
+      "p": 0.0963,
+      "tok": 391,
+      "yes": false
+     },
+     {
+      "ci": 29,
+      "p": 0.5009,
+      "tok": 404,
+      "yes": true
+     }
+    ],
+    "n_judged": 3,
+    "sim_agree": 1,
+    "sim_ci": 29,
+    "stop_ci": 29,
+    "tok": 852,
+    "total_tok": 2012
+   },
+   "chunk": 3,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    0,
+    5,
+    29,
+    14,
+    3,
+    10,
+    23,
+    15
+   ],
+   "q": "How can each later stage of my pipeline take into account what the earlier stages already decided?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The gap SHRANK with pool at pool 1024 is +0.7.",
+    "ans_ok": 1,
+    "ci": 8,
+    "fallback": 0,
+    "grade_p": 0.6821,
+    "hit": 1,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 8,
+    "stop_ci": 8,
+    "tok": 904,
+    "total_tok": 1350
+   },
+   "asm8": {
+    "ans": "The gap SHRANK with pool at pool 1024 is +0.7.",
+    "ans_ok": 1,
+    "ci": 8,
+    "fallback": 0,
+    "grade_p": 0.6821,
+    "hit": 1,
+    "judge_tok": 446,
+    "judged": [
+     {
+      "ci": 8,
+      "p": 0.6385,
+      "tok": 446,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 8,
+    "stop_ci": 8,
+    "tok": 904,
+    "total_tok": 1350
+   },
+   "chunk": 8,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    8,
+    7,
+    6,
+    5,
+    19,
+    9,
+    14,
+    4
+   ],
+   "q": "What is the answer regarding the gap SHRANK with pool at pool 1024?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "The excerpt confirms the failure of the next step (P3) and indicates that the exact performance ceiling is approximately 75% information, as evidenced by the post-hoc results at leaf level L4 where th",
+    "ans_ok": 0,
+    "ci": 8,
+    "fallback": 1,
+    "grade_p": 0.4691,
+    "hit": 1,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 8,
+    "stop_ci": null,
+    "tok": 929,
+    "total_tok": 2513
+   },
+   "asm8": {
+    "ans": "Yes, the text confirms that S3's domain will likely fail at approximately 0.84, which represents the performance ceiling for the next step.",
+    "ans_ok": 0,
+    "ci": 21,
+    "fallback": 0,
+    "grade_p": 0.0146,
+    "hit": 0,
+    "judge_tok": 2047,
+    "judged": [
+     {
+      "ci": 8,
+      "p": 0.3905,
+      "tok": 442,
+      "yes": false
+     },
+     {
+      "ci": 5,
+      "p": 0.1764,
+      "tok": 388,
+      "yes": false
+     },
+     {
+      "ci": 29,
+      "p": 0.1605,
+      "tok": 401,
+      "yes": false
+     },
+     {
+      "ci": 11,
+      "p": 0.1269,
+      "tok": 353,
+      "yes": false
+     },
+     {
+      "ci": 21,
+      "p": 0.5153,
+      "tok": 463,
+      "yes": true
+     }
+    ],
+    "n_judged": 5,
+    "sim_agree": 1,
+    "sim_ci": 21,
+    "stop_ci": 21,
+    "tok": 929,
+    "total_tok": 2976
+   },
+   "chunk": 8,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    8,
+    5,
+    29,
+    11,
+    21,
+    6,
+    7,
+    14
+   ],
+   "q": "Can I confirm the failure and the exact performance ceiling for the next step?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The path accuracy metrics by depth for m=1.0, pool 256/leaf, seed 0 are: d2 (B .903, E .914), d3 (B .894, E .921), d4 (A .813, B .826, E .856), d5 (B .825, E .859), and d6 (A .899, B .825, E .859).",
+    "ans_ok": 0,
+    "ci": 13,
+    "fallback": 0,
+    "grade_p": 0.0117,
+    "hit": 0,
+    "n_judged": 3,
+    "sim_agree": 1,
+    "sim_ci": 13,
+    "stop_ci": 13,
+    "tok": 1058,
+    "total_tok": 2491
+   },
+   "asm8": {
+    "ans": "The path accuracy metrics by depth for m=1.0, pool 256/leaf, seed 0 are: d2 (B .903, E .914), d3 (B .894, E .921), d4 (A .813, B .826, E .856), d5 (B .825, E .859), and d6 (A .899, B .825, E .859).",
+    "ans_ok": 0,
+    "ci": 13,
+    "fallback": 0,
+    "grade_p": 0.0117,
+    "hit": 0,
+    "judge_tok": 1433,
+    "judged": [
+     {
+      "ci": 12,
+      "p": 0.0238,
+      "tok": 424,
+      "yes": false
+     },
+     {
+      "ci": 4,
+      "p": 0.018,
+      "tok": 482,
+      "yes": false
+     },
+     {
+      "ci": 13,
+      "p": 0.6291,
+      "tok": 527,
+      "yes": true
+     }
+    ],
+    "n_judged": 3,
+    "sim_agree": 1,
+    "sim_ci": 13,
+    "stop_ci": 13,
+    "tok": 1058,
+    "total_tok": 2491
+   },
+   "chunk": 12,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    12,
+    4,
+    13,
+    2,
+    14,
+    5,
+    9,
+    8
+   ],
+   "q": "What are the path accuracy metrics by depth for m=1.0, pool 256/leaf, seed 0?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "There is no depth wall through 6 levels or 96 leaves, as marginal depth cost after level 4 is approximately zero.",
+    "ans_ok": 0,
+    "ci": 14,
+    "fallback": 0,
+    "grade_p": 0.0435,
+    "hit": 0,
+    "n_judged": 2,
+    "sim_agree": 1,
+    "sim_ci": 14,
+    "stop_ci": 14,
+    "tok": 819,
+    "total_tok": 1559
+   },
+   "asm8": {
+    "ans": "There is no depth wall through 6 levels or 96 leaves, as marginal depth cost after level 4 is approximately zero.",
+    "ans_ok": 0,
+    "ci": 14,
+    "fallback": 0,
+    "grade_p": 0.0435,
+    "hit": 0,
+    "judge_tok": 740,
+    "judged": [
+     {
+      "ci": 11,
+      "p": 0.1134,
+      "tok": 354,
+      "yes": false
+     },
+     {
+      "ci": 14,
+      "p": 0.8186,
+      "tok": 386,
+      "yes": true
+     }
+    ],
+    "n_judged": 2,
+    "sim_agree": 1,
+    "sim_ci": 14,
+    "stop_ci": 14,
+    "tok": 819,
+    "total_tok": 1559
+   },
+   "chunk": 12,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    11,
+    14,
+    18,
+    30,
+    15,
+    23,
+    0,
+    5
+   ],
+   "q": "How far down my category ladder can I keep going before quality drops too much?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The gain was replicated only with the smallest pool.",
+    "ans_ok": 0,
+    "ci": 8,
+    "fallback": 1,
+    "grade_p": 0.0017,
+    "hit": 0,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 8,
+    "stop_ci": null,
+    "tok": 792,
+    "total_tok": 2417
+   },
+   "asm8": {
+    "ans": "The gain was replicated only with length-normalized mean path scores.",
+    "ans_ok": 1,
+    "ci": 15,
+    "fallback": 0,
+    "grade_p": 0.9329,
+    "hit": 1,
+    "judge_tok": 2396,
+    "judged": [
+     {
+      "ci": 8,
+      "p": 0.0552,
+      "tok": 435,
+      "yes": false
+     },
+     {
+      "ci": 29,
+      "p": 0.0452,
+      "tok": 394,
+      "yes": false
+     },
+     {
+      "ci": 6,
+      "p": 0.0256,
+      "tok": 415,
+      "yes": false
+     },
+     {
+      "ci": 5,
+      "p": 0.0297,
+      "tok": 381,
+      "yes": false
+     },
+     {
+      "ci": 20,
+      "p": 0.129,
+      "tok": 417,
+      "yes": false
+     },
+     {
+      "ci": 15,
+      "p": 0.6932,
+      "tok": 354,
+      "yes": true
+     }
+    ],
+    "n_judged": 6,
+    "sim_agree": 1,
+    "sim_ci": 15,
+    "stop_ci": 15,
+    "tok": 714,
+    "total_tok": 3110
+   },
+   "chunk": 15,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    8,
+    29,
+    6,
+    5,
+    20,
+    15,
+    9,
+    7
+   ],
+   "q": "What was the gain replicated only with?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "You must use length-normalized mean path scores because raw sums allow deeper paths to structurally outbid shallower ones when path lengths vary.",
+    "ans_ok": 1,
+    "ci": 15,
+    "fallback": 0,
+    "grade_p": 0.9464,
+    "hit": 1,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 15,
+    "stop_ci": 15,
+    "tok": 743,
+    "total_tok": 1104
+   },
+   "asm8": {
+    "ans": "You must use length-normalized mean path scores because raw sums allow deeper paths to structurally outbid shallower ones when path lengths vary.",
+    "ans_ok": 1,
+    "ci": 15,
+    "fallback": 0,
+    "grade_p": 0.9464,
+    "hit": 1,
+    "judge_tok": 361,
+    "judged": [
+     {
+      "ci": 15,
+      "p": 0.7033,
+      "tok": 361,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 15,
+    "stop_ci": 15,
+    "tok": 743,
+    "total_tok": 1104
+   },
+   "chunk": 15,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    15,
+    18,
+    0,
+    13,
+    14,
+    23,
+    12,
+    29
+   ],
+   "q": "How do I apply this scoring method to my router when path lengths vary?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The production mechanism of WireSense's router and MCP gate is raw slot-7 embeddings combined with centroid cosine similarity, without using trained heads.",
+    "ans_ok": 1,
+    "ci": 17,
+    "fallback": 0,
+    "grade_p": 0.9791,
+    "hit": 1,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 17,
+    "stop_ci": 17,
+    "tok": 759,
+    "total_tok": 1128
+   },
+   "asm8": {
+    "ans": "The production mechanism of WireSense's router and MCP gate is raw slot-7 embeddings combined with centroid cosine similarity, without using trained heads.",
+    "ans_ok": 1,
+    "ci": 17,
+    "fallback": 0,
+    "grade_p": 0.9791,
+    "hit": 1,
+    "judge_tok": 369,
+    "judged": [
+     {
+      "ci": 17,
+      "p": 0.8881,
+      "tok": 369,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 17,
+    "stop_ci": 17,
+    "tok": 759,
+    "total_tok": 1128
+   },
+   "chunk": 17,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    17,
+    16,
+    15,
+    23,
+    0,
+    18,
+    3,
+    11
+   ],
+   "q": "What is the production mechanism of WireSense's router and MCP gate?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "The fixed representation decides routing by using centroid cosine similarity to identify the unique specialty phrase pairs owned by each agent within their respective domains.",
+    "ans_ok": 1,
+    "ci": 17,
+    "fallback": 0,
+    "grade_p": 0.812,
+    "hit": 1,
+    "n_judged": 2,
+    "sim_agree": 1,
+    "sim_ci": 17,
+    "stop_ci": 17,
+    "tok": 771,
+    "total_tok": 1496
+   },
+   "asm8": {
+    "ans": "The fixed representation decides routing by using centroid cosine similarity to identify the unique specialty phrase pairs owned by each agent within their respective domains.",
+    "ans_ok": 1,
+    "ci": 17,
+    "fallback": 0,
+    "grade_p": 0.812,
+    "hit": 1,
+    "judge_tok": 725,
+    "judged": [
+     {
+      "ci": 16,
+      "p": 0.3062,
+      "tok": 349,
+      "yes": false
+     },
+     {
+      "ci": 17,
+      "p": 0.7406,
+      "tok": 376,
+      "yes": true
+     }
+    ],
+    "n_judged": 2,
+    "sim_agree": 1,
+    "sim_ci": 17,
+    "stop_ci": 17,
+    "tok": 771,
+    "total_tok": 1496
+   },
+   "chunk": 17,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    16,
+    17,
+    23,
+    27,
+    1,
+    20,
+    29,
+    18
+   ],
+   "q": "How can one fixed representation decide which of dozens of near-identical helpers an incoming message belongs to?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The held-out generalization ceiling for short synthetic generic texts is measured slightly above the probed ~0.84, specifically at 0.8555.",
+    "ans_ok": 0,
+    "ci": 22,
+    "fallback": 0,
+    "grade_p": 0.0164,
+    "hit": 0,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 22,
+    "stop_ci": 22,
+    "tok": 1063,
+    "total_tok": 1637
+   },
+   "asm8": {
+    "ans": "The held-out generalization ceiling for short synthetic generic texts is measured slightly above the probed ~0.84, specifically at 0.8555.",
+    "ans_ok": 0,
+    "ci": 22,
+    "fallback": 0,
+    "grade_p": 0.0164,
+    "hit": 0,
+    "judge_tok": 574,
+    "judged": [
+     {
+      "ci": 22,
+      "p": 0.8054,
+      "tok": 574,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 22,
+    "stop_ci": 22,
+    "tok": 1063,
+    "total_tok": 1637
+   },
+   "chunk": 21,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    22,
+    21,
+    6,
+    20,
+    30,
+    24,
+    29,
+    1
+   ],
+   "q": "What is the held-out generalization ceiling for short synthetic generic texts?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "The expected performance range is 0.8364 to 0.8555.",
+    "ans_ok": 0,
+    "ci": 22,
+    "fallback": 0,
+    "grade_p": 0.0528,
+    "hit": 0,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 22,
+    "stop_ci": 22,
+    "tok": 1050,
+    "total_tok": 1624
+   },
+   "asm8": {
+    "ans": "The expected performance range is 0.8364 to 0.8555.",
+    "ans_ok": 0,
+    "ci": 22,
+    "fallback": 0,
+    "grade_p": 0.0528,
+    "hit": 0,
+    "judge_tok": 574,
+    "judged": [
+     {
+      "ci": 22,
+      "p": 0.6522,
+      "tok": 574,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 22,
+    "stop_ci": 22,
+    "tok": 1050,
+    "total_tok": 1624
+   },
+   "chunk": 21,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    22,
+    29,
+    21,
+    24,
+    30,
+    6,
+    26,
+    31
+   ],
+   "q": "What is the expected performance range if I cannot use short synthetic texts?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The provided excerpt does not contain the results or a definitive answer to whether pointwise joint judgment beats bi-embedding cosine.",
+    "ans_ok": 0,
+    "ci": 25,
+    "fallback": 1,
+    "grade_p": 0.3891,
+    "hit": 0,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 25,
+    "stop_ci": null,
+    "tok": 700,
+    "total_tok": 2184
+   },
+   "asm8": {
+    "ans": "The provided excerpt does not contain the results or a definitive answer to whether pointwise joint judgment beats bi-embedding cosine.",
+    "ans_ok": 0,
+    "ci": 25,
+    "fallback": 1,
+    "grade_p": 0.3891,
+    "hit": 0,
+    "judge_tok": 2864,
+    "judged": [
+     {
+      "ci": 25,
+      "p": 0.3286,
+      "tok": 339,
+      "yes": false
+     },
+     {
+      "ci": 24,
+      "p": 0.108,
+      "tok": 344,
+      "yes": false
+     },
+     {
+      "ci": 27,
+      "p": 0.2419,
+      "tok": 398,
+      "yes": false
+     },
+     {
+      "ci": 28,
+      "p": 0.1259,
+      "tok": 403,
+      "yes": false
+     },
+     {
+      "ci": 29,
+      "p": 0.0443,
+      "tok": 397,
+      "yes": false
+     },
+     {
+      "ci": 3,
+      "p": 0.0573,
+      "tok": 402,
+      "yes": false
+     },
+     {
+      "ci": 2,
+      "p": 0.0164,
+      "tok": 345,
+      "yes": false
+     },
+     {
+      "ci": 31,
+      "p": 0.0133,
+      "tok": 236,
+      "yes": false
+     }
+    ],
+    "n_judged": 8,
+    "sim_agree": 1,
+    "sim_ci": 25,
+    "stop_ci": null,
+    "tok": 700,
+    "total_tok": 3564
+   },
+   "chunk": 24,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    25,
+    24,
+    27,
+    28,
+    29,
+    3,
+    2,
+    31
+   ],
+   "q": "Does pointwise joint judgment beat bi-embedding cosine?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "The excerpt does not provide instructions on how to find relevant information to answer questions quickly.",
+    "ans_ok": 0,
+    "ci": 26,
+    "fallback": 1,
+    "grade_p": 0.3384,
+    "hit": 0,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 26,
+    "stop_ci": null,
+    "tok": 706,
+    "total_tok": 2147
+   },
+   "asm8": {
+    "ans": "The excerpt does not provide instructions on how to find relevant information to answer questions quickly.",
+    "ans_ok": 0,
+    "ci": 26,
+    "fallback": 1,
+    "grade_p": 0.3384,
+    "hit": 0,
+    "judge_tok": 2818,
+    "judged": [
+     {
+      "ci": 26,
+      "p": 0.1895,
+      "tok": 348,
+      "yes": false
+     },
+     {
+      "ci": 25,
+      "p": 0.2343,
+      "tok": 343,
+      "yes": false
+     },
+     {
+      "ci": 24,
+      "p": 0.0773,
+      "tok": 348,
+      "yes": false
+     },
+     {
+      "ci": 27,
+      "p": 0.0428,
+      "tok": 402,
+      "yes": false
+     },
+     {
+      "ci": 11,
+      "p": 0.0836,
+      "tok": 353,
+      "yes": false
+     },
+     {
+      "ci": 31,
+      "p": 0.0232,
+      "tok": 240,
+      "yes": false
+     },
+     {
+      "ci": 29,
+      "p": 0.0129,
+      "tok": 401,
+      "yes": false
+     },
+     {
+      "ci": 30,
+      "p": 0.002,
+      "tok": 383,
+      "yes": false
+     }
+    ],
+    "n_judged": 8,
+    "sim_agree": 1,
+    "sim_ci": 26,
+    "stop_ci": null,
+    "tok": 706,
+    "total_tok": 3524
+   },
+   "chunk": 24,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    26,
+    25,
+    24,
+    27,
+    11,
+    31,
+    29,
+    30
+   ],
+   "q": "How can I find the most relevant information to answer my specific questions quickly?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "There are 12 train and 12 eval chunks per document.",
+    "ans_ok": 1,
+    "ci": 26,
+    "fallback": 0,
+    "grade_p": 0.8404,
+    "hit": 1,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 26,
+    "stop_ci": 26,
+    "tok": 698,
+    "total_tok": 1043
+   },
+   "asm8": {
+    "ans": "There are 12 train and 12 eval chunks per document.",
+    "ans_ok": 1,
+    "ci": 26,
+    "fallback": 0,
+    "grade_p": 0.8404,
+    "hit": 1,
+    "judge_tok": 345,
+    "judged": [
+     {
+      "ci": 26,
+      "p": 0.6999,
+      "tok": 345,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 26,
+    "stop_ci": 26,
+    "tok": 698,
+    "total_tok": 1043
+   },
+   "chunk": 26,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    26,
+    25,
+    27,
+    31,
+    28,
+    24,
+    1,
+    29
+   ],
+   "q": "What is the number of train and eval chunks per document?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "The provided excerpt does not contain information on how to look something up when you cannot name what you are looking for.",
+    "ans_ok": 0,
+    "ci": 20,
+    "fallback": 1,
+    "grade_p": 0.169,
+    "hit": 0,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 20,
+    "stop_ci": null,
+    "tok": 792,
+    "total_tok": 2330
+   },
+   "asm8": {
+    "ans": "The provided excerpt does not contain information on how to look something up when you cannot name what you are looking for.",
+    "ans_ok": 0,
+    "ci": 20,
+    "fallback": 1,
+    "grade_p": 0.169,
+    "hit": 0,
+    "judge_tok": 3277,
+    "judged": [
+     {
+      "ci": 20,
+      "p": 0.0018,
+      "tok": 426,
+      "yes": false
+     },
+     {
+      "ci": 23,
+      "p": 0.0966,
+      "tok": 417,
+      "yes": false
+     },
+     {
+      "ci": 26,
+      "p": 0.0368,
+      "tok": 350,
+      "yes": false
+     },
+     {
+      "ci": 25,
+      "p": 0.0266,
+      "tok": 345,
+      "yes": false
+     },
+     {
+      "ci": 30,
+      "p": 0.0003,
+      "tok": 385,
+      "yes": false
+     },
+     {
+      "ci": 19,
+      "p": 0.0002,
+      "tok": 373,
+      "yes": false
+     },
+     {
+      "ci": 27,
+      "p": 0.0014,
+      "tok": 404,
+      "yes": false
+     },
+     {
+      "ci": 22,
+      "p": 0.0037,
+      "tok": 577,
+      "yes": false
+     }
+    ],
+    "n_judged": 8,
+    "sim_agree": 1,
+    "sim_ci": 20,
+    "stop_ci": null,
+    "tok": 792,
+    "total_tok": 4069
+   },
+   "chunk": 26,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    20,
+    23,
+    26,
+    25,
+    30,
+    19,
+    27,
+    22
+   ],
+   "q": "How do I look something up when I can't name what I'm looking for?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The J-combo model uses the exact input features [q; c; |q\u2212c|; q\u00b7c].",
+    "ans_ok": 1,
+    "ci": 27,
+    "fallback": 0,
+    "grade_p": 0.963,
+    "hit": 1,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 27,
+    "stop_ci": 27,
+    "tok": 820,
+    "total_tok": 2242
+   },
+   "asm8": {
+    "ans": "The J-combo model uses the exact input features [q; c; |q\u2212c|; q\u00b7c].",
+    "ans_ok": 1,
+    "ci": 27,
+    "fallback": 0,
+    "grade_p": 0.963,
+    "hit": 1,
+    "judge_tok": 1422,
+    "judged": [
+     {
+      "ci": 31,
+      "p": 0.0094,
+      "tok": 239,
+      "yes": false
+     },
+     {
+      "ci": 30,
+      "p": 0.0078,
+      "tok": 382,
+      "yes": false
+     },
+     {
+      "ci": 29,
+      "p": 0.0153,
+      "tok": 400,
+      "yes": false
+     },
+     {
+      "ci": 27,
+      "p": 0.9209,
+      "tok": 401,
+      "yes": true
+     }
+    ],
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 27,
+    "stop_ci": 27,
+    "tok": 820,
+    "total_tok": 2242
+   },
+   "chunk": 27,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    31,
+    30,
+    29,
+    27,
+    28,
+    1,
+    21,
+    3
+   ],
+   "q": "What are the exact input features used by the J-combo model?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "The best way to quickly verify if a document supports a question is to use the **direct** method, which involves one question (\u226420 words) whose answer the passage states and reuses the passage's own v",
+    "ans_ok": 0,
+    "ci": 26,
+    "fallback": 1,
+    "grade_p": 0.0052,
+    "hit": 0,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 26,
+    "stop_ci": null,
+    "tok": 788,
+    "total_tok": 2282
+   },
+   "asm8": {
+    "ans": "The best way to quickly verify if a document supports a question is to use the **direct** method, which involves one question (\u226420 words) whose answer the passage states and reuses the passage's own v",
+    "ans_ok": 0,
+    "ci": 26,
+    "fallback": 1,
+    "grade_p": 0.0052,
+    "hit": 0,
+    "judge_tok": 2818,
+    "judged": [
+     {
+      "ci": 26,
+      "p": 0.1134,
+      "tok": 348,
+      "yes": false
+     },
+     {
+      "ci": 25,
+      "p": 0.2189,
+      "tok": 343,
+      "yes": false
+     },
+     {
+      "ci": 27,
+      "p": 0.3032,
+      "tok": 402,
+      "yes": false
+     },
+     {
+      "ci": 29,
+      "p": 0.0454,
+      "tok": 401,
+      "yes": false
+     },
+     {
+      "ci": 31,
+      "p": 0.1802,
+      "tok": 240,
+      "yes": false
+     },
+     {
+      "ci": 30,
+      "p": 0.0313,
+      "tok": 383,
+      "yes": false
+     },
+     {
+      "ci": 24,
+      "p": 0.2551,
+      "tok": 348,
+      "yes": false
+     },
+     {
+      "ci": 11,
+      "p": 0.3076,
+      "tok": 353,
+      "yes": false
+     }
+    ],
+    "n_judged": 8,
+    "sim_agree": 1,
+    "sim_ci": 26,
+    "stop_ci": null,
+    "tok": 788,
+    "total_tok": 3606
+   },
+   "chunk": 27,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    26,
+    25,
+    27,
+    29,
+    31,
+    30,
+    24,
+    11
+   ],
+   "q": "What is the best way to quickly verify if a document supports a question?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The excerpt does not provide the specific probabilistic scores over all evaluated pairs.",
+    "ans_ok": 0,
+    "ci": 29,
+    "fallback": 1,
+    "grade_p": 0.4367,
+    "hit": 1,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 29,
+    "stop_ci": null,
+    "tok": 802,
+    "total_tok": 2195
+   },
+   "asm8": {
+    "ans": "The excerpt does not provide the specific probabilistic scores over all evaluated pairs.",
+    "ans_ok": 0,
+    "ci": 29,
+    "fallback": 1,
+    "grade_p": 0.4367,
+    "hit": 1,
+    "judge_tok": 2978,
+    "judged": [
+     {
+      "ci": 29,
+      "p": 0.0425,
+      "tok": 397,
+      "yes": false
+     },
+     {
+      "ci": 28,
+      "p": 0.1525,
+      "tok": 403,
+      "yes": false
+     },
+     {
+      "ci": 15,
+      "p": 0.03,
+      "tok": 357,
+      "yes": false
+     },
+     {
+      "ci": 31,
+      "p": 0.0083,
+      "tok": 236,
+      "yes": false
+     },
+     {
+      "ci": 21,
+      "p": 0.098,
+      "tok": 459,
+      "yes": false
+     },
+     {
+      "ci": 19,
+      "p": 0.0185,
+      "tok": 367,
+      "yes": false
+     },
+     {
+      "ci": 25,
+      "p": 0.0043,
+      "tok": 339,
+      "yes": false
+     },
+     {
+      "ci": 20,
+      "p": 0.1956,
+      "tok": 420,
+      "yes": false
+     }
+    ],
+    "n_judged": 8,
+    "sim_agree": 1,
+    "sim_ci": 29,
+    "stop_ci": null,
+    "tok": 802,
+    "total_tok": 3780
+   },
+   "chunk": 29,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    29,
+    28,
+    15,
+    31,
+    21,
+    19,
+    25,
+    20
+   ],
+   "q": "What are the probabilistic scores over all evaluated pairs?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "The excerpt does not provide specific guidance on how much to trust the confidence numbers because it explicitly states that V has no probability and is excluded from the ECE metric used to evaluate t",
+    "ans_ok": 1,
+    "ci": 29,
+    "fallback": 1,
+    "grade_p": 0.5101,
+    "hit": 1,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 29,
+    "stop_ci": null,
+    "tok": 828,
+    "total_tok": 2469
+   },
+   "asm8": {
+    "ans": "The excerpt does not provide specific guidance on how much to trust the confidence numbers because it explicitly states that V has no probability and is excluded from the ECE metric used to evaluate t",
+    "ans_ok": 1,
+    "ci": 29,
+    "fallback": 1,
+    "grade_p": 0.5101,
+    "hit": 1,
+    "judge_tok": 3479,
+    "judged": [
+     {
+      "ci": 29,
+      "p": 0.0322,
+      "tok": 399,
+      "yes": false
+     },
+     {
+      "ci": 21,
+      "p": 0.1005,
+      "tok": 461,
+      "yes": false
+     },
+     {
+      "ci": 20,
+      "p": 0.037,
+      "tok": 422,
+      "yes": false
+     },
+     {
+      "ci": 15,
+      "p": 0.0498,
+      "tok": 359,
+      "yes": false
+     },
+     {
+      "ci": 30,
+      "p": 0.0248,
+      "tok": 381,
+      "yes": false
+     },
+     {
+      "ci": 8,
+      "p": 0.045,
+      "tok": 440,
+      "yes": false
+     },
+     {
+      "ci": 7,
+      "p": 0.1825,
+      "tok": 604,
+      "yes": false
+     },
+     {
+      "ci": 23,
+      "p": 0.112,
+      "tok": 413,
+      "yes": false
+     }
+    ],
+    "n_judged": 8,
+    "sim_agree": 1,
+    "sim_ci": 29,
+    "stop_ci": null,
+    "tok": 828,
+    "total_tok": 4307
+   },
+   "chunk": 29,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    29,
+    21,
+    20,
+    15,
+    30,
+    8,
+    7,
+    23
+   ],
+   "q": "How much should I trust the confidence numbers my matcher gives me?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The `--gen-questions` flag of the `chunkrel.py` runner is used to generate the freeze candidates.",
+    "ans_ok": 1,
+    "ci": 31,
+    "fallback": 0,
+    "grade_p": 0.8802,
+    "hit": 1,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 31,
+    "stop_ci": 31,
+    "tok": 487,
+    "total_tok": 722
+   },
+   "asm8": {
+    "ans": "The `--gen-questions` flag of the `chunkrel.py` runner is used to generate the freeze candidates.",
+    "ans_ok": 1,
+    "ci": 31,
+    "fallback": 0,
+    "grade_p": 0.8802,
+    "hit": 1,
+    "judge_tok": 235,
+    "judged": [
+     {
+      "ci": 31,
+      "p": 0.9111,
+      "tok": 235,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 31,
+    "stop_ci": 31,
+    "tok": 487,
+    "total_tok": 722
+   },
+   "chunk": 31,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    31,
+    27,
+    6,
+    20,
+    26,
+    1,
+    9,
+    3
+   ],
+   "q": "What tool is used to generate the freeze candidates?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "The provided excerpt does not contain information regarding the duration of a full checking pass.",
+    "ans_ok": 0,
+    "ci": 26,
+    "fallback": 1,
+    "grade_p": 0.3841,
+    "hit": 0,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 26,
+    "stop_ci": null,
+    "tok": 595,
+    "total_tok": 2028
+   },
+   "asm8": {
+    "ans": "The provided excerpt does not contain information regarding the duration of a full checking pass.",
+    "ans_ok": 0,
+    "ci": 26,
+    "fallback": 1,
+    "grade_p": 0.3841,
+    "hit": 0,
+    "judge_tok": 3034,
+    "judged": [
+     {
+      "ci": 26,
+      "p": 0.0075,
+      "tok": 347,
+      "yes": false
+     },
+     {
+      "ci": 25,
+      "p": 0.0192,
+      "tok": 342,
+      "yes": false
+     },
+     {
+      "ci": 15,
+      "p": 0.0148,
+      "tok": 360,
+      "yes": false
+     },
+     {
+      "ci": 14,
+      "p": 0.0435,
+      "tok": 384,
+      "yes": false
+     },
+     {
+      "ci": 31,
+      "p": 0.2395,
+      "tok": 239,
+      "yes": false
+     },
+     {
+      "ci": 5,
+      "p": 0.0227,
+      "tok": 387,
+      "yes": false
+     },
+     {
+      "ci": 7,
+      "p": 0.0155,
+      "tok": 605,
+      "yes": false
+     },
+     {
+      "ci": 19,
+      "p": 0.0286,
+      "tok": 370,
+      "yes": false
+     }
+    ],
+    "n_judged": 8,
+    "sim_agree": 1,
+    "sim_ci": 26,
+    "stop_ci": null,
+    "tok": 595,
+    "total_tok": 3629
+   },
+   "chunk": 31,
+   "chunk_agree": 1.0,
+   "doc": "protocol.md",
+   "pool": [
+    26,
+    25,
+    15,
+    14,
+    31,
+    5,
+    7,
+    19
+   ],
+   "q": "Roughly how long should the full checking pass over every passage take?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The stdio MCP client targets at least 100 tools across at least 8 servers.",
+    "ans_ok": 1,
+    "ci": 1,
+    "fallback": 0,
+    "grade_p": 0.9615,
+    "hit": 1,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 1,
+    "stop_ci": 1,
+    "tok": 717,
+    "total_tok": 1069
+   },
+   "asm8": {
+    "ans": "The stdio MCP client targets at least 100 tools across at least 8 servers.",
+    "ans_ok": 1,
+    "ci": 1,
+    "fallback": 0,
+    "grade_p": 0.9615,
+    "hit": 1,
+    "judge_tok": 352,
+    "judged": [
+     {
+      "ci": 1,
+      "p": 0.8954,
+      "tok": 352,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 1,
+    "stop_ci": 1,
+    "tok": 717,
+    "total_tok": 1069
+   },
+   "chunk": 1,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    1,
+    2,
+    41,
+    32,
+    31,
+    37,
+    0,
+    38
+   ],
+   "q": "How many tools are targeted across how many servers in the stdio MCP client?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "You can build a faithful catalogue by running the stdio MCP client's initialize and tools/list commands on each connected plugin, dumping the resulting tool JSON verbatim to a corpus directory without",
+    "ans_ok": 1,
+    "ci": 1,
+    "fallback": 0,
+    "grade_p": 0.8908,
+    "hit": 1,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 1,
+    "stop_ci": 1,
+    "tok": 740,
+    "total_tok": 1091
+   },
+   "asm8": {
+    "ans": "You can build a faithful catalogue by running the stdio MCP client's initialize and tools/list commands on each connected plugin, dumping the resulting tool JSON verbatim to a corpus directory without",
+    "ans_ok": 1,
+    "ci": 1,
+    "fallback": 0,
+    "grade_p": 0.8908,
+    "hit": 1,
+    "judge_tok": 351,
+    "judged": [
+     {
+      "ci": 1,
+      "p": 0.6433,
+      "tok": 351,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 1,
+    "stop_ci": 1,
+    "tok": 740,
+    "total_tok": 1091
+   },
+   "chunk": 1,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    1,
+    54,
+    40,
+    62,
+    65,
+    19,
+    48,
+    63
+   ],
+   "q": "How can I build a faithful catalogue of what every connected plugin actually exposes?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The excerpt does not state how many servers are dead when the supervisor task is 60 seconds.",
+    "ans_ok": 0,
+    "ci": 32,
+    "fallback": 1,
+    "grade_p": 0.393,
+    "hit": 1,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 32,
+    "stop_ci": null,
+    "tok": 801,
+    "total_tok": 2257
+   },
+   "asm8": {
+    "ans": "The excerpt does not state how many servers are dead when the supervisor task is 60 seconds.",
+    "ans_ok": 0,
+    "ci": 32,
+    "fallback": 1,
+    "grade_p": 0.393,
+    "hit": 1,
+    "judge_tok": 2851,
+    "judged": [
+     {
+      "ci": 32,
+      "p": 0.2936,
+      "tok": 394,
+      "yes": false
+     },
+     {
+      "ci": 1,
+      "p": 0.0033,
+      "tok": 351,
+      "yes": false
+     },
+     {
+      "ci": 31,
+      "p": 0.4387,
+      "tok": 360,
+      "yes": false
+     },
+     {
+      "ci": 11,
+      "p": 0.0045,
+      "tok": 351,
+      "yes": false
+     },
+     {
+      "ci": 36,
+      "p": 0.0107,
+      "tok": 329,
+      "yes": false
+     },
+     {
+      "ci": 7,
+      "p": 0.0035,
+      "tok": 343,
+      "yes": false
+     },
+     {
+      "ci": 17,
+      "p": 0.0025,
+      "tok": 385,
+      "yes": false
+     },
+     {
+      "ci": 77,
+      "p": 0.0101,
+      "tok": 338,
+      "yes": false
+     }
+    ],
+    "n_judged": 8,
+    "sim_agree": 1,
+    "sim_ci": 32,
+    "stop_ci": null,
+    "tok": 801,
+    "total_tok": 3652
+   },
+   "chunk": 32,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    32,
+    1,
+    31,
+    11,
+    36,
+    7,
+    17,
+    77
+   ],
+   "q": "How many servers are dead when the supervisor task is 60 seconds?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "The provided excerpt does not contain information about the fastest way to keep tools running without restarting them.",
+    "ans_ok": 0,
+    "ci": 1,
+    "fallback": 1,
+    "grade_p": 0.3783,
+    "hit": 0,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 1,
+    "stop_ci": null,
+    "tok": 755,
+    "total_tok": 2211
+   },
+   "asm8": {
+    "ans": "The provided excerpt does not contain information about the fastest way to keep tools running without restarting them.",
+    "ans_ok": 0,
+    "ci": 1,
+    "fallback": 1,
+    "grade_p": 0.3783,
+    "hit": 0,
+    "judge_tok": 2927,
+    "judged": [
+     {
+      "ci": 1,
+      "p": 0.0065,
+      "tok": 350,
+      "yes": false
+     },
+     {
+      "ci": 54,
+      "p": 0.0008,
+      "tok": 381,
+      "yes": false
+     },
+     {
+      "ci": 48,
+      "p": 0.0012,
+      "tok": 369,
+      "yes": false
+     },
+     {
+      "ci": 19,
+      "p": 0.0085,
+      "tok": 356,
+      "yes": false
+     },
+     {
+      "ci": 126,
+      "p": 0.0091,
+      "tok": 398,
+      "yes": false
+     },
+     {
+      "ci": 49,
+      "p": 0.0008,
+      "tok": 375,
+      "yes": false
+     },
+     {
+      "ci": 53,
+      "p": 0.004,
+      "tok": 353,
+      "yes": false
+     },
+     {
+      "ci": 65,
+      "p": 0.0007,
+      "tok": 345,
+      "yes": false
+     }
+    ],
+    "n_judged": 8,
+    "sim_agree": 1,
+    "sim_ci": 1,
+    "stop_ci": null,
+    "tok": 755,
+    "total_tok": 3682
+   },
+   "chunk": 32,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    1,
+    54,
+    48,
+    19,
+    126,
+    49,
+    53,
+    65
+   ],
+   "q": "What is the fastest way to keep my tools running without restarting them?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "1448 rows were written and flushed before the TypeError occurred.",
+    "ans_ok": 1,
+    "ci": 56,
+    "fallback": 0,
+    "grade_p": 0.9548,
+    "hit": 1,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 56,
+    "stop_ci": 56,
+    "tok": 858,
+    "total_tok": 1283
+   },
+   "asm8": {
+    "ans": "1448 rows were written and flushed before the TypeError occurred.",
+    "ans_ok": 1,
+    "ci": 56,
+    "fallback": 0,
+    "grade_p": 0.9548,
+    "hit": 1,
+    "judge_tok": 425,
+    "judged": [
+     {
+      "ci": 56,
+      "p": 0.9344,
+      "tok": 425,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 56,
+    "stop_ci": 56,
+    "tok": 858,
+    "total_tok": 1283
+   },
+   "chunk": 56,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    56,
+    63,
+    48,
+    77,
+    10,
+    54,
+    68,
+    1
+   ],
+   "q": "How many rows were written and flushed before the TypeError occurred?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "To verify accuracy metrics and ensure performance thresholds are met, you must report the confusion matrix, per-class recall, and overall accuracy, then confirm that overall accuracy is at least 0.75,",
+    "ans_ok": 0,
+    "ci": 55,
+    "fallback": 0,
+    "grade_p": 0.0514,
+    "hit": 0,
+    "n_judged": 2,
+    "sim_agree": 1,
+    "sim_ci": 55,
+    "stop_ci": 55,
+    "tok": 851,
+    "total_tok": 1562
+   },
+   "asm8": {
+    "ans": "To verify accuracy metrics and ensure performance thresholds are met, you must report the confusion matrix, per-class recall, and overall accuracy, then confirm that overall accuracy is at least 0.75,",
+    "ans_ok": 0,
+    "ci": 55,
+    "fallback": 0,
+    "grade_p": 0.0514,
+    "hit": 0,
+    "judge_tok": 711,
+    "judged": [
+     {
+      "ci": 5,
+      "p": 0.3036,
+      "tok": 348,
+      "yes": false
+     },
+     {
+      "ci": 55,
+      "p": 0.7872,
+      "tok": 363,
+      "yes": true
+     }
+    ],
+    "n_judged": 2,
+    "sim_agree": 1,
+    "sim_ci": 55,
+    "stop_ci": 55,
+    "tok": 851,
+    "total_tok": 1562
+   },
+   "chunk": 56,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    5,
+    55,
+    6,
+    80,
+    109,
+    54,
+    8,
+    19
+   ],
+   "q": "How do I verify the accuracy metrics and ensure the results meet performance thresholds?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The deprecated read_file tool should be replaced by read_text_file.",
+    "ans_ok": 1,
+    "ci": 62,
+    "fallback": 0,
+    "grade_p": 0.8821,
+    "hit": 1,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 62,
+    "stop_ci": 62,
+    "tok": 668,
+    "total_tok": 999
+   },
+   "asm8": {
+    "ans": "The deprecated read_file tool should be replaced by read_text_file.",
+    "ans_ok": 1,
+    "ci": 62,
+    "fallback": 0,
+    "grade_p": 0.8821,
+    "hit": 1,
+    "judge_tok": 331,
+    "judged": [
+     {
+      "ci": 62,
+      "p": 0.8363,
+      "tok": 331,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 62,
+    "stop_ci": 62,
+    "tok": 668,
+    "total_tok": 999
+   },
+   "chunk": 62,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    62,
+    54,
+    65,
+    1,
+    68,
+    19,
+    48,
+    126
+   ],
+   "q": "Which native tool should replace the deprecated read_file?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "Picking an option other than the officially recommended one is still correct when the planner intentionally under-weights the parenthetical null clause in favor of a listed \"no_tool\" entry that compet",
+    "ans_ok": 0,
+    "ci": 112,
+    "fallback": 0,
+    "grade_p": 0.0071,
+    "hit": 0,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 112,
+    "stop_ci": 112,
+    "tok": 710,
+    "total_tok": 1041
+   },
+   "asm8": {
+    "ans": "Picking an option other than the officially recommended one is still correct when the planner intentionally under-weights the parenthetical null clause in favor of a listed \"no_tool\" entry that compet",
+    "ans_ok": 0,
+    "ci": 112,
+    "fallback": 0,
+    "grade_p": 0.0071,
+    "hit": 0,
+    "judge_tok": 331,
+    "judged": [
+     {
+      "ci": 112,
+      "p": 0.7885,
+      "tok": 331,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 112,
+    "stop_ci": 112,
+    "tok": 710,
+    "total_tok": 1041
+   },
+   "chunk": 62,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    112,
+    126,
+    54,
+    48,
+    21,
+    113,
+    65,
+    108
+   ],
+   "q": "When is picking something other than the officially recommended option still the correct call?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The gate flapping is caused by the spawned tool sets producing different cached hashes, which results in the gate cache being keyed on a content hash that varies between runs.",
+    "ans_ok": 1,
+    "ci": 69,
+    "fallback": 0,
+    "grade_p": 0.702,
+    "hit": 1,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 69,
+    "stop_ci": 69,
+    "tok": 778,
+    "total_tok": 1154
+   },
+   "asm8": {
+    "ans": "The gate flapping is caused by the spawned tool sets producing different cached hashes, which results in the gate cache being keyed on a content hash that varies between runs.",
+    "ans_ok": 1,
+    "ci": 69,
+    "fallback": 0,
+    "grade_p": 0.702,
+    "hit": 1,
+    "judge_tok": 376,
+    "judged": [
+     {
+      "ci": 69,
+      "p": 0.6709,
+      "tok": 376,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 69,
+    "stop_ci": 69,
+    "tok": 778,
+    "total_tok": 1154
+   },
+   "chunk": 69,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    69,
+    72,
+    74,
+    70,
+    71,
+    1,
+    60,
+    68
+   ],
+   "q": "What causes the gate flapping when spawned tool sets produce different cached hashes?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "The gate won't flip its state unexpectedly because the gate cache is keyed on a content hash of the spawned tools/list, which ensures consistency across runs.",
+    "ans_ok": 0,
+    "ci": 69,
+    "fallback": 1,
+    "grade_p": 0.4212,
+    "hit": 1,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 69,
+    "stop_ci": null,
+    "tok": 779,
+    "total_tok": 2293
+   },
+   "asm8": {
+    "ans": "Pinning each MCP server version in the spawn command guarantees that the gate won't flip its state unexpectedly because it ensures the cached index and every future spawn agree by construction.",
+    "ans_ok": 0,
+    "ci": 71,
+    "fallback": 0,
+    "grade_p": 0.0836,
+    "hit": 0,
+    "judge_tok": 2204,
+    "judged": [
+     {
+      "ci": 69,
+      "p": 0.1714,
+      "tok": 378,
+      "yes": false
+     },
+     {
+      "ci": 60,
+      "p": 0.1023,
+      "tok": 361,
+      "yes": false
+     },
+     {
+      "ci": 73,
+      "p": 0.0821,
+      "tok": 405,
+      "yes": false
+     },
+     {
+      "ci": 74,
+      "p": 0.2046,
+      "tok": 370,
+      "yes": false
+     },
+     {
+      "ci": 77,
+      "p": 0.1135,
+      "tok": 340,
+      "yes": false
+     },
+     {
+      "ci": 71,
+      "p": 0.542,
+      "tok": 350,
+      "yes": true
+     }
+    ],
+    "n_judged": 6,
+    "sim_agree": 1,
+    "sim_ci": 71,
+    "stop_ci": 71,
+    "tok": 755,
+    "total_tok": 2959
+   },
+   "chunk": 69,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    69,
+    60,
+    73,
+    74,
+    77,
+    71,
+    68,
+    130
+   ],
+   "q": "What guarantees that the gate won't flip its state unexpectedly during the next deployment run?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The provided excerpt does not identify a ground difference between per-case prompt_tokens and the registered run log.",
+    "ans_ok": 0,
+    "ci": 19,
+    "fallback": 1,
+    "grade_p": 0.148,
+    "hit": 0,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 19,
+    "stop_ci": null,
+    "tok": 784,
+    "total_tok": 2282
+   },
+   "asm8": {
+    "ans": "The provided excerpt does not identify a ground difference between per-case prompt_tokens and the registered run log.",
+    "ans_ok": 0,
+    "ci": 19,
+    "fallback": 1,
+    "grade_p": 0.148,
+    "hit": 0,
+    "judge_tok": 2902,
+    "judged": [
+     {
+      "ci": 19,
+      "p": 0.0352,
+      "tok": 360,
+      "yes": false
+     },
+     {
+      "ci": 54,
+      "p": 0.0103,
+      "tok": 385,
+      "yes": false
+     },
+     {
+      "ci": 12,
+      "p": 0.0496,
+      "tok": 383,
+      "yes": false
+     },
+     {
+      "ci": 8,
+      "p": 0.249,
+      "tok": 370,
+      "yes": false
+     },
+     {
+      "ci": 77,
+      "p": 0.0803,
+      "tok": 341,
+      "yes": false
+     },
+     {
+      "ci": 63,
+      "p": 0.0214,
+      "tok": 369,
+      "yes": false
+     },
+     {
+      "ci": 65,
+      "p": 0.0167,
+      "tok": 349,
+      "yes": false
+     },
+     {
+      "ci": 22,
+      "p": 0.0261,
+      "tok": 345,
+      "yes": false
+     }
+    ],
+    "n_judged": 8,
+    "sim_agree": 1,
+    "sim_ci": 19,
+    "stop_ci": null,
+    "tok": 784,
+    "total_tok": 3686
+   },
+   "chunk": 72,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    19,
+    54,
+    12,
+    8,
+    77,
+    63,
+    65,
+    22
+   ],
+   "q": "What is the ground difference identified by comparing per-case prompt_tokens and the registered run log?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "No tool configuration changes were made, as the excerpt only describes the fixed mechanics and exclusion rules used for the evaluation.",
+    "ans_ok": 0,
+    "ci": 65,
+    "fallback": 1,
+    "grade_p": 0.0189,
+    "hit": 0,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 65,
+    "stop_ci": null,
+    "tok": 762,
+    "total_tok": 2242
+   },
+   "asm8": {
+    "ans": "The evaluation results changed because the background launch initially used `MCP_EVAL_SUFFIX=b9` (without a dot), causing a `FileNotFoundError`, which was resolved by relaunching with the correct `MCP",
+    "ans_ok": 0,
+    "ci": 66,
+    "fallback": 0,
+    "grade_p": 0.0015,
+    "hit": 0,
+    "judge_tok": 1830,
+    "judged": [
+     {
+      "ci": 65,
+      "p": 0.1221,
+      "tok": 342,
+      "yes": false
+     },
+     {
+      "ci": 63,
+      "p": 0.1909,
+      "tok": 362,
+      "yes": false
+     },
+     {
+      "ci": 12,
+      "p": 0.1815,
+      "tok": 376,
+      "yes": false
+     },
+     {
+      "ci": 29,
+      "p": 0.1459,
+      "tok": 400,
+      "yes": false
+     },
+     {
+      "ci": 66,
+      "p": 0.8151,
+      "tok": 350,
+      "yes": true
+     }
+    ],
+    "n_judged": 5,
+    "sim_agree": 1,
+    "sim_ci": 66,
+    "stop_ci": 66,
+    "tok": 795,
+    "total_tok": 2625
+   },
+   "chunk": 72,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    65,
+    63,
+    12,
+    29,
+    66,
+    19,
+    8,
+    54
+   ],
+   "q": "What tool configuration changes caused the evaluation results to change?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The excerpt does not provide specific expected recall results for pc1 windows compared to the k-means union's recall at comparable budgets.",
+    "ans_ok": 1,
+    "ci": 98,
+    "fallback": 0,
+    "grade_p": 0.6288,
+    "hit": 0,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 98,
+    "stop_ci": 98,
+    "tok": 845,
+    "total_tok": 2666
+   },
+   "asm8": {
+    "ans": "The excerpt does not provide specific expected recall results for pc1 windows compared to the k-means union's recall at comparable budgets.",
+    "ans_ok": 1,
+    "ci": 98,
+    "fallback": 0,
+    "grade_p": 0.6288,
+    "hit": 0,
+    "judge_tok": 1821,
+    "judged": [
+     {
+      "ci": 93,
+      "p": 0.4453,
+      "tok": 370,
+      "yes": false
+     },
+     {
+      "ci": 94,
+      "p": 0.1412,
+      "tok": 524,
+      "yes": false
+     },
+     {
+      "ci": 91,
+      "p": 0.2563,
+      "tok": 526,
+      "yes": false
+     },
+     {
+      "ci": 98,
+      "p": 0.5695,
+      "tok": 401,
+      "yes": true
+     }
+    ],
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 98,
+    "stop_ci": 98,
+    "tok": 845,
+    "total_tok": 2666
+   },
+   "chunk": 90,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    93,
+    94,
+    91,
+    98,
+    90,
+    89,
+    99,
+    92
+   ],
+   "q": "What are the expected recall results for pc1 windows compared to the k-means union's recall at comparable budgets?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "You can improve your tool selection accuracy by sliding a 10-tool window across the population with a step of 7 and an overlap of 3, then building the final list from the top-scoring windows using eit",
+    "ans_ok": 0,
+    "ci": 89,
+    "fallback": 0,
+    "grade_p": 0.0176,
+    "hit": 0,
+    "n_judged": 3,
+    "sim_agree": 1,
+    "sim_ci": 89,
+    "stop_ci": 89,
+    "tok": 832,
+    "total_tok": 1912
+   },
+   "asm8": {
+    "ans": "You can improve your tool selection accuracy by sliding a 10-tool window across the population with a step of 7 and an overlap of 3, then building the final list from the top-scoring windows using eit",
+    "ans_ok": 0,
+    "ci": 89,
+    "fallback": 0,
+    "grade_p": 0.0176,
+    "hit": 0,
+    "judge_tok": 1080,
+    "judged": [
+     {
+      "ci": 65,
+      "p": 0.1066,
+      "tok": 345,
+      "yes": false
+     },
+     {
+      "ci": 54,
+      "p": 0.014,
+      "tok": 381,
+      "yes": false
+     },
+     {
+      "ci": 89,
+      "p": 0.6778,
+      "tok": 354,
+      "yes": true
+     }
+    ],
+    "n_judged": 3,
+    "sim_agree": 1,
+    "sim_ci": 89,
+    "stop_ci": 89,
+    "tok": 832,
+    "total_tok": 1912
+   },
+   "chunk": 90,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    65,
+    54,
+    89,
+    84,
+    126,
+    19,
+    102,
+    103
+   ],
+   "q": "How can I improve my tool selection accuracy using this new sorting method?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The sliding window loses entirely on coverage compared to the union because the union provides a higher recall (88%) for the presence of the answer, whereas the sliding window only achieves 52\u201383% rec",
+    "ans_ok": 1,
+    "ci": 94,
+    "fallback": 0,
+    "grade_p": 0.7305,
+    "hit": 1,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 94,
+    "stop_ci": 94,
+    "tok": 1067,
+    "total_tok": 1582
+   },
+   "asm8": {
+    "ans": "The sliding window loses entirely on coverage compared to the union because the union provides a higher recall (88%) for the presence of the answer, whereas the sliding window only achieves 52\u201383% rec",
+    "ans_ok": 1,
+    "ci": 94,
+    "fallback": 0,
+    "grade_p": 0.7305,
+    "hit": 1,
+    "judge_tok": 515,
+    "judged": [
+     {
+      "ci": 94,
+      "p": 0.935,
+      "tok": 515,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 94,
+    "stop_ci": 94,
+    "tok": 1067,
+    "total_tok": 1582
+   },
+   "chunk": 94,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    94,
+    98,
+    93,
+    99,
+    100,
+    96,
+    90,
+    89
+   ],
+   "q": "Why does the sliding window lose entirely on coverage compared to the union?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "The system can improve its ability to find and select the correct answer by adopting the `softhint` mechanism, which inserts a conditional hint branch after the initial tool selection prompt to guide ",
+    "ans_ok": 0,
+    "ci": 126,
+    "fallback": 0,
+    "grade_p": 0.0054,
+    "hit": 0,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 126,
+    "stop_ci": 126,
+    "tok": 952,
+    "total_tok": 1352
+   },
+   "asm8": {
+    "ans": "The system can improve its ability to find and select the correct answer by adopting the `softhint` mechanism, which inserts a conditional hint branch after the initial tool selection prompt to guide ",
+    "ans_ok": 0,
+    "ci": 126,
+    "fallback": 0,
+    "grade_p": 0.0054,
+    "hit": 0,
+    "judge_tok": 400,
+    "judged": [
+     {
+      "ci": 126,
+      "p": 0.7028,
+      "tok": 400,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 126,
+    "stop_ci": 126,
+    "tok": 952,
+    "total_tok": 1352
+   },
+   "chunk": 94,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    126,
+    54,
+    19,
+    48,
+    21,
+    22,
+    132,
+    53
+   ],
+   "q": "How can I improve the system's ability to find and select the correct answer?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "According to the menu hypothesis, the false-abstention magnet on real requests is the description clause \"a question you can answer directly,\" which invites the model to over-trust its own direct-answ",
+    "ans_ok": 1,
+    "ci": 117,
+    "fallback": 0,
+    "grade_p": 0.8896,
+    "hit": 1,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 117,
+    "stop_ci": 117,
+    "tok": 837,
+    "total_tok": 1230
+   },
+   "asm8": {
+    "ans": "According to the menu hypothesis, the false-abstention magnet on real requests is the description clause \"a question you can answer directly,\" which invites the model to over-trust its own direct-answ",
+    "ans_ok": 1,
+    "ci": 117,
+    "fallback": 0,
+    "grade_p": 0.8896,
+    "hit": 1,
+    "judge_tok": 393,
+    "judged": [
+     {
+      "ci": 117,
+      "p": 0.9489,
+      "tok": 393,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 117,
+    "stop_ci": 117,
+    "tok": 837,
+    "total_tok": 1230
+   },
+   "chunk": 117,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    117,
+    118,
+    111,
+    112,
+    113,
+    126,
+    54,
+    131
+   ],
+   "q": "What is the false-abstention magnet on real requests according to the menu hypothesis?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "The provided excerpt does not contain instructions on how to make AI tools stop ignoring real requests or only giving up answers.",
+    "ans_ok": 0,
+    "ci": 48,
+    "fallback": 1,
+    "grade_p": 0.2241,
+    "hit": 0,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 48,
+    "stop_ci": null,
+    "tok": 781,
+    "total_tok": 2294
+   },
+   "asm8": {
+    "ans": "The provided excerpt does not contain instructions on how to make AI tools stop ignoring real requests or only giving up answers.",
+    "ans_ok": 0,
+    "ci": 48,
+    "fallback": 1,
+    "grade_p": 0.2241,
+    "hit": 0,
+    "judge_tok": 2970,
+    "judged": [
+     {
+      "ci": 48,
+      "p": 0.0114,
+      "tok": 372,
+      "yes": false
+     },
+     {
+      "ci": 54,
+      "p": 0.0016,
+      "tok": 384,
+      "yes": false
+     },
+     {
+      "ci": 53,
+      "p": 0.0156,
+      "tok": 356,
+      "yes": false
+     },
+     {
+      "ci": 126,
+      "p": 0.1697,
+      "tok": 401,
+      "yes": false
+     },
+     {
+      "ci": 19,
+      "p": 0.1396,
+      "tok": 359,
+      "yes": false
+     },
+     {
+      "ci": 108,
+      "p": 0.0956,
+      "tok": 397,
+      "yes": false
+     },
+     {
+      "ci": 65,
+      "p": 0.0088,
+      "tok": 348,
+      "yes": false
+     },
+     {
+      "ci": 1,
+      "p": 0.0659,
+      "tok": 353,
+      "yes": false
+     }
+    ],
+    "n_judged": 8,
+    "sim_agree": 1,
+    "sim_ci": 48,
+    "stop_ci": null,
+    "tok": 781,
+    "total_tok": 3751
+   },
+   "chunk": 117,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    48,
+    54,
+    53,
+    126,
+    19,
+    108,
+    65,
+    1
+   ],
+   "q": "How can I make my AI tools stop ignoring real requests and only giving up answers?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The hintfam arm had the highest accuracy ever measured here at 0.7122.",
+    "ans_ok": 1,
+    "ci": 122,
+    "fallback": 0,
+    "grade_p": 0.924,
+    "hit": 1,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 122,
+    "stop_ci": 122,
+    "tok": 1139,
+    "total_tok": 1702
+   },
+   "asm8": {
+    "ans": "The hintfam arm had the highest accuracy ever measured here at 0.7122.",
+    "ans_ok": 1,
+    "ci": 122,
+    "fallback": 0,
+    "grade_p": 0.924,
+    "hit": 1,
+    "judge_tok": 563,
+    "judged": [
+     {
+      "ci": 122,
+      "p": 0.9427,
+      "tok": 563,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 122,
+    "stop_ci": 122,
+    "tok": 1139,
+    "total_tok": 1702
+   },
+   "chunk": 122,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    122,
+    13,
+    99,
+    22,
+    100,
+    105,
+    26,
+    19
+   ],
+   "q": "Which arm had the highest accuracy ever measured here?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "The fastest way to run a high-accuracy query is to use the search-primary arm, which invokes only the mcp_search line with a 3-way contract to achieve a final pick.",
+    "ans_ok": 0,
+    "ci": 19,
+    "fallback": 1,
+    "grade_p": 0.0037,
+    "hit": 0,
+    "n_judged": 4,
+    "sim_agree": 1,
+    "sim_ci": 19,
+    "stop_ci": null,
+    "tok": 958,
+    "total_tok": 2413
+   },
+   "asm8": {
+    "ans": "The fastest way to run a high-accuracy query is to use the search-primary arm, which invokes only the mcp_search line with a 3-way contract to achieve a final pick.",
+    "ans_ok": 0,
+    "ci": 19,
+    "fallback": 1,
+    "grade_p": 0.0037,
+    "hit": 0,
+    "judge_tok": 2982,
+    "judged": [
+     {
+      "ci": 19,
+      "p": 0.1239,
+      "tok": 358,
+      "yes": false
+     },
+     {
+      "ci": 54,
+      "p": 0.0812,
+      "tok": 383,
+      "yes": false
+     },
+     {
+      "ci": 27,
+      "p": 0.0752,
+      "tok": 371,
+      "yes": false
+     },
+     {
+      "ci": 22,
+      "p": 0.0231,
+      "tok": 343,
+      "yes": false
+     },
+     {
+      "ci": 1,
+      "p": 0.022,
+      "tok": 352,
+      "yes": false
+     },
+     {
+      "ci": 126,
+      "p": 0.241,
+      "tok": 400,
+      "yes": false
+     },
+     {
+      "ci": 67,
+      "p": 0.0721,
+      "tok": 429,
+      "yes": false
+     },
+     {
+      "ci": 21,
+      "p": 0.0345,
+      "tok": 346,
+      "yes": false
+     }
+    ],
+    "n_judged": 8,
+    "sim_agree": 1,
+    "sim_ci": 19,
+    "stop_ci": null,
+    "tok": 958,
+    "total_tok": 3940
+   },
+   "chunk": 122,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    19,
+    54,
+    27,
+    22,
+    1,
+    126,
+    67,
+    21
+   ],
+   "q": "What is the fastest way to run a high-accuracy query in this system?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "According to the passage, intent calls are nearly free on the local server and their false-CHAT weakness was demoted from fatal to mild, resulting in a gain of 16 tokens and a loss of 3 tokens.",
+    "ans_ok": 0,
+    "ci": 129,
+    "fallback": 0,
+    "grade_p": 0.009,
+    "hit": 0,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 129,
+    "stop_ci": 129,
+    "tok": 896,
+    "total_tok": 1338
+   },
+   "asm8": {
+    "ans": "According to the passage, intent calls are nearly free on the local server and their false-CHAT weakness was demoted from fatal to mild, resulting in a gain of 16 tokens and a loss of 3 tokens.",
+    "ans_ok": 0,
+    "ci": 129,
+    "fallback": 0,
+    "grade_p": 0.009,
+    "hit": 0,
+    "judge_tok": 442,
+    "judged": [
+     {
+      "ci": 129,
+      "p": 0.5599,
+      "tok": 442,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 129,
+    "stop_ci": 129,
+    "tok": 896,
+    "total_tok": 1338
+   },
+   "chunk": 127,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    129,
+    127,
+    108,
+    126,
+    130,
+    119,
+    136,
+    135
+   ],
+   "q": "What is the effect of intent calls on tokens according to the passage?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "Adding a quick screening step ahead of the main decision will result in the production gate gaining one extra LLM call per utterance and a branch on its verdict based on the screening's outcome.",
+    "ans_ok": 0,
+    "ci": 126,
+    "fallback": 0,
+    "grade_p": 0.1885,
+    "hit": 0,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 126,
+    "stop_ci": 126,
+    "tok": 855,
+    "total_tok": 1258
+   },
+   "asm8": {
+    "ans": "Adding a quick screening step ahead of the main decision will result in the production gate gaining one extra LLM call per utterance and a branch on its verdict based on the screening's outcome.",
+    "ans_ok": 0,
+    "ci": 126,
+    "fallback": 0,
+    "grade_p": 0.1885,
+    "hit": 0,
+    "judge_tok": 403,
+    "judged": [
+     {
+      "ci": 126,
+      "p": 0.788,
+      "tok": 403,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 126,
+    "stop_ci": 126,
+    "tok": 855,
+    "total_tok": 1258
+   },
+   "chunk": 127,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    126,
+    111,
+    94,
+    51,
+    108,
+    22,
+    19,
+    118
+   ],
+   "q": "What should I expect to change if I add a quick screening step ahead of the main decision?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The softhint method achieved an accuracy of 0.7194 in the MS-28 results.",
+    "ans_ok": 1,
+    "ci": 128,
+    "fallback": 0,
+    "grade_p": 0.9647,
+    "hit": 1,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 128,
+    "stop_ci": 128,
+    "tok": 1063,
+    "total_tok": 1586
+   },
+   "asm8": {
+    "ans": "The softhint method achieved an accuracy of 0.7194 in the MS-28 results.",
+    "ans_ok": 1,
+    "ci": 128,
+    "fallback": 0,
+    "grade_p": 0.9647,
+    "hit": 1,
+    "judge_tok": 523,
+    "judged": [
+     {
+      "ci": 128,
+      "p": 0.9527,
+      "tok": 523,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 128,
+    "stop_ci": 128,
+    "tok": 1063,
+    "total_tok": 1586
+   },
+   "chunk": 128,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    128,
+    132,
+    134,
+    129,
+    135,
+    133,
+    130,
+    122
+   ],
+   "q": "What accuracy did the softhint method achieve in the MS-28 results?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "Adopting a conditional hint improves accuracy by inserting a specific hint branch after the initial tool selection prompt, which triggers an additional LLM call to determine whether to proceed with a ",
+    "ans_ok": 0,
+    "ci": 126,
+    "fallback": 0,
+    "grade_p": 0.024,
+    "hit": 0,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 126,
+    "stop_ci": 126,
+    "tok": 956,
+    "total_tok": 1354
+   },
+   "asm8": {
+    "ans": "Adopting a conditional hint improves accuracy by inserting a specific hint branch after the initial tool selection prompt, which triggers an additional LLM call to determine whether to proceed with a ",
+    "ans_ok": 0,
+    "ci": 126,
+    "fallback": 0,
+    "grade_p": 0.024,
+    "hit": 0,
+    "judge_tok": 398,
+    "judged": [
+     {
+      "ci": 126,
+      "p": 0.7161,
+      "tok": 398,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 126,
+    "stop_ci": 126,
+    "tok": 956,
+    "total_tok": 1354
+   },
+   "chunk": 128,
+   "chunk_agree": 1.0,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "pool": [
+    126,
+    128,
+    125,
+    123,
+    130,
+    132,
+    121,
+    54
+   ],
+   "q": "How can I improve my results' accuracy by adopting a conditional hint?",
+   "recipe": "indirect"
+  },
+  {
+   "asm4": {
+    "ans": "The weights require the Qwen3.5-4B UD-Q4_K_XL encoder with `--embedding` and `--pooling last` settings.",
+    "ans_ok": 1,
+    "ci": 1,
+    "fallback": 0,
+    "grade_p": 0.986,
+    "hit": 1,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 1,
+    "stop_ci": 1,
+    "tok": 514,
+    "total_tok": 758
+   },
+   "asm8": {
+    "ans": "The weights require the Qwen3.5-4B UD-Q4_K_XL encoder with `--embedding` and `--pooling last` settings.",
+    "ans_ok": 1,
+    "ci": 1,
+    "fallback": 0,
+    "grade_p": 0.986,
+    "hit": 1,
+    "judge_tok": 244,
+    "judged": [
+     {
+      "ci": 1,
+      "p": 0.9348,
+      "tok": 244,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 1,
+    "stop_ci": 1,
+    "tok": 514,
+    "total_tok": 758
+   },
+   "chunk": 1,
+   "chunk_agree": 1.0,
+   "doc": "models/README.md",
+   "pool": [
+    1,
+    0
+   ],
+   "q": "What encoder and pooling settings are required to use these weights?",
+   "recipe": "direct"
+  },
+  {
+   "asm4": {
+    "ans": "You must ensure your custom weights work correctly by using them only with the specific encoder they were recorded from, which is the Qwen3.5-4B UD-Q4_K_XL model configured with `--embedding --pooling",
+    "ans_ok": 1,
+    "ci": 1,
+    "fallback": 0,
+    "grade_p": 0.9181,
+    "hit": 1,
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 1,
+    "stop_ci": 1,
+    "tok": 546,
+    "total_tok": 793
+   },
+   "asm8": {
+    "ans": "You must ensure your custom weights work correctly by using them only with the specific encoder they were recorded from, which is the Qwen3.5-4B UD-Q4_K_XL model configured with `--embedding --pooling",
+    "ans_ok": 1,
+    "ci": 1,
+    "fallback": 0,
+    "grade_p": 0.9181,
+    "hit": 1,
+    "judge_tok": 247,
+    "judged": [
+     {
+      "ci": 1,
+      "p": 0.6695,
+      "tok": 247,
+      "yes": true
+     }
+    ],
+    "n_judged": 1,
+    "sim_agree": 1,
+    "sim_ci": 1,
+    "stop_ci": 1,
+    "tok": 546,
+    "total_tok": 793
+   },
+   "chunk": 1,
+   "chunk_agree": 1.0,
+   "doc": "models/README.md",
+   "pool": [
+    1,
+    0
+   ],
+   "q": "How do I ensure my custom weights work correctly with this specific model version?",
+   "recipe": "indirect"
+  }
+ ],
+ "registered_sim_predictions": {
+  "fallback_16_of_58_band": [
+   14,
+   18
+  ],
+  "mean_judged_3p6_band": [
+   3.4,
+   3.9
+  ],
+  "stop_hit_27_of_58_band": [
+   26,
+   28
+  ]
+ },
+ "sanity": {
+  "chunk_agree": 1.0,
+  "ok": true,
+  "sim_answered_agree_4": 1.0,
+  "sim_answered_agree_8": 1.0
+ },
+ "smoke": false,
+ "tag": "poolstop",
+ "tau": 0.5,
+ "verdicts": {
+  "C1": [
+   "PASS",
+   -0.0172
+  ],
+  "C2": [
+   "PASS-budget",
+   2206.2
+  ],
+  "C3": [
+   "PASS",
+   0.0172
+  ]
+ }
+}

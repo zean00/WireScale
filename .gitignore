@@ -18,3 +18,4 @@ results/qrewrite_smoke.json
 results/kmid_smoke.json
 assembly_smoke.json
 results/topk_smoke.json
+results/poolstop_smoke.json

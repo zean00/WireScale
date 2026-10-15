@@ -229,7 +229,7 @@
       <span class="chip a"><b>121</b> real tools filtered to ~65</span>
       <span class="chip t"><b>58</b> frozen questions over a <b>180</b>-page corpus</span>
       <span class="chip v"><b>902</b>-triple knowledge graph</span>
-      <span class="chip"><b>18</b>/34 headline predictions passed as registered — the failures map the dead ends</span>
+      <span class="chip"><b>21</b>/37 headline predictions passed as registered — the failures map the dead ends</span>
     </div>
   </div>
   <div class="wrap scrollcue">the experiments</div>
@@ -605,18 +605,21 @@
               <td>A1–A4 ALL PASS — .431 vs .345 (vector RAG) at 18.6% of the exhaustive cost</td></tr>
           <tr class="hl"><td><b>B</b> — the fair fight</td><td>does the machine still win when RAG gets its real production form (top-k excerpts, no handicaps)?</td>
               <td>B1/B2 PASS — top-k RAG flatlines at .33–.40 for every k; registered bets said the machine loses, and they were wrong</td></tr>
+          <tr class="hl"><td><b>C</b> — the pool-confined machine</td><td>can RAG's top-8 pool host the machine's scan — same accuracy, a fraction of the cost?</td>
+              <td>C1–C3 ALL PASS — .414 vs the full machine's .431 (one question, where gold lives beyond the pool) at 40.6% of the cost; the disclosed simulation reproduced exactly</td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="chart rv">
       <div class="ct"><h3>The machine: more right answers, a sixth of the cost</h3>
-        <span class="cs">answer accuracy over the frozen 58 vs judge prompt cost · A + B series (assembly.json, topk.json)</span></div>
+        <span class="cs">answer accuracy over the frozen 58 vs judge prompt cost · A + B + C series (assembly.json, topk.json, poolstop.json)</span></div>
       <div id="chartRetrieval"></div>
       <div class="tblcap">vector top-1 .345 @ 798 tok · top-k RAG k=2/3/5/8: .397/.345/.328/.345 @ 1,146–3,045 —
         the grey flatline (context hit climbs .45→.81, synthesis collapses .77→.43, net zero) ·
         same policy in document order .379 @ 13,640 ·
-        the machine .431 @ 5,428 (18.6% of reading everything, dashed) · judge-graded answers, registered
+        the machine .431 @ 5,428 (18.6% of reading everything, dashed) · pool-confined machine .414 @ 2,206 —
+        the same verifier reading RAG's shortlist at 40.6% of the cost · judge-graded answers, registered
         fallback fired on 21% of questions.</div>
     </div>
 
@@ -627,8 +630,11 @@
          the bar, fall back to rank-1 when nothing does. And it survived the fair fight: when RAG got its real production
          form — top-k excerpts in one prompt — stuffing in more pages raised context hit (.45→.81) but answer accuracy
          flatlined (.33–.40), because synthesis collapses as context grows (.77→.43). One judge-verified page beats eight
-         candidates. Honest losses, disclosed in the ledger: even holding the right page the answer sometimes comes out
-         wrong (−3.4 pts from synthesis), questions asked in roundabout ways stay hard (.207), and plain top-2 RAG keeps
+         candidates. The ending is a merger, not a winner: the machine now reads <b>RAG's own shortlist</b> — scan the
+         top-8, stop at the first verified page, answer from that page alone — keeping .414 of the full machine's .431
+         at 40.6% of its cost. Honest losses, disclosed in the ledger: even holding the right page the answer sometimes
+         comes out wrong (−3.4 pts from synthesis), questions asked in roundabout ways stay hard (.207), the pool's gold
+         is captured only .466 of the time (the verifier is the binding constraint), and plain top-2 RAG keeps
          the per-token crown (92% of the machine's accuracy at 21% of its cost).</p>
     </div>
   </div>
@@ -738,9 +744,9 @@
       <div class="card teal rv"><div class="k">law 05</div><h3>Sort, verify, stop — then fall back</h3>
         <p>A ranking is not an answer. Let the cheap model order the pages, let the careful model check
            them one at a time until confident, and keep a safe fallback for when it never is: <b>.431 vs
-           .345</b> for plain vector RAG, at 18.6% of the read-everything cost — and still <b>.431 vs
-           .397</b> when RAG got its production form (best top-k), at any budget the machine can afford.
-           The verifier beats the guesser, the brute, and the pile.</p></div>
+           .345</b> for plain vector RAG at 18.6% of the read-everything cost — still <b>.414 vs .397</b>
+           confined to RAG's own top-8 shortlist at 40.6% of the cost (the pool costs one question,
+           where gold hides beyond rank 8). The verifier beats the guesser, the brute, and the pile.</p></div>
       <div class="card amber rv"><div class="k">law 06</div><h3>Helping the input hurts</h3>
         <p>Three times measured: the embedder's official instruct prefix (−3.5 pts), LLM query rewriting
            (−6.9 indirect, −3.5 direct), and now <b>context stuffing</b> — top-k RAG's synthesis given
@@ -926,6 +932,7 @@ lineChart('chartDepth', {
     {n:'vector top-1 .345', t:798, a:.3448, c:'#9aa4b8'},
     {n:'same policy, doc order .379', t:13640, a:.3793, c:'#9aa4b8'},
     {n:'the machine .431', t:5428, a:.431, c:'#2dd4bf'},
+    {n:'pool-confined machine .414', t:2206, a:.4138, c:'#2dd4bf'},
   ];
   const ks=[[798,.3448],[1146,.3966],[1467,.3448],[2089,.3276],[3045,.3448]];
   svg.appendChild(mk('polyline',{points:ks.map(p=>X(p[0])+','+Y(p[1])).join(' '),
