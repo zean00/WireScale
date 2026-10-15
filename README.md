@@ -4,7 +4,7 @@
 
 A pre-registered laboratory for decision structure. One frozen encoder, many
 readouts — and one rule: **register the prediction before the data, then obey
-the verdict.** Fifteen scored entries live here:
+the verdict.** Seventeen scored entries live here:
 
 1. **Decision trees** (P-series) — when an answer space is a hierarchy, is it
    cheaper to walk it level by level (asking a smaller question at each step)
@@ -126,6 +126,24 @@ the verdict.** Fifteen scored entries live here:
     are untouched. Margins at the ±.02–.09 scale are prompt-dependent; the
     same scale S-amendment already found within noise. Both audits point at
     the same fix: more questions.
+16. **Doc-selection** (F-series) — *scored 2026-10-15*: the layer above the
+    pool. Every scored machine got the gold document for free; cross-doc
+    ranking had never been measured. Registered rule: doc score = max chunk
+    cosine. **PF1 FAIL** (doc-hit .621 — a chunk-count lottery: one doc holds
+    137 of 180 chunks, so its max-of-137-draws wins 43/58 selections, 19 of
+    the 22 mis-selections), **PF2 FAIL** (mis-selection costs 14 pts: .310
+    vs the anchor .448), **PF3 PASS** (skipping the layer — a global top-8
+    pool — beats running it, .362), **PF4 FAIL-budget** (2,691 tok/q). The
+    reader is unchanged — given gold in its pool the global arm answers
+    .645 — the cross-doc librarian is the whole failure.
+17. **Abstention** (H-series) — *scored 2026-10-15*: committed-data-only
+    (zero model calls, Z-series precedent). On the committed D-H fallbacks,
+    abstain when the pool's max calibrated p < φ = .15 (chosen a priori from
+    the public diagnostic). **H1–H3 ALL PASS**: the floor withholds 11 of
+    58 questions at **.909 precision** (they are 91% wrong-answer) and lifts
+    accuracy-given-answered **.448 → .532** at +.084 — "I don't know" is now
+    the measured move for a voice assistant, at zero token cost. The φ sweep
+    is monotone and saturates at .30, exactly as a saturated judge implies.
 
 **Every number in this repo is a committed artifact.** Hypotheses, arms, bars,
 and amendments live in [protocol.md](protocol.md) — committed before any
@@ -311,17 +329,30 @@ rewrite rescues pure RAG +.24 and ties the machine) — the instrument
 sensitivity is disclosed on every answer-level number, and both audits
 converge on the same registered fix: grow the question set.
 
-**25 of 45 headline predictions passed as registered.** The failures
+The deployment batch (2026-10-15, same day) asked the two questions a voice
+assistant actually faces. **Doc-selection (F-series) failed as registered**:
+picking the document by max chunk similarity is a chunk-count lottery (the
+137-chunk doc wins 43/58 selections), mis-selection costs 14 points, and a
+global top-8 pool with no doc layer at all beats the layer — the committed
+numbers presuppose doc knowledge, and that presupposition is now priced.
+**Abstention (H-series) swept**: a calibrated floor on the pool's max
+confidence withholds the 19% of fallback questions that are 91% wrong-answer
+at .909 precision, lifting accuracy-given-answered to .532 — zero tokens,
+Z-series-style, computed from committed vectors alone.
+
+**29 of 52 headline predictions passed as registered.** The failures
 keep mapping the dead ends (rewriting, route commitment, pooling dials,
-trained heads — and the operator's own bet that plain top-k RAG would
-beat the machine, and the bet that the high judge bar would trade into
-the weak fallback link); the passes now form a recipe — and the recipe
-is now a scored machine that survived its fair fight, got 2.5× cheaper
-by letting RAG draw its reading list, and got 3× cheaper again by
-stiffening the judge's bar: **embed with the dedicated model, scan the
-top-8 pool, stop only when the calibrated judge is confident (τ=.70 is
-the scored sweet spot), fall back to the rank-1 pick when nothing
-crosses, hedge on graphs, and read flat when flat fits.**
+trained heads — and the operator's own bets that plain top-k RAG would
+beat the machine, that the high judge bar would trade into the weak
+fallback link, and that doc selection by raw max-similarity was safe);
+the passes now form a recipe — and the recipe is now a scored machine
+that survived its fair fight, got 2.5× cheaper by letting RAG draw its
+reading list, 3× cheaper again by stiffening the judge's bar, and now
+knows when to say nothing at all: **embed with the dedicated model,
+scan the top-8 pool, stop only when the calibrated judge is confident
+(τ=.70 is the scored sweet spot), abstain when the whole pool is
+confidently empty (φ=.15 at the knee), otherwise fall back to the
+rank-1 pick, hedge on graphs, and read flat when flat fits.**
 
 What transferred to production: beam-2 path scoring in the WireSense router —
 which only worked after discovering paths of different depth must be scored by
@@ -360,6 +391,8 @@ gate rule, and the grader-audit ritual — are packaged for the destination in
 | `stats.py`, `results/stats_amendment.json` | S-amendment (exact McNemar + paired bootstrap over six answer-level comparisons) — **computed 2026-10-15 (all six NOT ESTABLISHED)** |
 | `pooljudge.py`, `results/pooljudge.json` | D-series (S vs M verifier instruments, D-M/D-H arms, τ sweep) — **scored 2026-10-15 (D1 FAIL, D2 PARTIAL, D3 PASS-budget, D4 PASS — season-best arm)** |
 | `regrade.py`, `results/regrade.json` | G-series (grader audit: reworded + sampled graders on committed answer strings) — **scored 2026-10-15 (GA PASS ×2, GB FAIL ×2)** |
+| `fselect.py`, `results/fselect.json` | F-series (doc-selection: max-cosine doc rule, F-DOC vs F-GLOB, first cross-doc measurement) — **scored 2026-10-15 (PF1/PF2/PF4 FAIL, PF3 PASS — the layer loses to skipping it)** |
+| `abstain.py`, `results/abstain.json` | H-series (abstention vs fallback; committed-data-only, zero LLM calls) — **scored 2026-10-15 (H1–H3 ALL PASS)** |
 | `adjudicate.py` | mechanical P1–P4 verdicts against the registered bars |
 | `posthoc_p3.py` | the post-hoc m=0 probe behind P3's verdict |
 | `embed_client.py` | embedding client for the frozen encoder |
@@ -392,6 +425,8 @@ python -m venv .venv && .venv/bin/pip install numpy torch   # already present he
 .venv/bin/python poolstop.py --smoke    # C-series plumbing check (never scored)
 .venv/bin/python pooljudge.py --smoke   # D-series plumbing check (never scored)
 .venv/bin/python regrade.py --smoke     # G-series plumbing check (never scored)
+.venv/bin/python fselect.py --smoke     # F-series plumbing check (never scored)
+.venv/bin/python abstain.py --smoke     # H-series plumbing check (never scored)
 .venv/bin/python stats.py               # S-amendment (committed data only)
 .venv/bin/python adjudicate.py          # recompute P1–P4 verdicts from results/
 ```

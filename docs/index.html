@@ -229,7 +229,7 @@
       <span class="chip a"><b>121</b> real tools filtered to ~65</span>
       <span class="chip t"><b>58</b> frozen questions over a <b>180</b>-page corpus</span>
       <span class="chip v"><b>902</b>-triple knowledge graph</span>
-      <span class="chip"><b>25</b>/45 headline predictions passed as registered — the failures map the dead ends</span>
+      <span class="chip"><b>29</b>/52 headline predictions passed as registered — the failures map the dead ends</span>
     </div>
   </div>
   <div class="wrap scrollcue">the experiments</div>
@@ -613,6 +613,10 @@
               <td>D1 FAIL · D2 PARTIAL · D3 PASS · D4 PASS — self-consistency changed zero decisions (58/58 identical); the high bar (τ=.70) is the season's best arm: .448 at 26% of the machine's cost</td></tr>
           <tr><td><b>G</b> — the grader audit</td><td>every answer-level number rests on one grader prompt — does the season's ordering survive two altered graders?</td>
               <td>GA PASS ×2 · GB FAIL ×2 — orderings survive both audits; the rewrite rescues pure RAG +.24 and ties the machine, so margins carry a disclosed prompt-sensitivity caveat</td></tr>
+          <tr class="hl"><td><b>F</b> — doc-selection</td><td>every scored machine got the right document for free — what happens when it must pick one?</td>
+              <td>PF1/PF2/PF4 FAIL · PF3 PASS — max-similarity selection is a chunk-count lottery (the 137-chunk doc wins 43/58 picks, mis-selection costs 14 pts); a global pool with no doc layer beats the layer</td></tr>
+          <tr class="hl"><td><b>H</b> — abstention</td><td>should the machine say "I don't know" when nothing verifies?</td>
+              <td>H1–H3 ALL PASS — a calibrated floor withholds the 19% of fallback questions that are 91% wrong (precision .909), lifting accuracy-given-answered .448 → .532 at zero tokens</td></tr>
         </tbody>
       </table>
     </div>
@@ -649,7 +653,12 @@
          accuracy at 21% of its cost). And the scoreboard itself was audited: every answer-level margin sits inside
          statistical noise at n=58, and under a reworded grader the machine's margin over pure RAG collapses to a tie —
          the orderings survive every audit, the margins carry a disclosed caveat, and both audits register the same fix:
-         more questions.</p>
+         more questions. The deployment batch then priced the machine's two hidden assumptions: it had always been
+         <i>given</i> the right document, and picking one by max similarity is a chunk-count lottery that costs 14 points
+         (a global pool with no doc layer beats the layer — the reader was never the problem, the cross-doc list was).
+         And it learned the fourth answer: <b>"I don't know."</b> A calibrated floor on the pool's confidence withholds
+         the questions that are 91% wrong-answer, lifting accuracy-given-answered to .532 — the abstention costs zero
+         tokens, because the confidence was already computed.</p>
     </div>
   </div>
 </section>
@@ -751,13 +760,14 @@
            paths by <b>mean, never sum</b> (a 13-point crash hid in that choice).</p></div>
       <div class="card red rv"><div class="k">law 04</div><h3>Register, then obey the verdict</h3>
         <p>The first experiment went 0 for 4 — so conditioning was <b>stopped by rule</b>. Since then:
-           25 of 45 headline predictions passed as registered, and every failure is kept as a mapped
+           29 of 52 headline predictions passed as registered, and every failure is kept as a mapped
            dead end — including the operator's own pre-registered bets that plain top-k RAG would beat
-           the machine (it didn't) and that the stiffer judge bar would trade into the weak fallback
-           link (it won instead). The scoreboard gets audited by its own rules too: re-grade the same
-           answers under altered grader prompts and the orderings hold while the margins wobble —
-           disclosed, not hidden. Runs botched or invalidated are deleted unexamined and disclosed.
-           The ledger is the product.</p></div>
+           the machine (it didn't), that the stiffer judge bar would trade into the weak fallback
+           link (it won instead), and that picking the right document by max similarity was safe
+           (it's a chunk-count lottery). The scoreboard gets audited by its own rules too: re-grade
+           the same answers under altered grader prompts and the orderings hold while the margins
+           wobble — disclosed, not hidden. Runs botched or invalidated are deleted unexamined and
+           disclosed. The ledger is the product.</p></div>
       <div class="card teal rv"><div class="k">law 05</div><h3>Sort, verify, stop — then fall back</h3>
         <p>A ranking is not an answer. Let the cheap model order the pages, let the careful model check
            them one at a time until confident, and keep a safe fallback for when it never is: <b>.431 vs
@@ -766,7 +776,10 @@
            <b>.448 at 26% of the cost</b>, the season's best arm: the stiffer bar turns confident-wrong
            stops into recoverable fallbacks, while making the judge sample three times changed nothing
            at all (its misses are confident rejections — saturate the bar, don't double-check it).
-           The verifier beats the guesser, the brute, and the pile.</p></div>
+           The same confidence answers the last question for free: when the <i>whole pool</i> is
+           confidently empty, say <b>"I don't know"</b> — the floor withholds 19% of questions at .91
+           precision and lifts answered accuracy to .532, at zero tokens. The verifier beats the
+           guesser, the brute, the pile — and knows when to stay silent.</p></div>
       <div class="card amber rv"><div class="k">law 06</div><h3>Helping the input hurts</h3>
         <p>Three times measured: the embedder's official instruct prefix (−3.5 pts), LLM query rewriting
            (−6.9 indirect, −3.5 direct), and now <b>context stuffing</b> — top-k RAG's synthesis given

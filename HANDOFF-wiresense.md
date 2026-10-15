@@ -110,22 +110,31 @@ Each paid for once; don't pay again:
    confirm the winhint-over-shipped-gate *ordering* survives an altered
    grader prompt, and size the eval set so the margin is a claim.
 
-## Proposed next series in the lab (proposals, not yet registered)
+## Scored since the first export (both registered and scored 2026-10-15)
 
-- **#4 Doc-selection** — the layer above T1: *which* document/collection
-  gets read. Arms: embedder doc-rank + within-doc machine vs flat scan vs
-  doc-order walk. The K/W precedent says flat wins when it fits; the open
-  question is the budget-matched crossover.
-- **#5 Abstention** — replace T1's rank-1 fallback with abstention
-  ("I don't know") when the pool's max calibrated p sits below a floor.
-  Bars should be risk-relaxed: accuracy-given-answered ≥ the rank-1 arm's,
-  with coverage reported as a first-class number. Directly wired to what a
-  voice assistant should say when nothing verifies.
+- **#4 Doc-selection — REGISTERED AND FAILED, usefully.** Picking the document
+  by max chunk cosine is a **chunk-count lottery**: on the lab corpus
+  (docs of 9 / 32 / 137 / 2 chunks) the 137-chunk doc won 43/58 selections
+  and mis-selection cost 14 points; a global top-8 pool with *no* doc layer
+  beat the layer outright. Rule for WireSense: **never select documents by
+  raw max-of-chunks** — the max of more draws is larger by construction. If
+  a doc layer is ever needed, register a count-corrected or centroid rule
+  first; on a small corpus, skip the layer and let global ranking absorb it.
+- **#5 Abstention — REGISTERED AND PASSED, production shape.** On fallback
+  questions, abstain when the pool's max calibrated p < φ (a priori .15 —
+  the knee of the sweep): withholds 19% of questions at **.909 precision**
+  (they are 91% wrong-answer) and lifts accuracy-given-answered .448 → .532
+  at **zero token cost** (the confidence is already computed). This is T2's
+  dial one more time: place thresholds on saturated confidence, never
+  re-sample it. For a voice assistant, "I don't know" is now the measured
+  move.
 
 ---
 
 *Evidence index (lab repo): `asm.py`/`assembly.json` (A), `topk.py`/
 `topk.json` (B), `poolstop.py`/`poolstop.json` (C), `stats.py`/
 `results/stats_amendment.json` (S), `pooljudge.py`/`results/pooljudge.json`
-(D), `regrade.py`/`results/regrade.json` (G); `protocol.md` is the full
-decision record. Register first, measure, admit when wrong.*
+(D), `regrade.py`/`results/regrade.json` (G), `fselect.py`/
+`results/fselect.json` (F), `abstain.py`/`results/abstain.json` (H);
+`protocol.md` is the full decision record. Register first, measure,
+admit when wrong.*
