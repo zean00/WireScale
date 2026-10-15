@@ -1,0 +1,2158 @@
+{
+ "commit": "e6d8199",
+ "committed_acc": {
+  "asm": 0.431,
+  "asm8": 0.4138,
+  "top1": 0.3448,
+  "topk2": 0.3966
+ },
+ "limit": 0,
+ "model_fp": "7cfe33f65c1c",
+ "n_samples_g2": 3,
+ "records": [
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.6507,
+    "g2_ok": 0,
+    "g2_p": 0.1984
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.6507,
+    "g2_ok": 0,
+    "g2_p": 0.1984
+   },
+   "chunk": 0,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "README.md",
+   "q": "Does telling each level its parent's answer help in decision trees?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.6507,
+    "g2_ok": 0,
+    "g2_p": 0.1984
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.3225,
+    "g2_ok": 0,
+    "g2_p": 0.1376
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.6455,
+    "g2_ok": 0,
+    "g2_p": 0.3746
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.6455,
+    "g2_ok": 0,
+    "g2_p": 0.3746
+   },
+   "chunk": 0,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "README.md",
+   "q": "How can I quickly decide which specialist to contact based on the message type?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.6455,
+    "g2_ok": 0,
+    "g2_p": 0.3746
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.2258,
+    "g2_ok": 0,
+    "g2_p": 0.0716
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.9633,
+    "g2_ok": 1,
+    "g2_p": 0.9066
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.9633,
+    "g2_ok": 1,
+    "g2_p": 0.9066
+   },
+   "chunk": 2,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 1
+   },
+   "doc": "README.md",
+   "q": "What was the outcome of the FiLM conditioning layer in the S-series experiments?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.9633,
+    "g2_ok": 1,
+    "g2_p": 0.9066
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.9633,
+    "g2_ok": 1,
+    "g2_p": 0.9066
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.766,
+    "g2_ok": 0,
+    "g2_p": 0.4533
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.766,
+    "g2_ok": 0,
+    "g2_p": 0.4533
+   },
+   "chunk": 2,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "README.md",
+   "q": "Which method consistently improves decision accuracy across multiple complex domains?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.766,
+    "g2_ok": 0,
+    "g2_p": 0.4533
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.2336,
+    "g2_ok": 0,
+    "g2_p": 0.1009
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.0383,
+    "g2_ok": 0,
+    "g2_p": 0.0083
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.0383,
+    "g2_ok": 0,
+    "g2_p": 0.0083
+   },
+   "chunk": 4,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "README.md",
+   "q": "What is the MS-series decision record contained in PROTOCOL-mcp-selection.md?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.0383,
+    "g2_ok": 0,
+    "g2_p": 0.0083
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.0324,
+    "g2_ok": 0,
+    "g2_p": 0.0076
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.2427,
+    "g2_ok": 0,
+    "g2_p": 0.0759
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.2427,
+    "g2_ok": 0,
+    "g2_p": 0.0759
+   },
+   "chunk": 4,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "README.md",
+   "q": "How can I automate the selection of software tools using a fixed decision-making protocol?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.5521,
+    "g2_ok": 0,
+    "g2_p": 0.2149
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.4765,
+    "g2_ok": 0,
+    "g2_p": 0.2347
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.0551,
+    "g2_ok": 0,
+    "g2_p": 0.0124
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.0551,
+    "g2_ok": 0,
+    "g2_p": 0.0124
+   },
+   "chunk": 6,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "README.md",
+   "q": "Which files constitute the frozen record of scored runs in the MS-series state?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.0551,
+    "g2_ok": 0,
+    "g2_p": 0.0124
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.4471,
+    "g2_ok": 0,
+    "g2_p": 0.1935
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.3986,
+    "g2_ok": 0,
+    "g2_p": 0.1327
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.3986,
+    "g2_ok": 0,
+    "g2_p": 0.1327
+   },
+   "chunk": 6,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "README.md",
+   "q": "How do I safely update my model components without losing my existing scoring results?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.3986,
+    "g2_ok": 0,
+    "g2_p": 0.1327
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.3986,
+    "g2_ok": 0,
+    "g2_p": 0.1327
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.9868,
+    "g2_ok": 1,
+    "g2_p": 0.9626
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.9868,
+    "g2_ok": 1,
+    "g2_p": 0.9626
+   },
+   "chunk": 1,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "protocol.md",
+   "q": "What does the markedness dial value 1-m draw from?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.3963,
+    "g2_ok": 0,
+    "g2_p": 0.176
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.1022,
+    "g2_ok": 0,
+    "g2_p": 0.0252
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.6466,
+    "g2_ok": 0,
+    "g2_p": 0.4707
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.6466,
+    "g2_ok": 0,
+    "g2_p": 0.4707
+   },
+   "chunk": 1,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 1
+   },
+   "doc": "protocol.md",
+   "q": "How can I automate the creation of diverse audio commands for my smart home system?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.6466,
+    "g2_ok": 0,
+    "g2_p": 0.4707
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.4691,
+    "g2_ok": 0,
+    "g2_p": 0.2783
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.152,
+    "g2_ok": 0,
+    "g2_p": 0.0583
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.152,
+    "g2_ok": 0,
+    "g2_p": 0.0583
+   },
+   "chunk": 3,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "protocol.md",
+   "q": "What vocabulary was used in the FiLM variant description?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.0679,
+    "g2_ok": 0,
+    "g2_p": 0.0169
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.0451,
+    "g2_ok": 0,
+    "g2_p": 0.0114
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.0312,
+    "g2_ok": 0,
+    "g2_p": 0.0125
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.0312,
+    "g2_ok": 0,
+    "g2_p": 0.0125
+   },
+   "chunk": 3,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "protocol.md",
+   "q": "How can each later stage of my pipeline take into account what the earlier stages already decided?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.6544,
+    "g2_ok": 0,
+    "g2_p": 0.4088
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.6942,
+    "g2_ok": 0,
+    "g2_p": 0.3703
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.7833,
+    "g2_ok": 1,
+    "g2_p": 0.6821
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.7833,
+    "g2_ok": 1,
+    "g2_p": 0.6821
+   },
+   "chunk": 8,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 1
+   },
+   "doc": "protocol.md",
+   "q": "What is the answer regarding the gap SHRANK with pool at pool 1024?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.7833,
+    "g2_ok": 1,
+    "g2_p": 0.6821
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.7942,
+    "g2_ok": 1,
+    "g2_p": 0.6678
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.0476,
+    "g2_ok": 0,
+    "g2_p": 0.0146
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.0476,
+    "g2_ok": 0,
+    "g2_p": 0.0146
+   },
+   "chunk": 8,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "protocol.md",
+   "q": "Can I confirm the failure and the exact performance ceiling for the next step?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.3972,
+    "g2_ok": 0,
+    "g2_p": 0.2482
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.4547,
+    "g2_ok": 0,
+    "g2_p": 0.3619
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.0828,
+    "g2_ok": 0,
+    "g2_p": 0.0117
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.0828,
+    "g2_ok": 0,
+    "g2_p": 0.0117
+   },
+   "chunk": 12,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 1,
+    "topk2": 1
+   },
+   "doc": "protocol.md",
+   "q": "What are the path accuracy metrics by depth for m=1.0, pool 256/leaf, seed 0?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.8753,
+    "g2_ok": 1,
+    "g2_p": 0.8582
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.8902,
+    "g2_ok": 1,
+    "g2_p": 0.8393
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.1419,
+    "g2_ok": 0,
+    "g2_p": 0.0435
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.1419,
+    "g2_ok": 0,
+    "g2_p": 0.0435
+   },
+   "chunk": 12,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "protocol.md",
+   "q": "How far down my category ladder can I keep going before quality drops too much?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.556,
+    "g2_ok": 0,
+    "g2_p": 0.3926
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.068,
+    "g2_ok": 0,
+    "g2_p": 0.0122
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.9722,
+    "g2_ok": 1,
+    "g2_p": 0.9329
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.9722,
+    "g2_ok": 1,
+    "g2_p": 0.9329
+   },
+   "chunk": 15,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "protocol.md",
+   "q": "What was the gain replicated only with?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.0123,
+    "g2_ok": 0,
+    "g2_p": 0.0017
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.0123,
+    "g2_ok": 0,
+    "g2_p": 0.0017
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.9717,
+    "g2_ok": 1,
+    "g2_p": 0.9464
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.9717,
+    "g2_ok": 1,
+    "g2_p": 0.9464
+   },
+   "chunk": 15,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 1
+   },
+   "doc": "protocol.md",
+   "q": "How do I apply this scoring method to my router when path lengths vary?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.9717,
+    "g2_ok": 1,
+    "g2_p": 0.9464
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.9751,
+    "g2_ok": 1,
+    "g2_p": 0.9481
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.987,
+    "g2_ok": 1,
+    "g2_p": 0.9791
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.987,
+    "g2_ok": 1,
+    "g2_p": 0.9791
+   },
+   "chunk": 17,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 1
+   },
+   "doc": "protocol.md",
+   "q": "What is the production mechanism of WireSense's router and MCP gate?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.987,
+    "g2_ok": 1,
+    "g2_p": 0.9791
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.9871,
+    "g2_ok": 1,
+    "g2_p": 0.9777
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.9128,
+    "g2_ok": 1,
+    "g2_p": 0.812
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.9128,
+    "g2_ok": 1,
+    "g2_p": 0.812
+   },
+   "chunk": 17,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "protocol.md",
+   "q": "How can one fixed representation decide which of dozens of near-identical helpers an incoming message belongs to?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.6167,
+    "g2_ok": 0,
+    "g2_p": 0.3395
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.1096,
+    "g2_ok": 0,
+    "g2_p": 0.0342
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.0628,
+    "g2_ok": 0,
+    "g2_p": 0.0164
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.0628,
+    "g2_ok": 0,
+    "g2_p": 0.0164
+   },
+   "chunk": 21,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 1
+   },
+   "doc": "protocol.md",
+   "q": "What is the held-out generalization ceiling for short synthetic generic texts?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.0628,
+    "g2_ok": 0,
+    "g2_p": 0.0164
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.9217,
+    "g2_ok": 1,
+    "g2_p": 0.8526
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.1579,
+    "g2_ok": 0,
+    "g2_p": 0.0528
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.1579,
+    "g2_ok": 0,
+    "g2_p": 0.0528
+   },
+   "chunk": 21,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "protocol.md",
+   "q": "What is the expected performance range if I cannot use short synthetic texts?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.1579,
+    "g2_ok": 0,
+    "g2_p": 0.0528
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.0825,
+    "g2_ok": 0,
+    "g2_p": 0.0339
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.754,
+    "g2_ok": 0,
+    "g2_p": 0.3891
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.754,
+    "g2_ok": 0,
+    "g2_p": 0.3891
+   },
+   "chunk": 24,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "protocol.md",
+   "q": "Does pointwise joint judgment beat bi-embedding cosine?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.754,
+    "g2_ok": 0,
+    "g2_p": 0.3891
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.4184,
+    "g2_ok": 0,
+    "g2_p": 0.2779
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.6596,
+    "g2_ok": 0,
+    "g2_p": 0.3384
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.6596,
+    "g2_ok": 0,
+    "g2_p": 0.3384
+   },
+   "chunk": 24,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "protocol.md",
+   "q": "How can I find the most relevant information to answer my specific questions quickly?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.6596,
+    "g2_ok": 0,
+    "g2_p": 0.3384
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.0476,
+    "g2_ok": 0,
+    "g2_p": 0.0138
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.9374,
+    "g2_ok": 1,
+    "g2_p": 0.8404
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.9374,
+    "g2_ok": 1,
+    "g2_p": 0.8404
+   },
+   "chunk": 26,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 1
+   },
+   "doc": "protocol.md",
+   "q": "What is the number of train and eval chunks per document?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.9374,
+    "g2_ok": 1,
+    "g2_p": 0.8404
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.9374,
+    "g2_ok": 1,
+    "g2_p": 0.8404
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.1571,
+    "g2_ok": 0,
+    "g2_p": 0.169
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.1571,
+    "g2_ok": 0,
+    "g2_p": 0.169
+   },
+   "chunk": 26,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "protocol.md",
+   "q": "How do I look something up when I can't name what I'm looking for?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.1571,
+    "g2_ok": 0,
+    "g2_p": 0.169
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.0968,
+    "g2_ok": 0,
+    "g2_p": 0.0207
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.9775,
+    "g2_ok": 1,
+    "g2_p": 0.963
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.9775,
+    "g2_ok": 1,
+    "g2_p": 0.963
+   },
+   "chunk": 27,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "protocol.md",
+   "q": "What are the exact input features used by the J-combo model?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.336,
+    "g2_ok": 0,
+    "g2_p": 0.2614
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.336,
+    "g2_ok": 0,
+    "g2_p": 0.2614
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.0458,
+    "g2_ok": 0,
+    "g2_p": 0.0126
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.0458,
+    "g2_ok": 0,
+    "g2_p": 0.0126
+   },
+   "chunk": 27,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "protocol.md",
+   "q": "What is the best way to quickly verify if a document supports a question?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.0458,
+    "g2_ok": 0,
+    "g2_p": 0.0126
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.0139,
+    "g2_ok": 0,
+    "g2_p": 0.004
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.5108,
+    "g2_ok": 0,
+    "g2_p": 0.3294
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.6679,
+    "g2_ok": 0,
+    "g2_p": 0.4367
+   },
+   "chunk": 29,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 1
+   },
+   "doc": "protocol.md",
+   "q": "What are the probabilistic scores over all evaluated pairs?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.6679,
+    "g2_ok": 0,
+    "g2_p": 0.4367
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.9641,
+    "g2_ok": 1,
+    "g2_p": 0.903
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.6368,
+    "g2_ok": 0,
+    "g2_p": 0.4579
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.6368,
+    "g2_ok": 0,
+    "g2_p": 0.4579
+   },
+   "chunk": 29,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 0
+   },
+   "doc": "protocol.md",
+   "q": "How much should I trust the confidence numbers my matcher gives me?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.6368,
+    "g2_ok": 0,
+    "g2_p": 0.4579
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.3618,
+    "g2_ok": 0,
+    "g2_p": 0.1689
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.9528,
+    "g2_ok": 1,
+    "g2_p": 0.8802
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.9528,
+    "g2_ok": 1,
+    "g2_p": 0.8802
+   },
+   "chunk": 31,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 1
+   },
+   "doc": "protocol.md",
+   "q": "What tool is used to generate the freeze candidates?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.9528,
+    "g2_ok": 1,
+    "g2_p": 0.8802
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.9528,
+    "g2_ok": 1,
+    "g2_p": 0.8802
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.6869,
+    "g2_ok": 0,
+    "g2_p": 0.3841
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.6869,
+    "g2_ok": 0,
+    "g2_p": 0.3841
+   },
+   "chunk": 31,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "protocol.md",
+   "q": "Roughly how long should the full checking pass over every passage take?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.6869,
+    "g2_ok": 0,
+    "g2_p": 0.3841
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.6869,
+    "g2_ok": 0,
+    "g2_p": 0.3841
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.9842,
+    "g2_ok": 1,
+    "g2_p": 0.9615
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.9842,
+    "g2_ok": 1,
+    "g2_p": 0.9615
+   },
+   "chunk": 1,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 1
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How many tools are targeted across how many servers in the stdio MCP client?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.9842,
+    "g2_ok": 1,
+    "g2_p": 0.9615
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.9842,
+    "g2_ok": 1,
+    "g2_p": 0.9615
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.72,
+    "g2_ok": 0,
+    "g2_p": 0.484
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.72,
+    "g2_ok": 0,
+    "g2_p": 0.484
+   },
+   "chunk": 1,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 1
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How can I build a faithful catalogue of what every connected plugin actually exposes?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.72,
+    "g2_ok": 0,
+    "g2_p": 0.484
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.7264,
+    "g2_ok": 1,
+    "g2_p": 0.559
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.6817,
+    "g2_ok": 0,
+    "g2_p": 0.393
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.6817,
+    "g2_ok": 0,
+    "g2_p": 0.393
+   },
+   "chunk": 32,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How many servers are dead when the supervisor task is 60 seconds?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.6817,
+    "g2_ok": 0,
+    "g2_p": 0.393
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.6817,
+    "g2_ok": 0,
+    "g2_p": 0.393
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.6229,
+    "g2_ok": 0,
+    "g2_p": 0.3783
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.6229,
+    "g2_ok": 0,
+    "g2_p": 0.3783
+   },
+   "chunk": 32,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What is the fastest way to keep my tools running without restarting them?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.6229,
+    "g2_ok": 0,
+    "g2_p": 0.3783
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.6985,
+    "g2_ok": 0,
+    "g2_p": 0.4594
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.9802,
+    "g2_ok": 1,
+    "g2_p": 0.9548
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.9802,
+    "g2_ok": 1,
+    "g2_p": 0.9548
+   },
+   "chunk": 56,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 1
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How many rows were written and flushed before the TypeError occurred?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.9802,
+    "g2_ok": 1,
+    "g2_p": 0.9548
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.9802,
+    "g2_ok": 1,
+    "g2_p": 0.9548
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.4091,
+    "g2_ok": 0,
+    "g2_p": 0.1413
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.4091,
+    "g2_ok": 0,
+    "g2_p": 0.1413
+   },
+   "chunk": 56,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How do I verify the accuracy metrics and ensure the results meet performance thresholds?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.1035,
+    "g2_ok": 0,
+    "g2_p": 0.028
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.2681,
+    "g2_ok": 0,
+    "g2_p": 0.1228
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.9809,
+    "g2_ok": 1,
+    "g2_p": 0.8821
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.9809,
+    "g2_ok": 1,
+    "g2_p": 0.8821
+   },
+   "chunk": 62,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 1
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "Which native tool should replace the deprecated read_file?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.9809,
+    "g2_ok": 1,
+    "g2_p": 0.8821
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.9819,
+    "g2_ok": 1,
+    "g2_p": 0.8682
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.0573,
+    "g2_ok": 0,
+    "g2_p": 0.0091
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.0573,
+    "g2_ok": 0,
+    "g2_p": 0.0091
+   },
+   "chunk": 62,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "When is picking something other than the officially recommended option still the correct call?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.0573,
+    "g2_ok": 0,
+    "g2_p": 0.0091
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.1151,
+    "g2_ok": 0,
+    "g2_p": 0.0271
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.7666,
+    "g2_ok": 1,
+    "g2_p": 0.702
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.7666,
+    "g2_ok": 1,
+    "g2_p": 0.702
+   },
+   "chunk": 69,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 0
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What causes the gate flapping when spawned tool sets produce different cached hashes?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.7666,
+    "g2_ok": 1,
+    "g2_p": 0.702
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.6018,
+    "g2_ok": 0,
+    "g2_p": 0.493
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.2352,
+    "g2_ok": 0,
+    "g2_p": 0.0836
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.2352,
+    "g2_ok": 0,
+    "g2_p": 0.0836
+   },
+   "chunk": 69,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 1
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What guarantees that the gate won't flip its state unexpectedly during the next deployment run?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.6111,
+    "g2_ok": 0,
+    "g2_p": 0.4212
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.8229,
+    "g2_ok": 1,
+    "g2_p": 0.6729
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.8934,
+    "g2_ok": 1,
+    "g2_p": 0.8454
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.2976,
+    "g2_ok": 0,
+    "g2_p": 0.148
+   },
+   "chunk": 72,
+   "committed": {
+    "asm": 1,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What is the ground difference identified by comparing per-case prompt_tokens and the registered run log?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.2976,
+    "g2_ok": 0,
+    "g2_p": 0.148
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.2976,
+    "g2_ok": 0,
+    "g2_p": 0.148
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.0148,
+    "g2_ok": 0,
+    "g2_p": 0.0054
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.0148,
+    "g2_ok": 0,
+    "g2_p": 0.0054
+   },
+   "chunk": 72,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What tool configuration changes caused the evaluation results to change?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.0921,
+    "g2_ok": 0,
+    "g2_p": 0.0189
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.0173,
+    "g2_ok": 0,
+    "g2_p": 0.0017
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.8008,
+    "g2_ok": 1,
+    "g2_p": 0.6288
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.8008,
+    "g2_ok": 1,
+    "g2_p": 0.6288
+   },
+   "chunk": 90,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 0,
+    "topk2": 1
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What are the expected recall results for pc1 windows compared to the k-means union's recall at comparable budgets?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.1123,
+    "g2_ok": 0,
+    "g2_p": 0.0291
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.8008,
+    "g2_ok": 1,
+    "g2_p": 0.6288
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.1658,
+    "g2_ok": 0,
+    "g2_p": 0.0259
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.1658,
+    "g2_ok": 0,
+    "g2_p": 0.0259
+   },
+   "chunk": 90,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 1
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How can I improve my tool selection accuracy using this new sorting method?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.0534,
+    "g2_ok": 0,
+    "g2_p": 0.0225
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.8591,
+    "g2_ok": 1,
+    "g2_p": 0.5821
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.8241,
+    "g2_ok": 1,
+    "g2_p": 0.6222
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.8241,
+    "g2_ok": 1,
+    "g2_p": 0.6222
+   },
+   "chunk": 94,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 0
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "Why does the sliding window lose entirely on coverage compared to the union?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.8241,
+    "g2_ok": 1,
+    "g2_p": 0.6222
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.0274,
+    "g2_ok": 0,
+    "g2_p": 0.0041
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.0643,
+    "g2_ok": 0,
+    "g2_p": 0.0168
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.0643,
+    "g2_ok": 0,
+    "g2_p": 0.0168
+   },
+   "chunk": 94,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How can I improve the system's ability to find and select the correct answer?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.0643,
+    "g2_ok": 0,
+    "g2_p": 0.0168
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.121,
+    "g2_ok": 0,
+    "g2_p": 0.0311
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.8849,
+    "g2_ok": 1,
+    "g2_p": 0.7857
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.8849,
+    "g2_ok": 1,
+    "g2_p": 0.7857
+   },
+   "chunk": 117,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 1
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What is the false-abstention magnet on real requests according to the menu hypothesis?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.8849,
+    "g2_ok": 1,
+    "g2_p": 0.7857
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.8849,
+    "g2_ok": 1,
+    "g2_p": 0.7857
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.1242,
+    "g2_ok": 0,
+    "g2_p": 0.0193
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.4436,
+    "g2_ok": 0,
+    "g2_p": 0.2241
+   },
+   "chunk": 117,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How can I make my AI tools stop ignoring real requests and only giving up answers?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.4436,
+    "g2_ok": 0,
+    "g2_p": 0.2241
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.4436,
+    "g2_ok": 0,
+    "g2_p": 0.2241
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.9631,
+    "g2_ok": 1,
+    "g2_p": 0.924
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.9631,
+    "g2_ok": 1,
+    "g2_p": 0.924
+   },
+   "chunk": 122,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 1
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "Which arm had the highest accuracy ever measured here?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.9631,
+    "g2_ok": 1,
+    "g2_p": 0.924
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.9631,
+    "g2_ok": 1,
+    "g2_p": 0.924
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.0092,
+    "g2_ok": 0,
+    "g2_p": 0.0013
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.022,
+    "g2_ok": 0,
+    "g2_p": 0.0037
+   },
+   "chunk": 122,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 1
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What is the fastest way to run a high-accuracy query in this system?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.022,
+    "g2_ok": 0,
+    "g2_p": 0.0037
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.8099,
+    "g2_ok": 1,
+    "g2_p": 0.645
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.0314,
+    "g2_ok": 0,
+    "g2_p": 0.009
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.0314,
+    "g2_ok": 0,
+    "g2_p": 0.009
+   },
+   "chunk": 127,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What is the effect of intent calls on tokens according to the passage?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.0314,
+    "g2_ok": 0,
+    "g2_p": 0.009
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.0334,
+    "g2_ok": 0,
+    "g2_p": 0.0076
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.4468,
+    "g2_ok": 0,
+    "g2_p": 0.1885
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.4468,
+    "g2_ok": 0,
+    "g2_p": 0.1885
+   },
+   "chunk": 127,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What should I expect to change if I add a quick screening step ahead of the main decision?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.4468,
+    "g2_ok": 0,
+    "g2_p": 0.1885
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.2921,
+    "g2_ok": 0,
+    "g2_p": 0.0841
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.9844,
+    "g2_ok": 1,
+    "g2_p": 0.9647
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.9844,
+    "g2_ok": 1,
+    "g2_p": 0.9647
+   },
+   "chunk": 128,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 1
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "What accuracy did the softhint method achieve in the MS-28 results?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.9844,
+    "g2_ok": 1,
+    "g2_p": 0.9647
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.9844,
+    "g2_ok": 1,
+    "g2_p": 0.9647
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 0,
+    "g1_p": 0.1369,
+    "g2_ok": 0,
+    "g2_p": 0.0377
+   },
+   "asm8": {
+    "g1_ok": 0,
+    "g1_p": 0.1369,
+    "g2_ok": 0,
+    "g2_p": 0.0377
+   },
+   "chunk": 128,
+   "committed": {
+    "asm": 0,
+    "asm8": 0,
+    "top1": 0,
+    "topk2": 0
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "q": "How can I improve my results' accuracy by adopting a conditional hint?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 0,
+    "g1_p": 0.1369,
+    "g2_ok": 0,
+    "g2_p": 0.0377
+   },
+   "topk2": {
+    "g1_ok": 0,
+    "g1_p": 0.2485,
+    "g2_ok": 0,
+    "g2_p": 0.0899
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.9908,
+    "g2_ok": 1,
+    "g2_p": 0.986
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.9908,
+    "g2_ok": 1,
+    "g2_p": 0.986
+   },
+   "chunk": 1,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 1
+   },
+   "doc": "models/README.md",
+   "q": "What encoder and pooling settings are required to use these weights?",
+   "recipe": "direct",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.9908,
+    "g2_ok": 1,
+    "g2_p": 0.986
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.9926,
+    "g2_ok": 1,
+    "g2_p": 0.9906
+   }
+  },
+  {
+   "asm": {
+    "g1_ok": 1,
+    "g1_p": 0.7919,
+    "g2_ok": 1,
+    "g2_p": 0.6587
+   },
+   "asm8": {
+    "g1_ok": 1,
+    "g1_p": 0.7919,
+    "g2_ok": 1,
+    "g2_p": 0.6587
+   },
+   "chunk": 1,
+   "committed": {
+    "asm": 1,
+    "asm8": 1,
+    "top1": 1,
+    "topk2": 1
+   },
+   "doc": "models/README.md",
+   "q": "How do I ensure my custom weights work correctly with this specific model version?",
+   "recipe": "indirect",
+   "top1": {
+    "g1_ok": 1,
+    "g1_p": 0.7919,
+    "g2_ok": 1,
+    "g2_p": 0.6587
+   },
+   "topk2": {
+    "g1_ok": 1,
+    "g1_p": 0.841,
+    "g2_ok": 1,
+    "g2_p": 0.6926
+   }
+  }
+ ],
+ "smoke": false,
+ "summary": {
+  "g1": {
+   "GA": "PASS",
+   "GB": "FAIL",
+   "acc": {
+    "asm": 0.5862,
+    "asm8": 0.569,
+    "top1": 0.5862,
+    "topk2": 0.4655
+   },
+   "drift_vs_committed": {
+    "asm": 0.1552,
+    "asm8": 0.1552,
+    "top1": 0.2414,
+    "topk2": 0.069
+   },
+   "flips_vs_asm": {
+    "asm_vs_top1": 0.0,
+    "asm_vs_topk2": -0.1207
+   },
+   "mean_grade_p": {
+    "asm": 0.5445,
+    "asm8": 0.5427,
+    "top1": 0.53,
+    "topk2": 0.5172
+   }
+  },
+  "g2": {
+   "GA": "PASS",
+   "GB": "FAIL",
+   "acc": {
+    "asm": 0.3793,
+    "asm8": 0.3621,
+    "top1": 0.2931,
+    "topk2": 0.3793
+   },
+   "drift_vs_committed": {
+    "asm": 0.0517,
+    "asm8": 0.0517,
+    "top1": 0.0517,
+    "topk2": 0.0172
+   },
+   "flips_vs_asm": {
+    "asm_vs_top1": -0.0862,
+    "asm_vs_topk2": 0.0
+   },
+   "mean_grade_p": {
+    "asm": 0.4247,
+    "asm8": 0.4181,
+    "top1": 0.3951,
+    "topk2": 0.4012
+   }
+  }
+ },
+ "tag": "regrade"
+}

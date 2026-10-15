@@ -2007,3 +2007,58 @@ fallbacks). Best deployed arm is now .448 answers-correct at
 1,423 tok/q. The capture gap (pool .810 vs hit .534) persists.
 
 Tally: 23 of 41 headline predictions passed.
+
+## G-series RESULTS (regrade.json, 2026-10-15 — scored)
+
+Integrity: the re-grade used the same model that produced every
+committed number — model fingerprint 7cfe33f65c1c identical across
+assembly.json, topk.json, poolstop.json and regrade.json — and the
+committed answer STRINGS were re-graded verbatim (no
+regeneration). Committed anchors reproduced in-file: ASM .431,
+TOP1 .345, TOPK-2 .397, ASM-8 .414.
+
+| arm | committed | G1 (reworded) | G2 (3-sample) | G1 drift | G2 drift |
+|-----|-----------|---------------|---------------|----------|----------|
+| ASM    | .431 | .586 | .379 | +.155 | +.052 |
+| TOP1   | .345 | .586 | .293 | **+.241** | +.052 |
+| TOPK-2 | .397 | .466 | .379 | +.069 | +.017 |
+| ASM-8  | .414 | .569 | .362 | +.155 | +.052 |
+
+Verdicts: **GA PASS under both instruments** — the season's
+ordering claim (ASM ≥ TOPK-2 AND ASM ≥ TOP1) survives every
+re-grade (G1: margins +.121 / .000; G2: .000 / +.086). **GB FAIL
+under both**: G1 drifts every arm past the .05 bar (TOP1 +.2414!);
+G2 breaches it by .0017 on three arms (.0517). Registered bets:
+GA both PASS — landed. GB PASS — refuted, both instruments. "G2
+drifts less than G1" — landed (.052 max vs .241 max). "G1 grades
+slightly harsher" — refuted in the opposite direction: G1 is
+uniformly more LENIENT (mean grade_p .53–.54 vs the committed
+.43–.44 band; every answer flip is upward, zero downward).
+
+What the two instruments actually did. G2 (the faithful prompt,
+sampled) is the committed grader with a slightly stricter edge:
+3 answers per headline arm flip DOWN, none up, orderings intact —
+the committed verdicts are robust to grader sampling noise. G1
+(the rewrite) is a different instrument wearing the same name: it
+rescues answers wholesale (+9 ASM, +14 TOP1, +5 TOPK-2; one
+TOPK-2 answer flips down), and it rescues the weak arms MOST —
+under G1, pure RAG's indirect answers invert the cell ordering
+(TOP1 .517 vs ASM .379 indirect), the machine's overall margin
+over TOP1 collapses to an exact tie, and only the direct cell
+still separates them (.793 vs .655). The GA gate passes on a
+technicality of the tie; the honest statement is that the
+answer-level machine-vs-RAG margin is PROMPT-DEPENDENT — it is
++.086 under the committed prompt, .000 under the rewrite, +.086
+under sampled-faithful.
+
+Per the registration's own clause: every answer-level number this
+season now carries a disclosed instrument-sensitivity caveat. The
+caveat has a precise shape — chunk-level results (pool capture,
+stop decisions, the τ sweep, token costs) are grader-independent
+and untouched; answer-level ORDERINGS survived both audits
+mechanically; answer-level MARGINS are soft at the ±.02–.09
+scale, exactly the scale at which S-amendment already found every
+margin within noise at n=58. The two independent stress tests
+point at the same fix: more questions.
+
+Tally: 25 of 45 headline predictions passed.
