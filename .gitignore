@@ -21,3 +21,5 @@ results/topk_smoke.json
 results/poolstop_smoke.json
 results/regrade_smoke.json
 results/pooljudge_smoke.json
+results/fselect_smoke.json
+results/abstain_smoke.json
