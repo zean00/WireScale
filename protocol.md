@@ -1887,3 +1887,47 @@ graded from the answered page):
   ceiling is the judge's discrimination, not the bar); M and S
   stop decisions agree on most questions; the capture gap
   (.810 pool vs captured) persists in every arm.
+
+## G-series (registered 2026-10-15, pre-data): the grader audit
+
+Every answer-level number this season rests on one grader that is
+the same frozen model as the generator (disclosed since A-series)
+with one prompt. This series stress-tests the instrument: re-grade
+the committed answer STRINGS (no regeneration — answers are the
+committed ones verbatim) under two altered grading instruments and
+ask whether the season's ordering survives.
+
+Scope: the four headline arms — ASM and TOP1 (assembly.json),
+TOPK-2 (topk.json), ASM-8 (poolstop.json); n=58 committed answers
+each. Grader model unchanged (the lab has one); only the grading
+instrument varies.
+
+Instruments:
+- **G1 (reworded grader)** — system: "You are a careful grader.
+  Reply with exactly one word: yes or no."; user: "Reference
+  passage:\n{gold}\n\nQuestion: {q}\n\nProposed answer: {ans}\n\n
+  Is the proposed answer a correct answer to the question,
+  according to the reference passage?" — temp 0, logprobs, ok ≡
+  p ≥ .5 (committed rule).
+- **G2 (self-consistency grader)** — the ORIGINAL grading prompt
+  verbatim, 3 samples at temp 1.0, seeds 20261016+101·i+13·s
+  (s∈{0,1,2}); ok ≡ mean p ≥ .5.
+
+Gates (mechanical):
+- **GA (primary, per instrument)**: the season's ordering claim —
+  ASM ≥ TOPK-2 AND ASM ≥ TOP1 — holds under the re-graded
+  accuracies → PASS; any flip ≤ .02 → PARTIAL; any flip > .02 →
+  FAIL.
+- **GB (drift, per instrument)**: per-arm |re-graded acc −
+  committed acc| ≤ .05 → PASS; else the drift is a disclosed
+  caveat on that arm (and the audit says the instrument is
+  prompt-sensitive).
+Sanity: G1 on a 2-question smoke, marked, never scored.
+
+**Registered bets**: GA PASS under both instruments (the ordering
+is a real property of the answers, not the grading prompt); GB
+PASS with G2 drifting less than G1; descriptive: G1 grades
+slightly harsher (mean grade_p below the committed .43–.47 band).
+If GA or GB fails, every answer-level number this season carries a
+disclosed instrument-sensitivity caveat — that is the audit
+working, not failing.
