@@ -1,0 +1,6881 @@
+{
+ "by_arm": {
+  "fd": {
+   "ans_acc": 0.3103448275862069,
+   "fallback_rate": 0.5172413793103449,
+   "n_judged": 5.0344827586206895,
+   "per_recipe": {
+    "direct": 0.5172413793103449,
+    "indirect": 0.10344827586206896
+   },
+   "stop_hit": 0.3793103448275862,
+   "tok_per_q": 2691.1206896551726
+  },
+  "fg": {
+   "ans_acc": 0.3620689655172414,
+   "fallback_rate": 0.39655172413793105,
+   "n_judged": 4.620689655172414,
+   "per_recipe": {
+    "direct": 0.5862068965517241,
+    "indirect": 0.13793103448275862
+   },
+   "stop_hit": 0.39655172413793105,
+   "tok_per_q": 2558.1724137931033
+  },
+  "selection": {
+   "doc_hit": 0.6206896551724138,
+   "per_recipe": {
+    "direct": 0.7586206896551724,
+    "indirect": 0.4827586206896552
+   }
+  }
+ },
+ "commit": "3be8a86",
+ "committed_anchors": {
+  "dh_acc": 0.4482758620689655,
+  "pf4_ceiling_tok": 1800.0
+ },
+ "limit": 0,
+ "model_fp": "7cfe33f65c1c",
+ "pool_n": 8,
+ "records": [
+  {
+   "chunk": 0,
+   "doc": "README.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "README.md",
+     0
+    ],
+    [
+     "README.md",
+     4
+    ],
+    [
+     "README.md",
+     2
+    ],
+    [
+     "README.md",
+     5
+    ],
+    [
+     "README.md",
+     3
+    ],
+    [
+     "README.md",
+     1
+    ],
+    [
+     "README.md",
+     7
+    ],
+    [
+     "README.md",
+     8
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6791,
+    "README.md": 0.7213,
+    "models/README.md": 0.5691,
+    "protocol.md": 0.6548
+   },
+   "fd": {
+    "ans": "The excerpt poses the question of whether telling each level its parent's answer helps in decision trees but does not provide an answer.",
+    "ans_ok": 0,
+    "ci": [
+     "README.md",
+     0
+    ],
+    "fallback": 0,
+    "grade_p": 0.1984,
+    "hit": 1,
+    "judge_tok": 334,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "README.md",
+     0
+    ],
+    "tok": 686
+   },
+   "fg": {
+    "ans": "The excerpt poses the question of whether telling each level its parent's answer helps in decision trees but does not provide an answer.",
+    "ans_ok": 0,
+    "ci": [
+     "README.md",
+     0
+    ],
+    "fallback": 0,
+    "grade_p": 0.1984,
+    "hit": 1,
+    "judge_tok": 334,
+    "n_judged": 1,
+    "stop_ci": [
+     "README.md",
+     0
+    ],
+    "tok": 686
+   },
+   "glob_pool": [
+    [
+     "README.md",
+     0
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "protocol.md",
+     10
+    ],
+    [
+     "protocol.md",
+     0
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "protocol.md",
+     11
+    ],
+    [
+     "README.md",
+     4
+    ],
+    [
+     "protocol.md",
+     1
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "Does telling each level its parent's answer help in decision trees?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "README.md"
+  },
+  {
+   "chunk": 0,
+   "doc": "README.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     21
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.4982,
+    "README.md": 0.371,
+    "models/README.md": 0.2468,
+    "protocol.md": 0.3262
+   },
+   "fd": {
+    "ans": "The excerpt does not provide instructions on how to quickly decide which specialist to contact based on the message type.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "fallback": 1,
+    "grade_p": 0.4122,
+    "hit": 0,
+    "judge_tok": 2953,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 749
+   },
+   "fg": {
+    "ans": "The excerpt does not provide instructions on how to quickly decide which specialist to contact based on the message type.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "fallback": 1,
+    "grade_p": 0.4122,
+    "hit": 0,
+    "judge_tok": 2953,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 749
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     21
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "How can I quickly decide which specialist to contact based on the message type?",
+   "recipe": "indirect",
+   "sanity_agree": null,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 2,
+   "doc": "README.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "protocol.md",
+     9
+    ],
+    [
+     "protocol.md",
+     5
+    ],
+    [
+     "protocol.md",
+     3
+    ],
+    [
+     "protocol.md",
+     0
+    ],
+    [
+     "protocol.md",
+     8
+    ],
+    [
+     "protocol.md",
+     10
+    ],
+    [
+     "protocol.md",
+     12
+    ],
+    [
+     "protocol.md",
+     11
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.4265,
+    "README.md": 0.5591,
+    "models/README.md": 0.4325,
+    "protocol.md": 0.5842
+   },
+   "fd": {
+    "ans": "The FiLM conditioning layer was reliably harmful, resulting in performance drops of 13.4, 10.9, and 8.9 points at different pool sizes compared to the baseline.",
+    "ans_ok": 0,
+    "ci": [
+     "protocol.md",
+     9
+    ],
+    "fallback": 1,
+    "grade_p": 0.0365,
+    "hit": 0,
+    "judge_tok": 3202,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 900
+   },
+   "fg": {
+    "ans": "The FiLM conditioning layer was reliably harmful, resulting in a loss of 13.4 points and leading to its rejection.",
+    "ans_ok": 1,
+    "ci": [
+     "README.md",
+     3
+    ],
+    "fallback": 0,
+    "grade_p": 0.9066,
+    "hit": 0,
+    "judge_tok": 826,
+    "n_judged": 2,
+    "stop_ci": [
+     "README.md",
+     3
+    ],
+    "tok": 809
+   },
+   "glob_pool": [
+    [
+     "protocol.md",
+     9
+    ],
+    [
+     "README.md",
+     3
+    ],
+    [
+     "README.md",
+     2
+    ],
+    [
+     "protocol.md",
+     5
+    ],
+    [
+     "protocol.md",
+     3
+    ],
+    [
+     "protocol.md",
+     0
+    ],
+    [
+     "protocol.md",
+     8
+    ],
+    [
+     "README.md",
+     0
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "What was the outcome of the FiLM conditioning layer in the S-series experiments?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "protocol.md"
+  },
+  {
+   "chunk": 2,
+   "doc": "README.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     6
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     5
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     14
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     94
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     132
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.594,
+    "README.md": 0.5875,
+    "models/README.md": 0.3896,
+    "protocol.md": 0.5723
+   },
+   "fd": {
+    "ans": "The provided excerpt does not contain information about which method consistently improves decision accuracy across multiple complex domains.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     6
+    ],
+    "fallback": 1,
+    "grade_p": 0.4895,
+    "hit": 0,
+    "judge_tok": 3480,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 760
+   },
+   "fg": {
+    "ans": "The provided excerpt does not contain information about which method consistently improves decision accuracy across multiple complex domains.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     6
+    ],
+    "fallback": 1,
+    "grade_p": 0.4895,
+    "hit": 0,
+    "judge_tok": 3414,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 760
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     6
+    ],
+    [
+     "README.md",
+     0
+    ],
+    [
+     "protocol.md",
+     22
+    ],
+    [
+     "protocol.md",
+     23
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     5
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     14
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "Which method consistently improves decision accuracy across multiple complex domains?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 4,
+   "doc": "README.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "README.md",
+     5
+    ],
+    [
+     "README.md",
+     1
+    ],
+    [
+     "README.md",
+     0
+    ],
+    [
+     "README.md",
+     7
+    ],
+    [
+     "README.md",
+     4
+    ],
+    [
+     "README.md",
+     3
+    ],
+    [
+     "README.md",
+     6
+    ],
+    [
+     "README.md",
+     8
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5491,
+    "README.md": 0.6312,
+    "models/README.md": 0.3839,
+    "protocol.md": 0.4426
+   },
+   "fd": {
+    "ans": "The MS-series decision record contained in PROTOCOL-mcp-selection.md is the tool selection and MS-1..MS-29 data, which was copied verbatim from WireSense.",
+    "ans_ok": 0,
+    "ci": [
+     "README.md",
+     5
+    ],
+    "fallback": 0,
+    "grade_p": 0.0083,
+    "hit": 0,
+    "judge_tok": 377,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "README.md",
+     5
+    ],
+    "tok": 796
+   },
+   "fg": {
+    "ans": "The MS-series decision record contained in PROTOCOL-mcp-selection.md is the tool selection and MS-1..MS-29 data, which was copied verbatim from WireSense.",
+    "ans_ok": 0,
+    "ci": [
+     "README.md",
+     5
+    ],
+    "fallback": 0,
+    "grade_p": 0.0083,
+    "hit": 0,
+    "judge_tok": 377,
+    "n_judged": 1,
+    "stop_ci": [
+     "README.md",
+     5
+    ],
+    "tok": 796
+   },
+   "glob_pool": [
+    [
+     "README.md",
+     5
+    ],
+    [
+     "README.md",
+     1
+    ],
+    [
+     "README.md",
+     0
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     0
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     58
+    ],
+    [
+     "README.md",
+     7
+    ],
+    [
+     "README.md",
+     4
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What is the MS-series decision record contained in PROTOCOL-mcp-selection.md?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "README.md"
+  },
+  {
+   "chunk": 4,
+   "doc": "README.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "README.md",
+     4
+    ],
+    [
+     "README.md",
+     0
+    ],
+    [
+     "README.md",
+     5
+    ],
+    [
+     "README.md",
+     1
+    ],
+    [
+     "README.md",
+     3
+    ],
+    [
+     "README.md",
+     8
+    ],
+    [
+     "README.md",
+     2
+    ],
+    [
+     "README.md",
+     7
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5971,
+    "README.md": 0.6074,
+    "models/README.md": 0.3479,
+    "protocol.md": 0.5053
+   },
+   "fd": {
+    "ans": "The excerpt does not provide instructions on how to automate the selection of software tools using a fixed decision-making protocol.",
+    "ans_ok": 0,
+    "ci": [
+     "README.md",
+     4
+    ],
+    "fallback": 1,
+    "grade_p": 0.2149,
+    "hit": 1,
+    "judge_tok": 2814,
+    "matches_dh": 1,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 793
+   },
+   "fg": {
+    "ans": "Automate the selection by adopting the `softhint` conditional branch, which inserts a `hintfam` sentence after the tool choice prompt and uses a blind intent directive to decide between tools and chat",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "fallback": 0,
+    "grade_p": 0.0106,
+    "hit": 0,
+    "judge_tok": 1856,
+    "n_judged": 5,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "tok": 834
+   },
+   "glob_pool": [
+    [
+     "README.md",
+     4
+    ],
+    [
+     "README.md",
+     0
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     18
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     113
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "How can I automate the selection of software tools using a fixed decision-making protocol?",
+   "recipe": "indirect",
+   "sanity_agree": 0.8,
+   "sel_doc": "README.md"
+  },
+  {
+   "chunk": 6,
+   "doc": "README.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "README.md",
+     7
+    ],
+    [
+     "README.md",
+     5
+    ],
+    [
+     "README.md",
+     1
+    ],
+    [
+     "README.md",
+     4
+    ],
+    [
+     "README.md",
+     0
+    ],
+    [
+     "README.md",
+     3
+    ],
+    [
+     "README.md",
+     6
+    ],
+    [
+     "README.md",
+     2
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5834,
+    "README.md": 0.5961,
+    "models/README.md": 0.3717,
+    "protocol.md": 0.4681
+   },
+   "fd": {
+    "ans": "The frozen record of scored runs in the MS-series state consists of the committed JSONLs, summaries, and run logs.",
+    "ans_ok": 0,
+    "ci": [
+     "README.md",
+     7
+    ],
+    "fallback": 0,
+    "grade_p": 0.0124,
+    "hit": 0,
+    "judge_tok": 359,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "README.md",
+     7
+    ],
+    "tok": 747
+   },
+   "fg": {
+    "ans": "The frozen record of scored runs in the MS-series state consists of the committed JSONLs, summaries, and run logs.",
+    "ans_ok": 0,
+    "ci": [
+     "README.md",
+     7
+    ],
+    "fallback": 0,
+    "grade_p": 0.0124,
+    "hit": 0,
+    "judge_tok": 359,
+    "n_judged": 1,
+    "stop_ci": [
+     "README.md",
+     7
+    ],
+    "tok": 747
+   },
+   "glob_pool": [
+    [
+     "README.md",
+     7
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     7
+    ],
+    [
+     "README.md",
+     5
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     24
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     60
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     66
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     81
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "Which files constitute the frozen record of scored runs in the MS-series state?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "README.md"
+  },
+  {
+   "chunk": 6,
+   "doc": "README.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     8
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     7
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     49
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     30
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     66
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5299,
+    "README.md": 0.5013,
+    "models/README.md": 0.4247,
+    "protocol.md": 0.4881
+   },
+   "fd": {
+    "ans": "The excerpt does not provide instructions on how to safely update model components without losing existing scoring results.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     8
+    ],
+    "fallback": 1,
+    "grade_p": 0.3506,
+    "hit": 0,
+    "judge_tok": 2873,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 749
+   },
+   "fg": {
+    "ans": "The excerpt does not provide instructions on how to safely update model components without losing existing scoring results.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     8
+    ],
+    "fallback": 1,
+    "grade_p": 0.3506,
+    "hit": 0,
+    "judge_tok": 2873,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 749
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     8
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     7
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     49
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     30
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     66
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "How do I safely update my model components without losing my existing scoring results?",
+   "recipe": "indirect",
+   "sanity_agree": null,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 1,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     113
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     58
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     134
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.478,
+    "README.md": 0.4132,
+    "models/README.md": 0.3266,
+    "protocol.md": 0.4644
+   },
+   "fd": {
+    "ans": "The provided excerpt does not contain information about a markedness dial value 1-m or what it draws from.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.1185,
+    "hit": 0,
+    "judge_tok": 3268,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 770
+   },
+   "fg": {
+    "ans": "The provided excerpt does not contain information about a markedness dial value 1-m or what it draws from.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.1185,
+    "hit": 0,
+    "judge_tok": 3186,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 770
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "protocol.md",
+     8
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     113
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "protocol.md",
+     14
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "What does the markedness dial value 1-m draw from?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 1,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     47
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     64
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5794,
+    "README.md": 0.4191,
+    "models/README.md": 0.2997,
+    "protocol.md": 0.4592
+   },
+   "fd": {
+    "ans": "The excerpt does not provide instructions on how to automate the creation of diverse audio commands for a smart home system.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.483,
+    "hit": 0,
+    "judge_tok": 2964,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 776
+   },
+   "fg": {
+    "ans": "The excerpt does not provide instructions on how to automate the creation of diverse audio commands for a smart home system.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.483,
+    "hit": 0,
+    "judge_tok": 2985,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 776
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     47
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ],
+    [
+     "protocol.md",
+     1
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "How can I automate the creation of diverse audio commands for my smart home system?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 3,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     47
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     62
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.4412,
+    "README.md": 0.3287,
+    "models/README.md": 0.3435,
+    "protocol.md": 0.358
+   },
+   "fd": {
+    "ans": "The excerpt does not contain a description of a FiLM variant.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.1882,
+    "hit": 0,
+    "judge_tok": 2852,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 786
+   },
+   "fg": {
+    "ans": "The excerpt does not contain a description of a FiLM variant.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.1882,
+    "hit": 0,
+    "judge_tok": 2893,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 786
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     47
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "protocol.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "What vocabulary was used in the FiLM variant description?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 3,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "README.md",
+     0
+    ],
+    [
+     "README.md",
+     4
+    ],
+    [
+     "README.md",
+     2
+    ],
+    [
+     "README.md",
+     7
+    ],
+    [
+     "README.md",
+     8
+    ],
+    [
+     "README.md",
+     3
+    ],
+    [
+     "README.md",
+     5
+    ],
+    [
+     "README.md",
+     1
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.4296,
+    "README.md": 0.4388,
+    "models/README.md": 0.3089,
+    "protocol.md": 0.3863
+   },
+   "fd": {
+    "ans": "The excerpt does not explain how later stages of a pipeline can take into account what earlier stages already decided.",
+    "ans_ok": 0,
+    "ci": [
+     "README.md",
+     0
+    ],
+    "fallback": 1,
+    "grade_p": 0.3192,
+    "hit": 0,
+    "judge_tok": 2830,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 762
+   },
+   "fg": {
+    "ans": "Each later stage takes into account earlier decisions by using conditional logic, such as the `hintfam` hint branch and `intent` branch, which are inserted after previous stages like \"Choose a tool fo",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "fallback": 0,
+    "grade_p": 0.0018,
+    "hit": 0,
+    "judge_tok": 1505,
+    "n_judged": 4,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "tok": 856
+   },
+   "glob_pool": [
+    [
+     "README.md",
+     0
+    ],
+    [
+     "README.md",
+     4
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     7
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     111
+    ],
+    [
+     "README.md",
+     2
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "How can each later stage of my pipeline take into account what the earlier stages already decided?",
+   "recipe": "indirect",
+   "sanity_agree": null,
+   "sel_doc": "README.md"
+  },
+  {
+   "chunk": 8,
+   "doc": "protocol.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "protocol.md",
+     8
+    ],
+    [
+     "protocol.md",
+     7
+    ],
+    [
+     "protocol.md",
+     6
+    ],
+    [
+     "protocol.md",
+     5
+    ],
+    [
+     "protocol.md",
+     19
+    ],
+    [
+     "protocol.md",
+     9
+    ],
+    [
+     "protocol.md",
+     14
+    ],
+    [
+     "protocol.md",
+     4
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.4989,
+    "README.md": 0.4154,
+    "models/README.md": 0.3512,
+    "protocol.md": 0.5957
+   },
+   "fd": {
+    "ans": "The gap SHRANK with pool at pool 1024 is +0.7.",
+    "ans_ok": 1,
+    "ci": [
+     "protocol.md",
+     8
+    ],
+    "fallback": 0,
+    "grade_p": 0.6821,
+    "hit": 1,
+    "judge_tok": 446,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "protocol.md",
+     8
+    ],
+    "tok": 904
+   },
+   "fg": {
+    "ans": "The gap SHRANK with pool at pool 1024 is +0.7.",
+    "ans_ok": 1,
+    "ci": [
+     "protocol.md",
+     8
+    ],
+    "fallback": 0,
+    "grade_p": 0.6821,
+    "hit": 1,
+    "judge_tok": 446,
+    "n_judged": 1,
+    "stop_ci": [
+     "protocol.md",
+     8
+    ],
+    "tok": 904
+   },
+   "glob_pool": [
+    [
+     "protocol.md",
+     8
+    ],
+    [
+     "protocol.md",
+     7
+    ],
+    [
+     "protocol.md",
+     6
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     8
+    ],
+    [
+     "protocol.md",
+     5
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     51
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What is the answer regarding the gap SHRANK with pool at pool 1024?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "protocol.md"
+  },
+  {
+   "chunk": 8,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     63
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     77
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     8
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     49
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     130
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.4946,
+    "README.md": 0.4596,
+    "models/README.md": 0.295,
+    "protocol.md": 0.4587
+   },
+   "fd": {
+    "ans": "No, you cannot confirm the failure and exact performance ceiling because the excerpt states that even under a hypothetical perfect planner, the filesystem component would still fail at 34/64 (0.53).",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     63
+    ],
+    "fallback": 1,
+    "grade_p": 0.0044,
+    "hit": 0,
+    "judge_tok": 2963,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 843
+   },
+   "fg": {
+    "ans": "No, you cannot confirm the failure and exact performance ceiling because the excerpt states that even under a hypothetical perfect planner, the filesystem component would still fail at 34/64 (0.53).",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     63
+    ],
+    "fallback": 1,
+    "grade_p": 0.0044,
+    "hit": 0,
+    "judge_tok": 3078,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 843
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     63
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     77
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     8
+    ],
+    [
+     "README.md",
+     2
+    ],
+    [
+     "protocol.md",
+     8
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "Can I confirm the failure and the exact performance ceiling for the next step?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 12,
+   "doc": "protocol.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "protocol.md",
+     12
+    ],
+    [
+     "protocol.md",
+     4
+    ],
+    [
+     "protocol.md",
+     13
+    ],
+    [
+     "protocol.md",
+     2
+    ],
+    [
+     "protocol.md",
+     14
+    ],
+    [
+     "protocol.md",
+     5
+    ],
+    [
+     "protocol.md",
+     9
+    ],
+    [
+     "protocol.md",
+     8
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5313,
+    "README.md": 0.5287,
+    "models/README.md": 0.4472,
+    "protocol.md": 0.7249
+   },
+   "fd": {
+    "ans": "The provided excerpt does not contain the specific path accuracy metrics by depth for the specified configuration.",
+    "ans_ok": 1,
+    "ci": [
+     "protocol.md",
+     12
+    ],
+    "fallback": 1,
+    "grade_p": 0.8582,
+    "hit": 1,
+    "judge_tok": 3507,
+    "matches_dh": 1,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 859
+   },
+   "fg": {
+    "ans": "The provided excerpt does not contain the specific path accuracy metrics by depth for the specified configuration.",
+    "ans_ok": 1,
+    "ci": [
+     "protocol.md",
+     12
+    ],
+    "fallback": 1,
+    "grade_p": 0.8582,
+    "hit": 1,
+    "judge_tok": 3507,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 859
+   },
+   "glob_pool": [
+    [
+     "protocol.md",
+     12
+    ],
+    [
+     "protocol.md",
+     4
+    ],
+    [
+     "protocol.md",
+     13
+    ],
+    [
+     "protocol.md",
+     2
+    ],
+    [
+     "protocol.md",
+     14
+    ],
+    [
+     "protocol.md",
+     5
+    ],
+    [
+     "protocol.md",
+     9
+    ],
+    [
+     "protocol.md",
+     8
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What are the path accuracy metrics by depth for m=1.0, pool 256/leaf, seed 0?",
+   "recipe": "direct",
+   "sanity_agree": 0.875,
+   "sel_doc": "protocol.md"
+  },
+  {
+   "chunk": 12,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     6
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     49
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     8
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     102
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.4936,
+    "README.md": 0.4349,
+    "models/README.md": 0.3202,
+    "protocol.md": 0.4836
+   },
+   "fd": {
+    "ans": "The excerpt does not contain information about a category ladder or quality thresholds.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.2731,
+    "hit": 0,
+    "judge_tok": 3036,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 803
+   },
+   "fg": {
+    "ans": "There is no depth wall through 6 levels or 96 leaves, as marginal depth cost after level 4 is approximately zero.",
+    "ans_ok": 0,
+    "ci": [
+     "protocol.md",
+     14
+    ],
+    "fallback": 0,
+    "grade_p": 0.0435,
+    "hit": 0,
+    "judge_tok": 2961,
+    "n_judged": 8,
+    "stop_ci": [
+     "protocol.md",
+     14
+    ],
+    "tok": 819
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "protocol.md",
+     11
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     6
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     49
+    ],
+    [
+     "protocol.md",
+     14
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "How far down my category ladder can I keep going before quality drops too much?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 15,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     60
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     49
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     72
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     134
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     58
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     94
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.4796,
+    "README.md": 0.4499,
+    "models/README.md": 0.34,
+    "protocol.md": 0.4446
+   },
+   "fd": {
+    "ans": "The gain was replicated only with the frozen MS-17a/17b data.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     60
+    ],
+    "fallback": 1,
+    "grade_p": 0.0013,
+    "hit": 0,
+    "judge_tok": 3264,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 718
+   },
+   "fg": {
+    "ans": "The gain was replicated only with the frozen MS-17a/17b data.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     60
+    ],
+    "fallback": 1,
+    "grade_p": 0.0013,
+    "hit": 0,
+    "judge_tok": 3187,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 718
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     60
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     49
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     72
+    ],
+    [
+     "README.md",
+     7
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "protocol.md",
+     8
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     134
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "What was the gain replicated only with?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 15,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     78
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     79
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     80
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     89
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     8
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5842,
+    "README.md": 0.5705,
+    "models/README.md": 0.3715,
+    "protocol.md": 0.5789
+   },
+   "fd": {
+    "ans": "You should combine levels with a length-normalized mean path cosine.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     78
+    ],
+    "fallback": 1,
+    "grade_p": 0.1551,
+    "hit": 0,
+    "judge_tok": 2968,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 741
+   },
+   "fg": {
+    "ans": "You must use length-normalized mean path scores because raw sums allow deeper paths to structurally outbid shallower ones when path lengths vary.",
+    "ans_ok": 1,
+    "ci": [
+     "protocol.md",
+     15
+    ],
+    "fallback": 0,
+    "grade_p": 0.9464,
+    "hit": 1,
+    "judge_tok": 1148,
+    "n_judged": 3,
+    "stop_ci": [
+     "protocol.md",
+     15
+    ],
+    "tok": 743
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     78
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     79
+    ],
+    [
+     "protocol.md",
+     15
+    ],
+    [
+     "README.md",
+     3
+    ],
+    [
+     "README.md",
+     0
+    ],
+    [
+     "README.md",
+     2
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     80
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     89
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "How do I apply this scoring method to my router when path lengths vary?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 17,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "README.md",
+     8
+    ],
+    [
+     "README.md",
+     0
+    ],
+    [
+     "README.md",
+     3
+    ],
+    [
+     "README.md",
+     7
+    ],
+    [
+     "README.md",
+     5
+    ],
+    [
+     "README.md",
+     6
+    ],
+    [
+     "README.md",
+     4
+    ],
+    [
+     "README.md",
+     2
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5059,
+    "README.md": 0.7033,
+    "models/README.md": 0.4383,
+    "protocol.md": 0.4837
+   },
+   "fd": {
+    "ans": "The provided excerpt does not contain information regarding the production mechanism of WireSense's router and MCP gate.",
+    "ans_ok": 0,
+    "ci": [
+     "README.md",
+     8
+    ],
+    "fallback": 1,
+    "grade_p": 0.0828,
+    "hit": 0,
+    "judge_tok": 2805,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 577
+   },
+   "fg": {
+    "ans": "The production mechanism of WireSense's router and MCP gate is raw slot-7 embeddings combined with centroid cosine similarity, without using trained heads.",
+    "ans_ok": 1,
+    "ci": [
+     "protocol.md",
+     17
+    ],
+    "fallback": 0,
+    "grade_p": 0.9791,
+    "hit": 1,
+    "judge_tok": 2202,
+    "n_judged": 6,
+    "stop_ci": [
+     "protocol.md",
+     17
+    ],
+    "tok": 759
+   },
+   "glob_pool": [
+    [
+     "README.md",
+     8
+    ],
+    [
+     "README.md",
+     0
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     134
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     17
+    ],
+    [
+     "README.md",
+     3
+    ],
+    [
+     "protocol.md",
+     17
+    ],
+    [
+     "README.md",
+     7
+    ],
+    [
+     "README.md",
+     5
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "What is the production mechanism of WireSense's router and MCP gate?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "README.md"
+  },
+  {
+   "chunk": 17,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     17
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     119
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     120
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6048,
+    "README.md": 0.4879,
+    "models/README.md": 0.4051,
+    "protocol.md": 0.4781
+   },
+   "fd": {
+    "ans": "The system decides by using a fixed representation to create a shortlist of near-identical helpers, then passing that shortlist to an LLM planner for disambiguation rather than relying on embedding sp",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     17
+    ],
+    "fallback": 0,
+    "grade_p": 0.0157,
+    "hit": 0,
+    "judge_tok": 1961,
+    "matches_dh": 0,
+    "n_judged": 5,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     17
+    ],
+    "tok": 803
+   },
+   "fg": {
+    "ans": "The system decides by using a fixed representation to create a shortlist of near-identical helpers, then passing that shortlist to an LLM planner for disambiguation rather than relying on embedding sp",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     17
+    ],
+    "fallback": 0,
+    "grade_p": 0.0157,
+    "hit": 0,
+    "judge_tok": 1961,
+    "n_judged": 5,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     17
+    ],
+    "tok": 803
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     17
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     119
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     120
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "How can one fixed representation decide which of dozens of near-identical helpers an incoming message belongs to?",
+   "recipe": "indirect",
+   "sanity_agree": null,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 21,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     49
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     52
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     6
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6649,
+    "README.md": 0.512,
+    "models/README.md": 0.4443,
+    "protocol.md": 0.6122
+   },
+   "fd": {
+    "ans": "The provided excerpt does not state the held-out generalization ceiling for short synthetic generic texts.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.3362,
+    "hit": 0,
+    "judge_tok": 2969,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 854
+   },
+   "fg": {
+    "ans": "The held-out generalization ceiling for short synthetic generic texts is measured slightly above the probed ~0.84, specifically at 0.8555.",
+    "ans_ok": 0,
+    "ci": [
+     "protocol.md",
+     22
+    ],
+    "fallback": 0,
+    "grade_p": 0.0164,
+    "hit": 0,
+    "judge_tok": 1324,
+    "n_judged": 3,
+    "stop_ci": [
+     "protocol.md",
+     22
+    ],
+    "tok": 1063
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "protocol.md",
+     22
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     49
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "protocol.md",
+     21
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     52
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "What is the held-out generalization ceiling for short synthetic generic texts?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 21,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     49
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     6
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     52
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.615,
+    "README.md": 0.4908,
+    "models/README.md": 0.4018,
+    "protocol.md": 0.5026
+   },
+   "fd": {
+    "ans": "The provided excerpt does not contain information regarding the expected performance range when short synthetic texts are unavailable.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.4553,
+    "hit": 0,
+    "judge_tok": 2928,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 855
+   },
+   "fg": {
+    "ans": "The provided excerpt does not contain information regarding the expected performance range when short synthetic texts are unavailable.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.4553,
+    "hit": 0,
+    "judge_tok": 2928,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 855
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     49
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     6
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     52
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "What is the expected performance range if I cannot use short synthetic texts?",
+   "recipe": "indirect",
+   "sanity_agree": null,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 24,
+   "doc": "protocol.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "protocol.md",
+     25
+    ],
+    [
+     "protocol.md",
+     24
+    ],
+    [
+     "protocol.md",
+     27
+    ],
+    [
+     "protocol.md",
+     28
+    ],
+    [
+     "protocol.md",
+     29
+    ],
+    [
+     "protocol.md",
+     3
+    ],
+    [
+     "protocol.md",
+     2
+    ],
+    [
+     "protocol.md",
+     31
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6161,
+    "README.md": 0.6046,
+    "models/README.md": 0.5086,
+    "protocol.md": 0.7095
+   },
+   "fd": {
+    "ans": "The provided excerpt does not contain the results or a definitive answer to whether pointwise joint judgment beats bi-embedding cosine.",
+    "ans_ok": 0,
+    "ci": [
+     "protocol.md",
+     25
+    ],
+    "fallback": 1,
+    "grade_p": 0.3891,
+    "hit": 0,
+    "judge_tok": 2864,
+    "matches_dh": 1,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 700
+   },
+   "fg": {
+    "ans": "The provided excerpt does not contain the results or a definitive answer to whether pointwise joint judgment beats bi-embedding cosine.",
+    "ans_ok": 0,
+    "ci": [
+     "protocol.md",
+     25
+    ],
+    "fallback": 1,
+    "grade_p": 0.3891,
+    "hit": 0,
+    "judge_tok": 3044,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 700
+   },
+   "glob_pool": [
+    [
+     "protocol.md",
+     25
+    ],
+    [
+     "protocol.md",
+     24
+    ],
+    [
+     "protocol.md",
+     27
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     97
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "README.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "protocol.md",
+     28
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "Does pointwise joint judgment beat bi-embedding cosine?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "protocol.md"
+  },
+  {
+   "chunk": 24,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     21
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6094,
+    "README.md": 0.4257,
+    "models/README.md": 0.3096,
+    "protocol.md": 0.4349
+   },
+   "fd": {
+    "ans": "The provided excerpt does not contain instructions on how to find relevant information quickly.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.4309,
+    "hit": 0,
+    "judge_tok": 2904,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 738
+   },
+   "fg": {
+    "ans": "The provided excerpt does not contain instructions on how to find relevant information quickly.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.4309,
+    "hit": 0,
+    "judge_tok": 2904,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 738
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     21
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "How can I find the most relevant information to answer my specific questions quickly?",
+   "recipe": "indirect",
+   "sanity_agree": null,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 26,
+   "doc": "protocol.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "protocol.md",
+     26
+    ],
+    [
+     "protocol.md",
+     25
+    ],
+    [
+     "protocol.md",
+     27
+    ],
+    [
+     "protocol.md",
+     31
+    ],
+    [
+     "protocol.md",
+     28
+    ],
+    [
+     "protocol.md",
+     24
+    ],
+    [
+     "protocol.md",
+     1
+    ],
+    [
+     "protocol.md",
+     29
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6332,
+    "README.md": 0.5705,
+    "models/README.md": 0.4896,
+    "protocol.md": 0.7073
+   },
+   "fd": {
+    "ans": "There are 12 train and 12 eval chunks per document.",
+    "ans_ok": 1,
+    "ci": [
+     "protocol.md",
+     26
+    ],
+    "fallback": 0,
+    "grade_p": 0.8404,
+    "hit": 1,
+    "judge_tok": 345,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "protocol.md",
+     26
+    ],
+    "tok": 698
+   },
+   "fg": {
+    "ans": "There are 12 train and 12 eval chunks per document.",
+    "ans_ok": 1,
+    "ci": [
+     "protocol.md",
+     26
+    ],
+    "fallback": 0,
+    "grade_p": 0.8404,
+    "hit": 1,
+    "judge_tok": 345,
+    "n_judged": 1,
+    "stop_ci": [
+     "protocol.md",
+     26
+    ],
+    "tok": 698
+   },
+   "glob_pool": [
+    [
+     "protocol.md",
+     26
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "protocol.md",
+     25
+    ],
+    [
+     "protocol.md",
+     27
+    ],
+    [
+     "protocol.md",
+     31
+    ],
+    [
+     "protocol.md",
+     28
+    ],
+    [
+     "README.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What is the number of train and eval chunks per document?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "protocol.md"
+  },
+  {
+   "chunk": 26,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     21
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.4839,
+    "README.md": 0.2731,
+    "models/README.md": 0.1843,
+    "protocol.md": 0.3017
+   },
+   "fd": {
+    "ans": "The excerpt does not provide instructions on how to look something up when you cannot name what you are looking for.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    "fallback": 1,
+    "grade_p": 0.2715,
+    "hit": 0,
+    "judge_tok": 2916,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 724
+   },
+   "fg": {
+    "ans": "The excerpt does not provide instructions on how to look something up when you cannot name what you are looking for.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    "fallback": 1,
+    "grade_p": 0.2715,
+    "hit": 0,
+    "judge_tok": 2916,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 724
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     21
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "How do I look something up when I can't name what I'm looking for?",
+   "recipe": "indirect",
+   "sanity_agree": null,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 27,
+   "doc": "protocol.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "protocol.md",
+     31
+    ],
+    [
+     "protocol.md",
+     30
+    ],
+    [
+     "protocol.md",
+     29
+    ],
+    [
+     "protocol.md",
+     27
+    ],
+    [
+     "protocol.md",
+     28
+    ],
+    [
+     "protocol.md",
+     1
+    ],
+    [
+     "protocol.md",
+     21
+    ],
+    [
+     "protocol.md",
+     3
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5286,
+    "README.md": 0.46,
+    "models/README.md": 0.4379,
+    "protocol.md": 0.5863
+   },
+   "fd": {
+    "ans": "The J-combo model uses the exact input features [q; c; |q\u2212c|; q\u00b7c].",
+    "ans_ok": 1,
+    "ci": [
+     "protocol.md",
+     27
+    ],
+    "fallback": 0,
+    "grade_p": 0.963,
+    "hit": 1,
+    "judge_tok": 1422,
+    "matches_dh": 1,
+    "n_judged": 4,
+    "stop_ci": [
+     "protocol.md",
+     27
+    ],
+    "tok": 820
+   },
+   "fg": {
+    "ans": "The J-combo model uses the exact input features [q; c; |q\u2212c|; q\u00b7c].",
+    "ans_ok": 1,
+    "ci": [
+     "protocol.md",
+     27
+    ],
+    "fallback": 0,
+    "grade_p": 0.963,
+    "hit": 1,
+    "judge_tok": 1803,
+    "n_judged": 5,
+    "stop_ci": [
+     "protocol.md",
+     27
+    ],
+    "tok": 820
+   },
+   "glob_pool": [
+    [
+     "protocol.md",
+     31
+    ],
+    [
+     "protocol.md",
+     30
+    ],
+    [
+     "protocol.md",
+     29
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "protocol.md",
+     27
+    ],
+    [
+     "protocol.md",
+     28
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What are the exact input features used by the J-combo model?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "protocol.md"
+  },
+  {
+   "chunk": 27,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     62
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6619,
+    "README.md": 0.4717,
+    "models/README.md": 0.3973,
+    "protocol.md": 0.5767
+   },
+   "fd": {
+    "ans": "The provided excerpt does not contain information on how to quickly verify if a document supports a question.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.7203,
+    "hit": 0,
+    "judge_tok": 2895,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 796
+   },
+   "fg": {
+    "ans": "The provided excerpt does not contain information on how to quickly verify if a document supports a question.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.7203,
+    "hit": 0,
+    "judge_tok": 2907,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 796
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "protocol.md",
+     26
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "What is the best way to quickly verify if a document supports a question?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 29,
+   "doc": "protocol.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "protocol.md",
+     29
+    ],
+    [
+     "protocol.md",
+     28
+    ],
+    [
+     "protocol.md",
+     15
+    ],
+    [
+     "protocol.md",
+     31
+    ],
+    [
+     "protocol.md",
+     21
+    ],
+    [
+     "protocol.md",
+     19
+    ],
+    [
+     "protocol.md",
+     25
+    ],
+    [
+     "protocol.md",
+     20
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5868,
+    "README.md": 0.5477,
+    "models/README.md": 0.4035,
+    "protocol.md": 0.6589
+   },
+   "fd": {
+    "ans": "The excerpt does not provide the specific probabilistic scores over all evaluated pairs.",
+    "ans_ok": 0,
+    "ci": [
+     "protocol.md",
+     29
+    ],
+    "fallback": 1,
+    "grade_p": 0.4367,
+    "hit": 1,
+    "judge_tok": 2978,
+    "matches_dh": 1,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 802
+   },
+   "fg": {
+    "ans": "The excerpt does not provide the specific probabilistic scores over all evaluated pairs.",
+    "ans_ok": 0,
+    "ci": [
+     "protocol.md",
+     29
+    ],
+    "fallback": 1,
+    "grade_p": 0.4367,
+    "hit": 1,
+    "judge_tok": 3091,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 802
+   },
+   "glob_pool": [
+    [
+     "protocol.md",
+     29
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     89
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     78
+    ],
+    [
+     "README.md",
+     4
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     110
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What are the probabilistic scores over all evaluated pairs?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "protocol.md"
+  },
+  {
+   "chunk": 29,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     113
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     106
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     103
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     115
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5371,
+    "README.md": 0.4661,
+    "models/README.md": 0.3239,
+    "protocol.md": 0.489
+   },
+   "fd": {
+    "ans": "You should not trust the confidence numbers because the correlation runs the wrong way, with narrow bands often leading to incorrect tool selection while wide bands mostly return null correctly.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     106
+    ],
+    "fallback": 0,
+    "grade_p": 0.0104,
+    "hit": 0,
+    "judge_tok": 2452,
+    "matches_dh": 0,
+    "n_judged": 6,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     106
+    ],
+    "tok": 837
+   },
+   "fg": {
+    "ans": "You should not trust the confidence numbers because the correlation runs the wrong way, with narrow bands often leading to incorrect tool selection while wide bands mostly return null correctly.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     106
+    ],
+    "fallback": 0,
+    "grade_p": 0.0104,
+    "hit": 0,
+    "judge_tok": 2452,
+    "n_judged": 6,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     106
+    ],
+    "tok": 837
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     113
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     106
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     103
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     115
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "How much should I trust the confidence numbers my matcher gives me?",
+   "recipe": "indirect",
+   "sanity_agree": null,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 31,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     49
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     60
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6351,
+    "README.md": 0.5268,
+    "models/README.md": 0.4785,
+    "protocol.md": 0.5288
+   },
+   "fd": {
+    "ans": "No tool is used to generate the freeze candidates.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.1015,
+    "hit": 0,
+    "judge_tok": 2900,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 615
+   },
+   "fg": {
+    "ans": "No tool is used to generate the freeze candidates.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.1015,
+    "hit": 0,
+    "judge_tok": 2900,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 615
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     49
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     60
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "What tool is used to generate the freeze candidates?",
+   "recipe": "direct",
+   "sanity_agree": null,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 31,
+   "doc": "protocol.md",
+   "doc_hit": 0,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     75
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     94
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.4162,
+    "README.md": 0.3439,
+    "models/README.md": 0.2539,
+    "protocol.md": 0.3731
+   },
+   "fd": {
+    "ans": "The provided excerpt does not contain information regarding the duration of a full checking pass.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.3841,
+    "hit": 0,
+    "judge_tok": 3113,
+    "matches_dh": 0,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 629
+   },
+   "fg": {
+    "ans": "The provided excerpt does not contain information regarding the duration of a full checking pass.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    "fallback": 1,
+    "grade_p": 0.3841,
+    "hit": 0,
+    "judge_tok": 3113,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 629
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     75
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     94
+    ]
+   ],
+   "pool_matches_committed": null,
+   "q": "Roughly how long should the full checking pass over every passage take?",
+   "recipe": "indirect",
+   "sanity_agree": null,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 1,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     2
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     41
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     32
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     31
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     37
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     0
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     38
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.7416,
+    "README.md": 0.5563,
+    "models/README.md": 0.3645,
+    "protocol.md": 0.3684
+   },
+   "fd": {
+    "ans": "The stdio MCP client targets at least 100 tools across at least 8 servers.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    "fallback": 0,
+    "grade_p": 0.9615,
+    "hit": 1,
+    "judge_tok": 352,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    "tok": 717
+   },
+   "fg": {
+    "ans": "The stdio MCP client targets at least 100 tools across at least 8 servers.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    "fallback": 0,
+    "grade_p": 0.9615,
+    "hit": 1,
+    "judge_tok": 352,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    "tok": 717
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     2
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     41
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     32
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     31
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     37
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     0
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     38
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "How many tools are targeted across how many servers in the stdio MCP client?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 1,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     40
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     62
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     63
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5718,
+    "README.md": 0.3903,
+    "models/README.md": 0.3707,
+    "protocol.md": 0.3659
+   },
+   "fd": {
+    "ans": "You can build a faithful catalogue by running the stdio MCP client's initialize and tools/list commands on each connected plugin, dumping the resulting tool JSON verbatim to a corpus directory without",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    "fallback": 0,
+    "grade_p": 0.8908,
+    "hit": 1,
+    "judge_tok": 351,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    "tok": 740
+   },
+   "fg": {
+    "ans": "You can build a faithful catalogue by running the stdio MCP client's initialize and tools/list commands on each connected plugin, dumping the resulting tool JSON verbatim to a corpus directory without",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    "fallback": 0,
+    "grade_p": 0.8908,
+    "hit": 1,
+    "judge_tok": 351,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    "tok": 740
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     40
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     62
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     63
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "How can I build a faithful catalogue of what every connected plugin actually exposes?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 32,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     32
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     31
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     11
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     36
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     7
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     17
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     77
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5698,
+    "README.md": 0.4316,
+    "models/README.md": 0.304,
+    "protocol.md": 0.396
+   },
+   "fd": {
+    "ans": "The excerpt does not state how many servers are dead when the supervisor task is 60 seconds.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     32
+    ],
+    "fallback": 1,
+    "grade_p": 0.393,
+    "hit": 1,
+    "judge_tok": 2851,
+    "matches_dh": 1,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 801
+   },
+   "fg": {
+    "ans": "The excerpt does not state how many servers are dead when the supervisor task is 60 seconds.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     32
+    ],
+    "fallback": 1,
+    "grade_p": 0.393,
+    "hit": 1,
+    "judge_tok": 2851,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 801
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     32
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     31
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     11
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     36
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     7
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     17
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     77
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "How many servers are dead when the supervisor task is 60 seconds?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 32,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     49
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.56,
+    "README.md": 0.3679,
+    "models/README.md": 0.2418,
+    "protocol.md": 0.3308
+   },
+   "fd": {
+    "ans": "The provided excerpt does not contain information about the fastest way to keep tools running without restarting them.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    "fallback": 1,
+    "grade_p": 0.3783,
+    "hit": 0,
+    "judge_tok": 2927,
+    "matches_dh": 1,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 755
+   },
+   "fg": {
+    "ans": "The provided excerpt does not contain information about the fastest way to keep tools running without restarting them.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    "fallback": 1,
+    "grade_p": 0.3783,
+    "hit": 0,
+    "judge_tok": 2927,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 755
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     49
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What is the fastest way to keep my tools running without restarting them?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 56,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     56
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     63
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     77
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     10
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     68
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5343,
+    "README.md": 0.3869,
+    "models/README.md": 0.3582,
+    "protocol.md": 0.4527
+   },
+   "fd": {
+    "ans": "1448 rows were written and flushed before the TypeError occurred.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     56
+    ],
+    "fallback": 0,
+    "grade_p": 0.9548,
+    "hit": 1,
+    "judge_tok": 425,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     56
+    ],
+    "tok": 858
+   },
+   "fg": {
+    "ans": "1448 rows were written and flushed before the TypeError occurred.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     56
+    ],
+    "fallback": 0,
+    "grade_p": 0.9548,
+    "hit": 1,
+    "judge_tok": 425,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     56
+    ],
+    "tok": 858
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     56
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     63
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     77
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     10
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     68
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "How many rows were written and flushed before the TypeError occurred?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 56,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     5
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     55
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     6
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     80
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     109
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     8
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5732,
+    "README.md": 0.5125,
+    "models/README.md": 0.351,
+    "protocol.md": 0.5187
+   },
+   "fd": {
+    "ans": "To verify accuracy metrics and ensure performance thresholds are met, you must report the confusion matrix, per-class recall, and overall accuracy, then confirm that overall accuracy is at least 0.75,",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     55
+    ],
+    "fallback": 0,
+    "grade_p": 0.0514,
+    "hit": 0,
+    "judge_tok": 711,
+    "matches_dh": 1,
+    "n_judged": 2,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     55
+    ],
+    "tok": 851
+   },
+   "fg": {
+    "ans": "To verify accuracy metrics and ensure performance thresholds are met, you must report the confusion matrix, per-class recall, and overall accuracy, then confirm that overall accuracy is at least 0.75,",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     55
+    ],
+    "fallback": 0,
+    "grade_p": 0.0514,
+    "hit": 0,
+    "judge_tok": 711,
+    "n_judged": 2,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     55
+    ],
+    "tok": 851
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     5
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     55
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     6
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     80
+    ],
+    [
+     "protocol.md",
+     4
+    ],
+    [
+     "protocol.md",
+     29
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     109
+    ],
+    [
+     "README.md",
+     4
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "How do I verify the accuracy metrics and ensure the results meet performance thresholds?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 62,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     62
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     68
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5366,
+    "README.md": 0.3314,
+    "models/README.md": 0.3233,
+    "protocol.md": 0.3225
+   },
+   "fd": {
+    "ans": "The deprecated read_file tool should be replaced by read_text_file.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     62
+    ],
+    "fallback": 0,
+    "grade_p": 0.8821,
+    "hit": 1,
+    "judge_tok": 331,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     62
+    ],
+    "tok": 668
+   },
+   "fg": {
+    "ans": "The deprecated read_file tool should be replaced by read_text_file.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     62
+    ],
+    "fallback": 0,
+    "grade_p": 0.8821,
+    "hit": 1,
+    "judge_tok": 331,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     62
+    ],
+    "tok": 668
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     62
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     68
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "Which native tool should replace the deprecated read_file?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 62,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     112
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     21
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     113
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5233,
+    "README.md": 0.3958,
+    "models/README.md": 0.2889,
+    "protocol.md": 0.369
+   },
+   "fd": {
+    "ans": "Picking an option other than the officially recommended one is still correct when the planner intentionally under-weights the parenthetical null clause in favor of a listed \"no_tool\" entry that compet",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     112
+    ],
+    "fallback": 0,
+    "grade_p": 0.0071,
+    "hit": 0,
+    "judge_tok": 331,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     112
+    ],
+    "tok": 710
+   },
+   "fg": {
+    "ans": "Picking an option other than the officially recommended one is still correct when the planner intentionally under-weights the parenthetical null clause in favor of a listed \"no_tool\" entry that compet",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     112
+    ],
+    "fallback": 0,
+    "grade_p": 0.0071,
+    "hit": 0,
+    "judge_tok": 331,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     112
+    ],
+    "tok": 710
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     112
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     21
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     113
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "When is picking something other than the officially recommended option still the correct call?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 69,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     69
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     72
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     74
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     70
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     71
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     60
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     68
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.697,
+    "README.md": 0.4966,
+    "models/README.md": 0.4387,
+    "protocol.md": 0.472
+   },
+   "fd": {
+    "ans": "The gate flapping is caused by the spawned tool sets producing different cached hashes, which results in the gate cache being keyed on a content hash that varies between runs.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     69
+    ],
+    "fallback": 0,
+    "grade_p": 0.702,
+    "hit": 1,
+    "judge_tok": 376,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     69
+    ],
+    "tok": 778
+   },
+   "fg": {
+    "ans": "The gate flapping is caused by the spawned tool sets producing different cached hashes, which results in the gate cache being keyed on a content hash that varies between runs.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     69
+    ],
+    "fallback": 0,
+    "grade_p": 0.702,
+    "hit": 1,
+    "judge_tok": 376,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     69
+    ],
+    "tok": 778
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     69
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     72
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     74
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     70
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     71
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     60
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     68
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What causes the gate flapping when spawned tool sets produce different cached hashes?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 69,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     69
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     60
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     73
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     74
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     77
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     71
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     68
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     130
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6571,
+    "README.md": 0.5017,
+    "models/README.md": 0.3997,
+    "protocol.md": 0.425
+   },
+   "fd": {
+    "ans": "The gate won't flip its state unexpectedly because the gate cache is keyed on a content hash of the spawned tools/list, which ensures consistency across runs.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     69
+    ],
+    "fallback": 1,
+    "grade_p": 0.4212,
+    "hit": 1,
+    "judge_tok": 2895,
+    "matches_dh": 1,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 779
+   },
+   "fg": {
+    "ans": "The gate won't flip its state unexpectedly because the gate cache is keyed on a content hash of the spawned tools/list, which ensures consistency across runs.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     69
+    ],
+    "fallback": 1,
+    "grade_p": 0.4212,
+    "hit": 1,
+    "judge_tok": 2895,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 779
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     69
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     60
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     73
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     74
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     77
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     71
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     68
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     130
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What guarantees that the gate won't flip its state unexpectedly during the next deployment run?",
+   "recipe": "indirect",
+   "sanity_agree": 0.875,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 72,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     12
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     8
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     77
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     63
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6313,
+    "README.md": 0.5451,
+    "models/README.md": 0.4299,
+    "protocol.md": 0.5234
+   },
+   "fd": {
+    "ans": "The provided excerpt does not identify a ground difference between per-case prompt_tokens and the registered run log.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    "fallback": 1,
+    "grade_p": 0.148,
+    "hit": 0,
+    "judge_tok": 2902,
+    "matches_dh": 1,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 784
+   },
+   "fg": {
+    "ans": "The provided excerpt does not identify a ground difference between per-case prompt_tokens and the registered run log.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    "fallback": 1,
+    "grade_p": 0.148,
+    "hit": 0,
+    "judge_tok": 2902,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 784
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     12
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     8
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     77
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     63
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What is the ground difference identified by comparing per-case prompt_tokens and the registered run log?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 72,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     63
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     12
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     29
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     66
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     8
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6711,
+    "README.md": 0.5585,
+    "models/README.md": 0.4709,
+    "protocol.md": 0.496
+   },
+   "fd": {
+    "ans": "The evaluation results changed because the background launch initially used `MCP_EVAL_SUFFIX=b9` (without a dot), causing a `FileNotFoundError`, which was resolved by relaunching with the correct `MCP",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     66
+    ],
+    "fallback": 0,
+    "grade_p": 0.0015,
+    "hit": 0,
+    "judge_tok": 1830,
+    "matches_dh": 1,
+    "n_judged": 5,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     66
+    ],
+    "tok": 795
+   },
+   "fg": {
+    "ans": "The evaluation results changed because the background launch initially used `MCP_EVAL_SUFFIX=b9` (without a dot), causing a `FileNotFoundError`, which was resolved by relaunching with the correct `MCP",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     66
+    ],
+    "fallback": 0,
+    "grade_p": 0.0015,
+    "hit": 0,
+    "judge_tok": 1830,
+    "n_judged": 5,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     66
+    ],
+    "tok": 795
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     63
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     12
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     29
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     66
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     8
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What tool configuration changes caused the evaluation results to change?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 90,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     93
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     94
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     91
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     98
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     90
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     89
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     99
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     92
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.7459,
+    "README.md": 0.5145,
+    "models/README.md": 0.3761,
+    "protocol.md": 0.5107
+   },
+   "fd": {
+    "ans": "The expected recall for pc1 windows is less than or equal to the k-means union's recall at comparable budgets.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     90
+    ],
+    "fallback": 0,
+    "grade_p": 0.9361,
+    "hit": 1,
+    "judge_tok": 2246,
+    "matches_dh": 1,
+    "n_judged": 5,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     90
+    ],
+    "tok": 867
+   },
+   "fg": {
+    "ans": "The expected recall for pc1 windows is less than or equal to the k-means union's recall at comparable budgets.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     90
+    ],
+    "fallback": 0,
+    "grade_p": 0.9361,
+    "hit": 1,
+    "judge_tok": 2246,
+    "n_judged": 5,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     90
+    ],
+    "tok": 867
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     93
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     94
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     91
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     98
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     90
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     89
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     99
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     92
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What are the expected recall results for pc1 windows compared to the k-means union's recall at comparable budgets?",
+   "recipe": "direct",
+   "sanity_agree": 0.8,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 90,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     89
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     84
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     102
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     103
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6263,
+    "README.md": 0.5858,
+    "models/README.md": 0.3534,
+    "protocol.md": 0.4492
+   },
+   "fd": {
+    "ans": "You can improve your tool selection accuracy by sliding a 10-tool window across the population with a step of 7 and an overlap of 3, then building the final list from the top-scoring windows using eit",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     89
+    ],
+    "fallback": 0,
+    "grade_p": 0.0176,
+    "hit": 0,
+    "judge_tok": 1080,
+    "matches_dh": 1,
+    "n_judged": 3,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     89
+    ],
+    "tok": 832
+   },
+   "fg": {
+    "ans": "You can improve your tool selection accuracy by sliding a 10-tool window across the population with a step of 7 and an overlap of 3, then building the final list from the top-scoring windows using eit",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     89
+    ],
+    "fallback": 0,
+    "grade_p": 0.0176,
+    "hit": 0,
+    "judge_tok": 1080,
+    "n_judged": 3,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     89
+    ],
+    "tok": 832
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     89
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     84
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     102
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     103
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "How can I improve my tool selection accuracy using this new sorting method?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 94,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     94
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     98
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     93
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     99
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     100
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     96
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     90
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     89
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6974,
+    "README.md": 0.426,
+    "models/README.md": 0.3515,
+    "protocol.md": 0.4608
+   },
+   "fd": {
+    "ans": "The sliding window loses entirely on coverage compared to the union because the union provides a higher recall (88%) for the presence of the answer, whereas the sliding window only achieves 52\u201383% rec",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     94
+    ],
+    "fallback": 0,
+    "grade_p": 0.7305,
+    "hit": 1,
+    "judge_tok": 515,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     94
+    ],
+    "tok": 1067
+   },
+   "fg": {
+    "ans": "The sliding window loses entirely on coverage compared to the union because the union provides a higher recall (88%) for the presence of the answer, whereas the sliding window only achieves 52\u201383% rec",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     94
+    ],
+    "fallback": 0,
+    "grade_p": 0.7305,
+    "hit": 1,
+    "judge_tok": 515,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     94
+    ],
+    "tok": 1067
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     94
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     98
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     93
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     99
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     100
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     96
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     90
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     89
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "Why does the sliding window lose entirely on coverage compared to the union?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 94,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     21
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     132
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6023,
+    "README.md": 0.457,
+    "models/README.md": 0.3166,
+    "protocol.md": 0.4453
+   },
+   "fd": {
+    "ans": "The system can improve its ability to find and select the correct answer by adopting the `softhint` mechanism, which inserts a conditional hint branch after the initial tool selection prompt to guide ",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "fallback": 0,
+    "grade_p": 0.0054,
+    "hit": 0,
+    "judge_tok": 400,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "tok": 952
+   },
+   "fg": {
+    "ans": "The system can improve its ability to find and select the correct answer by adopting the `softhint` mechanism, which inserts a conditional hint branch after the initial tool selection prompt to guide ",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "fallback": 0,
+    "grade_p": 0.0054,
+    "hit": 0,
+    "judge_tok": 400,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "tok": 952
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     21
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     132
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "How can I improve the system's ability to find and select the correct answer?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 117,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     117
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     118
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     111
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     112
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     113
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     131
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6706,
+    "README.md": 0.4574,
+    "models/README.md": 0.3036,
+    "protocol.md": 0.4217
+   },
+   "fd": {
+    "ans": "According to the menu hypothesis, the false-abstention magnet on real requests is the description clause \"a question you can answer directly,\" which invites the model to over-trust its own direct-answ",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     117
+    ],
+    "fallback": 0,
+    "grade_p": 0.8896,
+    "hit": 1,
+    "judge_tok": 393,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     117
+    ],
+    "tok": 837
+   },
+   "fg": {
+    "ans": "According to the menu hypothesis, the false-abstention magnet on real requests is the description clause \"a question you can answer directly,\" which invites the model to over-trust its own direct-answ",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     117
+    ],
+    "fallback": 0,
+    "grade_p": 0.8896,
+    "hit": 1,
+    "judge_tok": 393,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     117
+    ],
+    "tok": 837
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     117
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     118
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     111
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     112
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     113
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     131
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What is the false-abstention magnet on real requests according to the menu hypothesis?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 117,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6616,
+    "README.md": 0.5061,
+    "models/README.md": 0.3877,
+    "protocol.md": 0.4473
+   },
+   "fd": {
+    "ans": "The provided excerpt does not contain instructions on how to make AI tools stop ignoring real requests or only giving up answers.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    "fallback": 1,
+    "grade_p": 0.2241,
+    "hit": 0,
+    "judge_tok": 2970,
+    "matches_dh": 1,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 781
+   },
+   "fg": {
+    "ans": "The provided excerpt does not contain instructions on how to make AI tools stop ignoring real requests or only giving up answers.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    "fallback": 1,
+    "grade_p": 0.2241,
+    "hit": 0,
+    "judge_tok": 2970,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 781
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     53
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     65
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "How can I make my AI tools stop ignoring real requests and only giving up answers?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 122,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     122
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     13
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     99
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     100
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     105
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     26
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5207,
+    "README.md": 0.4171,
+    "models/README.md": 0.3206,
+    "protocol.md": 0.4407
+   },
+   "fd": {
+    "ans": "The hintfam arm had the highest accuracy ever measured here at 0.7122.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     122
+    ],
+    "fallback": 0,
+    "grade_p": 0.924,
+    "hit": 1,
+    "judge_tok": 563,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     122
+    ],
+    "tok": 1139
+   },
+   "fg": {
+    "ans": "The hintfam arm had the highest accuracy ever measured here at 0.7122.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     122
+    ],
+    "fallback": 0,
+    "grade_p": 0.924,
+    "hit": 1,
+    "judge_tok": 563,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     122
+    ],
+    "tok": 1139
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     122
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     13
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     99
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     100
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     105
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     26
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "Which arm had the highest accuracy ever measured here?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 122,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     27
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     67
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     21
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.5658,
+    "README.md": 0.4589,
+    "models/README.md": 0.3115,
+    "protocol.md": 0.4082
+   },
+   "fd": {
+    "ans": "The fastest way to run a high-accuracy query is to use the search-primary arm, which invokes only the mcp_search line with a 3-way contract to achieve a final pick.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    "fallback": 1,
+    "grade_p": 0.0037,
+    "hit": 0,
+    "judge_tok": 2982,
+    "matches_dh": 1,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 958
+   },
+   "fg": {
+    "ans": "The fastest way to run a high-accuracy query is to use the search-primary arm, which invokes only the mcp_search line with a 3-way contract to achieve a final pick.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    "fallback": 1,
+    "grade_p": 0.0037,
+    "hit": 0,
+    "judge_tok": 2982,
+    "n_judged": 8,
+    "stop_ci": null,
+    "tok": 958
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     27
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     67
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     21
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What is the fastest way to run a high-accuracy query in this system?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 127,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     129
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     127
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     130
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     119
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     136
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     135
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6496,
+    "README.md": 0.442,
+    "models/README.md": 0.3452,
+    "protocol.md": 0.4462
+   },
+   "fd": {
+    "ans": "According to the passage, intent calls add tokens on every case while the planner is skipped for no one.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     127
+    ],
+    "fallback": 0,
+    "grade_p": 0.93,
+    "hit": 1,
+    "judge_tok": 858,
+    "matches_dh": 1,
+    "n_judged": 2,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     127
+    ],
+    "tok": 846
+   },
+   "fg": {
+    "ans": "According to the passage, intent calls add tokens on every case while the planner is skipped for no one.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     127
+    ],
+    "fallback": 0,
+    "grade_p": 0.93,
+    "hit": 1,
+    "judge_tok": 858,
+    "n_judged": 2,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     127
+    ],
+    "tok": 846
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     129
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     127
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     130
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     119
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     136
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     135
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What is the effect of intent calls on tokens according to the passage?",
+   "recipe": "direct",
+   "sanity_agree": 0.5,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 127,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     111
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     94
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     51
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     19
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     118
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.4388,
+    "README.md": 0.4269,
+    "models/README.md": 0.3171,
+    "protocol.md": 0.3814
+   },
+   "fd": {
+    "ans": "Adding a quick screening step ahead of the main decision will result in the production gate gaining one extra LLM call per utterance and a branch on its verdict based on the screening's outcome.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "fallback": 0,
+    "grade_p": 0.1885,
+    "hit": 0,
+    "judge_tok": 403,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "tok": 855
+   },
+   "fg": {
+    "ans": "Adding a quick screening step ahead of the main decision will result in the production gate gaining one extra LLM call per utterance and a branch on its verdict based on the screening's outcome.",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "fallback": 0,
+    "grade_p": 0.1885,
+    "hit": 0,
+    "judge_tok": 403,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "tok": 855
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     111
+    ],
+    [
+     "README.md",
+     0
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     94
+    ],
+    [
+     "README.md",
+     4
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     51
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     108
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     22
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What should I expect to change if I add a quick screening step ahead of the main decision?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 128,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     128
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     132
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     134
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     129
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     135
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     133
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     130
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     122
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.7204,
+    "README.md": 0.4546,
+    "models/README.md": 0.2957,
+    "protocol.md": 0.4743
+   },
+   "fd": {
+    "ans": "The softhint method achieved an accuracy of 0.7194 in the MS-28 results.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     128
+    ],
+    "fallback": 0,
+    "grade_p": 0.9647,
+    "hit": 1,
+    "judge_tok": 523,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     128
+    ],
+    "tok": 1063
+   },
+   "fg": {
+    "ans": "The softhint method achieved an accuracy of 0.7194 in the MS-28 results.",
+    "ans_ok": 1,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     128
+    ],
+    "fallback": 0,
+    "grade_p": 0.9647,
+    "hit": 1,
+    "judge_tok": 523,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     128
+    ],
+    "tok": 1063
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     128
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     132
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     134
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     129
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     135
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     133
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     130
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     122
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What accuracy did the softhint method achieve in the MS-28 results?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 128,
+   "doc": "PROTOCOL-mcp-selection.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     128
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     125
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     123
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     130
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     132
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     121
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.6627,
+    "README.md": 0.4937,
+    "models/README.md": 0.3401,
+    "protocol.md": 0.5436
+   },
+   "fd": {
+    "ans": "Adopting a conditional hint improves accuracy by inserting a specific hint branch after the initial tool selection prompt, which triggers an additional LLM call to determine whether to proceed with a ",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "fallback": 0,
+    "grade_p": 0.024,
+    "hit": 0,
+    "judge_tok": 398,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "tok": 956
+   },
+   "fg": {
+    "ans": "Adopting a conditional hint improves accuracy by inserting a specific hint branch after the initial tool selection prompt, which triggers an additional LLM call to determine whether to proceed with a ",
+    "ans_ok": 0,
+    "ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "fallback": 0,
+    "grade_p": 0.024,
+    "hit": 0,
+    "judge_tok": 398,
+    "n_judged": 1,
+    "stop_ci": [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    "tok": 956
+   },
+   "glob_pool": [
+    [
+     "PROTOCOL-mcp-selection.md",
+     126
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     128
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     125
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     123
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     130
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     132
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     121
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "How can I improve my results' accuracy by adopting a conditional hint?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "PROTOCOL-mcp-selection.md"
+  },
+  {
+   "chunk": 1,
+   "doc": "models/README.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "models/README.md",
+     1
+    ],
+    [
+     "models/README.md",
+     0
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.4791,
+    "README.md": 0.475,
+    "models/README.md": 0.6074,
+    "protocol.md": 0.5139
+   },
+   "fd": {
+    "ans": "The weights require the Qwen3.5-4B UD-Q4_K_XL encoder with `--embedding` and `--pooling last` settings.",
+    "ans_ok": 1,
+    "ci": [
+     "models/README.md",
+     1
+    ],
+    "fallback": 0,
+    "grade_p": 0.986,
+    "hit": 1,
+    "judge_tok": 244,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "models/README.md",
+     1
+    ],
+    "tok": 514
+   },
+   "fg": {
+    "ans": "The weights require the Qwen3.5-4B UD-Q4_K_XL encoder with `--embedding` and `--pooling last` settings.",
+    "ans_ok": 1,
+    "ci": [
+     "models/README.md",
+     1
+    ],
+    "fallback": 0,
+    "grade_p": 0.986,
+    "hit": 1,
+    "judge_tok": 244,
+    "n_judged": 1,
+    "stop_ci": [
+     "models/README.md",
+     1
+    ],
+    "tok": 514
+   },
+   "glob_pool": [
+    [
+     "models/README.md",
+     1
+    ],
+    [
+     "protocol.md",
+     3
+    ],
+    [
+     "protocol.md",
+     2
+    ],
+    [
+     "models/README.md",
+     0
+    ],
+    [
+     "protocol.md",
+     0
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "README.md",
+     2
+    ],
+    [
+     "protocol.md",
+     9
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "What encoder and pooling settings are required to use these weights?",
+   "recipe": "direct",
+   "sanity_agree": 1.0,
+   "sel_doc": "models/README.md"
+  },
+  {
+   "chunk": 1,
+   "doc": "models/README.md",
+   "doc_hit": 1,
+   "doc_pool": [
+    [
+     "models/README.md",
+     1
+    ],
+    [
+     "models/README.md",
+     0
+    ]
+   ],
+   "doc_scores": {
+    "PROTOCOL-mcp-selection.md": 0.4854,
+    "README.md": 0.4696,
+    "models/README.md": 0.5495,
+    "protocol.md": 0.4667
+   },
+   "fd": {
+    "ans": "You must ensure your custom weights work correctly by using them only with the specific encoder they were recorded from, which is the Qwen3.5-4B UD-Q4_K_XL model configured with `--embedding --pooling",
+    "ans_ok": 1,
+    "ci": [
+     "models/README.md",
+     1
+    ],
+    "fallback": 0,
+    "grade_p": 0.9181,
+    "hit": 1,
+    "judge_tok": 247,
+    "matches_dh": 1,
+    "n_judged": 1,
+    "stop_ci": [
+     "models/README.md",
+     1
+    ],
+    "tok": 546
+   },
+   "fg": {
+    "ans": "You must ensure your custom weights work correctly by using them only with the specific encoder they were recorded from, which is the Qwen3.5-4B UD-Q4_K_XL model configured with `--embedding --pooling",
+    "ans_ok": 1,
+    "ci": [
+     "models/README.md",
+     1
+    ],
+    "fallback": 0,
+    "grade_p": 0.9181,
+    "hit": 1,
+    "judge_tok": 247,
+    "n_judged": 1,
+    "stop_ci": [
+     "models/README.md",
+     1
+    ],
+    "tok": 546
+   },
+   "glob_pool": [
+    [
+     "models/README.md",
+     1
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     8
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     54
+    ],
+    [
+     "README.md",
+     0
+    ],
+    [
+     "README.md",
+     2
+    ],
+    [
+     "protocol.md",
+     3
+    ],
+    [
+     "protocol.md",
+     29
+    ],
+    [
+     "PROTOCOL-mcp-selection.md",
+     48
+    ]
+   ],
+   "pool_matches_committed": true,
+   "q": "How do I ensure my custom weights work correctly with this specific model version?",
+   "recipe": "indirect",
+   "sanity_agree": 1.0,
+   "sel_doc": "models/README.md"
+  }
+ ],
+ "sanity": {
+  "dh_answer_identity_on_hit": 1.0,
+  "judge_agree": 0.9760416666666667,
+  "ok": true,
+  "pool_matches_committed": 1.0
+ },
+ "smoke": false,
+ "tag": "fselect",
+ "tau": 0.7,
+ "verdicts": {
+  "PF1": [
+   "FAIL",
+   0.6207
+  ],
+  "PF2": [
+   "FAIL",
+   -0.1379
+  ],
+  "PF3": [
+   "PASS",
+   0.0517
+  ],
+  "PF4": [
+   "FAIL-budget",
+   2691.1
+  ]
+ }
+}

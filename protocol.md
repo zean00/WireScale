@@ -2144,3 +2144,87 @@ correct overall — abstention is aiming at a mostly-wrong population);
 H3 PASS. Disclosed risk: φ=.15 may abstain too little (if fallback
 questions' max-p is inflated by a plausible-but-wrong top page) — the
 descriptive sweep exists to map exactly that.
+
+## F-series RESULTS (fselect.json, 2026-10-15 — scored)
+
+Sanity: on correctly selected questions the doc pool matched the
+committed topk8.pick exactly (6/6) and F-DOC reproduced the committed
+D-H answer strings byte-for-byte (6/6) — seventh session of temp-0
+determinism. Judge stop agreement vs committed walkret p = .976
+(bar .95): the registered "expect 1.000" was wrong for a disclosed
+reason — this comparison pits the τ=.70 bar against walkret's .50
+threshold, so pages in the .50–.70 band count as disagreements; the
+determinism claim rests on the answer-identity check, which is exact.
+
+| arm | doc hit | answer acc | answered hit | fallback | judged/q | tok/q |
+|-----|---------|-----------|--------------|----------|----------|-------|
+| **F-DOC (select, then scan)** | .621 | .310 | .379 | .517 | 5.03 | 2,691 |
+| F-GLOB (no doc layer, global top-8) | — | **.362** | .397 | .397 | 4.62 | 2,558 |
+| (committed D-H, gold doc given) | 1.000 | .448 | .534 | .362 | 1.60 | 1,423 |
+
+Verdicts: **PF1 FAIL** (.621 vs the .95 bar — the registered bet was
+wrong, and it was the bet the registration itself flagged as
+first-of-its-kind), **PF2 FAIL** (−.1379: mis-selection costs 14
+points), **PF3 PASS** (+.0517: skipping the doc layer entirely BEATS
+running it), **PF4 FAIL-budget** (2,691 tok/q vs the 1,800 ceiling —
+mis-selected scans exhaust 8 judgments of the corpus's longest
+chunks). One of four.
+
+The mechanism is a chunk-count lottery, dissected. The four corpus
+docs hold 9 / 32 / **137** / 2 chunks; the registered rule (doc score
+= max chunk cosine) therefore draws 137 samples from the similarity
+distribution for one doc and 2–32 for the others — the maximum of
+more draws is larger by construction. The 137-chunk doc was selected
+43/58 times overall and won 19 of the 22 mis-selections; the
+32-chunk doc (24 gold questions) kept only 7. The indirect cell
+selected its own doc half the time (.483) — exactly where the bet
+risk was flagged.
+
+F-GLOB's win is the mirror image: the global pool holds the gold page
+only 31/58 (.534, vs .810 doc-confined — cross-doc displacement is
+real, and 4 stops landed confidently in foreign docs), but GIVEN gold
+in the pool the machine answers .645. The reader is unchanged; the
+librarian's cross-doc list is the entire failure. The committed
+season numbers (.448 @ 1,423) presuppose doc knowledge — worth
+exactly .1379 of answer accuracy and half the budget on this corpus.
+
+Registered consequence: the doc layer is neither free nor safely
+skippable. Count-corrected selection, mean-of-top-3 doc scores, or
+doc-centroid similarity are UNREGISTERED candidates — a future
+amendment must commit to one before any scoring. Connection kept for
+that amendment, not scored here: mis-selected scans are exactly where
+the H-series floor abstains (their pools are confidently empty).
+
+## H-series RESULTS (abstain.json, 2026-10-15 — scored)
+
+Sanity: zero model calls by construction (H3's runner assertion) and
+the committed D-H stop/fallback decisions reproduced 58/58 from the
+committed s_vecs before any scoring.
+
+Primary (φ=.15, chosen a priori from the public diagnostic): the
+floor abstains on 11 of the 21 fallback questions (coverage .810),
+and its aim is nearly perfect — **abstention precision .909** (10 of
+the 11 withheld questions had a wrong rank-1 answer). The 10 kept
+fallbacks answer .200; the 37 stopped answers stay .622; overall
+**acc-given-answered = .532, +.0836 over the committed always-answer
+machine (.448)**.
+
+Verdicts: **H1 PASS** (+.0836 ≥ 0), **H2 PASS** (.909 ≥ .70), **H3
+PASS-budget**. All three registered bets landed — the season's only
+clean sweep where every bet was also correct.
+
+The φ sweep (descriptive): acc-given-answered climbs monotonically
+.464 → .481 → .532 → .533 → .558 across φ .05 → .30 while precision
+stays in .83–1.00, and saturates at φ ≥ .30 (15 abstained, coverage
+.741 — no fallback question's max-p lives in [.30,.40], consistent
+with the saturated judge of D-series). The a priori φ=.15 sits at the
+knee: nearly the precision of the strictest floor at twice the
+coverage.
+
+Season consequence: for a voice assistant, "I don't know" is now the
+measured move — answer .532 when answering, withhold the 19% of
+questions that are 91% wrong, and keep the rank-1 fallback for
+everything above the floor. The abstention instrument costs zero
+tokens: it is a threshold on confidence the machine already computes.
+
+Tally: 29 of 52 headline predictions passed.

@@ -1,0 +1,96 @@
+{
+ "by_arm": {
+  "dh_committed": {
+   "ans_acc": 0.4482758620689655,
+   "coverage": 1.0,
+   "fallback_ans_ok": 0.14285714285714285,
+   "stopped_ans_ok": 0.6216216216216216
+  },
+  "hc_floor": {
+   "abstention_precision": 0.9091,
+   "acc_given": 0.5319,
+   "coverage": 0.8103,
+   "n_abstained": 11
+  }
+ },
+ "commit": "3be8a86",
+ "committed_anchors": {
+  "dh_acc": 0.4482758620689655,
+  "high_tau": 0.7
+ },
+ "limit": 0,
+ "llm_calls": 0,
+ "phi_primary": 0.15,
+ "phi_sweep_descriptive": [
+  {
+   "abstention_precision": 1.0,
+   "acc_given": 0.4643,
+   "coverage": 0.9655,
+   "n_abstained": 2,
+   "phi": 0.05
+  },
+  {
+   "abstention_precision": 0.8333,
+   "acc_given": 0.4808,
+   "coverage": 0.8966,
+   "n_abstained": 6,
+   "phi": 0.1
+  },
+  {
+   "abstention_precision": 0.9091,
+   "acc_given": 0.5319,
+   "coverage": 0.8103,
+   "n_abstained": 11,
+   "phi": 0.15
+  },
+  {
+   "abstention_precision": 0.8462,
+   "acc_given": 0.5333,
+   "coverage": 0.7759,
+   "n_abstained": 13,
+   "phi": 0.2
+  },
+  {
+   "abstention_precision": 0.8667,
+   "acc_given": 0.5581,
+   "coverage": 0.7414,
+   "n_abstained": 15,
+   "phi": 0.3
+  },
+  {
+   "abstention_precision": 0.8667,
+   "acc_given": 0.5581,
+   "coverage": 0.7414,
+   "n_abstained": 15,
+   "phi": 0.4
+  }
+ ],
+ "sanity": {
+  "decision_reproduction": 1.0,
+  "ok": true
+ },
+ "smoke": false,
+ "sweep_phi": [
+  0.05,
+  0.1,
+  0.15,
+  0.2,
+  0.3,
+  0.4
+ ],
+ "tag": "abstain",
+ "verdicts": {
+  "H1": [
+   "PASS",
+   0.0836
+  ],
+  "H2": [
+   "PASS",
+   0.9091
+  ],
+  "H3": [
+   "PASS-budget",
+   0
+  ]
+ }
+}
