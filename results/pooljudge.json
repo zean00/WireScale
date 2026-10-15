@@ -1,0 +1,10071 @@
+{
+ "by_arm": {
+  "dh": {
+   "ans_acc": 0.4482758620689655,
+   "fallback_rate": 0.3620689655172414,
+   "grade_p": 0.4848034482758621,
+   "n_judged": 1.603448275862069,
+   "per_recipe": {
+    "direct": 0.6896551724137931,
+    "indirect": 0.20689655172413793
+   },
+   "stop_hit": 0.5344827586206896,
+   "tok_per_q": 1422.5172413793102
+  },
+  "dm": {
+   "ans_acc": 0.41379310344827586,
+   "fallback_rate": 0.27586206896551724,
+   "grade_p": 0.43798275862068964,
+   "n_judged": 1.7413793103448276,
+   "per_recipe": {
+    "direct": 0.6206896551724138,
+    "indirect": 0.20689655172413793
+   },
+   "stop_hit": 0.46551724137931033,
+   "tok_per_q": 2826.7758620689656
+  }
+ },
+ "commit": "43579fd",
+ "committed_anchors": {
+  "asm8_acc": 0.41379310344827586,
+  "asm8_hit": 0.46551724137931033,
+  "asm8_tok": 5427.672413793103
+ },
+ "d50_agree_committed": 1.0,
+ "limit": 0,
+ "model_fp": "7cfe33f65c1c",
+ "n_samples": 3,
+ "records": [
+  {
+   "chunk": 0,
+   "d50": {
+    "answer": null,
+    "ci": 0,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 0
+   },
+   "dh": {
+    "ans": "The excerpt poses the question of whether telling each level its parent's answer helps in decision trees but does not provide an answer.",
+    "ans_ok": 0,
+    "ci": 0,
+    "deployed_judge_tok": 334,
+    "fallback": 0,
+    "grade_p": 0.1984,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 0,
+    "tok": 686,
+    "total_tok": 1020
+   },
+   "dm": {
+    "ans": "The excerpt poses the question of whether telling each level its parent's answer helps in decision trees but does not provide an answer.",
+    "ans_ok": 0,
+    "ci": 0,
+    "deployed_judge_tok": 1002,
+    "fallback": 0,
+    "grade_p": 0.1984,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 0,
+    "tok": 686,
+    "total_tok": 1688
+   },
+   "doc": "README.md",
+   "m_vec": [
+    {
+     "ci": 0,
+     "p": 0.7251925478965041,
+     "p3": [
+      0.7252,
+      0.7252,
+      0.7252
+     ],
+     "tok": 334
+    },
+    {
+     "ci": 4,
+     "p": 0.023646526614300296,
+     "p3": [
+      0.0236,
+      0.0236,
+      0.0236
+     ],
+     "tok": 386
+    },
+    {
+     "ci": 2,
+     "p": 0.5953050509377756,
+     "p3": [
+      0.5953,
+      0.5953,
+      0.5953
+     ],
+     "tok": 412
+    },
+    {
+     "ci": 5,
+     "p": 0.00945205868061002,
+     "p3": [
+      0.0095,
+      0.0095,
+      0.0095
+     ],
+     "tok": 374
+    },
+    {
+     "ci": 3,
+     "p": 0.002330535240192821,
+     "p3": [
+      0.0023,
+      0.0023,
+      0.0023
+     ],
+     "tok": 372
+    },
+    {
+     "ci": 1,
+     "p": 0.0030689216383609757,
+     "p3": [
+      0.0031,
+      0.0031,
+      0.0031
+     ],
+     "tok": 361
+    },
+    {
+     "ci": 7,
+     "p": 0.0010589234397110861,
+     "p3": [
+      0.0011,
+      0.0011,
+      0.0011
+     ],
+     "tok": 357
+    },
+    {
+     "ci": 8,
+     "p": 0.0005336655072145819,
+     "p3": [
+      0.0005,
+      0.0005,
+      0.0005
+     ],
+     "tok": 194
+    }
+   ],
+   "pool": [
+    0,
+    4,
+    2,
+    5,
+    3,
+    1,
+    7,
+    8
+   ],
+   "q": "Does telling each level its parent's answer help in decision trees?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 0,
+     "p": 0.7251925478965041,
+     "tok": 334
+    },
+    {
+     "ci": 4,
+     "p": 0.0236465266143003,
+     "tok": 386
+    },
+    {
+     "ci": 2,
+     "p": 0.5953050509377756,
+     "tok": 412
+    },
+    {
+     "ci": 5,
+     "p": 0.00945205868061002,
+     "tok": 374
+    },
+    {
+     "ci": 3,
+     "p": 0.002330535240192821,
+     "tok": 372
+    },
+    {
+     "ci": 1,
+     "p": 0.0030689216383609757,
+     "tok": 361
+    },
+    {
+     "ci": 7,
+     "p": 0.0010589234397110861,
+     "tok": 357
+    },
+    {
+     "ci": 8,
+     "p": 0.0005336655072145819,
+     "tok": 194
+    }
+   ]
+  },
+  {
+   "chunk": 0,
+   "d50": {
+    "answer": null,
+    "ci": 0,
+    "fallback": 1,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": null
+   },
+   "dh": {
+    "ans": "The excerpt does not provide a method for quickly deciding which specialist to contact based on message type.",
+    "ans_ok": 0,
+    "ci": 0,
+    "deployed_judge_tok": 336,
+    "fallback": 1,
+    "grade_p": 0.3746,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 684,
+    "total_tok": 1020
+   },
+   "dm": {
+    "ans": "The excerpt does not provide a method for quickly deciding which specialist to contact based on message type.",
+    "ans_ok": 0,
+    "ci": 0,
+    "deployed_judge_tok": 1008,
+    "fallback": 1,
+    "grade_p": 0.3746,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 684,
+    "total_tok": 1692
+   },
+   "doc": "README.md",
+   "m_vec": [
+    {
+     "ci": 0,
+     "p": 0.18499924823674666,
+     "p3": [
+      0.185,
+      0.185,
+      0.185
+     ],
+     "tok": 336
+    },
+    {
+     "ci": 4,
+     "p": 0.003137601384257779,
+     "p3": [
+      0.0031,
+      0.0031,
+      0.0031
+     ],
+     "tok": 388
+    },
+    {
+     "ci": 8,
+     "p": 0.00020710677054059005,
+     "p3": [
+      0.0002,
+      0.0002,
+      0.0002
+     ],
+     "tok": 196
+    },
+    {
+     "ci": 2,
+     "p": 0.003621075236939064,
+     "p3": [
+      0.0036,
+      0.0036,
+      0.0036
+     ],
+     "tok": 414
+    },
+    {
+     "ci": 5,
+     "p": 0.004941693743335263,
+     "p3": [
+      0.0049,
+      0.0049,
+      0.0049
+     ],
+     "tok": 376
+    },
+    {
+     "ci": 3,
+     "p": 0.0016293820491859788,
+     "p3": [
+      0.0016,
+      0.0016,
+      0.0016
+     ],
+     "tok": 374
+    },
+    {
+     "ci": 1,
+     "p": 0.0025978379710119882,
+     "p3": [
+      0.0026,
+      0.0026,
+      0.0026
+     ],
+     "tok": 363
+    },
+    {
+     "ci": 7,
+     "p": 0.0008993052814524269,
+     "p3": [
+      0.0009,
+      0.0009,
+      0.0009
+     ],
+     "tok": 359
+    }
+   ],
+   "pool": [
+    0,
+    4,
+    8,
+    2,
+    5,
+    3,
+    1,
+    7
+   ],
+   "q": "How can I quickly decide which specialist to contact based on the message type?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 0,
+     "p": 0.18499924823674666,
+     "tok": 336
+    },
+    {
+     "ci": 4,
+     "p": 0.003137601384257779,
+     "tok": 388
+    },
+    {
+     "ci": 8,
+     "p": 0.00020710677054059005,
+     "tok": 196
+    },
+    {
+     "ci": 2,
+     "p": 0.003621075236939064,
+     "tok": 414
+    },
+    {
+     "ci": 5,
+     "p": 0.004941693743335263,
+     "tok": 376
+    },
+    {
+     "ci": 3,
+     "p": 0.0016293820491859788,
+     "tok": 374
+    },
+    {
+     "ci": 1,
+     "p": 0.0025978379710119882,
+     "tok": 363
+    },
+    {
+     "ci": 7,
+     "p": 0.0008993052814524269,
+     "tok": 359
+    }
+   ]
+  },
+  {
+   "chunk": 2,
+   "d50": {
+    "answer": null,
+    "ci": 3,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 3
+   },
+   "dh": {
+    "ans": "The FiLM conditioning layer was reliably harmful, resulting in a loss of 13.4 points and leading to its rejection.",
+    "ans_ok": 1,
+    "ci": 3,
+    "deployed_judge_tok": 375,
+    "fallback": 0,
+    "grade_p": 0.9066,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 3,
+    "tok": 809,
+    "total_tok": 1184
+   },
+   "dm": {
+    "ans": "The FiLM conditioning layer was reliably harmful, resulting in a loss of 13.4 points and leading to its rejection.",
+    "ans_ok": 1,
+    "ci": 3,
+    "deployed_judge_tok": 1125,
+    "fallback": 0,
+    "grade_p": 0.9066,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 3,
+    "tok": 809,
+    "total_tok": 1934
+   },
+   "doc": "README.md",
+   "m_vec": [
+    {
+     "ci": 3,
+     "p": 0.8237439089025029,
+     "p3": [
+      0.8237,
+      0.8237,
+      0.8237
+     ],
+     "tok": 375
+    },
+    {
+     "ci": 2,
+     "p": 0.6775036863379397,
+     "p3": [
+      0.6775,
+      0.6775,
+      0.6775
+     ],
+     "tok": 415
+    },
+    {
+     "ci": 0,
+     "p": 0.04155667323794067,
+     "p3": [
+      0.0416,
+      0.0416,
+      0.0416
+     ],
+     "tok": 337
+    },
+    {
+     "ci": 4,
+     "p": 0.059348970230604974,
+     "p3": [
+      0.0593,
+      0.0593,
+      0.0593
+     ],
+     "tok": 389
+    },
+    {
+     "ci": 7,
+     "p": 0.0068768725964093265,
+     "p3": [
+      0.0069,
+      0.0069,
+      0.0069
+     ],
+     "tok": 360
+    },
+    {
+     "ci": 1,
+     "p": 0.010968201362039567,
+     "p3": [
+      0.011,
+      0.011,
+      0.011
+     ],
+     "tok": 364
+    },
+    {
+     "ci": 5,
+     "p": 0.0024999544934739626,
+     "p3": [
+      0.0025,
+      0.0025,
+      0.0025
+     ],
+     "tok": 377
+    },
+    {
+     "ci": 6,
+     "p": 0.0030533960205852955,
+     "p3": [
+      0.0031,
+      0.0031,
+      0.0031
+     ],
+     "tok": 371
+    }
+   ],
+   "pool": [
+    3,
+    2,
+    0,
+    4,
+    7,
+    1,
+    5,
+    6
+   ],
+   "q": "What was the outcome of the FiLM conditioning layer in the S-series experiments?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 3,
+     "p": 0.8237439089025029,
+     "tok": 375
+    },
+    {
+     "ci": 2,
+     "p": 0.6775036863379398,
+     "tok": 415
+    },
+    {
+     "ci": 0,
+     "p": 0.04155667323794067,
+     "tok": 337
+    },
+    {
+     "ci": 4,
+     "p": 0.059348970230604974,
+     "tok": 389
+    },
+    {
+     "ci": 7,
+     "p": 0.0068768725964093265,
+     "tok": 360
+    },
+    {
+     "ci": 1,
+     "p": 0.010968201362039567,
+     "tok": 364
+    },
+    {
+     "ci": 5,
+     "p": 0.0024999544934739626,
+     "tok": 377
+    },
+    {
+     "ci": 6,
+     "p": 0.0030533960205852955,
+     "tok": 371
+    }
+   ]
+  },
+  {
+   "chunk": 2,
+   "d50": {
+    "answer": null,
+    "ci": 0,
+    "fallback": 1,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": null
+   },
+   "dh": {
+    "ans": "The provided excerpt does not identify a specific method that consistently improves decision accuracy across multiple complex domains.",
+    "ans_ok": 0,
+    "ci": 0,
+    "deployed_judge_tok": 332,
+    "fallback": 1,
+    "grade_p": 0.4533,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 754,
+    "total_tok": 1086
+   },
+   "dm": {
+    "ans": "The provided excerpt does not identify a specific method that consistently improves decision accuracy across multiple complex domains.",
+    "ans_ok": 0,
+    "ci": 0,
+    "deployed_judge_tok": 996,
+    "fallback": 1,
+    "grade_p": 0.4533,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 754,
+    "total_tok": 1750
+   },
+   "doc": "README.md",
+   "m_vec": [
+    {
+     "ci": 0,
+     "p": 0.07977860259320882,
+     "p3": [
+      0.0798,
+      0.0798,
+      0.0798
+     ],
+     "tok": 332
+    },
+    {
+     "ci": 4,
+     "p": 0.025987811770258534,
+     "p3": [
+      0.026,
+      0.026,
+      0.026
+     ],
+     "tok": 384
+    },
+    {
+     "ci": 2,
+     "p": 0.06795758778330761,
+     "p3": [
+      0.068,
+      0.068,
+      0.068
+     ],
+     "tok": 410
+    },
+    {
+     "ci": 3,
+     "p": 0.2382556714720324,
+     "p3": [
+      0.2383,
+      0.2383,
+      0.2383
+     ],
+     "tok": 370
+    },
+    {
+     "ci": 5,
+     "p": 0.009026015682406529,
+     "p3": [
+      0.009,
+      0.009,
+      0.009
+     ],
+     "tok": 372
+    },
+    {
+     "ci": 1,
+     "p": 0.021410297085603065,
+     "p3": [
+      0.0214,
+      0.0214,
+      0.0214
+     ],
+     "tok": 359
+    },
+    {
+     "ci": 7,
+     "p": 0.013377541497686276,
+     "p3": [
+      0.0134,
+      0.0134,
+      0.0134
+     ],
+     "tok": 355
+    },
+    {
+     "ci": 6,
+     "p": 0.002166848593074539,
+     "p3": [
+      0.0022,
+      0.0022,
+      0.0022
+     ],
+     "tok": 366
+    }
+   ],
+   "pool": [
+    0,
+    4,
+    2,
+    3,
+    5,
+    1,
+    7,
+    6
+   ],
+   "q": "Which method consistently improves decision accuracy across multiple complex domains?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 0,
+     "p": 0.07977860259320882,
+     "tok": 332
+    },
+    {
+     "ci": 4,
+     "p": 0.025987811770258534,
+     "tok": 384
+    },
+    {
+     "ci": 2,
+     "p": 0.06795758778330761,
+     "tok": 410
+    },
+    {
+     "ci": 3,
+     "p": 0.23825567147203236,
+     "tok": 370
+    },
+    {
+     "ci": 5,
+     "p": 0.009026015682406529,
+     "tok": 372
+    },
+    {
+     "ci": 1,
+     "p": 0.021410297085603068,
+     "tok": 359
+    },
+    {
+     "ci": 7,
+     "p": 0.013377541497686276,
+     "tok": 355
+    },
+    {
+     "ci": 6,
+     "p": 0.002166848593074539,
+     "tok": 366
+    }
+   ]
+  },
+  {
+   "chunk": 4,
+   "d50": {
+    "answer": null,
+    "ci": 5,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 5
+   },
+   "dh": {
+    "ans": "The MS-series decision record contained in PROTOCOL-mcp-selection.md is the tool selection and MS-1..MS-29 data, which was copied verbatim from WireSense.",
+    "ans_ok": 0,
+    "ci": 5,
+    "deployed_judge_tok": 377,
+    "fallback": 0,
+    "grade_p": 0.0083,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 5,
+    "tok": 796,
+    "total_tok": 1173
+   },
+   "dm": {
+    "ans": "The MS-series decision record contained in PROTOCOL-mcp-selection.md is the tool selection and MS-1..MS-29 data, which was copied verbatim from WireSense.",
+    "ans_ok": 0,
+    "ci": 5,
+    "deployed_judge_tok": 1131,
+    "fallback": 0,
+    "grade_p": 0.0083,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 5,
+    "tok": 796,
+    "total_tok": 1927
+   },
+   "doc": "README.md",
+   "m_vec": [
+    {
+     "ci": 5,
+     "p": 0.8017073815394918,
+     "p3": [
+      0.8017,
+      0.8017,
+      0.8017
+     ],
+     "tok": 377
+    },
+    {
+     "ci": 1,
+     "p": 0.1120283226950891,
+     "p3": [
+      0.112,
+      0.112,
+      0.112
+     ],
+     "tok": 364
+    },
+    {
+     "ci": 0,
+     "p": 0.4111549021297747,
+     "p3": [
+      0.4112,
+      0.4112,
+      0.4112
+     ],
+     "tok": 337
+    },
+    {
+     "ci": 7,
+     "p": 0.27268506182666913,
+     "p3": [
+      0.2727,
+      0.2727,
+      0.2727
+     ],
+     "tok": 360
+    },
+    {
+     "ci": 4,
+     "p": 0.08133027960631785,
+     "p3": [
+      0.0813,
+      0.0813,
+      0.0813
+     ],
+     "tok": 389
+    },
+    {
+     "ci": 3,
+     "p": 0.024422648274653996,
+     "p3": [
+      0.0244,
+      0.0244,
+      0.0244
+     ],
+     "tok": 375
+    },
+    {
+     "ci": 6,
+     "p": 0.013379909825010833,
+     "p3": [
+      0.0134,
+      0.0134,
+      0.0134
+     ],
+     "tok": 371
+    },
+    {
+     "ci": 8,
+     "p": 0.005114559823873552,
+     "p3": [
+      0.0051,
+      0.0051,
+      0.0051
+     ],
+     "tok": 197
+    }
+   ],
+   "pool": [
+    5,
+    1,
+    0,
+    7,
+    4,
+    3,
+    6,
+    8
+   ],
+   "q": "What is the MS-series decision record contained in PROTOCOL-mcp-selection.md?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 5,
+     "p": 0.8017073815394918,
+     "tok": 377
+    },
+    {
+     "ci": 1,
+     "p": 0.1120283226950891,
+     "tok": 364
+    },
+    {
+     "ci": 0,
+     "p": 0.4111549021297747,
+     "tok": 337
+    },
+    {
+     "ci": 7,
+     "p": 0.27268506182666913,
+     "tok": 360
+    },
+    {
+     "ci": 4,
+     "p": 0.08133027960631785,
+     "tok": 389
+    },
+    {
+     "ci": 3,
+     "p": 0.024422648274653996,
+     "tok": 375
+    },
+    {
+     "ci": 6,
+     "p": 0.013379909825010833,
+     "tok": 371
+    },
+    {
+     "ci": 8,
+     "p": 0.005114559823873552,
+     "tok": 197
+    }
+   ]
+  },
+  {
+   "chunk": 4,
+   "d50": {
+    "answer": null,
+    "ci": 0,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 0
+   },
+   "dh": {
+    "ans": "The excerpt does not provide instructions on how to automate the selection of software tools using a fixed decision-making protocol.",
+    "ans_ok": 0,
+    "ci": 4,
+    "deployed_judge_tok": 389,
+    "fallback": 1,
+    "grade_p": 0.2149,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 793,
+    "total_tok": 1182
+   },
+   "dm": {
+    "ans": "You can automate the selection of software tools by registering the prediction before the data and then obeying the verdict, as demonstrated in the WireScale repository's MS-series experiments which u",
+    "ans_ok": 0,
+    "ci": 0,
+    "deployed_judge_tok": 2178,
+    "fallback": 0,
+    "grade_p": 0.2639,
+    "hit": 0,
+    "n_judged": 2,
+    "stop_ci": 0,
+    "tok": 774,
+    "total_tok": 2952
+   },
+   "doc": "README.md",
+   "m_vec": [
+    {
+     "ci": 4,
+     "p": 0.14673626772688492,
+     "p3": [
+      0.1467,
+      0.1467,
+      0.1467
+     ],
+     "tok": 389
+    },
+    {
+     "ci": 0,
+     "p": 0.5165481371239089,
+     "p3": [
+      0.5165,
+      0.5165,
+      0.5165
+     ],
+     "tok": 337
+    },
+    {
+     "ci": 5,
+     "p": 0.2797323851639502,
+     "p3": [
+      0.2797,
+      0.2797,
+      0.2797
+     ],
+     "tok": 377
+    },
+    {
+     "ci": 1,
+     "p": 0.02026899038877566,
+     "p3": [
+      0.0203,
+      0.0203,
+      0.0203
+     ],
+     "tok": 364
+    },
+    {
+     "ci": 3,
+     "p": 0.19658182420335427,
+     "p3": [
+      0.1966,
+      0.1966,
+      0.1966
+     ],
+     "tok": 375
+    },
+    {
+     "ci": 8,
+     "p": 0.00013457351440862716,
+     "p3": [
+      0.0001,
+      0.0001,
+      0.0001
+     ],
+     "tok": 197
+    },
+    {
+     "ci": 2,
+     "p": 0.004819884015230535,
+     "p3": [
+      0.0048,
+      0.0048,
+      0.0048
+     ],
+     "tok": 415
+    },
+    {
+     "ci": 7,
+     "p": 0.16293591664409923,
+     "p3": [
+      0.1629,
+      0.1629,
+      0.1629
+     ],
+     "tok": 360
+    }
+   ],
+   "pool": [
+    4,
+    0,
+    5,
+    1,
+    3,
+    8,
+    2,
+    7
+   ],
+   "q": "How can I automate the selection of software tools using a fixed decision-making protocol?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 4,
+     "p": 0.14673626772688492,
+     "tok": 389
+    },
+    {
+     "ci": 0,
+     "p": 0.5165481371239089,
+     "tok": 337
+    },
+    {
+     "ci": 5,
+     "p": 0.2797323851639502,
+     "tok": 377
+    },
+    {
+     "ci": 1,
+     "p": 0.02026899038877566,
+     "tok": 364
+    },
+    {
+     "ci": 3,
+     "p": 0.19658182420335427,
+     "tok": 375
+    },
+    {
+     "ci": 8,
+     "p": 0.00013457351440862716,
+     "tok": 197
+    },
+    {
+     "ci": 2,
+     "p": 0.004819884015230535,
+     "tok": 415
+    },
+    {
+     "ci": 7,
+     "p": 0.16293591664409923,
+     "tok": 360
+    }
+   ]
+  },
+  {
+   "chunk": 6,
+   "d50": {
+    "answer": null,
+    "ci": 7,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 7
+   },
+   "dh": {
+    "ans": "The frozen record of scored runs in the MS-series state consists of the committed JSONLs, summaries, and run logs.",
+    "ans_ok": 0,
+    "ci": 7,
+    "deployed_judge_tok": 359,
+    "fallback": 0,
+    "grade_p": 0.0124,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 7,
+    "tok": 747,
+    "total_tok": 1106
+   },
+   "dm": {
+    "ans": "The frozen record of scored runs in the MS-series state consists of the committed JSONLs, summaries, and run logs.",
+    "ans_ok": 0,
+    "ci": 7,
+    "deployed_judge_tok": 1077,
+    "fallback": 0,
+    "grade_p": 0.0124,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 7,
+    "tok": 747,
+    "total_tok": 1824
+   },
+   "doc": "README.md",
+   "m_vec": [
+    {
+     "ci": 7,
+     "p": 0.7921650105421735,
+     "p3": [
+      0.7922,
+      0.7922,
+      0.7922
+     ],
+     "tok": 359
+    },
+    {
+     "ci": 5,
+     "p": 0.7136421910735108,
+     "p3": [
+      0.7136,
+      0.7136,
+      0.7136
+     ],
+     "tok": 376
+    },
+    {
+     "ci": 1,
+     "p": 0.14960572066320021,
+     "p3": [
+      0.1496,
+      0.1496,
+      0.1496
+     ],
+     "tok": 363
+    },
+    {
+     "ci": 4,
+     "p": 0.040686128201845494,
+     "p3": [
+      0.0407,
+      0.0407,
+      0.0407
+     ],
+     "tok": 388
+    },
+    {
+     "ci": 0,
+     "p": 0.4609875923052921,
+     "p3": [
+      0.461,
+      0.461,
+      0.461
+     ],
+     "tok": 336
+    },
+    {
+     "ci": 3,
+     "p": 0.010330503780078446,
+     "p3": [
+      0.0103,
+      0.0103,
+      0.0103
+     ],
+     "tok": 374
+    },
+    {
+     "ci": 6,
+     "p": 0.08317578522902581,
+     "p3": [
+      0.0832,
+      0.0832,
+      0.0832
+     ],
+     "tok": 370
+    },
+    {
+     "ci": 2,
+     "p": 0.004908949467773415,
+     "p3": [
+      0.0049,
+      0.0049,
+      0.0049
+     ],
+     "tok": 414
+    }
+   ],
+   "pool": [
+    7,
+    5,
+    1,
+    4,
+    0,
+    3,
+    6,
+    2
+   ],
+   "q": "Which files constitute the frozen record of scored runs in the MS-series state?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 7,
+     "p": 0.7921650105421735,
+     "tok": 359
+    },
+    {
+     "ci": 5,
+     "p": 0.7136421910735108,
+     "tok": 376
+    },
+    {
+     "ci": 1,
+     "p": 0.14960572066320021,
+     "tok": 363
+    },
+    {
+     "ci": 4,
+     "p": 0.040686128201845494,
+     "tok": 388
+    },
+    {
+     "ci": 0,
+     "p": 0.4609875923052921,
+     "tok": 336
+    },
+    {
+     "ci": 3,
+     "p": 0.010330503780078446,
+     "tok": 374
+    },
+    {
+     "ci": 6,
+     "p": 0.08317578522902581,
+     "tok": 370
+    },
+    {
+     "ci": 2,
+     "p": 0.004908949467773415,
+     "tok": 414
+    }
+   ]
+  },
+  {
+   "chunk": 6,
+   "d50": {
+    "answer": null,
+    "ci": 7,
+    "fallback": 1,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": null
+   },
+   "dh": {
+    "ans": "You cannot safely update your model components without losing your existing scoring results because changing the encoder, quantization, or pooling invalidates every embedding-derived artifact in the r",
+    "ans_ok": 0,
+    "ci": 7,
+    "deployed_judge_tok": 359,
+    "fallback": 1,
+    "grade_p": 0.1557,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 755,
+    "total_tok": 1114
+   },
+   "dm": {
+    "ans": "You cannot safely update your model components without losing your existing scoring results because changing the encoder, quantization, or pooling invalidates every embedding-derived artifact in the r",
+    "ans_ok": 0,
+    "ci": 7,
+    "deployed_judge_tok": 1077,
+    "fallback": 1,
+    "grade_p": 0.1557,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 755,
+    "total_tok": 1832
+   },
+   "doc": "README.md",
+   "m_vec": [
+    {
+     "ci": 7,
+     "p": 0.15755329493908898,
+     "p3": [
+      0.1576,
+      0.1576,
+      0.1576
+     ],
+     "tok": 359
+    },
+    {
+     "ci": 5,
+     "p": 0.014344291212567336,
+     "p3": [
+      0.0143,
+      0.0143,
+      0.0143
+     ],
+     "tok": 376
+    },
+    {
+     "ci": 0,
+     "p": 0.0031103834377539346,
+     "p3": [
+      0.0031,
+      0.0031,
+      0.0031
+     ],
+     "tok": 336
+    },
+    {
+     "ci": 4,
+     "p": 0.009054081740244344,
+     "p3": [
+      0.0091,
+      0.0091,
+      0.0091
+     ],
+     "tok": 388
+    },
+    {
+     "ci": 6,
+     "p": 0.07908765699726257,
+     "p3": [
+      0.0791,
+      0.0791,
+      0.0791
+     ],
+     "tok": 370
+    },
+    {
+     "ci": 3,
+     "p": 0.003655362458594389,
+     "p3": [
+      0.0037,
+      0.0037,
+      0.0037
+     ],
+     "tok": 374
+    },
+    {
+     "ci": 2,
+     "p": 0.00819934414657755,
+     "p3": [
+      0.0082,
+      0.0082,
+      0.0082
+     ],
+     "tok": 414
+    },
+    {
+     "ci": 1,
+     "p": 0.006071353675299924,
+     "p3": [
+      0.0061,
+      0.0061,
+      0.0061
+     ],
+     "tok": 363
+    }
+   ],
+   "pool": [
+    7,
+    5,
+    0,
+    4,
+    6,
+    3,
+    2,
+    1
+   ],
+   "q": "How do I safely update my model components without losing my existing scoring results?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 7,
+     "p": 0.15755329493908898,
+     "tok": 359
+    },
+    {
+     "ci": 5,
+     "p": 0.014344291212567336,
+     "tok": 376
+    },
+    {
+     "ci": 0,
+     "p": 0.0031103834377539346,
+     "tok": 336
+    },
+    {
+     "ci": 4,
+     "p": 0.009054081740244344,
+     "tok": 388
+    },
+    {
+     "ci": 6,
+     "p": 0.07908765699726257,
+     "tok": 370
+    },
+    {
+     "ci": 3,
+     "p": 0.003655362458594389,
+     "tok": 374
+    },
+    {
+     "ci": 2,
+     "p": 0.00819934414657755,
+     "tok": 414
+    },
+    {
+     "ci": 1,
+     "p": 0.0060713536752999234,
+     "tok": 363
+    }
+   ]
+  },
+  {
+   "chunk": 1,
+   "d50": {
+    "answer": null,
+    "ci": 1,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 1
+   },
+   "dh": {
+    "ans": "The markedness dial value 1-m draws from the L3 parent's generic pool.",
+    "ans_ok": 1,
+    "ci": 1,
+    "deployed_judge_tok": 2708,
+    "fallback": 0,
+    "grade_p": 0.9626,
+    "hit": 1,
+    "n_judged": 7,
+    "stop_ci": 1,
+    "tok": 761,
+    "total_tok": 3469
+   },
+   "dm": {
+    "ans": "The markedness dial value 1-m draws from the L3 parent's generic pool.",
+    "ans_ok": 1,
+    "ci": 1,
+    "deployed_judge_tok": 8124,
+    "fallback": 0,
+    "grade_p": 0.9626,
+    "hit": 1,
+    "n_judged": 7,
+    "stop_ci": 1,
+    "tok": 761,
+    "total_tok": 8885
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 8,
+     "p": 0.08513007076135452,
+     "p3": [
+      0.0851,
+      0.0851,
+      0.0851
+     ],
+     "tok": 440
+    },
+    {
+     "ci": 14,
+     "p": 0.03782586362062284,
+     "p3": [
+      0.0378,
+      0.0378,
+      0.0378
+     ],
+     "tok": 383
+    },
+    {
+     "ci": 29,
+     "p": 0.14285412044441997,
+     "p3": [
+      0.1429,
+      0.1429,
+      0.1429
+     ],
+     "tok": 399
+    },
+    {
+     "ci": 10,
+     "p": 0.08512477196717437,
+     "p3": [
+      0.0851,
+      0.0851,
+      0.0851
+     ],
+     "tok": 379
+    },
+    {
+     "ci": 11,
+     "p": 0.19268888160663908,
+     "p3": [
+      0.1927,
+      0.1927,
+      0.1927
+     ],
+     "tok": 351
+    },
+    {
+     "ci": 30,
+     "p": 0.06666342106710804,
+     "p3": [
+      0.0667,
+      0.0667,
+      0.0667
+     ],
+     "tok": 381
+    },
+    {
+     "ci": 1,
+     "p": 0.8324599780686999,
+     "p3": [
+      0.8325,
+      0.8325,
+      0.8325
+     ],
+     "tok": 375
+    },
+    {
+     "ci": 26,
+     "p": 0.3501659878409907,
+     "p3": [
+      0.3502,
+      0.3502,
+      0.3502
+     ],
+     "tok": 346
+    }
+   ],
+   "pool": [
+    8,
+    14,
+    29,
+    10,
+    11,
+    30,
+    1,
+    26
+   ],
+   "q": "What does the markedness dial value 1-m draw from?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 8,
+     "p": 0.08513007076135451,
+     "tok": 440
+    },
+    {
+     "ci": 14,
+     "p": 0.03782586362062284,
+     "tok": 383
+    },
+    {
+     "ci": 29,
+     "p": 0.14285412044441997,
+     "tok": 399
+    },
+    {
+     "ci": 10,
+     "p": 0.08512477196717437,
+     "tok": 379
+    },
+    {
+     "ci": 11,
+     "p": 0.19268888160663908,
+     "tok": 351
+    },
+    {
+     "ci": 30,
+     "p": 0.06666342106710804,
+     "tok": 381
+    },
+    {
+     "ci": 1,
+     "p": 0.8324599780686999,
+     "tok": 375
+    },
+    {
+     "ci": 26,
+     "p": 0.3501659878409907,
+     "tok": 346
+    }
+   ]
+  },
+  {
+   "chunk": 1,
+   "d50": {
+    "answer": null,
+    "ci": 1,
+    "fallback": 1,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": null
+   },
+   "dh": {
+    "ans": "You can automate diverse audio commands by using a deterministic generator that combines held-out verbs and slots with a markedness dial to vary modifiers between sibling leaves in the smart home bran",
+    "ans_ok": 1,
+    "ci": 1,
+    "deployed_judge_tok": 378,
+    "fallback": 1,
+    "grade_p": 0.6262,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 784,
+    "total_tok": 1162
+   },
+   "dm": {
+    "ans": "You can automate diverse audio commands by using a deterministic generator that combines held-out verbs and slots with a markedness dial to vary modifiers between sibling leaves in the smart home bran",
+    "ans_ok": 1,
+    "ci": 1,
+    "deployed_judge_tok": 1134,
+    "fallback": 1,
+    "grade_p": 0.6262,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 784,
+    "total_tok": 1918
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 1,
+     "p": 0.2738121160910322,
+     "p3": [
+      0.2738,
+      0.2738,
+      0.2738
+     ],
+     "tok": 378
+    },
+    {
+     "ci": 21,
+     "p": 0.00023721286203179847,
+     "p3": [
+      0.0002,
+      0.0002,
+      0.0002
+     ],
+     "tok": 464
+    },
+    {
+     "ci": 17,
+     "p": 0.00557059117212147,
+     "p3": [
+      0.0056,
+      0.0056,
+      0.0056
+     ],
+     "tok": 371
+    },
+    {
+     "ci": 27,
+     "p": 0.0014175504571367625,
+     "p3": [
+      0.0014,
+      0.0014,
+      0.0014
+     ],
+     "tok": 403
+    },
+    {
+     "ci": 2,
+     "p": 0.0010386889731179654,
+     "p3": [
+      0.001,
+      0.001,
+      0.001
+     ],
+     "tok": 350
+    },
+    {
+     "ci": 22,
+     "p": 0.000573915625820044,
+     "p3": [
+      0.0006,
+      0.0006,
+      0.0006
+     ],
+     "tok": 576
+    },
+    {
+     "ci": 6,
+     "p": 0.0003630980106541671,
+     "p3": [
+      0.0004,
+      0.0004,
+      0.0004
+     ],
+     "tok": 423
+    },
+    {
+     "ci": 26,
+     "p": 0.03398082504806144,
+     "p3": [
+      0.034,
+      0.034,
+      0.034
+     ],
+     "tok": 349
+    }
+   ],
+   "pool": [
+    1,
+    21,
+    17,
+    27,
+    2,
+    22,
+    6,
+    26
+   ],
+   "q": "How can I automate the creation of diverse audio commands for my smart home system?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 1,
+     "p": 0.2738121160910322,
+     "tok": 378
+    },
+    {
+     "ci": 21,
+     "p": 0.00023721286203179847,
+     "tok": 464
+    },
+    {
+     "ci": 17,
+     "p": 0.00557059117212147,
+     "tok": 371
+    },
+    {
+     "ci": 27,
+     "p": 0.0014175504571367625,
+     "tok": 403
+    },
+    {
+     "ci": 2,
+     "p": 0.0010386889731179654,
+     "tok": 350
+    },
+    {
+     "ci": 22,
+     "p": 0.000573915625820044,
+     "tok": 576
+    },
+    {
+     "ci": 6,
+     "p": 0.0003630980106541671,
+     "tok": 423
+    },
+    {
+     "ci": 26,
+     "p": 0.03398082504806144,
+     "tok": 349
+    }
+   ]
+  },
+  {
+   "chunk": 3,
+   "d50": {
+    "answer": null,
+    "ci": 3,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 3
+   },
+   "dh": {
+    "ans": "The FiLM variant description uses vocabulary related to model hierarchy, deterministic generation, and markedness dialing.",
+    "ans_ok": 0,
+    "ci": 1,
+    "deployed_judge_tok": 373,
+    "fallback": 1,
+    "grade_p": 0.0169,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 789,
+    "total_tok": 1162
+   },
+   "dm": {
+    "ans": "The FiLM variant description uses the vocabulary \"emb,\" \"one-hot,\" \"parent,\" \"node,\" \"root,\" \"level,\" \"zeros,\" \"unconditioned,\" \"B,\" \"Trained,\" \"gold,\" \"parents,\" \"teacher,\" \"forcing,\" \"evaluated,\" \"p",
+    "ans_ok": 0,
+    "ci": 3,
+    "deployed_judge_tok": 4680,
+    "fallback": 0,
+    "grade_p": 0.0507,
+    "hit": 1,
+    "n_judged": 4,
+    "stop_ci": 3,
+    "tok": 925,
+    "total_tok": 5605
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 1,
+     "p": 0.13429292888643726,
+     "p3": [
+      0.1343,
+      0.1343,
+      0.1343
+     ],
+     "tok": 373
+    },
+    {
+     "ci": 19,
+     "p": 0.3139632804230923,
+     "p3": [
+      0.314,
+      0.314,
+      0.314
+     ],
+     "tok": 367
+    },
+    {
+     "ci": 6,
+     "p": 0.06745875341482922,
+     "p3": [
+      0.0675,
+      0.0675,
+      0.0675
+     ],
+     "tok": 418
+    },
+    {
+     "ci": 3,
+     "p": 0.5685811472226966,
+     "p3": [
+      0.5686,
+      0.5686,
+      0.5686
+     ],
+     "tok": 402
+    },
+    {
+     "ci": 9,
+     "p": 0.11503044979825335,
+     "p3": [
+      0.115,
+      0.115,
+      0.115
+     ],
+     "tok": 446
+    },
+    {
+     "ci": 26,
+     "p": 0.30280587086699867,
+     "p3": [
+      0.3028,
+      0.3028,
+      0.3028
+     ],
+     "tok": 344
+    },
+    {
+     "ci": 20,
+     "p": 0.16082863253362145,
+     "p3": [
+      0.1608,
+      0.1608,
+      0.1608
+     ],
+     "tok": 420
+    },
+    {
+     "ci": 17,
+     "p": 0.30334660041029915,
+     "p3": [
+      0.3033,
+      0.3033,
+      0.3033
+     ],
+     "tok": 366
+    }
+   ],
+   "pool": [
+    1,
+    19,
+    6,
+    3,
+    9,
+    26,
+    20,
+    17
+   ],
+   "q": "What vocabulary was used in the FiLM variant description?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 1,
+     "p": 0.13429292888643726,
+     "tok": 373
+    },
+    {
+     "ci": 19,
+     "p": 0.3139632804230923,
+     "tok": 367
+    },
+    {
+     "ci": 6,
+     "p": 0.06745875341482922,
+     "tok": 418
+    },
+    {
+     "ci": 3,
+     "p": 0.5685811472226966,
+     "tok": 402
+    },
+    {
+     "ci": 9,
+     "p": 0.11503044979825335,
+     "tok": 446
+    },
+    {
+     "ci": 26,
+     "p": 0.30280587086699867,
+     "tok": 344
+    },
+    {
+     "ci": 20,
+     "p": 0.16082863253362145,
+     "tok": 420
+    },
+    {
+     "ci": 17,
+     "p": 0.30334660041029915,
+     "tok": 366
+    }
+   ]
+  },
+  {
+   "chunk": 3,
+   "d50": {
+    "answer": null,
+    "ci": 29,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 29
+   },
+   "dh": {
+    "ans": "The excerpt does not explain how later stages of the pipeline can take into account what earlier stages already decided.",
+    "ans_ok": 0,
+    "ci": 0,
+    "deployed_judge_tok": 365,
+    "fallback": 1,
+    "grade_p": 0.4088,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 788,
+    "total_tok": 1153
+   },
+   "dm": {
+    "ans": "Each later stage takes into account earlier decisions by using the verdicts from previous stages as guardrails or conditions for its own logic, such as R2 requiring R1 to pass before determining if a ",
+    "ans_ok": 0,
+    "ci": 29,
+    "deployed_judge_tok": 3480,
+    "fallback": 0,
+    "grade_p": 0.0145,
+    "hit": 0,
+    "n_judged": 3,
+    "stop_ci": 29,
+    "tok": 852,
+    "total_tok": 4332
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 0,
+     "p": 0.29578992449616953,
+     "p3": [
+      0.2958,
+      0.2958,
+      0.2958
+     ],
+     "tok": 365
+    },
+    {
+     "ci": 5,
+     "p": 0.09629198375397884,
+     "p3": [
+      0.0963,
+      0.0963,
+      0.0963
+     ],
+     "tok": 391
+    },
+    {
+     "ci": 29,
+     "p": 0.5008976648097192,
+     "p3": [
+      0.5009,
+      0.5009,
+      0.5009
+     ],
+     "tok": 404
+    },
+    {
+     "ci": 14,
+     "p": 0.3444972623232238,
+     "p3": [
+      0.3445,
+      0.3445,
+      0.3445
+     ],
+     "tok": 388
+    },
+    {
+     "ci": 3,
+     "p": 0.444914023465492,
+     "p3": [
+      0.4449,
+      0.4449,
+      0.4449
+     ],
+     "tok": 409
+    },
+    {
+     "ci": 10,
+     "p": 0.10152468666550679,
+     "p3": [
+      0.1015,
+      0.1015,
+      0.1015
+     ],
+     "tok": 384
+    },
+    {
+     "ci": 23,
+     "p": 0.5912579612790041,
+     "p3": [
+      0.5913,
+      0.5913,
+      0.5913
+     ],
+     "tok": 418
+    },
+    {
+     "ci": 15,
+     "p": 0.280629526274858,
+     "p3": [
+      0.2806,
+      0.2806,
+      0.2806
+     ],
+     "tok": 364
+    }
+   ],
+   "pool": [
+    0,
+    5,
+    29,
+    14,
+    3,
+    10,
+    23,
+    15
+   ],
+   "q": "How can each later stage of my pipeline take into account what the earlier stages already decided?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 0,
+     "p": 0.29578992449616953,
+     "tok": 365
+    },
+    {
+     "ci": 5,
+     "p": 0.09629198375397884,
+     "tok": 391
+    },
+    {
+     "ci": 29,
+     "p": 0.5008976648097192,
+     "tok": 404
+    },
+    {
+     "ci": 14,
+     "p": 0.34449726232322375,
+     "tok": 388
+    },
+    {
+     "ci": 3,
+     "p": 0.444914023465492,
+     "tok": 409
+    },
+    {
+     "ci": 10,
+     "p": 0.10152468666550679,
+     "tok": 384
+    },
+    {
+     "ci": 23,
+     "p": 0.5912579612790041,
+     "tok": 418
+    },
+    {
+     "ci": 15,
+     "p": 0.280629526274858,
+     "tok": 364
+    }
+   ]
+  },
+  {
+   "chunk": 8,
+   "d50": {
+    "answer": null,
+    "ci": 8,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 8
+   },
+   "dh": {
+    "ans": "The gap SHRANK with pool at pool 1024 is +0.7.",
+    "ans_ok": 1,
+    "ci": 8,
+    "deployed_judge_tok": 446,
+    "fallback": 0,
+    "grade_p": 0.6821,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 8,
+    "tok": 904,
+    "total_tok": 1350
+   },
+   "dm": {
+    "ans": "The gap SHRANK with pool at pool 1024 is +0.7.",
+    "ans_ok": 1,
+    "ci": 8,
+    "deployed_judge_tok": 1338,
+    "fallback": 0,
+    "grade_p": 0.6821,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 8,
+    "tok": 904,
+    "total_tok": 2242
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 8,
+     "p": 0.6385380107800239,
+     "p3": [
+      0.6385,
+      0.6385,
+      0.6385
+     ],
+     "tok": 446
+    },
+    {
+     "ci": 7,
+     "p": 0.7381636069852688,
+     "p3": [
+      0.7382,
+      0.7382,
+      0.7382
+     ],
+     "tok": 610
+    },
+    {
+     "ci": 6,
+     "p": 0.08308297679487794,
+     "p3": [
+      0.0831,
+      0.0831,
+      0.0831
+     ],
+     "tok": 426
+    },
+    {
+     "ci": 5,
+     "p": 0.07053295845164077,
+     "p3": [
+      0.0705,
+      0.0705,
+      0.0705
+     ],
+     "tok": 392
+    },
+    {
+     "ci": 19,
+     "p": 0.004997269354142766,
+     "p3": [
+      0.005,
+      0.005,
+      0.005
+     ],
+     "tok": 375
+    },
+    {
+     "ci": 9,
+     "p": 0.17960795893538697,
+     "p3": [
+      0.1796,
+      0.1796,
+      0.1796
+     ],
+     "tok": 454
+    },
+    {
+     "ci": 14,
+     "p": 0.01871048750822159,
+     "p3": [
+      0.0187,
+      0.0187,
+      0.0187
+     ],
+     "tok": 389
+    },
+    {
+     "ci": 4,
+     "p": 0.28285110870329677,
+     "p3": [
+      0.2829,
+      0.2829,
+      0.2829
+     ],
+     "tok": 474
+    }
+   ],
+   "pool": [
+    8,
+    7,
+    6,
+    5,
+    19,
+    9,
+    14,
+    4
+   ],
+   "q": "What is the answer regarding the gap SHRANK with pool at pool 1024?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 8,
+     "p": 0.6385380107800239,
+     "tok": 446
+    },
+    {
+     "ci": 7,
+     "p": 0.7381636069852688,
+     "tok": 610
+    },
+    {
+     "ci": 6,
+     "p": 0.08308297679487794,
+     "tok": 426
+    },
+    {
+     "ci": 5,
+     "p": 0.07053295845164077,
+     "tok": 392
+    },
+    {
+     "ci": 19,
+     "p": 0.004997269354142766,
+     "tok": 375
+    },
+    {
+     "ci": 9,
+     "p": 0.17960795893538697,
+     "tok": 454
+    },
+    {
+     "ci": 14,
+     "p": 0.01871048750822159,
+     "tok": 389
+    },
+    {
+     "ci": 4,
+     "p": 0.28285110870329677,
+     "tok": 474
+    }
+   ]
+  },
+  {
+   "chunk": 8,
+   "d50": {
+    "answer": null,
+    "ci": 21,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 21
+   },
+   "dh": {
+    "ans": "The excerpt confirms a failure in the walk's performance at 96 classes where it is overtaken by the flat readout, establishing a performance ceiling of approximately .825 for the walk regardless of de",
+    "ans_ok": 0,
+    "ci": 14,
+    "deployed_judge_tok": 3460,
+    "fallback": 0,
+    "grade_p": 0.0063,
+    "hit": 0,
+    "n_judged": 8,
+    "stop_ci": 14,
+    "tok": 864,
+    "total_tok": 4324
+   },
+   "dm": {
+    "ans": "Yes, the text confirms that S3's domain will likely fail at approximately 0.84, which represents the performance ceiling for the next step.",
+    "ans_ok": 0,
+    "ci": 21,
+    "deployed_judge_tok": 6141,
+    "fallback": 0,
+    "grade_p": 0.0146,
+    "hit": 0,
+    "n_judged": 5,
+    "stop_ci": 21,
+    "tok": 929,
+    "total_tok": 7070
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 8,
+     "p": 0.3905025944794851,
+     "p3": [
+      0.3905,
+      0.3905,
+      0.3905
+     ],
+     "tok": 442
+    },
+    {
+     "ci": 5,
+     "p": 0.1763730983810973,
+     "p3": [
+      0.1764,
+      0.1764,
+      0.1764
+     ],
+     "tok": 388
+    },
+    {
+     "ci": 29,
+     "p": 0.1604736040002102,
+     "p3": [
+      0.1605,
+      0.1605,
+      0.1605
+     ],
+     "tok": 401
+    },
+    {
+     "ci": 11,
+     "p": 0.12689090742672804,
+     "p3": [
+      0.1269,
+      0.1269,
+      0.1269
+     ],
+     "tok": 353
+    },
+    {
+     "ci": 21,
+     "p": 0.5152743448665351,
+     "p3": [
+      0.5153,
+      0.5153,
+      0.5153
+     ],
+     "tok": 463
+    },
+    {
+     "ci": 6,
+     "p": 0.09244946033099667,
+     "p3": [
+      0.0924,
+      0.0924,
+      0.0924
+     ],
+     "tok": 422
+    },
+    {
+     "ci": 7,
+     "p": 0.5299495449989607,
+     "p3": [
+      0.5299,
+      0.5299,
+      0.5299
+     ],
+     "tok": 606
+    },
+    {
+     "ci": 14,
+     "p": 0.6667622992501704,
+     "p3": [
+      0.6668,
+      0.6668,
+      0.6668
+     ],
+     "tok": 385
+    }
+   ],
+   "pool": [
+    8,
+    5,
+    29,
+    11,
+    21,
+    6,
+    7,
+    14
+   ],
+   "q": "Can I confirm the failure and the exact performance ceiling for the next step?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 8,
+     "p": 0.3905025944794851,
+     "tok": 442
+    },
+    {
+     "ci": 5,
+     "p": 0.1763730983810973,
+     "tok": 388
+    },
+    {
+     "ci": 29,
+     "p": 0.1604736040002102,
+     "tok": 401
+    },
+    {
+     "ci": 11,
+     "p": 0.12689090742672804,
+     "tok": 353
+    },
+    {
+     "ci": 21,
+     "p": 0.5152743448665351,
+     "tok": 463
+    },
+    {
+     "ci": 6,
+     "p": 0.09244946033099667,
+     "tok": 422
+    },
+    {
+     "ci": 7,
+     "p": 0.5299495449989607,
+     "tok": 606
+    },
+    {
+     "ci": 14,
+     "p": 0.6667622992501705,
+     "tok": 385
+    }
+   ]
+  },
+  {
+   "chunk": 12,
+   "d50": {
+    "answer": null,
+    "ci": 13,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 13
+   },
+   "dh": {
+    "ans": "The provided excerpt does not contain the specific path accuracy metrics by depth for the specified configuration.",
+    "ans_ok": 1,
+    "ci": 12,
+    "deployed_judge_tok": 424,
+    "fallback": 1,
+    "grade_p": 0.8582,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 859,
+    "total_tok": 1283
+   },
+   "dm": {
+    "ans": "The path accuracy metrics by depth for m=1.0, pool 256/leaf, seed 0 are: d2 (B .903, E .914), d3 (B .894, E .921), d4 (A .813, B .826, E .856), d5 (B .825, E .859), and d6 (A .899, B .825, E .859).",
+    "ans_ok": 0,
+    "ci": 13,
+    "deployed_judge_tok": 4299,
+    "fallback": 0,
+    "grade_p": 0.0117,
+    "hit": 0,
+    "n_judged": 3,
+    "stop_ci": 13,
+    "tok": 1058,
+    "total_tok": 5357
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 12,
+     "p": 0.023761793060894543,
+     "p3": [
+      0.0238,
+      0.0238,
+      0.0238
+     ],
+     "tok": 424
+    },
+    {
+     "ci": 4,
+     "p": 0.017985059048276245,
+     "p3": [
+      0.018,
+      0.018,
+      0.018
+     ],
+     "tok": 482
+    },
+    {
+     "ci": 13,
+     "p": 0.6291337475537073,
+     "p3": [
+      0.6291,
+      0.6291,
+      0.6291
+     ],
+     "tok": 527
+    },
+    {
+     "ci": 2,
+     "p": 0.000900456366798892,
+     "p3": [
+      0.0009,
+      0.0009,
+      0.0009
+     ],
+     "tok": 361
+    },
+    {
+     "ci": 14,
+     "p": 0.034873177231643626,
+     "p3": [
+      0.0349,
+      0.0349,
+      0.0349
+     ],
+     "tok": 397
+    },
+    {
+     "ci": 5,
+     "p": 0.003012795041118809,
+     "p3": [
+      0.003,
+      0.003,
+      0.003
+     ],
+     "tok": 400
+    },
+    {
+     "ci": 9,
+     "p": 0.006478469143688666,
+     "p3": [
+      0.0065,
+      0.0065,
+      0.0065
+     ],
+     "tok": 462
+    },
+    {
+     "ci": 8,
+     "p": 0.017714346042315858,
+     "p3": [
+      0.0177,
+      0.0177,
+      0.0177
+     ],
+     "tok": 454
+    }
+   ],
+   "pool": [
+    12,
+    4,
+    13,
+    2,
+    14,
+    5,
+    9,
+    8
+   ],
+   "q": "What are the path accuracy metrics by depth for m=1.0, pool 256/leaf, seed 0?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 12,
+     "p": 0.023761793060894543,
+     "tok": 424
+    },
+    {
+     "ci": 4,
+     "p": 0.017985059048276245,
+     "tok": 482
+    },
+    {
+     "ci": 13,
+     "p": 0.6291337475537073,
+     "tok": 527
+    },
+    {
+     "ci": 2,
+     "p": 0.000900456366798892,
+     "tok": 361
+    },
+    {
+     "ci": 14,
+     "p": 0.034873177231643626,
+     "tok": 397
+    },
+    {
+     "ci": 5,
+     "p": 0.003012795041118809,
+     "tok": 400
+    },
+    {
+     "ci": 9,
+     "p": 0.006478469143688666,
+     "tok": 462
+    },
+    {
+     "ci": 8,
+     "p": 0.017714346042315858,
+     "tok": 454
+    }
+   ]
+  },
+  {
+   "chunk": 12,
+   "d50": {
+    "answer": null,
+    "ci": 14,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 14
+   },
+   "dh": {
+    "ans": "There is no depth wall through 6 levels or 96 leaves, as marginal depth cost after level 4 is approximately zero.",
+    "ans_ok": 0,
+    "ci": 14,
+    "deployed_judge_tok": 740,
+    "fallback": 0,
+    "grade_p": 0.0435,
+    "hit": 0,
+    "n_judged": 2,
+    "stop_ci": 14,
+    "tok": 819,
+    "total_tok": 1559
+   },
+   "dm": {
+    "ans": "There is no depth wall through 6 levels or 96 leaves, as marginal depth cost after level 4 is approximately zero.",
+    "ans_ok": 0,
+    "ci": 14,
+    "deployed_judge_tok": 2220,
+    "fallback": 0,
+    "grade_p": 0.0435,
+    "hit": 0,
+    "n_judged": 2,
+    "stop_ci": 14,
+    "tok": 819,
+    "total_tok": 3039
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 11,
+     "p": 0.11337464686039427,
+     "p3": [
+      0.1134,
+      0.1134,
+      0.1134
+     ],
+     "tok": 354
+    },
+    {
+     "ci": 14,
+     "p": 0.8186227465130432,
+     "p3": [
+      0.8186,
+      0.8186,
+      0.8186
+     ],
+     "tok": 386
+    },
+    {
+     "ci": 18,
+     "p": 0.08325457586116378,
+     "p3": [
+      0.0833,
+      0.0833,
+      0.0833
+     ],
+     "tok": 402
+    },
+    {
+     "ci": 30,
+     "p": 0.020750915121649748,
+     "p3": [
+      0.0208,
+      0.0208,
+      0.0208
+     ],
+     "tok": 384
+    },
+    {
+     "ci": 15,
+     "p": 0.04604763052730187,
+     "p3": [
+      0.046,
+      0.046,
+      0.046
+     ],
+     "tok": 362
+    },
+    {
+     "ci": 23,
+     "p": 0.2026864688041955,
+     "p3": [
+      0.2027,
+      0.2027,
+      0.2027
+     ],
+     "tok": 416
+    },
+    {
+     "ci": 0,
+     "p": 0.06910805241030485,
+     "p3": [
+      0.0691,
+      0.0691,
+      0.0691
+     ],
+     "tok": 363
+    },
+    {
+     "ci": 5,
+     "p": 0.07935503534846236,
+     "p3": [
+      0.0794,
+      0.0794,
+      0.0794
+     ],
+     "tok": 389
+    }
+   ],
+   "pool": [
+    11,
+    14,
+    18,
+    30,
+    15,
+    23,
+    0,
+    5
+   ],
+   "q": "How far down my category ladder can I keep going before quality drops too much?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 11,
+     "p": 0.11337464686039425,
+     "tok": 354
+    },
+    {
+     "ci": 14,
+     "p": 0.8186227465130431,
+     "tok": 386
+    },
+    {
+     "ci": 18,
+     "p": 0.08325457586116378,
+     "tok": 402
+    },
+    {
+     "ci": 30,
+     "p": 0.020750915121649748,
+     "tok": 384
+    },
+    {
+     "ci": 15,
+     "p": 0.04604763052730187,
+     "tok": 362
+    },
+    {
+     "ci": 23,
+     "p": 0.2026864688041955,
+     "tok": 416
+    },
+    {
+     "ci": 0,
+     "p": 0.06910805241030485,
+     "tok": 363
+    },
+    {
+     "ci": 5,
+     "p": 0.07935503534846236,
+     "tok": 389
+    }
+   ]
+  },
+  {
+   "chunk": 15,
+   "d50": {
+    "answer": null,
+    "ci": 15,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 15
+   },
+   "dh": {
+    "ans": "The gain was replicated only with length-normalized mean path scores.",
+    "ans_ok": 1,
+    "ci": 15,
+    "deployed_judge_tok": 2396,
+    "fallback": 0,
+    "grade_p": 0.9329,
+    "hit": 1,
+    "n_judged": 6,
+    "stop_ci": 15,
+    "tok": 714,
+    "total_tok": 3110
+   },
+   "dm": {
+    "ans": "The gain was replicated only with length-normalized mean path scores.",
+    "ans_ok": 1,
+    "ci": 15,
+    "deployed_judge_tok": 7188,
+    "fallback": 0,
+    "grade_p": 0.9329,
+    "hit": 1,
+    "n_judged": 6,
+    "stop_ci": 15,
+    "tok": 714,
+    "total_tok": 7902
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 8,
+     "p": 0.05517621661545926,
+     "p3": [
+      0.0552,
+      0.0552,
+      0.0552
+     ],
+     "tok": 435
+    },
+    {
+     "ci": 29,
+     "p": 0.04515087269005972,
+     "p3": [
+      0.0452,
+      0.0452,
+      0.0452
+     ],
+     "tok": 394
+    },
+    {
+     "ci": 6,
+     "p": 0.025601533755519698,
+     "p3": [
+      0.0256,
+      0.0256,
+      0.0256
+     ],
+     "tok": 415
+    },
+    {
+     "ci": 5,
+     "p": 0.029701091266227466,
+     "p3": [
+      0.0297,
+      0.0297,
+      0.0297
+     ],
+     "tok": 381
+    },
+    {
+     "ci": 20,
+     "p": 0.1289561716689014,
+     "p3": [
+      0.129,
+      0.129,
+      0.129
+     ],
+     "tok": 417
+    },
+    {
+     "ci": 15,
+     "p": 0.6932255358350673,
+     "p3": [
+      0.6932,
+      0.6932,
+      0.6932
+     ],
+     "tok": 354
+    },
+    {
+     "ci": 9,
+     "p": 0.09311996901596549,
+     "p3": [
+      0.0931,
+      0.0931,
+      0.0931
+     ],
+     "tok": 443
+    },
+    {
+     "ci": 7,
+     "p": 0.17551062136918838,
+     "p3": [
+      0.1755,
+      0.1755,
+      0.1755
+     ],
+     "tok": 599
+    }
+   ],
+   "pool": [
+    8,
+    29,
+    6,
+    5,
+    20,
+    15,
+    9,
+    7
+   ],
+   "q": "What was the gain replicated only with?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 8,
+     "p": 0.05517621661545926,
+     "tok": 435
+    },
+    {
+     "ci": 29,
+     "p": 0.04515087269005972,
+     "tok": 394
+    },
+    {
+     "ci": 6,
+     "p": 0.025601533755519698,
+     "tok": 415
+    },
+    {
+     "ci": 5,
+     "p": 0.029701091266227466,
+     "tok": 381
+    },
+    {
+     "ci": 20,
+     "p": 0.1289561716689014,
+     "tok": 417
+    },
+    {
+     "ci": 15,
+     "p": 0.6932255358350672,
+     "tok": 354
+    },
+    {
+     "ci": 9,
+     "p": 0.09311996901596549,
+     "tok": 443
+    },
+    {
+     "ci": 7,
+     "p": 0.17551062136918838,
+     "tok": 599
+    }
+   ]
+  },
+  {
+   "chunk": 15,
+   "d50": {
+    "answer": null,
+    "ci": 15,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 15
+   },
+   "dh": {
+    "ans": "You must use length-normalized mean path scores because raw sums allow deeper paths to structurally outbid shallower ones when path lengths vary.",
+    "ans_ok": 1,
+    "ci": 15,
+    "deployed_judge_tok": 361,
+    "fallback": 0,
+    "grade_p": 0.9464,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 15,
+    "tok": 743,
+    "total_tok": 1104
+   },
+   "dm": {
+    "ans": "You must use length-normalized mean path scores because raw sums allow deeper paths to structurally outbid shallower ones when path lengths vary.",
+    "ans_ok": 1,
+    "ci": 15,
+    "deployed_judge_tok": 1083,
+    "fallback": 0,
+    "grade_p": 0.9464,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 15,
+    "tok": 743,
+    "total_tok": 1826
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 15,
+     "p": 0.7032788881652762,
+     "p3": [
+      0.7033,
+      0.7033,
+      0.7033
+     ],
+     "tok": 361
+    },
+    {
+     "ci": 18,
+     "p": 0.23923282127025355,
+     "p3": [
+      0.2392,
+      0.2392,
+      0.2392
+     ],
+     "tok": 401
+    },
+    {
+     "ci": 0,
+     "p": 0.028467198171170632,
+     "p3": [
+      0.0285,
+      0.0285,
+      0.0285
+     ],
+     "tok": 362
+    },
+    {
+     "ci": 13,
+     "p": 0.031196755394580652,
+     "p3": [
+      0.0312,
+      0.0312,
+      0.0312
+     ],
+     "tok": 515
+    },
+    {
+     "ci": 14,
+     "p": 0.04331768601955053,
+     "p3": [
+      0.0433,
+      0.0433,
+      0.0433
+     ],
+     "tok": 385
+    },
+    {
+     "ci": 23,
+     "p": 0.03164549980707437,
+     "p3": [
+      0.0316,
+      0.0316,
+      0.0316
+     ],
+     "tok": 415
+    },
+    {
+     "ci": 12,
+     "p": 0.01857879393454025,
+     "p3": [
+      0.0186,
+      0.0186,
+      0.0186
+     ],
+     "tok": 412
+    },
+    {
+     "ci": 29,
+     "p": 0.001205311577995331,
+     "p3": [
+      0.0012,
+      0.0012,
+      0.0012
+     ],
+     "tok": 401
+    }
+   ],
+   "pool": [
+    15,
+    18,
+    0,
+    13,
+    14,
+    23,
+    12,
+    29
+   ],
+   "q": "How do I apply this scoring method to my router when path lengths vary?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 15,
+     "p": 0.7032788881652763,
+     "tok": 361
+    },
+    {
+     "ci": 18,
+     "p": 0.23923282127025353,
+     "tok": 401
+    },
+    {
+     "ci": 0,
+     "p": 0.028467198171170632,
+     "tok": 362
+    },
+    {
+     "ci": 13,
+     "p": 0.031196755394580652,
+     "tok": 515
+    },
+    {
+     "ci": 14,
+     "p": 0.043317686019550536,
+     "tok": 385
+    },
+    {
+     "ci": 23,
+     "p": 0.03164549980707437,
+     "tok": 415
+    },
+    {
+     "ci": 12,
+     "p": 0.01857879393454025,
+     "tok": 412
+    },
+    {
+     "ci": 29,
+     "p": 0.001205311577995331,
+     "tok": 401
+    }
+   ]
+  },
+  {
+   "chunk": 17,
+   "d50": {
+    "answer": null,
+    "ci": 17,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 17
+   },
+   "dh": {
+    "ans": "The production mechanism of WireSense's router and MCP gate is raw slot-7 embeddings combined with centroid cosine similarity, without using trained heads.",
+    "ans_ok": 1,
+    "ci": 17,
+    "deployed_judge_tok": 369,
+    "fallback": 0,
+    "grade_p": 0.9791,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 17,
+    "tok": 759,
+    "total_tok": 1128
+   },
+   "dm": {
+    "ans": "The production mechanism of WireSense's router and MCP gate is raw slot-7 embeddings combined with centroid cosine similarity, without using trained heads.",
+    "ans_ok": 1,
+    "ci": 17,
+    "deployed_judge_tok": 1107,
+    "fallback": 0,
+    "grade_p": 0.9791,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 17,
+    "tok": 759,
+    "total_tok": 1866
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 17,
+     "p": 0.8881133350045092,
+     "p3": [
+      0.8881,
+      0.8881,
+      0.8881
+     ],
+     "tok": 369
+    },
+    {
+     "ci": 16,
+     "p": 0.27766180089352205,
+     "p3": [
+      0.2777,
+      0.2777,
+      0.2777
+     ],
+     "tok": 342
+    },
+    {
+     "ci": 15,
+     "p": 0.04344718577230297,
+     "p3": [
+      0.0434,
+      0.0434,
+      0.0434
+     ],
+     "tok": 360
+    },
+    {
+     "ci": 23,
+     "p": 0.09486655609492971,
+     "p3": [
+      0.0949,
+      0.0949,
+      0.0949
+     ],
+     "tok": 414
+    },
+    {
+     "ci": 0,
+     "p": 0.012134190223405684,
+     "p3": [
+      0.0121,
+      0.0121,
+      0.0121
+     ],
+     "tok": 361
+    },
+    {
+     "ci": 18,
+     "p": 0.015205786123043808,
+     "p3": [
+      0.0152,
+      0.0152,
+      0.0152
+     ],
+     "tok": 400
+    },
+    {
+     "ci": 3,
+     "p": 0.024059608131182058,
+     "p3": [
+      0.0241,
+      0.0241,
+      0.0241
+     ],
+     "tok": 405
+    },
+    {
+     "ci": 11,
+     "p": 0.004555443311343926,
+     "p3": [
+      0.0046,
+      0.0046,
+      0.0046
+     ],
+     "tok": 352
+    }
+   ],
+   "pool": [
+    17,
+    16,
+    15,
+    23,
+    0,
+    18,
+    3,
+    11
+   ],
+   "q": "What is the production mechanism of WireSense's router and MCP gate?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 17,
+     "p": 0.8881133350045092,
+     "tok": 369
+    },
+    {
+     "ci": 16,
+     "p": 0.27766180089352205,
+     "tok": 342
+    },
+    {
+     "ci": 15,
+     "p": 0.04344718577230297,
+     "tok": 360
+    },
+    {
+     "ci": 23,
+     "p": 0.0948665560949297,
+     "tok": 414
+    },
+    {
+     "ci": 0,
+     "p": 0.012134190223405684,
+     "tok": 361
+    },
+    {
+     "ci": 18,
+     "p": 0.015205786123043808,
+     "tok": 400
+    },
+    {
+     "ci": 3,
+     "p": 0.024059608131182054,
+     "tok": 405
+    },
+    {
+     "ci": 11,
+     "p": 0.004555443311343926,
+     "tok": 352
+    }
+   ]
+  },
+  {
+   "chunk": 17,
+   "d50": {
+    "answer": null,
+    "ci": 17,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 17
+   },
+   "dh": {
+    "ans": "The fixed representation decides routing by using centroid cosine similarity to identify the unique specialty phrase pairs owned by each agent within their respective domains.",
+    "ans_ok": 1,
+    "ci": 17,
+    "deployed_judge_tok": 725,
+    "fallback": 0,
+    "grade_p": 0.812,
+    "hit": 1,
+    "n_judged": 2,
+    "stop_ci": 17,
+    "tok": 771,
+    "total_tok": 1496
+   },
+   "dm": {
+    "ans": "The fixed representation decides routing by using centroid cosine similarity to identify the unique specialty phrase pairs owned by each agent within their respective domains.",
+    "ans_ok": 1,
+    "ci": 17,
+    "deployed_judge_tok": 2175,
+    "fallback": 0,
+    "grade_p": 0.812,
+    "hit": 1,
+    "n_judged": 2,
+    "stop_ci": 17,
+    "tok": 771,
+    "total_tok": 2946
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 16,
+     "p": 0.3062256918112161,
+     "p3": [
+      0.3062,
+      0.3062,
+      0.3062
+     ],
+     "tok": 349
+    },
+    {
+     "ci": 17,
+     "p": 0.740603848539068,
+     "p3": [
+      0.7406,
+      0.7406,
+      0.7406
+     ],
+     "tok": 376
+    },
+    {
+     "ci": 23,
+     "p": 0.5643817166627916,
+     "p3": [
+      0.5644,
+      0.5644,
+      0.5644
+     ],
+     "tok": 421
+    },
+    {
+     "ci": 27,
+     "p": 0.45203443009968297,
+     "p3": [
+      0.452,
+      0.452,
+      0.452
+     ],
+     "tok": 408
+    },
+    {
+     "ci": 1,
+     "p": 0.7154466962893408,
+     "p3": [
+      0.7154,
+      0.7154,
+      0.7154
+     ],
+     "tok": 383
+    },
+    {
+     "ci": 20,
+     "p": 0.3248369792041613,
+     "p3": [
+      0.3248,
+      0.3248,
+      0.3248
+     ],
+     "tok": 430
+    },
+    {
+     "ci": 29,
+     "p": 0.01779021664677237,
+     "p3": [
+      0.0178,
+      0.0178,
+      0.0178
+     ],
+     "tok": 407
+    },
+    {
+     "ci": 18,
+     "p": 0.10819913802621019,
+     "p3": [
+      0.1082,
+      0.1082,
+      0.1082
+     ],
+     "tok": 407
+    }
+   ],
+   "pool": [
+    16,
+    17,
+    23,
+    27,
+    1,
+    20,
+    29,
+    18
+   ],
+   "q": "How can one fixed representation decide which of dozens of near-identical helpers an incoming message belongs to?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 16,
+     "p": 0.3062256918112161,
+     "tok": 349
+    },
+    {
+     "ci": 17,
+     "p": 0.740603848539068,
+     "tok": 376
+    },
+    {
+     "ci": 23,
+     "p": 0.5643817166627916,
+     "tok": 421
+    },
+    {
+     "ci": 27,
+     "p": 0.45203443009968297,
+     "tok": 408
+    },
+    {
+     "ci": 1,
+     "p": 0.7154466962893408,
+     "tok": 383
+    },
+    {
+     "ci": 20,
+     "p": 0.3248369792041613,
+     "tok": 430
+    },
+    {
+     "ci": 29,
+     "p": 0.01779021664677237,
+     "tok": 407
+    },
+    {
+     "ci": 18,
+     "p": 0.10819913802621019,
+     "tok": 407
+    }
+   ]
+  },
+  {
+   "chunk": 21,
+   "d50": {
+    "answer": null,
+    "ci": 22,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 22
+   },
+   "dh": {
+    "ans": "The held-out generalization ceiling for short synthetic generic texts is measured slightly above the probed ~0.84, specifically at 0.8555.",
+    "ans_ok": 0,
+    "ci": 22,
+    "deployed_judge_tok": 574,
+    "fallback": 0,
+    "grade_p": 0.0164,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 22,
+    "tok": 1063,
+    "total_tok": 1637
+   },
+   "dm": {
+    "ans": "The held-out generalization ceiling for short synthetic generic texts is measured slightly above the probed ~0.84, specifically at 0.8555.",
+    "ans_ok": 0,
+    "ci": 22,
+    "deployed_judge_tok": 1722,
+    "fallback": 0,
+    "grade_p": 0.0164,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 22,
+    "tok": 1063,
+    "total_tok": 2785
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 22,
+     "p": 0.8053981348384852,
+     "p3": [
+      0.8054,
+      0.8054,
+      0.8054
+     ],
+     "tok": 574
+    },
+    {
+     "ci": 21,
+     "p": 0.7682172815292528,
+     "p3": [
+      0.7682,
+      0.7682,
+      0.7682
+     ],
+     "tok": 462
+    },
+    {
+     "ci": 6,
+     "p": 0.017103498896414392,
+     "p3": [
+      0.0171,
+      0.0171,
+      0.0171
+     ],
+     "tok": 421
+    },
+    {
+     "ci": 20,
+     "p": 0.7545775983580963,
+     "p3": [
+      0.7546,
+      0.7546,
+      0.7546
+     ],
+     "tok": 423
+    },
+    {
+     "ci": 30,
+     "p": 0.34388676919412003,
+     "p3": [
+      0.3439,
+      0.3439,
+      0.3439
+     ],
+     "tok": 382
+    },
+    {
+     "ci": 24,
+     "p": 0.18070407670412406,
+     "p3": [
+      0.1807,
+      0.1807,
+      0.1807
+     ],
+     "tok": 347
+    },
+    {
+     "ci": 29,
+     "p": 0.0017410159481799617,
+     "p3": [
+      0.0017,
+      0.0017,
+      0.0017
+     ],
+     "tok": 400
+    },
+    {
+     "ci": 1,
+     "p": 0.0432536337213674,
+     "p3": [
+      0.0433,
+      0.0433,
+      0.0433
+     ],
+     "tok": 376
+    }
+   ],
+   "pool": [
+    22,
+    21,
+    6,
+    20,
+    30,
+    24,
+    29,
+    1
+   ],
+   "q": "What is the held-out generalization ceiling for short synthetic generic texts?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 22,
+     "p": 0.8053981348384852,
+     "tok": 574
+    },
+    {
+     "ci": 21,
+     "p": 0.768217281529253,
+     "tok": 462
+    },
+    {
+     "ci": 6,
+     "p": 0.017103498896414392,
+     "tok": 421
+    },
+    {
+     "ci": 20,
+     "p": 0.7545775983580963,
+     "tok": 423
+    },
+    {
+     "ci": 30,
+     "p": 0.34388676919412003,
+     "tok": 382
+    },
+    {
+     "ci": 24,
+     "p": 0.18070407670412406,
+     "tok": 347
+    },
+    {
+     "ci": 29,
+     "p": 0.0017410159481799617,
+     "tok": 400
+    },
+    {
+     "ci": 1,
+     "p": 0.04325363372136741,
+     "tok": 376
+    }
+   ]
+  },
+  {
+   "chunk": 21,
+   "d50": {
+    "answer": null,
+    "ci": 22,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 22
+   },
+   "dh": {
+    "ans": "The expected performance range is 0.8364 to 0.8555.",
+    "ans_ok": 0,
+    "ci": 22,
+    "deployed_judge_tok": 574,
+    "fallback": 0,
+    "grade_p": 0.0528,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 22,
+    "tok": 1050,
+    "total_tok": 1624
+   },
+   "dm": {
+    "ans": "The expected performance range is 0.8364 to 0.8555.",
+    "ans_ok": 0,
+    "ci": 22,
+    "deployed_judge_tok": 1722,
+    "fallback": 0,
+    "grade_p": 0.0528,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 22,
+    "tok": 1050,
+    "total_tok": 2772
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 22,
+     "p": 0.6521746012568956,
+     "p3": [
+      0.6522,
+      0.6522,
+      0.6522
+     ],
+     "tok": 574
+    },
+    {
+     "ci": 29,
+     "p": 0.006059398461773585,
+     "p3": [
+      0.0061,
+      0.0061,
+      0.0061
+     ],
+     "tok": 400
+    },
+    {
+     "ci": 21,
+     "p": 0.4219448759783317,
+     "p3": [
+      0.4219,
+      0.4219,
+      0.4219
+     ],
+     "tok": 462
+    },
+    {
+     "ci": 24,
+     "p": 0.40172385186837606,
+     "p3": [
+      0.4017,
+      0.4017,
+      0.4017
+     ],
+     "tok": 347
+    },
+    {
+     "ci": 30,
+     "p": 0.04015059653346619,
+     "p3": [
+      0.0402,
+      0.0402,
+      0.0402
+     ],
+     "tok": 382
+    },
+    {
+     "ci": 6,
+     "p": 0.04196928543789899,
+     "p3": [
+      0.042,
+      0.042,
+      0.042
+     ],
+     "tok": 421
+    },
+    {
+     "ci": 26,
+     "p": 0.007412393673608097,
+     "p3": [
+      0.0074,
+      0.0074,
+      0.0074
+     ],
+     "tok": 347
+    },
+    {
+     "ci": 31,
+     "p": 0.005780421441512802,
+     "p3": [
+      0.0058,
+      0.0058,
+      0.0058
+     ],
+     "tok": 239
+    }
+   ],
+   "pool": [
+    22,
+    29,
+    21,
+    24,
+    30,
+    6,
+    26,
+    31
+   ],
+   "q": "What is the expected performance range if I cannot use short synthetic texts?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 22,
+     "p": 0.6521746012568956,
+     "tok": 574
+    },
+    {
+     "ci": 29,
+     "p": 0.006059398461773585,
+     "tok": 400
+    },
+    {
+     "ci": 21,
+     "p": 0.42194487597833163,
+     "tok": 462
+    },
+    {
+     "ci": 24,
+     "p": 0.40172385186837606,
+     "tok": 347
+    },
+    {
+     "ci": 30,
+     "p": 0.04015059653346619,
+     "tok": 382
+    },
+    {
+     "ci": 6,
+     "p": 0.04196928543789899,
+     "tok": 421
+    },
+    {
+     "ci": 26,
+     "p": 0.007412393673608097,
+     "tok": 347
+    },
+    {
+     "ci": 31,
+     "p": 0.005780421441512802,
+     "tok": 239
+    }
+   ]
+  },
+  {
+   "chunk": 24,
+   "d50": {
+    "answer": null,
+    "ci": 25,
+    "fallback": 1,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": null
+   },
+   "dh": {
+    "ans": "The provided excerpt does not contain the results or a definitive answer to whether pointwise joint judgment beats bi-embedding cosine.",
+    "ans_ok": 0,
+    "ci": 25,
+    "deployed_judge_tok": 339,
+    "fallback": 1,
+    "grade_p": 0.3891,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 700,
+    "total_tok": 1039
+   },
+   "dm": {
+    "ans": "The provided excerpt does not contain the results or a definitive answer to whether pointwise joint judgment beats bi-embedding cosine.",
+    "ans_ok": 0,
+    "ci": 25,
+    "deployed_judge_tok": 1017,
+    "fallback": 1,
+    "grade_p": 0.3891,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 700,
+    "total_tok": 1717
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 25,
+     "p": 0.3286098081095291,
+     "p3": [
+      0.3286,
+      0.3286,
+      0.3286
+     ],
+     "tok": 339
+    },
+    {
+     "ci": 24,
+     "p": 0.10796428946731047,
+     "p3": [
+      0.108,
+      0.108,
+      0.108
+     ],
+     "tok": 344
+    },
+    {
+     "ci": 27,
+     "p": 0.24192793068461863,
+     "p3": [
+      0.2419,
+      0.2419,
+      0.2419
+     ],
+     "tok": 398
+    },
+    {
+     "ci": 28,
+     "p": 0.12590028962455713,
+     "p3": [
+      0.1259,
+      0.1259,
+      0.1259
+     ],
+     "tok": 403
+    },
+    {
+     "ci": 29,
+     "p": 0.044292405439223935,
+     "p3": [
+      0.0443,
+      0.0443,
+      0.0443
+     ],
+     "tok": 397
+    },
+    {
+     "ci": 3,
+     "p": 0.05725988427902023,
+     "p3": [
+      0.0573,
+      0.0573,
+      0.0573
+     ],
+     "tok": 402
+    },
+    {
+     "ci": 2,
+     "p": 0.01638481214676297,
+     "p3": [
+      0.0164,
+      0.0164,
+      0.0164
+     ],
+     "tok": 345
+    },
+    {
+     "ci": 31,
+     "p": 0.01331948905092959,
+     "p3": [
+      0.0133,
+      0.0133,
+      0.0133
+     ],
+     "tok": 236
+    }
+   ],
+   "pool": [
+    25,
+    24,
+    27,
+    28,
+    29,
+    3,
+    2,
+    31
+   ],
+   "q": "Does pointwise joint judgment beat bi-embedding cosine?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 25,
+     "p": 0.3286098081095291,
+     "tok": 339
+    },
+    {
+     "ci": 24,
+     "p": 0.10796428946731047,
+     "tok": 344
+    },
+    {
+     "ci": 27,
+     "p": 0.24192793068461865,
+     "tok": 398
+    },
+    {
+     "ci": 28,
+     "p": 0.12590028962455713,
+     "tok": 403
+    },
+    {
+     "ci": 29,
+     "p": 0.04429240543922393,
+     "tok": 397
+    },
+    {
+     "ci": 3,
+     "p": 0.05725988427902023,
+     "tok": 402
+    },
+    {
+     "ci": 2,
+     "p": 0.01638481214676297,
+     "tok": 345
+    },
+    {
+     "ci": 31,
+     "p": 0.01331948905092959,
+     "tok": 236
+    }
+   ]
+  },
+  {
+   "chunk": 24,
+   "d50": {
+    "answer": null,
+    "ci": 26,
+    "fallback": 1,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": null
+   },
+   "dh": {
+    "ans": "The excerpt does not provide instructions on how to find relevant information to answer questions quickly.",
+    "ans_ok": 0,
+    "ci": 26,
+    "deployed_judge_tok": 348,
+    "fallback": 1,
+    "grade_p": 0.3384,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 706,
+    "total_tok": 1054
+   },
+   "dm": {
+    "ans": "The excerpt does not provide instructions on how to find relevant information to answer questions quickly.",
+    "ans_ok": 0,
+    "ci": 26,
+    "deployed_judge_tok": 1044,
+    "fallback": 1,
+    "grade_p": 0.3384,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 706,
+    "total_tok": 1750
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 26,
+     "p": 0.1895200826017972,
+     "p3": [
+      0.1895,
+      0.1895,
+      0.1895
+     ],
+     "tok": 348
+    },
+    {
+     "ci": 25,
+     "p": 0.2342670325071782,
+     "p3": [
+      0.2343,
+      0.2343,
+      0.2343
+     ],
+     "tok": 343
+    },
+    {
+     "ci": 24,
+     "p": 0.07727161400468714,
+     "p3": [
+      0.0773,
+      0.0773,
+      0.0773
+     ],
+     "tok": 348
+    },
+    {
+     "ci": 27,
+     "p": 0.04280394764713369,
+     "p3": [
+      0.0428,
+      0.0428,
+      0.0428
+     ],
+     "tok": 402
+    },
+    {
+     "ci": 11,
+     "p": 0.08363121739462286,
+     "p3": [
+      0.0836,
+      0.0836,
+      0.0836
+     ],
+     "tok": 353
+    },
+    {
+     "ci": 31,
+     "p": 0.02320418376481548,
+     "p3": [
+      0.0232,
+      0.0232,
+      0.0232
+     ],
+     "tok": 240
+    },
+    {
+     "ci": 29,
+     "p": 0.01290251002385658,
+     "p3": [
+      0.0129,
+      0.0129,
+      0.0129
+     ],
+     "tok": 401
+    },
+    {
+     "ci": 30,
+     "p": 0.0020411751836430588,
+     "p3": [
+      0.002,
+      0.002,
+      0.002
+     ],
+     "tok": 383
+    }
+   ],
+   "pool": [
+    26,
+    25,
+    24,
+    27,
+    11,
+    31,
+    29,
+    30
+   ],
+   "q": "How can I find the most relevant information to answer my specific questions quickly?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 26,
+     "p": 0.1895200826017972,
+     "tok": 348
+    },
+    {
+     "ci": 25,
+     "p": 0.2342670325071782,
+     "tok": 343
+    },
+    {
+     "ci": 24,
+     "p": 0.07727161400468714,
+     "tok": 348
+    },
+    {
+     "ci": 27,
+     "p": 0.04280394764713369,
+     "tok": 402
+    },
+    {
+     "ci": 11,
+     "p": 0.08363121739462286,
+     "tok": 353
+    },
+    {
+     "ci": 31,
+     "p": 0.02320418376481548,
+     "tok": 240
+    },
+    {
+     "ci": 29,
+     "p": 0.01290251002385658,
+     "tok": 401
+    },
+    {
+     "ci": 30,
+     "p": 0.0020411751836430588,
+     "tok": 383
+    }
+   ]
+  },
+  {
+   "chunk": 26,
+   "d50": {
+    "answer": null,
+    "ci": 26,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 26
+   },
+   "dh": {
+    "ans": "There are 12 train and 12 eval chunks per document.",
+    "ans_ok": 1,
+    "ci": 26,
+    "deployed_judge_tok": 345,
+    "fallback": 0,
+    "grade_p": 0.8404,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 26,
+    "tok": 698,
+    "total_tok": 1043
+   },
+   "dm": {
+    "ans": "There are 12 train and 12 eval chunks per document.",
+    "ans_ok": 1,
+    "ci": 26,
+    "deployed_judge_tok": 1035,
+    "fallback": 0,
+    "grade_p": 0.8404,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 26,
+    "tok": 698,
+    "total_tok": 1733
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 26,
+     "p": 0.6998698151400998,
+     "p3": [
+      0.6999,
+      0.6999,
+      0.6999
+     ],
+     "tok": 345
+    },
+    {
+     "ci": 25,
+     "p": 0.04228091931249267,
+     "p3": [
+      0.0423,
+      0.0423,
+      0.0423
+     ],
+     "tok": 340
+    },
+    {
+     "ci": 27,
+     "p": 0.009697159806831867,
+     "p3": [
+      0.0097,
+      0.0097,
+      0.0097
+     ],
+     "tok": 399
+    },
+    {
+     "ci": 31,
+     "p": 0.04145402983352583,
+     "p3": [
+      0.0415,
+      0.0415,
+      0.0415
+     ],
+     "tok": 237
+    },
+    {
+     "ci": 28,
+     "p": 0.06468472034540187,
+     "p3": [
+      0.0647,
+      0.0647,
+      0.0647
+     ],
+     "tok": 404
+    },
+    {
+     "ci": 24,
+     "p": 0.14420165353416647,
+     "p3": [
+      0.1442,
+      0.1442,
+      0.1442
+     ],
+     "tok": 345
+    },
+    {
+     "ci": 1,
+     "p": 0.3072123845897204,
+     "p3": [
+      0.3072,
+      0.3072,
+      0.3072
+     ],
+     "tok": 374
+    },
+    {
+     "ci": 29,
+     "p": 0.0018646426437585843,
+     "p3": [
+      0.0019,
+      0.0019,
+      0.0019
+     ],
+     "tok": 398
+    }
+   ],
+   "pool": [
+    26,
+    25,
+    27,
+    31,
+    28,
+    24,
+    1,
+    29
+   ],
+   "q": "What is the number of train and eval chunks per document?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 26,
+     "p": 0.6998698151400998,
+     "tok": 345
+    },
+    {
+     "ci": 25,
+     "p": 0.04228091931249267,
+     "tok": 340
+    },
+    {
+     "ci": 27,
+     "p": 0.009697159806831867,
+     "tok": 399
+    },
+    {
+     "ci": 31,
+     "p": 0.04145402983352583,
+     "tok": 237
+    },
+    {
+     "ci": 28,
+     "p": 0.06468472034540187,
+     "tok": 404
+    },
+    {
+     "ci": 24,
+     "p": 0.14420165353416647,
+     "tok": 345
+    },
+    {
+     "ci": 1,
+     "p": 0.3072123845897204,
+     "tok": 374
+    },
+    {
+     "ci": 29,
+     "p": 0.0018646426437585843,
+     "tok": 398
+    }
+   ]
+  },
+  {
+   "chunk": 26,
+   "d50": {
+    "answer": null,
+    "ci": 20,
+    "fallback": 1,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": null
+   },
+   "dh": {
+    "ans": "The provided excerpt does not contain information on how to look something up when you cannot name what you are looking for.",
+    "ans_ok": 0,
+    "ci": 20,
+    "deployed_judge_tok": 426,
+    "fallback": 1,
+    "grade_p": 0.169,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 792,
+    "total_tok": 1218
+   },
+   "dm": {
+    "ans": "The provided excerpt does not contain information on how to look something up when you cannot name what you are looking for.",
+    "ans_ok": 0,
+    "ci": 20,
+    "deployed_judge_tok": 1278,
+    "fallback": 1,
+    "grade_p": 0.169,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 792,
+    "total_tok": 2070
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 20,
+     "p": 0.001819154751999968,
+     "p3": [
+      0.0018,
+      0.0018,
+      0.0018
+     ],
+     "tok": 426
+    },
+    {
+     "ci": 23,
+     "p": 0.09659823995087763,
+     "p3": [
+      0.0966,
+      0.0966,
+      0.0966
+     ],
+     "tok": 417
+    },
+    {
+     "ci": 26,
+     "p": 0.036817661449009775,
+     "p3": [
+      0.0368,
+      0.0368,
+      0.0368
+     ],
+     "tok": 350
+    },
+    {
+     "ci": 25,
+     "p": 0.02659731485177207,
+     "p3": [
+      0.0266,
+      0.0266,
+      0.0266
+     ],
+     "tok": 345
+    },
+    {
+     "ci": 30,
+     "p": 0.00032549424489910914,
+     "p3": [
+      0.0003,
+      0.0003,
+      0.0003
+     ],
+     "tok": 385
+    },
+    {
+     "ci": 19,
+     "p": 0.00023120365113729664,
+     "p3": [
+      0.0002,
+      0.0002,
+      0.0002
+     ],
+     "tok": 373
+    },
+    {
+     "ci": 27,
+     "p": 0.0013898021838847977,
+     "p3": [
+      0.0014,
+      0.0014,
+      0.0014
+     ],
+     "tok": 404
+    },
+    {
+     "ci": 22,
+     "p": 0.0037414196572902202,
+     "p3": [
+      0.0037,
+      0.0037,
+      0.0037
+     ],
+     "tok": 577
+    }
+   ],
+   "pool": [
+    20,
+    23,
+    26,
+    25,
+    30,
+    19,
+    27,
+    22
+   ],
+   "q": "How do I look something up when I can't name what I'm looking for?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 20,
+     "p": 0.001819154751999968,
+     "tok": 426
+    },
+    {
+     "ci": 23,
+     "p": 0.09659823995087763,
+     "tok": 417
+    },
+    {
+     "ci": 26,
+     "p": 0.036817661449009775,
+     "tok": 350
+    },
+    {
+     "ci": 25,
+     "p": 0.02659731485177207,
+     "tok": 345
+    },
+    {
+     "ci": 30,
+     "p": 0.00032549424489910914,
+     "tok": 385
+    },
+    {
+     "ci": 19,
+     "p": 0.00023120365113729662,
+     "tok": 373
+    },
+    {
+     "ci": 27,
+     "p": 0.0013898021838847975,
+     "tok": 404
+    },
+    {
+     "ci": 22,
+     "p": 0.0037414196572902202,
+     "tok": 577
+    }
+   ]
+  },
+  {
+   "chunk": 27,
+   "d50": {
+    "answer": null,
+    "ci": 27,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 27
+   },
+   "dh": {
+    "ans": "The J-combo model uses the exact input features [q; c; |q\u2212c|; q\u00b7c].",
+    "ans_ok": 1,
+    "ci": 27,
+    "deployed_judge_tok": 1422,
+    "fallback": 0,
+    "grade_p": 0.963,
+    "hit": 1,
+    "n_judged": 4,
+    "stop_ci": 27,
+    "tok": 820,
+    "total_tok": 2242
+   },
+   "dm": {
+    "ans": "The J-combo model uses the exact input features [q; c; |q\u2212c|; q\u00b7c].",
+    "ans_ok": 1,
+    "ci": 27,
+    "deployed_judge_tok": 4266,
+    "fallback": 0,
+    "grade_p": 0.963,
+    "hit": 1,
+    "n_judged": 4,
+    "stop_ci": 27,
+    "tok": 820,
+    "total_tok": 5086
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 31,
+     "p": 0.009436029270684081,
+     "p3": [
+      0.0094,
+      0.0094,
+      0.0094
+     ],
+     "tok": 239
+    },
+    {
+     "ci": 30,
+     "p": 0.007777332683628992,
+     "p3": [
+      0.0078,
+      0.0078,
+      0.0078
+     ],
+     "tok": 382
+    },
+    {
+     "ci": 29,
+     "p": 0.01531092287216281,
+     "p3": [
+      0.0153,
+      0.0153,
+      0.0153
+     ],
+     "tok": 400
+    },
+    {
+     "ci": 27,
+     "p": 0.9208602784218173,
+     "p3": [
+      0.9209,
+      0.9209,
+      0.9209
+     ],
+     "tok": 401
+    },
+    {
+     "ci": 28,
+     "p": 0.015567150928581042,
+     "p3": [
+      0.0156,
+      0.0156,
+      0.0156
+     ],
+     "tok": 406
+    },
+    {
+     "ci": 1,
+     "p": 0.023281543101321803,
+     "p3": [
+      0.0233,
+      0.0233,
+      0.0233
+     ],
+     "tok": 376
+    },
+    {
+     "ci": 21,
+     "p": 0.017159984296307548,
+     "p3": [
+      0.0172,
+      0.0172,
+      0.0172
+     ],
+     "tok": 462
+    },
+    {
+     "ci": 3,
+     "p": 0.16257530063048228,
+     "p3": [
+      0.1626,
+      0.1626,
+      0.1626
+     ],
+     "tok": 405
+    }
+   ],
+   "pool": [
+    31,
+    30,
+    29,
+    27,
+    28,
+    1,
+    21,
+    3
+   ],
+   "q": "What are the exact input features used by the J-combo model?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 31,
+     "p": 0.009436029270684081,
+     "tok": 239
+    },
+    {
+     "ci": 30,
+     "p": 0.007777332683628992,
+     "tok": 382
+    },
+    {
+     "ci": 29,
+     "p": 0.01531092287216281,
+     "tok": 400
+    },
+    {
+     "ci": 27,
+     "p": 0.9208602784218173,
+     "tok": 401
+    },
+    {
+     "ci": 28,
+     "p": 0.015567150928581044,
+     "tok": 406
+    },
+    {
+     "ci": 1,
+     "p": 0.023281543101321803,
+     "tok": 376
+    },
+    {
+     "ci": 21,
+     "p": 0.017159984296307548,
+     "tok": 462
+    },
+    {
+     "ci": 3,
+     "p": 0.16257530063048228,
+     "tok": 405
+    }
+   ]
+  },
+  {
+   "chunk": 27,
+   "d50": {
+    "answer": null,
+    "ci": 26,
+    "fallback": 1,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": null
+   },
+   "dh": {
+    "ans": "The best way to quickly verify if a document supports a question is to use the **direct** method, which involves one question (\u226420 words) whose answer the passage states and reuses the passage's own v",
+    "ans_ok": 0,
+    "ci": 26,
+    "deployed_judge_tok": 348,
+    "fallback": 1,
+    "grade_p": 0.0052,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 788,
+    "total_tok": 1136
+   },
+   "dm": {
+    "ans": "The best way to quickly verify if a document supports a question is to use the **direct** method, which involves one question (\u226420 words) whose answer the passage states and reuses the passage's own v",
+    "ans_ok": 0,
+    "ci": 26,
+    "deployed_judge_tok": 1044,
+    "fallback": 1,
+    "grade_p": 0.0052,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 788,
+    "total_tok": 1832
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 26,
+     "p": 0.11335888312200539,
+     "p3": [
+      0.1134,
+      0.1134,
+      0.1134
+     ],
+     "tok": 348
+    },
+    {
+     "ci": 25,
+     "p": 0.21888778537770168,
+     "p3": [
+      0.2189,
+      0.2189,
+      0.2189
+     ],
+     "tok": 343
+    },
+    {
+     "ci": 27,
+     "p": 0.3031882672912869,
+     "p3": [
+      0.3032,
+      0.3032,
+      0.3032
+     ],
+     "tok": 402
+    },
+    {
+     "ci": 29,
+     "p": 0.04542633970999834,
+     "p3": [
+      0.0454,
+      0.0454,
+      0.0454
+     ],
+     "tok": 401
+    },
+    {
+     "ci": 31,
+     "p": 0.18024283720418469,
+     "p3": [
+      0.1802,
+      0.1802,
+      0.1802
+     ],
+     "tok": 240
+    },
+    {
+     "ci": 30,
+     "p": 0.0313450783852633,
+     "p3": [
+      0.0313,
+      0.0313,
+      0.0313
+     ],
+     "tok": 383
+    },
+    {
+     "ci": 24,
+     "p": 0.2551430160080484,
+     "p3": [
+      0.2551,
+      0.2551,
+      0.2551
+     ],
+     "tok": 348
+    },
+    {
+     "ci": 11,
+     "p": 0.3076138842754848,
+     "p3": [
+      0.3076,
+      0.3076,
+      0.3076
+     ],
+     "tok": 353
+    }
+   ],
+   "pool": [
+    26,
+    25,
+    27,
+    29,
+    31,
+    30,
+    24,
+    11
+   ],
+   "q": "What is the best way to quickly verify if a document supports a question?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 26,
+     "p": 0.11335888312200539,
+     "tok": 348
+    },
+    {
+     "ci": 25,
+     "p": 0.21888778537770165,
+     "tok": 343
+    },
+    {
+     "ci": 27,
+     "p": 0.3031882672912869,
+     "tok": 402
+    },
+    {
+     "ci": 29,
+     "p": 0.04542633970999834,
+     "tok": 401
+    },
+    {
+     "ci": 31,
+     "p": 0.18024283720418469,
+     "tok": 240
+    },
+    {
+     "ci": 30,
+     "p": 0.0313450783852633,
+     "tok": 383
+    },
+    {
+     "ci": 24,
+     "p": 0.2551430160080484,
+     "tok": 348
+    },
+    {
+     "ci": 11,
+     "p": 0.3076138842754848,
+     "tok": 353
+    }
+   ]
+  },
+  {
+   "chunk": 29,
+   "d50": {
+    "answer": null,
+    "ci": 29,
+    "fallback": 1,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": null
+   },
+   "dh": {
+    "ans": "The excerpt does not provide the specific probabilistic scores over all evaluated pairs.",
+    "ans_ok": 0,
+    "ci": 29,
+    "deployed_judge_tok": 397,
+    "fallback": 1,
+    "grade_p": 0.4367,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 802,
+    "total_tok": 1199
+   },
+   "dm": {
+    "ans": "The excerpt does not provide the specific probabilistic scores over all evaluated pairs.",
+    "ans_ok": 0,
+    "ci": 29,
+    "deployed_judge_tok": 1191,
+    "fallback": 1,
+    "grade_p": 0.4367,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 802,
+    "total_tok": 1993
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 29,
+     "p": 0.042532449812609334,
+     "p3": [
+      0.0425,
+      0.0425,
+      0.0425
+     ],
+     "tok": 397
+    },
+    {
+     "ci": 28,
+     "p": 0.15250189160205443,
+     "p3": [
+      0.1525,
+      0.1525,
+      0.1525
+     ],
+     "tok": 403
+    },
+    {
+     "ci": 15,
+     "p": 0.030037059122374633,
+     "p3": [
+      0.03,
+      0.03,
+      0.03
+     ],
+     "tok": 357
+    },
+    {
+     "ci": 31,
+     "p": 0.00831619799999465,
+     "p3": [
+      0.0083,
+      0.0083,
+      0.0083
+     ],
+     "tok": 236
+    },
+    {
+     "ci": 21,
+     "p": 0.09802812266796566,
+     "p3": [
+      0.098,
+      0.098,
+      0.098
+     ],
+     "tok": 459
+    },
+    {
+     "ci": 19,
+     "p": 0.01850913557426881,
+     "p3": [
+      0.0185,
+      0.0185,
+      0.0185
+     ],
+     "tok": 367
+    },
+    {
+     "ci": 25,
+     "p": 0.0042628290671695365,
+     "p3": [
+      0.0043,
+      0.0043,
+      0.0043
+     ],
+     "tok": 339
+    },
+    {
+     "ci": 20,
+     "p": 0.19563742632675427,
+     "p3": [
+      0.1956,
+      0.1956,
+      0.1956
+     ],
+     "tok": 420
+    }
+   ],
+   "pool": [
+    29,
+    28,
+    15,
+    31,
+    21,
+    19,
+    25,
+    20
+   ],
+   "q": "What are the probabilistic scores over all evaluated pairs?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 29,
+     "p": 0.042532449812609334,
+     "tok": 397
+    },
+    {
+     "ci": 28,
+     "p": 0.15250189160205443,
+     "tok": 403
+    },
+    {
+     "ci": 15,
+     "p": 0.030037059122374636,
+     "tok": 357
+    },
+    {
+     "ci": 31,
+     "p": 0.00831619799999465,
+     "tok": 236
+    },
+    {
+     "ci": 21,
+     "p": 0.09802812266796566,
+     "tok": 459
+    },
+    {
+     "ci": 19,
+     "p": 0.01850913557426881,
+     "tok": 367
+    },
+    {
+     "ci": 25,
+     "p": 0.0042628290671695365,
+     "tok": 339
+    },
+    {
+     "ci": 20,
+     "p": 0.19563742632675427,
+     "tok": 420
+    }
+   ]
+  },
+  {
+   "chunk": 29,
+   "d50": {
+    "answer": null,
+    "ci": 29,
+    "fallback": 1,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": null
+   },
+   "dh": {
+    "ans": "The excerpt does not provide specific guidance on how much to trust the confidence numbers because it explicitly states that V has no probability and is excluded from the ECE metric used to evaluate t",
+    "ans_ok": 1,
+    "ci": 29,
+    "deployed_judge_tok": 399,
+    "fallback": 1,
+    "grade_p": 0.5101,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 828,
+    "total_tok": 1227
+   },
+   "dm": {
+    "ans": "The excerpt does not provide specific guidance on how much to trust the confidence numbers because it explicitly states that V has no probability and is excluded from the ECE metric used to evaluate t",
+    "ans_ok": 1,
+    "ci": 29,
+    "deployed_judge_tok": 1197,
+    "fallback": 1,
+    "grade_p": 0.5101,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 828,
+    "total_tok": 2025
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 29,
+     "p": 0.03219133318882881,
+     "p3": [
+      0.0322,
+      0.0322,
+      0.0322
+     ],
+     "tok": 399
+    },
+    {
+     "ci": 21,
+     "p": 0.10052053421501367,
+     "p3": [
+      0.1005,
+      0.1005,
+      0.1005
+     ],
+     "tok": 461
+    },
+    {
+     "ci": 20,
+     "p": 0.036970095519955865,
+     "p3": [
+      0.037,
+      0.037,
+      0.037
+     ],
+     "tok": 422
+    },
+    {
+     "ci": 15,
+     "p": 0.049785102095282065,
+     "p3": [
+      0.0498,
+      0.0498,
+      0.0498
+     ],
+     "tok": 359
+    },
+    {
+     "ci": 30,
+     "p": 0.024838938760354298,
+     "p3": [
+      0.0248,
+      0.0248,
+      0.0248
+     ],
+     "tok": 381
+    },
+    {
+     "ci": 8,
+     "p": 0.04501002952629889,
+     "p3": [
+      0.045,
+      0.045,
+      0.045
+     ],
+     "tok": 440
+    },
+    {
+     "ci": 7,
+     "p": 0.18254978357269114,
+     "p3": [
+      0.1825,
+      0.1825,
+      0.1825
+     ],
+     "tok": 604
+    },
+    {
+     "ci": 23,
+     "p": 0.11197709131814026,
+     "p3": [
+      0.112,
+      0.112,
+      0.112
+     ],
+     "tok": 413
+    }
+   ],
+   "pool": [
+    29,
+    21,
+    20,
+    15,
+    30,
+    8,
+    7,
+    23
+   ],
+   "q": "How much should I trust the confidence numbers my matcher gives me?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 29,
+     "p": 0.03219133318882881,
+     "tok": 399
+    },
+    {
+     "ci": 21,
+     "p": 0.10052053421501367,
+     "tok": 461
+    },
+    {
+     "ci": 20,
+     "p": 0.036970095519955865,
+     "tok": 422
+    },
+    {
+     "ci": 15,
+     "p": 0.049785102095282065,
+     "tok": 359
+    },
+    {
+     "ci": 30,
+     "p": 0.024838938760354298,
+     "tok": 381
+    },
+    {
+     "ci": 8,
+     "p": 0.04501002952629889,
+     "tok": 440
+    },
+    {
+     "ci": 7,
+     "p": 0.18254978357269114,
+     "tok": 604
+    },
+    {
+     "ci": 23,
+     "p": 0.11197709131814026,
+     "tok": 413
+    }
+   ]
+  },
+  {
+   "chunk": 31,
+   "d50": {
+    "answer": null,
+    "ci": 31,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 31
+   },
+   "dh": {
+    "ans": "The `--gen-questions` flag of the `chunkrel.py` runner is used to generate the freeze candidates.",
+    "ans_ok": 1,
+    "ci": 31,
+    "deployed_judge_tok": 235,
+    "fallback": 0,
+    "grade_p": 0.8802,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 31,
+    "tok": 487,
+    "total_tok": 722
+   },
+   "dm": {
+    "ans": "The `--gen-questions` flag of the `chunkrel.py` runner is used to generate the freeze candidates.",
+    "ans_ok": 1,
+    "ci": 31,
+    "deployed_judge_tok": 705,
+    "fallback": 0,
+    "grade_p": 0.8802,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 31,
+    "tok": 487,
+    "total_tok": 1192
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 31,
+     "p": 0.9110657535840115,
+     "p3": [
+      0.9111,
+      0.9111,
+      0.9111
+     ],
+     "tok": 235
+    },
+    {
+     "ci": 27,
+     "p": 0.05043904665341822,
+     "p3": [
+      0.0504,
+      0.0504,
+      0.0504
+     ],
+     "tok": 397
+    },
+    {
+     "ci": 6,
+     "p": 0.04652055912584591,
+     "p3": [
+      0.0465,
+      0.0465,
+      0.0465
+     ],
+     "tok": 417
+    },
+    {
+     "ci": 20,
+     "p": 0.029500399935240545,
+     "p3": [
+      0.0295,
+      0.0295,
+      0.0295
+     ],
+     "tok": 419
+    },
+    {
+     "ci": 26,
+     "p": 0.31592307814287895,
+     "p3": [
+      0.3159,
+      0.3159,
+      0.3159
+     ],
+     "tok": 343
+    },
+    {
+     "ci": 1,
+     "p": 0.0953162445025592,
+     "p3": [
+      0.0953,
+      0.0953,
+      0.0953
+     ],
+     "tok": 372
+    },
+    {
+     "ci": 9,
+     "p": 0.0012363665696048193,
+     "p3": [
+      0.0012,
+      0.0012,
+      0.0012
+     ],
+     "tok": 445
+    },
+    {
+     "ci": 3,
+     "p": 0.09179001777693328,
+     "p3": [
+      0.0918,
+      0.0918,
+      0.0918
+     ],
+     "tok": 401
+    }
+   ],
+   "pool": [
+    31,
+    27,
+    6,
+    20,
+    26,
+    1,
+    9,
+    3
+   ],
+   "q": "What tool is used to generate the freeze candidates?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 31,
+     "p": 0.9110657535840117,
+     "tok": 235
+    },
+    {
+     "ci": 27,
+     "p": 0.05043904665341821,
+     "tok": 397
+    },
+    {
+     "ci": 6,
+     "p": 0.04652055912584591,
+     "tok": 417
+    },
+    {
+     "ci": 20,
+     "p": 0.029500399935240545,
+     "tok": 419
+    },
+    {
+     "ci": 26,
+     "p": 0.31592307814287895,
+     "tok": 343
+    },
+    {
+     "ci": 1,
+     "p": 0.09531624450255918,
+     "tok": 372
+    },
+    {
+     "ci": 9,
+     "p": 0.0012363665696048193,
+     "tok": 445
+    },
+    {
+     "ci": 3,
+     "p": 0.09179001777693328,
+     "tok": 401
+    }
+   ]
+  },
+  {
+   "chunk": 31,
+   "d50": {
+    "answer": null,
+    "ci": 26,
+    "fallback": 1,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": null
+   },
+   "dh": {
+    "ans": "The provided excerpt does not contain information regarding the duration of a full checking pass.",
+    "ans_ok": 0,
+    "ci": 26,
+    "deployed_judge_tok": 347,
+    "fallback": 1,
+    "grade_p": 0.3841,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 595,
+    "total_tok": 942
+   },
+   "dm": {
+    "ans": "The provided excerpt does not contain information regarding the duration of a full checking pass.",
+    "ans_ok": 0,
+    "ci": 26,
+    "deployed_judge_tok": 1041,
+    "fallback": 1,
+    "grade_p": 0.3841,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 595,
+    "total_tok": 1636
+   },
+   "doc": "protocol.md",
+   "m_vec": [
+    {
+     "ci": 26,
+     "p": 0.007476883974823398,
+     "p3": [
+      0.0075,
+      0.0075,
+      0.0075
+     ],
+     "tok": 347
+    },
+    {
+     "ci": 25,
+     "p": 0.019154989905107243,
+     "p3": [
+      0.0192,
+      0.0192,
+      0.0192
+     ],
+     "tok": 342
+    },
+    {
+     "ci": 15,
+     "p": 0.014818228049306284,
+     "p3": [
+      0.0148,
+      0.0148,
+      0.0148
+     ],
+     "tok": 360
+    },
+    {
+     "ci": 14,
+     "p": 0.04348675911090516,
+     "p3": [
+      0.0435,
+      0.0435,
+      0.0435
+     ],
+     "tok": 384
+    },
+    {
+     "ci": 31,
+     "p": 0.23950649477266564,
+     "p3": [
+      0.2395,
+      0.2395,
+      0.2395
+     ],
+     "tok": 239
+    },
+    {
+     "ci": 5,
+     "p": 0.022653504028028015,
+     "p3": [
+      0.0227,
+      0.0227,
+      0.0227
+     ],
+     "tok": 387
+    },
+    {
+     "ci": 7,
+     "p": 0.01546881500167066,
+     "p3": [
+      0.0155,
+      0.0155,
+      0.0155
+     ],
+     "tok": 605
+    },
+    {
+     "ci": 19,
+     "p": 0.028632556764541673,
+     "p3": [
+      0.0286,
+      0.0286,
+      0.0286
+     ],
+     "tok": 370
+    }
+   ],
+   "pool": [
+    26,
+    25,
+    15,
+    14,
+    31,
+    5,
+    7,
+    19
+   ],
+   "q": "Roughly how long should the full checking pass over every passage take?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 26,
+     "p": 0.007476883974823398,
+     "tok": 347
+    },
+    {
+     "ci": 25,
+     "p": 0.019154989905107243,
+     "tok": 342
+    },
+    {
+     "ci": 15,
+     "p": 0.014818228049306284,
+     "tok": 360
+    },
+    {
+     "ci": 14,
+     "p": 0.04348675911090516,
+     "tok": 384
+    },
+    {
+     "ci": 31,
+     "p": 0.23950649477266567,
+     "tok": 239
+    },
+    {
+     "ci": 5,
+     "p": 0.022653504028028015,
+     "tok": 387
+    },
+    {
+     "ci": 7,
+     "p": 0.01546881500167066,
+     "tok": 605
+    },
+    {
+     "ci": 19,
+     "p": 0.028632556764541673,
+     "tok": 370
+    }
+   ]
+  },
+  {
+   "chunk": 1,
+   "d50": {
+    "answer": null,
+    "ci": 1,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 1
+   },
+   "dh": {
+    "ans": "The stdio MCP client targets at least 100 tools across at least 8 servers.",
+    "ans_ok": 1,
+    "ci": 1,
+    "deployed_judge_tok": 352,
+    "fallback": 0,
+    "grade_p": 0.9615,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 1,
+    "tok": 717,
+    "total_tok": 1069
+   },
+   "dm": {
+    "ans": "The stdio MCP client targets at least 100 tools across at least 8 servers.",
+    "ans_ok": 1,
+    "ci": 1,
+    "deployed_judge_tok": 1056,
+    "fallback": 0,
+    "grade_p": 0.9615,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 1,
+    "tok": 717,
+    "total_tok": 1773
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 1,
+     "p": 0.8953760995841799,
+     "p3": [
+      0.8954,
+      0.8954,
+      0.8954
+     ],
+     "tok": 352
+    },
+    {
+     "ci": 2,
+     "p": 0.29258168219793257,
+     "p3": [
+      0.2926,
+      0.2926,
+      0.2926
+     ],
+     "tok": 354
+    },
+    {
+     "ci": 41,
+     "p": 0.44627812540874917,
+     "p3": [
+      0.4463,
+      0.4463,
+      0.4463
+     ],
+     "tok": 414
+    },
+    {
+     "ci": 32,
+     "p": 0.3491533382969998,
+     "p3": [
+      0.3492,
+      0.3492,
+      0.3492
+     ],
+     "tok": 395
+    },
+    {
+     "ci": 31,
+     "p": 0.1653925284471671,
+     "p3": [
+      0.1654,
+      0.1654,
+      0.1654
+     ],
+     "tok": 361
+    },
+    {
+     "ci": 37,
+     "p": 0.07596924735992695,
+     "p3": [
+      0.076,
+      0.076,
+      0.076
+     ],
+     "tok": 364
+    },
+    {
+     "ci": 0,
+     "p": 0.04992359507350561,
+     "p3": [
+      0.0499,
+      0.0499,
+      0.0499
+     ],
+     "tok": 338
+    },
+    {
+     "ci": 38,
+     "p": 0.5195638671509565,
+     "p3": [
+      0.5196,
+      0.5196,
+      0.5196
+     ],
+     "tok": 367
+    }
+   ],
+   "pool": [
+    1,
+    2,
+    41,
+    32,
+    31,
+    37,
+    0,
+    38
+   ],
+   "q": "How many tools are targeted across how many servers in the stdio MCP client?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 1,
+     "p": 0.8953760995841799,
+     "tok": 352
+    },
+    {
+     "ci": 2,
+     "p": 0.29258168219793257,
+     "tok": 354
+    },
+    {
+     "ci": 41,
+     "p": 0.44627812540874917,
+     "tok": 414
+    },
+    {
+     "ci": 32,
+     "p": 0.3491533382969998,
+     "tok": 395
+    },
+    {
+     "ci": 31,
+     "p": 0.1653925284471671,
+     "tok": 361
+    },
+    {
+     "ci": 37,
+     "p": 0.07596924735992695,
+     "tok": 364
+    },
+    {
+     "ci": 0,
+     "p": 0.04992359507350562,
+     "tok": 338
+    },
+    {
+     "ci": 38,
+     "p": 0.5195638671509565,
+     "tok": 367
+    }
+   ]
+  },
+  {
+   "chunk": 1,
+   "d50": {
+    "answer": null,
+    "ci": 1,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 1
+   },
+   "dh": {
+    "ans": "You can build a faithful catalogue by running the stdio MCP client's initialize and tools/list commands on each connected plugin, dumping the resulting tool JSON verbatim to a corpus directory without",
+    "ans_ok": 1,
+    "ci": 1,
+    "deployed_judge_tok": 351,
+    "fallback": 0,
+    "grade_p": 0.8908,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 1,
+    "tok": 740,
+    "total_tok": 1091
+   },
+   "dm": {
+    "ans": "You can build a faithful catalogue by running the stdio MCP client's initialize and tools/list commands on each connected plugin, dumping the resulting tool JSON verbatim to a corpus directory without",
+    "ans_ok": 1,
+    "ci": 1,
+    "deployed_judge_tok": 1053,
+    "fallback": 0,
+    "grade_p": 0.8908,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 1,
+    "tok": 740,
+    "total_tok": 1793
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 1,
+     "p": 0.6433406468296091,
+     "p3": [
+      0.6433,
+      0.6433,
+      0.6433
+     ],
+     "tok": 351
+    },
+    {
+     "ci": 54,
+     "p": 0.001075222478396888,
+     "p3": [
+      0.0011,
+      0.0011,
+      0.0011
+     ],
+     "tok": 382
+    },
+    {
+     "ci": 40,
+     "p": 0.014510096514472328,
+     "p3": [
+      0.0145,
+      0.0145,
+      0.0145
+     ],
+     "tok": 371
+    },
+    {
+     "ci": 62,
+     "p": 0.010136109254087228,
+     "p3": [
+      0.0101,
+      0.0101,
+      0.0101
+     ],
+     "tok": 336
+    },
+    {
+     "ci": 65,
+     "p": 0.0004842140282483422,
+     "p3": [
+      0.0005,
+      0.0005,
+      0.0005
+     ],
+     "tok": 346
+    },
+    {
+     "ci": 19,
+     "p": 0.0013305651713653385,
+     "p3": [
+      0.0013,
+      0.0013,
+      0.0013
+     ],
+     "tok": 357
+    },
+    {
+     "ci": 48,
+     "p": 0.0023494863314976024,
+     "p3": [
+      0.0023,
+      0.0023,
+      0.0023
+     ],
+     "tok": 370
+    },
+    {
+     "ci": 63,
+     "p": 0.003771376017167715,
+     "p3": [
+      0.0038,
+      0.0038,
+      0.0038
+     ],
+     "tok": 366
+    }
+   ],
+   "pool": [
+    1,
+    54,
+    40,
+    62,
+    65,
+    19,
+    48,
+    63
+   ],
+   "q": "How can I build a faithful catalogue of what every connected plugin actually exposes?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 1,
+     "p": 0.6433406468296091,
+     "tok": 351
+    },
+    {
+     "ci": 54,
+     "p": 0.001075222478396888,
+     "tok": 382
+    },
+    {
+     "ci": 40,
+     "p": 0.014510096514472328,
+     "tok": 371
+    },
+    {
+     "ci": 62,
+     "p": 0.010136109254087228,
+     "tok": 336
+    },
+    {
+     "ci": 65,
+     "p": 0.0004842140282483422,
+     "tok": 346
+    },
+    {
+     "ci": 19,
+     "p": 0.0013305651713653385,
+     "tok": 357
+    },
+    {
+     "ci": 48,
+     "p": 0.0023494863314976024,
+     "tok": 370
+    },
+    {
+     "ci": 63,
+     "p": 0.003771376017167715,
+     "tok": 366
+    }
+   ]
+  },
+  {
+   "chunk": 32,
+   "d50": {
+    "answer": null,
+    "ci": 32,
+    "fallback": 1,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": null
+   },
+   "dh": {
+    "ans": "The excerpt does not state how many servers are dead when the supervisor task is 60 seconds.",
+    "ans_ok": 0,
+    "ci": 32,
+    "deployed_judge_tok": 394,
+    "fallback": 1,
+    "grade_p": 0.393,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 801,
+    "total_tok": 1195
+   },
+   "dm": {
+    "ans": "The excerpt does not state how many servers are dead when the supervisor task is 60 seconds.",
+    "ans_ok": 0,
+    "ci": 32,
+    "deployed_judge_tok": 1182,
+    "fallback": 1,
+    "grade_p": 0.393,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 801,
+    "total_tok": 1983
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 32,
+     "p": 0.29356486971681267,
+     "p3": [
+      0.2936,
+      0.2936,
+      0.2936
+     ],
+     "tok": 394
+    },
+    {
+     "ci": 1,
+     "p": 0.0032596806691310002,
+     "p3": [
+      0.0033,
+      0.0033,
+      0.0033
+     ],
+     "tok": 351
+    },
+    {
+     "ci": 31,
+     "p": 0.43867976583371177,
+     "p3": [
+      0.4387,
+      0.4387,
+      0.4387
+     ],
+     "tok": 360
+    },
+    {
+     "ci": 11,
+     "p": 0.004463610942459768,
+     "p3": [
+      0.0045,
+      0.0045,
+      0.0045
+     ],
+     "tok": 351
+    },
+    {
+     "ci": 36,
+     "p": 0.010718094117984365,
+     "p3": [
+      0.0107,
+      0.0107,
+      0.0107
+     ],
+     "tok": 329
+    },
+    {
+     "ci": 7,
+     "p": 0.003549816421569182,
+     "p3": [
+      0.0035,
+      0.0035,
+      0.0035
+     ],
+     "tok": 343
+    },
+    {
+     "ci": 17,
+     "p": 0.002536258183661833,
+     "p3": [
+      0.0025,
+      0.0025,
+      0.0025
+     ],
+     "tok": 385
+    },
+    {
+     "ci": 77,
+     "p": 0.01006551725191264,
+     "p3": [
+      0.0101,
+      0.0101,
+      0.0101
+     ],
+     "tok": 338
+    }
+   ],
+   "pool": [
+    32,
+    1,
+    31,
+    11,
+    36,
+    7,
+    17,
+    77
+   ],
+   "q": "How many servers are dead when the supervisor task is 60 seconds?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 32,
+     "p": 0.29356486971681267,
+     "tok": 394
+    },
+    {
+     "ci": 1,
+     "p": 0.0032596806691310007,
+     "tok": 351
+    },
+    {
+     "ci": 31,
+     "p": 0.43867976583371177,
+     "tok": 360
+    },
+    {
+     "ci": 11,
+     "p": 0.004463610942459768,
+     "tok": 351
+    },
+    {
+     "ci": 36,
+     "p": 0.010718094117984366,
+     "tok": 329
+    },
+    {
+     "ci": 7,
+     "p": 0.0035498164215691822,
+     "tok": 343
+    },
+    {
+     "ci": 17,
+     "p": 0.002536258183661833,
+     "tok": 385
+    },
+    {
+     "ci": 77,
+     "p": 0.01006551725191264,
+     "tok": 338
+    }
+   ]
+  },
+  {
+   "chunk": 32,
+   "d50": {
+    "answer": null,
+    "ci": 1,
+    "fallback": 1,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": null
+   },
+   "dh": {
+    "ans": "The provided excerpt does not contain information about the fastest way to keep tools running without restarting them.",
+    "ans_ok": 0,
+    "ci": 1,
+    "deployed_judge_tok": 350,
+    "fallback": 1,
+    "grade_p": 0.3783,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 755,
+    "total_tok": 1105
+   },
+   "dm": {
+    "ans": "The provided excerpt does not contain information about the fastest way to keep tools running without restarting them.",
+    "ans_ok": 0,
+    "ci": 1,
+    "deployed_judge_tok": 1050,
+    "fallback": 1,
+    "grade_p": 0.3783,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 755,
+    "total_tok": 1805
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 1,
+     "p": 0.0065439376324162475,
+     "p3": [
+      0.0065,
+      0.0065,
+      0.0065
+     ],
+     "tok": 350
+    },
+    {
+     "ci": 54,
+     "p": 0.0008429461255337513,
+     "p3": [
+      0.0008,
+      0.0008,
+      0.0008
+     ],
+     "tok": 381
+    },
+    {
+     "ci": 48,
+     "p": 0.0012022254769871185,
+     "p3": [
+      0.0012,
+      0.0012,
+      0.0012
+     ],
+     "tok": 369
+    },
+    {
+     "ci": 19,
+     "p": 0.008485398931057387,
+     "p3": [
+      0.0085,
+      0.0085,
+      0.0085
+     ],
+     "tok": 356
+    },
+    {
+     "ci": 126,
+     "p": 0.009089066041726351,
+     "p3": [
+      0.0091,
+      0.0091,
+      0.0091
+     ],
+     "tok": 398
+    },
+    {
+     "ci": 49,
+     "p": 0.0008056788296863954,
+     "p3": [
+      0.0008,
+      0.0008,
+      0.0008
+     ],
+     "tok": 375
+    },
+    {
+     "ci": 53,
+     "p": 0.004001881407120771,
+     "p3": [
+      0.004,
+      0.004,
+      0.004
+     ],
+     "tok": 353
+    },
+    {
+     "ci": 65,
+     "p": 0.0006952268767386857,
+     "p3": [
+      0.0007,
+      0.0007,
+      0.0007
+     ],
+     "tok": 345
+    }
+   ],
+   "pool": [
+    1,
+    54,
+    48,
+    19,
+    126,
+    49,
+    53,
+    65
+   ],
+   "q": "What is the fastest way to keep my tools running without restarting them?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 1,
+     "p": 0.0065439376324162475,
+     "tok": 350
+    },
+    {
+     "ci": 54,
+     "p": 0.0008429461255337513,
+     "tok": 381
+    },
+    {
+     "ci": 48,
+     "p": 0.0012022254769871185,
+     "tok": 369
+    },
+    {
+     "ci": 19,
+     "p": 0.008485398931057387,
+     "tok": 356
+    },
+    {
+     "ci": 126,
+     "p": 0.009089066041726351,
+     "tok": 398
+    },
+    {
+     "ci": 49,
+     "p": 0.0008056788296863954,
+     "tok": 375
+    },
+    {
+     "ci": 53,
+     "p": 0.004001881407120771,
+     "tok": 353
+    },
+    {
+     "ci": 65,
+     "p": 0.0006952268767386857,
+     "tok": 345
+    }
+   ]
+  },
+  {
+   "chunk": 56,
+   "d50": {
+    "answer": null,
+    "ci": 56,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 56
+   },
+   "dh": {
+    "ans": "1448 rows were written and flushed before the TypeError occurred.",
+    "ans_ok": 1,
+    "ci": 56,
+    "deployed_judge_tok": 425,
+    "fallback": 0,
+    "grade_p": 0.9548,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 56,
+    "tok": 858,
+    "total_tok": 1283
+   },
+   "dm": {
+    "ans": "1448 rows were written and flushed before the TypeError occurred.",
+    "ans_ok": 1,
+    "ci": 56,
+    "deployed_judge_tok": 1275,
+    "fallback": 0,
+    "grade_p": 0.9548,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 56,
+    "tok": 858,
+    "total_tok": 2133
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 56,
+     "p": 0.9344127374582921,
+     "p3": [
+      0.9344,
+      0.9344,
+      0.9344
+     ],
+     "tok": 425
+    },
+    {
+     "ci": 63,
+     "p": 0.0066202504260571395,
+     "p3": [
+      0.0066,
+      0.0066,
+      0.0066
+     ],
+     "tok": 363
+    },
+    {
+     "ci": 48,
+     "p": 0.040815977452875005,
+     "p3": [
+      0.0408,
+      0.0408,
+      0.0408
+     ],
+     "tok": 367
+    },
+    {
+     "ci": 77,
+     "p": 0.03742232514349289,
+     "p3": [
+      0.0374,
+      0.0374,
+      0.0374
+     ],
+     "tok": 335
+    },
+    {
+     "ci": 10,
+     "p": 0.023404858501668725,
+     "p3": [
+      0.0234,
+      0.0234,
+      0.0234
+     ],
+     "tok": 373
+    },
+    {
+     "ci": 54,
+     "p": 0.012347925170916174,
+     "p3": [
+      0.0123,
+      0.0123,
+      0.0123
+     ],
+     "tok": 379
+    },
+    {
+     "ci": 68,
+     "p": 0.006364738826551537,
+     "p3": [
+      0.0064,
+      0.0064,
+      0.0064
+     ],
+     "tok": 319
+    },
+    {
+     "ci": 1,
+     "p": 0.0013251677845821947,
+     "p3": [
+      0.0013,
+      0.0013,
+      0.0013
+     ],
+     "tok": 348
+    }
+   ],
+   "pool": [
+    56,
+    63,
+    48,
+    77,
+    10,
+    54,
+    68,
+    1
+   ],
+   "q": "How many rows were written and flushed before the TypeError occurred?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 56,
+     "p": 0.9344127374582921,
+     "tok": 425
+    },
+    {
+     "ci": 63,
+     "p": 0.0066202504260571395,
+     "tok": 363
+    },
+    {
+     "ci": 48,
+     "p": 0.040815977452875005,
+     "tok": 367
+    },
+    {
+     "ci": 77,
+     "p": 0.03742232514349289,
+     "tok": 335
+    },
+    {
+     "ci": 10,
+     "p": 0.023404858501668725,
+     "tok": 373
+    },
+    {
+     "ci": 54,
+     "p": 0.012347925170916174,
+     "tok": 379
+    },
+    {
+     "ci": 68,
+     "p": 0.006364738826551537,
+     "tok": 319
+    },
+    {
+     "ci": 1,
+     "p": 0.0013251677845821947,
+     "tok": 348
+    }
+   ]
+  },
+  {
+   "chunk": 56,
+   "d50": {
+    "answer": null,
+    "ci": 55,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 55
+   },
+   "dh": {
+    "ans": "To verify accuracy metrics and ensure performance thresholds are met, you must report the confusion matrix, per-class recall, and overall accuracy, then confirm that overall accuracy is at least 0.75,",
+    "ans_ok": 0,
+    "ci": 55,
+    "deployed_judge_tok": 711,
+    "fallback": 0,
+    "grade_p": 0.0514,
+    "hit": 0,
+    "n_judged": 2,
+    "stop_ci": 55,
+    "tok": 851,
+    "total_tok": 1562
+   },
+   "dm": {
+    "ans": "To verify accuracy metrics and ensure performance thresholds are met, you must report the confusion matrix, per-class recall, and overall accuracy, then confirm that overall accuracy is at least 0.75,",
+    "ans_ok": 0,
+    "ci": 55,
+    "deployed_judge_tok": 2133,
+    "fallback": 0,
+    "grade_p": 0.0514,
+    "hit": 0,
+    "n_judged": 2,
+    "stop_ci": 55,
+    "tok": 851,
+    "total_tok": 2984
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 5,
+     "p": 0.3035707786753011,
+     "p3": [
+      0.3036,
+      0.3036,
+      0.3036
+     ],
+     "tok": 348
+    },
+    {
+     "ci": 55,
+     "p": 0.7871652503501122,
+     "p3": [
+      0.7872,
+      0.7872,
+      0.7872
+     ],
+     "tok": 363
+    },
+    {
+     "ci": 6,
+     "p": 0.1778885858791841,
+     "p3": [
+      0.1779,
+      0.1779,
+      0.1779
+     ],
+     "tok": 342
+    },
+    {
+     "ci": 80,
+     "p": 0.6881932688555502,
+     "p3": [
+      0.6882,
+      0.6882,
+      0.6882
+     ],
+     "tok": 378
+    },
+    {
+     "ci": 109,
+     "p": 0.8014227001930477,
+     "p3": [
+      0.8014,
+      0.8014,
+      0.8014
+     ],
+     "tok": 452
+    },
+    {
+     "ci": 54,
+     "p": 0.04385188230873651,
+     "p3": [
+      0.0439,
+      0.0439,
+      0.0439
+     ],
+     "tok": 382
+    },
+    {
+     "ci": 8,
+     "p": 0.060124582900102495,
+     "p3": [
+      0.0601,
+      0.0601,
+      0.0601
+     ],
+     "tok": 367
+    },
+    {
+     "ci": 19,
+     "p": 0.19348830451810986,
+     "p3": [
+      0.1935,
+      0.1935,
+      0.1935
+     ],
+     "tok": 357
+    }
+   ],
+   "pool": [
+    5,
+    55,
+    6,
+    80,
+    109,
+    54,
+    8,
+    19
+   ],
+   "q": "How do I verify the accuracy metrics and ensure the results meet performance thresholds?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 5,
+     "p": 0.3035707786753011,
+     "tok": 348
+    },
+    {
+     "ci": 55,
+     "p": 0.7871652503501122,
+     "tok": 363
+    },
+    {
+     "ci": 6,
+     "p": 0.1778885858791841,
+     "tok": 342
+    },
+    {
+     "ci": 80,
+     "p": 0.6881932688555502,
+     "tok": 378
+    },
+    {
+     "ci": 109,
+     "p": 0.8014227001930477,
+     "tok": 452
+    },
+    {
+     "ci": 54,
+     "p": 0.04385188230873651,
+     "tok": 382
+    },
+    {
+     "ci": 8,
+     "p": 0.060124582900102495,
+     "tok": 367
+    },
+    {
+     "ci": 19,
+     "p": 0.19348830451810986,
+     "tok": 357
+    }
+   ]
+  },
+  {
+   "chunk": 62,
+   "d50": {
+    "answer": null,
+    "ci": 62,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 62
+   },
+   "dh": {
+    "ans": "The deprecated read_file tool should be replaced by read_text_file.",
+    "ans_ok": 1,
+    "ci": 62,
+    "deployed_judge_tok": 331,
+    "fallback": 0,
+    "grade_p": 0.8821,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 62,
+    "tok": 668,
+    "total_tok": 999
+   },
+   "dm": {
+    "ans": "The deprecated read_file tool should be replaced by read_text_file.",
+    "ans_ok": 1,
+    "ci": 62,
+    "deployed_judge_tok": 993,
+    "fallback": 0,
+    "grade_p": 0.8821,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 62,
+    "tok": 668,
+    "total_tok": 1661
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 62,
+     "p": 0.8362741686993579,
+     "p3": [
+      0.8363,
+      0.8363,
+      0.8363
+     ],
+     "tok": 331
+    },
+    {
+     "ci": 54,
+     "p": 0.003114034985518101,
+     "p3": [
+      0.0031,
+      0.0031,
+      0.0031
+     ],
+     "tok": 377
+    },
+    {
+     "ci": 65,
+     "p": 0.2954046225059164,
+     "p3": [
+      0.2954,
+      0.2954,
+      0.2954
+     ],
+     "tok": 341
+    },
+    {
+     "ci": 1,
+     "p": 0.01838041541418029,
+     "p3": [
+      0.0184,
+      0.0184,
+      0.0184
+     ],
+     "tok": 346
+    },
+    {
+     "ci": 68,
+     "p": 0.6756371647758206,
+     "p3": [
+      0.6756,
+      0.6756,
+      0.6756
+     ],
+     "tok": 317
+    },
+    {
+     "ci": 19,
+     "p": 0.007975055944174818,
+     "p3": [
+      0.008,
+      0.008,
+      0.008
+     ],
+     "tok": 352
+    },
+    {
+     "ci": 48,
+     "p": 0.004264540947178232,
+     "p3": [
+      0.0043,
+      0.0043,
+      0.0043
+     ],
+     "tok": 365
+    },
+    {
+     "ci": 126,
+     "p": 0.15919569412204132,
+     "p3": [
+      0.1592,
+      0.1592,
+      0.1592
+     ],
+     "tok": 394
+    }
+   ],
+   "pool": [
+    62,
+    54,
+    65,
+    1,
+    68,
+    19,
+    48,
+    126
+   ],
+   "q": "Which native tool should replace the deprecated read_file?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 62,
+     "p": 0.8362741686993579,
+     "tok": 331
+    },
+    {
+     "ci": 54,
+     "p": 0.003114034985518101,
+     "tok": 377
+    },
+    {
+     "ci": 65,
+     "p": 0.2954046225059164,
+     "tok": 341
+    },
+    {
+     "ci": 1,
+     "p": 0.01838041541418029,
+     "tok": 346
+    },
+    {
+     "ci": 68,
+     "p": 0.6756371647758206,
+     "tok": 317
+    },
+    {
+     "ci": 19,
+     "p": 0.007975055944174818,
+     "tok": 352
+    },
+    {
+     "ci": 48,
+     "p": 0.004264540947178232,
+     "tok": 365
+    },
+    {
+     "ci": 126,
+     "p": 0.15919569412204132,
+     "tok": 394
+    }
+   ]
+  },
+  {
+   "chunk": 62,
+   "d50": {
+    "answer": null,
+    "ci": 112,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 112
+   },
+   "dh": {
+    "ans": "Picking an option other than the officially recommended one is still correct when the planner intentionally under-weights the parenthetical null clause in favor of a listed \"no_tool\" entry that compet",
+    "ans_ok": 0,
+    "ci": 112,
+    "deployed_judge_tok": 331,
+    "fallback": 0,
+    "grade_p": 0.0071,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 112,
+    "tok": 710,
+    "total_tok": 1041
+   },
+   "dm": {
+    "ans": "Picking an option other than the officially recommended one is still correct when the planner intentionally under-weights the parenthetical null clause in favor of a listed \"no_tool\" entry that compet",
+    "ans_ok": 0,
+    "ci": 112,
+    "deployed_judge_tok": 993,
+    "fallback": 0,
+    "grade_p": 0.0071,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 112,
+    "tok": 710,
+    "total_tok": 1703
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 112,
+     "p": 0.7885192550972371,
+     "p3": [
+      0.7885,
+      0.7885,
+      0.7885
+     ],
+     "tok": 331
+    },
+    {
+     "ci": 126,
+     "p": 0.648130055264739,
+     "p3": [
+      0.6481,
+      0.6481,
+      0.6481
+     ],
+     "tok": 399
+    },
+    {
+     "ci": 54,
+     "p": 0.0018685295547601934,
+     "p3": [
+      0.0019,
+      0.0019,
+      0.0019
+     ],
+     "tok": 382
+    },
+    {
+     "ci": 48,
+     "p": 0.004882915001185785,
+     "p3": [
+      0.0049,
+      0.0049,
+      0.0049
+     ],
+     "tok": 370
+    },
+    {
+     "ci": 21,
+     "p": 0.046406296112139235,
+     "p3": [
+      0.0464,
+      0.0464,
+      0.0464
+     ],
+     "tok": 345
+    },
+    {
+     "ci": 113,
+     "p": 0.26645925669013,
+     "p3": [
+      0.2665,
+      0.2665,
+      0.2665
+     ],
+     "tok": 516
+    },
+    {
+     "ci": 65,
+     "p": 0.005237511829190365,
+     "p3": [
+      0.0052,
+      0.0052,
+      0.0052
+     ],
+     "tok": 346
+    },
+    {
+     "ci": 108,
+     "p": 0.09292169968682283,
+     "p3": [
+      0.0929,
+      0.0929,
+      0.0929
+     ],
+     "tok": 395
+    }
+   ],
+   "pool": [
+    112,
+    126,
+    54,
+    48,
+    21,
+    113,
+    65,
+    108
+   ],
+   "q": "When is picking something other than the officially recommended option still the correct call?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 112,
+     "p": 0.7885192550972371,
+     "tok": 331
+    },
+    {
+     "ci": 126,
+     "p": 0.648130055264739,
+     "tok": 399
+    },
+    {
+     "ci": 54,
+     "p": 0.0018685295547601934,
+     "tok": 382
+    },
+    {
+     "ci": 48,
+     "p": 0.004882915001185785,
+     "tok": 370
+    },
+    {
+     "ci": 21,
+     "p": 0.046406296112139235,
+     "tok": 345
+    },
+    {
+     "ci": 113,
+     "p": 0.26645925669013,
+     "tok": 516
+    },
+    {
+     "ci": 65,
+     "p": 0.005237511829190364,
+     "tok": 346
+    },
+    {
+     "ci": 108,
+     "p": 0.09292169968682283,
+     "tok": 395
+    }
+   ]
+  },
+  {
+   "chunk": 69,
+   "d50": {
+    "answer": null,
+    "ci": 69,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 69
+   },
+   "dh": {
+    "ans": "The gate flapping is caused by the spawned tool sets producing different cached hashes, which results in the gate cache being keyed on a content hash that varies between runs.",
+    "ans_ok": 1,
+    "ci": 69,
+    "deployed_judge_tok": 376,
+    "fallback": 0,
+    "grade_p": 0.702,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 69,
+    "tok": 778,
+    "total_tok": 1154
+   },
+   "dm": {
+    "ans": "The gate flapping is caused by the spawned tool sets producing different cached hashes, which results in the gate cache being keyed on a content hash that varies between runs.",
+    "ans_ok": 1,
+    "ci": 69,
+    "deployed_judge_tok": 1128,
+    "fallback": 0,
+    "grade_p": 0.702,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 69,
+    "tok": 778,
+    "total_tok": 1906
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 69,
+     "p": 0.6709470400357275,
+     "p3": [
+      0.6709,
+      0.6709,
+      0.6709
+     ],
+     "tok": 376
+    },
+    {
+     "ci": 72,
+     "p": 0.6585313846270509,
+     "p3": [
+      0.6585,
+      0.6585,
+      0.6585
+     ],
+     "tok": 408
+    },
+    {
+     "ci": 74,
+     "p": 0.04996926304318849,
+     "p3": [
+      0.05,
+      0.05,
+      0.05
+     ],
+     "tok": 368
+    },
+    {
+     "ci": 70,
+     "p": 0.8251489816171352,
+     "p3": [
+      0.8251,
+      0.8251,
+      0.8251
+     ],
+     "tok": 352
+    },
+    {
+     "ci": 71,
+     "p": 0.648924630880267,
+     "p3": [
+      0.6489,
+      0.6489,
+      0.6489
+     ],
+     "tok": 348
+    },
+    {
+     "ci": 1,
+     "p": 0.006066151061397427,
+     "p3": [
+      0.0061,
+      0.0061,
+      0.0061
+     ],
+     "tok": 351
+    },
+    {
+     "ci": 60,
+     "p": 0.2977746930616804,
+     "p3": [
+      0.2978,
+      0.2978,
+      0.2978
+     ],
+     "tok": 359
+    },
+    {
+     "ci": 68,
+     "p": 0.006968689305858367,
+     "p3": [
+      0.007,
+      0.007,
+      0.007
+     ],
+     "tok": 322
+    }
+   ],
+   "pool": [
+    69,
+    72,
+    74,
+    70,
+    71,
+    1,
+    60,
+    68
+   ],
+   "q": "What causes the gate flapping when spawned tool sets produce different cached hashes?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 69,
+     "p": 0.6709470400357275,
+     "tok": 376
+    },
+    {
+     "ci": 72,
+     "p": 0.6585313846270509,
+     "tok": 408
+    },
+    {
+     "ci": 74,
+     "p": 0.04996926304318849,
+     "tok": 368
+    },
+    {
+     "ci": 70,
+     "p": 0.8251489816171353,
+     "tok": 352
+    },
+    {
+     "ci": 71,
+     "p": 0.648924630880267,
+     "tok": 348
+    },
+    {
+     "ci": 1,
+     "p": 0.006066151061397427,
+     "tok": 351
+    },
+    {
+     "ci": 60,
+     "p": 0.2977746930616804,
+     "tok": 359
+    },
+    {
+     "ci": 68,
+     "p": 0.006968689305858367,
+     "tok": 322
+    }
+   ]
+  },
+  {
+   "chunk": 69,
+   "d50": {
+    "answer": null,
+    "ci": 71,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 71
+   },
+   "dh": {
+    "ans": "The gate won't flip its state unexpectedly because the gate cache is keyed on a content hash of the spawned tools/list, which ensures consistency across runs.",
+    "ans_ok": 0,
+    "ci": 69,
+    "deployed_judge_tok": 378,
+    "fallback": 1,
+    "grade_p": 0.4212,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 779,
+    "total_tok": 1157
+   },
+   "dm": {
+    "ans": "Pinning each MCP server version in the spawn command guarantees that the gate won't flip its state unexpectedly because it ensures the cached index and every future spawn agree by construction.",
+    "ans_ok": 0,
+    "ci": 71,
+    "deployed_judge_tok": 6612,
+    "fallback": 0,
+    "grade_p": 0.0836,
+    "hit": 0,
+    "n_judged": 6,
+    "stop_ci": 71,
+    "tok": 755,
+    "total_tok": 7367
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 69,
+     "p": 0.17143512630995925,
+     "p3": [
+      0.1714,
+      0.1714,
+      0.1714
+     ],
+     "tok": 378
+    },
+    {
+     "ci": 60,
+     "p": 0.10229596017071439,
+     "p3": [
+      0.1023,
+      0.1023,
+      0.1023
+     ],
+     "tok": 361
+    },
+    {
+     "ci": 73,
+     "p": 0.08212224735244057,
+     "p3": [
+      0.0821,
+      0.0821,
+      0.0821
+     ],
+     "tok": 405
+    },
+    {
+     "ci": 74,
+     "p": 0.204624734526018,
+     "p3": [
+      0.2046,
+      0.2046,
+      0.2046
+     ],
+     "tok": 370
+    },
+    {
+     "ci": 77,
+     "p": 0.11352620238850399,
+     "p3": [
+      0.1135,
+      0.1135,
+      0.1135
+     ],
+     "tok": 340
+    },
+    {
+     "ci": 71,
+     "p": 0.5420380842824379,
+     "p3": [
+      0.542,
+      0.542,
+      0.542
+     ],
+     "tok": 350
+    },
+    {
+     "ci": 68,
+     "p": 0.08085511966188519,
+     "p3": [
+      0.0809,
+      0.0809,
+      0.0809
+     ],
+     "tok": 324
+    },
+    {
+     "ci": 130,
+     "p": 0.17290218303721813,
+     "p3": [
+      0.1729,
+      0.1729,
+      0.1729
+     ],
+     "tok": 367
+    }
+   ],
+   "pool": [
+    69,
+    60,
+    73,
+    74,
+    77,
+    71,
+    68,
+    130
+   ],
+   "q": "What guarantees that the gate won't flip its state unexpectedly during the next deployment run?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 69,
+     "p": 0.17143512630995925,
+     "tok": 378
+    },
+    {
+     "ci": 60,
+     "p": 0.10229596017071439,
+     "tok": 361
+    },
+    {
+     "ci": 73,
+     "p": 0.08212224735244057,
+     "tok": 405
+    },
+    {
+     "ci": 74,
+     "p": 0.204624734526018,
+     "tok": 370
+    },
+    {
+     "ci": 77,
+     "p": 0.11352620238850399,
+     "tok": 340
+    },
+    {
+     "ci": 71,
+     "p": 0.5420380842824379,
+     "tok": 350
+    },
+    {
+     "ci": 68,
+     "p": 0.08085511966188519,
+     "tok": 324
+    },
+    {
+     "ci": 130,
+     "p": 0.17290218303721813,
+     "tok": 367
+    }
+   ]
+  },
+  {
+   "chunk": 72,
+   "d50": {
+    "answer": null,
+    "ci": 19,
+    "fallback": 1,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": null
+   },
+   "dh": {
+    "ans": "The provided excerpt does not identify a ground difference between per-case prompt_tokens and the registered run log.",
+    "ans_ok": 0,
+    "ci": 19,
+    "deployed_judge_tok": 360,
+    "fallback": 1,
+    "grade_p": 0.148,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 784,
+    "total_tok": 1144
+   },
+   "dm": {
+    "ans": "The provided excerpt does not identify a ground difference between per-case prompt_tokens and the registered run log.",
+    "ans_ok": 0,
+    "ci": 19,
+    "deployed_judge_tok": 1080,
+    "fallback": 1,
+    "grade_p": 0.148,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 784,
+    "total_tok": 1864
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 19,
+     "p": 0.0352151452471963,
+     "p3": [
+      0.0352,
+      0.0352,
+      0.0352
+     ],
+     "tok": 360
+    },
+    {
+     "ci": 54,
+     "p": 0.010326138090460436,
+     "p3": [
+      0.0103,
+      0.0103,
+      0.0103
+     ],
+     "tok": 385
+    },
+    {
+     "ci": 12,
+     "p": 0.04959642123430428,
+     "p3": [
+      0.0496,
+      0.0496,
+      0.0496
+     ],
+     "tok": 383
+    },
+    {
+     "ci": 8,
+     "p": 0.24900708577139744,
+     "p3": [
+      0.249,
+      0.249,
+      0.249
+     ],
+     "tok": 370
+    },
+    {
+     "ci": 77,
+     "p": 0.0802705483548341,
+     "p3": [
+      0.0803,
+      0.0803,
+      0.0803
+     ],
+     "tok": 341
+    },
+    {
+     "ci": 63,
+     "p": 0.021395203113989115,
+     "p3": [
+      0.0214,
+      0.0214,
+      0.0214
+     ],
+     "tok": 369
+    },
+    {
+     "ci": 65,
+     "p": 0.016695274104021315,
+     "p3": [
+      0.0167,
+      0.0167,
+      0.0167
+     ],
+     "tok": 349
+    },
+    {
+     "ci": 22,
+     "p": 0.026085974856049212,
+     "p3": [
+      0.0261,
+      0.0261,
+      0.0261
+     ],
+     "tok": 345
+    }
+   ],
+   "pool": [
+    19,
+    54,
+    12,
+    8,
+    77,
+    63,
+    65,
+    22
+   ],
+   "q": "What is the ground difference identified by comparing per-case prompt_tokens and the registered run log?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 19,
+     "p": 0.0352151452471963,
+     "tok": 360
+    },
+    {
+     "ci": 54,
+     "p": 0.010326138090460436,
+     "tok": 385
+    },
+    {
+     "ci": 12,
+     "p": 0.049596421234304286,
+     "tok": 383
+    },
+    {
+     "ci": 8,
+     "p": 0.24900708577139746,
+     "tok": 370
+    },
+    {
+     "ci": 77,
+     "p": 0.0802705483548341,
+     "tok": 341
+    },
+    {
+     "ci": 63,
+     "p": 0.021395203113989115,
+     "tok": 369
+    },
+    {
+     "ci": 65,
+     "p": 0.016695274104021315,
+     "tok": 349
+    },
+    {
+     "ci": 22,
+     "p": 0.026085974856049212,
+     "tok": 345
+    }
+   ]
+  },
+  {
+   "chunk": 72,
+   "d50": {
+    "answer": null,
+    "ci": 66,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 66
+   },
+   "dh": {
+    "ans": "The evaluation results changed because the background launch initially used `MCP_EVAL_SUFFIX=b9` (without a dot), causing a `FileNotFoundError`, which was resolved by relaunching with the correct `MCP",
+    "ans_ok": 0,
+    "ci": 66,
+    "deployed_judge_tok": 1830,
+    "fallback": 0,
+    "grade_p": 0.0015,
+    "hit": 0,
+    "n_judged": 5,
+    "stop_ci": 66,
+    "tok": 795,
+    "total_tok": 2625
+   },
+   "dm": {
+    "ans": "The evaluation results changed because the background launch initially used `MCP_EVAL_SUFFIX=b9` (without a dot), causing a `FileNotFoundError`, which was resolved by relaunching with the correct `MCP",
+    "ans_ok": 0,
+    "ci": 66,
+    "deployed_judge_tok": 5490,
+    "fallback": 0,
+    "grade_p": 0.0015,
+    "hit": 0,
+    "n_judged": 5,
+    "stop_ci": 66,
+    "tok": 795,
+    "total_tok": 6285
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 65,
+     "p": 0.12208940841378431,
+     "p3": [
+      0.1221,
+      0.1221,
+      0.1221
+     ],
+     "tok": 342
+    },
+    {
+     "ci": 63,
+     "p": 0.1909299783733013,
+     "p3": [
+      0.1909,
+      0.1909,
+      0.1909
+     ],
+     "tok": 362
+    },
+    {
+     "ci": 12,
+     "p": 0.1814999546974905,
+     "p3": [
+      0.1815,
+      0.1815,
+      0.1815
+     ],
+     "tok": 376
+    },
+    {
+     "ci": 29,
+     "p": 0.14594730027622077,
+     "p3": [
+      0.1459,
+      0.1459,
+      0.1459
+     ],
+     "tok": 400
+    },
+    {
+     "ci": 66,
+     "p": 0.8151120012248653,
+     "p3": [
+      0.8151,
+      0.8151,
+      0.8151
+     ],
+     "tok": 350
+    },
+    {
+     "ci": 19,
+     "p": 0.3523904567909028,
+     "p3": [
+      0.3524,
+      0.3524,
+      0.3524
+     ],
+     "tok": 353
+    },
+    {
+     "ci": 8,
+     "p": 0.42975293891675337,
+     "p3": [
+      0.4298,
+      0.4298,
+      0.4298
+     ],
+     "tok": 363
+    },
+    {
+     "ci": 54,
+     "p": 0.10227707180436628,
+     "p3": [
+      0.1023,
+      0.1023,
+      0.1023
+     ],
+     "tok": 378
+    }
+   ],
+   "pool": [
+    65,
+    63,
+    12,
+    29,
+    66,
+    19,
+    8,
+    54
+   ],
+   "q": "What tool configuration changes caused the evaluation results to change?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 65,
+     "p": 0.12208940841378432,
+     "tok": 342
+    },
+    {
+     "ci": 63,
+     "p": 0.19092997837330133,
+     "tok": 362
+    },
+    {
+     "ci": 12,
+     "p": 0.1814999546974905,
+     "tok": 376
+    },
+    {
+     "ci": 29,
+     "p": 0.14594730027622077,
+     "tok": 400
+    },
+    {
+     "ci": 66,
+     "p": 0.8151120012248654,
+     "tok": 350
+    },
+    {
+     "ci": 19,
+     "p": 0.35239045679090275,
+     "tok": 353
+    },
+    {
+     "ci": 8,
+     "p": 0.42975293891675337,
+     "tok": 363
+    },
+    {
+     "ci": 54,
+     "p": 0.10227707180436628,
+     "tok": 378
+    }
+   ]
+  },
+  {
+   "chunk": 90,
+   "d50": {
+    "answer": null,
+    "ci": 98,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 98
+   },
+   "dh": {
+    "ans": "The expected recall for pc1 windows is less than or equal to the k-means union's recall at comparable budgets.",
+    "ans_ok": 1,
+    "ci": 90,
+    "deployed_judge_tok": 2246,
+    "fallback": 0,
+    "grade_p": 0.9361,
+    "hit": 1,
+    "n_judged": 5,
+    "stop_ci": 90,
+    "tok": 867,
+    "total_tok": 3113
+   },
+   "dm": {
+    "ans": "The excerpt does not provide specific expected recall results for pc1 windows compared to the k-means union's recall at comparable budgets.",
+    "ans_ok": 1,
+    "ci": 98,
+    "deployed_judge_tok": 5463,
+    "fallback": 0,
+    "grade_p": 0.6288,
+    "hit": 0,
+    "n_judged": 4,
+    "stop_ci": 98,
+    "tok": 845,
+    "total_tok": 6308
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 93,
+     "p": 0.4452808895105342,
+     "p3": [
+      0.4453,
+      0.4453,
+      0.4453
+     ],
+     "tok": 370
+    },
+    {
+     "ci": 94,
+     "p": 0.141178154604925,
+     "p3": [
+      0.1412,
+      0.1412,
+      0.1412
+     ],
+     "tok": 524
+    },
+    {
+     "ci": 91,
+     "p": 0.2563054018408961,
+     "p3": [
+      0.2563,
+      0.2563,
+      0.2563
+     ],
+     "tok": 526
+    },
+    {
+     "ci": 98,
+     "p": 0.5694945054547789,
+     "p3": [
+      0.5695,
+      0.5695,
+      0.5695
+     ],
+     "tok": 401
+    },
+    {
+     "ci": 90,
+     "p": 0.7977182350253292,
+     "p3": [
+      0.7977,
+      0.7977,
+      0.7977
+     ],
+     "tok": 425
+    },
+    {
+     "ci": 89,
+     "p": 0.032515754637518025,
+     "p3": [
+      0.0325,
+      0.0325,
+      0.0325
+     ],
+     "tok": 363
+    },
+    {
+     "ci": 99,
+     "p": 0.05259449008936304,
+     "p3": [
+      0.0526,
+      0.0526,
+      0.0526
+     ],
+     "tok": 458
+    },
+    {
+     "ci": 92,
+     "p": 0.4191866929026604,
+     "p3": [
+      0.4192,
+      0.4192,
+      0.4192
+     ],
+     "tok": 719
+    }
+   ],
+   "pool": [
+    93,
+    94,
+    91,
+    98,
+    90,
+    89,
+    99,
+    92
+   ],
+   "q": "What are the expected recall results for pc1 windows compared to the k-means union's recall at comparable budgets?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 93,
+     "p": 0.44528088951053413,
+     "tok": 370
+    },
+    {
+     "ci": 94,
+     "p": 0.141178154604925,
+     "tok": 524
+    },
+    {
+     "ci": 91,
+     "p": 0.2563054018408961,
+     "tok": 526
+    },
+    {
+     "ci": 98,
+     "p": 0.5694945054547789,
+     "tok": 401
+    },
+    {
+     "ci": 90,
+     "p": 0.7977182350253293,
+     "tok": 425
+    },
+    {
+     "ci": 89,
+     "p": 0.032515754637518025,
+     "tok": 363
+    },
+    {
+     "ci": 99,
+     "p": 0.05259449008936304,
+     "tok": 458
+    },
+    {
+     "ci": 92,
+     "p": 0.4191866929026604,
+     "tok": 719
+    }
+   ]
+  },
+  {
+   "chunk": 90,
+   "d50": {
+    "answer": null,
+    "ci": 89,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 89
+   },
+   "dh": {
+    "ans": "You can improve your tool selection accuracy by sliding a 10-tool window across the population with a step of 7 and an overlap of 3, then building the final list from the top-scoring windows using eit",
+    "ans_ok": 0,
+    "ci": 89,
+    "deployed_judge_tok": 1080,
+    "fallback": 0,
+    "grade_p": 0.0176,
+    "hit": 0,
+    "n_judged": 3,
+    "stop_ci": 89,
+    "tok": 832,
+    "total_tok": 1912
+   },
+   "dm": {
+    "ans": "You can improve your tool selection accuracy by sliding a 10-tool window across the population with a step of 7 and an overlap of 3, then building the final list from the top-scoring windows using eit",
+    "ans_ok": 0,
+    "ci": 89,
+    "deployed_judge_tok": 3240,
+    "fallback": 0,
+    "grade_p": 0.0176,
+    "hit": 0,
+    "n_judged": 3,
+    "stop_ci": 89,
+    "tok": 832,
+    "total_tok": 4072
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 65,
+     "p": 0.1065952661510791,
+     "p3": [
+      0.1066,
+      0.1066,
+      0.1066
+     ],
+     "tok": 345
+    },
+    {
+     "ci": 54,
+     "p": 0.014049032150317269,
+     "p3": [
+      0.014,
+      0.014,
+      0.014
+     ],
+     "tok": 381
+    },
+    {
+     "ci": 89,
+     "p": 0.6778341807843372,
+     "p3": [
+      0.6778,
+      0.6778,
+      0.6778
+     ],
+     "tok": 354
+    },
+    {
+     "ci": 84,
+     "p": 0.7641620130862355,
+     "p3": [
+      0.7642,
+      0.7642,
+      0.7642
+     ],
+     "tok": 398
+    },
+    {
+     "ci": 126,
+     "p": 0.5819546639559221,
+     "p3": [
+      0.582,
+      0.582,
+      0.582
+     ],
+     "tok": 398
+    },
+    {
+     "ci": 19,
+     "p": 0.2119895083535137,
+     "p3": [
+      0.212,
+      0.212,
+      0.212
+     ],
+     "tok": 356
+    },
+    {
+     "ci": 102,
+     "p": 0.670035455441567,
+     "p3": [
+      0.67,
+      0.67,
+      0.67
+     ],
+     "tok": 445
+    },
+    {
+     "ci": 103,
+     "p": 0.3107695609993183,
+     "p3": [
+      0.3108,
+      0.3108,
+      0.3108
+     ],
+     "tok": 473
+    }
+   ],
+   "pool": [
+    65,
+    54,
+    89,
+    84,
+    126,
+    19,
+    102,
+    103
+   ],
+   "q": "How can I improve my tool selection accuracy using this new sorting method?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 65,
+     "p": 0.1065952661510791,
+     "tok": 345
+    },
+    {
+     "ci": 54,
+     "p": 0.014049032150317269,
+     "tok": 381
+    },
+    {
+     "ci": 89,
+     "p": 0.6778341807843372,
+     "tok": 354
+    },
+    {
+     "ci": 84,
+     "p": 0.7641620130862355,
+     "tok": 398
+    },
+    {
+     "ci": 126,
+     "p": 0.5819546639559221,
+     "tok": 398
+    },
+    {
+     "ci": 19,
+     "p": 0.2119895083535137,
+     "tok": 356
+    },
+    {
+     "ci": 102,
+     "p": 0.670035455441567,
+     "tok": 445
+    },
+    {
+     "ci": 103,
+     "p": 0.3107695609993183,
+     "tok": 473
+    }
+   ]
+  },
+  {
+   "chunk": 94,
+   "d50": {
+    "answer": null,
+    "ci": 94,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 94
+   },
+   "dh": {
+    "ans": "The sliding window loses entirely on coverage compared to the union because the union provides a higher recall (88%) for the presence of the answer, whereas the sliding window only achieves 52\u201383% rec",
+    "ans_ok": 1,
+    "ci": 94,
+    "deployed_judge_tok": 515,
+    "fallback": 0,
+    "grade_p": 0.7305,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 94,
+    "tok": 1067,
+    "total_tok": 1582
+   },
+   "dm": {
+    "ans": "The sliding window loses entirely on coverage compared to the union because the union provides a higher recall (88%) for the presence of the answer, whereas the sliding window only achieves 52\u201383% rec",
+    "ans_ok": 1,
+    "ci": 94,
+    "deployed_judge_tok": 1545,
+    "fallback": 0,
+    "grade_p": 0.7305,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 94,
+    "tok": 1067,
+    "total_tok": 2612
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 94,
+     "p": 0.9349771452898937,
+     "p3": [
+      0.935,
+      0.935,
+      0.935
+     ],
+     "tok": 515
+    },
+    {
+     "ci": 98,
+     "p": 0.8928851122033565,
+     "p3": [
+      0.8929,
+      0.8929,
+      0.8929
+     ],
+     "tok": 392
+    },
+    {
+     "ci": 93,
+     "p": 0.9323804287333933,
+     "p3": [
+      0.9324,
+      0.9324,
+      0.9324
+     ],
+     "tok": 361
+    },
+    {
+     "ci": 99,
+     "p": 0.14415224478972768,
+     "p3": [
+      0.1442,
+      0.1442,
+      0.1442
+     ],
+     "tok": 449
+    },
+    {
+     "ci": 100,
+     "p": 0.4845702994686088,
+     "p3": [
+      0.4846,
+      0.4846,
+      0.4846
+     ],
+     "tok": 574
+    },
+    {
+     "ci": 96,
+     "p": 0.7170688796061272,
+     "p3": [
+      0.7171,
+      0.7171,
+      0.7171
+     ],
+     "tok": 462
+    },
+    {
+     "ci": 90,
+     "p": 0.8214746631796274,
+     "p3": [
+      0.8215,
+      0.8215,
+      0.8215
+     ],
+     "tok": 416
+    },
+    {
+     "ci": 89,
+     "p": 0.30626653420917654,
+     "p3": [
+      0.3063,
+      0.3063,
+      0.3063
+     ],
+     "tok": 354
+    }
+   ],
+   "pool": [
+    94,
+    98,
+    93,
+    99,
+    100,
+    96,
+    90,
+    89
+   ],
+   "q": "Why does the sliding window lose entirely on coverage compared to the union?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 94,
+     "p": 0.9349771452898937,
+     "tok": 515
+    },
+    {
+     "ci": 98,
+     "p": 0.8928851122033565,
+     "tok": 392
+    },
+    {
+     "ci": 93,
+     "p": 0.9323804287333933,
+     "tok": 361
+    },
+    {
+     "ci": 99,
+     "p": 0.14415224478972768,
+     "tok": 449
+    },
+    {
+     "ci": 100,
+     "p": 0.4845702994686088,
+     "tok": 574
+    },
+    {
+     "ci": 96,
+     "p": 0.7170688796061272,
+     "tok": 462
+    },
+    {
+     "ci": 90,
+     "p": 0.8214746631796273,
+     "tok": 416
+    },
+    {
+     "ci": 89,
+     "p": 0.30626653420917654,
+     "tok": 354
+    }
+   ]
+  },
+  {
+   "chunk": 94,
+   "d50": {
+    "answer": null,
+    "ci": 126,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 126
+   },
+   "dh": {
+    "ans": "The system can improve its ability to find and select the correct answer by adopting the `softhint` mechanism, which inserts a conditional hint branch after the initial tool selection prompt to guide ",
+    "ans_ok": 0,
+    "ci": 126,
+    "deployed_judge_tok": 400,
+    "fallback": 0,
+    "grade_p": 0.0054,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 126,
+    "tok": 952,
+    "total_tok": 1352
+   },
+   "dm": {
+    "ans": "The system can improve its ability to find and select the correct answer by adopting the `softhint` mechanism, which inserts a conditional hint branch after the initial tool selection prompt to guide ",
+    "ans_ok": 0,
+    "ci": 126,
+    "deployed_judge_tok": 1200,
+    "fallback": 0,
+    "grade_p": 0.0054,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 126,
+    "tok": 952,
+    "total_tok": 2152
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 126,
+     "p": 0.7027911961157075,
+     "p3": [
+      0.7028,
+      0.7028,
+      0.7028
+     ],
+     "tok": 400
+    },
+    {
+     "ci": 54,
+     "p": 0.12333254917720848,
+     "p3": [
+      0.1233,
+      0.1233,
+      0.1233
+     ],
+     "tok": 383
+    },
+    {
+     "ci": 19,
+     "p": 0.3625640199184444,
+     "p3": [
+      0.3626,
+      0.3626,
+      0.3626
+     ],
+     "tok": 358
+    },
+    {
+     "ci": 48,
+     "p": 0.22549440014901964,
+     "p3": [
+      0.2255,
+      0.2255,
+      0.2255
+     ],
+     "tok": 371
+    },
+    {
+     "ci": 21,
+     "p": 0.4702245399770682,
+     "p3": [
+      0.4702,
+      0.4702,
+      0.4702
+     ],
+     "tok": 346
+    },
+    {
+     "ci": 22,
+     "p": 0.21715958129725835,
+     "p3": [
+      0.2172,
+      0.2172,
+      0.2172
+     ],
+     "tok": 343
+    },
+    {
+     "ci": 132,
+     "p": 0.25232508983300755,
+     "p3": [
+      0.2523,
+      0.2523,
+      0.2523
+     ],
+     "tok": 482
+    },
+    {
+     "ci": 53,
+     "p": 0.2068896270674572,
+     "p3": [
+      0.2069,
+      0.2069,
+      0.2069
+     ],
+     "tok": 355
+    }
+   ],
+   "pool": [
+    126,
+    54,
+    19,
+    48,
+    21,
+    22,
+    132,
+    53
+   ],
+   "q": "How can I improve the system's ability to find and select the correct answer?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 126,
+     "p": 0.7027911961157074,
+     "tok": 400
+    },
+    {
+     "ci": 54,
+     "p": 0.12333254917720848,
+     "tok": 383
+    },
+    {
+     "ci": 19,
+     "p": 0.3625640199184444,
+     "tok": 358
+    },
+    {
+     "ci": 48,
+     "p": 0.2254944001490196,
+     "tok": 371
+    },
+    {
+     "ci": 21,
+     "p": 0.47022453997706826,
+     "tok": 346
+    },
+    {
+     "ci": 22,
+     "p": 0.21715958129725837,
+     "tok": 343
+    },
+    {
+     "ci": 132,
+     "p": 0.25232508983300755,
+     "tok": 482
+    },
+    {
+     "ci": 53,
+     "p": 0.2068896270674572,
+     "tok": 355
+    }
+   ]
+  },
+  {
+   "chunk": 117,
+   "d50": {
+    "answer": null,
+    "ci": 117,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 117
+   },
+   "dh": {
+    "ans": "According to the menu hypothesis, the false-abstention magnet on real requests is the description clause \"a question you can answer directly,\" which invites the model to over-trust its own direct-answ",
+    "ans_ok": 1,
+    "ci": 117,
+    "deployed_judge_tok": 393,
+    "fallback": 0,
+    "grade_p": 0.8896,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 117,
+    "tok": 837,
+    "total_tok": 1230
+   },
+   "dm": {
+    "ans": "According to the menu hypothesis, the false-abstention magnet on real requests is the description clause \"a question you can answer directly,\" which invites the model to over-trust its own direct-answ",
+    "ans_ok": 1,
+    "ci": 117,
+    "deployed_judge_tok": 1179,
+    "fallback": 0,
+    "grade_p": 0.8896,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 117,
+    "tok": 837,
+    "total_tok": 2016
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 117,
+     "p": 0.9489112413392536,
+     "p3": [
+      0.9489,
+      0.9489,
+      0.9489
+     ],
+     "tok": 393
+    },
+    {
+     "ci": 118,
+     "p": 0.02862368187261231,
+     "p3": [
+      0.0286,
+      0.0286,
+      0.0286
+     ],
+     "tok": 399
+    },
+    {
+     "ci": 111,
+     "p": 0.2735722140912629,
+     "p3": [
+      0.2736,
+      0.2736,
+      0.2736
+     ],
+     "tok": 370
+    },
+    {
+     "ci": 112,
+     "p": 0.8099675050643041,
+     "p3": [
+      0.81,
+      0.81,
+      0.81
+     ],
+     "tok": 333
+    },
+    {
+     "ci": 113,
+     "p": 0.3625915233461723,
+     "p3": [
+      0.3626,
+      0.3626,
+      0.3626
+     ],
+     "tok": 518
+    },
+    {
+     "ci": 126,
+     "p": 0.04791629969950572,
+     "p3": [
+      0.0479,
+      0.0479,
+      0.0479
+     ],
+     "tok": 401
+    },
+    {
+     "ci": 54,
+     "p": 0.0009506234810486548,
+     "p3": [
+      0.001,
+      0.001,
+      0.001
+     ],
+     "tok": 384
+    },
+    {
+     "ci": 131,
+     "p": 0.0076356964638440725,
+     "p3": [
+      0.0076,
+      0.0076,
+      0.0076
+     ],
+     "tok": 374
+    }
+   ],
+   "pool": [
+    117,
+    118,
+    111,
+    112,
+    113,
+    126,
+    54,
+    131
+   ],
+   "q": "What is the false-abstention magnet on real requests according to the menu hypothesis?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 117,
+     "p": 0.9489112413392535,
+     "tok": 393
+    },
+    {
+     "ci": 118,
+     "p": 0.028623681872612307,
+     "tok": 399
+    },
+    {
+     "ci": 111,
+     "p": 0.2735722140912629,
+     "tok": 370
+    },
+    {
+     "ci": 112,
+     "p": 0.8099675050643043,
+     "tok": 333
+    },
+    {
+     "ci": 113,
+     "p": 0.3625915233461723,
+     "tok": 518
+    },
+    {
+     "ci": 126,
+     "p": 0.04791629969950572,
+     "tok": 401
+    },
+    {
+     "ci": 54,
+     "p": 0.000950623481048655,
+     "tok": 384
+    },
+    {
+     "ci": 131,
+     "p": 0.0076356964638440725,
+     "tok": 374
+    }
+   ]
+  },
+  {
+   "chunk": 117,
+   "d50": {
+    "answer": null,
+    "ci": 48,
+    "fallback": 1,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": null
+   },
+   "dh": {
+    "ans": "The provided excerpt does not contain instructions on how to make AI tools stop ignoring real requests or only giving up answers.",
+    "ans_ok": 0,
+    "ci": 48,
+    "deployed_judge_tok": 372,
+    "fallback": 1,
+    "grade_p": 0.2241,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 781,
+    "total_tok": 1153
+   },
+   "dm": {
+    "ans": "The provided excerpt does not contain instructions on how to make AI tools stop ignoring real requests or only giving up answers.",
+    "ans_ok": 0,
+    "ci": 48,
+    "deployed_judge_tok": 1116,
+    "fallback": 1,
+    "grade_p": 0.2241,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 781,
+    "total_tok": 1897
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 48,
+     "p": 0.011445166047302757,
+     "p3": [
+      0.0114,
+      0.0114,
+      0.0114
+     ],
+     "tok": 372
+    },
+    {
+     "ci": 54,
+     "p": 0.0015674332136403812,
+     "p3": [
+      0.0016,
+      0.0016,
+      0.0016
+     ],
+     "tok": 384
+    },
+    {
+     "ci": 53,
+     "p": 0.01559978022923641,
+     "p3": [
+      0.0156,
+      0.0156,
+      0.0156
+     ],
+     "tok": 356
+    },
+    {
+     "ci": 126,
+     "p": 0.16971719849583558,
+     "p3": [
+      0.1697,
+      0.1697,
+      0.1697
+     ],
+     "tok": 401
+    },
+    {
+     "ci": 19,
+     "p": 0.13961935629108316,
+     "p3": [
+      0.1396,
+      0.1396,
+      0.1396
+     ],
+     "tok": 359
+    },
+    {
+     "ci": 108,
+     "p": 0.0955713746597673,
+     "p3": [
+      0.0956,
+      0.0956,
+      0.0956
+     ],
+     "tok": 397
+    },
+    {
+     "ci": 65,
+     "p": 0.008792073738744572,
+     "p3": [
+      0.0088,
+      0.0088,
+      0.0088
+     ],
+     "tok": 348
+    },
+    {
+     "ci": 1,
+     "p": 0.06593211478697404,
+     "p3": [
+      0.0659,
+      0.0659,
+      0.0659
+     ],
+     "tok": 353
+    }
+   ],
+   "pool": [
+    48,
+    54,
+    53,
+    126,
+    19,
+    108,
+    65,
+    1
+   ],
+   "q": "How can I make my AI tools stop ignoring real requests and only giving up answers?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 48,
+     "p": 0.011445166047302757,
+     "tok": 372
+    },
+    {
+     "ci": 54,
+     "p": 0.0015674332136403812,
+     "tok": 384
+    },
+    {
+     "ci": 53,
+     "p": 0.01559978022923641,
+     "tok": 356
+    },
+    {
+     "ci": 126,
+     "p": 0.16971719849583558,
+     "tok": 401
+    },
+    {
+     "ci": 19,
+     "p": 0.13961935629108316,
+     "tok": 359
+    },
+    {
+     "ci": 108,
+     "p": 0.0955713746597673,
+     "tok": 397
+    },
+    {
+     "ci": 65,
+     "p": 0.008792073738744572,
+     "tok": 348
+    },
+    {
+     "ci": 1,
+     "p": 0.06593211478697404,
+     "tok": 353
+    }
+   ]
+  },
+  {
+   "chunk": 122,
+   "d50": {
+    "answer": null,
+    "ci": 122,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 122
+   },
+   "dh": {
+    "ans": "The hintfam arm had the highest accuracy ever measured here at 0.7122.",
+    "ans_ok": 1,
+    "ci": 122,
+    "deployed_judge_tok": 563,
+    "fallback": 0,
+    "grade_p": 0.924,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 122,
+    "tok": 1139,
+    "total_tok": 1702
+   },
+   "dm": {
+    "ans": "The hintfam arm had the highest accuracy ever measured here at 0.7122.",
+    "ans_ok": 1,
+    "ci": 122,
+    "deployed_judge_tok": 1689,
+    "fallback": 0,
+    "grade_p": 0.924,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 122,
+    "tok": 1139,
+    "total_tok": 2828
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 122,
+     "p": 0.9427017016360965,
+     "p3": [
+      0.9427,
+      0.9427,
+      0.9427
+     ],
+     "tok": 563
+    },
+    {
+     "ci": 13,
+     "p": 0.8773219866911514,
+     "p3": [
+      0.8773,
+      0.8773,
+      0.8773
+     ],
+     "tok": 655
+    },
+    {
+     "ci": 99,
+     "p": 0.19917456551796983,
+     "p3": [
+      0.1992,
+      0.1992,
+      0.1992
+     ],
+     "tok": 445
+    },
+    {
+     "ci": 22,
+     "p": 0.015668298311082466,
+     "p3": [
+      0.0157,
+      0.0157,
+      0.0157
+     ],
+     "tok": 337
+    },
+    {
+     "ci": 100,
+     "p": 0.6765840721492374,
+     "p3": [
+      0.6766,
+      0.6766,
+      0.6766
+     ],
+     "tok": 570
+    },
+    {
+     "ci": 105,
+     "p": 0.2520568504422319,
+     "p3": [
+      0.2521,
+      0.2521,
+      0.2521
+     ],
+     "tok": 548
+    },
+    {
+     "ci": 26,
+     "p": 0.1690150562567274,
+     "p3": [
+      0.169,
+      0.169,
+      0.169
+     ],
+     "tok": 442
+    },
+    {
+     "ci": 19,
+     "p": 0.035090866901740875,
+     "p3": [
+      0.0351,
+      0.0351,
+      0.0351
+     ],
+     "tok": 352
+    }
+   ],
+   "pool": [
+    122,
+    13,
+    99,
+    22,
+    100,
+    105,
+    26,
+    19
+   ],
+   "q": "Which arm had the highest accuracy ever measured here?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 122,
+     "p": 0.9427017016360965,
+     "tok": 563
+    },
+    {
+     "ci": 13,
+     "p": 0.8773219866911514,
+     "tok": 655
+    },
+    {
+     "ci": 99,
+     "p": 0.1991745655179698,
+     "tok": 445
+    },
+    {
+     "ci": 22,
+     "p": 0.015668298311082466,
+     "tok": 337
+    },
+    {
+     "ci": 100,
+     "p": 0.6765840721492375,
+     "tok": 570
+    },
+    {
+     "ci": 105,
+     "p": 0.2520568504422319,
+     "tok": 548
+    },
+    {
+     "ci": 26,
+     "p": 0.1690150562567274,
+     "tok": 442
+    },
+    {
+     "ci": 19,
+     "p": 0.035090866901740875,
+     "tok": 352
+    }
+   ]
+  },
+  {
+   "chunk": 122,
+   "d50": {
+    "answer": null,
+    "ci": 19,
+    "fallback": 1,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": null
+   },
+   "dh": {
+    "ans": "The fastest way to run a high-accuracy query is to use the search-primary arm, which invokes only the mcp_search line with a 3-way contract to achieve a final pick.",
+    "ans_ok": 0,
+    "ci": 19,
+    "deployed_judge_tok": 358,
+    "fallback": 1,
+    "grade_p": 0.0037,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 958,
+    "total_tok": 1316
+   },
+   "dm": {
+    "ans": "The fastest way to run a high-accuracy query is to use the search-primary arm, which invokes only the mcp_search line with a 3-way contract to achieve a final pick.",
+    "ans_ok": 0,
+    "ci": 19,
+    "deployed_judge_tok": 1074,
+    "fallback": 1,
+    "grade_p": 0.0037,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": null,
+    "tok": 958,
+    "total_tok": 2032
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 19,
+     "p": 0.12394227896531153,
+     "p3": [
+      0.1239,
+      0.1239,
+      0.1239
+     ],
+     "tok": 358
+    },
+    {
+     "ci": 54,
+     "p": 0.08124899406496834,
+     "p3": [
+      0.0812,
+      0.0812,
+      0.0812
+     ],
+     "tok": 383
+    },
+    {
+     "ci": 27,
+     "p": 0.07520557715460677,
+     "p3": [
+      0.0752,
+      0.0752,
+      0.0752
+     ],
+     "tok": 371
+    },
+    {
+     "ci": 22,
+     "p": 0.023088264715885116,
+     "p3": [
+      0.0231,
+      0.0231,
+      0.0231
+     ],
+     "tok": 343
+    },
+    {
+     "ci": 1,
+     "p": 0.022015297629476505,
+     "p3": [
+      0.022,
+      0.022,
+      0.022
+     ],
+     "tok": 352
+    },
+    {
+     "ci": 126,
+     "p": 0.2409820256958665,
+     "p3": [
+      0.241,
+      0.241,
+      0.241
+     ],
+     "tok": 400
+    },
+    {
+     "ci": 67,
+     "p": 0.07207387313359202,
+     "p3": [
+      0.0721,
+      0.0721,
+      0.0721
+     ],
+     "tok": 429
+    },
+    {
+     "ci": 21,
+     "p": 0.0345414517471147,
+     "p3": [
+      0.0345,
+      0.0345,
+      0.0345
+     ],
+     "tok": 346
+    }
+   ],
+   "pool": [
+    19,
+    54,
+    27,
+    22,
+    1,
+    126,
+    67,
+    21
+   ],
+   "q": "What is the fastest way to run a high-accuracy query in this system?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 19,
+     "p": 0.12394227896531153,
+     "tok": 358
+    },
+    {
+     "ci": 54,
+     "p": 0.08124899406496834,
+     "tok": 383
+    },
+    {
+     "ci": 27,
+     "p": 0.07520557715460677,
+     "tok": 371
+    },
+    {
+     "ci": 22,
+     "p": 0.023088264715885116,
+     "tok": 343
+    },
+    {
+     "ci": 1,
+     "p": 0.022015297629476505,
+     "tok": 352
+    },
+    {
+     "ci": 126,
+     "p": 0.24098202569586652,
+     "tok": 400
+    },
+    {
+     "ci": 67,
+     "p": 0.07207387313359202,
+     "tok": 429
+    },
+    {
+     "ci": 21,
+     "p": 0.0345414517471147,
+     "tok": 346
+    }
+   ]
+  },
+  {
+   "chunk": 127,
+   "d50": {
+    "answer": null,
+    "ci": 129,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 129
+   },
+   "dh": {
+    "ans": "According to the passage, intent calls add tokens on every case while the planner is skipped for no one.",
+    "ans_ok": 1,
+    "ci": 127,
+    "deployed_judge_tok": 858,
+    "fallback": 0,
+    "grade_p": 0.93,
+    "hit": 1,
+    "n_judged": 2,
+    "stop_ci": 127,
+    "tok": 846,
+    "total_tok": 1704
+   },
+   "dm": {
+    "ans": "According to the passage, intent calls are nearly free on the local server and their false-CHAT weakness was demoted from fatal to mild, resulting in a gain of 16 tokens and a loss of 3 tokens.",
+    "ans_ok": 0,
+    "ci": 129,
+    "deployed_judge_tok": 1326,
+    "fallback": 0,
+    "grade_p": 0.009,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 129,
+    "tok": 896,
+    "total_tok": 2222
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 129,
+     "p": 0.5599192725579355,
+     "p3": [
+      0.5599,
+      0.5599,
+      0.5599
+     ],
+     "tok": 442
+    },
+    {
+     "ci": 127,
+     "p": 0.8116033323233193,
+     "p3": [
+      0.8116,
+      0.8116,
+      0.8116
+     ],
+     "tok": 416
+    },
+    {
+     "ci": 108,
+     "p": 0.38164847792182965,
+     "p3": [
+      0.3816,
+      0.3816,
+      0.3816
+     ],
+     "tok": 394
+    },
+    {
+     "ci": 126,
+     "p": 0.7049433047424046,
+     "p3": [
+      0.7049,
+      0.7049,
+      0.7049
+     ],
+     "tok": 398
+    },
+    {
+     "ci": 130,
+     "p": 0.46624251548054546,
+     "p3": [
+      0.4662,
+      0.4662,
+      0.4662
+     ],
+     "tok": 364
+    },
+    {
+     "ci": 119,
+     "p": 0.21564192937226123,
+     "p3": [
+      0.2156,
+      0.2156,
+      0.2156
+     ],
+     "tok": 356
+    },
+    {
+     "ci": 136,
+     "p": 0.23778864114075995,
+     "p3": [
+      0.2378,
+      0.2378,
+      0.2378
+     ],
+     "tok": 369
+    },
+    {
+     "ci": 135,
+     "p": 0.2418510845497485,
+     "p3": [
+      0.2419,
+      0.2419,
+      0.2419
+     ],
+     "tok": 454
+    }
+   ],
+   "pool": [
+    129,
+    127,
+    108,
+    126,
+    130,
+    119,
+    136,
+    135
+   ],
+   "q": "What is the effect of intent calls on tokens according to the passage?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 129,
+     "p": 0.5599192725579355,
+     "tok": 442
+    },
+    {
+     "ci": 127,
+     "p": 0.8116033323233193,
+     "tok": 416
+    },
+    {
+     "ci": 108,
+     "p": 0.38164847792182965,
+     "tok": 394
+    },
+    {
+     "ci": 126,
+     "p": 0.7049433047424046,
+     "tok": 398
+    },
+    {
+     "ci": 130,
+     "p": 0.4662425154805455,
+     "tok": 364
+    },
+    {
+     "ci": 119,
+     "p": 0.21564192937226123,
+     "tok": 356
+    },
+    {
+     "ci": 136,
+     "p": 0.23778864114075995,
+     "tok": 369
+    },
+    {
+     "ci": 135,
+     "p": 0.24185108454974852,
+     "tok": 454
+    }
+   ]
+  },
+  {
+   "chunk": 127,
+   "d50": {
+    "answer": null,
+    "ci": 126,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 126
+   },
+   "dh": {
+    "ans": "Adding a quick screening step ahead of the main decision will result in the production gate gaining one extra LLM call per utterance and a branch on its verdict based on the screening's outcome.",
+    "ans_ok": 0,
+    "ci": 126,
+    "deployed_judge_tok": 403,
+    "fallback": 0,
+    "grade_p": 0.1885,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 126,
+    "tok": 855,
+    "total_tok": 1258
+   },
+   "dm": {
+    "ans": "Adding a quick screening step ahead of the main decision will result in the production gate gaining one extra LLM call per utterance and a branch on its verdict based on the screening's outcome.",
+    "ans_ok": 0,
+    "ci": 126,
+    "deployed_judge_tok": 1209,
+    "fallback": 0,
+    "grade_p": 0.1885,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 126,
+    "tok": 855,
+    "total_tok": 2064
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 126,
+     "p": 0.7879507501441071,
+     "p3": [
+      0.788,
+      0.788,
+      0.788
+     ],
+     "tok": 403
+    },
+    {
+     "ci": 111,
+     "p": 0.2171685953321302,
+     "p3": [
+      0.2172,
+      0.2172,
+      0.2172
+     ],
+     "tok": 372
+    },
+    {
+     "ci": 94,
+     "p": 0.02027818794662449,
+     "p3": [
+      0.0203,
+      0.0203,
+      0.0203
+     ],
+     "tok": 520
+    },
+    {
+     "ci": 51,
+     "p": 0.01102321632506991,
+     "p3": [
+      0.011,
+      0.011,
+      0.011
+     ],
+     "tok": 461
+    },
+    {
+     "ci": 108,
+     "p": 0.37858419139369975,
+     "p3": [
+      0.3786,
+      0.3786,
+      0.3786
+     ],
+     "tok": 399
+    },
+    {
+     "ci": 22,
+     "p": 0.0179819708933222,
+     "p3": [
+      0.018,
+      0.018,
+      0.018
+     ],
+     "tok": 346
+    },
+    {
+     "ci": 19,
+     "p": 0.03930769679329188,
+     "p3": [
+      0.0393,
+      0.0393,
+      0.0393
+     ],
+     "tok": 361
+    },
+    {
+     "ci": 118,
+     "p": 0.033780161465704096,
+     "p3": [
+      0.0338,
+      0.0338,
+      0.0338
+     ],
+     "tok": 401
+    }
+   ],
+   "pool": [
+    126,
+    111,
+    94,
+    51,
+    108,
+    22,
+    19,
+    118
+   ],
+   "q": "What should I expect to change if I add a quick screening step ahead of the main decision?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 126,
+     "p": 0.7879507501441071,
+     "tok": 403
+    },
+    {
+     "ci": 111,
+     "p": 0.21716859533213023,
+     "tok": 372
+    },
+    {
+     "ci": 94,
+     "p": 0.02027818794662449,
+     "tok": 520
+    },
+    {
+     "ci": 51,
+     "p": 0.01102321632506991,
+     "tok": 461
+    },
+    {
+     "ci": 108,
+     "p": 0.37858419139369975,
+     "tok": 399
+    },
+    {
+     "ci": 22,
+     "p": 0.0179819708933222,
+     "tok": 346
+    },
+    {
+     "ci": 19,
+     "p": 0.03930769679329188,
+     "tok": 361
+    },
+    {
+     "ci": 118,
+     "p": 0.033780161465704096,
+     "tok": 401
+    }
+   ]
+  },
+  {
+   "chunk": 128,
+   "d50": {
+    "answer": null,
+    "ci": 128,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 128
+   },
+   "dh": {
+    "ans": "The softhint method achieved an accuracy of 0.7194 in the MS-28 results.",
+    "ans_ok": 1,
+    "ci": 128,
+    "deployed_judge_tok": 523,
+    "fallback": 0,
+    "grade_p": 0.9647,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 128,
+    "tok": 1063,
+    "total_tok": 1586
+   },
+   "dm": {
+    "ans": "The softhint method achieved an accuracy of 0.7194 in the MS-28 results.",
+    "ans_ok": 1,
+    "ci": 128,
+    "deployed_judge_tok": 1569,
+    "fallback": 0,
+    "grade_p": 0.9647,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 128,
+    "tok": 1063,
+    "total_tok": 2632
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 128,
+     "p": 0.9526864189718888,
+     "p3": [
+      0.9527,
+      0.9527,
+      0.9527
+     ],
+     "tok": 523
+    },
+    {
+     "ci": 132,
+     "p": 0.9218629462804536,
+     "p3": [
+      0.9219,
+      0.9219,
+      0.9219
+     ],
+     "tok": 483
+    },
+    {
+     "ci": 134,
+     "p": 0.7708375262885729,
+     "p3": [
+      0.7708,
+      0.7708,
+      0.7708
+     ],
+     "tok": 549
+    },
+    {
+     "ci": 129,
+     "p": 0.8022679298831076,
+     "p3": [
+      0.8023,
+      0.8023,
+      0.8023
+     ],
+     "tok": 445
+    },
+    {
+     "ci": 135,
+     "p": 0.1702806379083556,
+     "p3": [
+      0.1703,
+      0.1703,
+      0.1703
+     ],
+     "tok": 457
+    },
+    {
+     "ci": 133,
+     "p": 0.5729914458306953,
+     "p3": [
+      0.573,
+      0.573,
+      0.573
+     ],
+     "tok": 484
+    },
+    {
+     "ci": 130,
+     "p": 0.12336557392911275,
+     "p3": [
+      0.1234,
+      0.1234,
+      0.1234
+     ],
+     "tok": 367
+    },
+    {
+     "ci": 122,
+     "p": 0.30397538802266383,
+     "p3": [
+      0.304,
+      0.304,
+      0.304
+     ],
+     "tok": 570
+    }
+   ],
+   "pool": [
+    128,
+    132,
+    134,
+    129,
+    135,
+    133,
+    130,
+    122
+   ],
+   "q": "What accuracy did the softhint method achieve in the MS-28 results?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 128,
+     "p": 0.9526864189718888,
+     "tok": 523
+    },
+    {
+     "ci": 132,
+     "p": 0.9218629462804537,
+     "tok": 483
+    },
+    {
+     "ci": 134,
+     "p": 0.7708375262885729,
+     "tok": 549
+    },
+    {
+     "ci": 129,
+     "p": 0.8022679298831077,
+     "tok": 445
+    },
+    {
+     "ci": 135,
+     "p": 0.17028063790835563,
+     "tok": 457
+    },
+    {
+     "ci": 133,
+     "p": 0.5729914458306953,
+     "tok": 484
+    },
+    {
+     "ci": 130,
+     "p": 0.12336557392911275,
+     "tok": 367
+    },
+    {
+     "ci": 122,
+     "p": 0.30397538802266383,
+     "tok": 570
+    }
+   ]
+  },
+  {
+   "chunk": 128,
+   "d50": {
+    "answer": null,
+    "ci": 126,
+    "fallback": 0,
+    "hit": 0,
+    "matches_committed": 1,
+    "stop_ci": 126
+   },
+   "dh": {
+    "ans": "Adopting a conditional hint improves accuracy by inserting a specific hint branch after the initial tool selection prompt, which triggers an additional LLM call to determine whether to proceed with a ",
+    "ans_ok": 0,
+    "ci": 126,
+    "deployed_judge_tok": 398,
+    "fallback": 0,
+    "grade_p": 0.024,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 126,
+    "tok": 956,
+    "total_tok": 1354
+   },
+   "dm": {
+    "ans": "Adopting a conditional hint improves accuracy by inserting a specific hint branch after the initial tool selection prompt, which triggers an additional LLM call to determine whether to proceed with a ",
+    "ans_ok": 0,
+    "ci": 126,
+    "deployed_judge_tok": 1194,
+    "fallback": 0,
+    "grade_p": 0.024,
+    "hit": 0,
+    "n_judged": 1,
+    "stop_ci": 126,
+    "tok": 956,
+    "total_tok": 2150
+   },
+   "doc": "PROTOCOL-mcp-selection.md",
+   "m_vec": [
+    {
+     "ci": 126,
+     "p": 0.7161405347493298,
+     "p3": [
+      0.7161,
+      0.7161,
+      0.7161
+     ],
+     "tok": 398
+    },
+    {
+     "ci": 128,
+     "p": 0.7883455857354026,
+     "p3": [
+      0.7883,
+      0.7883,
+      0.7883
+     ],
+     "tok": 520
+    },
+    {
+     "ci": 125,
+     "p": 0.7716683327161992,
+     "p3": [
+      0.7717,
+      0.7717,
+      0.7717
+     ],
+     "tok": 385
+    },
+    {
+     "ci": 123,
+     "p": 0.7923350214613895,
+     "p3": [
+      0.7923,
+      0.7923,
+      0.7923
+     ],
+     "tok": 444
+    },
+    {
+     "ci": 130,
+     "p": 0.5154823144450554,
+     "p3": [
+      0.5155,
+      0.5155,
+      0.5155
+     ],
+     "tok": 364
+    },
+    {
+     "ci": 132,
+     "p": 0.33597464829667073,
+     "p3": [
+      0.336,
+      0.336,
+      0.336
+     ],
+     "tok": 480
+    },
+    {
+     "ci": 121,
+     "p": 0.5987155928476973,
+     "p3": [
+      0.5987,
+      0.5987,
+      0.5987
+     ],
+     "tok": 440
+    },
+    {
+     "ci": 54,
+     "p": 0.06494187852492407,
+     "p3": [
+      0.0649,
+      0.0649,
+      0.0649
+     ],
+     "tok": 381
+    }
+   ],
+   "pool": [
+    126,
+    128,
+    125,
+    123,
+    130,
+    132,
+    121,
+    54
+   ],
+   "q": "How can I improve my results' accuracy by adopting a conditional hint?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 126,
+     "p": 0.7161405347493297,
+     "tok": 398
+    },
+    {
+     "ci": 128,
+     "p": 0.7883455857354027,
+     "tok": 520
+    },
+    {
+     "ci": 125,
+     "p": 0.7716683327161992,
+     "tok": 385
+    },
+    {
+     "ci": 123,
+     "p": 0.7923350214613895,
+     "tok": 444
+    },
+    {
+     "ci": 130,
+     "p": 0.5154823144450554,
+     "tok": 364
+    },
+    {
+     "ci": 132,
+     "p": 0.33597464829667073,
+     "tok": 480
+    },
+    {
+     "ci": 121,
+     "p": 0.5987155928476973,
+     "tok": 440
+    },
+    {
+     "ci": 54,
+     "p": 0.06494187852492407,
+     "tok": 381
+    }
+   ]
+  },
+  {
+   "chunk": 1,
+   "d50": {
+    "answer": null,
+    "ci": 1,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 1
+   },
+   "dh": {
+    "ans": "The weights require the Qwen3.5-4B UD-Q4_K_XL encoder with `--embedding` and `--pooling last` settings.",
+    "ans_ok": 1,
+    "ci": 1,
+    "deployed_judge_tok": 244,
+    "fallback": 0,
+    "grade_p": 0.986,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 1,
+    "tok": 514,
+    "total_tok": 758
+   },
+   "dm": {
+    "ans": "The weights require the Qwen3.5-4B UD-Q4_K_XL encoder with `--embedding` and `--pooling last` settings.",
+    "ans_ok": 1,
+    "ci": 1,
+    "deployed_judge_tok": 732,
+    "fallback": 0,
+    "grade_p": 0.986,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 1,
+    "tok": 514,
+    "total_tok": 1246
+   },
+   "doc": "models/README.md",
+   "m_vec": [
+    {
+     "ci": 1,
+     "p": 0.9347717718065637,
+     "p3": [
+      0.9348,
+      0.9348,
+      0.9348
+     ],
+     "tok": 244
+    },
+    {
+     "ci": 0,
+     "p": 0.1510031391342585,
+     "p3": [
+      0.151,
+      0.151,
+      0.151
+     ],
+     "tok": 433
+    }
+   ],
+   "pool": [
+    1,
+    0
+   ],
+   "q": "What encoder and pooling settings are required to use these weights?",
+   "recipe": "direct",
+   "s_vec": [
+    {
+     "ci": 1,
+     "p": 0.9347717718065637,
+     "tok": 244
+    },
+    {
+     "ci": 0,
+     "p": 0.1510031391342585,
+     "tok": 433
+    }
+   ]
+  },
+  {
+   "chunk": 1,
+   "d50": {
+    "answer": null,
+    "ci": 1,
+    "fallback": 0,
+    "hit": 1,
+    "matches_committed": 1,
+    "stop_ci": 1
+   },
+   "dh": {
+    "ans": "You must ensure your custom weights work correctly by using them only with the specific encoder they were recorded from, which is the Qwen3.5-4B UD-Q4_K_XL model configured with `--embedding --pooling",
+    "ans_ok": 1,
+    "ci": 1,
+    "deployed_judge_tok": 247,
+    "fallback": 0,
+    "grade_p": 0.9181,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 1,
+    "tok": 546,
+    "total_tok": 793
+   },
+   "dm": {
+    "ans": "You must ensure your custom weights work correctly by using them only with the specific encoder they were recorded from, which is the Qwen3.5-4B UD-Q4_K_XL model configured with `--embedding --pooling",
+    "ans_ok": 1,
+    "ci": 1,
+    "deployed_judge_tok": 741,
+    "fallback": 0,
+    "grade_p": 0.9181,
+    "hit": 1,
+    "n_judged": 1,
+    "stop_ci": 1,
+    "tok": 546,
+    "total_tok": 1287
+   },
+   "doc": "models/README.md",
+   "m_vec": [
+    {
+     "ci": 1,
+     "p": 0.6695032730132144,
+     "p3": [
+      0.6695,
+      0.6695,
+      0.6695
+     ],
+     "tok": 247
+    },
+    {
+     "ci": 0,
+     "p": 0.13050730821012108,
+     "p3": [
+      0.1305,
+      0.1305,
+      0.1305
+     ],
+     "tok": 436
+    }
+   ],
+   "pool": [
+    1,
+    0
+   ],
+   "q": "How do I ensure my custom weights work correctly with this specific model version?",
+   "recipe": "indirect",
+   "s_vec": [
+    {
+     "ci": 1,
+     "p": 0.6695032730132144,
+     "tok": 247
+    },
+    {
+     "ci": 0,
+     "p": 0.13050730821012108,
+     "tok": 436
+    }
+   ]
+  }
+ ],
+ "sanity": {
+  "chunk_agree_S": 1.0,
+  "d50_agree": 1.0,
+  "ok": true
+ },
+ "smoke": false,
+ "sweep_tau": [
+  0.3,
+  0.4,
+  0.5,
+  0.6,
+  0.7,
+  0.8
+ ],
+ "tag": "pooljudge",
+ "tau_sweep_descriptive": [
+  {
+   "capture": 0.3966,
+   "fallback_rate": 0.2586,
+   "fb_hit": 0.069,
+   "inst": "S",
+   "mean_n_judged": 3.47,
+   "tau": 0.3
+  },
+  {
+   "capture": 0.3966,
+   "fallback_rate": 0.2586,
+   "fb_hit": 0.069,
+   "inst": "M",
+   "mean_n_judged": 3.47,
+   "tau": 0.3
+  },
+  {
+   "capture": 0.3793,
+   "fallback_rate": 0.2586,
+   "fb_hit": 0.069,
+   "inst": "S",
+   "mean_n_judged": 3.53,
+   "tau": 0.4
+  },
+  {
+   "capture": 0.3793,
+   "fallback_rate": 0.2586,
+   "fb_hit": 0.069,
+   "inst": "M",
+   "mean_n_judged": 3.53,
+   "tau": 0.4
+  },
+  {
+   "capture": 0.3793,
+   "fallback_rate": 0.2759,
+   "fb_hit": 0.0862,
+   "inst": "S",
+   "mean_n_judged": 3.67,
+   "tau": 0.5
+  },
+  {
+   "capture": 0.3793,
+   "fallback_rate": 0.2759,
+   "fb_hit": 0.0862,
+   "inst": "M",
+   "mean_n_judged": 3.67,
+   "tau": 0.5
+  },
+  {
+   "capture": 0.3966,
+   "fallback_rate": 0.3103,
+   "fb_hit": 0.1207,
+   "inst": "S",
+   "mean_n_judged": 3.95,
+   "tau": 0.6
+  },
+  {
+   "capture": 0.3966,
+   "fallback_rate": 0.3103,
+   "fb_hit": 0.1207,
+   "inst": "M",
+   "mean_n_judged": 3.95,
+   "tau": 0.6
+  },
+  {
+   "capture": 0.3966,
+   "fallback_rate": 0.3621,
+   "fb_hit": 0.1379,
+   "inst": "S",
+   "mean_n_judged": 4.14,
+   "tau": 0.7
+  },
+  {
+   "capture": 0.3966,
+   "fallback_rate": 0.3621,
+   "fb_hit": 0.1379,
+   "inst": "M",
+   "mean_n_judged": 4.14,
+   "tau": 0.7
+  },
+  {
+   "capture": 0.2759,
+   "fallback_rate": 0.5,
+   "fb_hit": 0.2241,
+   "inst": "S",
+   "mean_n_judged": 4.88,
+   "tau": 0.8
+  },
+  {
+   "capture": 0.2759,
+   "fallback_rate": 0.5,
+   "fb_hit": 0.2241,
+   "inst": "M",
+   "mean_n_judged": 4.88,
+   "tau": 0.8
+  }
+ ],
+ "verdicts": {
+  "D1": [
+   "FAIL",
+   0.0
+  ],
+  "D2": [
+   "PARTIAL",
+   0.0
+  ],
+  "D3": [
+   "PASS-budget",
+   2826.8
+  ],
+  "D4": [
+   "PASS",
+   0.0345
+  ]
+ }
+}

@@ -1931,3 +1931,79 @@ slightly harsher (mean grade_p below the committed .43–.47 band).
 If GA or GB fails, every answer-level number this season carries a
 disclosed instrument-sensitivity caveat — that is the audit
 working, not failing.
+
+## D-series RESULTS (pooljudge.json, 2026-10-15 — scored)
+
+Sanity: live S-vector stop decisions matched the committed walkret
+p_yes on every judged chunk (agreement 1.000), and D-50 reproduced
+the committed ASM-8 answered page on all 58 questions (agreement
+1.000) — no answers needed, sixth consecutive session of temp-0
+determinism.
+
+| arm | answered hit | answer acc | direct | indirect | fallback | judged/q | tok/q |
+|-----|--------------|-----------|--------|----------|----------|----------|-------|
+| D-M (3-sample mean, τ=.5) | .466 | .414 | .621 | .207 | .276 | 1.74 | 2,827 |
+| **D-H (single, τ=.70)**   | **.534** | **.448** | **.690** | .207 | .362 | 1.60 | **1,423** |
+| (committed ASM-8, anchor) | .466 | .414 | .621 | .207 | .276 | 3.67 | 2,206 |
+
+Verdicts, against the registered bets: **D1 FAIL** (Δ hit = .0000
+vs the +.02 bar — PD1 landed: self-consistency rescued nothing),
+**D2 PARTIAL** (Δ acc = .0000 — PD2 landed, though by identity,
+not by offset), **D3 PASS-budget** (2,826.8 ≤ 5,427.7 — PD3
+landed), **D4 PASS** (+.0345 — **PD4 refuted**, and in the useful
+direction: the high bar is not a trade into the weak fallback
+link, it is the best answer-level arm of the season).
+
+The M-instrument null is total. The 3-sample mean produced the
+SAME first-cross page as the single temp-0 call on 58/58 questions
+— and the τ sweep rows for S and M are identical at every bar —
+so D-M's answers came from the committed pages with the committed
+seeds and reproduce ASM-8 number-for-number. The judge is
+saturated: its misses are confident rejections (cal p < .20, as
+the disclosed diagnostic showed) and its hits are confident
+acceptances; three draws from that distribution average to the
+same decision. Sampling variance is confirmed OUT as a rescue, at
+3× the judge tokens (2,827 tok/q) for zero movement.
+
+D-H's win, dissected. Raising the bar to .70 does two things at
+once: it converts false-positive stops (13 at τ=.5) into
+continuations that more often reach gold — first-cross capture
+rises .379 → .397 — and it pushes more questions to the rank-1
+fallback, whose quality RISES with the bar (fallback hit .086 →
+.138 across the sweep; these 8 fallback-rank-1 golds are counted
+in the .534 answered hit, the same convention as every arm this
+season). Anatomy: stopped answers are right .622 of the time
+(23/37), fallback answers .143 (3/21); direct recipe .690 (vs
+.621 committed). Paired against committed ASM-8: D-H-only correct
+2, ASM-8-only correct 0 — the entire +.0345. And it is cheap:
+1,422.5 tok/q = 26% of the full machine, 64% of pool-confined
+ASM-8.
+
+The τ sweep (descriptive, chunk-level, as registered — no tuning
+claim; D-H's .70 was fixed pre-data):
+
+| τ | first-cross capture | fallback rate | fallback hit | hit + fb hit |
+|------|------|------|------|------|
+| .30 | .397 | .259 | .069 | .466 |
+| .40 | .379 | .259 | .069 | .448 |
+| .50 (committed) | .379 | .276 | .086 | .466 |
+| .60 | .397 | .310 | .121 | .517 |
+| **.70 (D-H)** | .397 | .362 | **.138** | **.534** |
+| .80 | .276 | .500 | .224 | .500 |
+
+Capture is flat .38–.40 from τ=.30 to .70 (the judge's
+discrimination, not the bar, sets the ceiling — as the descriptive
+bet said) and collapses at .80; fallback hit climbs monotonically
+with the bar. The sweet spot is exactly where D-H was placed. A
+split-tuned τ remains the registered future amendment if the
+question set grows; on n=58 the honest summary is that the
+committed .5 bar sits on a plateau and .70 sits on its edge.
+
+Season consequence: the binding constraint named in C-series is
+real but partially movable — not by strengthening the judge's
+nerve (sampling does nothing) but by stiffening its spine (a
+higher bar converts confident-wrong stops into mostly-recoverable
+fallbacks). Best deployed arm is now .448 answers-correct at
+1,423 tok/q. The capture gap (pool .810 vs hit .534) persists.
+
+Tally: 23 of 41 headline predictions passed.
