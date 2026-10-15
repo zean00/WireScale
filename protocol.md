@@ -1763,3 +1763,30 @@ rank-1 — .414 at 2,206 tok/q (7.5% of the exhaustive read), vs
 .345–.397 for any form of pile RAG.
 
 Tally: 21 of 37 headline predictions passed.
+
+## S-amendment (registered 2026-10-15, pre-computation): paired significance for the answer-level season
+
+Every headline gap so far is a point estimate on n=58. Before any
+further interpretation — and before any new scoring — the season's
+six paired gates get mechanical uncertainty. Method (fixed here,
+computed by stats.py from committed records only, no model calls):
+exact McNemar (two-sided binomial on the discordant pairs) plus a
+paired bootstrap (10,000 resamples, seed 0, percentile 95% CI) on
+the accuracy difference.
+
+Comparisons (paired per question; ASM = committed assembly.json):
+- **S-A1**: ASM vs TOP1 (A1's +.086)
+- **S-A2**: ASM vs FLATPOL (A2's +.052)
+- **S-B1**: ASM vs TOPK-3
+- **S-B2**: ASM vs TOPK-2
+- **S-C1**: ASM-8 vs ASM (the −.0172 non-inferiority; registered
+  question: is the data consistent with a loss beyond −.02?)
+- **S-C3**: ASM-8 vs TOPK-2
+
+Interpretation (registered, mechanical): **SOLID** = McNemar
+p < .05 AND the bootstrap CI excludes 0 in the registered
+direction; **SUGGESTIVE** = p < .10; **NOT ESTABLISHED**
+otherwise. For S-C1 specifically: **SOLID-NI** = the CI's lower
+bound ≥ −.02 (even the pessimistic end stays inside the
+registered band). This amendment ANNOTATES, never re-adjudicates:
+no prior verdict changes either way.
