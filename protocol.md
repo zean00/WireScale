@@ -1642,3 +1642,73 @@ machine's crown is the most accuracy this lab knows how to buy
 without the 29,236-token exhaustive read.
 
 Tally: 18 of 34 headline predictions passed.
+
+## C-series (registered 2026-10-15, pre-data): the pool-confined machine — RAG retrieves, the machine reads
+
+B-series resolved the division of labor: the top-8 pool holds the
+gold page .810 of the time (vs the machine's .466 answered-chunk
+hit) but dilution kills pile synthesis, while the machine's
+verified-single-page reader synthesizes .852 — at 5,427.7 tok/q.
+The combination question: can the top-8 pool host the machine's
+scan-and-stop, buying the pool's recall position at a fraction of
+the full-document scan cost?
+
+**Disclosed post-hoc simulation (committed records only, no new
+model calls — this is the pre-registered quantitative prediction).**
+Method: committed walkret.json raw p_yes per chunk + committed
+topk.json top-8 picks (the frozen B artifact); calibrate at T=0.66
+(committed calib.json); walk the pool in embedder order, stop at
+the first cal p ≥ .5, else answer from rank-1. Results (chunk
+level, n=58): pool-8 stop-hit .4655 — IDENTICAL to the committed
+machine's .4655 (42/46 live stops were already inside the pool;
+the 4 deep stops yielded 1 hit, recovered by the rank-1 fallback
+in simulation) — fallback firing 16/58, mean 3.6 judged pages
+(~2.2k tok/q projected). Pool-4 ties (.4655, 2.1 judged). Two
+rejected variants, simulated: max-p fallback (answer from the
+pool's highest below-bar score) FAILS (.3793 — below the bar the
+judge's scores do not rank truth; the confidently-wrong page beats
+the under-scored right page, so the fallback stays rank-1: rank is
+the only signal that survives below the bar); SET-8 (judge all 8,
+answer from best yes) ties at higher cost — dominated.
+
+Questions: frozen 58. Corpus: pinned 5146e2d. Judge/generator/
+grader: frozen slot-7 model, prompts and seeds identical to
+A/B-series (grader = generator, disclosed there; answer seed
+20261014+17·i). Pool: loaded from committed topk.json topk8.pick
+per question (no re-embedding).
+
+Arms (per frozen eval question):
+- **ASM-8 (primary)** — scan the committed top-8 pool in embedder
+  order with the live judge; stop at first cal p ≥ .5; answer from
+  that ONE page; fallback rank-1 if nothing crosses. Identical
+  GEN_SYS/grade instruments to A/B-series.
+- **ASM-4 (secondary, descriptive)** — same, confined to the first
+  4 pool pages; judgments shared with ASM-8 (prefix), answered
+  separately when the decision differs. No bar; pool-size
+  dose–response at answer level.
+
+**Bars (mechanical)**:
+- **C1 (non-inferiority)**: ASM-8 answer accuracy ≥ committed ASM
+  .4310 − .02 → PASS; ≥ −.04 → PARTIAL; else FAIL.
+- **C2 (cost)**: ASM-8 total tokens/question ≤ .5 × committed
+  5,427.7 = 2,713.8 → PASS-budget; else FAIL-budget.
+- **C3 (still beats RAG)**: ASM-8 ≥ committed TOPK-2 .3966 → PASS;
+  ≥ −.02 → PARTIAL; else FAIL.
+- Sanity (disclosed field, not a verdict): per-judged-chunk
+  live-vs-committed stop-decision agreement (the A-series
+  instrument, committed at 1.000) ≥ .95; live answered-chunk
+  agreement with the disclosed simulation reported alongside.
+  Smoke runs marked and never scored.
+
+**Registered bets (pre-data, from the disclosed simulation)**:
+- **PC1**: live ASM-8 answered-chunk hit within ±1 question of the
+  simulated 27/58 (.4655).
+- **PC2**: fallback count within ±2 of the simulated 16/58.
+- **PC3**: mean judged pages within [.2, .5] of the simulated 3.6.
+- **PC4 (the risky one)**: answer-level synthesis holds up on the
+  newly answered chunks — ASM-8 ans_acc ≥ .38, C1 PASS.
+- Descriptive bets (no bar): fallback answers again grade lower
+  than stopped answers (A-series pattern); ASM-4 within a question
+  of ASM-8 at the chunk level; the capture gap (pool has gold
+  .810, machine lands .466) persists — the verifier, not the
+  retriever, remains the binding constraint.
