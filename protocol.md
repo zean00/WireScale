@@ -1817,3 +1817,73 @@ generating, not confirmed at this n; the mechanical fix is more
 frozen questions — a pre-registered question-set extension scoring
 the SAME arms on fresh questions — recorded as a candidate next
 series.
+
+## D-series (registered 2026-10-15, pre-data): strengthening the verifier
+
+The C-series closed with the binding constraint named: the top-8
+pool holds gold .810 of the time, the verifier captures .466.
+Disclosed pre-registration diagnostic (committed records only):
+among pool questions where the scan REACHED gold and still missed
+(11), gold's calibrated p sits below .20 in NINE — the judge
+rejects gold confidently (median ≈ .03), and only one miss sits in
+the rescueable .30–.50 band. The dominant failure is the reverse:
+13 false-positive stops on plausible wrong pages. So sampling
+variance is predicted NOT to rescue misses, and the tunable
+quantity is the bar.
+
+Questions: frozen 58. Corpus: pinned 5146e2d. Pool: committed
+topk.json topk8.pick per question. Answer/grade instruments:
+identical to A/B/C (GEN_SYS, grader verbatim, seed 20261014+17·i;
+grader = generator, disclosed). Judge prompt: CR's JUDGE_SYS
+verbatim in every instrument.
+
+Instruments (both judged on ALL pool pages, full vectors):
+- **S (single)**: one call, temp 0 — the committed instrument;
+  live replication doubles as sanity (vs committed walkret p).
+- **M (self-consistency)**: 3 calls, temp 1.0, seeds
+  20261015+1013·i+17·s (s∈{0,1,2}); page score = mean of the 3
+  raw p_yes, calibrated at committed T=0.66 (disclosed
+  approximation: T was fit on single temp-0 calls).
+
+Arms (all pool-confined, fallback rank-1, answers generated and
+graded from the answered page):
+- **D-M (primary)**: scan in pool order, stop at first page with
+  cal(mean p) ≥ .5.
+- **D-H**: scan the S vector, stop at first cal p ≥ .70 (higher
+  bar vs false positives).
+- **D-50**: scan the S vector at τ=.5 — no answers unless the
+  answered page differs from committed ASM-8 (instrument
+  replication sanity).
+- **τ sweep (descriptive, chunk-level only)**: capture / fallback
+  rate / would-be-fallback hit over τ ∈ {.30,.40,.50,.60,.70,.80}
+  on both instruments' full vectors — post-hoc, like X's sweep;
+  candidate τ values for a future split-tuned amendment.
+
+**Bars (mechanical)**:
+- **D1 (capture, D-M)**: answered-chunk hit ≥ committed .4655 +
+  .05 = .5155 → PASS; ≥ .4855 → PARTIAL; else FAIL.
+- **D2 (accuracy, D-M)**: ans_acc ≥ committed ASM-8 .4138 + .03 →
+  PASS (verifier wins); ≥ −.02 → PARTIAL; else FAIL.
+- **D3 (cost, D-M)**: total tok/q ≤ 5,427.7 (the FULL machine's
+  budget — strengthened verification may not out-cost the scan it
+  replaces) → PASS-budget; else FAIL-budget.
+- **D4 (accuracy, D-H)**: ans_acc ≥ .4138 → PASS; ≥ −.02 →
+  PARTIAL; else FAIL.
+- Sanity (disclosed, not verdicts): live S-vector vs committed
+  walkret p per-chunk stop-decision agreement ≥ .95 (expect
+  1.000); D-50 answered-page agreement with committed ASM-8 ≥ .95.
+
+**Registered bets (pre-data, from the disclosed diagnostic)**:
+- **PD1: D1 expected FAIL** — the misses are confident rejections
+  (9/11 below .20); 3-sample variance bridges ~1 question at most.
+- **PD2: D2 expected PARTIAL** — any capture gain offset by more
+  fallbacks (C-series: fallback answers grade .31 vs .49).
+- **PD3: D3 expected PASS** (projected ≈ 4.9k tok/q: 3× sampling
+  on ~3.7 pages + answers).
+- **PD4: D4 expected FAIL** — the high bar converts false-positive
+  stops into fallbacks, the weak link.
+- Descriptive bets: the τ sweep shows capture roughly flat across
+  .30–.60 (fp-stops and fallback gains trade ≈ evenly — the
+  ceiling is the judge's discrimination, not the bar); M and S
+  stop decisions agree on most questions; the capture gap
+  (.810 pool vs captured) persists in every arm.
