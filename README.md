@@ -327,7 +327,10 @@ What transferred to production: beam-2 path scoring in the WireSense router —
 which only worked after discovering paths of different depth must be scored by
 **mean, never sum** (a 13-point crash hid in that choice) — and the whole
 tool-selection program it seeded (filter 121 tools to ~65 per request;
-current wiring target 73.4% vs 67.3% for the shipped gate).
+current wiring target 73.4% vs 67.3% for the shipped gate). The retrieval
+program's exports — the shortlist-and-verify reader, the stiffen-the-bar
+gate rule, and the grader-audit ritual — are packaged for the destination in
+[HANDOFF-wiresense.md](HANDOFF-wiresense.md).
 
 ## Layout
 
