@@ -2062,3 +2062,85 @@ margin within noise at n=58. The two independent stress tests
 point at the same fix: more questions.
 
 Tally: 25 of 45 headline predictions passed.
+
+## F-series (registered 2026-10-15, pre-data): doc-selection
+
+Every scored machine this season received the gold document for free —
+A/B/C/D scanned chunks *within* the question's own doc; cross-document
+ranking has never been measured. In deployment nothing marks the doc. This
+series scores the layer above the pool: pick the document, then run the
+scored machine inside it.
+
+Scope: frozen 58, pinned corpus 5146e2d (4 docs / 180 chunks). Anchor:
+committed D-H (gold-doc pool, τ=.70): acc .4483, hit .5345, 1,422.5 tok/q
+(pooljudge.json). Instruments unchanged: extembed cache (plain query,
+fp-verified), S verifier (single temp-0 judge call, cal T=0.66), grader =
+generator, answers seeded 20261014+17·i, fallback rank-1.
+
+**Doc-ranking rule (mechanical, registered)**: doc score = MAX over its
+chunks of cosine(query, chunk); select argmax; ties broken by doc order.
+(Disclosed: max-of-chunks, not mean-of-top-3 — one rule, no tuning.)
+
+Arms:
+- **F-DOC**: top-8 pool from the SELECTED doc (embedder order), scan at
+  τ=.70, stop-and-answer, fallback pool-rank-1 — the committed machine one
+  layer up.
+- **F-GLOB**: top-8 pool across ALL 180 chunks (no doc layer at all), same
+  scan. If this matches F-DOC, the doc layer is absorbed by global ranking.
+
+Bars (mechanical):
+- **PF1 (selection)**: doc-hit ≥ .95 → PASS; ≥ .90 → PARTIAL; else FAIL.
+- **PF2 (F-DOC accuracy)**: acc ≥ .4483 − .02 → PASS; ≥ −.04 → PARTIAL;
+  else FAIL.
+- **PF3 (skip-the-layer)**: F-GLOB acc ≥ F-DOC − .02 → PASS; ≥ −.04 →
+  PARTIAL; else FAIL.
+- **PF4 (budget)**: F-DOC total tok/q ≤ 1,800 → PASS-budget; else
+  FAIL-budget. (Doc ranking is cached-embedding lookups, ~0 marginal.)
+- Sanity (not verdicts): pools on questions where the selected doc IS the
+  gold doc must equal committed topk8.pick exactly; on those questions
+  F-DOC answers must be byte-identical to committed D-H answers (temp-0
+  determinism, same seeds); judge stop decisions vs committed walkret p_yes
+  on shared pages ≥ .95 (expect 1.000).
+
+**Registered bets**: PF1 PASS (the corpus's four docs are topically
+distinct and the embedder's within-doc record is strong — but this is the
+first cross-doc measurement, so the honest confidence is moderate); PF2
+PASS; PF3 PARTIAL (global pools risk displacing gold with foreign-doc
+neighbors in 1–3 questions); PF4 PASS; H-series-side: none.
+
+## H-series (registered 2026-10-15, pre-data): abstention vs the fallback
+
+The machine's registered fallback is rank-1 — answer anyway. A voice
+assistant has a fourth option: say "I don't know." This series asks whether
+a calibrated floor beats always-answering, using the committed D-H
+instrument vectors ONLY — zero model calls (Z-series precedent for
+committed-data-only amendments).
+
+Scope: pooljudge.json records (58), D-H decisions at τ=.70 reproduced
+mechanically from s_vec. **Floor rule (registered)**: on a fallback
+question, abstain iff max calibrated p over the pool < φ; primary φ = .15 —
+chosen a priori from the PUBLIC diagnostic (judged misses sit below .20
+cal, median .03), before any per-question max-p was computed. φ sweep
+{.05,.10,.15,.20,.30,.40} stays descriptive (coverage / precision /
+acc-given-answered frontier) — no tuning claim, mirroring D's τ sweep.
+
+Metrics (risk-relaxed, as posed in HANDOFF-wiresense.md):
+- **acc-given-answered**: mean ans_ok over stopped ∪ kept-fallback
+  questions (coverage reported alongside, always).
+- **abstention precision**: fraction of abstained questions where the
+  rank-1 answer was WRONG.
+
+Bars (mechanical):
+- **H1**: acc-given-answered(φ=.15) ≥ committed D-H .4483 (which counts
+  fallback answers) → PASS; ≥ .4283 → PARTIAL; else FAIL.
+- **H2**: abstention precision ≥ .70 → PASS; ≥ .50 → PARTIAL; else FAIL.
+  Zero abstentions → FAIL (a floor that never fires is no instrument).
+- **H3**: PASS-budget iff the runner makes zero LLM calls AND reproduces
+  committed D-H stop/fallback decisions 58/58; else FAIL-budget.
+
+**Registered bets**: H1 PASS (stopped answers .622 dominate the mean; the
+floor only removes the weakest tail); H2 PASS (fallback answers are .143
+correct overall — abstention is aiming at a mostly-wrong population);
+H3 PASS. Disclosed risk: φ=.15 may abstain too little (if fallback
+questions' max-p is inflated by a plausible-but-wrong top page) — the
+descriptive sweep exists to map exactly that.
